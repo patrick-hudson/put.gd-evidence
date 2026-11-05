@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-05-evidence-import-1222](2026-11-05-evidence-import-1222/README.md) | #1222 | Evidence import and docs layout check (#1222), 2026-11-05 |
 | [2026-11-05-v26.1105.3906-acceptance.md](2026-11-05-v26.1105.3906-acceptance.md) | — | First stable acceptance: v26.1105.3906 |
 | [2026-11-05-v26.1105.3906-acceptance.json](2026-11-05-v26.1105.3906-acceptance.json) | — | — |
 | [2026-11-04-hotkey-crosshair](2026-11-04-hotkey-crosshair/README.md) | — | Hotkey to crosshair: frames for the selection stack |
