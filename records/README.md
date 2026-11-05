@@ -311,14 +311,14 @@ matrix and release documentation for new work.
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
-| [Proton experimental integration recovery and resources](../proton-drive.md#release-gates) | — | Release gates |
-| [Integrated process split and memory strategy](../memory-strategy.md) | — | Memory strategy |
-| [S3 transport failure diagnosis and corrected regression](../history/testing-live-s3-transport.md) | — | Transport report |
-| [Earlier KDE optimization and cumulative local-memory changes](../history/testing-kde-memory.md) | — | KDE report |
-| [Earlier GNOME boundary and Cinnamon regressions](../history/testing-gnome-memory.md) | — | GNOME report |
-| [Earlier native-listener/capture experiments](../history/testing-native-listener.md) | — | Native listener testing |
-| [Release package evidence and acceptance classes](../release.md) | — | Release runbook |
-| [CI coverage and runtime](../ci.md) | — | CI coverage |
+| [Proton experimental integration recovery and resources](https://github.com/patrick-hudson/put.gd-desktop/blob/nightly/docs/user/proton-drive.md#release-gates) | — | Release gates |
+| [Integrated process split and memory strategy](https://github.com/patrick-hudson/put.gd-desktop/blob/nightly/docs/design/memory-strategy.md) | — | Memory strategy |
+| [S3 transport failure diagnosis and corrected regression](https://github.com/patrick-hudson/put.gd-desktop/blob/nightly/docs/history/testing-live-s3-transport.md) | — | Transport report |
+| [Earlier KDE optimization and cumulative local-memory changes](https://github.com/patrick-hudson/put.gd-desktop/blob/nightly/docs/history/testing-kde-memory.md) | — | KDE report |
+| [Earlier GNOME boundary and Cinnamon regressions](https://github.com/patrick-hudson/put.gd-desktop/blob/nightly/docs/history/testing-gnome-memory.md) | — | GNOME report |
+| [Earlier native-listener/capture experiments](https://github.com/patrick-hudson/put.gd-desktop/blob/nightly/docs/history/testing-native-listener.md) | — | Native listener testing |
+| [Release package evidence and acceptance classes](https://github.com/patrick-hudson/put.gd-desktop/blob/nightly/docs/release/release.md) | — | Release runbook |
+| [CI coverage and runtime](https://github.com/patrick-hudson/put.gd-desktop/blob/nightly/docs/release/ci.md) | — | CI coverage |
 
 ## Retired experiment records
 
