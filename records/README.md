@@ -1,13 +1,23 @@
 # Verification evidence index
 
-These records certify the source identities and workloads written inside them,
-not every later commit. See [retention and restoration](../evidence-retention.md)
-for local bulk artifacts and [verification](../verification.md) for limitations.
+The records in this repository certify the source identities and workloads written
+inside them, not every later commit. See
+[retention and restoration](https://github.com/patrick-hudson/put.gd-desktop/blob/nightly/docs/testing/evidence-retention.md)
+for local bulk artifacts and [verification](https://github.com/patrick-hudson/put.gd-desktop/blob/nightly/docs/testing/verification.md) for limitations.
 
 ## November 2026
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-05-v26.1105.3906-acceptance.md](2026-11-05-v26.1105.3906-acceptance.md) | — | First stable acceptance: v26.1105.3906 |
+| [2026-11-05-v26.1105.3906-acceptance.json](2026-11-05-v26.1105.3906-acceptance.json) | — | — |
+| [2026-11-04-hotkey-crosshair](2026-11-04-hotkey-crosshair/README.md) | — | Hotkey to crosshair: frames for the selection stack |
+| [2026-11-02-surface-outlines](2026-11-02-surface-outlines/) | — | — |
+| [2026-11-02-history-gallery](2026-11-02-history-gallery/README.md) | #1151 | History gallery blanking, scrolling and gap crash (#1151) |
+| [2026-11-02-aurora-plasma-68-golden](2026-11-02-aurora-plasma-68-golden/) | — | — |
+| [2026-11-02-about-window](2026-11-02-about-window/README.md) | #1155 | About window redesign (#1155) |
+| [2026-11-01-file-manager-refusals](2026-11-01-file-manager-refusals/README.md) | #1138 | File manager refusals (#1138) |
+| [2026-11-01-exact-asset-audit](2026-11-01-exact-asset-audit/README.md) | — | Exact-asset license, source and CVE rehearsal — 2026-11-01 |
 | [2026-11-01-window-outline](2026-11-01-window-outline/README.md) | #1135 | Window outline removal (#1135, 2026-11-01) |
 | [2026-11-01-file-manager-monitor](2026-11-01-file-manager-monitor/README.md) | #1112, #1119 | AppImage file manager watch from a private runtime folder (#1112, 2026-11-01) |
 | [2026-11-01-appimage-runtime-pin-preflight](2026-11-01-appimage-runtime-pin-preflight/README.md) | #1123 | AppImage runtime pin preflight — 2026-11-01 |
@@ -16,6 +26,65 @@ for local bulk artifacts and [verification](../verification.md) for limitations.
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-10-17-x11-clipboard-plugins.json](2026-10-17-x11-clipboard-plugins.json) | — | — |
+| [2026-10-16-issue40-redesign-acceptance.json](2026-10-16-issue40-redesign-acceptance.json) | — | — |
+| [2026-10-16-issue24-login-fix.json](2026-10-16-issue24-login-fix.json) | — | — |
+| [2026-10-15-proton-p4-p6-acceptance.json](2026-10-15-proton-p4-p6-acceptance.json) | — | — |
+| [2026-10-15-proton-p3-redistribution.json](2026-10-15-proton-p3-redistribution.json) | — | — |
+| [2026-10-15-proton-p3-rebuild.json](2026-10-15-proton-p3-rebuild.json) | — | — |
+| [2026-10-15-proton-p3-materials.json](2026-10-15-proton-p3-materials.json) | — | — |
+| [2026-10-15-proton-p2-resources.json](2026-10-15-proton-p2-resources.json) | — | — |
+| [2026-10-15-proton-p1-recovery.json](2026-10-15-proton-p1-recovery.json) | — | — |
+| [2026-10-15-proton-p1-app-recovery.json](2026-10-15-proton-p1-app-recovery.json) | — | — |
+| [2026-10-14-settings-drafts.json](2026-10-14-settings-drafts.json) | — | — |
+| [2026-10-11-kde-source63-candidate4.json](2026-10-11-kde-source63-candidate4.json) | — | — |
+| [2026-10-10-kde-source62-interim.json](2026-10-10-kde-source62-interim.json) | — | — |
+| [2026-10-10-kde-source57-memory-baseline.json](2026-10-10-kde-source57-memory-baseline.json) | — | — |
+| [2026-10-10-gnome-core57-memory.json](2026-10-10-gnome-core57-memory.json) | — | — |
+| [2026-10-10-gnome-candidate-cinnamon-regression.json](2026-10-10-gnome-candidate-cinnamon-regression.json) | — | — |
+| [2026-10-10-allocator-sequence.json](2026-10-10-allocator-sequence.json) | — | — |
+| [2026-10-09-native-listener.json](2026-10-09-native-listener.json) | — | — |
+| [2026-10-09-native-initialization.json](2026-10-09-native-initialization.json) | — | — |
+| [2026-10-09-live-s3-cinnamon.json](2026-10-09-live-s3-cinnamon.json) | — | — |
+| [2026-10-09-lazy-settings-native.json](2026-10-09-lazy-settings-native.json) | — | — |
+| [2026-10-09-lazy-settings-confirmation.json](2026-10-09-lazy-settings-confirmation.json) | — | — |
+| [2026-10-09-cold-reference45.json](2026-10-09-cold-reference45.json) | — | — |
+| [2026-10-09-cold-family-metadata-race.json](2026-10-09-cold-family-metadata-race.json) | — | — |
+| [2026-10-09-cold-family-exit-race.json](2026-10-09-cold-family-exit-race.json) | — | — |
+| [2026-10-09-capture-parity-debug.json](2026-10-09-capture-parity-debug.json) | — | — |
+| [2026-10-09-agent-preflight.json](2026-10-09-agent-preflight.json) | — | — |
+| [2026-10-08-x11-shortcut-refresh.json](2026-10-08-x11-shortcut-refresh.json) | — | — |
+| [2026-10-08-vm-memory-audit.json](2026-10-08-vm-memory-audit.json) | — | — |
+| [2026-10-08-view-surfaces.json](2026-10-08-view-surfaces.json) | — | — |
+| [2026-10-08-view-startup-attribution.json](2026-10-08-view-startup-attribution.json) | — | — |
+| [2026-10-08-ui-setup-recovery.json](2026-10-08-ui-setup-recovery.json) | — | — |
+| [2026-10-08-ui-refinement.json](2026-10-08-ui-refinement.json) | — | — |
+| [2026-10-08-ui-refinement-native.json](2026-10-08-ui-refinement-native.json) | — | — |
+| [2026-10-08-ui-process.json](2026-10-08-ui-process.json) | — | — |
+| [2026-10-08-ui-process-native-memory.json](2026-10-08-ui-process-native-memory.json) | — | — |
+| [2026-10-08-ui-gnome-recovery.json](2026-10-08-ui-gnome-recovery.json) | — | — |
+| [2026-10-08-ui-foundations.json](2026-10-08-ui-foundations.json) | — | — |
+| [2026-10-08-tray-late-availability.json](2026-10-08-tray-late-availability.json) | — | — |
+| [2026-10-08-startup-reclaim.json](2026-10-08-startup-reclaim.json) | — | — |
+| [2026-10-08-sqlite-locating.json](2026-10-08-sqlite-locating.json) | — | — |
+| [2026-10-08-settings-simple.png](2026-10-08-settings-simple.png) | — | — |
+| [2026-10-08-settings-review.json](2026-10-08-settings-review.json) | — | — |
+| [2026-10-08-settings-refinement.json](2026-10-08-settings-refinement.json) | — | — |
+| [2026-10-08-settings-help.png](2026-10-08-settings-help.png) | — | — |
+| [2026-10-08-settings-filenames.png](2026-10-08-settings-filenames.png) | — | — |
+| [2026-10-08-sdk-memory.json](2026-10-08-sdk-memory.json) | — | — |
+| [2026-10-08-resident-memory.json](2026-10-08-resident-memory.json) | — | — |
+| [2026-10-08-payload-allocator.json](2026-10-08-payload-allocator.json) | — | — |
+| [2026-10-08-memory-review.json](2026-10-08-memory-review.json) | — | — |
+| [2026-10-08-memory-continuation-attribution.json](2026-10-08-memory-continuation-attribution.json) | — | — |
+| [2026-10-08-local-ipc.json](2026-10-08-local-ipc.json) | — | — |
+| [2026-10-08-live-region.json](2026-10-08-live-region.json) | — | — |
+| [2026-10-08-layout-inspection.json](2026-10-08-layout-inspection.json) | — | — |
+| [2026-10-08-heap-reclaim.json](2026-10-08-heap-reclaim.json) | — | — |
+| [2026-10-08-gjs-ownership.json](2026-10-08-gjs-ownership.json) | — | — |
+| [2026-10-08-fresh-cinnamon.json](2026-10-08-fresh-cinnamon.json) | — | — |
+| [2026-10-08-current-desktop-matrix.json](2026-10-08-current-desktop-matrix.json) | — | — |
+| [2026-10-08-build-versioning.json](2026-10-08-build-versioning.json) | — | — |
 | [2026-10-31-wayland-activation](2026-10-31-wayland-activation/) | — | Wayland tray activation and fallback-chooser screenshots on Fedora and Kubuntu |
 | [2026-10-31-recording-rate](2026-10-31-recording-rate/README.md) | #1040 | Recording frame rate — 2026-10-31 |
 | [2026-10-31-native-pass](2026-10-31-native-pass/README.md) | — | Published nightly: physical native pass, 2026-10-31 |
@@ -253,7 +322,7 @@ matrix and release documentation for new work.
 ## Retired experiment records
 
 These records describe app versions that no longer exist and are kept per
-[evidence retention](../evidence-retention.md).
+[evidence retention](https://github.com/patrick-hudson/put.gd-desktop/blob/nightly/docs/testing/evidence-retention.md).
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
