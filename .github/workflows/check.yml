@@ -1,0 +1,126 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Every checkout is sparse and blobless: the records stay out of the worktree and
+# git downloads a blob only when a job reads it.
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/records/*
+            /records/README.md
+          persist-credentials: false
+      - name: Run the unit tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Validate the commit range
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+          HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: python3 tools/check.py push --base "$BASE" --head "$HEAD"
+
+  secrets:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/records/*
+            /records/README.md
+          persist-credentials: false
+      - name: Install gitleaks
+        run: |
+          archive="$RUNNER_TEMP/gitleaks.tar.gz"
+          curl --fail --silent --show-error --location --output "$archive" \
+            https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz
+          echo "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb  $archive" | sha256sum --check --strict
+          tar -xzf "$archive" -C "$RUNNER_TEMP" gitleaks
+      - name: Scan for leaked secrets
+        # Scoped exceptions live in .gitleaks.toml. The raw report stays in the
+        # runner's temp directory; only rule, location and commit reach the log.
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+          HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          if [ "$EVENT" = workflow_dispatch ] || [ -z "$BASE" ] || [ -z "${BASE//0/}" ]; then
+            range=--all
+          else
+            range="$BASE..$HEAD"
+          fi
+          # gitleaks fails on any git stderr, which a lazy blob fetch would write,
+          # so fetch the blobs first.
+          git log --numstat --format= "$range" > /dev/null
+          report=$(mktemp "$RUNNER_TEMP/gitleaks-report.XXXXXX")
+          status=0
+          "$RUNNER_TEMP/gitleaks" git . --config .gitleaks.toml "--log-opts=$range" --redact --no-banner \
+            --exit-code 1 --report-format json --report-path "$report" || status=$?
+          if [ "$status" -ne 0 ]; then
+            jq -r '.[] | "\(.RuleID) \(.File):\(.StartLine) \(.Commit[0:12])"' "$report" || true
+          fi
+          exit "$status"
+
+  index:
+    needs: check
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    # Each run reconciles the tip of main, so a pending run replaced by a newer one
+    # loses nothing.
+    concurrency:
+      group: evidence-index
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          fetch-depth: 0
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/records/*
+            /records/README.md
+      - name: Update the records index
+        run: |
+          python3 tools/index.py
+          if git diff --quiet -- records/README.md; then
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add records/README.md
+          git commit --quiet -m 'Update the records index' -m 'Add rows for records published since the last index run.'
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            sleep $((attempt * 5))
+            git pull --rebase origin main
+          done
+          echo "::error::could not push the index after 5 attempts"
+          exit 1
