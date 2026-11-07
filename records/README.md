@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-06-highlight-acceptance-round2](2026-11-06-highlight-acceptance-round2/README.md) | — | Highlight acceptance, round 2: a marker on dark pages |
 | [2026-11-06-highlight-acceptance](2026-11-06-highlight-acceptance/README.md) | — | Highlight acceptance: real app, headless, four real captures |
 | [2026-11-06-highlight-real-captures](2026-11-06-highlight-real-captures/README.md) | — | Highlight compositing and text snapping on real captures |
 | [2026-11-06-highlight-modes](2026-11-06-highlight-modes/README.md) | — | Highlight compositing modes: prototype comparison |
