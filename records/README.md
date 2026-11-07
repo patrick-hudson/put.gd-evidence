@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-07-worker-e-settings-split](2026-11-07-worker-e-settings-split/README.md) | #1226 | Settings GUI split — worker E, issue #1226 |
 | [2026-11-07-worker-c-dev](2026-11-07-worker-c-dev/README.md) | — | Worker C Debian dev validation |
 | [2026-11-07-pr1260-f44-startup-recovery](2026-11-07-pr1260-f44-startup-recovery/README.md) | #1252, #1260 | PR #1260: no-tray startup recovery vs. an editor opened by editor.open (#1252), f44 GNOME |
 | [2026-11-07-worker-d-flakes](2026-11-07-worker-d-flakes/README.md) | — | Worker D flaky-test investigation |
