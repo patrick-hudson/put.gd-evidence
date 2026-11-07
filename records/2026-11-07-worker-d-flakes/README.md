@@ -1,0 +1,19 @@
+# Worker D flaky-test investigation
+
+Worker D, 2026-11-07
+Repository patrick-hudson/put.gd-desktop
+PR https://github.com/patrick-hudson/put.gd-desktop/pull/1261
+Baseline source 58b75af1e. After source 4059f2087d63353b0115e7980d2dcbc1c8108492 (three test-only commits).
+
+All builds and sustained tests ran over pinned SSH on physical builders. No physical desktop acceptance is claimed: History/Settings use offscreen, capture uses isolated Xvfb. No desktop leases needed. Both host lock purposes checked before heavy work and stayed free. Worker B notices respected.
+
+Stress command on k72:
+python3 tools/ci/stress_suite.py --source /home/patrick/work/wd1107 --out /home/patrick/work/wd1107-{before,after} --commit SOURCE --label worker-D-{before,after} --iterations 20 --hogs 4 --hog-cpus 0-1 --test-cpus 0-1 --time-scale 3 -- --preset dev -R "^(file_manager_integration|gui_history_view_text150|capture_process_integration)$" --parallel 2
+
+Baseline all 3 tests 0/20 failures. After all 3 tests 0/20 failures. All eight busy-loop PIDs and both stress harness PIDs confirmed absent; no worker-D app/test processes remain on either builder. No retries. Private harness TMPDIR /tmp/pgst.<8 chars>, max preflight session socket budget 45 UTF-8 bytes; owned fixture temporary paths are short.
+
+#1132: use scaled event-loop terminal-state waits instead of raw 5s waitForFinished; no application changes, all exit/restart/isolation assertions retained. #627: await exact hint text from async local availability. #398: last two reports use d25cbc8, whose pointer probe lacks the existing #1202 fence; preserve that fix and add 32 no-retry cross-connection regression cycles.
+
+#1226 remains unresolved; no Closes line, in progress label removed and evidence posted. Direct d69 profile: QT_QPA_PLATFORM=offscreen TMPDIR=/tmp/wdsD build/dev/test_gui_settings -maxwarnings 0 -o /tmp/wdsD/{before,after}.xml,xml. Default time scale 1, no CTest timeout applied. 209 functions passed in 225.810 s and 222.891 s; identical Settings source/binary in both runs, no timed-out wait diagnostics. Function timings include all data rows. Host shared load about 6. Full per-function comparison in d69/function-timings.txt. Existing old host binary was also inspected but excluded from acceptance because its test inventory predates nightly.
+
+SDK provisioning first failed because existing builder SDK 1.11.907 does not match pinned 1.11.924. The initial missing-SDK errors are retained in the session transcript; final build/configure logs remain on builders. Provisioned pinned official SDK with repository tools/ci/provision-linux-sdk.sh, jobs=2, private ~/work/wd1107/build/sdk. Baseline then rebuilt unmodified nightly export. Application and UI static library hashes remain equal before/after; test executables change as expected. No packages, desktop sessions or user projects changed.

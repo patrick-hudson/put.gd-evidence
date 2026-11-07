@@ -1,0 +1,11 @@
+1298521 absent
+1298576 absent
+1298579 absent
+1298580 absent
+1298581 absent
+1512974 absent
+1513026 absent
+1513027 absent
+1513028 absent
+1513030 absent
+1555054 bash -c python3 - <<"PY" from pathlib import Path import os pids=[] for run in ["before","after"]:  p=Path("/home/patrick/work/wd1107-"+run)  pids += [int(n) for f in ["pid.txt","hog-pids.txt"] for n in (p/f).read_text().split()] for pid in pids:print(pid,"PRESENT" if Path(f"/proc/{pid}").exists() else "absent") assert not any(Path(f"/proc/{pid}").exists() for pid in pids) PY ps -u patrick -o pid,args | grep -E "[/]home/patrick/work/wd1107|[p]utgdfm[0-9]" || true
