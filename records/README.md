@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-07-pr1260-f44-startup-recovery](2026-11-07-pr1260-f44-startup-recovery/README.md) | #1252, #1260 | PR #1260: no-tray startup recovery vs. an editor opened by editor.open (#1252), f44 GNOME |
 | [2026-11-07-worker-d-flakes](2026-11-07-worker-d-flakes/README.md) | — | Worker D flaky-test investigation |
 | [2026-11-07-shortcut-accessibility-m74-20261107](2026-11-07-shortcut-accessibility-m74-20261107/README.md) | #20261107 | Shortcut recording accessibility on Mint Qt 6.4.2 |
 | [2026-11-07-ffmpeg9-recording-finish-1249](2026-11-07-ffmpeg9-recording-finish-1249/README.md) | #1249 | PR 1249 recording acceptance completion |
