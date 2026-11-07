@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-06-highlighter-b-variations](2026-11-06-highlighter-b-variations/README.md) | — | Candidate B variations: every palette colour, tint, outline and marker strength |
 | [2026-11-06-highlighter-survey](2026-11-06-highlighter-survey/README.md) | — | Highlighter survey: what other tools do on dark pages, and candidate looks |
 | [2026-11-06-highlight-acceptance-round2](2026-11-06-highlight-acceptance-round2/README.md) | — | Highlight acceptance, round 2: a marker on dark pages |
 | [2026-11-06-highlight-acceptance](2026-11-06-highlight-acceptance/README.md) | — | Highlight acceptance: real app, headless, four real captures |
