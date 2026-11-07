@@ -1,0 +1,462 @@
+{
+  "schemaVersion": 2,
+  "campaign": "nightly-desktops",
+  "entries": [
+    {
+      "interaction": "region.to-upload",
+      "desktop": "aurora-kde-wayland",
+      "package": "appimage",
+      "functional": "passed",
+      "visual": "frames",
+      "receipt": "/var/home/patrick/c1245b/out/aurora/s3_region_upload-1/receipt.json",
+      "note": "s3_missing_head_404_count=1; s3_resolved_cloudfront_base_count=1; operationId=9c7df345-a47a-4313-b512-49c128db1ee5; Capture operation 9c7df345-a47a-4313-b512-49c128db1ee5; operationId=9c7df345-a47a-4313-b512-49c128db1ee5; historyId=6e9a272f-4336-4e92-a541-d3fde103c725; auto_copy_exact_link_count=1; independent desktop clipboard reader; no copy click; upload_count=1; Retained synthetic png sha256=57bca8e969fc3c8e3f0d7a44beb537f9e916c88e1033b78d9f0f3ec689a892a9; remote_hash_match_count=1; {\"url_host\": \"put.gd\", \"title\": \"[redacted]\", \"matched\": true}; cloudfront_positive_status=200; guest_public_hash_match_count=1; guest_cloudfront_positive_status=200; cleared screen: banners close requested; windows closed: none; deletion_count=1; s3_origin_absence_count=1; recipient_unavailable_observation={\"complete\": true, \"hostOK\": true, \"httpUnavailable\": false, \"media\": true, \"missing\": false, \"status\": 200, \"unavailable\": false}; cloudfront_after_delete_informational=geometry: RuntimeError: Wayland window cannot be placed on the desktop: [redacted] (PNG Image, 600 × 280 pixels) — Mozilla Firefox: compositor window for '[redacted] (PNG Image, 600\\xa0×\\xa0280 pixels) — Mozilla Firefox' (pid 154087, 1280x800) is missing or ambiguous (0 matches); compositor has for pid 154087: '[redacted] (PNG Image, 600 × 280 pixels) — Mozilla Firefox' [0, 0, 1280, 800] type 0 (KWin::XdgToplevelWindow); Firefox handler restored; MIME SHA-256 checks passed",
+      "host": "aurora-amd",
+      "placement": "guest",
+      "guest": "aurora-kde-wayland",
+      "destination": "s3",
+      "review": true,
+      "review_reason": "desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/outcomes_live.s3_region_upload/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "independent-frozen-pattern",
+          "path": "frames/outcomes_live.s3_region_upload/01-independent-frozen-pattern.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "browser-content",
+          "path": "frames/outcomes_live.s3_region_upload/02-browser-content.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "history-before-remote-cleanup",
+          "path": "frames/outcomes_live.s3_region_upload/03-history-before-remote-cleanup.png",
+          "window": "history",
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "delete-exact-owned-object",
+          "path": "frames/outcomes_live.s3_region_upload/04-delete-exact-owned-object.png",
+          "window": "confirmAction",
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "history-after-remote-cleanup",
+          "path": "frames/outcomes_live.s3_region_upload/05-history-after-remote-cleanup.png",
+          "window": "history",
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/outcomes_live.s3_region_upload/06-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "outcomes_live.s3_region_upload",
+      "build": "05b61eec291e510ae6b7e67855345dd9e3816963",
+      "at": "2026-11-07T11:05:33Z"
+    },
+    {
+      "interaction": "region.drag",
+      "desktop": "aurora-kde-wayland",
+      "package": "appimage",
+      "functional": "passed",
+      "visual": "frames",
+      "receipt": "/var/home/patrick/c1245b/out/aurora/s3_region_upload-1/receipt.json",
+      "note": "s3_missing_head_404_count=1; s3_resolved_cloudfront_base_count=1; operationId=9c7df345-a47a-4313-b512-49c128db1ee5; Capture operation 9c7df345-a47a-4313-b512-49c128db1ee5; operationId=9c7df345-a47a-4313-b512-49c128db1ee5; historyId=6e9a272f-4336-4e92-a541-d3fde103c725; auto_copy_exact_link_count=1; independent desktop clipboard reader; no copy click; upload_count=1; Retained synthetic png sha256=57bca8e969fc3c8e3f0d7a44beb537f9e916c88e1033b78d9f0f3ec689a892a9; remote_hash_match_count=1; {\"url_host\": \"put.gd\", \"title\": \"[redacted]\", \"matched\": true}; cloudfront_positive_status=200; guest_public_hash_match_count=1; guest_cloudfront_positive_status=200; cleared screen: banners close requested; windows closed: none; deletion_count=1; s3_origin_absence_count=1; recipient_unavailable_observation={\"complete\": true, \"hostOK\": true, \"httpUnavailable\": false, \"media\": true, \"missing\": false, \"status\": 200, \"unavailable\": false}; cloudfront_after_delete_informational=geometry: RuntimeError: Wayland window cannot be placed on the desktop: [redacted] (PNG Image, 600 × 280 pixels) — Mozilla Firefox: compositor window for '[redacted] (PNG Image, 600\\xa0×\\xa0280 pixels) — Mozilla Firefox' (pid 154087, 1280x800) is missing or ambiguous (0 matches); compositor has for pid 154087: '[redacted] (PNG Image, 600 × 280 pixels) — Mozilla Firefox' [0, 0, 1280, 800] type 0 (KWin::XdgToplevelWindow); Firefox handler restored; MIME SHA-256 checks passed",
+      "host": "aurora-amd",
+      "placement": "guest",
+      "guest": "aurora-kde-wayland",
+      "destination": "s3",
+      "review": true,
+      "review_reason": "desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/outcomes_live.s3_region_upload/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "independent-frozen-pattern",
+          "path": "frames/outcomes_live.s3_region_upload/01-independent-frozen-pattern.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "browser-content",
+          "path": "frames/outcomes_live.s3_region_upload/02-browser-content.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "history-before-remote-cleanup",
+          "path": "frames/outcomes_live.s3_region_upload/03-history-before-remote-cleanup.png",
+          "window": "history",
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "delete-exact-owned-object",
+          "path": "frames/outcomes_live.s3_region_upload/04-delete-exact-owned-object.png",
+          "window": "confirmAction",
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "history-after-remote-cleanup",
+          "path": "frames/outcomes_live.s3_region_upload/05-history-after-remote-cleanup.png",
+          "window": "history",
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/outcomes_live.s3_region_upload/06-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "outcomes_live.s3_region_upload",
+      "build": "05b61eec291e510ae6b7e67855345dd9e3816963",
+      "at": "2026-11-07T11:05:33Z"
+    },
+    {
+      "interaction": "history.copy-link",
+      "desktop": "aurora-kde-wayland",
+      "package": "appimage",
+      "functional": "passed",
+      "visual": "frames",
+      "receipt": "/var/home/patrick/c1245b/out/aurora/s3_region_upload-1/receipt.json",
+      "note": "s3_missing_head_404_count=1; s3_resolved_cloudfront_base_count=1; operationId=9c7df345-a47a-4313-b512-49c128db1ee5; Capture operation 9c7df345-a47a-4313-b512-49c128db1ee5; operationId=9c7df345-a47a-4313-b512-49c128db1ee5; historyId=6e9a272f-4336-4e92-a541-d3fde103c725; auto_copy_exact_link_count=1; independent desktop clipboard reader; no copy click; upload_count=1; Retained synthetic png sha256=57bca8e969fc3c8e3f0d7a44beb537f9e916c88e1033b78d9f0f3ec689a892a9; remote_hash_match_count=1; {\"url_host\": \"put.gd\", \"title\": \"[redacted]\", \"matched\": true}; cloudfront_positive_status=200; guest_public_hash_match_count=1; guest_cloudfront_positive_status=200; cleared screen: banners close requested; windows closed: none; deletion_count=1; s3_origin_absence_count=1; recipient_unavailable_observation={\"complete\": true, \"hostOK\": true, \"httpUnavailable\": false, \"media\": true, \"missing\": false, \"status\": 200, \"unavailable\": false}; cloudfront_after_delete_informational=geometry: RuntimeError: Wayland window cannot be placed on the desktop: [redacted] (PNG Image, 600 × 280 pixels) — Mozilla Firefox: compositor window for '[redacted] (PNG Image, 600\\xa0×\\xa0280 pixels) — Mozilla Firefox' (pid 154087, 1280x800) is missing or ambiguous (0 matches); compositor has for pid 154087: '[redacted] (PNG Image, 600 × 280 pixels) — Mozilla Firefox' [0, 0, 1280, 800] type 0 (KWin::XdgToplevelWindow); Firefox handler restored; MIME SHA-256 checks passed",
+      "host": "aurora-amd",
+      "placement": "guest",
+      "guest": "aurora-kde-wayland",
+      "destination": "s3",
+      "review": true,
+      "review_reason": "desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/outcomes_live.s3_region_upload/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "independent-frozen-pattern",
+          "path": "frames/outcomes_live.s3_region_upload/01-independent-frozen-pattern.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "browser-content",
+          "path": "frames/outcomes_live.s3_region_upload/02-browser-content.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "history-before-remote-cleanup",
+          "path": "frames/outcomes_live.s3_region_upload/03-history-before-remote-cleanup.png",
+          "window": "history",
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "delete-exact-owned-object",
+          "path": "frames/outcomes_live.s3_region_upload/04-delete-exact-owned-object.png",
+          "window": "confirmAction",
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "history-after-remote-cleanup",
+          "path": "frames/outcomes_live.s3_region_upload/05-history-after-remote-cleanup.png",
+          "window": "history",
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/outcomes_live.s3_region_upload/06-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "outcomes_live.s3_region_upload",
+      "build": "05b61eec291e510ae6b7e67855345dd9e3816963",
+      "at": "2026-11-07T11:05:33Z"
+    },
+    {
+      "interaction": "history.open-link",
+      "desktop": "aurora-kde-wayland",
+      "package": "appimage",
+      "functional": "passed",
+      "visual": "frames",
+      "receipt": "/var/home/patrick/c1245b/out/aurora/s3_region_upload-1/receipt.json",
+      "note": "s3_missing_head_404_count=1; s3_resolved_cloudfront_base_count=1; operationId=9c7df345-a47a-4313-b512-49c128db1ee5; Capture operation 9c7df345-a47a-4313-b512-49c128db1ee5; operationId=9c7df345-a47a-4313-b512-49c128db1ee5; historyId=6e9a272f-4336-4e92-a541-d3fde103c725; auto_copy_exact_link_count=1; independent desktop clipboard reader; no copy click; upload_count=1; Retained synthetic png sha256=57bca8e969fc3c8e3f0d7a44beb537f9e916c88e1033b78d9f0f3ec689a892a9; remote_hash_match_count=1; {\"url_host\": \"put.gd\", \"title\": \"[redacted]\", \"matched\": true}; cloudfront_positive_status=200; guest_public_hash_match_count=1; guest_cloudfront_positive_status=200; cleared screen: banners close requested; windows closed: none; deletion_count=1; s3_origin_absence_count=1; recipient_unavailable_observation={\"complete\": true, \"hostOK\": true, \"httpUnavailable\": false, \"media\": true, \"missing\": false, \"status\": 200, \"unavailable\": false}; cloudfront_after_delete_informational=geometry: RuntimeError: Wayland window cannot be placed on the desktop: [redacted] (PNG Image, 600 × 280 pixels) — Mozilla Firefox: compositor window for '[redacted] (PNG Image, 600\\xa0×\\xa0280 pixels) — Mozilla Firefox' (pid 154087, 1280x800) is missing or ambiguous (0 matches); compositor has for pid 154087: '[redacted] (PNG Image, 600 × 280 pixels) — Mozilla Firefox' [0, 0, 1280, 800] type 0 (KWin::XdgToplevelWindow); Firefox handler restored; MIME SHA-256 checks passed",
+      "host": "aurora-amd",
+      "placement": "guest",
+      "guest": "aurora-kde-wayland",
+      "destination": "s3",
+      "review": true,
+      "review_reason": "desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/outcomes_live.s3_region_upload/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "independent-frozen-pattern",
+          "path": "frames/outcomes_live.s3_region_upload/01-independent-frozen-pattern.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "browser-content",
+          "path": "frames/outcomes_live.s3_region_upload/02-browser-content.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "history-before-remote-cleanup",
+          "path": "frames/outcomes_live.s3_region_upload/03-history-before-remote-cleanup.png",
+          "window": "history",
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "delete-exact-owned-object",
+          "path": "frames/outcomes_live.s3_region_upload/04-delete-exact-owned-object.png",
+          "window": "confirmAction",
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "history-after-remote-cleanup",
+          "path": "frames/outcomes_live.s3_region_upload/05-history-after-remote-cleanup.png",
+          "window": "history",
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/outcomes_live.s3_region_upload/06-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "outcomes_live.s3_region_upload",
+      "build": "05b61eec291e510ae6b7e67855345dd9e3816963",
+      "at": "2026-11-07T11:05:33Z"
+    },
+    {
+      "interaction": "history.delete-remote",
+      "desktop": "aurora-kde-wayland",
+      "package": "appimage",
+      "functional": "passed",
+      "visual": "frames",
+      "receipt": "/var/home/patrick/c1245b/out/aurora/s3_region_upload-1/receipt.json",
+      "note": "s3_missing_head_404_count=1; s3_resolved_cloudfront_base_count=1; operationId=9c7df345-a47a-4313-b512-49c128db1ee5; Capture operation 9c7df345-a47a-4313-b512-49c128db1ee5; operationId=9c7df345-a47a-4313-b512-49c128db1ee5; historyId=6e9a272f-4336-4e92-a541-d3fde103c725; auto_copy_exact_link_count=1; independent desktop clipboard reader; no copy click; upload_count=1; Retained synthetic png sha256=57bca8e969fc3c8e3f0d7a44beb537f9e916c88e1033b78d9f0f3ec689a892a9; remote_hash_match_count=1; {\"url_host\": \"put.gd\", \"title\": \"[redacted]\", \"matched\": true}; cloudfront_positive_status=200; guest_public_hash_match_count=1; guest_cloudfront_positive_status=200; cleared screen: banners close requested; windows closed: none; deletion_count=1; s3_origin_absence_count=1; recipient_unavailable_observation={\"complete\": true, \"hostOK\": true, \"httpUnavailable\": false, \"media\": true, \"missing\": false, \"status\": 200, \"unavailable\": false}; cloudfront_after_delete_informational=geometry: RuntimeError: Wayland window cannot be placed on the desktop: [redacted] (PNG Image, 600 × 280 pixels) — Mozilla Firefox: compositor window for '[redacted] (PNG Image, 600\\xa0×\\xa0280 pixels) — Mozilla Firefox' (pid 154087, 1280x800) is missing or ambiguous (0 matches); compositor has for pid 154087: '[redacted] (PNG Image, 600 × 280 pixels) — Mozilla Firefox' [0, 0, 1280, 800] type 0 (KWin::XdgToplevelWindow); Firefox handler restored; MIME SHA-256 checks passed",
+      "host": "aurora-amd",
+      "placement": "guest",
+      "guest": "aurora-kde-wayland",
+      "destination": "s3",
+      "review": true,
+      "review_reason": "desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/outcomes_live.s3_region_upload/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "independent-frozen-pattern",
+          "path": "frames/outcomes_live.s3_region_upload/01-independent-frozen-pattern.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "browser-content",
+          "path": "frames/outcomes_live.s3_region_upload/02-browser-content.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "history-before-remote-cleanup",
+          "path": "frames/outcomes_live.s3_region_upload/03-history-before-remote-cleanup.png",
+          "window": "history",
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "delete-exact-owned-object",
+          "path": "frames/outcomes_live.s3_region_upload/04-delete-exact-owned-object.png",
+          "window": "confirmAction",
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "history-after-remote-cleanup",
+          "path": "frames/outcomes_live.s3_region_upload/05-history-after-remote-cleanup.png",
+          "window": "history",
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/outcomes_live.s3_region_upload/06-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "outcomes_live.s3_region_upload",
+      "build": "05b61eec291e510ae6b7e67855345dd9e3816963",
+      "at": "2026-11-07T11:05:33Z"
+    },
+    {
+      "interaction": "confirm.history-delete",
+      "desktop": "aurora-kde-wayland",
+      "package": "appimage",
+      "functional": "passed",
+      "visual": "frames",
+      "receipt": "/var/home/patrick/c1245b/out/aurora/s3_region_upload-1/receipt.json",
+      "note": "s3_missing_head_404_count=1; s3_resolved_cloudfront_base_count=1; operationId=9c7df345-a47a-4313-b512-49c128db1ee5; Capture operation 9c7df345-a47a-4313-b512-49c128db1ee5; operationId=9c7df345-a47a-4313-b512-49c128db1ee5; historyId=6e9a272f-4336-4e92-a541-d3fde103c725; auto_copy_exact_link_count=1; independent desktop clipboard reader; no copy click; upload_count=1; Retained synthetic png sha256=57bca8e969fc3c8e3f0d7a44beb537f9e916c88e1033b78d9f0f3ec689a892a9; remote_hash_match_count=1; {\"url_host\": \"put.gd\", \"title\": \"[redacted]\", \"matched\": true}; cloudfront_positive_status=200; guest_public_hash_match_count=1; guest_cloudfront_positive_status=200; cleared screen: banners close requested; windows closed: none; deletion_count=1; s3_origin_absence_count=1; recipient_unavailable_observation={\"complete\": true, \"hostOK\": true, \"httpUnavailable\": false, \"media\": true, \"missing\": false, \"status\": 200, \"unavailable\": false}; cloudfront_after_delete_informational=geometry: RuntimeError: Wayland window cannot be placed on the desktop: [redacted] (PNG Image, 600 × 280 pixels) — Mozilla Firefox: compositor window for '[redacted] (PNG Image, 600\\xa0×\\xa0280 pixels) — Mozilla Firefox' (pid 154087, 1280x800) is missing or ambiguous (0 matches); compositor has for pid 154087: '[redacted] (PNG Image, 600 × 280 pixels) — Mozilla Firefox' [0, 0, 1280, 800] type 0 (KWin::XdgToplevelWindow); Firefox handler restored; MIME SHA-256 checks passed",
+      "host": "aurora-amd",
+      "placement": "guest",
+      "guest": "aurora-kde-wayland",
+      "destination": "s3",
+      "review": true,
+      "review_reason": "desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/outcomes_live.s3_region_upload/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "independent-frozen-pattern",
+          "path": "frames/outcomes_live.s3_region_upload/01-independent-frozen-pattern.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "browser-content",
+          "path": "frames/outcomes_live.s3_region_upload/02-browser-content.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "history-before-remote-cleanup",
+          "path": "frames/outcomes_live.s3_region_upload/03-history-before-remote-cleanup.png",
+          "window": "history",
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "delete-exact-owned-object",
+          "path": "frames/outcomes_live.s3_region_upload/04-delete-exact-owned-object.png",
+          "window": "confirmAction",
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "history-after-remote-cleanup",
+          "path": "frames/outcomes_live.s3_region_upload/05-history-after-remote-cleanup.png",
+          "window": "history",
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/outcomes_live.s3_region_upload/06-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "outcomes_live.s3_region_upload",
+      "build": "05b61eec291e510ae6b7e67855345dd9e3816963",
+      "at": "2026-11-07T11:05:33Z"
+    }
+  ]
+}

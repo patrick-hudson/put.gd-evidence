@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 2,
+  "environment": {
+    "desktop": "fedora-gnome-wayland",
+    "host": "f44",
+    "placement": "guest",
+    "guest": "fedora-gnome-wayland",
+    "package": "rpm",
+    "destination": "local",
+    "build": "05b61eec291e510ae6b7e67855345dd9e3816963",
+    "placement_details": {
+      "run_id": "c182c678-1d6f-49ab-95ea-67c4535147e9",
+      "lab_profile": "fedora-gnome-wayland",
+      "run_directory": "/home/patrick/nd/work/lab-runs/n60cce4ed",
+      "session_root": "/dev/shm/n8ae509f1",
+      "socket": "/dev/shm/n8ae509f1/runtime/putgd/session.sock",
+      "input_backend": "qmp",
+      "frame_backend": "vnc-in-memory"
+    },
+    "target": {
+      "hostname": "fedora",
+      "kernel": "6.19.10-300.fc44.x86_64",
+      "machine": "x86_64",
+      "os": {
+        "ID": "fedora",
+        "VERSION_ID": "44",
+        "VARIANT_ID": "workstation"
+      },
+      "session_type": "wayland",
+      "desktop": "GNOME",
+      "qt_platform": "wayland"
+    },
+    "kwin_entry_staging": [],
+    "clipboard_preservation": {
+      "restored_and_stopped": true,
+      "reviews": [],
+      "ready": true,
+      "preserved_mimes": [],
+      "transport": "x11-selection-bridge",
+      "pid": 9756,
+      "start": "10371",
+      "boot": "0d894006-4b92-48a2-b80d-2ba880762e37",
+      "reaped_pids": []
+    },
+    "observed_build": {
+      "baseVersion": "26.1107.4026",
+      "commitCount": 4026,
+      "dirty": false,
+      "gitCommit": "05b61eec291e510ae6b7e67855345dd9e3816963",
+      "gitTree": "9cc27397b972a00cbfde3b39b3564c7874551838",
+      "packageVersion": "26.1107.4026~dev+g05b61eec291e",
+      "schemaVersion": 1,
+      "sourceProvenance": "git",
+      "version": "26.1107.4026-dev+g05b61eec291e"
+    },
+    "operation_ids": [
+      {
+        "operationId": "6ab3685e-da60-42e5-9b57-d762ff05a029"
+      },
+      {
+        "operationId": "acf28d78-b274-4fc1-ae86-faef18bca36c"
+      }
+    ],
+    "private_cleanup": "resident-log-and-state-root-removed",
+    "coverage_export": {
+      "scanned_before_copy": true,
+      "copy_scan_passed": true,
+      "published": true
+    }
+  },
+  "interactions": [
+    {
+      "interaction": "shell.command-capture-window",
+      "desktop": "fedora-gnome-wayland",
+      "package": "rpm",
+      "functional": "passed",
+      "visual": "frames",
+      "receipt": "/home/patrick/c1245b/out/fedora-gnome/window_desktop-1/receipt.json",
+      "note": "operationId=6ab3685e-da60-42e5-9b57-d762ff05a029; operationId=6ab3685e-da60-42e5-9b57-d762ff05a029; historyId=aa32e67b-bcbe-4bdd-9c2f-52e198bb7fac; uploaded/local sha256=3012b4c55ca99a3cab039eb948c89733db99455aa70bb5b32a080c6b5a1c9f36; Retained synthetic png sha256=3012b4c55ca99a3cab039eb948c89733db99455aa70bb5b32a080c6b5a1c9f36; pixel oracle: (1280, 800), tolerance=0; operationId=acf28d78-b274-4fc1-ae86-faef18bca36c; operationId=acf28d78-b274-4fc1-ae86-faef18bca36c; historyId=cc993b80-0f8d-4728-a622-f5e4dfc2e794; uploaded/local sha256=a5a1e47fdd5c02eeb246dd24883db26a5d3fd5cecd9019d890e7dbcbc959f45a; Retained synthetic png sha256=a5a1e47fdd5c02eeb246dd24883db26a5d3fd5cecd9019d890e7dbcbc959f45a; pixel oracle: (1280, 800), tolerance=0",
+      "host": "f44",
+      "placement": "guest",
+      "guest": "fedora-gnome-wayland",
+      "destination": "local",
+      "review": true,
+      "review_reason": "desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/outcomes.window_desktop/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "independent-frozen-pattern",
+          "path": "frames/outcomes.window_desktop/01-independent-frozen-pattern.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "publication-result",
+          "path": "frames/outcomes.window_desktop/02-publication-result.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "independent-frozen-pattern",
+          "path": "frames/outcomes.window_desktop/03-independent-frozen-pattern.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "publication-result",
+          "path": "frames/outcomes.window_desktop/04-publication-result.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/outcomes.window_desktop/05-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "outcomes.window_desktop",
+      "build": "05b61eec291e510ae6b7e67855345dd9e3816963",
+      "at": "2026-11-07T10:56:03Z"
+    },
+    {
+      "interaction": "shell.command-capture-desktop",
+      "desktop": "fedora-gnome-wayland",
+      "package": "rpm",
+      "functional": "passed",
+      "visual": "frames",
+      "receipt": "/home/patrick/c1245b/out/fedora-gnome/window_desktop-1/receipt.json",
+      "note": "operationId=6ab3685e-da60-42e5-9b57-d762ff05a029; operationId=6ab3685e-da60-42e5-9b57-d762ff05a029; historyId=aa32e67b-bcbe-4bdd-9c2f-52e198bb7fac; uploaded/local sha256=3012b4c55ca99a3cab039eb948c89733db99455aa70bb5b32a080c6b5a1c9f36; Retained synthetic png sha256=3012b4c55ca99a3cab039eb948c89733db99455aa70bb5b32a080c6b5a1c9f36; pixel oracle: (1280, 800), tolerance=0; operationId=acf28d78-b274-4fc1-ae86-faef18bca36c; operationId=acf28d78-b274-4fc1-ae86-faef18bca36c; historyId=cc993b80-0f8d-4728-a622-f5e4dfc2e794; uploaded/local sha256=a5a1e47fdd5c02eeb246dd24883db26a5d3fd5cecd9019d890e7dbcbc959f45a; Retained synthetic png sha256=a5a1e47fdd5c02eeb246dd24883db26a5d3fd5cecd9019d890e7dbcbc959f45a; pixel oracle: (1280, 800), tolerance=0",
+      "host": "f44",
+      "placement": "guest",
+      "guest": "fedora-gnome-wayland",
+      "destination": "local",
+      "review": true,
+      "review_reason": "desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/outcomes.window_desktop/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "independent-frozen-pattern",
+          "path": "frames/outcomes.window_desktop/01-independent-frozen-pattern.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "publication-result",
+          "path": "frames/outcomes.window_desktop/02-publication-result.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "independent-frozen-pattern",
+          "path": "frames/outcomes.window_desktop/03-independent-frozen-pattern.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "publication-result",
+          "path": "frames/outcomes.window_desktop/04-publication-result.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/outcomes.window_desktop/05-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "outcomes.window_desktop",
+      "build": "05b61eec291e510ae6b7e67855345dd9e3816963",
+      "at": "2026-11-07T10:56:03Z"
+    }
+  ],
+  "secret_scan": {
+    "quarantine": [],
+    "passed": true,
+    "files": 11,
+    "pngs": 6,
+    "findings": []
+  }
+}
