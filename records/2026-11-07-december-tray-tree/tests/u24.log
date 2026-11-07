@@ -1,0 +1,94 @@
+Preset CMake variables:
+
+  CMAKE_BUILD_TYPE="Debug"
+
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Performing Test HAVE_STDATOMIC
+-- Performing Test HAVE_STDATOMIC - Success
+-- Found WrapAtomic: TRUE  
+-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
+-- Found WrapOpenGL: TRUE  
+-- Found XKB: /usr/lib/x86_64-linux-gnu/libxkbcommon.so (found suitable version "1.6.0", minimum required is "0.5.0") 
+-- Found WrapVulkanHeaders: /usr/include  
+-- Configuring done (0.5s)
+-- Generating done (0.0s)
+-- Build files have been written to: /src/build/dev
+[1/9] Automatic MOC for target test_gui_tray_season
+[2/9] Building CXX object CMakeFiles/test_gui_tray_season.dir/test_gui_tray_season_autogen/mocs_compilation.cpp.o
+[3/9] Building CXX object CMakeFiles/test_gui_tray_season.dir/tests/gui/test_tray_season.cpp.o
+[4/9] Building CXX object CMakeFiles/test_gui_tray_season.dir/src/ui/IconArt.cpp.o
+[5/9] Building CXX object CMakeFiles/test_gui_tray_season.dir/src/ui/Ui.cpp.o
+[6/9] Building CXX object CMakeFiles/test_gui_tray_season.dir/src/ui/Theme.cpp.o
+[7/9] Building CXX object CMakeFiles/test_gui_tray_season.dir/src/ui/TrayCalendar.cpp.o
+[8/9] Building CXX object CMakeFiles/test_gui_tray_season.dir/src/ui/WindowButtons.cpp.o
+[9/9] Linking CXX executable test_gui_tray_season
+UpdateCTestConfiguration  from :/src/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/src/build/dev/DartConfiguration.tcl
+Test project /src/build/dev
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: gui_tray_season
+
+1: Test command: /src/build/dev/test_gui_tray_season
+1: Working Directory: /src/build/dev
+1: Environment variables: 
+1:  QT_QPA_PLATFORM=offscreen
+1: Test timeout computed to be: 60
+1: ********* Start testing of TraySeason *********
+1: Config: Using QtTest library 6.4.2, Qt 6.4.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 13.2.0), ubuntu 24.04
+1: PASS   : TraySeason::initTestCase()
+1: PASS   : TraySeason::datesPickTheGlyph(Oct 31)
+1: PASS   : TraySeason::datesPickTheGlyph(Nov 1)
+1: PASS   : TraySeason::datesPickTheGlyph(Nov 30)
+1: PASS   : TraySeason::datesPickTheGlyph(Dec 1)
+1: PASS   : TraySeason::datesPickTheGlyph(Dec 31)
+1: PASS   : TraySeason::datesPickTheGlyph(Jan 1)
+1: PASS   : TraySeason::datesPickTheGlyph(another year)
+1: PASS   : TraySeason::withoutAnOverrideItReadsTheRealLocalDate()
+1: PASS   : TraySeason::badOverrideIsIgnored()
+1: PASS   : TraySeason::midnightChangesTheGlyphWithoutARestart(into November)
+1: PASS   : TraySeason::midnightChangesTheGlyphWithoutARestart(into December)
+1: PASS   : TraySeason::midnightChangesTheGlyphWithoutARestart(into January)
+1: PASS   : TraySeason::midnightInsideAMonthChangesNothing()
+1: PASS   : TraySeason::timeZoneChangeIsNoticed()
+1: PASS   : TraySeason::timeUntilTomorrowCountsToLocalMidnight()
+1: PASS   : TraySeason::markOverloadsProduceTheSamePixels()
+1: PASS   : TraySeason::turkeyKeepsTheBowl()
+1: PASS   : TraySeason::seasonalArtReachesItsOwnHeight()
+1: PASS   : TraySeason::fullFillCoversTheWholeSilhouette(mark)
+1: PASS   : TraySeason::fullFillCoversTheWholeSilhouette(turkey)
+1: PASS   : TraySeason::fullFillCoversTheWholeSilhouette(tree)
+1: PASS   : TraySeason::fillClimbsBottomUpWithGlyphBounds(mark)
+1: PASS   : TraySeason::fillClimbsBottomUpWithGlyphBounds(turkey)
+1: PASS   : TraySeason::fillClimbsBottomUpWithGlyphBounds(tree)
+1: PASS   : TraySeason::cutoutsAndTheGapStayTransparent()
+1: PASS   : TraySeason::treeTiersStayDivided()
+1: PASS   : TraySeason::aBadgeDrawsOnTheOrdinaryMark(failed)
+1: PASS   : TraySeason::aBadgeDrawsOnTheOrdinaryMark(recording)
+1: PASS   : TraySeason::aBadgeDrawsOnTheOrdinaryMark(paused)
+1: PASS   : TraySeason::aBadgeDrawsOnTheOrdinaryMark(failed while recording)
+1: PASS   : TraySeason::aBadgeDrawsOnTheOrdinaryMark(failed while paused)
+1: PASS   : TraySeason::aBadgeDrawsOnTheOrdinaryMark(uploading while recording)
+1: PASS   : TraySeason::aBadgeDrawsOnTheOrdinaryMark(uploading while paused)
+1: PASS   : TraySeason::qtTrayIconIsTheSameFrame()
+1: PASS   : TraySeason::cleanupTestCase()
+1: Totals: 36 passed, 0 failed, 0 skipped, 0 blacklisted, 4802ms
+1: ********* Finished testing of TraySeason *********
+1/1 Test #1: gui_tray_season ..................   Passed    4.85 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   4.86 sec
