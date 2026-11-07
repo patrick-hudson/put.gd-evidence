@@ -1,0 +1,110 @@
+{
+ "host": "putgd-ubuntu-lab",
+ "kernel": "7.0.0-38-generic",
+ "desktop": "gnome-shell",
+ "session": "wayland",
+ "target": "region",
+ "rect": [
+  80,
+  140,
+  1120,
+  600
+ ],
+ "formats": [
+  "mp4",
+  "webm",
+  "gif",
+  "webp"
+ ],
+ "video": "still",
+ "timing": {
+  "lead": 2,
+  "pauseAt": 2.0,
+  "pauseFor": 0.0,
+  "after": 1.0
+ },
+ "builds": {
+  "candidate": {
+   "kind": "appimage",
+   "file": "putgd-26.1107.4044-dev+g33af4071b5fa-x86_64.AppImage",
+   "sha256": "d59c2e68bd7bbf4d6864bab36a291dc3035adb145af9362c516296e78ccaa83b"
+  },
+  "nightly": {
+   "kind": "appimage",
+   "file": "putgd-26.1107.4036-dev+g369f001b66a9-x86_64.AppImage",
+   "sha256": "31761f85cfb1cbe94dc3d5528a078cccd8b85c4920fd2740e9fa5b5e2a8982ed"
+  }
+ },
+ "analyzer": "/home/lab/work/f9t/analyzer/squashfs-root",
+ "rounds": [
+  {
+   "build": "candidate",
+   "round": 1,
+   "format": "mp4",
+   "error": "recording.prepare failed: disk_space_insufficient Not enough free disk space to record: 1.3 GB is free, put.gd keeps 1.6 GB free for the system, and a recording needs 192 MB more. Free up at least 417 MB and try again."
+  },
+  {
+   "build": "nightly",
+   "round": 1,
+   "format": "mp4",
+   "error": "recording.prepare failed: disk_space_insufficient Not enough free disk space to record: 1.3 GB is free, put.gd keeps 1.6 GB free for the system, and a recording needs 192 MB more. Free up at least 417 MB and try again."
+  },
+  {
+   "build": "candidate",
+   "round": 1,
+   "format": "webm",
+   "error": "recording.prepare failed: disk_space_insufficient Not enough free disk space to record: 1.3 GB is free, put.gd keeps 1.6 GB free for the system, and a recording needs 192 MB more. Free up at least 426 MB and try again."
+  },
+  {
+   "build": "nightly",
+   "round": 1,
+   "format": "webm",
+   "error": "recording.prepare failed: disk_space_insufficient Not enough free disk space to record: 1.3 GB is free, put.gd keeps 1.6 GB free for the system, and a recording needs 192 MB more. Free up at least 419 MB and try again."
+  },
+  {
+   "build": "candidate",
+   "round": 1,
+   "format": "gif",
+   "error": "recording.prepare failed: disk_space_insufficient Not enough free disk space to record: 1.3 GB is free, put.gd keeps 1.6 GB free for the system, and a recording needs 192 MB more. Free up at least 423 MB and try again."
+  },
+  {
+   "build": "nightly",
+   "round": 1,
+   "format": "gif",
+   "error": "recording.prepare failed: disk_space_insufficient Not enough free disk space to record: 1.3 GB is free, put.gd keeps 1.6 GB free for the system, and a recording needs 192 MB more. Free up at least 423 MB and try again."
+  },
+  {
+   "build": "candidate",
+   "round": 1,
+   "format": "webp",
+   "error": "recording.prepare failed: disk_space_insufficient Not enough free disk space to record: 1.3 GB is free, put.gd keeps 1.6 GB free for the system, and a recording needs 192 MB more. Free up at least 423 MB and try again."
+  },
+  {
+   "build": "nightly",
+   "round": 1,
+   "format": "webp",
+   "error": "recording.prepare failed: disk_space_insufficient Not enough free disk space to record: 1.3 GB is free, put.gd keeps 1.6 GB free for the system, and a recording needs 192 MB more. Free up at least 430 MB and try again."
+  }
+ ],
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "Virtual-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1280,
+    800
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "skipped": "no loopback VNC tile (disposable guest)"
+  },
+  "video": "still"
+ },
+ "gpuHangs": []
+}

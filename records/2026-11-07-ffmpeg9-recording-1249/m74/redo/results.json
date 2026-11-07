@@ -1,0 +1,559 @@
+{
+ "host": "mint-builder",
+ "kernel": "6.14.0-37-generic",
+ "desktop": "cinnamon",
+ "session": "x11",
+ "target": "monitor",
+ "rect": null,
+ "formats": [
+  "mp4",
+  "webm",
+  "gif",
+  "webp"
+ ],
+ "video": "pattern",
+ "timing": {
+  "lead": 2,
+  "pauseAt": 3.0,
+  "pauseFor": 2.0,
+  "after": 3.0
+ },
+ "builds": {
+  "candidate": {
+   "kind": "appimage",
+   "file": "putgd-26.1107.4044-dev+g33af4071b5fa-x86_64.AppImage",
+   "sha256": "d59c2e68bd7bbf4d6864bab36a291dc3035adb145af9362c516296e78ccaa83b"
+  },
+  "nightly": {
+   "kind": "appimage",
+   "file": "putgd-26.1107.4036-dev+g369f001b66a9-x86_64.AppImage",
+   "sha256": "31761f85cfb1cbe94dc3d5528a078cccd8b85c4920fd2740e9fa5b5e2a8982ed"
+  }
+ },
+ "analyzer": "/home/patrick/work/f9t/analyzer/squashfs-root",
+ "rounds": [
+  {
+   "build": "candidate",
+   "round": 1,
+   "format": "mp4",
+   "started": "2026-11-07T18:22:42Z",
+   "acquisition": "x11",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc"
+   ],
+   "canvas": [
+    1920,
+    1080
+   ],
+   "overlay": {
+    "excluded": false,
+    "placement": "handle"
+   },
+   "pauseClipS": 3.044,
+   "load": 0.59228515625,
+   "durationUs": 6133333,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "60ead522-780e-44d4-ab5e-0368b21bfb85.mkv",
+     "bytes": 232122,
+     "motion": 18.783
+    },
+    "export": {
+     "file": "candidate-mp4-1.mp4",
+     "bytes": 164113,
+     "motion": 18.085
+    }
+   },
+   "frame": {
+    "edges": {
+     "bottom": 1.0,
+     "left": 1.0,
+     "right": 1.0,
+     "top": 1.0
+    },
+    "fraction": 0.5552,
+    "kept": "/home/patrick/work/f9t/redo/frames/candidate-mp4-1.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     1280,
+     720
+    ],
+    "sha256": "d79a82913d67caad0490cea1aae86d8d574556b87c78fd3e08b3fdf5a83f0057",
+    "size": [
+     1280,
+     720
+    ]
+   }
+  },
+  {
+   "build": "nightly",
+   "round": 1,
+   "format": "mp4",
+   "started": "2026-11-07T18:22:58Z",
+   "acquisition": "x11",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc"
+   ],
+   "canvas": [
+    1920,
+    1080
+   ],
+   "overlay": {
+    "excluded": false,
+    "placement": "handle"
+   },
+   "pauseClipS": 3.057,
+   "load": 0.8310546875,
+   "durationUs": 6200000,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "229dcdfb-ab44-4081-9643-699268d4e22a.mkv",
+     "bytes": 260362,
+     "motion": 18.992,
+     "destroyed": true
+    },
+    "export": {
+     "file": "nightly-mp4-1.mp4",
+     "bytes": 194078,
+     "motion": 18.277,
+     "destroyed": true
+    }
+   },
+   "frame": {
+    "deleted": true,
+    "edges": {
+     "bottom": 1.0,
+     "left": 1.0,
+     "right": 0.9255,
+     "top": 0.7819
+    },
+    "fraction": 0.5316,
+    "minFraction": 0.5,
+    "ok": false,
+    "reason": "uncovered_edge",
+    "rect": [
+     0,
+     0,
+     1280,
+     720
+    ],
+    "size": [
+     1280,
+     720
+    ]
+   }
+  },
+  {
+   "build": "candidate",
+   "round": 1,
+   "format": "webm",
+   "started": "2026-11-07T18:23:14Z",
+   "acquisition": "x11",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc"
+   ],
+   "canvas": [
+    1920,
+    1080
+   ],
+   "overlay": {
+    "excluded": false,
+    "placement": "handle"
+   },
+   "pauseClipS": 3.075,
+   "load": 1.287109375,
+   "durationUs": 6166666,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "dd54eec5-cc41-4779-892d-7eb65c39a38e.mkv",
+     "bytes": 269009,
+     "motion": 18.843,
+     "destroyed": true
+    },
+    "export": {
+     "file": "candidate-webm-1.webm",
+     "bytes": 302415,
+     "motion": 18.133,
+     "destroyed": true
+    }
+   },
+   "frame": {
+    "deleted": true,
+    "edges": {
+     "bottom": 1.0,
+     "left": 1.0,
+     "right": 0.9257,
+     "top": 0.7818
+    },
+    "fraction": 0.5316,
+    "minFraction": 0.5,
+    "ok": false,
+    "reason": "uncovered_edge",
+    "rect": [
+     0,
+     0,
+     1280,
+     720
+    ],
+    "size": [
+     1280,
+     720
+    ]
+   }
+  },
+  {
+   "build": "nightly",
+   "round": 1,
+   "format": "webm",
+   "started": "2026-11-07T18:23:32Z",
+   "acquisition": "x11",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc"
+   ],
+   "canvas": [
+    1920,
+    1080
+   ],
+   "overlay": {
+    "excluded": false,
+    "placement": "handle"
+   },
+   "pauseClipS": 3.072,
+   "load": 1.876953125,
+   "durationUs": 6200000,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "7f7538ba-38eb-4ab1-92f8-dc9b47b3bb53.mkv",
+     "bytes": 260115,
+     "motion": 18.98,
+     "destroyed": true
+    },
+    "export": {
+     "file": "nightly-webm-1.webm",
+     "bytes": 287870,
+     "motion": 18.321,
+     "destroyed": true
+    }
+   },
+   "frame": {
+    "deleted": true,
+    "edges": {
+     "bottom": 1.0,
+     "left": 1.0,
+     "right": 0.9257,
+     "top": 0.7818
+    },
+    "fraction": 0.5316,
+    "minFraction": 0.5,
+    "ok": false,
+    "reason": "uncovered_edge",
+    "rect": [
+     0,
+     0,
+     1280,
+     720
+    ],
+    "size": [
+     1280,
+     720
+    ]
+   }
+  },
+  {
+   "build": "candidate",
+   "round": 1,
+   "format": "gif",
+   "started": "2026-11-07T18:23:51Z",
+   "acquisition": "x11",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc"
+   ],
+   "canvas": [
+    1920,
+    1080
+   ],
+   "overlay": {
+    "excluded": false,
+    "placement": "handle"
+   },
+   "pauseClipS": 3.066,
+   "load": 2.3251953125,
+   "durationUs": 6233333,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "c406fc0a-5224-4e6b-8eb4-54fc93f2e831.mkv",
+     "bytes": 164072,
+     "motion": 19.042,
+     "destroyed": true
+    },
+    "export": {
+     "file": "candidate-gif-1.gif",
+     "bytes": 3290786,
+     "motion": 18.253,
+     "destroyed": true
+    }
+   },
+   "frame": {
+    "deleted": true,
+    "edges": {
+     "bottom": 1.0,
+     "left": 1.0,
+     "right": 0.9234,
+     "top": 0.7723
+    },
+    "fraction": 0.5309,
+    "minFraction": 0.5,
+    "ok": false,
+    "reason": "uncovered_edge",
+    "rect": [
+     0,
+     0,
+     1280,
+     720
+    ],
+    "size": [
+     1280,
+     720
+    ]
+   }
+  },
+  {
+   "build": "nightly",
+   "round": 1,
+   "format": "gif",
+   "started": "2026-11-07T18:24:13Z",
+   "acquisition": "x11",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc"
+   ],
+   "canvas": [
+    1920,
+    1080
+   ],
+   "overlay": {
+    "excluded": false,
+    "placement": "handle"
+   },
+   "pauseClipS": 3.053,
+   "load": 2.18017578125,
+   "durationUs": 6200000,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "36f43638-ed66-44b7-945d-24588930ebfb.mkv",
+     "bytes": 170400,
+     "motion": 19.043,
+     "destroyed": true
+    },
+    "export": {
+     "file": "nightly-gif-1.gif",
+     "bytes": 3135354,
+     "motion": 18.29,
+     "destroyed": true
+    }
+   },
+   "frame": {
+    "deleted": true,
+    "edges": {
+     "bottom": 1.0,
+     "left": 1.0,
+     "right": 0.928,
+     "top": 0.7874
+    },
+    "fraction": 0.5325,
+    "minFraction": 0.5,
+    "ok": false,
+    "reason": "uncovered_edge",
+    "rect": [
+     0,
+     0,
+     1280,
+     720
+    ],
+    "size": [
+     1280,
+     720
+    ]
+   }
+  },
+  {
+   "build": "candidate",
+   "round": 1,
+   "format": "webp",
+   "started": "2026-11-07T18:24:36Z",
+   "acquisition": "x11",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc"
+   ],
+   "canvas": [
+    1920,
+    1080
+   ],
+   "overlay": {
+    "excluded": false,
+    "placement": "handle"
+   },
+   "pauseClipS": 3.066,
+   "load": 2.29296875,
+   "durationUs": 6233333,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "c38e59e9-d347-4b3e-ba4c-b6f6eb6a8fad.mkv",
+     "bytes": 173480,
+     "motion": 19.045,
+     "destroyed": true
+    },
+    "export": {
+     "file": "candidate-webp-1.webp",
+     "bytes": 254112,
+     "motion": 21.609,
+     "destroyed": true
+    }
+   },
+   "frame": {
+    "deleted": true,
+    "edges": {
+     "bottom": 1.0,
+     "left": 1.0,
+     "right": 0.9252,
+     "top": 0.7797
+    },
+    "fraction": 0.5283,
+    "minFraction": 0.5,
+    "ok": false,
+    "reason": "uncovered_edge",
+    "rect": [
+     0,
+     0,
+     1280,
+     720
+    ],
+    "size": [
+     1280,
+     720
+    ]
+   }
+  },
+  {
+   "build": "nightly",
+   "round": 1,
+   "format": "webp",
+   "started": "2026-11-07T18:24:56Z",
+   "acquisition": "x11",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc"
+   ],
+   "canvas": [
+    1920,
+    1080
+   ],
+   "overlay": {
+    "excluded": false,
+    "placement": "handle"
+   },
+   "pauseClipS": 3.073,
+   "load": 2.134765625,
+   "durationUs": 6233333,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "212685fa-c522-481d-a9ac-5b7d21449292.mkv",
+     "bytes": 176664,
+     "motion": 19.157,
+     "destroyed": true
+    },
+    "export": {
+     "file": "nightly-webp-1.webp",
+     "bytes": 242858,
+     "motion": 21.614,
+     "destroyed": true
+    }
+   },
+   "frame": {
+    "deleted": true,
+    "edges": {
+     "bottom": 1.0,
+     "left": 1.0,
+     "right": 0.9254,
+     "top": 0.7814
+    },
+    "fraction": 0.5286,
+    "minFraction": 0.5,
+    "ok": false,
+    "reason": "uncovered_edge",
+    "rect": [
+     0,
+     0,
+     1280,
+     720
+    ],
+    "size": [
+     1280,
+     720
+    ]
+   }
+  }
+ ],
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "HDMI-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "check": "precheck",
+   "fraction": 1.0,
+   "framebuffer": [
+    1920,
+    1080
+   ],
+   "minFraction": 0.98,
+   "ok": true,
+   "output": [
+    "HDMI-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ]
+  },
+  "video": "pattern"
+ },
+ "gpuHangs": []
+}

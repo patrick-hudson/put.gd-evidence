@@ -1,0 +1,105 @@
+{
+ "host": "putgd-ubuntu-lab",
+ "kernel": "7.0.0-38-generic",
+ "desktop": "gnome-shell",
+ "session": "wayland",
+ "target": "monitor",
+ "rect": null,
+ "formats": [
+  "mp4",
+  "webm",
+  "gif",
+  "webp"
+ ],
+ "video": "marker",
+ "timing": {
+  "lead": 2,
+  "pauseAt": 8.0,
+  "pauseFor": 3.0,
+  "after": 8.0
+ },
+ "builds": {
+  "candidate": {
+   "kind": "appimage",
+   "file": "putgd-26.1107.4044-dev+g33af4071b5fa-x86_64.AppImage",
+   "sha256": "d59c2e68bd7bbf4d6864bab36a291dc3035adb145af9362c516296e78ccaa83b"
+  },
+  "nightly": {
+   "kind": "appimage",
+   "file": "putgd-26.1107.4036-dev+g369f001b66a9-x86_64.AppImage",
+   "sha256": "31761f85cfb1cbe94dc3d5528a078cccd8b85c4920fd2740e9fa5b5e2a8982ed"
+  }
+ },
+ "analyzer": "/home/lab/work/f9t/analyzer/squashfs-root",
+ "rounds": [
+  {
+   "build": "candidate",
+   "round": 1,
+   "format": "mp4",
+   "error": "/run/user/1000/putgd/session.sock exists: another put.gd resident owns this session"
+  },
+  {
+   "build": "nightly",
+   "round": 1,
+   "format": "mp4",
+   "error": "/run/user/1000/putgd/session.sock exists: another put.gd resident owns this session"
+  },
+  {
+   "build": "candidate",
+   "round": 1,
+   "format": "webm",
+   "error": "/run/user/1000/putgd/session.sock exists: another put.gd resident owns this session"
+  },
+  {
+   "build": "nightly",
+   "round": 1,
+   "format": "webm",
+   "error": "/run/user/1000/putgd/session.sock exists: another put.gd resident owns this session"
+  },
+  {
+   "build": "candidate",
+   "round": 1,
+   "format": "gif",
+   "error": "/run/user/1000/putgd/session.sock exists: another put.gd resident owns this session"
+  },
+  {
+   "build": "nightly",
+   "round": 1,
+   "format": "gif",
+   "error": "/run/user/1000/putgd/session.sock exists: another put.gd resident owns this session"
+  },
+  {
+   "build": "candidate",
+   "round": 1,
+   "format": "webp",
+   "error": "/run/user/1000/putgd/session.sock exists: another put.gd resident owns this session"
+  },
+  {
+   "build": "nightly",
+   "round": 1,
+   "format": "webp",
+   "error": "/run/user/1000/putgd/session.sock exists: another put.gd resident owns this session"
+  }
+ ],
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "Virtual-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1280,
+    800
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "skipped": "no loopback VNC tile (disposable guest)"
+  },
+  "video": "marker"
+ },
+ "gpuHangs": []
+}
