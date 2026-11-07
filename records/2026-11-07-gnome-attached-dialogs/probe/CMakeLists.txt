@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.20)
+project(dlgtest CXX)
+find_package(Qt6 REQUIRED COMPONENTS Widgets)
+add_executable(dlgtest main.cpp)
+target_link_libraries(dlgtest Qt6::Widgets)
