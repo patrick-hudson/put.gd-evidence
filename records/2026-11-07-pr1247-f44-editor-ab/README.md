@@ -21,7 +21,7 @@ Candidate: **21/22 terminal local cells passed**, Edit 1 pass / 1 fail by row, *
 - Order: Region, Window/desktop, Recording, Edit, Link/browser, History delete, Auto-copy, Upload clipboard, Copy image, Survives exit, Right-click upload. Every row used this complete order; Edit did not run alone.
 - Separate short private session paths were checked with the socket-path diagnostic before every app launch. All VMs ran on f44 with KVM and remained on its loopback VNC 5946, forwarded to workstation wall port 6110. Each row has saved synthetic visual results, exact package/build/guest identities and terminal audited receipts.
 - `n1` and `c2` were preflight-only failures while the previous VM's reserved port was not yet reusable. No VM/app started in those attempts. Logs are retained; fresh retries were named `n1b` and `c2b`. The wrapper was corrected to wait for both SSH and VNC ports without changing the frozen harness.
-- A passive observer sampled compositor windows every three seconds during n1b, c2b and n2 Edit attempts. It sent no input or activation. Its sampling can perturb timing slightly; c1 had no observer. The unchanged driver did all functional gestures and assertions.
+- A passive observer sampled compositor windows every three seconds during c1’s second attempt and the n1b, c2b and n2 Edit attempts. It sent no input or activation. Its sampling can perturb timing slightly; c1’s first attempt had no observer. The unchanged driver did all functional gestures and assertions.
 
 ## What put Settings in front
 
