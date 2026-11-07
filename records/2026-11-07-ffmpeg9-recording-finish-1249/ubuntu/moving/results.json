@@ -1,0 +1,40 @@
+{
+ "host": "putgd-ubuntu-lab",
+ "kernel": "7.0.0-38-generic",
+ "desktop": "gnome-shell",
+ "session": "wayland",
+ "target": "region",
+ "rect": [
+  80,
+  140,
+  1120,
+  600
+ ],
+ "formats": [
+  "gif",
+  "webp"
+ ],
+ "video": "pattern",
+ "timing": {
+  "lead": 2,
+  "pauseAt": 3.0,
+  "pauseFor": 2.0,
+  "after": 3.0
+ },
+ "builds": {
+  "candidate": {
+   "kind": "appimage",
+   "file": "putgd-26.1107.4046-dev+g8ed31be16488-x86_64.AppImage",
+   "sha256": "c55b1591502a62ec465f2b6be0e5c0b3de959428af3e319e2f49c37bf1604a67"
+  },
+  "nightly": {
+   "kind": "appimage",
+   "file": "putgd-26.1107.4036-dev+g369f001b66a9-x86_64.AppImage",
+   "sha256": "31761f85cfb1cbe94dc3d5528a078cccd8b85c4920fd2740e9fa5b5e2a8982ed"
+  }
+ },
+ "analyzer": "/home/lab/work/r9b/extract/appdir-candidate/squashfs-root",
+ "rounds": [],
+ "error": "video not playing: {\"ok\": false, \"output\": [\"Virtual-1\"], \"reason\": \"media_unavailable: GStreamer gtksink is missing (gstreamer1.0-gtk3 / gstreamer1-plugins-good-gtk)\", \"rect\": [0, 0, 1280, 800]}",
+ "gpuHangs": []
+}
