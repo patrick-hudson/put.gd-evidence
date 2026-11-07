@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-07-pr1245-dependency-candidate](2026-11-07-pr1245-dependency-candidate/README.md) | #1245 | PR #1245 dependency candidate acceptance |
 | [2026-11-07-gnome-attached-dialogs](2026-11-07-gnome-attached-dialogs/README.md) | — | GNOME: dragging a modal dialog dragged the whole put.gd window |
 | [2026-11-07-highlight-council](2026-11-07-highlight-council/README.md) | #1237, #1238 | Highlight look: design council and review gates (#1237, PR #1238) |
 | [2026-11-06-highlighter-b-variations](2026-11-06-highlighter-b-variations/README.md) | — | Candidate B variations: every palette colour, tint, outline and marker strength |
