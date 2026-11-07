@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-06-highlight-real-captures](2026-11-06-highlight-real-captures/README.md) | — | Highlight compositing and text snapping on real captures |
 | [2026-11-06-highlight-modes](2026-11-06-highlight-modes/README.md) | — | Highlight compositing modes: prototype comparison |
 | [2026-11-05-evidence-import-1222](2026-11-05-evidence-import-1222/README.md) | #1222 | Evidence import and docs layout check (#1222), 2026-11-05 |
 | [2026-11-05-v26.1105.3906-acceptance.md](2026-11-05-v26.1105.3906-acceptance.md) | — | First stable acceptance: v26.1105.3906 |
