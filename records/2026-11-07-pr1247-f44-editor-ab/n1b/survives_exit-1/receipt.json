@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 2,
+  "environment": {
+    "desktop": "fedora-gnome-wayland",
+    "host": "f44",
+    "placement": "guest",
+    "guest": "fedora-gnome-wayland",
+    "package": "rpm",
+    "destination": "local",
+    "build": "369f001b66a939077ea683f91b735c5730d53de9",
+    "placement_details": {
+      "run_id": "b9f70708-4b3a-431e-943b-8dd7e6d905ba",
+      "lab_profile": "fedora-gnome-wayland",
+      "run_directory": "/home/patrick/nd/work/lab-runs/ab481429c",
+      "session_root": "/dev/shm/a6ec4bbd4",
+      "socket": "/dev/shm/a6ec4bbd4/runtime/putgd/session.sock",
+      "input_backend": "qmp",
+      "frame_backend": "vnc-in-memory"
+    },
+    "target": {
+      "hostname": "fedora",
+      "kernel": "6.19.10-300.fc44.x86_64",
+      "machine": "x86_64",
+      "os": {
+        "ID": "fedora",
+        "VERSION_ID": "44",
+        "VARIANT_ID": "workstation"
+      },
+      "session_type": "wayland",
+      "desktop": "GNOME",
+      "qt_platform": "wayland"
+    },
+    "kwin_entry_staging": [],
+    "clipboard_preservation": {
+      "restored_and_stopped": true,
+      "reviews": [],
+      "ready": true,
+      "preserved_mimes": [],
+      "transport": "x11-selection-bridge",
+      "pid": 73300,
+      "start": "65211",
+      "boot": "2b66bf66-ff92-45b9-a25a-1a5f5ac29bfc",
+      "reaped_pids": []
+    },
+    "observed_build": {
+      "baseVersion": "26.1107.4036",
+      "commitCount": 4036,
+      "dirty": false,
+      "gitCommit": "369f001b66a939077ea683f91b735c5730d53de9",
+      "gitTree": "8d088fed0356b438ebba5b5cb47a3f2946d3d906",
+      "packageVersion": "26.1107.4036~dev+g369f001b66a9",
+      "schemaVersion": 1,
+      "sourceProvenance": "git",
+      "version": "26.1107.4036-dev+g369f001b66a9"
+    },
+    "operation_ids": [
+      {
+        "operationId": "a986bba1-081d-43a7-b183-0b5408f7f222"
+      }
+    ],
+    "private_cleanup": "resident-log-and-state-root-removed",
+    "coverage_export": {
+      "scanned_before_copy": true,
+      "copy_scan_passed": true,
+      "published": true
+    }
+  },
+  "interactions": [
+    {
+      "interaction": "tray.menu-quit",
+      "desktop": "fedora-gnome-wayland",
+      "package": "rpm",
+      "functional": "passed",
+      "visual": "frames",
+      "receipt": "/home/patrick/work/f44-editor-ab-1247/n1b/survives_exit-1/receipt.json",
+      "note": "clipboard_handlers={\"klipperBusOwner\": null, \"processes\": [{\"name\": \"gnome-shell\", \"pid\": 1287}], \"x11ManagerWindow\": null}; operationId=a986bba1-081d-43a7-b183-0b5408f7f222; Capture operation a986bba1-081d-43a7-b183-0b5408f7f222; operationId=a986bba1-081d-43a7-b183-0b5408f7f222; historyId=d738bab7-d790-44c4-bfa9-2ec05be377c1; uploaded/local sha256=2109352c7de7984eab093fea80a7a1646c890cf390cb3fe73d1b638ed712713c; Retained synthetic png sha256=2109352c7de7984eab093fea80a7a1646c890cf390cb3fe73d1b638ed712713c; auto_copy_exact_link_count=1; independent desktop clipboard reader; no copy click; pixel oracle: (600, 280), tolerance=0; survives_exit_exact_link_count=1; persistence_handler=GNOME Shell / Mutter clipboard handling",
+      "host": "f44",
+      "placement": "guest",
+      "guest": "fedora-gnome-wayland",
+      "destination": "local",
+      "review": true,
+      "review_reason": "desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/outcomes.survives_exit/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "independent-frozen-pattern",
+          "path": "frames/outcomes.survives_exit/01-independent-frozen-pattern.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "publication-result",
+          "path": "frames/outcomes.survives_exit/02-publication-result.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "clipboard-after-quit",
+          "path": "frames/outcomes.survives_exit/03-clipboard-after-quit.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "clipboard-after-restart",
+          "path": "frames/outcomes.survives_exit/04-clipboard-after-restart.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/outcomes.survives_exit/05-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "outcomes.survives_exit",
+      "build": "369f001b66a939077ea683f91b735c5730d53de9",
+      "at": "2026-11-07T18:36:45Z"
+    },
+    {
+      "interaction": "cli.launcher-background",
+      "desktop": "fedora-gnome-wayland",
+      "package": "rpm",
+      "functional": "passed",
+      "visual": "frames",
+      "receipt": "/home/patrick/work/f44-editor-ab-1247/n1b/survives_exit-1/receipt.json",
+      "note": "clipboard_handlers={\"klipperBusOwner\": null, \"processes\": [{\"name\": \"gnome-shell\", \"pid\": 1287}], \"x11ManagerWindow\": null}; operationId=a986bba1-081d-43a7-b183-0b5408f7f222; Capture operation a986bba1-081d-43a7-b183-0b5408f7f222; operationId=a986bba1-081d-43a7-b183-0b5408f7f222; historyId=d738bab7-d790-44c4-bfa9-2ec05be377c1; uploaded/local sha256=2109352c7de7984eab093fea80a7a1646c890cf390cb3fe73d1b638ed712713c; Retained synthetic png sha256=2109352c7de7984eab093fea80a7a1646c890cf390cb3fe73d1b638ed712713c; auto_copy_exact_link_count=1; independent desktop clipboard reader; no copy click; pixel oracle: (600, 280), tolerance=0; survives_exit_exact_link_count=1; persistence_handler=GNOME Shell / Mutter clipboard handling",
+      "host": "f44",
+      "placement": "guest",
+      "guest": "fedora-gnome-wayland",
+      "destination": "local",
+      "review": true,
+      "review_reason": "desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/outcomes.survives_exit/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "independent-frozen-pattern",
+          "path": "frames/outcomes.survives_exit/01-independent-frozen-pattern.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "publication-result",
+          "path": "frames/outcomes.survives_exit/02-publication-result.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "clipboard-after-quit",
+          "path": "frames/outcomes.survives_exit/03-clipboard-after-quit.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "clipboard-after-restart",
+          "path": "frames/outcomes.survives_exit/04-clipboard-after-restart.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/outcomes.survives_exit/05-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "outcomes.survives_exit",
+      "build": "369f001b66a939077ea683f91b735c5730d53de9",
+      "at": "2026-11-07T18:36:45Z"
+    }
+  ],
+  "secret_scan": {
+    "quarantine": [],
+    "passed": true,
+    "files": 11,
+    "pngs": 6,
+    "findings": []
+  }
+}

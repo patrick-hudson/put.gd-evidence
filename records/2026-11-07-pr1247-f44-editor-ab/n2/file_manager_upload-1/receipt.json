@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 2,
+  "environment": {
+    "desktop": "fedora-gnome-wayland",
+    "host": "f44",
+    "placement": "guest",
+    "guest": "fedora-gnome-wayland",
+    "package": "rpm",
+    "destination": "local",
+    "build": "369f001b66a939077ea683f91b735c5730d53de9",
+    "placement_details": {
+      "run_id": "3ed25d63-586c-4877-a220-8042c5fc3fb1",
+      "lab_profile": "fedora-gnome-wayland",
+      "run_directory": "/home/patrick/nd/work/lab-runs/aba72b6d9",
+      "session_root": "/dev/shm/a31510c2d",
+      "socket": "/dev/shm/a31510c2d/runtime/putgd/session.sock",
+      "input_backend": "qmp",
+      "frame_backend": "vnc-in-memory"
+    },
+    "target": {
+      "hostname": "fedora",
+      "kernel": "6.19.10-300.fc44.x86_64",
+      "machine": "x86_64",
+      "os": {
+        "ID": "fedora",
+        "VERSION_ID": "44",
+        "VARIANT_ID": "workstation"
+      },
+      "session_type": "wayland",
+      "desktop": "GNOME",
+      "qt_platform": "wayland"
+    },
+    "kwin_entry_staging": [],
+    "clipboard_preservation": {
+      "restored_and_stopped": true,
+      "reviews": [],
+      "ready": true,
+      "preserved_mimes": [],
+      "transport": "x11-selection-bridge",
+      "pid": 80662,
+      "start": "69879",
+      "boot": "049c8477-be40-4a6c-891f-9c1885c27eae",
+      "reaped_pids": []
+    },
+    "observed_build": {
+      "baseVersion": "26.1107.4036",
+      "commitCount": 4036,
+      "dirty": false,
+      "gitCommit": "369f001b66a939077ea683f91b735c5730d53de9",
+      "gitTree": "8d088fed0356b438ebba5b5cb47a3f2946d3d906",
+      "packageVersion": "26.1107.4036~dev+g369f001b66a9",
+      "schemaVersion": 1,
+      "sourceProvenance": "git",
+      "version": "26.1107.4036-dev+g369f001b66a9"
+    },
+    "operation_ids": [
+      {
+        "operationId": "ec4b9f74-296c-40c9-bccc-acc1edcee2bf"
+      }
+    ],
+    "private_cleanup": "resident-log-and-state-root-removed",
+    "coverage_export": {
+      "scanned_before_copy": true,
+      "copy_scan_passed": true,
+      "published": true
+    }
+  },
+  "interactions": [
+    {
+      "interaction": "event.file-manager-upload",
+      "desktop": "fedora-gnome-wayland",
+      "package": "rpm",
+      "functional": "passed",
+      "visual": "frames",
+      "receipt": "/home/patrick/work/f44-editor-ab-1247/n2/file_manager_upload-1/receipt.json",
+      "note": "operationId=ec4b9f74-296c-40c9-bccc-acc1edcee2bf action=files; operationId=ec4b9f74-296c-40c9-bccc-acc1edcee2bf; operationId=ec4b9f74-296c-40c9-bccc-acc1edcee2bf; historyId=f7c01ca8-b327-41f9-922d-621a97e19515; uploaded/local sha256=ceb39288c0f5b94ebc0a37ab088dd4f4efdf564b1ba39c327da5e352bee98e70; auto_copy_exact_link_count=1; independent desktop clipboard reader; no copy click",
+      "host": "f44",
+      "placement": "guest",
+      "guest": "fedora-gnome-wayland",
+      "destination": "local",
+      "review": true,
+      "review_reason": "desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/outcomes.file_manager_upload/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "file-manager-open",
+          "path": "frames/outcomes.file_manager_upload/01-file-manager-open.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "right-click-menu",
+          "path": "frames/outcomes.file_manager_upload/02-right-click-menu.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "upload-banner",
+          "path": "frames/outcomes.file_manager_upload/03-upload-banner.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "publication-result",
+          "path": "frames/outcomes.file_manager_upload/04-publication-result.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "file-manager-history-row",
+          "path": "frames/outcomes.file_manager_upload/05-file-manager-history-row.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/outcomes.file_manager_upload/06-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "outcomes.file_manager_upload",
+      "build": "369f001b66a939077ea683f91b735c5730d53de9",
+      "at": "2026-11-07T19:12:04Z"
+    }
+  ],
+  "secret_scan": {
+    "quarantine": [],
+    "passed": true,
+    "files": 12,
+    "pngs": 7,
+    "findings": []
+  }
+}

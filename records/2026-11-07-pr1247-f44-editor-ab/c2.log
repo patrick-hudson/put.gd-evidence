@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/f44-editor-ab-1247/run.py", line 16, in <module>
+    n.save(out/'preflight.json',n.preflight(config));n.command(['python3','tools/diagnostics/check_socket_paths.py','--socket',run/'qmp.sock',run/'vnc.sock','/dev/shm/ab/runtime/putgd/session.sock'],log=out/'sockets.json')
+                                ~~~~~~~~~~~^^^^^^^^
+  File "/home/patrick/nd/tools/lab/nightly_desktops.py", line 705, in preflight
+    raise NotRun('reserved nightly guest port is occupied') from None
+tools.lab.nightly_desktops.NotRun: reserved nightly guest port is occupied

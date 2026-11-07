@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 2,
+  "environment": {
+    "desktop": "fedora-gnome-wayland",
+    "host": "f44",
+    "placement": "guest",
+    "guest": "fedora-gnome-wayland",
+    "package": "rpm",
+    "destination": "local",
+    "build": "6c1d282960010c87388ae2d2ea11b6ee45f98893",
+    "placement_details": {
+      "run_id": "60d1b2fe-2a82-4d7e-9ba6-dc7d407c56a4",
+      "lab_profile": "fedora-gnome-wayland",
+      "run_directory": "/home/patrick/nd/work/lab-runs/ab054ca7d",
+      "session_root": "/dev/shm/a932a1f91",
+      "socket": "/dev/shm/a932a1f91/runtime/putgd/session.sock",
+      "input_backend": "qmp",
+      "frame_backend": "vnc-in-memory"
+    },
+    "target": {
+      "hostname": "fedora",
+      "kernel": "6.19.10-300.fc44.x86_64",
+      "machine": "x86_64",
+      "os": {
+        "ID": "fedora",
+        "VERSION_ID": "44",
+        "VARIANT_ID": "workstation"
+      },
+      "session_type": "wayland",
+      "desktop": "GNOME",
+      "qt_platform": "wayland"
+    },
+    "kwin_entry_staging": [],
+    "clipboard_preservation": {
+      "restored_and_stopped": true,
+      "reviews": [],
+      "ready": true,
+      "preserved_mimes": [],
+      "transport": "x11-selection-bridge",
+      "pid": 56871,
+      "start": "48889",
+      "boot": "a2f05a4a-deb7-4083-82b7-a9c62f3c8e0b",
+      "reaped_pids": []
+    },
+    "observed_build": {
+      "baseVersion": "26.1107.4038",
+      "commitCount": 4038,
+      "dirty": false,
+      "gitCommit": "6c1d282960010c87388ae2d2ea11b6ee45f98893",
+      "gitTree": "0f913c13169f78ac60f6c95f2318a0e739b77d2f",
+      "packageVersion": "26.1107.4038~dev+g6c1d28296001",
+      "schemaVersion": 1,
+      "sourceProvenance": "git",
+      "version": "26.1107.4038-dev+g6c1d28296001"
+    },
+    "private_cleanup": "resident-log-and-state-root-removed",
+    "coverage_export": {
+      "scanned_before_copy": true,
+      "copy_scan_passed": true,
+      "published": true
+    }
+  },
+  "interactions": [
+    {
+      "interaction": "region.to-upload",
+      "desktop": "fedora-gnome-wayland",
+      "package": "rpm",
+      "functional": "blocked",
+      "visual": "frames",
+      "receipt": "/home/patrick/work/f44-editor-ab-1247/c2b/auto_copy-1/receipt.json",
+      "issue": 666,
+      "note": "owned fake credential collection was not accepted by QtKeychain",
+      "host": "f44",
+      "placement": "guest",
+      "guest": "fedora-gnome-wayland",
+      "destination": "local",
+      "review": true,
+      "review_reason": "desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/outcomes.auto_copy/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/outcomes.auto_copy/01-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "outcomes.auto_copy",
+      "build": "6c1d282960010c87388ae2d2ea11b6ee45f98893",
+      "at": "2026-11-07T18:50:20Z"
+    }
+  ],
+  "secret_scan": {
+    "quarantine": [],
+    "passed": true,
+    "files": 7,
+    "pngs": 2,
+    "findings": []
+  }
+}
