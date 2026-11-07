@@ -1,0 +1,125 @@
+[
+  {
+    "name": "linux",
+    "head": "96ce4c6e82a07295a8fd63cfe9043ab0dcd45b2c",
+    "commands": [
+      {
+        "command": [
+          "cmake",
+          "--preset",
+          "dev"
+        ],
+        "exitCode": 0,
+        "seconds": 2.61,
+        "log": "/home/patrick/work/wc1255/linux-0.log"
+      },
+      {
+        "command": [
+          "cmake",
+          "--build",
+          "--preset",
+          "dev",
+          "--parallel",
+          "3"
+        ],
+        "exitCode": 0,
+        "seconds": 42.77,
+        "log": "/home/patrick/work/wc1255/linux-1.log"
+      },
+      {
+        "command": [
+          "python3",
+          "/home/patrick/work/wc-ctest.py"
+        ],
+        "exitCode": 8,
+        "seconds": 327.92,
+        "log": "/home/patrick/work/wc1255/linux-2.log"
+      }
+    ]
+  },
+  {
+    "name": "s3",
+    "head": "b5316bbb4b9cc87ff79a020c384e1e8ed7f8149b",
+    "commands": [
+      {
+        "command": [
+          "cmake",
+          "--preset",
+          "dev"
+        ],
+        "exitCode": 0,
+        "seconds": 2.58,
+        "log": "/home/patrick/work/wc1255/s3-0.log"
+      },
+      {
+        "command": [
+          "cmake",
+          "--build",
+          "--preset",
+          "dev",
+          "--parallel",
+          "3"
+        ],
+        "exitCode": 0,
+        "seconds": 196.15,
+        "log": "/home/patrick/work/wc1255/s3-1.log"
+      },
+      {
+        "command": [
+          "python3",
+          "/home/patrick/work/wc-ctest.py"
+        ],
+        "exitCode": 8,
+        "seconds": 214.55,
+        "log": "/home/patrick/work/wc1255/s3-2.log"
+      },
+      {
+        "command": [
+          "python3",
+          "tests/ci/test_s3_contract.py"
+        ],
+        "exitCode": 0,
+        "seconds": 0.15,
+        "log": "/home/patrick/work/wc1255/s3-3.log"
+      }
+    ]
+  },
+  {
+    "name": "accessibility",
+    "head": "850cb39f0016ac7e10ec7093b88d36a6e347397c",
+    "commands": [
+      {
+        "command": [
+          "cmake",
+          "--preset",
+          "dev"
+        ],
+        "exitCode": 0,
+        "seconds": 2.17,
+        "log": "/home/patrick/work/wc1255/accessibility-0.log"
+      },
+      {
+        "command": [
+          "cmake",
+          "--build",
+          "--preset",
+          "dev",
+          "--parallel",
+          "3"
+        ],
+        "exitCode": 0,
+        "seconds": 78.24,
+        "log": "/home/patrick/work/wc1255/accessibility-1.log"
+      },
+      {
+        "command": [
+          "python3",
+          "/home/patrick/work/wc-ctest.py"
+        ],
+        "exitCode": 8,
+        "seconds": 213.41,
+        "log": "/home/patrick/work/wc1255/accessibility-2.log"
+      }
+    ]
+  }
+]
