@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-07-shortcut-accessibility-m74-20261107](2026-11-07-shortcut-accessibility-m74-20261107/README.md) | #20261107 | Shortcut recording accessibility on Mint Qt 6.4.2 |
 | [2026-11-07-ffmpeg9-recording-finish-1249](2026-11-07-ffmpeg9-recording-finish-1249/README.md) | #1249 | PR 1249 recording acceptance completion |
 | [2026-11-07-december-tray-tree](2026-11-07-december-tray-tree/README.md) | — | December tray tree redesign |
 | [2026-11-07-ffmpeg9-hevc-vaapi-hvcc-1249](2026-11-07-ffmpeg9-hevc-vaapi-hvcc-1249/README.md) | #1249 | FFmpeg 9 hevc_vaapi corrupt MP4 on AMD: root cause and fix (#1249) |
