@@ -1,0 +1,53 @@
+dbus-daemon[961150]: [session uid=1000 pid=961150 pidfd=5] Activating service name='org.freedesktop.portal.Desktop' requested by ':1.0' (uid=1000 pid=961159 comm="/home/patrick/work/i1184/fix1184/squashfs-root/usr")
+dbus-daemon[961150]: [session uid=1000 pid=961150 pidfd=5] Activating service name='org.freedesktop.impl.portal.PermissionStore' requested by ':1.1' (uid=1000 pid=961176 comm="/usr/libexec/xdg-desktop-portal")
+dbus-daemon[961150]: [session uid=1000 pid=961150 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.PermissionStore'
+dbus-daemon[961150]: [session uid=1000 pid=961150 pidfd=5] Activating service name='org.freedesktop.portal.Documents' requested by ':1.1' (uid=1000 pid=961176 comm="/usr/libexec/xdg-desktop-portal")
+dbus-daemon[961150]: [session uid=1000 pid=961150 pidfd=5] Successfully activated service 'org.freedesktop.portal.Documents'
+fusermount3: failed to access mountpoint /run/user/1000/doc: Permission denied
+error: fuse init failed: Can't mount path /run/user/1000/doc
+
+(/usr/libexec/xdg-desktop-portal:961176): xdg-desktop-portal-WARNING **: 15:15:04.786: Document portal fuse mount point unknown: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name :1.3 was not provided by any .service files
+
+(/usr/libexec/xdg-desktop-portal:961176): xdg-desktop-portal-WARNING **: 15:15:04.786: Choosing gtk.portal for org.freedesktop.impl.portal.Lockdown as a last-resort fallback
+dbus-daemon[961150]: [session uid=1000 pid=961150 pidfd=5] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.1' (uid=1000 pid=961176 comm="/usr/libexec/xdg-desktop-portal")
+dbus-daemon[961150]: [session uid=1000 pid=961150 pidfd=5] Activating service name='org.a11y.Bus' requested by ':1.5' (uid=1000 pid=961197 comm="/usr/libexec/xdg-desktop-portal-gtk")
+dbus-daemon[961150]: [session uid=1000 pid=961150 pidfd=5] Successfully activated service 'org.a11y.Bus'
+dbus-daemon[961150]: [session uid=1000 pid=961150 pidfd=5] Activating service name='org.gtk.vfs.Daemon' requested by ':1.4' (uid=1000 pid=961197 comm="/usr/libexec/xdg-desktop-portal-gtk")
+dbus-daemon[961150]: [session uid=1000 pid=961150 pidfd=5] Successfully activated service 'org.gtk.vfs.Daemon'
+fusermount3: failed to access mountpoint /run/user/1000/gvfs: Permission denied
+dbus-daemon[961210]: Activating service name='org.a11y.atspi.Registry' requested by ':1.0' (uid=1000 pid=961197 comm="/usr/libexec/xdg-desktop-portal-gtk")
+dbus-daemon[961210]: Successfully activated service 'org.a11y.atspi.Registry'
+SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry
+dbus-daemon[961150]: [session uid=1000 pid=961150 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.desktop.gtk'
+
+(/usr/libexec/xdg-desktop-portal:961176): xdg-desktop-portal-WARNING **: 15:15:04.959: Choosing gtk.portal for org.freedesktop.impl.portal.Settings as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:961176): xdg-desktop-portal-WARNING **: 15:15:04.960: Choosing gtk.portal for org.freedesktop.impl.portal.FileChooser as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:961176): xdg-desktop-portal-WARNING **: 15:15:04.962: Choosing gtk.portal for org.freedesktop.impl.portal.AppChooser as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:961176): xdg-desktop-portal-WARNING **: 15:15:04.963: Choosing gtk.portal for org.freedesktop.impl.portal.Print as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:961176): xdg-desktop-portal-WARNING **: 15:15:04.964: Choosing gtk.portal for org.freedesktop.impl.portal.Notification as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:961176): xdg-desktop-portal-WARNING **: 15:15:04.965: Choosing gtk.portal for org.freedesktop.impl.portal.Inhibit as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:961176): xdg-desktop-portal-WARNING **: 15:15:04.966: Choosing gtk.portal for org.freedesktop.impl.portal.Access as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:961176): xdg-desktop-portal-WARNING **: 15:15:04.976: Choosing gtk.portal for org.freedesktop.impl.portal.Account as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:961176): xdg-desktop-portal-WARNING **: 15:15:04.978: Choosing gtk.portal for org.freedesktop.impl.portal.Email as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:961176): xdg-desktop-portal-WARNING **: 15:15:04.979: Choosing gtk.portal for org.freedesktop.impl.portal.DynamicLauncher as a last-resort fallback
+dbus-daemon[961150]: [session uid=1000 pid=961150 pidfd=5] Successfully activated service 'org.freedesktop.portal.Desktop'
+{"block": 1, "method": "operation.recent", "ok": true, "err": "", "before": {"Rss": 16708, "Anonymous": 4200}, "after5": {"Rss": 16988, "Anonymous": 4264}, "after35": {"Rss": 10188, "Anonymous": 4264}, "reclaims": 1}
+{"block": 1, "method": "operation.inspect", "ok": true, "err": "", "before": {"Rss": 16716, "Anonymous": 4208}, "after5": {"Rss": 16892, "Anonymous": 4192}, "after35": {"Rss": 10116, "Anonymous": 4192}, "reclaims": 1}
+{"block": 1, "method": "history.detail", "ok": true, "err": "", "before": {"Rss": 16708, "Anonymous": 4200}, "after5": {"Rss": 16756, "Anonymous": 4188}, "after35": {"Rss": 10112, "Anonymous": 4188}, "reclaims": 1}
+{"block": 2, "method": "operation.recent", "ok": true, "err": "", "before": {"Rss": 16828, "Anonymous": 4192}, "after5": {"Rss": 17096, "Anonymous": 4244}, "after35": {"Rss": 10168, "Anonymous": 4244}, "reclaims": 1}
+{"block": 2, "method": "operation.inspect", "ok": true, "err": "", "before": {"Rss": 16720, "Anonymous": 4212}, "after5": {"Rss": 16888, "Anonymous": 4188}, "after35": {"Rss": 10112, "Anonymous": 4188}, "reclaims": 1}
+{"block": 2, "method": "history.detail", "ok": true, "err": "", "before": {"Rss": 16708, "Anonymous": 4200}, "after5": {"Rss": 16756, "Anonymous": 4188}, "after35": {"Rss": 10112, "Anonymous": 4188}, "reclaims": 1}
+{"block": 3, "method": "operation.recent", "ok": true, "err": "", "before": {"Rss": 16700, "Anonymous": 4192}, "after5": {"Rss": 16976, "Anonymous": 4252}, "after35": {"Rss": 10176, "Anonymous": 4252}, "reclaims": 1}
+{"block": 3, "method": "operation.inspect", "ok": true, "err": "", "before": {"Rss": 16728, "Anonymous": 4220}, "after5": {"Rss": 16892, "Anonymous": 4192}, "after35": {"Rss": 10116, "Anonymous": 4192}, "reclaims": 1}
+{"block": 3, "method": "history.detail", "ok": true, "err": "", "before": {"Rss": 16720, "Anonymous": 4212}, "after5": {"Rss": 16756, "Anonymous": 4188}, "after35": {"Rss": 10112, "Anonymous": 4188}, "reclaims": 1}
+done fix1184-r1
+A connection to the bus can't be made
