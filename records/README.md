@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-07-december-tray-tree](2026-11-07-december-tray-tree/README.md) | — | December tray tree redesign |
 | [2026-11-07-ffmpeg9-hevc-vaapi-hvcc-1249](2026-11-07-ffmpeg9-hevc-vaapi-hvcc-1249/README.md) | #1249 | FFmpeg 9 hevc_vaapi corrupt MP4 on AMD: root cause and fix (#1249) |
 | [2026-11-07-pr1247-f44-editor-ab](2026-11-07-pr1247-f44-editor-ab/README.md) | #1247 | PR #1247 Fedora GNOME editor A/B |
 | [2026-11-07-ffmpeg9-recording-1249](2026-11-07-ffmpeg9-recording-1249/README.md) | #1249 | FFmpeg 9.0.2 recording acceptance — PR #1249 |
