@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 2,
+  "environment": {
+    "desktop": "mint-cinnamon-x11",
+    "host": "m74",
+    "placement": "guest",
+    "guest": "cinnamon-x11",
+    "package": "deb",
+    "destination": "local",
+    "build": "6c1d282960010c87388ae2d2ea11b6ee45f98893",
+    "placement_details": {
+      "run_id": "e8bf5c1f-c70f-451c-9296-343e6c34ce33",
+      "lab_profile": "cinnamon-x11",
+      "run_directory": "/home/patrick/nd/work/lab-runs/n45858eee",
+      "session_root": "/dev/shm/n9b71721e",
+      "socket": "/dev/shm/n9b71721e/runtime/putgd/session.sock",
+      "input_backend": "qmp",
+      "frame_backend": "vnc-in-memory"
+    },
+    "target": {
+      "hostname": "putgd-lab",
+      "kernel": "6.14.0-37-generic",
+      "machine": "x86_64",
+      "os": {
+        "ID": "linuxmint",
+        "VERSION_ID": "22.3",
+        "VARIANT_ID": null
+      },
+      "session_type": "x11",
+      "desktop": "X-Cinnamon",
+      "qt_platform": "xcb"
+    },
+    "kwin_entry_staging": [],
+    "clipboard_preservation": {
+      "restored_and_stopped": true,
+      "reviews": [],
+      "ready": true,
+      "preserved_mimes": [],
+      "transport": "xcb",
+      "pid": 51322,
+      "start": "64077",
+      "boot": "7a216c3c-cf4a-494e-92b6-165619390616",
+      "reaped_pids": []
+    },
+    "observed_build": {
+      "baseVersion": "26.1107.4038",
+      "commitCount": 4038,
+      "dirty": false,
+      "gitCommit": "6c1d282960010c87388ae2d2ea11b6ee45f98893",
+      "gitTree": "0f913c13169f78ac60f6c95f2318a0e739b77d2f",
+      "packageVersion": "26.1107.4038~dev+g6c1d28296001",
+      "schemaVersion": 1,
+      "sourceProvenance": "git",
+      "version": "26.1107.4038-dev+g6c1d28296001"
+    },
+    "shell_health": {
+      "process": "cinnamon",
+      "pid": 1303,
+      "start": 1025,
+      "cores_readable": true
+    },
+    "operation_ids": [
+      {
+        "operationId": "98f8437e-302c-4518-ab02-4843c4e80fb3"
+      }
+    ],
+    "private_cleanup": "resident-log-and-state-root-removed",
+    "coverage_export": {
+      "scanned_before_copy": true,
+      "copy_scan_passed": true,
+      "published": true
+    }
+  },
+  "interactions": [
+    {
+      "interaction": "tray.menu-quit",
+      "desktop": "mint-cinnamon-x11",
+      "package": "deb",
+      "functional": "passed",
+      "visual": "frames",
+      "receipt": "/home/patrick/c1247/out/cinnamon-(mint)/survives_exit-1/receipt.json",
+      "note": "clipboard_handlers={\"klipperBusOwner\": null, \"processes\": [{\"name\": \"csd-clipboard\", \"pid\": 1111}, {\"name\": \"cinnamon\", \"pid\": 1303}], \"x11ManagerWindow\": 14680066}; operationId=98f8437e-302c-4518-ab02-4843c4e80fb3; Capture operation 98f8437e-302c-4518-ab02-4843c4e80fb3; operationId=98f8437e-302c-4518-ab02-4843c4e80fb3; historyId=2152b117-01c4-4ec9-8736-cf267502f05c; uploaded/local sha256=9e24b02dfe681c543b48f8e440c4dc2aa11f3e28c1523c7fdd34c3842ab9f690; Retained synthetic png sha256=9e24b02dfe681c543b48f8e440c4dc2aa11f3e28c1523c7fdd34c3842ab9f690; auto_copy_exact_link_count=1; independent desktop clipboard reader; no copy click; pixel oracle: (600, 280), tolerance=0; survives_exit_exact_link_count=1; persistence_handler=X11 CLIPBOARD_MANAGER window 14680066; detected managers=csd-clipboard",
+      "host": "m74",
+      "placement": "guest",
+      "guest": "cinnamon-x11",
+      "destination": "local",
+      "review": true,
+      "review_reason": "desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/outcomes.survives_exit/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "independent-frozen-pattern",
+          "path": "frames/outcomes.survives_exit/01-independent-frozen-pattern.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "publication-result",
+          "path": "frames/outcomes.survives_exit/02-publication-result.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "clipboard-after-quit",
+          "path": "frames/outcomes.survives_exit/03-clipboard-after-quit.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "clipboard-after-restart",
+          "path": "frames/outcomes.survives_exit/04-clipboard-after-restart.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/outcomes.survives_exit/05-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "outcomes.survives_exit",
+      "build": "6c1d282960010c87388ae2d2ea11b6ee45f98893",
+      "at": "2026-11-07T17:37:54Z"
+    },
+    {
+      "interaction": "cli.launcher-background",
+      "desktop": "mint-cinnamon-x11",
+      "package": "deb",
+      "functional": "passed",
+      "visual": "frames",
+      "receipt": "/home/patrick/c1247/out/cinnamon-(mint)/survives_exit-1/receipt.json",
+      "note": "clipboard_handlers={\"klipperBusOwner\": null, \"processes\": [{\"name\": \"csd-clipboard\", \"pid\": 1111}, {\"name\": \"cinnamon\", \"pid\": 1303}], \"x11ManagerWindow\": 14680066}; operationId=98f8437e-302c-4518-ab02-4843c4e80fb3; Capture operation 98f8437e-302c-4518-ab02-4843c4e80fb3; operationId=98f8437e-302c-4518-ab02-4843c4e80fb3; historyId=2152b117-01c4-4ec9-8736-cf267502f05c; uploaded/local sha256=9e24b02dfe681c543b48f8e440c4dc2aa11f3e28c1523c7fdd34c3842ab9f690; Retained synthetic png sha256=9e24b02dfe681c543b48f8e440c4dc2aa11f3e28c1523c7fdd34c3842ab9f690; auto_copy_exact_link_count=1; independent desktop clipboard reader; no copy click; pixel oracle: (600, 280), tolerance=0; survives_exit_exact_link_count=1; persistence_handler=X11 CLIPBOARD_MANAGER window 14680066; detected managers=csd-clipboard",
+      "host": "m74",
+      "placement": "guest",
+      "guest": "cinnamon-x11",
+      "destination": "local",
+      "review": true,
+      "review_reason": "desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/outcomes.survives_exit/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "independent-frozen-pattern",
+          "path": "frames/outcomes.survives_exit/01-independent-frozen-pattern.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "publication-result",
+          "path": "frames/outcomes.survives_exit/02-publication-result.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "clipboard-after-quit",
+          "path": "frames/outcomes.survives_exit/03-clipboard-after-quit.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "clipboard-after-restart",
+          "path": "frames/outcomes.survives_exit/04-clipboard-after-restart.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/outcomes.survives_exit/05-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "outcomes.survives_exit",
+      "build": "6c1d282960010c87388ae2d2ea11b6ee45f98893",
+      "at": "2026-11-07T17:37:54Z"
+    }
+  ],
+  "secret_scan": {
+    "quarantine": [],
+    "passed": true,
+    "files": 11,
+    "pngs": 6,
+    "findings": []
+  }
+}
