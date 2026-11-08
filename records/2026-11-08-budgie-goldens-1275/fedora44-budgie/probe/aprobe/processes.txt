@@ -1,0 +1,76 @@
+    PID COMMAND         COMMAND
+   1086 systemd         /usr/lib/systemd/systemd --user
+   1089 (sd-pam)        (sd-pam)
+   1125 systemd-inhibit /usr/bin/systemd-inhibit --what=idle:sleep --who=putgd-lab-guest --why=visible-acceptance --mode=block /usr/bin/sleep infinity
+   1132 gnome-keyring-d /usr/bin/gnome-keyring-daemon --daemonize --login
+   1142 labwc           labwc --config-dir /home/lab/.config/budgie-desktop/labwc -S budgie-desktop
+   1232 sleep           /usr/bin/sleep infinity
+   1355 budgie-session- /usr/libexec/budgie-session-binary --builtin --session=org.buddiesofbudgie.BudgieDesktop
+   1363 dbus-broker-lau /usr/bin/dbus-broker-launch --scope user
+   1364 org.buddiesofbu /usr/bin/org.buddiesofbudgie.Services
+   1365 xdg-desktop-por /usr/libexec/xdg-desktop-portal
+   1383 dbus-broker     dbus-broker --log 11 --controller 10 --machine-id 924703ee15d444c0a875623b57658837 --max-bytes 100000000000000 --max-fds 25000000000000 --max-matches 5000000000
+   1390 xdg-permission- /usr/libexec/xdg-permission-store
+   1396 xdg-document-po /usr/libexec/xdg-document-portal
+   1421 xdg-desktop-por /usr/libexec/xdg-desktop-portal-gtk
+   1428 gvfsd           /usr/libexec/gvfsd
+   1447 at-spi-bus-laun /usr/libexec/at-spi-bus-launcher
+   1454 dbus-broker-lau /usr/bin/dbus-broker-launch --config-file=/usr/share/defaults/at-spi2/accessibility.conf --scope user
+   1456 dbus-broker     dbus-broker --log 10 --controller 9 --machine-id 924703ee15d444c0a875623b57658837 --max-bytes 100000000000000 --max-fds 6400000 --max-matches 5000000000
+   1465 at-spi2-registr /usr/libexec/at-spi2-registryd --use-gnome-session
+   1471 pipewire        /usr/bin/pipewire
+   1472 wireplumber     /usr/bin/wireplumber
+   1478 xdg-desktop-por /usr/libexec/xdg-desktop-portal-wlr
+   1508 gsd-sound       /usr/libexec/gsd-sound
+   1511 gsd-datetime    /usr/libexec/gsd-datetime
+   1515 gsd-power       /usr/libexec/gsd-power
+   1521 gsd-usb-protect /usr/libexec/gsd-usb-protection
+   1522 gsd-print-notif /usr/libexec/gsd-print-notifications
+   1529 gsd-wwan        /usr/libexec/gsd-wwan
+   1541 gsd-housekeepin /usr/libexec/gsd-housekeeping
+   1546 gsd-rfkill      /usr/libexec/gsd-rfkill
+   1554 gsd-sharing     /usr/libexec/gsd-sharing
+   1559 gsd-smartcard   /usr/libexec/gsd-smartcard
+   1565 gsd-a11y-settin /usr/libexec/gsd-a11y-settings
+   1627 budgie-panel    /usr/bin/budgie-panel
+   1644 dconf-service   /usr/libexec/dconf-service
+   1665 gsd-printer     /usr/libexec/gsd-printer
+   1736 bwrap           bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib /lib --symlink /usr/lib64 /lib64 --ro-bind-try /etc/fonts/conf.d /etc/fonts/conf.d --ro-bind-try /etc/fonts/fonts.conf /etc/fonts/fonts.conf --ro-bind-try /usr/lib/fontconfig/cache /usr/lib/fontconfig/cache --bind-try /home/lab/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg /home/lab/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --setenv XDG_CACHE_HOME /home/lab/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --seccomp 21 /usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd 20
+   1742 bwrap           bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib /lib --symlink /usr/lib64 /lib64 --ro-bind-try /etc/fonts/conf.d /etc/fonts/conf.d --ro-bind-try /etc/fonts/fonts.conf /etc/fonts/fonts.conf --ro-bind-try /usr/lib/fontconfig/cache /usr/lib/fontconfig/cache --bind-try /home/lab/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg /home/lab/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --setenv XDG_CACHE_HOME /home/lab/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --seccomp 21 /usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd 20
+   1745 glycin-svg      /usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd 20
+   1759 gvfsd-metadata  /usr/libexec/gvfsd-metadata
+   1776 pipewire-pulse  /usr/bin/pipewire-pulse
+   1868 budgie-daemon   /usr/bin/budgie-daemon
+   1872 budgie-polkit-d /usr/libexec/budgie-desktop/budgie-polkit-dialog
+   1943 swayidle        swayidle -w before-sleep gtklock -d
+   1948 swaybg          swaybg -i /usr/share/backgrounds/f44/default/f44-01-day.jxl --mode fill
+   1953 nm-applet       /usr/bin/nm-applet
+   1961 gsd-disk-utilit /usr/libexec/gsd-disk-utility-notify
+   1985 budgie-power-di /usr/libexec/budgie-desktop/budgie-power-dialog
+   1991 agent           /usr/libexec/geoclue-2.0/demos/agent
+   1996 abrt-applet     /usr/bin/abrt-applet --gapplication-service
+   1999 bwrap           bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib /lib --symlink /usr/lib64 /lib64 --seccomp 15 /usr/libexec/glycin-loaders/2+/glycin-jxl --dbus-fd 14
+   2007 bwrap           bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib /lib --symlink /usr/lib64 /lib64 --seccomp 15 /usr/libexec/glycin-loaders/2+/glycin-jxl --dbus-fd 14
+   2017 glycin-jxl      /usr/libexec/glycin-loaders/2+/glycin-jxl --dbus-fd 14
+   2033 org.buddiesofbu /usr/bin/org.buddiesofbudgie.sendto -d
+   2043 seapplet        /usr/bin/python3 -Es /usr/bin/seapplet
+   2058 org.buddiesofbu /usr/bin/org.buddiesofbudgie.budgie-desktop-view
+   2340 bwrap           bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib /lib --symlink /usr/lib64 /lib64 --seccomp 21 /usr/libexec/glycin-loaders/2+/glycin-image-rs --dbus-fd 20
+   2342 bwrap           bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib /lib --symlink /usr/lib64 /lib64 --seccomp 21 /usr/libexec/glycin-loaders/2+/glycin-image-rs --dbus-fd 20
+   2378 glycin-image-rs /usr/libexec/glycin-loaders/2+/glycin-image-rs --dbus-fd 20
+   2435 gvfs-udisks2-vo /usr/libexec/gvfs-udisks2-volume-monitor
+   2463 gvfs-afc-volume /usr/libexec/gvfs-afc-volume-monitor
+   2486 budgie-screensh /usr/libexec/budgie-desktop/budgie-screenshot-dialog
+   2545 bwrap           bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib /lib --symlink /usr/lib64 /lib64 --ro-bind-try /etc/fonts/conf.d /etc/fonts/conf.d --ro-bind-try /etc/fonts/fonts.conf /etc/fonts/fonts.conf --ro-bind-try /usr/lib/fontconfig/cache /usr/lib/fontconfig/cache --bind-try /home/lab/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg /home/lab/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --setenv XDG_CACHE_HOME /home/lab/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --seccomp 22 /usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd 21
+   2546 bwrap           bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib /lib --symlink /usr/lib64 /lib64 --ro-bind-try /etc/fonts/conf.d /etc/fonts/conf.d --ro-bind-try /etc/fonts/fonts.conf /etc/fonts/fonts.conf --ro-bind-try /usr/lib/fontconfig/cache /usr/lib/fontconfig/cache --bind-try /home/lab/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg /home/lab/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --setenv XDG_CACHE_HOME /home/lab/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --seccomp 22 /usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd 21
+   2555 glycin-svg      /usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd 21
+   2580 bwrap           bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib /lib --symlink /usr/lib64 /lib64 --ro-bind-try /etc/fonts/conf.d /etc/fonts/conf.d --ro-bind-try /etc/fonts/fonts.conf /etc/fonts/fonts.conf --ro-bind-try /usr/lib/fontconfig/cache /usr/lib/fontconfig/cache --bind-try /home/lab/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg /home/lab/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --setenv XDG_CACHE_HOME /home/lab/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --seccomp 28 /usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd 27
+   2584 bwrap           bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib /lib --symlink /usr/lib64 /lib64 --ro-bind-try /etc/fonts/conf.d /etc/fonts/conf.d --ro-bind-try /etc/fonts/fonts.conf /etc/fonts/fonts.conf --ro-bind-try /usr/lib/fontconfig/cache /usr/lib/fontconfig/cache --bind-try /home/lab/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg /home/lab/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --setenv XDG_CACHE_HOME /home/lab/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --seccomp 28 /usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd 27
+   2597 glycin-svg      /usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd 27
+   2664 imsettings-daem /usr/libexec/imsettings-daemon --replace
+   2740 Xwayland        Xwayland :0 -rootless -core -terminate 10 -listenfd 38 -listenfd 39 -displayfd 110 -wm 107
+   2836 python3         /usr/bin/python3 /usr/libexec/budgie-desktop/labwc_bridge.py
+   2886 sshd-session    sshd-session: lab@notty
+   2887 sh              sh -s
+   2918 python3         python3 /home/lab/aprobe.py
+   2921 ps              ps -u 1000 -o pid,comm,args

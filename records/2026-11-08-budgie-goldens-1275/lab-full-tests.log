@@ -1,0 +1,168 @@
+....F...EFFFFFFF..................Guest staging uses session-only tracking: scope launcher /usr/local/lib/putgd-lab/package_scope.py is not installed. Session-scan limits apply.
+.Guest staging uses session-only tracking: scope launcher /usr/local/lib/putgd-lab/package_scope.py is not installed. Session-scan limits apply.
+.......................E.............FFF
+======================================================================
+ERROR: test_exact_pixels_reject_wrong_crop_and_clipboard (test_lab.LabContracts.test_exact_pixels_reject_wrong_crop_and_clipboard)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/patrick/work/putgd-a1275/tests/desktop/test_lab.py", line 1303, in test_exact_pixels_reject_wrong_crop_and_clipboard
+    self.assertEqual(lab.read_json(ROOT / 'tests/desktop/common.yaml')['oracle'], region)
+                     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/putgd-a1275/tools/lab/lab.py", line 55, in read_json
+    return json.loads(Path(path).read_text())
+                      ~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/pathlib/_local.py", line 548, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/patrick/work/putgd-a1275/tests/desktop/common.yaml'
+
+======================================================================
+ERROR: test_region_contract_crosses_all_fixture_quadrants (test_lab.LabContracts.test_region_contract_crosses_all_fixture_quadrants)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/patrick/work/putgd-a1275/tests/desktop/test_lab.py", line 1353, in test_region_contract_crosses_all_fixture_quadrants
+    contract = lab.read_json(ROOT / 'tests/desktop/common.yaml')
+  File "/home/patrick/work/putgd-a1275/tools/lab/lab.py", line 55, in read_json
+    return json.loads(Path(path).read_text())
+                      ~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/pathlib/_local.py", line 548, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/patrick/work/putgd-a1275/tests/desktop/common.yaml'
+
+======================================================================
+FAIL: test_attempt_bundles_retain_all_current_witness_bytes_and_hashes (test_lab.LabContracts.test_attempt_bundles_retain_all_current_witness_bytes_and_hashes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/patrick/work/putgd-a1275/tests/desktop/test_lab.py", line 1465, in test_attempt_bundles_retain_all_current_witness_bytes_and_hashes
+    self.assertTrue(result['ok'], result)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : {'schemaVersion': 1, 'testId': '36303f398a5a4479ae4b3761f0a69ab7', 'profile': 'cinnamon-x11', 'scenario': 'clipboard-text-independent-paste', 'ok': False, 'acceptanceScope': 'single-head named action; no full profile certification', 'guestPreflightBefore': {'ok': True, 'synthetic': True}, 'runningApp': {'pid': 42}, 'evidence_class': 'graphical-kvm', 'performance_eligible': False, 'clipboardClient': 'qt', 'shortcutBindings': {'region': {'bound': True}, 'window': {'bound': True}, 'desktop': {'bound': True}, 'clipboard': {'bound': True}}, 'error': "[Errno 2] No such file or directory: '/home/patrick/work/putgd-a1275/tests/desktop/common.yaml'", 'witness': {'path': '/tmp/tmpkgzk0f72/work/lab-runs/scenario/final-head0.ppm', 'sha256': 'dfd7c82ff94daf4de5eb80b8f487bdd77ae70d2a7c8388a5741a69a01b56afbe'}, 'elapsedSeconds': 0.004863034002482891, 'evidenceDirectory': 'tests/36303f398a5a4479ae4b3761f0a69ab7'}
+
+======================================================================
+FAIL: test_failed_drag_witness_releases_button_and_cannot_archive_stale_image (test_lab.LabContracts.test_failed_drag_witness_releases_button_and_cannot_archive_stale_image) (failed_stage='press', cleanup_failure=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/patrick/work/putgd-a1275/tests/desktop/test_lab.py", line 263, in test_failed_drag_witness_releases_button_and_cannot_archive_stale_image
+    self.assertEqual(result['error'], 'synthetic drag ' + failed_stage + ' failure')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "[Errno 2] No such file or directory: '/h[51 chars]aml'" != 'synthetic drag press failure'
+- [Errno 2] No such file or directory: '/home/patrick/work/putgd-a1275/tests/desktop/common.yaml'
++ synthetic drag press failure
+
+
+======================================================================
+FAIL: test_failed_drag_witness_releases_button_and_cannot_archive_stale_image (test_lab.LabContracts.test_failed_drag_witness_releases_button_and_cannot_archive_stale_image) (failed_stage='move', cleanup_failure=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/patrick/work/putgd-a1275/tests/desktop/test_lab.py", line 263, in test_failed_drag_witness_releases_button_and_cannot_archive_stale_image
+    self.assertEqual(result['error'], 'synthetic drag ' + failed_stage + ' failure')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "[Errno 2] No such file or directory: '/h[51 chars]aml'" != 'synthetic drag move failure'
+- [Errno 2] No such file or directory: '/home/patrick/work/putgd-a1275/tests/desktop/common.yaml'
++ synthetic drag move failure
+
+
+======================================================================
+FAIL: test_failed_drag_witness_releases_button_and_cannot_archive_stale_image (test_lab.LabContracts.test_failed_drag_witness_releases_button_and_cannot_archive_stale_image) (failed_stage='witness', cleanup_failure=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/patrick/work/putgd-a1275/tests/desktop/test_lab.py", line 263, in test_failed_drag_witness_releases_button_and_cannot_archive_stale_image
+    self.assertEqual(result['error'], 'synthetic drag ' + failed_stage + ' failure')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "[Errno 2] No such file or directory: '/h[51 chars]aml'" != 'synthetic drag witness failure'
+- [Errno 2] No such file or directory: '/home/patrick/work/putgd-a1275/tests/desktop/common.yaml'
++ synthetic drag witness failure
+
+
+======================================================================
+FAIL: test_failed_drag_witness_releases_button_and_cannot_archive_stale_image (test_lab.LabContracts.test_failed_drag_witness_releases_button_and_cannot_archive_stale_image) (failed_stage='witness', cleanup_failure='cancel')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/patrick/work/putgd-a1275/tests/desktop/test_lab.py", line 263, in test_failed_drag_witness_releases_button_and_cannot_archive_stale_image
+    self.assertEqual(result['error'], 'synthetic drag ' + failed_stage + ' failure')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "[Errno 2] No such file or directory: '/h[51 chars]aml'" != 'synthetic drag witness failure'
+- [Errno 2] No such file or directory: '/home/patrick/work/putgd-a1275/tests/desktop/common.yaml'
++ synthetic drag witness failure
+
+
+======================================================================
+FAIL: test_failed_drag_witness_releases_button_and_cannot_archive_stale_image (test_lab.LabContracts.test_failed_drag_witness_releases_button_and_cannot_archive_stale_image) (failed_stage='witness', cleanup_failure='release')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/patrick/work/putgd-a1275/tests/desktop/test_lab.py", line 263, in test_failed_drag_witness_releases_button_and_cannot_archive_stale_image
+    self.assertEqual(result['error'], 'synthetic drag ' + failed_stage + ' failure')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "[Errno 2] No such file or directory: '/h[51 chars]aml'" != 'synthetic drag witness failure'
+- [Errno 2] No such file or directory: '/home/patrick/work/putgd-a1275/tests/desktop/common.yaml'
++ synthetic drag witness failure
+
+
+======================================================================
+FAIL: test_failed_drag_witness_releases_button_and_cannot_archive_stale_image (test_lab.LabContracts.test_failed_drag_witness_releases_button_and_cannot_archive_stale_image) (failed_stage='endpoint-release', cleanup_failure=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/patrick/work/putgd-a1275/tests/desktop/test_lab.py", line 263, in test_failed_drag_witness_releases_button_and_cannot_archive_stale_image
+    self.assertEqual(result['error'], 'synthetic drag ' + failed_stage + ' failure')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "[Errno 2] No such file or directory: '/h[51 chars]aml'" != 'synthetic drag endpoint-release failure'
+- [Errno 2] No such file or directory: '/home/patrick/work/putgd-a1275/tests/desktop/common.yaml'
++ synthetic drag endpoint-release failure
+
+
+======================================================================
+FAIL: test_failed_drag_witness_releases_button_and_cannot_archive_stale_image (test_lab.LabContracts.test_failed_drag_witness_releases_button_and_cannot_archive_stale_image) (failed_stage='witness', cleanup_failure='observation')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/patrick/work/putgd-a1275/tests/desktop/test_lab.py", line 263, in test_failed_drag_witness_releases_button_and_cannot_archive_stale_image
+    self.assertEqual(result['error'], 'synthetic drag ' + failed_stage + ' failure')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "[Errno 2] No such file or directory: '/h[51 chars]aml'" != 'synthetic drag witness failure'
+- [Errno 2] No such file or directory: '/home/patrick/work/putgd-a1275/tests/desktop/common.yaml'
++ synthetic drag witness failure
+
+
+======================================================================
+FAIL: test_window_frame_oracle_follows_observed_kwin_session_not_profile_name (test_lab.LabContracts.test_window_frame_oracle_follows_observed_kwin_session_not_profile_name) (profile='kde-wayland')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/patrick/work/putgd-a1275/tests/desktop/test_lab.py", line 1857, in test_window_frame_oracle_follows_observed_kwin_session_not_profile_name
+    self.assertTrue(result['ok'], result)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : {'schemaVersion': 1, 'testId': '51dc892a880a48e4936ad11582d87823', 'profile': 'kde-wayland', 'scenario': 'window-independent-paste', 'ok': False, 'acceptanceScope': 'single-head named action; no full profile certification', 'guestPreflightBefore': {'scope': 'physical desktop policy unchanged; managed by desktop lease'}, 'runningApp': {'pid': 42}, 'evidence_class': 'functional-only', 'performance_eligible': False, 'clipboardClient': 'qt', 'shortcutBindings': {'region': {'bound': True}, 'window': {'bound': True}, 'desktop': {'bound': True}, 'clipboard': {'bound': True}}, 'error': "[Errno 2] No such file or directory: '/home/patrick/work/putgd-a1275/tests/desktop/common.yaml'", 'witness': {'path': '/tmp/tmpjto6r_40/final-head0.ppm', 'sha256': '91efec366aa2d4232b2b41ef0d3abfb6a75d029dd9574460397b73ec4ee230c4'}, 'elapsedSeconds': 0.0017426460981369019, 'evidenceDirectory': 'tests/51dc892a880a48e4936ad11582d87823'}
+
+======================================================================
+FAIL: test_window_frame_oracle_follows_observed_kwin_session_not_profile_name (test_lab.LabContracts.test_window_frame_oracle_follows_observed_kwin_session_not_profile_name) (profile='kde-wayland-physical')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/patrick/work/putgd-a1275/tests/desktop/test_lab.py", line 1857, in test_window_frame_oracle_follows_observed_kwin_session_not_profile_name
+    self.assertTrue(result['ok'], result)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : {'schemaVersion': 1, 'testId': '9387832d282e4293a25966c413c9ece1', 'profile': 'kde-wayland-physical', 'scenario': 'window-independent-paste', 'ok': False, 'acceptanceScope': 'single-head named action; no full profile certification', 'guestPreflightBefore': {'scope': 'physical desktop policy unchanged; managed by desktop lease'}, 'runningApp': {'pid': 42}, 'evidence_class': 'functional-only', 'performance_eligible': False, 'clipboardClient': 'qt', 'shortcutBindings': {'region': {'bound': True}, 'window': {'bound': True}, 'desktop': {'bound': True}, 'clipboard': {'bound': True}}, 'error': "[Errno 2] No such file or directory: '/home/patrick/work/putgd-a1275/tests/desktop/common.yaml'", 'witness': {'path': '/tmp/tmp01n6i66a/final-head0.ppm', 'sha256': '91efec366aa2d4232b2b41ef0d3abfb6a75d029dd9574460397b73ec4ee230c4'}, 'elapsedSeconds': 0.0015181619673967361, 'evidenceDirectory': 'tests/9387832d282e4293a25966c413c9ece1'}
+
+======================================================================
+FAIL: test_window_frame_oracle_follows_observed_kwin_session_not_profile_name (test_lab.LabContracts.test_window_frame_oracle_follows_observed_kwin_session_not_profile_name) (profile='gnome-wayland')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/patrick/work/putgd-a1275/tests/desktop/test_lab.py", line 1857, in test_window_frame_oracle_follows_observed_kwin_session_not_profile_name
+    self.assertTrue(result['ok'], result)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : {'schemaVersion': 1, 'testId': '35c5d7541036400d8627b094bed68453', 'profile': 'gnome-wayland', 'scenario': 'window-independent-paste', 'ok': False, 'acceptanceScope': 'single-head named action; no full profile certification', 'guestPreflightBefore': {'scope': 'physical desktop policy unchanged; managed by desktop lease'}, 'runningApp': {'pid': 42}, 'evidence_class': 'functional-only', 'performance_eligible': False, 'clipboardClient': 'qt', 'shortcutBindings': {'region': {'bound': True}, 'window': {'bound': True}, 'desktop': {'bound': True}, 'clipboard': {'bound': True}}, 'error': "[Errno 2] No such file or directory: '/home/patrick/work/putgd-a1275/tests/desktop/common.yaml'", 'witness': {'path': '/tmp/tmp5peu0g4r/final-head0.ppm', 'sha256': '91efec366aa2d4232b2b41ef0d3abfb6a75d029dd9574460397b73ec4ee230c4'}, 'elapsedSeconds': 0.002000309992581606, 'evidenceDirectory': 'tests/35c5d7541036400d8627b094bed68453'}
+
+----------------------------------------------------------------------
+Ran 67 tests in 11.936s
+
+FAILED (failures=11, errors=2)

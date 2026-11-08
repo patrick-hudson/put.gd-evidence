@@ -1,0 +1,233 @@
+{
+  "stagingDeletion": {
+    "status": "success",
+    "stdout": "",
+    "return_value": {
+      "temporaryStagingDeletion": {
+        "Deleted": [
+          {
+            "Key": "linux/ubuntu-budgie-2404/upload-a1275-20261108/part-01"
+          },
+          {
+            "Key": "linux/ubuntu-budgie-2604/upload-a1275-20261108/part-01"
+          },
+          {
+            "Key": "linux/fedora45-budgie/upload-a1275-20261108/part-03"
+          },
+          {
+            "Key": "linux/ubuntu-budgie-2404/upload-a1275-20261108/part-02"
+          },
+          {
+            "Key": "linux/fedora44-budgie/upload-a1275-20261108/part-01"
+          },
+          {
+            "Key": "linux/ubuntu-budgie-2604/upload-a1275-20261108/part-02"
+          },
+          {
+            "Key": "linux/fedora44-budgie/upload-a1275-20261108/part-02"
+          },
+          {
+            "Key": "linux/fedora45-budgie/upload-a1275-20261108/part-01"
+          },
+          {
+            "Key": "linux/fedora45-budgie/upload-a1275-20261108/part-02"
+          }
+        ]
+      }
+    },
+    "api_calls": [
+      {
+        "service": "s3",
+        "operation": "DeleteObjects",
+        "status": "success",
+        "n_items": {
+          "Deleted": 9
+        }
+      }
+    ]
+  },
+  "ec2Termination": {
+    "status": "success",
+    "stdout": "",
+    "return_value": {
+      "termination": {
+        "TerminatingInstances": [
+          {
+            "InstanceId": "i-0f8e59ab52b315c3b",
+            "CurrentState": {
+              "Code": 32,
+              "Name": "shutting-down"
+            },
+            "PreviousState": {
+              "Code": 16,
+              "Name": "running"
+            }
+          }
+        ]
+      }
+    },
+    "api_calls": [
+      {
+        "service": "ec2",
+        "operation": "TerminateInstances",
+        "status": "success",
+        "n_items": {
+          "TerminatingInstances": 1
+        }
+      }
+    ]
+  },
+  "ec2FinalDescribe": {
+    "status": "success",
+    "stdout": "",
+    "return_value": {
+      "instance": {
+        "Reservations": [
+          {
+            "ReservationId": "r-0e039d76e933ec446",
+            "OwnerId": "626193791566",
+            "Groups": [],
+            "Instances": [
+              {
+                "Architecture": "x86_64",
+                "BlockDeviceMappings": [],
+                "ClientToken": "cf8ccf4d-f60f-4a9c-aa53-2f2e88b71285",
+                "EbsOptimized": false,
+                "EnaSupport": true,
+                "Hypervisor": "xen",
+                "NetworkInterfaces": [],
+                "RootDeviceName": "/dev/sda1",
+                "RootDeviceType": "ebs",
+                "SecurityGroups": [],
+                "StateReason": {
+                  "Code": "Client.UserInitiatedShutdown",
+                  "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                },
+                "Tags": [
+                  {
+                    "Key": "Name",
+                    "Value": "putgd-budgie-1275-a"
+                  },
+                  {
+                    "Key": "Owner",
+                    "Value": "worker-A-1275"
+                  }
+                ],
+                "VirtualizationType": "hvm",
+                "CpuOptions": {
+                  "CoreCount": 4,
+                  "ThreadsPerCore": 2,
+                  "NestedVirtualization": "enabled"
+                },
+                "CapacityReservationSpecification": {
+                  "CapacityReservationPreference": "open"
+                },
+                "HibernationOptions": {
+                  "Configured": false
+                },
+                "MetadataOptions": {
+                  "State": "pending",
+                  "HttpTokens": "required",
+                  "HttpPutResponseHopLimit": 2,
+                  "HttpEndpoint": "enabled",
+                  "HttpProtocolIpv6": "disabled",
+                  "InstanceMetadataTags": "disabled"
+                },
+                "EnclaveOptions": {
+                  "Enabled": false
+                },
+                "BootMode": "uefi-preferred",
+                "PlatformDetails": "Linux/UNIX",
+                "UsageOperation": "RunInstances",
+                "UsageOperationUpdateTime": "2026-11-08T01:19:59+00:00",
+                "MaintenanceOptions": {
+                  "AutoRecovery": "default",
+                  "RebootMigration": "default"
+                },
+                "CurrentInstanceBootMode": "uefi",
+                "NetworkPerformanceOptions": {
+                  "BandwidthWeighting": "default"
+                },
+                "Operator": {
+                  "Managed": false,
+                  "HiddenByDefault": false
+                },
+                "SecondaryInterfaces": [],
+                "InstanceId": "i-0f8e59ab52b315c3b",
+                "ImageId": "ami-08cf17e3856f70154",
+                "State": {
+                  "Code": 48,
+                  "Name": "terminated"
+                },
+                "PrivateDnsName": "",
+                "PublicDnsName": "",
+                "StateTransitionReason": "User initiated (2026-11-08 02:32:17 GMT)",
+                "KeyName": "putgd-budgie-1275-a-20261107",
+                "AmiLaunchIndex": 0,
+                "ProductCodes": [],
+                "InstanceType": "m7i.2xlarge",
+                "LaunchTime": "2026-11-08T01:19:59+00:00",
+                "Placement": {
+                  "AvailabilityZoneId": "usw2-az2",
+                  "GroupName": "",
+                  "Tenancy": "default",
+                  "AvailabilityZone": "us-west-2a"
+                },
+                "Monitoring": {
+                  "State": "disabled"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "volumes": {
+        "Volumes": []
+      }
+    },
+    "api_calls": [
+      {
+        "service": "ec2",
+        "operation": "DescribeInstances",
+        "status": "success",
+        "n_items": {
+          "Reservations": 1
+        }
+      },
+      {
+        "service": "ec2",
+        "operation": "DescribeVolumes",
+        "status": "success",
+        "n_items": {
+          "Volumes": 0
+        }
+      }
+    ]
+  },
+  "ec2ResourceCleanup": {
+    "status": "success",
+    "stdout": "",
+    "return_value": {
+      "securityGroupDeletion": {
+        "Return": true,
+        "GroupId": "sg-099f85643603c6479"
+      },
+      "keyPairDeletion": {
+        "Return": true,
+        "KeyPairId": "key-0a471207234a1fa88"
+      }
+    },
+    "api_calls": [
+      {
+        "service": "ec2",
+        "operation": "DeleteSecurityGroup",
+        "status": "success"
+      },
+      {
+        "service": "ec2",
+        "operation": "DeleteKeyPair",
+        "status": "success"
+      }
+    ]
+  }
+}

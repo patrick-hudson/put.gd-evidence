@@ -1,0 +1,74 @@
+    PID COMMAND         COMMAND
+   1066 systemd         /usr/lib/systemd/systemd --user
+   1067 (sd-pam)        (sd-pam)
+   1080 pipewire        /usr/bin/pipewire
+   1081 pipewire        /usr/bin/pipewire -c filter-chain.conf
+   1082 systemd-inhibit /usr/bin/systemd-inhibit --what=idle:sleep --who=putgd-lab-guest --why=visible-acceptance --mode=block /usr/bin/sleep infinity
+   1084 wireplumber     /usr/bin/wireplumber
+   1085 pipewire-pulse  /usr/bin/pipewire-pulse
+   1087 sleep           /usr/bin/sleep infinity
+   1099 dbus-daemon     /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+   1109 budgie-session- /usr/libexec/budgie-session-binary --builtin --session=org.buddiesofbudgie.BudgieDesktop
+   1157 xdg-document-po /usr/libexec/xdg-document-portal
+   1179 xdg-permission- /usr/libexec/xdg-permission-store
+   1551 gvfsd           /usr/libexec/gvfsd
+   1561 gvfsd-fuse      /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+   1572 at-spi-bus-laun /usr/libexec/at-spi-bus-launcher
+   1579 dbus-daemon     /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 11 --address=unix:path=/run/user/1000/at-spi/bus_0
+   1615 gnome-keyring-d /usr/bin/gnome-keyring-daemon --foreground --components=pkcs11,secrets --control-directory=/run/user/1000/keyring
+   1626 gsd-a11y-settin /usr/libexec/gsd-a11y-settings
+   1628 gsd-screensaver /usr/libexec/gsd-screensaver-proxy
+   1634 gsd-wwan        /usr/libexec/gsd-wwan
+   1636 gsd-color       /usr/libexec/gsd-color
+   1639 gsd-usb-protect /usr/libexec/gsd-usb-protection
+   1644 gsd-sharing     /usr/libexec/gsd-sharing
+   1647 gsd-datetime    /usr/libexec/gsd-datetime
+   1650 gsd-smartcard   /usr/libexec/gsd-smartcard
+   1653 gsd-housekeepin /usr/libexec/gsd-housekeeping
+   1656 gsd-sound       /usr/libexec/gsd-sound
+   1663 gsd-wacom       /usr/libexec/gsd-wacom
+   1675 gsd-xsettings   /usr/libexec/gsd-xsettings
+   1676 gsd-keyboard    /usr/libexec/gsd-keyboard
+   1689 gsd-media-keys  /usr/libexec/gsd-media-keys
+   1697 gsd-power       /usr/libexec/gsd-power
+   1700 gsd-print-notif /usr/libexec/gsd-print-notifications
+   1709 gsd-rfkill      /usr/libexec/gsd-rfkill
+   1775 at-spi2-registr /usr/libexec/at-spi2-registryd --use-gnome-session
+   1782 gsd-printer     /usr/libexec/gsd-printer
+   1824 budgie-wm       /usr/bin/budgie-wm
+   1845 budgie-panel    /usr/bin/budgie-panel
+   1869 dconf-service   /usr/libexec/dconf-service
+   2139 gvfs-udisks2-vo /usr/libexec/gvfs-udisks2-volume-monitor
+   2145 gvfs-gphoto2-vo /usr/libexec/gvfs-gphoto2-volume-monitor
+   2150 gvfs-afc-volume /usr/libexec/gvfs-afc-volume-monitor
+   2156 gvfs-goa-volume /usr/libexec/gvfs-goa-volume-monitor
+   2162 goa-daemon      /usr/libexec/goa-daemon
+   2170 goa-identity-se /usr/libexec/goa-identity-service
+   2178 gvfs-mtp-volume /usr/libexec/gvfs-mtp-volume-monitor
+   2205 obexd           /usr/libexec/bluetooth/obexd
+   2208 budgie-daemon   /usr/bin/budgie-daemon
+   2211 budgie-polkit-d /usr/libexec/budgie-desktop/budgie-polkit-dialog
+   2216 dropover        /usr/bin/python3 /usr/lib/budgie-desktop/plugins/budgie-dropby/dropover 84376ffe-db15-11f1-990e-525400123456
+   2218 showtime_deskto /usr/lib/budgie-desktop/plugins/budgie-showtime/showtime_desktop 84376ffc-db15-11f1-990e-525400123456
+   2247 dragsnap        /usr/lib/budgie-window-shuffler/dragsnap
+   2252 gsd-disk-utilit /usr/libexec/gsd-disk-utility-notify
+   2257 nm-applet       /usr/bin/nm-applet --indicator
+   2261 deja-dup-monito /usr/libexec/deja-dup/deja-dup-monitor
+   2264 windowshufflerd /usr/lib/budgie-window-shuffler/windowshufflerdaemon
+   2267 org.buddiesofbu /usr/bin/org.buddiesofbudgie.sendto -d
+   2273 nemo-desktop    /usr/bin/nemo-desktop
+   2284 plank           /usr/bin/plank
+   2288 budgie-extras-d /usr/bin/budgie-extras-daemon
+   2289 update-notifier /usr/bin/update-notifier
+   2293 ayatana-indicat /usr/libexec/ayatana-indicator-application/ayatana-indicator-application-service
+   2300 budgie-power-di /usr/libexec/budgie-desktop/budgie-power-dialog
+   2307 gnome-screensav /usr/bin/gnome-screensaver
+   2434 bamfdaemon      /usr/lib/x86_64-linux-gnu/bamf/bamfdaemon
+   2507 gvfsd-trash     /usr/libexec/gvfsd-trash --spawner :1.17 /org/gtk/gvfs/exec_spaw/0
+   2543 gvfsd-metadata  /usr/libexec/gvfsd-metadata
+   2544 user-session-he /snap/snapd-desktop-integration/391/usr/bin/user-session-helper /snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration
+   2628 snapd-desktop-i /snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration
+   2728 sshd            sshd: lab@notty
+   2729 sh              sh -s
+   2730 python3         python3 /home/lab/aprobe.py
+   2734 ps              ps -u 1000 -o pid,comm,args

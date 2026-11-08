@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "profile": "fedora44-budgie",
+  "name": "fedora44-budgie",
+  "sha256": "37f84c90fc165e6817ffc5dd969eaaf57a36c195dc04f0f3bcc269b5e1b83a80",
+  "standalone": true,
+  "virtualBytes": 42949672960,
+  "imageBytes": 11858870272,
+  "createdUtc": "2026-11-08T01:58:56.553489+00:00",
+  "provisioning": {
+    "host": "EC2 us-west-2",
+    "instanceId": "i-0f8e59ab52b315c3b",
+    "sourceIso": "Fedora-Budgie-Live-44-1.7.x86_64.iso",
+    "sourceIsoSha256": "b6298c8a99530b8a923f43b2bf6fa89065465dee9a00cb6952b10eea45f43592",
+    "sourceSignatureVerified": true,
+    "guestUser": "lab",
+    "standardLoginVisuallyVerified": true,
+    "autologinVisuallyVerified": true
+  },
+  "verification": {
+    "qemuImgCheck": true,
+    "qemuImgCompare": true,
+    "imageInfo": {
+      "children": [
+        {
+          "name": "file",
+          "info": {
+            "children": [],
+            "virtual-size": 11858870272,
+            "filename": "/home/ubuntu/b1275/sealed/fedora44-budgie/image.qcow2",
+            "format": "file",
+            "actual-size": 11858993152,
+            "format-specific": {
+              "type": "file",
+              "data": {}
+            },
+            "dirty-flag": false
+          }
+        }
+      ],
+      "virtual-size": 42949672960,
+      "filename": "/home/ubuntu/b1275/sealed/fedora44-budgie/image.qcow2",
+      "cluster-size": 65536,
+      "format": "qcow2",
+      "actual-size": 11858993152,
+      "format-specific": {
+        "type": "qcow2",
+        "data": {
+          "compat": "1.1",
+          "compression-type": "zlib",
+          "lazy-refcounts": false,
+          "refcount-bits": 16,
+          "corrupt": false,
+          "extended-l2": false
+        }
+      },
+      "dirty-flag": false
+    }
+  }
+}
