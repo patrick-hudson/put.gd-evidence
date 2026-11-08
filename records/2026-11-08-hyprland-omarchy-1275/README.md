@@ -87,3 +87,9 @@ showed on screen (`pictures/omarchy-1304-transient-failure-banner.png`), and qui
 put.gd rows unchanged (all from builds without #1304). After a QMP reset (guest uptime 35 s) the same six rows came back
 and the new notice did not (`pictures/omarchy-1304-after-reboot-d16c23b.png`). Files in `round2/notices-1304-d16c23b/`.
 `round2/notices-1304/n-gnome2.json` is the GNOME (f44) DBus summary of the first revision 7fc3232bf.
+
+Physical desktops on the same d16c23b22 AppImage, each under its own desktop lock (released 07:01 UTC, before the 07:30
+nightly desktop check), private profile, Notify recorded with dbus-monitor (`round2/notices-1304-d16c23b/n-*3.json`,
+banner frames `notice-*3.png`): Cinnamon m74, GNOME f44 and KDE d69 each sent the failure notice with urgency 2 and
+**no** `transient`, as on nightly. Cinnamon shows the banner. GNOME queues it behind the first-run notice. On KDE the frame
+is covered by stale `test_gui_tray` notices (#1307, not from this run).
