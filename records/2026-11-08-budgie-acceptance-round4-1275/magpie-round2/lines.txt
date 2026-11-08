@@ -1,0 +1,23 @@
+== line numbers
+15:  char buf[7];
+16:  xkb_keysym_to_utf8(miral::toolkit::mir_keyboard_event_keysym(event), buf, sizeof(buf));
+26:  m_sequence = QKeySequence::fromString(fullKeycombo);
+72:      if (reversedModifierStrings.empty()) { return QStringLiteral("none"); }
+79:      if (str.isEmpty() || str.toLower() == QStringLiteral("none")) return None;
+magpie/src/main.cpp:48:      if (!qKeyboardEvent.getSequence().matches(keybind->getSequence())) continue;
+magpie/src/config.cpp:78:  keybindsGroup.writeEntry("test", QStringList {"Ctrl+Alt+b", "Open Firefox", "firefox"});
+magpie/src/config.cpp:95:    keybind->setActions(keybindEntry.value(2).split(" "));
+46:void mgv::Display::for_each_display_sync_group(std::function<void(DisplaySyncGroup &)> const&)
+47-{
+48-}
+95:    if (!current_state->current_submission || is_user_of_current_buffer(*current_state, id))
+317:mc::CompositorID mc::BasicScreenShooter::id() const
+318-{
+319-    return self.get();
+320-}
+536-            {
+537:                current_buffer = allocator->buffer_from_shm(
+538-                    shm_buffer->data(),
+539-                    std::move(executor_send_frame_callbacks),
+mir 8f4570e58301236c06446a5beb33de0adc678d50
+magpie 58a0d7a0b0ac22a5680f415da6820c53327cc9ee

@@ -1,0 +1,46 @@
+0000002
+combo [ctrl alt b] markers 0 -> 1 : fired-ctrl-alt-b 
+combo [ctrl alt 1] markers 1 -> 2 : fired-ctrl-alt-1 fired-ctrl-alt-b 
+combo [ctrl shift k] markers 2 -> 3 : fired-ctrl-alt-1 fired-ctrl-alt-b fired-ctrl-shift-K 
+combo [ctrl shift 1] markers 3 -> 4 : fired-ctrl-alt-1 fired-ctrl-alt-b fired-ctrl-shift-exclam fired-ctrl-shift-K 
+combo [ctrl shift f9] markers 4 -> 4 : fired-ctrl-alt-1 fired-ctrl-alt-b fired-ctrl-shift-exclam fired-ctrl-shift-K 
+combo [alt f9] markers 4 -> 4 : fired-ctrl-alt-1 fired-ctrl-alt-b fired-ctrl-shift-exclam fired-ctrl-shift-K 
+combo [meta_l t] markers 4 -> 5 : fired-ctrl-alt-1 fired-ctrl-alt-b fired-ctrl-shift-exclam fired-ctrl-shift-K fired-meta-t 
+combo [ctrl alt ret] markers 5 -> 5 : fired-ctrl-alt-1 fired-ctrl-alt-b fired-ctrl-shift-exclam fired-ctrl-shift-K fired-meta-t 
+combo [print] markers 5 -> 5 : fired-ctrl-alt-1 fired-ctrl-alt-b fired-ctrl-shift-exclam fired-ctrl-shift-K fired-meta-t 
+
+TYPED: 0000000 a \n
+fired-ctrl-alt-1 fired-ctrl-alt-b fired-ctrl-shift-exclam fired-ctrl-shift-K fired-meta-t 
+PROBE keysym=a utf8_bytes=2 text="61" combo="none+a" -> sequence="" count=1 qkey=1ffffff
+PROBE keysym=a utf8_bytes=2 text="61" combo="none+a" -> sequence="" count=1 qkey=1ffffff
+PROBE keysym=a utf8_bytes=2 text="61" combo="none+a" -> sequence="" count=1 qkey=1ffffff
+PROBE keysym=Return utf8_bytes=2 text="0d" combo="none+\r" -> sequence="" count=1 qkey=1ffffff
+PROBE keysym=Return utf8_bytes=2 text="0d" combo="none+\r" -> sequence="" count=1 qkey=1ffffff
+PROBE keysym=Return utf8_bytes=2 text="0d" combo="none+\r" -> sequence="" count=1 qkey=1ffffff
+PROBE keysym=b utf8_bytes=2 text="62" combo="Ctrl+Alt+b" -> sequence="Ctrl+Alt+B" count=1 qkey=c000042
+PROBE keysym=b utf8_bytes=2 text="62" combo="Ctrl+Alt+b" -> sequence="Ctrl+Alt+B" count=1 qkey=c000042
+PROBE keysym=b utf8_bytes=2 text="62" combo="Ctrl+Alt+b" -> sequence="Ctrl+Alt+B" count=1 qkey=c000042
+PROBE keysym=1 utf8_bytes=2 text="31" combo="Ctrl+Alt+1" -> sequence="Ctrl+Alt+1" count=1 qkey=c000031
+PROBE keysym=1 utf8_bytes=2 text="31" combo="Ctrl+Alt+1" -> sequence="Ctrl+Alt+1" count=1 qkey=c000031
+PROBE keysym=1 utf8_bytes=2 text="31" combo="Ctrl+Alt+1" -> sequence="Ctrl+Alt+1" count=1 qkey=c000031
+PROBE keysym=K utf8_bytes=2 text="4b" combo="Ctrl+Shift+K" -> sequence="Ctrl+Shift+K" count=1 qkey=600004b
+PROBE keysym=K utf8_bytes=2 text="4b" combo="Ctrl+Shift+K" -> sequence="Ctrl+Shift+K" count=1 qkey=600004b
+PROBE keysym=K utf8_bytes=2 text="4b" combo="Ctrl+Shift+K" -> sequence="Ctrl+Shift+K" count=1 qkey=600004b
+PROBE keysym=exclam utf8_bytes=2 text="21" combo="Ctrl+Shift+!" -> sequence="Ctrl+Shift+!" count=1 qkey=6000021
+PROBE keysym=exclam utf8_bytes=2 text="21" combo="Ctrl+Shift+!" -> sequence="Ctrl+Shift+!" count=1 qkey=6000021
+PROBE keysym=exclam utf8_bytes=2 text="21" combo="Ctrl+Shift+!" -> sequence="Ctrl+Shift+!" count=1 qkey=6000021
+PROBE keysym=F9 utf8_bytes=0 text="" combo="Ctrl+Shift" -> sequence="Ctrl+Shift" count=1 qkey=5000020
+PROBE keysym=F9 utf8_bytes=0 text="efbfbdefbfbdefbfbdefbfbdefbfbdefbfbdefbfbd" combo="Ctrl+Shift+�������" -> sequence="" count=1 qkey=1ffffff
+PROBE keysym=F9 utf8_bytes=0 text="efbfbd7f13167f" combo="Ctrl+Shift+�\u007F\u0013\u0016\u007F" -> sequence="" count=1 qkey=1ffffff
+PROBE keysym=F9 utf8_bytes=0 text="" combo="Alt" -> sequence="Alt" count=1 qkey=1000023
+PROBE keysym=F9 utf8_bytes=0 text="efbfbdefbfbdefbfbdefbfbdefbfbdefbfbdefbfbd" combo="Alt+�������" -> sequence="" count=1 qkey=1ffffff
+PROBE keysym=F9 utf8_bytes=0 text="efbfbd7f13167f" combo="Alt+�\u007F\u0013\u0016\u007F" -> sequence="" count=1 qkey=1ffffff
+PROBE keysym=t utf8_bytes=2 text="74" combo="Meta+t" -> sequence="Meta+T" count=1 qkey=10000054
+PROBE keysym=t utf8_bytes=2 text="74" combo="Meta+t" -> sequence="Meta+T" count=1 qkey=10000054
+PROBE keysym=t utf8_bytes=2 text="74" combo="Meta+t" -> sequence="Meta+T" count=1 qkey=10000054
+PROBE keysym=Return utf8_bytes=2 text="0d" combo="Ctrl+Alt+\r" -> sequence="Ctrl+Alt+\r" count=1 qkey=c00000d
+PROBE keysym=Return utf8_bytes=2 text="0d" combo="Ctrl+Alt+\r" -> sequence="Ctrl+Alt+\r" count=1 qkey=c00000d
+PROBE keysym=Return utf8_bytes=2 text="0d" combo="Ctrl+Alt+\r" -> sequence="Ctrl+Alt+\r" count=1 qkey=c00000d
+PROBE keysym=Print utf8_bytes=0 text="" combo="none" -> sequence="" count=1 qkey=1ffffff
+PROBE keysym=Print utf8_bytes=0 text="efbfbdefbfbdefbfbdefbfbdefbfbdefbfbdefbfbd" combo="none+�������" -> sequence="" count=1 qkey=1ffffff
+PROBE keysym=Print utf8_bytes=0 text="efbfbd7f13167f" combo="none+�\u007F\u0013\u0016\u007F" -> sequence="" count=1 qkey=1ffffff

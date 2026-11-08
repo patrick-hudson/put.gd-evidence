@@ -1,0 +1,18 @@
+#!/bin/bash
+mkdir -p /home/lab/mg
+exec > /home/lab/mg/compositor.log 2>&1
+export QT_QPA_PLATFORM=offscreen QT_LOGGING_RULES="default.debug=true"
+export MAGPIE_PROBE_FIX=1
+exec /usr/local/bin/magpie-probe --app "/usr/bin/foot -a typed -T typed /usr/local/bin/mg-typed.sh"
+[Keybinds]
+altf9=Alt+F9,probe,/usr/bin/touch /home/lab/mg/fired-alt-F9
+ctrlalt1=Ctrl+Alt+1,probe,/usr/bin/touch /home/lab/mg/fired-ctrl-alt-1
+ctrlaltb=Ctrl+Alt+b,probe,/usr/bin/touch /home/lab/mg/fired-ctrl-alt-b
+ctrlaltreturn=Ctrl+Alt+Return,probe,/usr/bin/touch /home/lab/mg/fired-ctrl-alt-Return
+ctrlshift1=Ctrl+Shift+1,probe,/usr/bin/touch /home/lab/mg/fired-ctrl-shift-1
+ctrlshiftexclam=Ctrl+Shift+!,probe,/usr/bin/touch /home/lab/mg/fired-ctrl-shift-exclam
+ctrlshiftf9=Ctrl+Shift+F9,probe,/usr/bin/touch /home/lab/mg/fired-ctrl-shift-F9
+ctrlshiftk=Ctrl+Shift+K,probe,/usr/bin/touch /home/lab/mg/fired-ctrl-shift-K
+metat=Meta+t,probe,/usr/bin/touch /home/lab/mg/fired-meta-t
+print=Print,probe,/usr/bin/touch /home/lab/mg/fired-Print
+test=Ctrl+Alt+b,Open Firefox,firefox
