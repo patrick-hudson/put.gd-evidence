@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-08-budgie-adapter-1275](2026-11-08-budgie-adapter-1275/README.md) | #1275, #1283 | Budgie adapter acceptance (#1275, PR #1283) |
 | [2026-11-08-native-window-recording-1278](2026-11-08-native-window-recording-1278/README.md) | #1278 | Native window recording on KDE and GNOME Wayland (#1278) |
 | [2026-11-08-budgie-goldens-1275](2026-11-08-budgie-goldens-1275/README.md) | #1275 | Budgie goldens and real-session step-1 probes (#1275) |
 | [2026-11-08-worker-f](2026-11-08-worker-f/README.md) | — | Worker F: SDK instructions, ReviewWindow gates, diagnostics ordering |
