@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-08-budgie-acceptance-round3-1275](2026-11-08-budgie-acceptance-round3-1275/README.md) | #1275, #1283 | Budgie adapter acceptance, round 3: review fixes (#1275, PR #1283) |
 | [2026-11-08-budgie-acceptance-round2-1275](2026-11-08-budgie-acceptance-round2-1275/README.md) | #1275, #1283 | Budgie adapter acceptance, round 2 (#1275, PR #1283) |
 | [2026-11-08-hyprland-omarchy-1275](2026-11-08-hyprland-omarchy-1275/README.md) | #1275, #1293 | Hyprland adapter acceptance on Omarchy 4.5 (#1275, PR #1293) |
 | [2026-11-08-budgie-adapter-1275](2026-11-08-budgie-adapter-1275/README.md) | #1275, #1283 | Budgie adapter acceptance (#1275, PR #1283) |
