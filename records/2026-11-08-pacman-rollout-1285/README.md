@@ -1,5 +1,7 @@
 # Signed pacman rollout and published installer checks (#1285)
 
+Final acceptance 2026-11-08: **PASS** for the deployed installer on clean Arch and fresh Omarchy, including Hyprland startup, negative paths and retirement. See [final-deployed/README.md](final-deployed/README.md). The partial results below retain their historical status.
+
 Release v26.1108.4139-nightly, source 0eaff434d3530d3e09dc1663751eee960b7afa46. d69 signer updated from 1887c4c9a90dfd0d0bc37ef031757aab56bc04f7 to that source; existing configuration, units and keys retained. Lab and live publication passed; live service completed 2026-11-08 08:21:51 UTC, timer restored. Independent CDN pacman package/database signatures and hash equality to GitHub release SHA256SUMS passed; apt (all three suites) and dnf metadata/signed RPM checks passed. No stable-key operation.
 
 Arch asset: putgd-26.1108.4139-nightly-archlinux-x86_64.pkg.tar.zst, 129275823 bytes, SHA256 d38a612ea96e5b87c0bd1c6cf69f0ccc75f5aaac193f84f1206f353947336337. Required nightly fingerprint 4032E28D893BAF66F4AC23D9A11D38D55536B371. Receipt https://pkg.put.gd/receipts/v26.1108.4139-nightly.json.
