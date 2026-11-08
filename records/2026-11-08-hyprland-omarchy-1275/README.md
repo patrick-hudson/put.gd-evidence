@@ -146,8 +146,26 @@ Added after going through which rows ran only on builds from before the press ca
 | Mixed density, drag on the scale 1 output | 12/12 | 12/12 | max 50 px: the pointer |
 | Mixed density, drag on the scale 2 output (600x400 physical) | 12/12 | 12/12 | Arch 711 px, box 27x46 at the region's corner: the pointer at 2x. AppImage the same in 6 trials, 9212 px in the other 6 |
 
-In those six AppImage trials the capture also has a light-blue bar across the top rows of the region, starting 133 logical px into the output, which is where Omarchy's notification layer's card sits (`omarchy-notifications`, 113 + 20 margin); the 12 Arch captures are pixel identical to each other and a later attempt to bring the bar back (`toast.py`, no card on screen) did not. The cause isn't proven; the position points at a notification card that was on screen during those trials (`appimage-scale2-capture-with-bar.png`). The region's size and everything outside that bar match.
+The 9212 px in six AppImage trials is the bottom edge of the stack of put.gd's own "Saved locally" notification cards from the previous captures, really on screen at that moment (`bar-and-timing/`, `pictures/omarchy-notification-bar-on-screen.png`). It reproduced on a fresh overlay (VM d6, same sequence: six trials again). Every capture adds a card on a timer, so the stack's height changes between the reference grim and the capture: the live frames of that output, 1.4 frames/s, show the same edge at 6, 21 and sometimes 46 rows below the region's top, matching the captures, and the 15 extra rows x 570 px between a 21-row reference and a 6-row capture are exactly the difference from 711 to 9212 px. `bar/notify.log` holds every D-Bus `Notify`; the Arch run on d5 happened not to have a card that low.
 
 Catcher end paths on the same build, both packages: right button 0.1 s after the hotkey 4/4 (operation `cancelled`, no layer left, no new image, the next region completes); an output removed while the early press is held 3/3 (operation `display_changed`, no layer left, no image, next region completes). Esc on the catcher is in `head2/` (2/2 per package).
 
 Not exercised live: the catcher's "pointer capability lost during a drag" branch. The VM always has QEMU's vmmouse devices, so unplugging the USB tablet does not take the seat's pointer away. The unplug itself, with the button held, broke the VM for the test: every left drag afterwards was lost, also on freshly started residents, while the right button still worked; a fresh overlay was clean. That run and the one before it are discarded (the VM was retired through guarded cleanup; the scripts are here).
+
+
+### Early press just after an output appears (`bar-and-timing/timing/`)
+
+Whether the press is lost depends on Hyprland. VM d6, final build, WAYLAND_DEBUG on the resident gives the client-side timeline; an independent `wl_display.sync` client (`syncprobe.c`) shows when the compositor answers anybody. Press injected 355 ms after the hotkey, 8 trials per row, medians (ms after the hotkey):
+
+| Condition | Hotkey reaches the resident | Resident requests the catcher, after that | Catcher configure, after the request | Lost |
+| --- | --- | --- | --- | --- |
+| No output change, AppImage | 5.0 | 0.1 | 41 | 0/8 |
+| Output appeared 1.5 s before, AppImage | 72.5 | 0.1 | 264 | 4/8 |
+| Output appeared 1.5 s before, Arch | 136 | 0.1 | 289 | 3/8 |
+| Output appeared 6 s before, Arch | 4.9 | 0.1 | 44 | 1/8 (that trial's hotkey took 281 ms to arrive) |
+
+- The resident takes 0.1 ms from the hotkey event to the request in every trial. In the first AppImage run (`first-appimage-run/`) the catcher was requested on both outputs (`surfaces: 2`) with no rebuild on the output change.
+- Hyprland's independent clock: during the wait for that configure, the sync probe got no answer for essentially the whole of it, e.g. Arch trial 0 blocked 596 of a 600 ms wait, AppImage trial 2 blocked 290 of 294 ms. In AppImage trial 0 the hotkey itself reached the resident at 425 ms, after the press was injected at 355 ms.
+- Control with no put.gd running, output appeared 1.5 s earlier, 8 trials: worst sync stall in the next second median 249 ms (146 to 319), the compositor answering late for 967 of those 1000 ms (no-output baseline: 92 ms worst).
+
+So the longer window is Hyprland's main loop catching up after an output appears on this 2-vCPU VM, not put.gd: the request is sent within 0.1 ms, no client can map earlier than the compositor processes it, and it happens without put.gd running.
