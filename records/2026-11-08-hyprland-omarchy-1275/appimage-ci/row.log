@@ -1,0 +1,129 @@
+
+== start /home/lab/putgd-ci.AppImage
+{"pid": 6007, "socket": true, "cli": "/tmp/.mount_putgd-ieEMmC/usr/bin/putgd-cli"}
+{"version": null, "build": {"baseVersion": "26.1108.4146", "commitCount": 4146, "dirty": false, "gitCommit": "3af1e6b2b0a58e857eccbf52a823713aeac02905", "gitTree": "fa1edac61463a8ed94dfc96664a408fdaca1c631", "packageVersion": "26.1108.4146~dev+g3af1e6b2b0a5", "schemaVersion": 1, "sourceProvenance": "git", "version": "26.1108.4146-dev+g3af1e6b2b0a5"}, "resident": null}
+
+== shortcuts (defaults + Omarchy conflicts)
+patch ok True 
+{
+ "clipboard": {
+  "requested": "",
+  "state": "unbound",
+  "actual": [],
+  "error": null
+ },
+ "desktop": {
+  "requested": "Ctrl+Shift+3",
+  "state": "bound",
+  "actual": [
+   "Ctrl+Shift+3"
+  ],
+  "error": null
+ },
+ "edit": {
+  "requested": "Meta+Shift+S",
+  "state": "shortcut_conflict",
+  "actual": [],
+  "error": "Hyprland already binds this key: Google Maps"
+ },
+ "record": {
+  "requested": "Print",
+  "state": "shortcut_conflict",
+  "actual": [],
+  "error": "Hyprland already binds this key: Screenshot"
+ },
+ "region": {
+  "requested": "Ctrl+Shift+1",
+  "state": "bound",
+  "actual": [
+   "Ctrl+Shift+1"
+  ],
+  "error": null
+ },
+ "window": {
+  "requested": "Ctrl+Shift+2",
+  "state": "bound",
+  "actual": [
+   "Ctrl+Shift+2"
+  ],
+  "error": null
+ }
+}
+{"applies": 1, "layerRule": true, "listening": true, "protocol": "hyprland-global-shortcuts-v1", "registered": true, "reloadsIssued": 0, "reloadsSeen": 0}
+
+{"total": 254, "putgd": [[5, "3", "put.gd: Desktop capture"], [5, "1", "put.gd: Region capture"], [5, "2", "put.gd: Window capture"]], "omarchyIdentical": true, "missing": [], "extra": []}
+
+== desktop hotkey Ctrl+Shift+3
+desktop completed  
+sizes (1280, 800) (1280, 800)
+pixels 1024000 differing(>8) 6503 fraction 0.00635 bbox (895, 31, 1275, 95)
+
+== region hotkey Ctrl+Shift+1 + drag 300,200 -> 700,500
+region completed  
+sizes (400, 300) (400, 300)
+pixels 120000 differing(>8) 20 fraction 0.00017 bbox (396, 291, 400, 300)
+
+== window hotkey Ctrl+Shift+2 on foot vs grim -T
+window completed  
+sizes (1256, 750) (1256, 750)
+pixels 942000 differing(>8) 0 fraction 0.00000 bbox None
+
+== own window refused (Settings)
+active: putgd-ui
+window failed target_unavailable Focus an external window and invoke the window shortcut or CLI
+
+== Omarchy theme change (reload) keeps put.gd binds; hotkey afterwards
+{"total": 254, "putgd": [[5, "3", "put.gd: Desktop capture"], [5, "1", "put.gd: Region capture"], [5, "2", "put.gd: Window capture"]], "omarchyIdentical": true, "missing": [], "extra": []}
+desktop completed  
+
+== clipboard
+    "class": "org.putgd.SyntheticGtkClipboard",
+clipboard completed  text/plain /home/lab/Documents/put.gd/text/Text-2026-11-07-22-32-07.txt
+saved: /home/lab/Documents/put.gd/text/Text-2026-11-07-22-32-07.txt: putgd synthetic clipboard text
+clipboard completed  image/png /home/lab/Documents/put.gd/images/Image-2026-11-07-22-32-13.png
+/home/lab/d/probe/acc.py:42: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  px = im.getdata(); step = max(1, (w * h) // 200000)
+{"path": "/home/lab/Documents/put.gd/images/Image-2026-11-07-22-32-13.png", "size": [96, 64], "top": [[[220, 30, 40, 255], 6144]], "alphaZero": 0}
+desktop completed  image/png /home/lab/Documents/put.gd/images/Screen-Capture-2026-11-07-22-32-17.png
+application/x-putgd-result-064e6c40f6a0468fb8963ffa138c4af1
+image/png
+{
+  "schemaVersion": 1,
+  "client": "GTK",
+  "formats": [
+    "image/png"
+  ],
+  "image": {
+    "width": 1280,
+    "height": 800,
+    "saved": true
+  }
+}
+pasted bytes == saved capture
+primary now: primary-sentinel-1275
+omarchy history images: 19 -> 20
+1f2bef5b447ff69b465345e0254d2d136e57245fa0246ef1e6a9b1bec5e68924.png
+78d0a0227dcf4db6f436f9856fc0be37ce1473e7b4d0a7807a269373b7ae94b1.png
+6834ed87e3748d524db565336bfb60e37ff0fa182b8dcc2fcb976545aae4262d.png
+shots/clipboard-gtk-paste.png
+
+== recording (moving pattern, no picker)
+{"id": "2b39a382-cef5-466e-bbcf-6035bd53a1fb", "state": "ready", "target": {"kind": "monitor"}, "window": null, "canvas": [1280, 800], "error": {"code": "", "details": {}, "message": ""}, "pickerProcesses": ""}
+motion: motion=21.148 compared=7 samples=8 durationMs=6600 size=1280x800
+{"id": "c55e8bd8-dc0f-4efe-87ab-78c1faa34b12", "state": "ready", "target": {"identity": "18000012", "kind": "window"}, "window": {"appId": "gst-launch-1.0", "identity": "18000012", "rect": [20, 60, 640, 480], "title": ""}, "canvas": [640, 480], "error": {"code": "", "details": {}, "message": ""}, "pickerProcesses": ""}
+motion: motion=69.124 compared=7 samples=8 durationMs=6600 size=640x480
+{"id": "3772820a-684c-4422-8ec0-d124127c4fe4", "state": "ready", "target": {"kind": "region", "rect": [60, 100, 400, 300]}, "window": null, "canvas": [400, 300], "error": {"code": "", "details": {}, "message": ""}, "pickerProcesses": ""}
+motion: motion=63.933 compared=7 samples=8 durationMs=6600 size=400x300
+static control: motion: motion=0.711 compared=7 samples=8 durationMs=6600 size=400x300
+recording.windows: [('gst-launch-1.0', '18000012', True)] activeExcluded False
+
+== tray menu
+
+== resident memory
+VmHWM:	   40484 kB
+VmRSS:	   35328 kB
+
+== quit -> Omarchy binds only
+{"error": {"code": "", "details": {}, "message": ""}, "ok": true, "requestId": "36530714-5946-4403-8771-603fd6360353", "result": {"quitting": true}, "schemaVersion": 1}
+{"socketGone": true}
+{"total": 251, "putgd": [], "omarchyIdentical": true, "missing": [], "extra": []}

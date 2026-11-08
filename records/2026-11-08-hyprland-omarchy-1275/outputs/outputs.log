@@ -1,0 +1,36 @@
+== start
+== 1920x1080 scale 1.25
+ok
+Virtual-1 1920 1080 0 0 scale 1.25 transform 0
+desktop completed  
+sizes (1920, 1080) (1920, 1080)
+pixels 2073600 differing(>8) 12936 fraction 0.00624 bbox (1439, 41, 1914, 180)
+region completed  
+sizes (600, 450) (600, 450)
+pixels 270000 differing(>8) 0 fraction 0.00000 bbox None
+== rotated (transform 1 = 90°), 1280x800 scale 1
+ok
+Virtual-1 1280 800 0 0 scale 1 transform 1
+desktop completed  
+capture (800, 1280) screendump (scanout) (1280, 800)
+vs screendump turned rot90:
+sizes (800, 1280) (800, 1280)
+pixels 1024000 differing(>8) 73100 fraction 0.07139 bbox (0, 0, 800, 1280)
+vs screendump turned rot270:
+sizes (800, 1280) (800, 1280)
+pixels 1024000 differing(>8) 0 fraction 0.00000 bbox None
+== back to normal; second output (headless)
+ok
+ok
+ok
+Virtual-1 1280 800 0 0 scale 1 transform 0
+PUTGD-2 1024 768 1280 0 scale 1 transform 0
+desktop failed display_changed Captured output does not match frozen output geometry
+composite (800, 1280)
+sizes (1280, 800) (1280, 800)
+pixels 1024000 differing(>8) 424662 fraction 0.41471 bbox (0, 0, 1280, 800)
+== display_changed mid-selection
+ok
+region failed display_changed Display layout changed during region selection
+Virtual-1 1280 800 0 0 scale 1 transform 0
+== restore
