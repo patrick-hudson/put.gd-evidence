@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 117, in cell
+    detail=fn();result[key]=dict(status='pass',route=route,proof=detail or {})
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 170, in record
+    st=c.call('recording.inspect',{'id':rid});submitted=c.call('recording.upload',{'id':rid,'revision':st['revision']});d,published=complete(c,rid,'recording-upload');object_check(c,d,published);assert hashlib.sha256(data).digest()==hashlib.sha256(published).digest()
+                                                                                                       ~~^^^^^^^^^^^^
+KeyError: 'revision'

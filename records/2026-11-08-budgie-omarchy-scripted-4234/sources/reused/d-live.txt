@@ -1,0 +1,100 @@
+/home/patrick/work/d1275/acc.py
+#!/usr/bin/env python3
+"""In-guest live destination driver (no secrets: the credential is a keychain reference).
+live.py setup REFERENCE BUCKET REGION PREFIX | live.py records [N] | live.py open HISTORY_ID
+live.py delete HISTORY_ID... | live.py teardown"""
+import json, os, subprocess, sys, time
+acc = os.path.expanduser('~/d/probe/acc.py')
+def cli(m, p=None, t=60):
+    r = subprocess.run([acc, 'cli', m, json.dumps(p if p is not None else {}), str(t)], capture_output=True, text=True)
+    return json.loads(r.stdout)
+def rev(): return cli('settings.get')['result']['metadata']['observedRevision']
+PROFILE = 'd1275-live'
+a = sys.argv[1:]
+if a[0] == 'setup':
+    reference, bucket, region, prefix = a[1:5]
+    settings = {'bucket': bucket, 'region': region, 'endpoint': f'https://s3.{region}.amazonaws.com', 'objectPrefix': prefix,
+                'storageClass': 'STANDARD', 'aclMode': 'public-read', 'publicUrlBase': 'https://put.gd', 'addressing': 'auto',
+                'connectTimeoutMs': 5000, 'requestTimeoutMs': 60000, 'lowSpeedBytesPerSecond': 1, 'lowSpeedTimeSeconds': 30}
+    profile = {'id': PROFILE, 'label': 'Hyprland acceptance (isolated prefix)', 'provider': 's3', 'settings': settings,
+               'credentials': {'mode': 'keychain', 'reference': reference}}
+    print('profile', cli('settings.patch', {'patch': {'profiles': [profile]}, 'expectedRevision': rev()}).get('ok'))
+    job = cli('setup.unlockCredentials', {'profileId': PROFILE, 'expectedRevision': rev()})
+    sid = (job.get('result') or {}).get('setupId'); print('unlock job', job.get('ok'), (job.get('error') or {}).get('code'))
+    for _ in range(90):
+        st = cli('setup.inspect', {'id': sid})['result']
+        if st['state'] != 'running': break
+        time.sleep(1)
+    print('unlock', st['state'], (st.get('error') or {}).get('code'))
+    patch = {'actions': {n: {'destination': 'upload', 'profileId': PROFILE, 'publicationMode': 'share'} for n in ('region', 'window', 'desktop', 'clipboard')},
+             'archive': {'keepUploads': True}}
+    print('routes', cli('settings.patch', {'patch': patch, 'expectedRevision': rev()}).get('ok'))
+elif a[0] == 'records':
+    n = int(a[1]) if len(a) > 1 else 3
+    for r in cli('history.list', {'limit': n, 'offset': 0})['result'].get('records', [])[:n]:
+        d = cli('history.detail', {'id': r['id']})['result']
+        rec = d.get('record', d)
+        print(json.dumps({'id': r['id'], 'name': r.get('name'), 'remote': r.get('remoteStatus'), 'link': rec.get('link') or rec.get('directUrl') or (rec.get('receipt') or {}).get('directUrl'),
+                          'objectKey': (rec.get('objectReference') or {}).get('key'), 'linkAvailable': r.get('linkAvailable')}))
+elif a[0] == 'open':
+    print(json.dumps(cli('history.openLink', {'id': a[1]})))
+elif a[0] == 'delete':
+    ids = a[1:]
+    prep = cli('delete.prepare', {'ids': ids}); res = prep.get('result') or {}
+    print('prepare', prep.get('ok'), (prep.get('error') or {}).get('code'), json.dumps(res)[:400])
+    conf = cli('delete.confirm', {'ids': ids, 'acknowledgement': res.get('acknowledgement')}); cr = conf.get('result') or {}
+    print('confirm', conf.get('ok'), (conf.get('error') or {}).get('code'))
+    did = cr.get('id') or cr.get('operationId') or cr.get('deletionId')
+    for _ in range(60):
+        st = (cli('delete.inspect', {'id': did}).get('result') or {}) if did else {}
+        if st.get('state') not in ('running', 'pending', 'queued', None) : break
+        time.sleep(1)
+    print('deletion', json.dumps(st)[:500])
+elif a[0] == 'route':
+    action, where = a[1], a[2]
+    route = {'destination': 'upload', 'profileId': PROFILE, 'publicationMode': 'share'} if where == 'upload' else {'destination': 'local', 'profileId': None, 'publicationMode': 'default'}
+    print('route', action, where, cli('settings.patch', {'patch': {'actions': {action: route}}, 'expectedRevision': rev()}).get('ok'))
+elif a[0] == 'teardown':
+    patch = {'actions': {n: {'destination': 'local', 'profileId': None, 'publicationMode': 'default'} for n in ('region', 'window', 'desktop', 'clipboard')}, 'profiles': []}
+    print('teardown', json.dumps(cli('settings.patch', {'patch': patch, 'expectedRevision': rev()}))[:300])
+#!/usr/bin/env python3
+"""d69 only. prov.py provision RUN OUT | prov.py cleanup RUN OUT
+Lends S3 key set 2 (read in memory from ~/Documents/creds.txt through the bridge's owned/private reader) to the
+guest's disposable keychain with tools/lab/provision_live_credentials.py, and removes it again. Prints only
+non-secret fields; never prints, logs or stores a key."""
+import json, os, re, sys, uuid
+from pathlib import Path
+LABD = Path.home() / 'work/d1275/labd'
+sys.path.insert(0, str(LABD))
+from tools.lab import provision_live_credentials as bridge, proton_lab
+action, run, out = sys.argv[1], str(Path(sys.argv[2]).resolve()), Path(sys.argv[3])
+out.mkdir(mode=0o700, exist_ok=True)
+live = out / 'live.json'
+if action == 'provision':
+    from tools.lab.surface_driver.fixtures.live_outcomes import key_set_two
+    selected = key_set_two(bridge.read_private_credentials(Path.home() / 'Documents/creds.txt'))
+    keys, settings = selected['credentials'], selected['settings']
+    region = settings.get('region', '')
+    if settings.get('bucket') != 'put.gd' or settings.get('endpoint') or not re.fullmatch(r'[a-z]{2}-[a-z]+-[1-9][0-9]?', region):
+        raise SystemExit('refused: not the authorized bucket/region')
+    guest = proton_lab.Guest(run)
+    broker = guest.place_brokers(Path.home() / 'putgd-lab/proton/guest-bridge')['qt']
+    keyring = guest.prepare_keyring()
+    reference = 'putgd-lab-' + str(uuid.uuid4())
+    receipt = out / 's3-bridge.json'
+    state = bridge._receipt_value('s3', 'guest', run, reference, 'one_time', 'import_pending', True)
+    bridge._create_receipt(receipt, state)
+    bridge.guest_call(run, broker, 's3', dict(op='import', reference=reference, credentials=keys))
+    bridge._update_receipt(receipt, state, state='import_confirmed')
+    del keys, selected
+    prefix = 'acceptance/d1275-hyprland/' + uuid.uuid4().hex + '/'
+    value = dict(reference=reference, bucket=settings['bucket'], region=region, broker=broker, prefix=prefix,
+                 receipt=str(receipt), keyring=bool(keyring.get('default')))
+    live.write_text(json.dumps(value, indent=1) + '\n')
+    print(json.dumps(value))
+elif action == 'cleanup':
+    value = json.loads(live.read_text())
+    print(bridge.cleanup(dict(op='cleanup', provider='s3', run=run, guestBroker=value['broker'],
+                              reference=value['reference'], receipt=value['receipt'])) is None and 'cleaned')
+    guest = proton_lab.Guest(run); guest.directory = str(Path(value['broker']).parent); guest.remove_brokers()
+    print(json.loads(Path(value['receipt']).read_text()).get('state'))

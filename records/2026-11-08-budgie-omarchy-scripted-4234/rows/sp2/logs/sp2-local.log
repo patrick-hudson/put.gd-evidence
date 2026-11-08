@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 210, in <module>
+    if dest=='local':local_pass(c,result)
+                     ~~~~~~~~~~^^^^^^^^^^
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 120, in local_pass
+    service=c.fixture('loopback-s3');scope=c.scope
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 57, in fixture
+    if name not in self.values:self.values[name]=FACTORIES[name](self.scope,**kw)
+                                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/np1275/tools/lab/surface_driver/fixtures/destinations.py", line 83, in loopback
+    keyring=scope.ctx.fixture('fake-keyring')
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 57, in fixture
+    if name not in self.values:self.values[name]=FACTORIES[name](self.scope,**kw)
+                                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/np1275/tools/lab/surface_driver/fixtures/destinations.py", line 35, in fake_keyring
+    bus_name=isolated_service(scope).get('bus_name',bus_name)
+             ~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/patrick/work/np1275/tools/lab/surface_driver/fixtures/keyring.py", line 32, in isolated_service
+    raise RecipeBlocked('isolated Secret Service refuses an already owned bus name; existing wallets are preserved',issue=919)
+tools.lab.surface_driver.api.RecipeBlocked: isolated Secret Service refuses an already owned bus name; existing wallets are preserved

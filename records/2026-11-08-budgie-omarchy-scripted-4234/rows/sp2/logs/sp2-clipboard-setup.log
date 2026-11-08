@@ -1,0 +1,16 @@
+Keep Wayland clipboard even after programs close
+
+Usage: wl-clip-persist [OPTIONS] --clipboard <TYPE>
+
+Options:
+  -c, --clipboard <TYPE>                The clipboard type to operate on [possible values: regular, primary, both]
+  -w, --write-timeout <MILLISECONDS>    Timeout for trying to send the current clipboard to other programs [default: 3000]
+  -e, --ignore-event-on-error           Only handle selection events where no error occurred
+  -l, --selection-size-limit <BYTES>    Only handle selection events whose total data size does not exceed the size limit
+  -f, --all-mime-type-regex <REGEX>     Only handle selection events where all offered MIME types have a match for the regex
+      --reconnect-tries <NUMBER|INF>    Limit the number of tries to reconnect to the Wayland server after a Wayland error [default: 0]
+      --reconnect-delay <MILLISECONDS>  The delay between reconnect tries to the Wayland server [default: 100]
+      --disable-timestamps              Do not show timestamps in the log messages
+  -h, --help                            Print help
+  -V, --version                         Print version
+

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 120, in cell
+    detail=fn();result[key]=dict(status='pass',route=route,proof=detail or {})
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 268, in <lambda>
+    else:cell(c,result,'s3_region_upload' if dest=='s3' else 'proton_region_upload','real QEMU region hotkey/Wayland drag; native bridge; real default Firefox; production delete/revoke',lambda:live_pass(c,result))
+                                                                                                                                                                                                 ~~~~~~~~~^^^^^^^^^^
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 255, in live_pass
+    opened=open_and_verify(c,lambda:c.call('history.openLink',{'id':d['id']}),{'kind':c.destination,'name':d['name'],'preview':True});assert opened['matched']
+  File "/home/patrick/work/np1275/tools/lab/surface_driver/browser.py", line 273, in open_and_verify
+    result = ctx.wait(observe, 'default Firefox loaded the expected page content',
+                      timeout=max(timeouts['page'], 120) if expect['kind'] == 'proton' else timeouts['page'])
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 58, in wait
+    raise AssertionError('timeout '+label+' '+str(last or ''))
+AssertionError: timeout default Firefox loaded the expected page content 

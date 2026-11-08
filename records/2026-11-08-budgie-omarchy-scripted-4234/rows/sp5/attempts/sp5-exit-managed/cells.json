@@ -1,0 +1,15 @@
+{
+  "survives_exit": {
+    "status": "pass",
+    "route": "production ui.quit; independent /proc + socket + wl-paste; restart",
+    "proof": {
+      "persistenceSetup": true,
+      "residentPid": 16542,
+      "afterQuit": "process absent; socket absent; clipboard exact after 2s and restart"
+    }
+  },
+  "file_manager_upload": {
+    "status": "not_run",
+    "route": "real file-manager right-click pending"
+  }
+}

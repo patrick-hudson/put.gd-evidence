@@ -1,0 +1,86 @@
+{
+  "region_upload": {
+    "status": "pass",
+    "route": "QEMU Ctrl+Shift+1 + real Wayland pointer drag",
+    "proof": {
+      "pixels": "400x250 exact QEMU framebuffer crop"
+    }
+  },
+  "window_desktop": {
+    "status": "pass",
+    "route": "QEMU desktop/window hotkeys; independent framebuffer",
+    "proof": {
+      "desktop": "exact pixels",
+      "window": "documented unavailable",
+      "reason": {
+        "available": false,
+        "code": "window_unavailable",
+        "content": "client-only",
+        "error": "Window capture needs ext-foreign-toplevel-image-capture-source-manager-v1, which this compositor does not offer (labwc 0.20 or later and Mir 2.29 or later have it)",
+        "occlusion": "ignored",
+        "protocol": "ext-foreign-toplevel-image-capture-source-v1"
+      }
+    }
+  },
+  "auto_copy": {
+    "status": "pass",
+    "route": "QEMU region hotkey; independent wl-paste",
+    "proof": {
+      "clipboard": "exact bytes without Copy action"
+    }
+  },
+  "recording_upload": {
+    "status": "pass",
+    "route": "production recording session prepare/start/stop/saveCopy/upload; D motion/static oracle",
+    "proof": {
+      "staticMotion": 0.016,
+      "movingMotion": 55.102,
+      "uploadedVideo": "exact exported hash"
+    }
+  },
+  "edit_upload": {
+    "status": "pass",
+    "route": "production editor.open/apply; real QEMU Ctrl+Enter (submit fallback recorded)",
+    "proof": {
+      "redaction": "solid black interior; annotated pixels differ; correct dimensions"
+    }
+  },
+  "upload_clipboard": {
+    "status": "pass",
+    "route": "native wl-copy sources; production action.invoke clipboard",
+    "proof": {
+      "verified": [
+        "image",
+        "text",
+        "file"
+      ]
+    }
+  },
+  "copy_image": {
+    "status": "pass",
+    "route": "production history.copyImage; independent wl-paste PNG",
+    "proof": {}
+  },
+  "link_browser": {
+    "status": "pass",
+    "route": "production history.openLink dispatch to real temporary default Firefox",
+    "proof": {
+      "realDefaultFirefox": true,
+      "contentMatched": true
+    }
+  },
+  "history_delete": {
+    "status": "pass",
+    "route": "production delete.prepare/confirm for exact owned History ID",
+    "proof": {}
+  },
+  "survives_exit": {
+    "status": "fail",
+    "route": "production ui.quit; independent /proc + socket + wl-paste; restart",
+    "cause": "driver error: AssertionError"
+  },
+  "file_manager_upload": {
+    "status": "not_run",
+    "route": "real file-manager right-click pending"
+  }
+}

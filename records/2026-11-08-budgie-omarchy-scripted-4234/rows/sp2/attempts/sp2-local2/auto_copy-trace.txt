@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 116, in cell
+    detail=fn();result[key]=dict(status='pass',route=route,proof=detail or {})
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 144, in autocopy
+    c.wait(lambda:_clipboard_bytes(scope,'text/plain')==d['receipt']['directUrl'].encode(),'wl-paste exact auto-copied URL');return {'clipboard':'exact bytes without Copy action'}
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 55, in wait
+    raise AssertionError('timeout '+label+' '+str(last or ''))
+AssertionError: timeout wl-paste exact auto-copied URL 

@@ -1,0 +1,117 @@
+{
+  "kind": "scripted-outcome-pass",
+  "tag": "v26.1108.4234-nightly",
+  "source": "2b5e1b2d3c11757f805331e4104eb06b2c79ad5c",
+  "cells": {
+    "region_upload": {
+      "status": "pass",
+      "route": "QEMU Ctrl+Shift+1 + real Wayland pointer drag",
+      "proof": {
+        "pixels": "400x250 exact QEMU framebuffer crop"
+      }
+    },
+    "window_desktop": {
+      "status": "pass",
+      "route": "QEMU desktop/window hotkeys; independent framebuffer",
+      "proof": {
+        "desktop": "exact pixels",
+        "window": "exact fullscreen fixture pixels"
+      }
+    },
+    "recording_upload": {
+      "status": "pass",
+      "route": "production recording session prepare/start/stop/saveCopy/upload; D motion/static oracle",
+      "proof": {
+        "staticMotion": 0.016,
+        "movingMotion": 53.115,
+        "uploadedVideo": "exact exported hash"
+      }
+    },
+    "edit_upload": {
+      "status": "pass",
+      "route": "production editor.open/apply; real QEMU Ctrl+Enter (submit fallback recorded)",
+      "proof": {
+        "redaction": "solid black interior; annotated pixels differ; correct dimensions"
+      }
+    },
+    "link_browser": {
+      "status": "pass",
+      "route": "production history.openLink dispatch to real temporary default Firefox",
+      "proof": {
+        "realDefaultFirefox": true,
+        "contentMatched": true
+      }
+    },
+    "history_delete": {
+      "status": "pass",
+      "route": "production delete.prepare/confirm for exact owned History ID",
+      "proof": {
+        "remote": "HTTP404 after exact prepared History deletion"
+      }
+    },
+    "auto_copy": {
+      "status": "pass",
+      "route": "QEMU region hotkey; independent wl-paste",
+      "proof": {
+        "clipboard": "exact bytes without Copy action"
+      }
+    },
+    "upload_clipboard": {
+      "status": "pass",
+      "route": "native wl-copy sources; production action.invoke clipboard",
+      "proof": {
+        "verified": [
+          "image",
+          "text",
+          "file"
+        ]
+      }
+    },
+    "copy_image": {
+      "status": "pass",
+      "route": "production history.copyImage; independent wl-paste PNG",
+      "proof": {
+        "clipboard": "decoded PNG exact RGBA pixels"
+      }
+    },
+    "survives_exit": {
+      "status": "pass",
+      "route": "production ui.quit; independent /proc + socket + wl-paste; restart",
+      "proof": {
+        "persistenceSetup": true,
+        "residentPid": 60690,
+        "afterQuit": "process absent; socket absent; clipboard exact after 2s and restart"
+      }
+    },
+    "file_manager_upload": {
+      "status": "pass",
+      "route": "real file-manager right click, menu selection via Wayland pointer",
+      "proof": {
+        "manager": "nautilus",
+        "bytes": 43,
+        "sha256": "572829814a8f22a6a9873b998c3a931346dd670e7b01c5f0ebe6979995056194",
+        "realRightClick": true
+      }
+    },
+    "s3_region_upload": {
+      "status": "pass",
+      "route": "real QEMU region hotkey/Wayland drag; native bridge; real default Firefox; production delete/revoke",
+      "proof": {
+        "pixels": "exact region",
+        "historyId": "7888e886-00a4-49fb-9722-4c75c0c0ae42",
+        "recipient": "original SHA256 and visible real Firefox",
+        "cleanup": "S3 exact object removed"
+      }
+    },
+    "proton_region_upload": {
+      "status": "pass",
+      "route": "real QEMU region hotkey/Wayland drag; native bridge; real default Firefox; production delete/revoke",
+      "proof": {
+        "pixels": "exact region",
+        "historyId": "0378bd51-3f7e-4201-831f-f05c352278d7",
+        "recipient": "original SHA256 and visible real Firefox",
+        "cleanup": "share revoked; synthetic private file retained"
+      }
+    }
+  }
+}

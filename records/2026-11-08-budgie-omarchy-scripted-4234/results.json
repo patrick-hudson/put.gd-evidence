@@ -1,0 +1,791 @@
+[
+  {
+    "run": "sp1",
+    "host": "f44",
+    "desktop": "fedora45-budgie",
+    "package": "AppImage",
+    "cells": {
+      "region_upload": {
+        "status": "pass",
+        "route": "QEMU Ctrl+Shift+1 + real Wayland pointer drag",
+        "proof": {
+          "pixels": "400x250 exact QEMU framebuffer crop"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp1-local/cells.json",
+        "publishedAttempt": "rows/sp1/attempts/sp1-local/cells.json"
+      },
+      "window_desktop": {
+        "status": "pass",
+        "route": "QEMU desktop/window hotkeys; independent framebuffer",
+        "proof": {
+          "desktop": "exact pixels",
+          "window": "exact fullscreen fixture pixels"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp1-local/cells.json",
+        "publishedAttempt": "rows/sp1/attempts/sp1-local/cells.json"
+      },
+      "recording_upload": {
+        "status": "pass",
+        "route": "production recording session prepare/start/stop/saveCopy/upload; D motion/static oracle",
+        "proof": {
+          "staticMotion": 0.021,
+          "movingMotion": 54.332,
+          "uploadedVideo": "exact exported hash"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp1-record-final/cells.json",
+        "publishedAttempt": "rows/sp1/attempts/sp1-record-final/cells.json"
+      },
+      "edit_upload": {
+        "status": "pass",
+        "route": "production editor.open/apply; real QEMU Ctrl+Enter; editor.submit fallback if still editing; fallback branch not separately logged",
+        "proof": {
+          "redaction": "solid black interior; annotated pixels differ; correct dimensions"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp1-local/cells.json",
+        "publishedAttempt": "rows/sp1/attempts/sp1-local/cells.json",
+        "sourceRoute": "production editor.open/apply; real QEMU Ctrl+Enter (submit fallback recorded)"
+      },
+      "link_browser": {
+        "status": "pass",
+        "route": "production history.openLink dispatch to real temporary default Firefox",
+        "proof": {
+          "realDefaultFirefox": true,
+          "contentMatched": true
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp1-local/cells.json",
+        "publishedAttempt": "rows/sp1/attempts/sp1-local/cells.json"
+      },
+      "history_delete": {
+        "status": "pass",
+        "route": "production delete.prepare/confirm for exact owned History ID",
+        "proof": {
+          "remote": "HTTP404 after exact prepared History deletion"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp1-local/cells.json",
+        "publishedAttempt": "rows/sp1/attempts/sp1-local/cells.json"
+      },
+      "auto_copy": {
+        "status": "pass",
+        "route": "QEMU region hotkey; independent wl-paste",
+        "proof": {
+          "clipboard": "exact bytes without Copy action"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp1-retry1/cells.json",
+        "publishedAttempt": "rows/sp1/attempts/sp1-retry1/cells.json"
+      },
+      "upload_clipboard": {
+        "status": "pass",
+        "route": "native wl-copy sources; production action.invoke clipboard",
+        "proof": {
+          "verified": [
+            "image",
+            "text",
+            "file"
+          ]
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp1-local/cells.json",
+        "publishedAttempt": "rows/sp1/attempts/sp1-local/cells.json"
+      },
+      "copy_image": {
+        "status": "pass",
+        "route": "production history.copyImage; independent wl-paste PNG",
+        "proof": {
+          "clipboard": "decoded PNG exact RGBA pixels"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp1-local/cells.json",
+        "publishedAttempt": "rows/sp1/attempts/sp1-local/cells.json"
+      },
+      "survives_exit": {
+        "status": "pass",
+        "route": "production ui.quit; independent /proc + socket + wl-paste; restart",
+        "proof": {
+          "persistenceSetup": true,
+          "residentPid": 94801,
+          "afterQuit": "process absent; socket absent; clipboard exact after 2s and restart"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp1-exit-managed/cells.json",
+        "publishedAttempt": "rows/sp1/attempts/sp1-exit-managed/cells.json"
+      },
+      "file_manager_upload": {
+        "status": "pass",
+        "route": "real file-manager right click, menu selection via Wayland pointer",
+        "proof": {
+          "manager": "dolphin",
+          "bytes": 43,
+          "sha256": "572829814a8f22a6a9873b998c3a931346dd670e7b01c5f0ebe6979995056194",
+          "realRightClick": true
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp1-fm/cells.json",
+        "publishedAttempt": "rows/sp1/attempts/sp1-fm/cells.json"
+      },
+      "s3_region_upload": {
+        "status": "pass",
+        "route": "real QEMU region hotkey/Wayland drag; native bridge; real default Firefox; production delete/revoke",
+        "proof": {
+          "pixels": "exact region",
+          "historyId": "cea77dc6-4e7e-41bf-a25e-4d265d80d255",
+          "recipient": "original SHA256 and visible real Firefox",
+          "cleanup": "S3 exact object removed"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp1-s3b/cells.json",
+        "publishedAttempt": "rows/sp1/attempts/sp1-s3b/cells.json"
+      },
+      "proton_region_upload": {
+        "status": "pass",
+        "route": "real QEMU region hotkey/Wayland drag; native bridge; real default Firefox; production delete/revoke",
+        "proof": {
+          "pixels": "exact region",
+          "historyId": "45207fc9-9b21-46bb-9d78-74749efc715c",
+          "recipient": "original SHA256 and visible real Firefox",
+          "cleanup": "share revoked; synthetic private file retained"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp1-proton3/cells.json",
+        "publishedAttempt": "rows/sp1/attempts/sp1-proton3/cells.json"
+      }
+    },
+    "goldenSha256": "a6749512438d507ef2b2c47fe675955627464d9a5a85341002f91cd54fb401ad",
+    "profile": "fedora45-budgie",
+    "packageSha256": "26c1817ac867d41884ffbc3f78e2027c392eb766a2654066a76b148f0276f30b",
+    "packageFilename": "putgd-26.1108.4234-nightly-x86_64.AppImage",
+    "total": 13,
+    "counts": {
+      "pass": 13,
+      "fail": 0,
+      "not_run": 0
+    },
+    "stockExit": "fail",
+    "preparedExit": "pass with owned distro clipboard manager"
+  },
+  {
+    "run": "sp3",
+    "host": "d69",
+    "desktop": "fedora44-budgie",
+    "package": "RPM",
+    "cells": {
+      "region_upload": {
+        "status": "pass",
+        "route": "QEMU Ctrl+Shift+1 + real Wayland pointer drag",
+        "proof": {
+          "pixels": "400x250 exact QEMU framebuffer crop"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp3-local/cells.json",
+        "publishedAttempt": "rows/sp3/attempts/sp3-local/cells.json"
+      },
+      "window_desktop": {
+        "status": "pass",
+        "route": "QEMU desktop/window hotkeys; independent framebuffer",
+        "proof": {
+          "desktop": "exact pixels",
+          "window": "documented unavailable",
+          "reason": {
+            "available": false,
+            "code": "window_unavailable",
+            "content": "client-only",
+            "error": "Window capture needs ext-foreign-toplevel-image-capture-source-manager-v1, which this compositor does not offer (labwc 0.20 or later and Mir 2.29 or later have it)",
+            "occlusion": "ignored",
+            "protocol": "ext-foreign-toplevel-image-capture-source-v1"
+          }
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp3-local/cells.json",
+        "publishedAttempt": "rows/sp3/attempts/sp3-local/cells.json"
+      },
+      "recording_upload": {
+        "status": "pass",
+        "route": "production recording session prepare/start/stop/saveCopy/upload; D motion/static oracle",
+        "proof": {
+          "staticMotion": 0.044,
+          "movingMotion": 56.685,
+          "uploadedVideo": "exact exported hash"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp3-local/cells.json",
+        "publishedAttempt": "rows/sp3/attempts/sp3-local/cells.json"
+      },
+      "edit_upload": {
+        "status": "pass",
+        "route": "production editor.open/apply; real QEMU Ctrl+Enter; editor.submit fallback if still editing; fallback branch not separately logged",
+        "proof": {
+          "redaction": "solid black interior; annotated pixels differ; correct dimensions"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp3-local/cells.json",
+        "publishedAttempt": "rows/sp3/attempts/sp3-local/cells.json",
+        "sourceRoute": "production editor.open/apply; real QEMU Ctrl+Enter (submit fallback recorded)"
+      },
+      "link_browser": {
+        "status": "pass",
+        "route": "production history.openLink dispatch to real temporary default Firefox",
+        "proof": {
+          "realDefaultFirefox": true,
+          "contentMatched": true
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp3-local/cells.json",
+        "publishedAttempt": "rows/sp3/attempts/sp3-local/cells.json"
+      },
+      "history_delete": {
+        "status": "pass",
+        "route": "production delete.prepare/confirm for exact owned History ID",
+        "proof": {},
+        "attempt": "/home/patrick/work/np1275/work/sp/sp3-local/cells.json",
+        "publishedAttempt": "rows/sp3/attempts/sp3-local/cells.json"
+      },
+      "auto_copy": {
+        "status": "pass",
+        "route": "QEMU region hotkey; independent wl-paste",
+        "proof": {
+          "clipboard": "exact bytes without Copy action"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp3-local/cells.json",
+        "publishedAttempt": "rows/sp3/attempts/sp3-local/cells.json"
+      },
+      "upload_clipboard": {
+        "status": "pass",
+        "route": "native wl-copy sources; production action.invoke clipboard",
+        "proof": {
+          "verified": [
+            "image",
+            "text",
+            "file"
+          ]
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp3-local/cells.json",
+        "publishedAttempt": "rows/sp3/attempts/sp3-local/cells.json"
+      },
+      "copy_image": {
+        "status": "pass",
+        "route": "production history.copyImage; independent wl-paste PNG",
+        "proof": {},
+        "attempt": "/home/patrick/work/np1275/work/sp/sp3-local/cells.json",
+        "publishedAttempt": "rows/sp3/attempts/sp3-local/cells.json"
+      },
+      "survives_exit": {
+        "status": "pass",
+        "route": "production ui.quit; independent /proc + socket + wl-paste; restart",
+        "proof": {
+          "persistenceSetup": true,
+          "residentPid": 36413,
+          "afterQuit": "process absent; socket absent; clipboard exact after 2s and restart"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp3-exit-managed/cells.json",
+        "publishedAttempt": "rows/sp3/attempts/sp3-exit-managed/cells.json"
+      },
+      "file_manager_upload": {
+        "status": "pass",
+        "route": "real file-manager right click, menu selection via Wayland pointer",
+        "proof": {
+          "manager": "dolphin",
+          "bytes": 43,
+          "sha256": "572829814a8f22a6a9873b998c3a931346dd670e7b01c5f0ebe6979995056194",
+          "realRightClick": true
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp3-fm/cells.json",
+        "publishedAttempt": "rows/sp3/attempts/sp3-fm/cells.json"
+      },
+      "s3_region_upload": {
+        "status": "pass",
+        "route": "real QEMU region hotkey/Wayland drag; native bridge; real default Firefox; production delete/revoke",
+        "proof": {
+          "pixels": "exact region",
+          "historyId": "553b4956-f031-4ed0-b214-2411f4c7c449",
+          "recipient": "original SHA256 and visible real Firefox",
+          "cleanup": "S3 exact object removed"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp3-s3/cells.json",
+        "publishedAttempt": "rows/sp3/attempts/sp3-s3/cells.json"
+      },
+      "proton_region_upload": {
+        "status": "pass",
+        "route": "real QEMU region hotkey/Wayland drag; native bridge; real default Firefox; production delete/revoke",
+        "proof": {
+          "pixels": "exact region",
+          "historyId": "8431a910-8d88-4b01-a4d0-d8b241559f7d",
+          "recipient": "original SHA256 and visible real Firefox",
+          "cleanup": "share revoked; synthetic private file retained"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp3-proton/cells.json",
+        "publishedAttempt": "rows/sp3/attempts/sp3-proton/cells.json"
+      }
+    },
+    "goldenSha256": "37f84c90fc165e6817ffc5dd969eaaf57a36c195dc04f0f3bcc269b5e1b83a80",
+    "profile": "fedora44-budgie",
+    "packageSha256": "d329dbc4c05e1ece1fdc0f6e3b16b8e19512023046a9c595ef09987b2a2fd119",
+    "packageFilename": "putgd-26.1108.4234-nightly-fedora44-x86_64.rpm",
+    "total": 13,
+    "counts": {
+      "pass": 13,
+      "fail": 0,
+      "not_run": 0
+    },
+    "stockExit": "fail",
+    "preparedExit": "pass with owned distro clipboard manager"
+  },
+  {
+    "run": "sp4",
+    "host": "f44",
+    "desktop": "ubuntu-budgie-2604",
+    "package": "DEB",
+    "cells": {
+      "region_upload": {
+        "status": "pass",
+        "route": "QEMU Ctrl+Shift+1 + real Wayland pointer drag",
+        "proof": {
+          "pixels": "400x250 exact QEMU framebuffer crop"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp4-local/cells.json",
+        "publishedAttempt": "rows/sp4/attempts/sp4-local/cells.json"
+      },
+      "window_desktop": {
+        "status": "pass",
+        "route": "QEMU desktop/window hotkeys; independent framebuffer",
+        "proof": {
+          "desktop": "exact pixels",
+          "window": "documented unavailable",
+          "reason": {
+            "available": false,
+            "code": "window_unavailable",
+            "content": "client-only",
+            "error": "Window capture needs ext-foreign-toplevel-image-capture-source-manager-v1, which this compositor does not offer (labwc 0.20 or later and Mir 2.29 or later have it)",
+            "occlusion": "ignored",
+            "protocol": "ext-foreign-toplevel-image-capture-source-v1"
+          }
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp4-local/cells.json",
+        "publishedAttempt": "rows/sp4/attempts/sp4-local/cells.json"
+      },
+      "recording_upload": {
+        "status": "pass",
+        "route": "production recording session prepare/start/stop/saveCopy/upload; D motion/static oracle",
+        "proof": {
+          "staticMotion": 0.016,
+          "movingMotion": 55.102,
+          "uploadedVideo": "exact exported hash"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp4-local/cells.json",
+        "publishedAttempt": "rows/sp4/attempts/sp4-local/cells.json"
+      },
+      "edit_upload": {
+        "status": "pass",
+        "route": "production editor.open/apply; real QEMU Ctrl+Enter; editor.submit fallback if still editing; fallback branch not separately logged",
+        "proof": {
+          "redaction": "solid black interior; annotated pixels differ; correct dimensions"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp4-local/cells.json",
+        "publishedAttempt": "rows/sp4/attempts/sp4-local/cells.json",
+        "sourceRoute": "production editor.open/apply; real QEMU Ctrl+Enter (submit fallback recorded)"
+      },
+      "link_browser": {
+        "status": "pass",
+        "route": "production history.openLink dispatch to real temporary default Firefox",
+        "proof": {
+          "realDefaultFirefox": true,
+          "contentMatched": true
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp4-local/cells.json",
+        "publishedAttempt": "rows/sp4/attempts/sp4-local/cells.json"
+      },
+      "history_delete": {
+        "status": "pass",
+        "route": "production delete.prepare/confirm for exact owned History ID",
+        "proof": {},
+        "attempt": "/home/patrick/work/np1275/work/sp/sp4-local/cells.json",
+        "publishedAttempt": "rows/sp4/attempts/sp4-local/cells.json"
+      },
+      "auto_copy": {
+        "status": "pass",
+        "route": "QEMU region hotkey; independent wl-paste",
+        "proof": {
+          "clipboard": "exact bytes without Copy action"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp4-local/cells.json",
+        "publishedAttempt": "rows/sp4/attempts/sp4-local/cells.json"
+      },
+      "upload_clipboard": {
+        "status": "pass",
+        "route": "native wl-copy sources; production action.invoke clipboard",
+        "proof": {
+          "verified": [
+            "image",
+            "text",
+            "file"
+          ]
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp4-local/cells.json",
+        "publishedAttempt": "rows/sp4/attempts/sp4-local/cells.json"
+      },
+      "copy_image": {
+        "status": "pass",
+        "route": "production history.copyImage; independent wl-paste PNG",
+        "proof": {},
+        "attempt": "/home/patrick/work/np1275/work/sp/sp4-local/cells.json",
+        "publishedAttempt": "rows/sp4/attempts/sp4-local/cells.json"
+      },
+      "survives_exit": {
+        "status": "pass",
+        "route": "production ui.quit; independent /proc + socket + wl-paste; restart",
+        "proof": {
+          "persistenceSetup": true,
+          "residentPid": 24914,
+          "afterQuit": "process absent; socket absent; clipboard exact after 2s and restart"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp4-exit-managed/cells.json",
+        "publishedAttempt": "rows/sp4/attempts/sp4-exit-managed/cells.json"
+      },
+      "file_manager_upload": {
+        "status": "pass",
+        "route": "real file-manager right click, menu selection via Wayland pointer",
+        "proof": {
+          "manager": "nemo",
+          "bytes": 43,
+          "sha256": "572829814a8f22a6a9873b998c3a931346dd670e7b01c5f0ebe6979995056194",
+          "realRightClick": true
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp4-fm/cells.json",
+        "publishedAttempt": "rows/sp4/attempts/sp4-fm/cells.json"
+      },
+      "s3_region_upload": {
+        "status": "pass",
+        "route": "real QEMU region hotkey/Wayland drag; native bridge; real default Firefox; production delete/revoke",
+        "proof": {
+          "pixels": "exact region",
+          "historyId": "5a5b31f3-7152-4872-aa15-631dfada19a7",
+          "recipient": "original SHA256 and visible real Firefox",
+          "cleanup": "S3 exact object removed"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp4-s3/cells.json",
+        "publishedAttempt": "rows/sp4/attempts/sp4-s3/cells.json"
+      },
+      "proton_region_upload": {
+        "status": "pass",
+        "route": "real QEMU region hotkey/Wayland drag; native bridge; real default Firefox; production delete/revoke",
+        "proof": {
+          "pixels": "exact region",
+          "historyId": "fccd3cae-bcab-4623-b0fb-f2da6b290589",
+          "recipient": "original SHA256 and visible real Firefox",
+          "cleanup": "share revoked; synthetic private file retained"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp4-proton/cells.json",
+        "publishedAttempt": "rows/sp4/attempts/sp4-proton/cells.json"
+      }
+    },
+    "goldenSha256": "7719f71aa6dac412c7c5b58502f2d27530fa8485c6f978ef2d6be3302cd4ba74",
+    "profile": "ubuntu-budgie-2604",
+    "packageSha256": "97ccd1ea8dea350bd7cc765023b46c8df050ac1c06bfc74394c877fe01cc1e30",
+    "packageFilename": "putgd-26.1108.4234-nightly-ubuntu26.04-x86_64.deb",
+    "total": 13,
+    "counts": {
+      "pass": 13,
+      "fail": 0,
+      "not_run": 0
+    },
+    "stockExit": "fail",
+    "preparedExit": "pass with owned distro clipboard manager"
+  },
+  {
+    "run": "sp2",
+    "host": "d69",
+    "desktop": "omarchy-hyprland-20261108",
+    "package": "Arch",
+    "cells": {
+      "region_upload": {
+        "status": "pass",
+        "route": "QEMU Ctrl+Shift+1 + real Wayland pointer drag",
+        "proof": {
+          "pixels": "400x250 exact QEMU framebuffer crop"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp2-local2/cells.json",
+        "publishedAttempt": "rows/sp2/attempts/sp2-local2/cells.json"
+      },
+      "window_desktop": {
+        "status": "pass",
+        "route": "QEMU desktop/window hotkeys; independent framebuffer",
+        "proof": {
+          "desktop": "exact pixels",
+          "window": "exact fullscreen fixture pixels"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp2-local2/cells.json",
+        "publishedAttempt": "rows/sp2/attempts/sp2-local2/cells.json"
+      },
+      "recording_upload": {
+        "status": "pass",
+        "route": "production recording session prepare/start/stop/saveCopy/upload; D motion/static oracle",
+        "proof": {
+          "staticMotion": 0.016,
+          "movingMotion": 53.115,
+          "uploadedVideo": "exact exported hash"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp2-record-final/cells.json",
+        "publishedAttempt": "rows/sp2/attempts/sp2-record-final/cells.json"
+      },
+      "edit_upload": {
+        "status": "pass",
+        "route": "production editor.open/apply; real QEMU Ctrl+Enter; editor.submit fallback if still editing; fallback branch not separately logged",
+        "proof": {
+          "redaction": "solid black interior; annotated pixels differ; correct dimensions"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp2-local2/cells.json",
+        "publishedAttempt": "rows/sp2/attempts/sp2-local2/cells.json",
+        "sourceRoute": "production editor.open/apply; real QEMU Ctrl+Enter (submit fallback recorded)"
+      },
+      "link_browser": {
+        "status": "pass",
+        "route": "production history.openLink dispatch to real temporary default Firefox",
+        "proof": {
+          "realDefaultFirefox": true,
+          "contentMatched": true
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp2-retry1/cells.json",
+        "publishedAttempt": "rows/sp2/attempts/sp2-retry1/cells.json"
+      },
+      "history_delete": {
+        "status": "pass",
+        "route": "production delete.prepare/confirm for exact owned History ID",
+        "proof": {
+          "remote": "HTTP404 after exact prepared History deletion"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp2-local2/cells.json",
+        "publishedAttempt": "rows/sp2/attempts/sp2-local2/cells.json"
+      },
+      "auto_copy": {
+        "status": "pass",
+        "route": "QEMU region hotkey; independent wl-paste",
+        "proof": {
+          "clipboard": "exact bytes without Copy action"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp2-retry1/cells.json",
+        "publishedAttempt": "rows/sp2/attempts/sp2-retry1/cells.json"
+      },
+      "upload_clipboard": {
+        "status": "pass",
+        "route": "native wl-copy sources; production action.invoke clipboard",
+        "proof": {
+          "verified": [
+            "image",
+            "text",
+            "file"
+          ]
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp2-local2/cells.json",
+        "publishedAttempt": "rows/sp2/attempts/sp2-local2/cells.json"
+      },
+      "copy_image": {
+        "status": "pass",
+        "route": "production history.copyImage; independent wl-paste PNG",
+        "proof": {
+          "clipboard": "decoded PNG exact RGBA pixels"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp2-local2/cells.json",
+        "publishedAttempt": "rows/sp2/attempts/sp2-local2/cells.json"
+      },
+      "survives_exit": {
+        "status": "pass",
+        "route": "production ui.quit; independent /proc + socket + wl-paste; restart",
+        "proof": {
+          "persistenceSetup": true,
+          "residentPid": 60690,
+          "afterQuit": "process absent; socket absent; clipboard exact after 2s and restart"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp2-exit-managed/cells.json",
+        "publishedAttempt": "rows/sp2/attempts/sp2-exit-managed/cells.json"
+      },
+      "file_manager_upload": {
+        "status": "pass",
+        "route": "real file-manager right click, menu selection via Wayland pointer",
+        "proof": {
+          "manager": "nautilus",
+          "bytes": 43,
+          "sha256": "572829814a8f22a6a9873b998c3a931346dd670e7b01c5f0ebe6979995056194",
+          "realRightClick": true
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp2-fm/cells.json",
+        "publishedAttempt": "rows/sp2/attempts/sp2-fm/cells.json"
+      },
+      "s3_region_upload": {
+        "status": "pass",
+        "route": "real QEMU region hotkey/Wayland drag; native bridge; real default Firefox; production delete/revoke",
+        "proof": {
+          "pixels": "exact region",
+          "historyId": "7888e886-00a4-49fb-9722-4c75c0c0ae42",
+          "recipient": "original SHA256 and visible real Firefox",
+          "cleanup": "S3 exact object removed"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp2-s3b/cells.json",
+        "publishedAttempt": "rows/sp2/attempts/sp2-s3b/cells.json"
+      },
+      "proton_region_upload": {
+        "status": "pass",
+        "route": "real QEMU region hotkey/Wayland drag; native bridge; real default Firefox; production delete/revoke",
+        "proof": {
+          "pixels": "exact region",
+          "historyId": "0378bd51-3f7e-4201-831f-f05c352278d7",
+          "recipient": "original SHA256 and visible real Firefox",
+          "cleanup": "share revoked; synthetic private file retained"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp2-proton4/cells.json",
+        "publishedAttempt": "rows/sp2/attempts/sp2-proton4/cells.json"
+      }
+    },
+    "goldenSha256": "bd74b7832c4a43f15a06f5a5b448e670a77d33ae75516b5bc5856773b69f3256",
+    "profile": "omarchy-hyprland",
+    "packageSha256": "e4232089dea0fdf72c2991ca51159b983f30e61f809bb81b5ecf86de7e504756",
+    "packageFilename": "putgd-26.1108.4234-nightly-archlinux-x86_64.pkg.tar.zst",
+    "total": 13,
+    "counts": {
+      "pass": 13,
+      "fail": 0,
+      "not_run": 0
+    },
+    "stockExit": "fail",
+    "preparedExit": "pass with owned distro clipboard manager"
+  },
+  {
+    "run": "sp5",
+    "host": "d69",
+    "desktop": "omarchy-hyprland-20261108",
+    "package": "AppImage",
+    "cells": {
+      "region_upload": {
+        "status": "pass",
+        "route": "QEMU Ctrl+Shift+1 + real Wayland pointer drag",
+        "proof": {
+          "pixels": "400x250 exact QEMU framebuffer crop"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp5-local/cells.json",
+        "publishedAttempt": "rows/sp5/attempts/sp5-local/cells.json"
+      },
+      "window_desktop": {
+        "status": "pass",
+        "route": "QEMU desktop/window hotkeys; independent framebuffer",
+        "proof": {
+          "desktop": "exact pixels",
+          "window": "exact fullscreen fixture pixels"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp5-local/cells.json",
+        "publishedAttempt": "rows/sp5/attempts/sp5-local/cells.json"
+      },
+      "recording_upload": {
+        "status": "pass",
+        "route": "production recording session prepare/start/stop/saveCopy/upload; D motion/static oracle",
+        "proof": {
+          "staticMotion": 0.024,
+          "movingMotion": 53.81,
+          "uploadedVideo": "exact exported hash"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp5-local/cells.json",
+        "publishedAttempt": "rows/sp5/attempts/sp5-local/cells.json"
+      },
+      "edit_upload": {
+        "status": "pass",
+        "route": "production editor.open/apply; real QEMU Ctrl+Enter; editor.submit fallback if still editing; fallback branch not separately logged",
+        "proof": {
+          "redaction": "solid black interior; annotated pixels differ; correct dimensions"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp5-local/cells.json",
+        "publishedAttempt": "rows/sp5/attempts/sp5-local/cells.json",
+        "sourceRoute": "production editor.open/apply; real QEMU Ctrl+Enter (submit fallback recorded)"
+      },
+      "link_browser": {
+        "status": "pass",
+        "route": "production history.openLink dispatch to real temporary default Firefox",
+        "proof": {
+          "realDefaultFirefox": true,
+          "contentMatched": true
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp5-local/cells.json",
+        "publishedAttempt": "rows/sp5/attempts/sp5-local/cells.json"
+      },
+      "history_delete": {
+        "status": "pass",
+        "route": "production delete.prepare/confirm for exact owned History ID",
+        "proof": {},
+        "attempt": "/home/patrick/work/np1275/work/sp/sp5-local/cells.json",
+        "publishedAttempt": "rows/sp5/attempts/sp5-local/cells.json"
+      },
+      "auto_copy": {
+        "status": "pass",
+        "route": "QEMU region hotkey; independent wl-paste",
+        "proof": {
+          "clipboard": "exact bytes without Copy action"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp5-local/cells.json",
+        "publishedAttempt": "rows/sp5/attempts/sp5-local/cells.json"
+      },
+      "upload_clipboard": {
+        "status": "pass",
+        "route": "native wl-copy sources; production action.invoke clipboard",
+        "proof": {
+          "verified": [
+            "image",
+            "text",
+            "file"
+          ]
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp5-local/cells.json",
+        "publishedAttempt": "rows/sp5/attempts/sp5-local/cells.json"
+      },
+      "copy_image": {
+        "status": "pass",
+        "route": "production history.copyImage; independent wl-paste PNG",
+        "proof": {},
+        "attempt": "/home/patrick/work/np1275/work/sp/sp5-local/cells.json",
+        "publishedAttempt": "rows/sp5/attempts/sp5-local/cells.json"
+      },
+      "survives_exit": {
+        "status": "pass",
+        "route": "production ui.quit; independent /proc + socket + wl-paste; restart",
+        "proof": {
+          "persistenceSetup": true,
+          "residentPid": 16542,
+          "afterQuit": "process absent; socket absent; clipboard exact after 2s and restart"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp5-exit-managed/cells.json",
+        "publishedAttempt": "rows/sp5/attempts/sp5-exit-managed/cells.json"
+      },
+      "file_manager_upload": {
+        "status": "pass",
+        "route": "real file-manager right click, menu selection via Wayland pointer",
+        "proof": {
+          "manager": "nautilus",
+          "bytes": 43,
+          "sha256": "572829814a8f22a6a9873b998c3a931346dd670e7b01c5f0ebe6979995056194",
+          "realRightClick": true
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp5-fm/cells.json",
+        "publishedAttempt": "rows/sp5/attempts/sp5-fm/cells.json"
+      },
+      "s3_region_upload": {
+        "status": "pass",
+        "route": "real QEMU region hotkey/Wayland drag; native bridge; real default Firefox; production delete/revoke",
+        "proof": {
+          "pixels": "exact region",
+          "historyId": "53dcf538-1431-4b85-8589-b3bb5aa9084e",
+          "recipient": "original SHA256 and visible real Firefox",
+          "cleanup": "S3 exact object removed"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp5-s3/cells.json",
+        "publishedAttempt": "rows/sp5/attempts/sp5-s3/cells.json"
+      },
+      "proton_region_upload": {
+        "status": "pass",
+        "route": "real QEMU region hotkey/Wayland drag; native bridge; real default Firefox; production delete/revoke",
+        "proof": {
+          "pixels": "exact region",
+          "historyId": "e7840224-eaa8-4dcc-8c47-4fed1cca3caf",
+          "recipient": "original SHA256 and visible real Firefox",
+          "cleanup": "share revoked; synthetic private file retained"
+        },
+        "attempt": "/home/patrick/work/np1275/work/sp/sp5-proton/cells.json",
+        "publishedAttempt": "rows/sp5/attempts/sp5-proton/cells.json"
+      }
+    },
+    "goldenSha256": "bd74b7832c4a43f15a06f5a5b448e670a77d33ae75516b5bc5856773b69f3256",
+    "profile": "omarchy-hyprland",
+    "packageSha256": "26c1817ac867d41884ffbc3f78e2027c392eb766a2654066a76b148f0276f30b",
+    "packageFilename": "putgd-26.1108.4234-nightly-x86_64.AppImage",
+    "total": 13,
+    "counts": {
+      "pass": 13,
+      "fail": 0,
+      "not_run": 0
+    },
+    "stockExit": "fail",
+    "preparedExit": "pass with owned distro clipboard manager"
+  }
+]

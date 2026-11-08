@@ -1,0 +1,76 @@
+{
+  "region_upload": {
+    "status": "pass",
+    "route": "QEMU Ctrl+Shift+1 + real Wayland pointer drag",
+    "proof": {
+      "pixels": "400x250 exact QEMU framebuffer crop"
+    }
+  },
+  "window_desktop": {
+    "status": "pass",
+    "route": "QEMU desktop/window hotkeys; independent framebuffer",
+    "proof": {
+      "desktop": "exact pixels",
+      "window": "exact fullscreen fixture pixels"
+    }
+  },
+  "auto_copy": {
+    "status": "fail",
+    "route": "QEMU region hotkey; independent wl-paste",
+    "cause": "driver error: AssertionError"
+  },
+  "recording_upload": {
+    "status": "fail",
+    "route": "production recording session prepare/start/stop/saveCopy/upload; D motion/static oracle",
+    "cause": "driver error: JSONDecodeError"
+  },
+  "edit_upload": {
+    "status": "pass",
+    "route": "production editor.open/apply; real QEMU Ctrl+Enter (submit fallback recorded)",
+    "proof": {
+      "redaction": "solid black interior; annotated pixels differ; correct dimensions"
+    }
+  },
+  "upload_clipboard": {
+    "status": "pass",
+    "route": "native wl-copy sources; production action.invoke clipboard",
+    "proof": {
+      "verified": [
+        "image",
+        "text",
+        "file"
+      ]
+    }
+  },
+  "copy_image": {
+    "status": "pass",
+    "route": "production history.copyImage; independent wl-paste PNG",
+    "proof": {
+      "clipboard": "decoded PNG exact RGBA pixels"
+    }
+  },
+  "link_browser": {
+    "status": "pass",
+    "route": "production history.openLink dispatch to real temporary default Firefox",
+    "proof": {
+      "realDefaultFirefox": true,
+      "contentMatched": true
+    }
+  },
+  "history_delete": {
+    "status": "pass",
+    "route": "production delete.prepare/confirm for exact owned History ID",
+    "proof": {
+      "remote": "HTTP404 after exact prepared History deletion"
+    }
+  },
+  "survives_exit": {
+    "status": "fail",
+    "route": "production ui.quit; independent /proc + socket + wl-paste; restart",
+    "cause": "driver error: AssertionError"
+  },
+  "file_manager_upload": {
+    "status": "not_run",
+    "route": "real file-manager right-click pending"
+  }
+}

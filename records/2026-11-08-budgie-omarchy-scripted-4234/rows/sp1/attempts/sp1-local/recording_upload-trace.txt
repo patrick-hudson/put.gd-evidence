@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 113, in cell
+    detail=fn();result[key]=dict(status='pass',route=route,proof=detail or {})
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 153, in record
+    measured=c.shell(shlex.quote(scene.record_helper)+' --motion '+shlex.quote(path)+' 8');assert measured['returncode']==0;v=json.loads(measured['stdout']);c.note('decoded motion '+json.dumps(v));scores.append(v.get('motion',v.get('score',v.get('meanDifference'))))
+                                                                                                                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib64/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.14/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)

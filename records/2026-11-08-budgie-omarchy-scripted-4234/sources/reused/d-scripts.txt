@@ -1,0 +1,103 @@
+#!/bin/bash
+# d69: one acceptance row on RUN for BIN (/usr/bin/putgd or the AppImage). Real QEMU input. Output: rows/LABEL/
+cd ~/work/d1275; R=$1; BIN=$2; L=$3; O=rows/$L; mkdir -p $O
+G="./gs.sh $R"; K="python3 lab/tools/lab/lab.py key --run lab/work/lab-runs/$R"
+recent='~/d/probe/acc.py cli operation.recent | python3 -c "import json,sys; o=json.load(sys.stdin)[\"result\"][\"operations\"][0]; print(o[\"action\"],o[\"state\"],o[\"error\"][\"code\"],o[\"error\"][\"message\"][:90])"'
+last='cat $(ls -t ~/Documents/put.gd/images/*.png | head -1)'
+step(){ echo; echo "== $*"; }
+{
+step "start $BIN"
+$G "~/d/probe/hc ~/d/probe/win.py keep none >/dev/null; ~/d/probe/acc.py start $BIN; sleep 4; ~/d/probe/acc.py cli diagnostics | python3 -c 'import json,sys; r=json.load(sys.stdin)[\"result\"]; print(json.dumps({k:r.get(k) for k in (\"version\",\"build\",\"resident\")})[:400])'"
+step "shortcuts (defaults + Omarchy conflicts)"
+$G "~/d/probe/setkeys.py region=Ctrl+Shift+1 window=Ctrl+Shift+2 desktop=Ctrl+Shift+3 record=Print edit=Meta+Shift+S clipboard= | python3 -c 'import sys; t=sys.stdin.read(); print(t)'; ~/d/probe/hc ~/d/probe/binds.py"
+step "desktop hotkey Ctrl+Shift+3"
+$G '~/d/probe/hc bash -c "(setsid foot -T row-foot >/dev/null 2>&1 </dev/null &)"'; sleep 3
+$K ctrl shift 3 >/dev/null; sleep 5; ./shot.sh $R $L-desktop-ref >/dev/null; cp shots/$L-desktop-ref.png $O/
+$G "$recent"; $G "$last" > $O/desktop.png; python3 cmp.py $O/desktop.png $O/$L-desktop-ref.png
+step "region hotkey Ctrl+Shift+1 + drag 300,200 -> 700,500"
+$K ctrl shift 1 >/dev/null; sleep 1.5; ./shot.sh $R $L-region-selecting >/dev/null; cp shots/$L-region-selecting.png $O/
+./drag.py $R 1280 800 300 200 700 500 >/dev/null; sleep 4; ./shot.sh $R $L-region-ref >/dev/null; cp shots/$L-region-ref.png $O/
+$G "$recent"; $G "$last" > $O/region.png; python3 cmp.py $O/region.png $O/$L-region-ref.png 300 200 400 300
+step "window hotkey Ctrl+Shift+2 on foot vs grim -T"
+./drag.py $R 1280 800 click 300 400; sleep 0.5; $K ctrl shift 2 >/dev/null; sleep 4
+$G "$recent"; $G "$last" > $O/window.png
+$G '~/d/probe/hc bash -c "grim -t png -T \$(~/d/probe/hipc.py j/activewindow | python3 -c \"import json,sys; print(json.load(sys.stdin)[\\\"stableId\\\"])\") /tmp/gw.png"; cat /tmp/gw.png' > $O/window-grim.png; python3 cmp.py $O/window.png $O/window-grim.png
+step "own window refused (Settings)"
+$G '~/d/probe/acc.py cli ui.show "{\"view\":\"settings\"}" >/dev/null'; sleep 3
+$G '~/d/probe/hc ~/d/probe/hipc.py j/activewindow | python3 -c "import json,sys; w=json.load(sys.stdin); print(\"active:\", w.get(\"class\"))"'
+$K ctrl shift 2 >/dev/null; sleep 3; $G "$recent"
+$G '~/d/probe/hc ~/d/probe/win.py close putgd-ui >/dev/null'
+step "Omarchy theme change (reload) keeps put.gd binds; hotkey afterwards"
+$G '~/d/probe/hc bash -c "timeout 60 omarchy-theme-set catppuccin >/dev/null 2>&1"; sleep 6; ~/d/probe/hc ~/d/probe/binds.py'
+$K ctrl shift 3 >/dev/null; sleep 5; $G "$recent"
+$G '~/d/probe/hc bash -c "timeout 60 omarchy-theme-set gruvbox >/dev/null 2>&1"'; sleep 4
+step "clipboard"
+$G '~/d/probe/hc ~/d/probe/win.py keep none >/dev/null'
+./clip.sh $R 2>&1 | grep -v input-sent
+step "recording (moving pattern, no picker)"
+$G '~/d/probe/hc ~/d/probe/win.py keep none >/dev/null; ~/d/probe/hc bash -c "(setsid gst-launch-1.0 -q videotestsrc pattern=smpte100 horizontal-speed=6 is-live=true ! video/x-raw,width=640,height=480,framerate=30/1 ! videoconvert ! waylandsink >/dev/null 2>&1 </dev/null &)"; sleep 3; ~/d/probe/hc ~/d/probe/win.py float gst-launch-1.0 640 480 20 60 >/dev/null; sleep 1'
+$G '~/d/probe/rec.py monitor 5 30 2>&1 | grep -E "^\{\"id|motion"'
+$G '~/d/probe/rec.py window 5 30 2>&1 | grep -E "^\{\"id|motion"'
+$G '~/d/probe/rec.py region 5 30 60,100,400,300 2>&1 | grep -E "^\{\"id|motion"'
+$G '~/d/probe/rec.py region 5 30 800,450,400,300 2>&1 | grep -E "motion"' | sed 's/^/static control: /'
+$G '~/d/probe/acc.py cli recording.windows | python3 -c "import json,sys; r=json.load(sys.stdin)[\"result\"]; print(\"recording.windows:\", [(w[\"appId\"],w[\"identity\"],w[\"active\"]) for w in r[\"windows\"]], \"activeExcluded\", r[\"activeExcluded\"])"'
+step "tray menu"
+./drag.py $R 1280 800 click 1150 13; sleep 1.2; ./drag.py $R 1280 800 click 1123 13 right; sleep 1.5; ./shot.sh $R $L-tray-menu >/dev/null; cp shots/$L-tray-menu.png $O/
+$K esc >/dev/null
+step "resident memory"
+$G 'p=$(cat ~/d/acc/resident.pid); grep -E "VmRSS|VmHWM" /proc/$p/status; for c in $(pgrep -P $p); do echo "child $(cat /proc/$c/comm) $(grep VmRSS /proc/$c/status)"; done'
+step "quit -> Omarchy binds only"
+$G '~/d/probe/acc.py quit; ~/d/probe/hc ~/d/probe/binds.py; pgrep -x gst-launch-1.0 | xargs -r kill'
+} 2>&1 | tee $O/row.log
+#!/usr/bin/env python3
+"""rec.py KIND SECONDS [fps] [identity|x,y,w,h]: record with put.gd through the CLI (no picker allowed), save a copy,
+score motion (putgd-record --motion) and count distinct frames (ffmpeg mpdecimate)."""
+import json, os, subprocess, sys, time, re
+acc = os.path.expanduser('~/d/probe/acc.py')
+def cli(m, p=None, t=60):
+    r = subprocess.run([acc, 'cli', m] + ([json.dumps(p)] if p is not None else []) + [str(t)], capture_output=True, text=True)
+    return json.loads(r.stdout)
+kind, secs = sys.argv[1], float(sys.argv[2]); fps = int(sys.argv[3]) if len(sys.argv) > 3 else 30
+target = {'kind': kind}
+if len(sys.argv) > 4:
+    if kind == 'region': target['rect'] = [int(v) for v in sys.argv[4].split(',')]
+    else: target['identity'] = sys.argv[4]
+r = cli('recording.prepare', {'target': target, 'format': 'mp4', 'fps': fps, 'adaptiveFps': False, **({'audio': {'system': True}} if os.environ.get('AUDIO') else {})})
+if not r.get('ok'): print(json.dumps({'prepare': r.get('error')})); sys.exit(1)
+rid = r['result']['recordingId']; t0 = time.time()
+while True:
+    s = cli('recording.inspect', {'id': rid})['result']
+    if s['state'] != 'preparing' or time.time() - t0 > 30: break
+    time.sleep(0.3)
+pickers = subprocess.run(['pgrep', '-a', '-f', 'share-picker'], capture_output=True, text=True).stdout.strip()
+print(json.dumps({'id': rid, 'state': s['state'], 'target': s.get('target'), 'window': s.get('window'), 'canvas': s.get('canvas'), 'error': s.get('error'), 'pickerProcesses': pickers}))
+if s['state'] != 'ready': sys.exit(1)
+cli('recording.start', {'id': rid}); time.sleep(secs)
+cli('recording.stop', {'id': rid})
+for _ in range(100):
+    s = cli('recording.inspect', {'id': rid})['result']
+    if s['state'] == 'reviewing': break
+    time.sleep(0.3)
+out = os.path.expanduser(f'~/d/rec-{kind}-{int(time.time())}.mp4')
+cli('recording.saveCopy', {'id': rid, 'path': out})
+for _ in range(200):
+    s = cli('recording.inspect', {'id': rid})['result']
+    if s['state'] == 'reviewing' and s.get('lastExport', {}).get('status') in ('saved', 'failed'): break
+    time.sleep(0.3)
+print(json.dumps({'export': s.get('lastExport'), 'durationUs': s.get('durationUs'), 'progress': {k: s.get('progress', {}).get(k) for k in ('framesEncoded', 'framesDropped', 'fps')}}))
+cli('recording.cancel', {'id': rid})
+motion = subprocess.run(['putgd-record', '--motion', out], capture_output=True, text=True)
+print('motion:', (motion.stdout + motion.stderr).strip()[-300:])
+probe = subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v', '-count_frames', '-show_entries', 'stream=width,height,nb_read_frames,r_frame_rate,duration', '-of', 'json', out], capture_output=True, text=True)
+print('ffprobe:', probe.stdout.replace('\n', ' '))
+dec = subprocess.run(['ffmpeg', '-nostdin', '-i', out, '-vf', 'mpdecimate=hi=64*4:lo=64:frac=0.1', '-f', 'null', '-'], capture_output=True, text=True)
+frames = re.findall(r'frame=\s*(\d+)', dec.stderr)
+print('distinct frames (mpdecimate):', frames[-1] if frames else '?', 'file:', out)
+#!/bin/sh
+# d69: gs RUN CMD... -> ssh into the lab guest with the run key
+r=$HOME/work/d1275/lab/work/lab-runs/$1; shift
+p=$(python3 -c "import json;print(json.load(open('$r/state.json'))['ssh_port'])")
+exec ssh -i $r/identity -p $p -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=$r/known_hosts -o ConnectTimeout=10 lab@127.0.0.1 "$@"
+# source in guest (bash): import the Hyprland session environment from quickshell
+pid=$(pgrep -u "$(id -u)" -x quickshell | head -1)
+while IFS= read -r -d '' kv; do case "$kv" in OMARCHY_*|XDG_*|WAYLAND_DISPLAY=*|DISPLAY=*|HYPRLAND_INSTANCE_SIGNATURE=*|QT_*|GDK_*|PATH=*|DESKTOP_SESSION=*|DBUS_SESSION_BUS_ADDRESS=*) export "$kv";; esac; done < /proc/$pid/environ

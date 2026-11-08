@@ -1,0 +1,23 @@
+{
+  "auto_copy": {
+    "status": "pass",
+    "route": "QEMU region hotkey; independent wl-paste",
+    "proof": {
+      "clipboard": "exact bytes without Copy action"
+    }
+  },
+  "recording_upload": {
+    "status": "fail",
+    "route": "production recording session prepare/start/stop/saveCopy/upload; D motion/static oracle",
+    "cause": "driver error: KeyError"
+  },
+  "survives_exit": {
+    "status": "fail",
+    "route": "production ui.quit; independent /proc + socket + wl-paste; restart",
+    "cause": "driver error: AssertionError"
+  },
+  "file_manager_upload": {
+    "status": "not_run",
+    "route": "real file-manager right-click pending"
+  }
+}

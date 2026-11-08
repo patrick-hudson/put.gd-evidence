@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 116, in cell
+    detail=fn();result[key]=dict(status='pass',route=route,proof=detail or {})
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 204, in survive
+    status=c.shell('test ! -e /proc/'+str(identity)+' && test ! -e '+shlex.quote(c.target.socket));assert status['returncode']==0,'resident survives Quit unexpectedly';assert _clipboard_bytes(scope,'text/plain')==wanted,'clipboard lost after Quit';scope._relaunch();time.sleep(2);assert _clipboard_bytes(scope,'text/plain')==wanted;return {'residentPid':identity,'afterQuit':'process absent; socket absent; clipboard exact after 2s and restart'}
+                                                                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: clipboard lost after Quit

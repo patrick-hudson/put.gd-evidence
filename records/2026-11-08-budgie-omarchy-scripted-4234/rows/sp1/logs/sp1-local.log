@@ -1,0 +1,20 @@
+region_upload pass 
+window_desktop pass 
+auto_copy fail driver error: AssertionError
+recording_upload fail driver error: JSONDecodeError
+/home/patrick/work/np1275/work/sp/pass.py:169: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  d,data=complete(c,oid,'edited-upload');object_check(c,d,data);im=Image.open(io.BytesIO(data)).convert('RGBA');assert im.size==(640,320);assert set(im.crop((355,25,585,135)).getdata())=={(0,0,0,255)};assert not pixels_equal(im,original);saved['edited']=d;return {'redaction':'solid black interior; annotated pixels differ; correct dimensions'}
+edit_upload pass 
+upload_clipboard pass 
+copy_image pass 
+link_browser pass 
+history_delete pass 
+survives_exit fail driver error: AssertionError
+Traceback (most recent call last):
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 213, in <module>
+    c.close();(c.out/'build.json').write_text(json.dumps(c.build,indent=2));(c.out/'cells.json').write_text(json.dumps(result,indent=2))
+    ~~~~~~~^^
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 71, in close
+    errors=self.scope.close();self.note('fixture cleanup '+json.dumps(errors));assert not errors,errors
+                                                                                      ^^^^^^^^^^
+AssertionError: ['owned history and cache: AssertionError', 'accepted settings: AssertionError', 'resident environment: AssertionError']

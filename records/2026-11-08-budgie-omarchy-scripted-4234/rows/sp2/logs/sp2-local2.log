@@ -1,0 +1,18 @@
+region_upload pass 
+window_desktop pass 
+auto_copy fail driver error: AssertionError
+recording_upload fail driver error: JSONDecodeError
+edit_upload pass 
+upload_clipboard pass 
+copy_image pass 
+link_browser fail driver error: RuntimeError
+history_delete pass 
+survives_exit fail driver error: AssertionError
+Traceback (most recent call last):
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 216, in <module>
+    c.close();(c.out/'build.json').write_text(json.dumps(c.build,indent=2));(c.out/'cells.json').write_text(json.dumps(result,indent=2))
+    ~~~~~~~^^
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 74, in close
+    errors=self.scope.close();self.note('fixture cleanup '+json.dumps(errors));assert not errors,errors
+                                                                                      ^^^^^^^^^^
+AssertionError: ['owned history and cache: AssertionError', 'accepted settings: AssertionError', 'resident environment: AssertionError']

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 117, in cell
+    detail=fn();result[key]=dict(status='pass',route=route,proof=detail or {})
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 222, in survive
+    status=c.shell('test ! -e /proc/'+str(identity)+' && test ! -e '+shlex.quote(c.target.socket));assert status['returncode']==0,'resident survives Quit unexpectedly';after=_clipboard_bytes(scope,'text/plain');c.note('resident PID absent after Quit; clipboard retained='+str(after==wanted));assert after==wanted,'clipboard lost after Quit: no desktop persistence owner'
+                                                                                                                                                                                                                                                                                                           ^^^^^^^^^^^^^
+AssertionError: clipboard lost after Quit: no desktop persistence owner

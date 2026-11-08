@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 116, in cell
+    detail=fn();result[key]=dict(status='pass',route=route,proof=detail or {})
+  File "/home/patrick/work/np1275/work/sp/pass.py", line 191, in browser
+    with default_browser(c):
+         ~~~~~~~~~~~~~~~^^^
+  File "/home/patrick/work/np1275/tools/lab/surface_driver/browser.py", line 133, in __enter__
+    self.state = _remote(ctx, 'prepare', options, timeout=self.timeouts['helper'] + self.timeouts['ready'])
+                 ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/np1275/tools/lab/surface_driver/browser.py", line 85, in _remote
+    raise RuntimeError('Target browser helper: ' + value['error'])
+RuntimeError: Target browser helper: Real or isolated MIME handler verification failed
