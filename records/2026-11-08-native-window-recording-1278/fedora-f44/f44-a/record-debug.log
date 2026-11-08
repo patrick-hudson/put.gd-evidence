@@ -1,0 +1,436 @@
+2026-11-07T20:46:45.196 command prepare
+2026-11-07T20:46:45.245 mutter screencast: session /org/gnome/Mutter/ScreenCast/Session/u3 window 2452719525
+2026-11-07T20:46:45.251 mutter screencast: PipeWire node 93
+2026-11-07T20:46:45.266 result prepare ok
+2026-11-07T20:46:46.371 command start
+2026-11-07T20:46:46.418 pipeline: putgdpipewiresrc name=src path=93 min-buffers=1 keepalive-time=1000 resend-last=true ! video/x-raw,max-framerate=0/1 ! queue name=cq leaky=downstream max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! video/x-raw,pixel-aspect-ratio=1/1 ! videocrop name=wcrop ! videoconvert n-threads=2 ! videoscale add-borders=true ! video/x-raw,width=640,height=516,pixel-aspect-ratio=1/1 ! videorate ! video/x-raw,format=I420,framerate=30/1 ! queue name=eq max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! openh264enc bitrate=1500000 gop-size=60 complexity=low multi-thread=2 name=venc ! h264parse ! queue name=vq max-size-buffers=0 max-size-bytes=0 max-size-time=2000000000 ! matroskamux name=mux ! filesink name=sink location="/home/patrick/work/b1278/runs/f44-a/data/putgd/recording/122369aa-2585-4106-b317-f670c56416c0/working.mkv"
+2026-11-07T20:46:47.045 started with openh264enc on GstSystemClock, max_framerate unthrottled
+2026-11-07T20:46:47.047 result start ok
+2026-11-07T20:47:02.244 command stop
+2026-11-07T20:47:02.300 window stream: crop changed 9 times, source reopened 0 times
+2026-11-07T20:47:02.300 timestamps: clock GstSystemClock, video lateness 0.1/22.3/56.0 ms (n=473), audio lateness none, frame age 2.2/5.5/19.5 ms (n=485), arrival-stamped frames 0, audio re-anchored 0 times
+2026-11-07T20:47:02.300 frames: 473 reached the video encoder, 0 leaked at the capture queue; source arrivals 485 (interval 10.2/32.6/59.9 ms (n=484)), 0 with a repeated compositor time, contents 485 new / 0 same dropped, cadence lock 11 early dropped / 0 resyncs / 0 changes slotted after a repeat
+2026-11-07T20:47:02.346 review: open
+2026-11-07T20:47:02.362 review: shown
+2026-11-07T20:47:02.362 result stop ok
+2026-11-07T20:47:02.516 review: frame at 0
+2026-11-07T20:47:02.533 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:02.533 seek ok: first key pts 0 target 0
+2026-11-07T20:47:02.537 review: frame 640x516
+2026-11-07T20:47:02.547 command export
+2026-11-07T20:47:02.562 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:02.563 export mp4 wantAudio=0 audioIndex=-1 streams=1
+2026-11-07T20:47:02.586 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:02.586 seek ok: first key pts 0 target 0
+2026-11-07T20:47:04.160 result export ok
+2026-11-07T20:47:04.166 command savedCopy
+2026-11-07T20:47:04.170 result savedCopy ok
+2026-11-07T20:47:04.239 command cancel
+2026-11-07T20:47:04.239 mutter screencast: session stopped
+2026-11-07T20:47:04.240 result cancel ok
+2026-11-07T20:47:04.488 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:04.496 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:04.499 seek ok: first key pts 0 target 10091
+2026-11-07T20:47:04.516 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:04.517 seek ok: first key pts 0 target 30272
+2026-11-07T20:47:04.545 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:04.546 seek ok: first key pts 30720 target 50453
+2026-11-07T20:47:04.569 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:04.569 seek ok: first key pts 61440 target 70635
+2026-11-07T20:47:04.583 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:04.583 seek ok: first key pts 61440 target 90816
+2026-11-07T20:47:04.617 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:04.617 seek ok: first key pts 92160 target 110997
+2026-11-07T20:47:04.635 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:04.636 seek ok: first key pts 122880 target 131179
+2026-11-07T20:47:04.647 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:04.647 seek ok: first key pts 122880 target 151360
+2026-11-07T20:47:04.675 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:04.675 seek ok: first key pts 153600 target 171541
+2026-11-07T20:47:04.693 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:04.693 seek ok: first key pts 184320 target 191723
+2026-11-07T20:47:04.704 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:04.704 seek ok: first key pts 184320 target 211904
+2026-11-07T20:47:04.729 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:04.729 seek ok: first key pts 215040 target 232085
+2026-11-07T20:47:04.985 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:04.988 seek ok: first key pts 0 target 20181
+2026-11-07T20:47:05.372 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:05.375 seek ok: first key pts 30720 target 60544
+2026-11-07T20:47:05.636 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:05.639 seek ok: first key pts 92160 target 100907
+2026-11-07T20:47:05.882 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:05.885 seek ok: first key pts 122880 target 141269
+2026-11-07T20:47:06.139 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:06.142 seek ok: first key pts 153600 target 181632
+2026-11-07T20:47:06.398 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:06.401 seek ok: first key pts 215040 target 221995
+2026-11-07T20:47:06.671 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:06.679 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:06.679 seek ok: first key pts 0 target 657
+2026-11-07T20:47:06.696 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:06.696 seek ok: first key pts 0 target 1971
+2026-11-07T20:47:06.730 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:06.730 seek ok: first key pts 2600 target 3285
+2026-11-07T20:47:06.745 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:06.746 seek unusable: first pts 4600 key 1 target 4599
+2026-11-07T20:47:06.750 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:06.751 seek restart from start (sought=0)
+2026-11-07T20:47:06.815 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:06.815 seek ok: first key pts 5600 target 5912
+2026-11-07T20:47:06.827 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:06.828 seek ok: first key pts 5600 target 7226
+2026-11-07T20:47:06.855 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:06.856 seek ok: first key pts 7600 target 8540
+2026-11-07T20:47:06.874 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:06.874 seek ok: first key pts 9600 target 9854
+2026-11-07T20:47:06.885 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:06.885 seek ok: first key pts 9600 target 11168
+2026-11-07T20:47:06.910 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:06.910 seek ok: first key pts 11600 target 12482
+2026-11-07T20:47:06.927 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:06.927 seek ok: first key pts 13600 target 13796
+2026-11-07T20:47:06.938 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:06.938 seek ok: first key pts 13600 target 15110
+2026-11-07T20:47:07.332 command prepare
+2026-11-07T20:47:07.380 mutter screencast: session /org/gnome/Mutter/ScreenCast/Session/u4 window 2452719526
+2026-11-07T20:47:07.385 mutter screencast: PipeWire node 93
+2026-11-07T20:47:07.402 result prepare ok
+2026-11-07T20:47:08.509 command start
+2026-11-07T20:47:08.551 pipeline: putgdpipewiresrc name=src path=93 min-buffers=1 keepalive-time=1000 resend-last=true ! video/x-raw,max-framerate=0/1 ! queue name=cq leaky=downstream max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! video/x-raw,pixel-aspect-ratio=1/1 ! videocrop name=wcrop ! videoconvert n-threads=2 ! videoscale add-borders=true ! video/x-raw,width=640,height=516,pixel-aspect-ratio=1/1 ! videorate ! video/x-raw,format=I420,framerate=30/1 ! queue name=eq max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! openh264enc bitrate=1500000 gop-size=60 complexity=low multi-thread=2 name=venc ! h264parse ! queue name=vq max-size-buffers=0 max-size-bytes=0 max-size-time=2000000000 ! matroskamux name=mux ! filesink name=sink location="/home/patrick/work/b1278/runs/f44-a/data/putgd/recording/16ebe6ec-3499-4440-9b12-0cfcfad303aa/working.mkv"
+2026-11-07T20:47:10.178 started with openh264enc on GstSystemClock, max_framerate unthrottled
+2026-11-07T20:47:10.179 result start ok
+2026-11-07T20:47:14.217 command stop
+2026-11-07T20:47:14.247 window stream: crop changed 1 times, source reopened 0 times
+2026-11-07T20:47:14.247 timestamps: clock GstSystemClock, video lateness 33.8/525.8/1036.0 ms (n=153), audio lateness none, frame age 9.7/11.1/11.8 ms (n=6), arrival-stamped frames 0, audio re-anchored 0 times
+2026-11-07T20:47:14.247 frames: 153 reached the video encoder, 0 leaked at the capture queue; source arrivals 6 (interval 1002.8/1007.1/1009.6 ms (n=5)), 0 with a repeated compositor time, contents 1 new / 0 same dropped, cadence lock 0 early dropped / 5 resyncs / 0 changes slotted after a repeat
+2026-11-07T20:47:14.250 review: open
+2026-11-07T20:47:14.267 review: shown
+2026-11-07T20:47:14.267 result stop ok
+2026-11-07T20:47:14.403 review: frame at 0
+2026-11-07T20:47:14.414 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:14.414 seek ok: first key pts 0 target 0
+2026-11-07T20:47:14.417 review: frame 640x516
+2026-11-07T20:47:14.426 command export
+2026-11-07T20:47:14.442 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:14.442 export mp4 wantAudio=0 audioIndex=-1 streams=1
+2026-11-07T20:47:14.460 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:14.460 seek ok: first key pts 0 target 0
+2026-11-07T20:47:14.933 result export ok
+2026-11-07T20:47:14.939 command savedCopy
+2026-11-07T20:47:14.942 result savedCopy ok
+2026-11-07T20:47:15.045 command cancel
+2026-11-07T20:47:15.046 mutter screencast: session stopped
+2026-11-07T20:47:15.046 result cancel ok
+2026-11-07T20:47:15.298 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:15.305 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:15.308 seek ok: first key pts 0 target 3264
+2026-11-07T20:47:15.319 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:15.319 seek ok: first key pts 0 target 9792
+2026-11-07T20:47:15.331 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:15.331 seek ok: first key pts 0 target 16320
+2026-11-07T20:47:15.345 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:15.346 seek ok: first key pts 0 target 22848
+2026-11-07T20:47:15.364 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:15.364 seek ok: first key pts 0 target 29376
+2026-11-07T20:47:15.385 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:15.386 seek ok: first key pts 30720 target 35904
+2026-11-07T20:47:15.394 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:15.394 seek ok: first key pts 30720 target 42432
+2026-11-07T20:47:15.405 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:15.406 seek ok: first key pts 30720 target 48960
+2026-11-07T20:47:15.421 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:15.421 seek ok: first key pts 30720 target 55488
+2026-11-07T20:47:15.440 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:15.440 seek ok: first key pts 61440 target 62016
+2026-11-07T20:47:15.446 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:15.446 seek ok: first key pts 61440 target 68544
+2026-11-07T20:47:15.455 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:15.455 seek ok: first key pts 61440 target 75072
+2026-11-07T20:47:15.690 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:15.692 seek ok: first key pts 0 target 6528
+2026-11-07T20:47:15.938 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:15.940 seek ok: first key pts 0 target 19584
+2026-11-07T20:47:16.188 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:16.190 seek ok: first key pts 30720 target 32640
+2026-11-07T20:47:16.428 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:16.430 seek ok: first key pts 30720 target 45696
+2026-11-07T20:47:16.670 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:16.672 seek ok: first key pts 30720 target 58752
+2026-11-07T20:47:16.929 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:16.932 seek ok: first key pts 61440 target 71808
+2026-11-07T20:47:17.182 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:17.191 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:17.193 seek ok: first key pts 0 target 213
+2026-11-07T20:47:17.209 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:17.209 seek ok: first key pts 0 target 638
+2026-11-07T20:47:17.224 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:17.224 seek ok: first key pts 0 target 1063
+2026-11-07T20:47:17.242 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:17.242 seek ok: first key pts 0 target 1488
+2026-11-07T20:47:17.263 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:17.263 seek ok: first key pts 0 target 1913
+2026-11-07T20:47:17.287 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:17.287 seek ok: first key pts 2000 target 2338
+2026-11-07T20:47:17.300 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:17.300 seek ok: first key pts 2000 target 2763
+2026-11-07T20:47:17.315 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:17.315 seek ok: first key pts 2000 target 3188
+2026-11-07T20:47:17.334 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:17.334 seek ok: first key pts 2000 target 3613
+2026-11-07T20:47:17.358 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:17.359 seek ok: first key pts 4000 target 4038
+2026-11-07T20:47:17.366 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:17.366 seek ok: first key pts 4000 target 4463
+2026-11-07T20:47:17.378 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:17.378 seek ok: first key pts 4000 target 4888
+2026-11-07T20:47:19.048 command prepare
+2026-11-07T20:47:19.096 mutter screencast: session /org/gnome/Mutter/ScreenCast/Session/u5 window 2452719532
+2026-11-07T20:47:19.103 mutter screencast: PipeWire node 93
+2026-11-07T20:47:19.120 result prepare ok
+2026-11-07T20:47:20.210 command start
+2026-11-07T20:47:20.252 pipeline: putgdpipewiresrc name=src path=93 min-buffers=1 keepalive-time=1000 resend-last=true ! video/x-raw,max-framerate=0/1 ! queue name=cq leaky=downstream max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! video/x-raw,pixel-aspect-ratio=1/1 ! videocrop name=wcrop ! videoconvert n-threads=2 ! videoscale add-borders=true ! video/x-raw,width=640,height=516,pixel-aspect-ratio=1/1 ! videorate ! video/x-raw,format=I420,framerate=30/1 ! queue name=eq max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! openh264enc bitrate=1500000 gop-size=60 complexity=low multi-thread=2 name=venc ! h264parse ! queue name=vq max-size-buffers=0 max-size-bytes=0 max-size-time=2000000000 ! matroskamux name=mux ! filesink name=sink location="/home/patrick/work/b1278/runs/f44-a/data/putgd/recording/e7990305-caaf-4e4d-9337-d5741b6ce5ee/working.mkv"
+2026-11-07T20:47:20.902 started with openh264enc on GstSystemClock, max_framerate unthrottled
+2026-11-07T20:47:20.903 result start ok
+2026-11-07T20:47:23.926 mutter screencast: session closed by Mutter
+2026-11-07T20:47:23.927 window: the compositor ended the stream (the window closed)
+2026-11-07T20:47:23.962 window stream: crop changed 1 times, source reopened 0 times
+2026-11-07T20:47:23.962 timestamps: clock GstSystemClock, video lateness 12.1/30.9/53.9 ms (n=108), audio lateness none, frame age 2.8/3.6/10.2 ms (n=108), arrival-stamped frames 0, audio re-anchored 0 times
+2026-11-07T20:47:23.963 frames: 108 reached the video encoder, 0 leaked at the capture queue; source arrivals 108 (interval 16.2/32.9/34.1 ms (n=107)), 0 with a repeated compositor time, contents 108 new / 0 same dropped, cadence lock 1 early dropped / 0 resyncs / 0 changes slotted after a repeat
+2026-11-07T20:47:23.963 review: open
+2026-11-07T20:47:23.979 review: shown
+2026-11-07T20:47:24.114 review: frame at 0
+2026-11-07T20:47:24.125 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:24.125 seek ok: first key pts 0 target 0
+2026-11-07T20:47:24.129 review: frame 640x516
+2026-11-07T20:47:24.137 command export
+2026-11-07T20:47:24.167 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:24.168 export mp4 wantAudio=0 audioIndex=-1 streams=1
+2026-11-07T20:47:24.189 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:24.190 seek ok: first key pts 0 target 0
+2026-11-07T20:47:24.561 result export ok
+2026-11-07T20:47:24.566 command savedCopy
+2026-11-07T20:47:24.569 result savedCopy ok
+2026-11-07T20:47:24.632 command cancel
+2026-11-07T20:47:24.632 result cancel ok
+2026-11-07T20:47:24.880 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:24.887 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:24.889 seek ok: first key pts 0 target 2304
+2026-11-07T20:47:24.901 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:24.901 seek ok: first key pts 0 target 6912
+2026-11-07T20:47:24.912 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:24.912 seek ok: first key pts 0 target 11520
+2026-11-07T20:47:24.928 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:24.928 seek ok: first key pts 0 target 16128
+2026-11-07T20:47:24.947 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:24.948 seek ok: first key pts 0 target 20736
+2026-11-07T20:47:24.968 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:24.968 seek ok: first key pts 0 target 25344
+2026-11-07T20:47:24.992 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:24.992 seek ok: first key pts 0 target 29952
+2026-11-07T20:47:25.021 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:25.021 seek ok: first key pts 30720 target 34560
+2026-11-07T20:47:25.029 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:25.029 seek ok: first key pts 30720 target 39168
+2026-11-07T20:47:25.041 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:25.042 seek ok: first key pts 30720 target 43776
+2026-11-07T20:47:25.058 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:25.058 seek ok: first key pts 30720 target 48384
+2026-11-07T20:47:25.076 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:25.076 seek ok: first key pts 30720 target 52992
+2026-11-07T20:47:25.307 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:25.309 seek ok: first key pts 0 target 4608
+2026-11-07T20:47:25.538 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:25.541 seek ok: first key pts 0 target 13824
+2026-11-07T20:47:25.791 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:25.794 seek ok: first key pts 0 target 23040
+2026-11-07T20:47:26.064 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:26.066 seek ok: first key pts 30720 target 32256
+2026-11-07T20:47:26.311 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:26.313 seek ok: first key pts 30720 target 41472
+2026-11-07T20:47:26.553 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:26.556 seek ok: first key pts 30720 target 50688
+2026-11-07T20:47:26.906 command prepare
+2026-11-07T20:47:26.954 mutter screencast: session /org/gnome/Mutter/ScreenCast/Session/u6 monitor 'HDMI-1'
+2026-11-07T20:47:26.967 mutter screencast: PipeWire node 96
+2026-11-07T20:47:26.982 result prepare ok
+2026-11-07T20:47:27.148 command overlay
+2026-11-07T20:47:27.149 result overlay ok
+2026-11-07T20:47:28.234 command start
+2026-11-07T20:47:28.397 pipeline: putgdpipewiresrc name=src path=96 min-buffers=1 keepalive-time=1000 resend-last=true ! video/x-raw,max-framerate=0/1 ! queue name=cq leaky=downstream max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! videoconvert n-threads=2 ! videorate ! video/x-raw,format=I420,framerate=30/1 ! queue name=eq max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! openh264enc bitrate=6220000 gop-size=60 complexity=low multi-thread=2 name=venc ! h264parse ! queue name=vq max-size-buffers=0 max-size-bytes=0 max-size-time=2000000000 ! matroskamux name=mux ! filesink name=sink location="/home/patrick/work/b1278/runs/f44-a/data/putgd/recording/a5b5938b-5b8b-4ada-b8d5-d95b0b165f8e/working.mkv"
+2026-11-07T20:47:29.062 started with openh264enc on GstSystemClock, max_framerate unthrottled
+2026-11-07T20:47:29.063 result start ok
+2026-11-07T20:47:32.096 command stop
+2026-11-07T20:47:32.244 timestamps: clock GstSystemClock, video lateness 32.0/447.5/990.9 ms (n=109), audio lateness none, frame age 9.2/13.9/21.6 ms (n=12), arrival-stamped frames 0, audio re-anchored 0 times
+2026-11-07T20:47:32.244 frames: 109 reached the video encoder, 0 leaked at the capture queue; source arrivals 16 (interval 22.7/244.5/972.7 ms (n=15)), 0 with a repeated compositor time, contents 3 new / 4 same dropped, cadence lock 0 early dropped / 8 resyncs / 0 changes slotted after a repeat
+2026-11-07T20:47:32.248 review: open
+2026-11-07T20:47:32.263 review: shown
+2026-11-07T20:47:32.263 result stop ok
+2026-11-07T20:47:32.397 review: frame at 0
+2026-11-07T20:47:32.456 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:32.456 seek ok: first key pts 0 target 0
+2026-11-07T20:47:32.500 review: frame 1280x720
+2026-11-07T20:47:32.509 command export
+2026-11-07T20:47:32.570 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:32.570 export mp4 wantAudio=0 audioIndex=-1 streams=1
+2026-11-07T20:47:32.632 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:32.635 seek ok: first key pts 0 target 0
+2026-11-07T20:47:34.293 result export ok
+2026-11-07T20:47:34.301 command savedCopy
+2026-11-07T20:47:34.304 result savedCopy ok
+2026-11-07T20:47:34.444 command cancel
+2026-11-07T20:47:34.444 mutter screencast: session stopped
+2026-11-07T20:47:34.445 result cancel ok
+2026-11-07T20:47:34.702 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:34.734 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:34.736 seek ok: first key pts 0 target 2325
+2026-11-07T20:47:34.807 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:34.808 seek ok: first key pts 0 target 6976
+2026-11-07T20:47:34.881 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:34.881 seek ok: first key pts 0 target 11627
+2026-11-07T20:47:34.977 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:34.977 seek ok: first key pts 0 target 16277
+2026-11-07T20:47:35.092 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:35.092 seek ok: first key pts 0 target 20928
+2026-11-07T20:47:35.227 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:35.227 seek ok: first key pts 0 target 25579
+2026-11-07T20:47:35.383 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:35.383 seek ok: first key pts 0 target 30229
+2026-11-07T20:47:35.570 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:35.570 seek ok: first key pts 30720 target 34880
+2026-11-07T20:47:35.627 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:35.628 seek ok: first key pts 30720 target 39531
+2026-11-07T20:47:35.705 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:35.705 seek ok: first key pts 30720 target 44181
+2026-11-07T20:47:35.804 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:35.804 seek ok: first key pts 30720 target 48832
+2026-11-07T20:47:35.924 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:35.924 seek ok: first key pts 30720 target 53483
+2026-11-07T20:47:36.296 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:36.299 seek ok: first key pts 0 target 4651
+2026-11-07T20:47:36.683 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:36.685 seek ok: first key pts 0 target 13952
+2026-11-07T20:47:37.106 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:37.108 seek ok: first key pts 0 target 23253
+2026-11-07T20:47:37.569 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:37.572 seek ok: first key pts 30720 target 32555
+2026-11-07T20:47:37.927 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:37.929 seek ok: first key pts 30720 target 41856
+2026-11-07T20:47:38.321 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:38.324 seek ok: first key pts 30720 target 51157
+2026-11-07T20:47:38.848 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:38.906 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:38.907 seek ok: first key pts 0 target 151
+2026-11-07T20:47:39.001 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:39.001 seek ok: first key pts 0 target 454
+2026-11-07T20:47:39.100 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:39.100 seek ok: first key pts 0 target 757
+2026-11-07T20:47:39.216 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:39.216 seek ok: first key pts 0 target 1060
+2026-11-07T20:47:39.362 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:39.362 seek ok: first key pts 0 target 1362
+2026-11-07T20:47:39.519 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:39.519 seek ok: first key pts 0 target 1665
+2026-11-07T20:47:39.701 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:39.701 seek ok: first key pts 0 target 1968
+2026-11-07T20:47:39.914 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:39.915 seek ok: first key pts 2000 target 2271
+2026-11-07T20:47:39.984 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:39.984 seek ok: first key pts 2000 target 2574
+2026-11-07T20:47:40.086 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:40.086 seek ok: first key pts 2000 target 2876
+2026-11-07T20:47:40.205 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:40.205 seek ok: first key pts 2000 target 3179
+2026-11-07T20:47:40.346 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:40.346 seek ok: first key pts 2000 target 3482
+2026-11-07T20:47:40.761 command prepare
+2026-11-07T20:47:40.805 mutter screencast: session /org/gnome/Mutter/ScreenCast/Session/u7 area 100,80 800x600
+2026-11-07T20:47:40.809 mutter screencast: PipeWire node 96
+2026-11-07T20:47:40.826 result prepare ok
+2026-11-07T20:47:42.093 command start
+2026-11-07T20:47:42.106 pipeline: putgdpipewiresrc name=src path=96 min-buffers=1 keepalive-time=1000 resend-last=true ! video/x-raw,max-framerate=0/1 ! queue name=cq leaky=downstream max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! videoconvert n-threads=2 ! videorate ! video/x-raw,format=I420,framerate=30/1 ! queue name=eq max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! openh264enc bitrate=1500000 gop-size=60 complexity=low multi-thread=2 name=venc ! h264parse ! queue name=vq max-size-buffers=0 max-size-bytes=0 max-size-time=2000000000 ! matroskamux name=mux ! filesink name=sink location="/home/patrick/work/b1278/runs/f44-a/data/putgd/recording/a4c1bffe-e80b-4a96-aa2b-2d8904628374/working.mkv"
+2026-11-07T20:47:42.858 started with openh264enc on GstSystemClock, max_framerate unthrottled
+2026-11-07T20:47:42.859 result start ok
+2026-11-07T20:47:45.890 command stop
+2026-11-07T20:47:45.943 timestamps: clock GstSystemClock, video lateness 19.9/416.8/1019.1 ms (n=92), audio lateness none, frame age 4.7/5.9/6.9 ms (n=9), arrival-stamped frames 0, audio re-anchored 0 times
+2026-11-07T20:47:45.943 frames: 92 reached the video encoder, 0 leaked at the capture queue; source arrivals 11 (interval 20.6/375.0/1001.4 ms (n=10)), 0 with a repeated compositor time, contents 1 new / 2 same dropped, cadence lock 0 early dropped / 8 resyncs / 0 changes slotted after a repeat
+2026-11-07T20:47:45.946 review: open
+2026-11-07T20:47:45.960 review: shown
+2026-11-07T20:47:45.961 result stop ok
+2026-11-07T20:47:46.090 review: frame at 0
+2026-11-07T20:47:46.106 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:46.106 seek ok: first key pts 0 target 0
+2026-11-07T20:47:46.112 review: frame 800x600
+2026-11-07T20:47:46.120 command export
+2026-11-07T20:47:46.144 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:46.144 export mp4 wantAudio=0 audioIndex=-1 streams=1
+2026-11-07T20:47:46.174 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:46.174 seek ok: first key pts 0 target 0
+2026-11-07T20:47:46.578 result export ok
+2026-11-07T20:47:46.583 command savedCopy
+2026-11-07T20:47:46.586 result savedCopy ok
+2026-11-07T20:47:46.658 command cancel
+2026-11-07T20:47:46.659 mutter screencast: session stopped
+2026-11-07T20:47:46.659 result cancel ok
+2026-11-07T20:47:46.900 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:46.909 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:46.911 seek ok: first key pts 0 target 1963
+2026-11-07T20:47:46.932 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:46.932 seek ok: first key pts 0 target 5888
+2026-11-07T20:47:46.948 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:46.948 seek ok: first key pts 0 target 9813
+2026-11-07T20:47:46.965 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:46.966 seek ok: first key pts 0 target 13739
+2026-11-07T20:47:46.988 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:46.988 seek ok: first key pts 0 target 17664
+2026-11-07T20:47:47.014 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:47.014 seek ok: first key pts 0 target 21589
+2026-11-07T20:47:47.043 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:47.043 seek ok: first key pts 0 target 25515
+2026-11-07T20:47:47.075 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:47.075 seek ok: first key pts 0 target 29440
+2026-11-07T20:47:47.111 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:47.111 seek ok: first key pts 30720 target 33365
+2026-11-07T20:47:47.122 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:47.122 seek ok: first key pts 30720 target 37291
+2026-11-07T20:47:47.138 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:47.139 seek ok: first key pts 30720 target 41216
+2026-11-07T20:47:47.156 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:47.156 seek ok: first key pts 30720 target 45141
+2026-11-07T20:47:47.404 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:47.406 seek ok: first key pts 0 target 3925
+2026-11-07T20:47:47.661 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:47.663 seek ok: first key pts 0 target 11776
+2026-11-07T20:47:47.923 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:47.925 seek ok: first key pts 0 target 19627
+2026-11-07T20:47:48.195 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:48.197 seek ok: first key pts 0 target 27477
+2026-11-07T20:47:48.478 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:48.481 seek ok: first key pts 30720 target 35328
+2026-11-07T20:47:48.738 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:48.740 seek ok: first key pts 30720 target 43179
+2026-11-07T20:47:49.006 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:49.020 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:49.023 seek ok: first key pts 0 target 128
+2026-11-07T20:47:49.043 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:49.044 seek ok: first key pts 0 target 383
+2026-11-07T20:47:49.062 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:49.062 seek ok: first key pts 0 target 639
+2026-11-07T20:47:49.083 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:49.083 seek ok: first key pts 0 target 894
+2026-11-07T20:47:49.108 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:49.109 seek ok: first key pts 0 target 1150
+2026-11-07T20:47:49.137 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:49.137 seek ok: first key pts 0 target 1406
+2026-11-07T20:47:49.169 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:49.169 seek ok: first key pts 0 target 1661
+2026-11-07T20:47:49.207 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:49.207 seek ok: first key pts 0 target 1917
+2026-11-07T20:47:49.250 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:49.250 seek ok: first key pts 2000 target 2172
+2026-11-07T20:47:49.265 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:49.265 seek ok: first key pts 2000 target 2428
+2026-11-07T20:47:49.287 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:49.287 seek ok: first key pts 2000 target 2683
+2026-11-07T20:47:49.315 decoder: libopenh264 (OpenH264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:47:49.315 seek ok: first key pts 2000 target 2939

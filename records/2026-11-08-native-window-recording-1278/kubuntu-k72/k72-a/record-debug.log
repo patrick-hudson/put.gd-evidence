@@ -1,0 +1,515 @@
+2026-11-07T20:40:41.333 command prepare
+2026-11-07T20:40:41.474 kde screencast: stream node 78 for window {f28fc63c-340b-458a-9b1e-cdd49bc8ea82}
+2026-11-07T20:40:41.495 result prepare ok
+2026-11-07T20:40:42.659 command start
+2026-11-07T20:40:42.703 pipeline: putgdpipewiresrc name=src path=78 min-buffers=1 keepalive-time=1000 resend-last=true ! video/x-raw,max-framerate=0/1 ! queue name=cq leaky=downstream max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! video/x-raw,pixel-aspect-ratio=1/1 ! videocrop name=wcrop ! videoconvert n-threads=2 ! videoscale add-borders=true ! video/x-raw,width=640,height=508,pixel-aspect-ratio=1/1 ! videorate ! video/x-raw,format=NV12,framerate=30/1 ! queue name=eq max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! vah264lpenc bitrate=1500 key-int-max=60 name=venc ! h264parse ! queue name=vq max-size-buffers=0 max-size-bytes=0 max-size-time=2000000000 ! matroskamux name=mux ! filesink name=sink location="/home/patrick/work/b1278/runs/k72-a/data/putgd/recording/69b2159b-def2-4678-8cbe-29c1b418c983/working.mkv"
+2026-11-07T20:40:43.444 started with vah264lpenc on GstSystemClock, max_framerate unthrottled
+2026-11-07T20:40:43.447 result start ok
+2026-11-07T20:40:58.691 command stop
+2026-11-07T20:40:58.739 timestamps: clock GstSystemClock, video lateness -9.5/18.3/59.4 ms (n=478), audio lateness none, frame age 2.8/25.1/88.3 ms (n=456), arrival-stamped frames 28, audio re-anchored 0 times
+2026-11-07T20:40:58.739 frames: 478 reached the video encoder, 0 leaked at the capture queue; source arrivals 487 (interval 8.8/32.7/52.1 ms (n=486)), 76 with a repeated compositor time, contents 484 new / 3 same dropped, cadence lock 7 early dropped / 2 resyncs / 0 changes slotted after a repeat
+2026-11-07T20:40:58.744 review: open
+2026-11-07T20:40:58.760 review: shown
+2026-11-07T20:40:58.760 result stop ok
+2026-11-07T20:40:58.877 review: frame at 0
+2026-11-07T20:40:58.884 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:40:58.886 seek ok: first key pts 0 target 0
+2026-11-07T20:40:58.894 review: frame 640x508
+2026-11-07T20:40:58.902 command export
+2026-11-07T20:40:58.912 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:40:58.914 export mp4 wantAudio=0 audioIndex=-1 streams=1
+2026-11-07T20:40:58.938 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:40:58.940 seek ok: first key pts 0 target 0
+2026-11-07T20:41:00.219 result export ok
+2026-11-07T20:41:00.226 command savedCopy
+2026-11-07T20:41:00.229 result savedCopy ok
+2026-11-07T20:41:00.307 command cancel
+2026-11-07T20:41:00.307 kde screencast: stream closed
+2026-11-07T20:41:00.308 result cancel ok
+2026-11-07T20:41:00.386 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:00.395 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:00.398 seek ok: first key pts 0 target 10197
+2026-11-07T20:41:00.422 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:00.425 seek ok: first key pts 0 target 30592
+2026-11-07T20:41:00.455 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:00.458 seek ok: first key pts 30720 target 50987
+2026-11-07T20:41:00.482 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:00.485 seek ok: first key pts 61440 target 71381
+2026-11-07T20:41:00.502 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:00.504 seek ok: first key pts 61440 target 91776
+2026-11-07T20:41:00.534 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:00.537 seek ok: first key pts 92160 target 112171
+2026-11-07T20:41:00.555 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:00.557 seek ok: first key pts 122880 target 132565
+2026-11-07T20:41:00.568 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:00.569 seek ok: first key pts 122880 target 152960
+2026-11-07T20:41:00.590 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:00.593 seek ok: first key pts 153600 target 173355
+2026-11-07T20:41:00.610 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:00.613 seek ok: first key pts 184320 target 193749
+2026-11-07T20:41:00.625 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:00.628 seek ok: first key pts 184320 target 214144
+2026-11-07T20:41:00.647 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:00.650 seek ok: first key pts 215040 target 234539
+2026-11-07T20:41:00.731 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:00.734 seek ok: first key pts 0 target 20395
+2026-11-07T20:41:00.844 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:00.848 seek ok: first key pts 30720 target 61184
+2026-11-07T20:41:00.960 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:00.963 seek ok: first key pts 92160 target 101973
+2026-11-07T20:41:01.067 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:01.070 seek ok: first key pts 122880 target 142763
+2026-11-07T20:41:01.177 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:01.180 seek ok: first key pts 153600 target 183552
+2026-11-07T20:41:01.301 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:01.306 seek ok: first key pts 215040 target 224341
+2026-11-07T20:41:01.410 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:01.420 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:01.422 seek ok: first key pts 0 target 664
+2026-11-07T20:41:01.441 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:01.443 seek ok: first key pts 0 target 1992
+2026-11-07T20:41:01.467 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:01.470 seek ok: first key pts 2000 target 3319
+2026-11-07T20:41:01.487 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:01.489 seek ok: first key pts 4000 target 4647
+2026-11-07T20:41:01.502 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:01.505 seek ok: first key pts 4000 target 5975
+2026-11-07T20:41:01.529 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:01.532 seek ok: first key pts 6000 target 7303
+2026-11-07T20:41:01.554 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:01.557 seek ok: first key pts 8000 target 8631
+2026-11-07T20:41:01.572 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:01.575 seek ok: first key pts 8000 target 9958
+2026-11-07T20:41:01.600 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:01.603 seek ok: first key pts 10000 target 11286
+2026-11-07T20:41:01.621 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:01.624 seek ok: first key pts 12000 target 12614
+2026-11-07T20:41:01.640 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:01.643 seek ok: first key pts 12000 target 13942
+2026-11-07T20:41:01.666 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:01.668 seek ok: first key pts 14000 target 15269
+2026-11-07T20:41:02.730 command prepare
+2026-11-07T20:41:02.882 kde screencast: stream node 78 for window {e38df8bf-cc66-4c3e-bd04-65af37538812}
+2026-11-07T20:41:02.904 result prepare ok
+2026-11-07T20:41:04.060 command start
+2026-11-07T20:41:04.109 pipeline: putgdpipewiresrc name=src path=78 min-buffers=1 keepalive-time=1000 resend-last=true ! video/x-raw,max-framerate=0/1 ! queue name=cq leaky=downstream max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! video/x-raw,pixel-aspect-ratio=1/1 ! videocrop name=wcrop ! videoconvert n-threads=2 ! videoscale add-borders=true ! video/x-raw,width=640,height=480,pixel-aspect-ratio=1/1 ! videorate ! video/x-raw,format=NV12,framerate=30/1 ! queue name=eq max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! vah264lpenc bitrate=1500 key-int-max=60 name=venc ! h264parse ! queue name=vq max-size-buffers=0 max-size-bytes=0 max-size-time=2000000000 ! matroskamux name=mux ! filesink name=sink location="/home/patrick/work/b1278/runs/k72-a/data/putgd/recording/effbd98f-e625-489e-b62f-0a3e1509bafb/working.mkv"
+2026-11-07T20:41:05.737 started with vah264lpenc on GstSystemClock, max_framerate unthrottled
+2026-11-07T20:41:05.742 result start ok
+2026-11-07T20:41:09.797 command stop
+2026-11-07T20:41:09.840 timestamps: clock GstSystemClock, video lateness 48.4/531.9/1029.3 ms (n=152), audio lateness none, frame age 36.8/37.4/37.6 ms (n=6), arrival-stamped frames 0, audio re-anchored 0 times
+2026-11-07T20:41:09.840 frames: 152 reached the video encoder, 0 leaked at the capture queue; source arrivals 6 (interval 1001.3/1002.1/1004.3 ms (n=5)), 0 with a repeated compositor time, contents 1 new / 0 same dropped, cadence lock 0 early dropped / 5 resyncs / 0 changes slotted after a repeat
+2026-11-07T20:41:09.843 review: open
+2026-11-07T20:41:09.859 review: shown
+2026-11-07T20:41:09.859 result stop ok
+2026-11-07T20:41:09.999 review: frame at 0
+2026-11-07T20:41:10.006 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:10.009 seek ok: first key pts 0 target 0
+2026-11-07T20:41:10.016 review: frame 640x480
+2026-11-07T20:41:10.026 command export
+2026-11-07T20:41:10.049 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:10.051 export mp4 wantAudio=0 audioIndex=-1 streams=1
+2026-11-07T20:41:10.072 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:10.076 seek ok: first key pts 0 target 0
+2026-11-07T20:41:10.466 result export ok
+2026-11-07T20:41:10.472 command savedCopy
+2026-11-07T20:41:10.475 result savedCopy ok
+2026-11-07T20:41:10.509 command cancel
+2026-11-07T20:41:10.509 kde screencast: stream closed
+2026-11-07T20:41:10.509 result cancel ok
+2026-11-07T20:41:10.587 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:10.595 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:10.599 seek ok: first key pts 0 target 3243
+2026-11-07T20:41:10.616 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:10.619 seek ok: first key pts 0 target 9728
+2026-11-07T20:41:10.635 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:10.638 seek ok: first key pts 0 target 16213
+2026-11-07T20:41:10.654 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:10.657 seek ok: first key pts 0 target 22699
+2026-11-07T20:41:10.677 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:10.680 seek ok: first key pts 0 target 29184
+2026-11-07T20:41:10.703 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:10.706 seek ok: first key pts 30720 target 35669
+2026-11-07T20:41:10.715 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:10.718 seek ok: first key pts 30720 target 42155
+2026-11-07T20:41:10.731 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:10.733 seek ok: first key pts 30720 target 48640
+2026-11-07T20:41:10.749 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:10.752 seek ok: first key pts 30720 target 55125
+2026-11-07T20:41:10.770 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:10.773 seek ok: first key pts 61440 target 61611
+2026-11-07T20:41:10.781 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:10.784 seek ok: first key pts 61440 target 68096
+2026-11-07T20:41:10.794 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:10.797 seek ok: first key pts 61440 target 74581
+2026-11-07T20:41:10.873 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:10.877 seek ok: first key pts 0 target 6485
+2026-11-07T20:41:10.969 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:10.973 seek ok: first key pts 0 target 19456
+2026-11-07T20:41:11.070 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:11.073 seek ok: first key pts 30720 target 32427
+2026-11-07T20:41:11.166 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:11.169 seek ok: first key pts 30720 target 45397
+2026-11-07T20:41:11.267 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:11.271 seek ok: first key pts 30720 target 58368
+2026-11-07T20:41:11.371 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:11.375 seek ok: first key pts 61440 target 71339
+2026-11-07T20:41:11.473 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:11.481 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:11.484 seek ok: first key pts 0 target 211
+2026-11-07T20:41:11.500 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:11.503 seek ok: first key pts 0 target 633
+2026-11-07T20:41:11.516 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:11.518 seek ok: first key pts 0 target 1056
+2026-11-07T20:41:11.531 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:11.534 seek ok: first key pts 0 target 1478
+2026-11-07T20:41:11.550 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:11.552 seek ok: first key pts 0 target 1900
+2026-11-07T20:41:11.568 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:11.570 seek ok: first key pts 2000 target 2322
+2026-11-07T20:41:11.582 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:11.584 seek ok: first key pts 2000 target 2744
+2026-11-07T20:41:11.597 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:11.600 seek ok: first key pts 2000 target 3167
+2026-11-07T20:41:11.615 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:11.617 seek ok: first key pts 2000 target 3589
+2026-11-07T20:41:11.631 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:11.634 seek ok: first key pts 4000 target 4011
+2026-11-07T20:41:11.643 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:11.645 seek ok: first key pts 4000 target 4433
+2026-11-07T20:41:11.656 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:11.658 seek ok: first key pts 4000 target 4856
+2026-11-07T20:41:13.134 command prepare
+2026-11-07T20:41:13.291 kde screencast: stream node 78 for window {30cafb0e-3859-4943-b054-752b67c942c4}
+2026-11-07T20:41:13.311 result prepare ok
+2026-11-07T20:41:14.460 command start
+2026-11-07T20:41:14.508 pipeline: putgdpipewiresrc name=src path=78 min-buffers=1 keepalive-time=1000 resend-last=true ! video/x-raw,max-framerate=0/1 ! queue name=cq leaky=downstream max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! video/x-raw,pixel-aspect-ratio=1/1 ! videocrop name=wcrop ! videoconvert n-threads=2 ! videoscale add-borders=true ! video/x-raw,width=640,height=508,pixel-aspect-ratio=1/1 ! videorate ! video/x-raw,format=NV12,framerate=30/1 ! queue name=eq max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! vah264lpenc bitrate=1500 key-int-max=60 name=venc ! h264parse ! queue name=vq max-size-buffers=0 max-size-bytes=0 max-size-time=2000000000 ! matroskamux name=mux ! filesink name=sink location="/home/patrick/work/b1278/runs/k72-a/data/putgd/recording/6d48c49f-4888-494c-851f-ff1b0340c7b0/working.mkv"
+2026-11-07T20:41:15.240 started with vah264lpenc on GstSystemClock, max_framerate unthrottled
+2026-11-07T20:41:15.243 result start ok
+2026-11-07T20:41:18.272 kde screencast: stream closed by the compositor
+2026-11-07T20:41:18.272 window: the compositor ended the stream (the window closed)
+2026-11-07T20:41:18.275 kde screencast: stream closed
+2026-11-07T20:41:18.333 timestamps: clock GstSystemClock, video lateness -2.6/17.1/41.3 ms (n=111), audio lateness none, frame age 2.8/18.3/34.9 ms (n=111), arrival-stamped frames 0, audio re-anchored 0 times
+2026-11-07T20:41:18.333 frames: 111 reached the video encoder, 0 leaked at the capture queue; source arrivals 111 (interval 15.7/33.0/46.8 ms (n=110)), 0 with a repeated compositor time, contents 111 new / 0 same dropped, cadence lock 1 early dropped / 0 resyncs / 0 changes slotted after a repeat
+2026-11-07T20:41:18.333 review: open
+2026-11-07T20:41:18.350 review: shown
+2026-11-07T20:41:18.471 review: frame at 0
+2026-11-07T20:41:18.479 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:18.481 seek ok: first key pts 0 target 0
+2026-11-07T20:41:18.490 review: frame 640x508
+2026-11-07T20:41:18.498 command export
+2026-11-07T20:41:18.517 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:18.519 export mp4 wantAudio=0 audioIndex=-1 streams=1
+2026-11-07T20:41:18.538 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:18.540 seek ok: first key pts 0 target 0
+2026-11-07T20:41:18.909 result export ok
+2026-11-07T20:41:18.915 command savedCopy
+2026-11-07T20:41:18.918 result savedCopy ok
+2026-11-07T20:41:19.051 command cancel
+2026-11-07T20:41:19.052 result cancel ok
+2026-11-07T20:41:19.125 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:19.133 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:19.136 seek ok: first key pts 0 target 2368
+2026-11-07T20:41:19.149 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:19.152 seek ok: first key pts 0 target 7104
+2026-11-07T20:41:19.168 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:19.171 seek ok: first key pts 0 target 11840
+2026-11-07T20:41:19.188 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:19.191 seek ok: first key pts 0 target 16576
+2026-11-07T20:41:19.208 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:19.211 seek ok: first key pts 0 target 21312
+2026-11-07T20:41:19.231 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:19.234 seek ok: first key pts 0 target 26048
+2026-11-07T20:41:19.260 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:19.261 seek ok: first key pts 30720 target 30784
+2026-11-07T20:41:19.267 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:19.268 seek ok: first key pts 30720 target 35520
+2026-11-07T20:41:19.277 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:19.277 seek ok: first key pts 30720 target 40256
+2026-11-07T20:41:19.290 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:19.290 seek ok: first key pts 30720 target 44992
+2026-11-07T20:41:19.302 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:19.303 seek ok: first key pts 30720 target 49728
+2026-11-07T20:41:19.319 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:19.322 seek ok: first key pts 30720 target 54464
+2026-11-07T20:41:19.404 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:19.408 seek ok: first key pts 0 target 4736
+2026-11-07T20:41:19.506 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:19.510 seek ok: first key pts 0 target 14208
+2026-11-07T20:41:19.611 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:19.614 seek ok: first key pts 0 target 23680
+2026-11-07T20:41:19.724 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:19.727 seek ok: first key pts 30720 target 33152
+2026-11-07T20:41:19.820 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:19.824 seek ok: first key pts 30720 target 42624
+2026-11-07T20:41:19.921 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:19.924 seek ok: first key pts 30720 target 52096
+2026-11-07T20:41:20.133 command prepare
+2026-11-07T20:41:20.285 kde screencast: stream node 76 for window {f28fc63c-340b-458a-9b1e-cdd49bc8ea82}
+2026-11-07T20:41:20.305 result prepare ok
+2026-11-07T20:41:21.461 command start
+2026-11-07T20:41:21.513 pipeline: putgdpipewiresrc name=src path=76 min-buffers=1 keepalive-time=1000 resend-last=true ! video/x-raw,max-framerate=0/1 ! queue name=cq leaky=downstream max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! video/x-raw,pixel-aspect-ratio=1/1 ! videocrop name=wcrop ! videoconvert n-threads=2 ! videoscale add-borders=true ! video/x-raw,width=1000,height=700,pixel-aspect-ratio=1/1 ! videorate ! video/x-raw,format=NV12,framerate=30/1 ! queue name=eq max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! vah264lpenc bitrate=2100 key-int-max=60 name=venc ! h264parse ! queue name=vq max-size-buffers=0 max-size-bytes=0 max-size-time=2000000000 ! matroskamux name=mux ! filesink name=sink location="/home/patrick/work/b1278/runs/k72-a/data/putgd/recording/8694c9a5-fb79-4d4e-b0e0-f03823b5044c/working.mkv"
+2026-11-07T20:41:22.265 started with vah264lpenc on GstSystemClock, max_framerate unthrottled
+2026-11-07T20:41:22.269 result start ok
+2026-11-07T20:41:24.339 command stop
+2026-11-07T20:41:24.388 timestamps: clock GstSystemClock, video lateness 3.0/29.4/54.7 ms (n=83), audio lateness none, frame age 6.4/25.1/46.0 ms (n=84), arrival-stamped frames 0, audio re-anchored 0 times
+2026-11-07T20:41:24.388 frames: 83 reached the video encoder, 0 leaked at the capture queue; source arrivals 84 (interval 13.5/33.0/50.7 ms (n=83)), 3 with a repeated compositor time, contents 84 new / 0 same dropped, cadence lock 1 early dropped / 0 resyncs / 0 changes slotted after a repeat
+2026-11-07T20:41:24.392 review: open
+2026-11-07T20:41:24.409 review: shown
+2026-11-07T20:41:24.409 result stop ok
+2026-11-07T20:41:24.554 review: frame at 0
+2026-11-07T20:41:24.567 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:24.568 seek ok: first key pts 0 target 0
+2026-11-07T20:41:24.579 review: frame 1000x700
+2026-11-07T20:41:24.585 command export
+2026-11-07T20:41:24.609 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:24.611 export mp4 wantAudio=0 audioIndex=-1 streams=1
+2026-11-07T20:41:24.635 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:24.636 seek ok: first key pts 0 target 0
+2026-11-07T20:41:25.045 result export ok
+2026-11-07T20:41:25.051 command savedCopy
+2026-11-07T20:41:25.054 result savedCopy ok
+2026-11-07T20:41:25.178 command cancel
+2026-11-07T20:41:25.178 kde screencast: stream closed
+2026-11-07T20:41:25.178 result cancel ok
+2026-11-07T20:41:25.257 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:25.267 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:25.270 seek ok: first key pts 0 target 1771
+2026-11-07T20:41:25.293 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:25.294 seek ok: first key pts 0 target 5312
+2026-11-07T20:41:25.316 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:25.317 seek ok: first key pts 0 target 8853
+2026-11-07T20:41:25.343 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:25.344 seek ok: first key pts 0 target 12395
+2026-11-07T20:41:25.374 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:25.375 seek ok: first key pts 0 target 15936
+2026-11-07T20:41:25.407 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:25.408 seek ok: first key pts 0 target 19477
+2026-11-07T20:41:25.438 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:25.438 seek ok: first key pts 0 target 23019
+2026-11-07T20:41:25.470 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:25.471 seek ok: first key pts 0 target 26560
+2026-11-07T20:41:25.505 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:25.505 seek ok: first key pts 0 target 30101
+2026-11-07T20:41:25.543 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:25.544 seek ok: first key pts 30720 target 33643
+2026-11-07T20:41:25.558 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:25.559 seek ok: first key pts 30720 target 37184
+2026-11-07T20:41:25.579 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:25.580 seek ok: first key pts 30720 target 40725
+2026-11-07T20:41:25.669 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:25.672 seek ok: first key pts 0 target 3541
+2026-11-07T20:41:25.795 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:25.799 seek ok: first key pts 0 target 10624
+2026-11-07T20:41:25.925 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:25.929 seek ok: first key pts 0 target 17707
+2026-11-07T20:41:26.063 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:26.066 seek ok: first key pts 0 target 24789
+2026-11-07T20:41:26.209 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:26.212 seek ok: first key pts 30720 target 31872
+2026-11-07T20:41:26.333 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:26.336 seek ok: first key pts 30720 target 38955
+2026-11-07T20:41:26.475 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:26.491 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:26.492 seek ok: first key pts 0 target 115
+2026-11-07T20:41:26.518 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:26.518 seek ok: first key pts 0 target 346
+2026-11-07T20:41:26.542 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:26.543 seek ok: first key pts 0 target 576
+2026-11-07T20:41:26.568 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:26.568 seek ok: first key pts 0 target 807
+2026-11-07T20:41:26.594 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:26.595 seek ok: first key pts 0 target 1037
+2026-11-07T20:41:26.624 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:26.625 seek ok: first key pts 0 target 1268
+2026-11-07T20:41:26.655 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:26.655 seek ok: first key pts 0 target 1499
+2026-11-07T20:41:26.690 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:26.691 seek ok: first key pts 0 target 1729
+2026-11-07T20:41:26.723 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:26.724 seek ok: first key pts 0 target 1960
+2026-11-07T20:41:26.761 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:26.761 seek ok: first key pts 2000 target 2190
+2026-11-07T20:41:26.779 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:26.780 seek ok: first key pts 2000 target 2421
+2026-11-07T20:41:26.801 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:26.802 seek ok: first key pts 2000 target 2651
+2026-11-07T20:41:26.952 command prepare
+2026-11-07T20:41:27.100 kde screencast: stream node 76 for HDMI-A-1
+2026-11-07T20:41:27.123 result prepare ok
+2026-11-07T20:41:28.295 command start
+2026-11-07T20:41:28.313 pipeline: putgdpipewiresrc name=src path=76 min-buffers=1 keepalive-time=1000 resend-last=true ! video/x-raw,max-framerate=0/1 ! queue name=cq leaky=downstream max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! videoconvert n-threads=2 ! videorate ! video/x-raw,format=NV12,framerate=30/1 ! queue name=eq max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! vah264lpenc bitrate=6220 key-int-max=60 name=venc ! h264parse ! queue name=vq max-size-buffers=0 max-size-bytes=0 max-size-time=2000000000 ! matroskamux name=mux ! filesink name=sink location="/home/patrick/work/b1278/runs/k72-a/data/putgd/recording/d7420018-a8cb-4b75-ae9b-5b365cd626eb/working.mkv"
+2026-11-07T20:41:28.990 started with vah264lpenc on GstSystemClock, max_framerate unthrottled
+2026-11-07T20:41:28.992 result start ok
+2026-11-07T20:41:32.031 command stop
+2026-11-07T20:41:32.090 timestamps: clock GstSystemClock, video lateness -0.1/22.5/80.8 ms (n=111), audio lateness none, frame age 6.5/31.3/68.2 ms (n=112), arrival-stamped frames 0, audio re-anchored 0 times
+2026-11-07T20:41:32.090 frames: 111 reached the video encoder, 0 leaked at the capture queue; source arrivals 133 (interval 8.3/27.8/49.1 ms (n=132)), 20 with a repeated compositor time, contents 112 new / 21 same dropped, cadence lock 2 early dropped / 2 resyncs / 0 changes slotted after a repeat
+2026-11-07T20:41:32.093 review: open
+2026-11-07T20:41:32.110 review: shown
+2026-11-07T20:41:32.110 result stop ok
+2026-11-07T20:41:32.240 review: frame at 0
+2026-11-07T20:41:32.277 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:32.278 seek ok: first key pts 0 target 0
+2026-11-07T20:41:32.312 review: frame 1280x720
+2026-11-07T20:41:32.320 command export
+2026-11-07T20:41:32.358 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:32.359 export mp4 wantAudio=0 audioIndex=-1 streams=1
+2026-11-07T20:41:32.400 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:32.401 seek ok: first key pts 0 target 0
+2026-11-07T20:41:33.662 result export ok
+2026-11-07T20:41:33.671 command savedCopy
+2026-11-07T20:41:33.674 result savedCopy ok
+2026-11-07T20:41:33.725 command cancel
+2026-11-07T20:41:33.725 kde screencast: stream closed
+2026-11-07T20:41:33.725 result cancel ok
+2026-11-07T20:41:33.812 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:33.831 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:33.833 seek ok: first key pts 0 target 2368
+2026-11-07T20:41:33.896 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:33.897 seek ok: first key pts 0 target 7104
+2026-11-07T20:41:33.958 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:33.959 seek ok: first key pts 0 target 11840
+2026-11-07T20:41:34.010 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:34.010 seek ok: first key pts 0 target 16576
+2026-11-07T20:41:34.065 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:34.065 seek ok: first key pts 0 target 21312
+2026-11-07T20:41:34.141 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:34.142 seek ok: first key pts 0 target 26048
+2026-11-07T20:41:34.230 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:34.230 seek ok: first key pts 30720 target 30784
+2026-11-07T20:41:34.258 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:34.258 seek ok: first key pts 30720 target 35520
+2026-11-07T20:41:34.300 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:34.301 seek ok: first key pts 30720 target 40256
+2026-11-07T20:41:34.348 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:34.349 seek ok: first key pts 30720 target 44992
+2026-11-07T20:41:34.414 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:34.414 seek ok: first key pts 30720 target 49728
+2026-11-07T20:41:34.483 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:34.483 seek ok: first key pts 30720 target 54464
+2026-11-07T20:41:34.629 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:34.632 seek ok: first key pts 0 target 4736
+2026-11-07T20:41:34.835 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:34.838 seek ok: first key pts 0 target 14208
+2026-11-07T20:41:35.053 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:35.056 seek ok: first key pts 0 target 23680
+2026-11-07T20:41:35.291 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:35.294 seek ok: first key pts 30720 target 33152
+2026-11-07T20:41:35.485 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:35.488 seek ok: first key pts 30720 target 42624
+2026-11-07T20:41:35.704 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:35.707 seek ok: first key pts 30720 target 52096
+2026-11-07T20:41:35.959 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:35.997 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:35.998 seek ok: first key pts 0 target 154
+2026-11-07T20:41:36.076 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:36.077 seek ok: first key pts 0 target 463
+2026-11-07T20:41:36.149 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:36.150 seek ok: first key pts 0 target 771
+2026-11-07T20:41:36.226 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:36.227 seek ok: first key pts 0 target 1079
+2026-11-07T20:41:36.305 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:36.305 seek ok: first key pts 0 target 1388
+2026-11-07T20:41:36.394 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:36.395 seek ok: first key pts 0 target 1696
+2026-11-07T20:41:36.489 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:36.490 seek ok: first key pts 2000 target 2004
+2026-11-07T20:41:36.542 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:36.542 seek ok: first key pts 2000 target 2313
+2026-11-07T20:41:36.602 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:36.603 seek ok: first key pts 2000 target 2621
+2026-11-07T20:41:36.670 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:36.671 seek ok: first key pts 2000 target 2929
+2026-11-07T20:41:36.745 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:36.746 seek ok: first key pts 2000 target 3238
+2026-11-07T20:41:36.828 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:36.829 seek ok: first key pts 2000 target 3546
+2026-11-07T20:41:37.031 command prepare
+2026-11-07T20:41:37.177 kde screencast: stream node 76 for region
+2026-11-07T20:41:37.200 result prepare ok
+2026-11-07T20:41:38.377 command start
+2026-11-07T20:41:38.392 pipeline: putgdpipewiresrc name=src path=76 min-buffers=1 keepalive-time=1000 resend-last=true ! video/x-raw,max-framerate=0/1 ! queue name=cq leaky=downstream max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! videoconvert n-threads=2 ! videorate ! video/x-raw,format=NV12,framerate=30/1 ! queue name=eq max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! vah264lpenc bitrate=1500 key-int-max=60 name=venc ! h264parse ! queue name=vq max-size-buffers=0 max-size-bytes=0 max-size-time=2000000000 ! matroskamux name=mux ! filesink name=sink location="/home/patrick/work/b1278/runs/k72-a/data/putgd/recording/a7c5d671-30b4-486a-9be1-864fdb0ab238/working.mkv"
+2026-11-07T20:41:39.082 started with vah264lpenc on GstSystemClock, max_framerate unthrottled
+2026-11-07T20:41:39.085 result start ok
+2026-11-07T20:41:42.147 command stop
+2026-11-07T20:41:42.182 timestamps: clock GstSystemClock, video lateness -13.4/18.4/73.8 ms (n=112), audio lateness none, frame age 2.0/4.0/6.8 ms (n=109), arrival-stamped frames 0, audio re-anchored 0 times
+2026-11-07T20:41:42.182 frames: 112 reached the video encoder, 0 leaked at the capture queue; source arrivals 125 (interval 1.9/30.1/51.8 ms (n=124)), 0 with a repeated compositor time, contents 101 new / 16 same dropped, cadence lock 0 early dropped / 4 resyncs / 0 changes slotted after a repeat
+2026-11-07T20:41:42.187 review: open
+2026-11-07T20:41:42.203 review: shown
+2026-11-07T20:41:42.203 result stop ok
+2026-11-07T20:41:42.326 review: frame at 0
+2026-11-07T20:41:42.336 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:42.338 seek ok: first key pts 0 target 0
+2026-11-07T20:41:42.348 review: frame 800x600
+2026-11-07T20:41:42.357 command export
+2026-11-07T20:41:42.372 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:42.373 export mp4 wantAudio=0 audioIndex=-1 streams=1
+2026-11-07T20:41:42.400 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:42.402 seek ok: first key pts 0 target 0
+2026-11-07T20:41:42.861 result export ok
+2026-11-07T20:41:42.869 command savedCopy
+2026-11-07T20:41:42.872 result savedCopy ok
+2026-11-07T20:41:42.948 command cancel
+2026-11-07T20:41:42.948 kde screencast: stream closed
+2026-11-07T20:41:42.949 result cancel ok
+2026-11-07T20:41:43.028 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:43.037 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:43.040 seek ok: first key pts 0 target 2389
+2026-11-07T20:41:43.059 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:43.060 seek ok: first key pts 0 target 7168
+2026-11-07T20:41:43.081 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:43.083 seek ok: first key pts 0 target 11947
+2026-11-07T20:41:43.105 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:43.108 seek ok: first key pts 0 target 16725
+2026-11-07T20:41:43.137 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:43.140 seek ok: first key pts 0 target 21504
+2026-11-07T20:41:43.166 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:43.169 seek ok: first key pts 0 target 26283
+2026-11-07T20:41:43.201 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:43.204 seek ok: first key pts 30720 target 31061
+2026-11-07T20:41:43.214 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:43.214 seek ok: first key pts 30720 target 35840
+2026-11-07T20:41:43.226 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:43.229 seek ok: first key pts 30720 target 40619
+2026-11-07T20:41:43.244 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:43.247 seek ok: first key pts 30720 target 45397
+2026-11-07T20:41:43.264 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:43.264 seek ok: first key pts 30720 target 50176
+2026-11-07T20:41:43.285 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:43.286 seek ok: first key pts 30720 target 54955
+2026-11-07T20:41:43.379 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:43.382 seek ok: first key pts 0 target 4779
+2026-11-07T20:41:43.494 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:43.497 seek ok: first key pts 0 target 14336
+2026-11-07T20:41:43.619 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:43.622 seek ok: first key pts 0 target 23893
+2026-11-07T20:41:43.745 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:43.748 seek ok: first key pts 30720 target 33451
+2026-11-07T20:41:43.857 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:43.860 seek ok: first key pts 30720 target 43008
+2026-11-07T20:41:43.974 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:43.978 seek ok: first key pts 30720 target 52565
+2026-11-07T20:41:44.106 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:44.118 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:44.120 seek ok: first key pts 0 target 156
+2026-11-07T20:41:44.144 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:44.145 seek ok: first key pts 0 target 467
+2026-11-07T20:41:44.165 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:44.166 seek ok: first key pts 0 target 778
+2026-11-07T20:41:44.185 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:44.185 seek ok: first key pts 0 target 1089
+2026-11-07T20:41:44.206 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:44.207 seek ok: first key pts 0 target 1400
+2026-11-07T20:41:44.227 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:44.228 seek ok: first key pts 0 target 1711
+2026-11-07T20:41:44.255 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:44.256 seek ok: first key pts 2000 target 2022
+2026-11-07T20:41:44.269 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:44.270 seek ok: first key pts 2000 target 2333
+2026-11-07T20:41:44.286 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:44.288 seek ok: first key pts 2000 target 2644
+2026-11-07T20:41:44.304 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:44.305 seek ok: first key pts 2000 target 2956
+2026-11-07T20:41:44.323 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:44.324 seek ok: first key pts 2000 target 3267
+2026-11-07T20:41:44.346 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-07T20:41:44.346 seek ok: first key pts 2000 target 3578
