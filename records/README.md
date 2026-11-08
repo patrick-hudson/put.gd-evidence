@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-08-native-window-recording-1278](2026-11-08-native-window-recording-1278/README.md) | #1278 | Native window recording on KDE and GNOME Wayland (#1278) |
 | [2026-11-08-budgie-goldens-1275](2026-11-08-budgie-goldens-1275/README.md) | #1275 | Budgie goldens and real-session step-1 probes (#1275) |
 | [2026-11-08-worker-f](2026-11-08-worker-f/README.md) | — | Worker F: SDK instructions, ReviewWindow gates, diagnostics ordering |
 | [2026-11-07-i1187-gnome-discovery-idle-pages](2026-11-07-i1187-gnome-discovery-idle-pages/README.md) | #1187 | #1187: GNOME helper discovery without a 3 s probe (A/B on f44) |
