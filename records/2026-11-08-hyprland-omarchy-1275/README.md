@@ -93,3 +93,20 @@ nightly desktop check), private profile, Notify recorded with dbus-monitor (`rou
 banner frames `notice-*3.png`): Cinnamon m74, GNOME f44 and KDE d69 each sent the failure notice with urgency 2 and
 **no** `transient`, as on nightly. Cinnamon shows the banner. GNOME queues it behind the first-run notice. On KDE the frame
 is covered by stale `test_gui_tray` notices (#1307, not from this run).
+
+## Round 3 (2026-11-08 07:30 UTC): review fixes, rebased on #1283's review fixes
+
+Build: CI of PR #1293 head 6b26ad9b3 (test merge f39263b83 = `26.1108.4175-dev+gf39263b832e1`, Arch package, `round3/review-arch/build-info.json`),
+which is #1293 rebased on B's a56046cd8 with cubic's review fixes (ef2792a42 Hyprland, 20490670b shared layer). The pushed head
+d18601484 differs from it only in B's 0e66920c8 (labwc bridge + a portal test). Overlay d3 as before.
+
+- `round3/review-arch/row.log`: full row: desktop/region/window exact, own window refused, conflicts reported, reload keeps
+  binds, clipboard both ways, recording motion 20.7 / 69.6 / 62.7 vs static 0.70, quit leaves Omarchy's 251 binds. PASS.
+- `round3/region2-review/`: two outputs (Virtual-1 at 0,0 and headless PUTGD-2 at 1280,0), wallpaper only, each case its own
+  new operation: region on Virtual-1 only, on PUTGD-2 only, across both — each equal to a grim reference of the layout crop
+  (the only difference, in the Virtual-1 case, is the pointer that grim draws and put.gd leaves out). Desktop 2304x800. PASS.
+  This is cubic's P1 (a region on a subset of outputs failed with display_changed before ef2792a42).
+- `round3/region2-review-attempt1/` and `-attempt2/` are rejected runs, kept for the record: attempt 1 left Hyprland's
+  automatic position (Virtual-1 moved to x=2304) so the drag spanned both outputs; attempt 2 had maximized terminals (uniform
+  regions) and waited only 1.5 s after the hotkey, so the first drag did not end the selection (the crosshair is still in its
+  frame) and two cases compared one older file. With 2.5 s and distinct content every case completed.
