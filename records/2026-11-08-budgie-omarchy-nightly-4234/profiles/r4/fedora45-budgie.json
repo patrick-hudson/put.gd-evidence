@@ -1,0 +1,816 @@
+{
+  "desktop": "fedora45-budgie",
+  "input_backend": {
+    "guest": "qmp",
+    "native": "vnc-or-host-input"
+  },
+  "catalog_tolerance": 0.025,
+  "notification_server": "budgie-daemon",
+  "default_browser_kind": "firefox",
+  "at_spi": {
+    "available": true,
+    "reason": ""
+  },
+  "session": "wayland",
+  "known_gaps": [
+    "Native toplevel protocols expose identity and activation but no PID/geometry/pointer hit-test; guarded Tier 1 input must refuse until a compositor witness is available."
+  ],
+  "window_titles": {
+    "history": "^put\\.gd$",
+    "settings": "^put.gd$",
+    "main": "^put\\.gd$",
+    "editor": "^Edit (image|& upload)",
+    "review": "Review",
+    "diagnostics": "^Create diagnostics package$",
+    "about": "^About put.gd$",
+    "destinations": "put.gd",
+    "updates": "^put\\.gd$",
+    "bar": "^put.gd recording controls$",
+    "fileDialog": ".*",
+    "putgdFileDialog": ".*",
+    "region": ".*",
+    "recsel": ".*",
+    "confirmDestinationRemove": "Remove destination",
+    "confirmDestinationDefault": "Use an untested destination",
+    "confirmDestinationReload": "Reload settings from file",
+    "confirmDestinationName": "Add destination",
+    "historyExpandedPreview": "Preview \u2014",
+    "historyCancelAllConfirmation": "Cancel all uploads",
+    "confirmAction": "^(Delete from destination|Clear history records|Clear temporary files)$",
+    "bar-ready": "^put.gd recording controls$",
+    "bar-recording": "^put.gd recording controls$",
+    "bar-paused": "^put.gd recording controls$",
+    "bar-question-recording": "^put.gd recording controls$",
+    "bar-question-paused": "^put.gd recording controls$",
+    "bar-handle": "^put.gd recording controls$",
+    "settingsConfirm": "^(Reset limits to defaults|Reload settings from file|Clear logs)$"
+  },
+  "catalog_windows": {
+    "destinations": [
+      "04-destinations-s3"
+    ],
+    "confirmDestinationDefault": [
+      "confirm-make-default-untested"
+    ],
+    "confirmDestinationRemove": [
+      "confirm-remove-destination"
+    ],
+    "confirmDestinationReload": [
+      "53-reload-confirm"
+    ],
+    "confirmDestinationName": [
+      "confirm-add-destination-name"
+    ],
+    "editorDiscard": [
+      "19-editor-discard-confirm"
+    ],
+    "history": [
+      "01-history-list"
+    ],
+    "bar": [
+      "33-record-ready-bar"
+    ],
+    "bar-ready": [
+      "33-record-ready-bar"
+    ],
+    "bar-recording": [
+      "34-record-recording-bar"
+    ],
+    "bar-paused": [
+      "35-record-paused-bar"
+    ],
+    "bar-question-recording": [
+      "36-record-discard-confirm"
+    ],
+    "bar-question-paused": [
+      "42-record-paused-discard-confirm"
+    ],
+    "bar-handle": [
+      "34-record-recording-bar"
+    ],
+    "settings": [
+      "07-settings-general",
+      "08-settings-capture",
+      "06-settings-shortcuts",
+      "05-settings-advanced"
+    ],
+    "about": [
+      "about",
+      "about-build-details"
+    ],
+    "diagnostics": [
+      "58-diagnostics-package"
+    ]
+  },
+  "focus": {
+    "backend": "compositor-witness",
+    "raise_before_input": false
+  },
+  "notifications": {
+    "accessible": {
+      "application": "budgie-panel*"
+    }
+  },
+  "windows": {
+    "editor.canvas": {
+      "owner": "editor",
+      "accessible": {
+        "name": "Image being edited"
+      }
+    },
+    "fileDialog": {
+      "title": ".*",
+      "accessible": {
+        "role": "file chooser",
+        "application": "putgd*"
+      }
+    },
+    "putgdFileDialog": {
+      "title": ".*",
+      "accessible": {
+        "role": "dialog",
+        "application": "putgd*"
+      }
+    },
+    "region": {
+      "title": ".*",
+      "accessible": {
+        "name": "Capture region",
+        "application": "putgd*"
+      }
+    },
+    "recsel": {
+      "title": ".*",
+      "accessible": {
+        "name": "Recording region",
+        "application": "putgd*"
+      }
+    },
+    "historyContextMenu": {
+      "owner": "history",
+      "popup": true
+    },
+    "historyRowMenu": {
+      "owner": "history",
+      "popup": true
+    },
+    "maskOptionsMenu": {
+      "owner": "review",
+      "popup": true
+    },
+    "confirmAction": {
+      "title": ".*",
+      "accessible": {
+        "role": "dialog",
+        "application": "putgd*"
+      }
+    },
+    "confirm": {
+      "title": ".*",
+      "accessible": {
+        "role": "dialog",
+        "application": "putgd*"
+      }
+    },
+    "confirmDestinationDefault": {
+      "title": "Use an untested destination",
+      "accessible": {
+        "role": "alert",
+        "application": "putgd*",
+        "name": "Use an untested destination"
+      }
+    },
+    "confirmDestinationReload": {
+      "title": "Reload settings from file",
+      "accessible": {
+        "role": "alert",
+        "application": "putgd*",
+        "name": "Reload settings from file"
+      }
+    },
+    "confirmDestinationRemove": {
+      "title": "Remove destination",
+      "accessible": {
+        "role": "alert",
+        "application": "putgd*",
+        "name": "Remove destination"
+      }
+    },
+    "confirmDestinationName": {
+      "title": "Add destination",
+      "accessible": {
+        "role": "dialog",
+        "application": "putgd*",
+        "name": "Add destination"
+      }
+    },
+    "destinationActionsMenu": {
+      "owner": "destinations",
+      "popup": true
+    },
+    "destinationAddMenu": {
+      "owner": "destinations",
+      "popup": true
+    },
+    "editorColour": {
+      "title": "^Custom color$"
+    },
+    "editorSavedMenu": {
+      "title": ".*",
+      "owner": "editor",
+      "popup": true
+    },
+    "editorDiscard": {
+      "title": "^Discard edits\\?$"
+    },
+    "historyAddFilterMenu": {
+      "owner": "history",
+      "popup": true
+    },
+    "historySelectionMore": {
+      "owner": "history",
+      "popup": true
+    },
+    "historyInspectorMenu": {
+      "owner": "history",
+      "popup": true
+    },
+    "historyManagementMenu": {
+      "owner": "history",
+      "popup": true
+    },
+    "applicationMenuPopup": {
+      "owner": "history",
+      "popup": true
+    },
+    "windowContextMenu": {
+      "owner": "history",
+      "popup": true
+    },
+    "captureHelp": {
+      "title": "^Help$",
+      "accessible": {
+        "owned": true,
+        "name": "Help"
+      }
+    },
+    "historyConfirmAction": {
+      "title": "^(Delete from destination|Clear history records|Clear temporary files)$"
+    },
+    "historySaveDialog": {
+      "title": "^Save original file as$"
+    },
+    "captureOutputMenu": {
+      "owner": "history",
+      "popup": true
+    },
+    "historyFixture": {
+      "title": "^putgd synthetic fixture$",
+      "accessible": {
+        "owned": true,
+        "name": "putgd synthetic fixture"
+      }
+    },
+    "settings": {
+      "accessible": {
+        "name": "put.gd",
+        "visible": true,
+        "showing": true
+      }
+    },
+    "about": {
+      "accessible": {
+        "name": "About put.gd",
+        "visible": true,
+        "showing": true
+      }
+    },
+    "diagnostics": {
+      "accessible": {
+        "name": "Create diagnostics package",
+        "visible": true,
+        "showing": true
+      }
+    },
+    "settingsConfirm": {
+      "accessible": {
+        "role": "alert",
+        "visible": true,
+        "showing": true
+      }
+    },
+    "trayFixture": {
+      "title": "^putgd synthetic fixture$",
+      "accessible": {
+        "name": "putgd synthetic fixture",
+        "role": "frame"
+      }
+    },
+    "trayAbout": {
+      "title": "^About put.gd$",
+      "accessible": {
+        "name": "About put.gd",
+        "role": "dialog",
+        "application": "putgd*"
+      }
+    }
+  },
+  "compositor": {
+    "kind": "wayland-toplevels",
+    "shell_application": "",
+    "stage": "read-only native ext/wlr toplevel protocols; no geometry or hit-test available"
+  },
+  "selector_accessible": {
+    "query": {
+      "name": "Capture region",
+      "application": "putgd*"
+    }
+  },
+  "evidence": {
+    "note": "Live/sensitive frames: banner areas of this desktop's notification server (top and bottom positions) are always masked; in declared desktop frames non-owned windows other than browsers and the shell's own processes are masked, browser chrome is masked from live window geometry, and window-list panels only when a window title carries a link or registered value.",
+    "notification_areas": [
+      {
+        "anchor": "top-center",
+        "width": 560,
+        "height": 0.45
+      }
+    ],
+    "window_list_panels": [
+      {
+        "anchor": "top",
+        "height": 40
+      }
+    ],
+    "browser": {
+      "title": "(Mozilla Firefox|Firefox|Chromium|Google Chrome|Web)$",
+      "chrome_height": 170
+    },
+    "shell_processes": [
+      "budgie-panel",
+      "budgie-daemon",
+      "labwc"
+    ],
+    "shell_areas": [
+      {
+        "anchor": "top",
+        "height": 40
+      },
+      {
+        "anchor": "left",
+        "width": 72
+      }
+    ]
+  },
+  "recording": {
+    "consent": {
+      "kind": "none",
+      "reason": "native compositor acquisition"
+    }
+  },
+  "live_controls": {
+    "destinationList": {
+      "name": "Destinations",
+      "role": "list"
+    },
+    "destinationLabel": {
+      "name": "Destination name",
+      "role": "text"
+    },
+    "addDestinationCredentials": {
+      "name": "Add credentials\u2026",
+      "role": "push button"
+    },
+    "s3Bucket": {
+      "name": "Bucket",
+      "role": "text"
+    },
+    "s3ObjectPrefix": {
+      "name": "Folder in bucket",
+      "role": "text"
+    },
+    "s3PublicUrlBase": {
+      "name": "Link domain",
+      "role": "text"
+    },
+    "advancedSettings": {
+      "name": "Advanced connection settings",
+      "role": "check box"
+    },
+    "customEndpoint": {
+      "name": "Use a custom endpoint",
+      "role": "check box"
+    },
+    "s3Endpoint": {
+      "name": "Endpoint",
+      "role": "text"
+    },
+    "s3StorageClass": {
+      "name": "Storage class",
+      "role": "text"
+    },
+    "s3ConnectTimeoutMsControl": {
+      "name": "Connect timeout",
+      "role": "spin button"
+    },
+    "s3StorageClassReset": {
+      "name": "Reset Storage class",
+      "role": "push button"
+    },
+    "s3ConnectTimeoutMsReset": {
+      "name": "Reset Connect timeout",
+      "role": "push button"
+    },
+    "credentialAccessKey": {
+      "name": "Access key ID",
+      "role": "text"
+    },
+    "credentialSecretKey": {
+      "name": "Secret access key",
+      "role": "password text"
+    },
+    "credentialSessionToken": {
+      "name": "Session token",
+      "role": "password text"
+    },
+    "storeCredentials": {
+      "name": "Use for this session",
+      "role": "push button"
+    },
+    "s3AclModeHelp": {
+      "name": "Help for Upload access request",
+      "role": "check box"
+    },
+    "destinationStatus": {
+      "name": "Destination status",
+      "role": "label"
+    },
+    "destinationsEmpty": {
+      "name": "No destinations yet*",
+      "role": "label"
+    },
+    "settingsSection0": {
+      "name": "General",
+      "role": "list item"
+    },
+    "settingsSection1": {
+      "name": "Capture",
+      "role": "list item"
+    },
+    "settingsSection2": {
+      "name": "Shortcuts",
+      "role": "list item"
+    },
+    "settingsSection3": {
+      "name": "Advanced",
+      "role": "list item"
+    },
+    "clearRecordShortcut": {
+      "name": "Clear record screen shortcut",
+      "role": "push button"
+    },
+    "resetAdvancedDefaults": {
+      "name": "Reset resource and history limits\u2026",
+      "role": "push button"
+    },
+    "captureExceptionsToggle": {
+      "name": "Different output for some actions",
+      "role": "check box"
+    },
+    "recordRegionShortcut": {
+      "name": "Change capture region shortcut",
+      "role": "push button"
+    },
+    "clearRegionShortcut": {
+      "name": "Clear capture region shortcut",
+      "role": "push button"
+    },
+    "recordWindowShortcut": {
+      "name": "Change capture window shortcut",
+      "role": "push button"
+    },
+    "clearWindowShortcut": {
+      "name": "Clear capture window shortcut",
+      "role": "push button"
+    },
+    "recordDesktopShortcut": {
+      "name": "Change capture desktop shortcut",
+      "role": "push button"
+    },
+    "clearDesktopShortcut": {
+      "name": "Clear capture desktop shortcut",
+      "role": "push button"
+    },
+    "recordClipboardShortcut": {
+      "name": "Change upload clipboard shortcut",
+      "role": "push button"
+    },
+    "clearClipboardShortcut": {
+      "name": "Clear upload clipboard shortcut",
+      "role": "push button"
+    },
+    "recordRecordShortcut": {
+      "name": "Change record screen shortcut",
+      "role": "push button"
+    }
+  },
+  "settings": {
+    "live_controls": {
+      "s3Service": {
+        "name": "*",
+        "role": "combo box",
+        "label": "S3 service"
+      },
+      "s3RegionChoices": {
+        "name": "*",
+        "role": "combo box",
+        "label": "Region"
+      },
+      "s3AclMode": {
+        "name": "*",
+        "role": "combo box",
+        "label": "Upload access request"
+      },
+      "credentialMode": {
+        "name": "*",
+        "role": "combo box",
+        "label": "Credential storage"
+      },
+      "destinationList": {
+        "name": "Destinations",
+        "role": "list"
+      },
+      "destinationLabel": {
+        "name": "Destination name",
+        "role": "text"
+      },
+      "addDestinationCredentials": {
+        "name": "Add credentials\u2026",
+        "role": "push button"
+      },
+      "s3Bucket": {
+        "name": "Bucket",
+        "role": "text"
+      },
+      "s3ObjectPrefix": {
+        "name": "Folder in bucket",
+        "role": "text"
+      },
+      "s3PublicUrlBase": {
+        "name": "Link domain",
+        "role": "text"
+      },
+      "advancedSettings": {
+        "name": "Advanced connection settings",
+        "role": "check box"
+      },
+      "customEndpoint": {
+        "name": "Use a custom endpoint",
+        "role": "check box"
+      },
+      "s3Endpoint": {
+        "name": "Endpoint",
+        "role": "text"
+      },
+      "s3StorageClass": {
+        "name": "Storage class",
+        "role": "text"
+      },
+      "s3ConnectTimeoutMsControl": {
+        "name": "Connect timeout",
+        "role": "spin button"
+      },
+      "s3StorageClassReset": {
+        "name": "Reset Storage class",
+        "role": "push button"
+      },
+      "s3ConnectTimeoutMsReset": {
+        "name": "Reset Connect timeout",
+        "role": "push button"
+      },
+      "credentialAccessKey": {
+        "name": "Access key ID",
+        "role": "text"
+      },
+      "credentialSecretKey": {
+        "name": "Secret access key",
+        "role": "password text"
+      },
+      "credentialSessionToken": {
+        "name": "Session token",
+        "role": "password text"
+      },
+      "storeCredentials": {
+        "name": "Use for this session",
+        "role": "push button"
+      },
+      "s3AclModeHelp": {
+        "name": "Help for Upload access request",
+        "role": "check box"
+      },
+      "destinationStatus": {
+        "name": "Destination status",
+        "role": "label"
+      },
+      "text:Show secret access key": {
+        "name": "Show secret access key",
+        "role": "*"
+      },
+      "text:Hide secret access key": {
+        "name": "Hide secret access key",
+        "role": "*"
+      },
+      "text:Unlock saved credentials": {
+        "name": "Unlock saved credentials",
+        "role": "push button"
+      },
+      "testDestination": {
+        "name": "Test upload and link",
+        "role": "push button"
+      }
+    },
+    "theme_references": {
+      "dark": "07-settings-general",
+      "light": "07-settings-general-light"
+    },
+    "clipboard_write_command": "wl-copy"
+  },
+  "dialogs": {
+    "backends": {
+      "portal": {
+        "available": true,
+        "chooser": "gnome",
+        "accessible": {
+          "application": "org.gnome.Nautilus"
+        },
+        "save_name_button": "Edit File Name",
+        "environment": {
+          "PUTGD_FILE_DIALOG": ""
+        },
+        "location_keys": [
+          "Ctrl+L"
+        ],
+        "folder_accept_keys": [
+          "Alt+S"
+        ],
+        "open_accept_keys": [
+          "Alt+S"
+        ]
+      },
+      "fallback": {
+        "available": true,
+        "environment": {
+          "PUTGD_FILE_DIALOG": "fallback"
+        },
+        "references": {},
+        "expected_reason": "disabled"
+      }
+    }
+  },
+  "control_names": {
+    "lineWidth": [
+      "Line width"
+    ],
+    "textFont": [
+      "Font"
+    ],
+    "colorSwatchRed": [
+      "Color Red"
+    ],
+    "colorSwatchOrange": [
+      "Color Orange"
+    ],
+    "colorSwatchYellow": [
+      "Color Yellow"
+    ],
+    "colorSwatchGreen": [
+      "Color Green"
+    ],
+    "colorSwatchBlue": [
+      "Color Blue"
+    ],
+    "colorSwatchWhite": [
+      "Color White"
+    ],
+    "colorSwatchBlack": [
+      "Color Black"
+    ],
+    "windowMaximize": [
+      "Maximize",
+      "Restore"
+    ],
+    "placeMark": [
+      "Place redaction",
+      "Place blur",
+      "Place arrow",
+      "Place rectangle",
+      "Place highlight",
+      "Place text label"
+    ],
+    "historyCategories": [
+      "Show history items"
+    ],
+    "historyList": [
+      "History items and upload activity"
+    ],
+    "historyReceiptExpanded": [
+      "Show advanced receipt details"
+    ],
+    "historyDetails": [
+      "Advanced original receipt details"
+    ],
+    "historyChoiceuploadStatus": [
+      "Upload state"
+    ],
+    "historyManagementExpanded": [
+      "Manage history"
+    ],
+    "historyAddFilter": [
+      "Add a history filter"
+    ],
+    "uploadClipboardBehaviorHelp": [
+      "Help for After uploading"
+    ],
+    "regionSelectionModeHelp": [
+      "Help for While selecting"
+    ],
+    "namingModeHelp": [
+      "Help for Naming"
+    ]
+  },
+  "editor": {
+    "restore_maximized_keys": [
+      "Alt+F10"
+    ]
+  },
+  "history_window_query": {
+    "name": "put.gd",
+    "role": "frame",
+    "visible": true
+  },
+  "history_hidden_window_query": {
+    "name": "put.gd",
+    "role": "frame"
+  },
+  "browser": {
+    "command": [
+      "snap",
+      "run",
+      "firefox"
+    ],
+    "profile_root": "~/snap/firefox/common"
+  },
+  "links": {
+    "notification_query": {
+      "name": "Upload complete"
+    },
+    "row_open_query": {
+      "name": "Open in browser",
+      "role": "menu item"
+    }
+  },
+  "file_manager": {
+    "process": "nemo",
+    "command": [
+      "nemo"
+    ],
+    "quit": [
+      "nemo",
+      "--quit"
+    ]
+  },
+  "selectors": {
+    "bar_drag": false
+  },
+  "mcp_python": "/home/lab/putgd-surface-mcp/.venv/bin/python",
+  "mcp_helper": "/home/lab/putgd-surface-mcp/.venv/bin/putgd-mcp",
+  "tray": {
+    "icon": {
+      "name": "put.gd",
+      "role": "menu",
+      "application": "gnome-shell*"
+    },
+    "notification_server": "gnome-shell",
+    "resident_notifications": false,
+    "shortcut_channel": "gnome-extension",
+    "fixture_issue": 670,
+    "references": {
+      "full": "00-tray-menu-idle",
+      "output": "00-tray-output-submenu",
+      "uploading": "00-tray-menu-uploading",
+      "proton-busy": "00-tray-menu-proton-busy",
+      "edit": "00-tray-edit-submenu"
+    },
+    "hover_before_click": true,
+    "notification_prepare_cli": true,
+    "activation_clicks": 2,
+    "menu_prepare_background": true,
+    "menu": {
+      "role": "label",
+      "enabled_from_parent": true
+    }
+  },
+  "shell_health": {
+    "process": "budgie-panel"
+  },
+  "isolated_keyring": true
+}

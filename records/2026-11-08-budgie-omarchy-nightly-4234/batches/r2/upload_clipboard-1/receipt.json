@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 2,
+  "environment": {
+    "desktop": "fedora45-budgie",
+    "host": "d69",
+    "placement": "guest",
+    "guest": "fedora45-budgie",
+    "package": "appimage",
+    "destination": "local",
+    "build": "2b5e1b2d3c11757f805331e4104eb06b2c79ad5c",
+    "placement_details": {
+      "run_id": "4e0630d9-b379-4406-a612-b31c849940df",
+      "lab_profile": "fedora45-budgie",
+      "run_directory": "/home/patrick/work/np1275/work/lab-runs/np2",
+      "session_root": "/dev/shm/n6850641e",
+      "socket": "/dev/shm/n6850641e/runtime/putgd/session.sock",
+      "input_backend": "qmp",
+      "frame_backend": "vnc-in-memory"
+    },
+    "target": {
+      "hostname": "fedora",
+      "kernel": "7.2.11-300.fc45.x86_64",
+      "machine": "x86_64",
+      "os": {
+        "ID": "fedora",
+        "VERSION_ID": "45",
+        "VARIANT_ID": "budgie"
+      },
+      "session_type": "wayland",
+      "desktop": "Budgie",
+      "qt_platform": "wayland;xcb"
+    },
+    "kwin_entry_staging": [],
+    "clipboard_preservation": {
+      "restored_and_stopped": true,
+      "reviews": [],
+      "ready": true,
+      "preserved_mimes": [],
+      "transport": "wayland",
+      "pid": 117055,
+      "start": "297717",
+      "boot": "ffc75a5a-f2b9-46e3-9554-12b8c348f177",
+      "reaped_pids": []
+    },
+    "observed_build": {
+      "baseVersion": "26.1108.4234",
+      "commitCount": 4234,
+      "dirty": false,
+      "gitCommit": "2b5e1b2d3c11757f805331e4104eb06b2c79ad5c",
+      "gitTree": "33b8f29b0a44ec5c0dc37d154cc0938d3612d328",
+      "packageVersion": "26.1108.4234~nightly",
+      "schemaVersion": 1,
+      "sourceProvenance": "git",
+      "version": "26.1108.4234-nightly"
+    },
+    "shell_health": {
+      "process": "budgie-panel",
+      "pid": 1200,
+      "start": 1431,
+      "cores_readable": true
+    },
+    "private_cleanup": "resident-log-and-state-root-removed",
+    "coverage_export": {
+      "scanned_before_copy": true,
+      "copy_scan_passed": true,
+      "published": true
+    }
+  },
+  "interactions": [
+    {
+      "interaction": "shell.command-upload-clipboard",
+      "desktop": "fedora45-budgie",
+      "package": "appimage",
+      "functional": "blocked",
+      "visual": "frames",
+      "receipt": "work/np/r2/upload_clipboard-1/receipt.json",
+      "note": "private clipboard fixture: notifications disabled before publication; geometry: RuntimeError: Wayland window cannot be placed on the desktop: put.gd: compositor window for 'put.gd' (pid 122169, 1280x765) is missing or ambiguous (0 matches); compositor has for pid 122169: no windows",
+      "host": "d69",
+      "placement": "guest",
+      "guest": "fedora45-budgie",
+      "destination": "local",
+      "review": true,
+      "review_reason": "desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/outcomes.upload_clipboard/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "clipboard-image-before-upload",
+          "path": "frames/outcomes.upload_clipboard/01-clipboard-image-before-upload.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "outcome-failed-before-cleanup",
+          "path": "frames/outcomes.upload_clipboard/02-outcome-failed-before-cleanup.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/outcomes.upload_clipboard/03-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "outcomes.upload_clipboard",
+      "build": "2b5e1b2d3c11757f805331e4104eb06b2c79ad5c",
+      "at": "2026-11-08T18:00:03Z"
+    }
+  ],
+  "secret_scan": {
+    "quarantine": [],
+    "passed": true,
+    "files": 9,
+    "pngs": 4,
+    "findings": []
+  }
+}

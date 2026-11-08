@@ -1,0 +1,1069 @@
+{
+  "desktop": "ubuntu-budgie-2404",
+  "input_backend": {
+    "guest": "qmp",
+    "native": "vnc-or-host-input"
+  },
+  "catalog_tolerance": 0.025,
+  "notification_server": "budgie-daemon",
+  "default_browser_kind": "firefox",
+  "at_spi": {
+    "available": true,
+    "reason": ""
+  },
+  "session": "x11",
+  "known_gaps": [
+    "Catalogs are synthetic content; desktop drawn surfaces require human review"
+  ],
+  "window_titles": {
+    "history": "^put\\.gd$",
+    "settings": "^put.gd$",
+    "main": "^put\\.gd$",
+    "editor": "^Edit (image|& upload)",
+    "review": "Review",
+    "diagnostics": "^Create diagnostics package$",
+    "about": "^About put.gd$",
+    "destinations": "put.gd",
+    "updates": "^put\\.gd$",
+    "bar": "^put.gd recording controls$",
+    "fileDialog": ".*",
+    "putgdFileDialog": ".*",
+    "region": ".*",
+    "recsel": ".*",
+    "confirmDestinationRemove": "Remove destination",
+    "confirmDestinationDefault": "Use an untested destination",
+    "confirmDestinationReload": "Reload settings from file",
+    "confirmDestinationName": "Add destination",
+    "historyExpandedPreview": "Preview \u2014",
+    "historyCancelAllConfirmation": "Cancel all uploads",
+    "confirmAction": "^(Delete from destination|Clear history records|Clear temporary files)$",
+    "bar-ready": "^put.gd recording controls$",
+    "bar-recording": "^put.gd recording controls$",
+    "bar-paused": "^put.gd recording controls$",
+    "bar-question-recording": "^put.gd recording controls$",
+    "bar-question-paused": "^put.gd recording controls$",
+    "bar-handle": "^put.gd recording controls$",
+    "settingsConfirm": "^(Reset limits to defaults|Reload settings from file|Clear logs)$"
+  },
+  "catalog_windows": {
+    "destinations": [
+      "04-destinations-s3"
+    ],
+    "confirmDestinationDefault": [
+      "confirm-make-default-untested"
+    ],
+    "confirmDestinationRemove": [
+      "confirm-remove-destination"
+    ],
+    "confirmDestinationReload": [
+      "53-reload-confirm"
+    ],
+    "confirmDestinationName": [
+      "confirm-add-destination-name"
+    ],
+    "editorDiscard": [
+      "19-editor-discard-confirm"
+    ],
+    "history": [
+      "01-history-list"
+    ],
+    "bar": [
+      "33-record-ready-bar"
+    ],
+    "bar-ready": [
+      "33-record-ready-bar"
+    ],
+    "bar-recording": [
+      "34-record-recording-bar"
+    ],
+    "bar-paused": [
+      "35-record-paused-bar"
+    ],
+    "bar-question-recording": [
+      "36-record-discard-confirm"
+    ],
+    "bar-question-paused": [
+      "42-record-paused-discard-confirm"
+    ],
+    "bar-handle": [
+      "34-record-recording-bar"
+    ],
+    "settings": [
+      "07-settings-general",
+      "08-settings-capture",
+      "06-settings-shortcuts",
+      "05-settings-advanced"
+    ],
+    "diagnostics": [
+      "58-diagnostics-package"
+    ],
+    "about": [
+      "about",
+      "about-build-details"
+    ]
+  },
+  "shell_health": {
+    "process": "budgie-panel"
+  },
+  "focus": {
+    "backend": "ewmh",
+    "raise_before_input": false
+  },
+  "notifications": {
+    "accessible": {
+      "application": "budgie*"
+    },
+    "draw_seconds": 4
+  },
+  "windows": {
+    "editor.canvas": {
+      "owner": "editor",
+      "accessible": {
+        "name": "Image being edited"
+      }
+    },
+    "fileDialog": {
+      "title": ".*",
+      "accessible": {
+        "role": "file chooser",
+        "application": "putgd*"
+      }
+    },
+    "putgdFileDialog": {
+      "title": ".*",
+      "accessible": {
+        "role": "dialog",
+        "application": "putgd*"
+      },
+      "owned": true
+    },
+    "region": {
+      "title": ".*",
+      "accessible": {
+        "name": "Capture region",
+        "application": "putgd*"
+      }
+    },
+    "recsel": {
+      "title": ".*",
+      "accessible": {
+        "name": "Recording region",
+        "application": "putgd*"
+      }
+    },
+    "historyContextMenu": {
+      "owner": "history",
+      "popup": true
+    },
+    "historyRowMenu": {
+      "owner": "history",
+      "popup": true
+    },
+    "maskOptionsMenu": {
+      "owner": "review",
+      "popup": true
+    },
+    "confirmAction": {
+      "title": ".*",
+      "accessible": {
+        "role": "dialog",
+        "application": "putgd*"
+      }
+    },
+    "confirm": {
+      "title": ".*",
+      "accessible": {
+        "role": "dialog",
+        "application": "putgd*"
+      }
+    },
+    "confirmDestinationDefault": {
+      "title": "Use an untested destination",
+      "accessible": {
+        "role": "alert",
+        "application": "putgd*",
+        "name": "Use an untested destination"
+      }
+    },
+    "confirmDestinationReload": {
+      "title": "Reload settings from file",
+      "accessible": {
+        "role": "alert",
+        "application": "putgd*",
+        "name": "Reload settings from file"
+      }
+    },
+    "confirmDestinationRemove": {
+      "title": "Remove destination",
+      "accessible": {
+        "role": "alert",
+        "application": "putgd*",
+        "name": "Remove destination"
+      }
+    },
+    "confirmDestinationName": {
+      "title": "Add destination",
+      "accessible": {
+        "role": "dialog",
+        "application": "putgd*",
+        "name": "Add destination"
+      }
+    },
+    "destinationActionsMenu": {
+      "owner": "destinations",
+      "popup": true
+    },
+    "destinationAddMenu": {
+      "owner": "destinations",
+      "popup": true
+    },
+    "editorColour": {
+      "title": "^Custom color$"
+    },
+    "editorSavedMenu": {
+      "title": ".*",
+      "owner": "editor",
+      "popup": true
+    },
+    "editorDiscard": {
+      "title": "^Discard edits\\?$"
+    },
+    "historyAddFilterMenu": {
+      "owner": "history",
+      "popup": true
+    },
+    "historySelectionMore": {
+      "owner": "history",
+      "popup": true
+    },
+    "historyInspectorMenu": {
+      "owner": "history",
+      "popup": true
+    },
+    "historyManagementMenu": {
+      "owner": "history",
+      "popup": true
+    },
+    "applicationMenuPopup": {
+      "owner": "history",
+      "popup": true
+    },
+    "windowContextMenu": {
+      "owner": "history",
+      "popup": true
+    },
+    "captureHelp": {
+      "title": "^Help$",
+      "accessible": {
+        "owned": true,
+        "name": "Help"
+      }
+    },
+    "historyConfirmAction": {
+      "title": "^(Delete from destination|Clear history records|Clear temporary files)$"
+    },
+    "historySaveDialog": {
+      "title": "^Save original file as$"
+    },
+    "captureOutputMenu": {
+      "owner": "history",
+      "popup": true
+    },
+    "historyFixture": {
+      "title": "^putgd synthetic fixture$",
+      "accessible": {
+        "owned": true,
+        "name": "putgd synthetic fixture"
+      }
+    },
+    "trayFixture": {
+      "title": "^putgd synthetic fixture$",
+      "accessible": {
+        "name": "putgd synthetic fixture",
+        "role": "frame"
+      }
+    },
+    "trayAbout": {
+      "title": "^About put.gd$",
+      "accessible": {
+        "name": "About put.gd",
+        "role": "dialog",
+        "application": "putgd*"
+      }
+    }
+  },
+  "selector_accessible": {
+    "query": {
+      "owned": true
+    },
+    "via": "run observer focus event: NativeRegionAccessible is not one of Qt's application children, so a tree walk misses it (#701)"
+  },
+  "evidence": {
+    "note": "Live/sensitive frames: banner areas of this desktop's notification server (top and bottom positions) are always masked; in declared desktop frames non-owned windows other than browsers and the shell's own processes are masked, browser chrome is masked from live window geometry, and window-list panels only when a window title carries a link or registered value.",
+    "notification_areas": [
+      {
+        "anchor": "top-right",
+        "width": 520,
+        "height": 0.5
+      },
+      {
+        "anchor": "bottom-right",
+        "width": 520,
+        "height": 0.5
+      }
+    ],
+    "window_list_panels": [
+      {
+        "anchor": "bottom",
+        "height": 48
+      }
+    ],
+    "browser": {
+      "title": "(Mozilla Firefox|Firefox|Chromium|Google Chrome|Web)$",
+      "chrome_height": 170
+    },
+    "shell_processes": [
+      "budgie-panel",
+      "budgie-daemon",
+      "budgie-wm"
+    ],
+    "shell_areas": [
+      {
+        "anchor": "bottom",
+        "height": 48
+      }
+    ]
+  },
+  "recording": {
+    "consent": {
+      "kind": "none",
+      "reason": "X11 capture reads the X server (ximagesrc); no portal consent dialog may appear"
+    }
+  },
+  "live_controls": {
+    "destinationList": {
+      "name": "Destinations",
+      "role": "list"
+    },
+    "destinationLabel": {
+      "name": "Destination name",
+      "role": "text"
+    },
+    "addDestinationCredentials": {
+      "name": "Add credentials\u2026",
+      "role": "push button"
+    },
+    "s3Bucket": {
+      "name": "Bucket",
+      "role": "text"
+    },
+    "s3ObjectPrefix": {
+      "name": "Folder in bucket",
+      "role": "text"
+    },
+    "s3PublicUrlBase": {
+      "name": "Link domain",
+      "role": "text"
+    },
+    "advancedSettings": {
+      "name": "Advanced connection settings",
+      "role": "check box"
+    },
+    "customEndpoint": {
+      "name": "Use a custom endpoint",
+      "role": "check box"
+    },
+    "s3Endpoint": {
+      "name": "Endpoint",
+      "role": "text"
+    },
+    "s3StorageClass": {
+      "name": "Storage class",
+      "role": "text"
+    },
+    "s3ConnectTimeoutMsControl": {
+      "name": "Connect timeout",
+      "role": "spin button"
+    },
+    "s3StorageClassReset": {
+      "name": "Reset Storage class",
+      "role": "push button"
+    },
+    "s3ConnectTimeoutMsReset": {
+      "name": "Reset Connect timeout",
+      "role": "push button"
+    },
+    "credentialAccessKey": {
+      "name": "Access key ID",
+      "role": "text"
+    },
+    "credentialSecretKey": {
+      "name": "Secret access key",
+      "role": "password text"
+    },
+    "credentialSessionToken": {
+      "name": "Session token",
+      "role": "password text"
+    },
+    "storeCredentials": {
+      "name": "Use for this session",
+      "role": "push button"
+    },
+    "s3AclModeHelp": {
+      "name": "Help for Upload access request",
+      "role": "check box"
+    },
+    "destinationStatus": {
+      "name": "Destination status",
+      "role": "label"
+    },
+    "destinationsEmpty": {
+      "name": "No destinations yet*",
+      "role": "label"
+    },
+    "blurStrengthValue": {
+      "name": "Blur radius",
+      "role": "spin button"
+    },
+    "textSize": {
+      "name": "Text size in image pixels",
+      "role": "spin button"
+    },
+    "captureExceptionsToggle": {
+      "name": "Different output for some actions",
+      "role": "push button"
+    }
+  },
+  "settings": {
+    "live_controls": {
+      "s3Service": {
+        "name": "*",
+        "role": "combo box",
+        "label": "S3 service"
+      },
+      "s3RegionChoices": {
+        "name": "*",
+        "role": "combo box",
+        "label": "Region"
+      },
+      "s3AclMode": {
+        "name": "*",
+        "role": "combo box",
+        "label": "Upload access request"
+      },
+      "credentialMode": {
+        "name": "*",
+        "role": "combo box",
+        "label": "Credential storage"
+      },
+      "destinationList": {
+        "name": "Destinations",
+        "role": "list"
+      },
+      "destinationLabel": {
+        "name": "Destination name",
+        "role": "text"
+      },
+      "addDestinationCredentials": {
+        "name": "Add credentials\u2026",
+        "role": "push button"
+      },
+      "s3Bucket": {
+        "name": "Bucket",
+        "role": "text"
+      },
+      "s3ObjectPrefix": {
+        "name": "Folder in bucket",
+        "role": "text"
+      },
+      "s3PublicUrlBase": {
+        "name": "Link domain",
+        "role": "text"
+      },
+      "advancedSettings": {
+        "name": "Advanced connection settings",
+        "role": "check box"
+      },
+      "customEndpoint": {
+        "name": "Use a custom endpoint",
+        "role": "check box"
+      },
+      "s3Endpoint": {
+        "name": "Endpoint",
+        "role": "text"
+      },
+      "s3StorageClass": {
+        "name": "Storage class",
+        "role": "text"
+      },
+      "s3ConnectTimeoutMsControl": {
+        "name": "Connect timeout",
+        "role": "spin button"
+      },
+      "s3StorageClassReset": {
+        "name": "Reset Storage class",
+        "role": "push button"
+      },
+      "s3ConnectTimeoutMsReset": {
+        "name": "Reset Connect timeout",
+        "role": "push button"
+      },
+      "credentialAccessKey": {
+        "name": "Access key ID",
+        "role": "text"
+      },
+      "credentialSecretKey": {
+        "name": "Secret access key",
+        "role": "password text"
+      },
+      "credentialSessionToken": {
+        "name": "Session token",
+        "role": "password text"
+      },
+      "storeCredentials": {
+        "name": "Use for this session",
+        "role": "push button"
+      },
+      "s3AclModeHelp": {
+        "name": "Help for Upload access request",
+        "role": "check box"
+      },
+      "destinationStatus": {
+        "name": "Destination status",
+        "role": "label"
+      },
+      "text:Show secret access key": {
+        "name": "Show secret access key",
+        "role": "*"
+      },
+      "text:Hide secret access key": {
+        "name": "Hide secret access key",
+        "role": "*"
+      },
+      "text:Unlock saved credentials": {
+        "name": "Unlock saved credentials",
+        "role": "push button"
+      },
+      "testDestination": {
+        "name": "Test upload and link",
+        "role": "push button"
+      },
+      "archiveRoot": {
+        "name": "Save to",
+        "role": "text"
+      },
+      "namingMode": {
+        "name": "*",
+        "role": "combo box",
+        "label": "Naming"
+      },
+      "collisionPolicy": {
+        "name": "*",
+        "role": "combo box",
+        "label": "When a name exists"
+      },
+      "fileTemplate": {
+        "name": "Copied & uploaded files",
+        "role": "text"
+      },
+      "captureTemplate": {
+        "name": "Screen captures",
+        "role": "text"
+      },
+      "imageTemplate": {
+        "name": "Clipboard images",
+        "role": "text"
+      },
+      "textTemplate": {
+        "name": "Clipboard text",
+        "role": "text"
+      },
+      "recordRegionShortcut": {
+        "name": "Change capture region shortcut",
+        "role": "push button"
+      },
+      "clearRegionShortcut": {
+        "name": "Clear capture region shortcut",
+        "role": "push button"
+      },
+      "recordWindowShortcut": {
+        "name": "Change capture window shortcut",
+        "role": "push button"
+      },
+      "clearWindowShortcut": {
+        "name": "Clear capture window shortcut",
+        "role": "push button"
+      },
+      "recordDesktopShortcut": {
+        "name": "Change capture desktop shortcut",
+        "role": "push button"
+      },
+      "clearDesktopShortcut": {
+        "name": "Clear capture desktop shortcut",
+        "role": "push button"
+      },
+      "recordEditShortcut": {
+        "name": "Change capture region & edit shortcut",
+        "role": "push button"
+      },
+      "clearEditShortcut": {
+        "name": "Clear capture region & edit shortcut",
+        "role": "push button"
+      },
+      "recordRecordShortcut": {
+        "name": "Change record screen shortcut",
+        "role": "push button"
+      },
+      "clearRecordShortcut": {
+        "name": "Clear record screen shortcut",
+        "role": "push button"
+      },
+      "recordClipboardShortcut": {
+        "name": "Change upload clipboard shortcut",
+        "role": "push button"
+      },
+      "clearClipboardShortcut": {
+        "name": "Clear upload clipboard shortcut",
+        "role": "push button"
+      },
+      "settingsSection0": {
+        "name": "General",
+        "role": "list item"
+      },
+      "settingsSection1": {
+        "name": "Capture",
+        "role": "list item"
+      },
+      "settingsSection2": {
+        "name": "Shortcuts",
+        "role": "list item"
+      },
+      "settingsSection3": {
+        "name": "Advanced",
+        "role": "list item"
+      },
+      "categoryFoldersToggle": {
+        "name": "Different folders by file type",
+        "role": "check box"
+      },
+      "launchAtLogin": {
+        "name": "Launch at login",
+        "role": "check box"
+      },
+      "unlockCredentialsAtStartup": {
+        "name": "Unlock saved credentials when put.gd starts",
+        "role": "check box"
+      },
+      "notifications": {
+        "name": "Show desktop notifications",
+        "role": "check box"
+      },
+      "keepUploadCopies": {
+        "name": "Keep a local copy",
+        "role": "check box"
+      },
+      "debugLogging": {
+        "name": "Keep detailed debug logs for 24 hours",
+        "role": "check box"
+      },
+      "appearanceTheme": {
+        "name": "*",
+        "role": "combo box",
+        "label": "Theme"
+      },
+      "uploadClipboardBehavior": {
+        "name": "*",
+        "role": "combo box",
+        "label": "After uploading"
+      },
+      "regionSelectionMode": {
+        "name": "*",
+        "role": "combo box",
+        "label": "While selecting"
+      },
+      "historyRetentionChoice": {
+        "name": "*",
+        "role": "combo box",
+        "label": "Keep history for"
+      },
+      "failedArtifactChoice": {
+        "name": "*",
+        "role": "combo box",
+        "label": "Keep files for retry"
+      },
+      "recentActivityLimit": {
+        "name": "Items in recent list",
+        "role": "text"
+      },
+      "folderImages": {
+        "name": "Images",
+        "role": "text"
+      },
+      "folderVideos": {
+        "name": "Recordings",
+        "role": "text"
+      },
+      "folderText": {
+        "name": "Clipboard text",
+        "role": "text"
+      },
+      "folderOther": {
+        "name": "Other files",
+        "role": "text"
+      },
+      "desktopSupportDetailsToggle": {
+        "name": "Desktop support details",
+        "role": "check box"
+      },
+      "resourceLimitsToggle": {
+        "name": "Resource limits",
+        "role": "check box"
+      },
+      "createDiagnosticsPackage": {
+        "name": "Create diagnostics package",
+        "role": "push button"
+      },
+      "refreshDesktopSupport": {
+        "name": "Refresh desktop support",
+        "role": "push button"
+      },
+      "copyDesktopDetails": {
+        "name": "Copy details",
+        "role": "push button"
+      },
+      "resetAdvancedDefaults": {
+        "name": "Reset resource and history limits\u2026",
+        "role": "push button"
+      },
+      "reloadSettings": {
+        "name": "Reload from file\u2026",
+        "role": "push button"
+      },
+      "defaultCaptureDestination": {
+        "name": "Destination",
+        "role": "combo box"
+      },
+      "defaultCaptureSharing": {
+        "name": "Sharing",
+        "role": "combo box"
+      },
+      "chooseCaptureDestination": {
+        "name": "Choose a destination",
+        "role": "push button"
+      },
+      "enableLocalCopies": {
+        "name": "Turn on Keep a local copy",
+        "role": "push button"
+      },
+      "captureExceptionsToggle": {
+        "name": "Different output for some actions",
+        "role": "check box"
+      },
+      "profileRegion": {
+        "name": "Capture region destination",
+        "role": "combo box"
+      },
+      "publicationRegion": {
+        "name": "Capture region sharing",
+        "role": "combo box"
+      },
+      "removeRegionException": {
+        "name": "Remove capture region exception",
+        "role": "push button"
+      },
+      "profileWindow": {
+        "name": "Capture window destination",
+        "role": "combo box"
+      },
+      "publicationWindow": {
+        "name": "Capture window sharing",
+        "role": "combo box"
+      },
+      "removeWindowException": {
+        "name": "Remove capture window exception",
+        "role": "push button"
+      },
+      "profileDesktop": {
+        "name": "Capture desktop destination",
+        "role": "combo box"
+      },
+      "publicationDesktop": {
+        "name": "Capture desktop sharing",
+        "role": "combo box"
+      },
+      "removeDesktopException": {
+        "name": "Remove capture desktop exception",
+        "role": "push button"
+      },
+      "profileClipboard": {
+        "name": "Upload clipboard destination",
+        "role": "combo box"
+      },
+      "publicationClipboard": {
+        "name": "Upload clipboard sharing",
+        "role": "combo box"
+      },
+      "removeClipboardException": {
+        "name": "Remove upload clipboard exception",
+        "role": "push button"
+      },
+      "profileEdit": {
+        "name": "Capture region & edit destination",
+        "role": "combo box"
+      },
+      "publicationEdit": {
+        "name": "Capture region & edit sharing",
+        "role": "combo box"
+      },
+      "removeEditException": {
+        "name": "Remove capture region & edit exception",
+        "role": "push button"
+      },
+      "profileRecord": {
+        "name": "Record screen destination",
+        "role": "combo box"
+      },
+      "publicationRecord": {
+        "name": "Record screen sharing",
+        "role": "combo box"
+      },
+      "removeRecordException": {
+        "name": "Remove record screen exception",
+        "role": "push button"
+      },
+      "uploadClipboardBehaviorHelp": {
+        "name": "Help for After uploading",
+        "role": "check box"
+      },
+      "regionSelectionModeHelp": {
+        "name": "Help for While selecting",
+        "role": "check box"
+      },
+      "namingModeHelp": {
+        "name": "Help for Naming",
+        "role": "check box"
+      },
+      "shortcutHelpToggle": {
+        "name": "How shortcuts work",
+        "role": "check box"
+      },
+      "refreshShortcutSupport": {
+        "name": "Check shortcuts again",
+        "role": "push button"
+      },
+      "text:Add an exception\u2026": {
+        "name": "Add an exception\u2026",
+        "role": "*"
+      }
+    },
+    "prepare_script": "set -eu\nbusctl --user set-property org.a11y.Bus /org/a11y/bus org.a11y.Status IsEnabled b true\nbusctl --user set-property org.a11y.Bus /org/a11y/bus org.a11y.Status ScreenReaderEnabled b true\nsettings_output=$(xrandr --query | awk '/ connected primary / {print $1; exit}')\ntest -n \"$settings_output\" && xrandr --output \"$settings_output\" --mode 1920x1080\ntest -n \"$settings_window\" && xdotool windowsize \"$settings_window\" 1440 960 windowmove \"$settings_window\" 120 40\nxdotool windowactivate --sync \"$settings_window\" windowraise \"$settings_window\"",
+    "foreground_script": "export settings_window\npython3 - <<'SETTINGS_INPUT'\nimport json, os, pathlib, subprocess\nwindow = os.environ['settings_window']\nassert window.isdecimal()\ndef command(*args):\n    return subprocess.check_output(['xdotool', *args], text=True).strip()\npid = int(command('getwindowpid', window))\nenvironment = pathlib.Path('/proc/' + str(pid) + '/environ').read_bytes().split(b'\\0')\nassert ('XDG_RUNTIME_DIR=' + os.environ['XDG_RUNTIME_DIR']).encode() in environment\nif command('getactivewindow') != window:\n    command('windowraise', window, 'windowactivate', '--sync', window)\npointer = dict(line.split('=', 1) for line in command('getmouselocation', '--shell').splitlines())\nprint(json.dumps({'window': window, 'pid': pid, 'active': command('getactivewindow'),\n                  'focus': command('getwindowfocus'), 'x': int(pointer['X']), 'y': int(pointer['Y'])}))\nSETTINGS_INPUT",
+    "input_state_script": "export settings_window\npython3 - <<'SETTINGS_INPUT'\nimport json, os, pathlib, subprocess\nwindow = os.environ['settings_window']\nassert window.isdecimal()\ndef command(*args):\n    return subprocess.check_output(['xdotool', *args], text=True).strip()\npid = int(command('getwindowpid', window))\nenvironment = pathlib.Path('/proc/' + str(pid) + '/environ').read_bytes().split(b'\\0')\nassert ('XDG_RUNTIME_DIR=' + os.environ['XDG_RUNTIME_DIR']).encode() in environment\n\npointer = dict(line.split('=', 1) for line in command('getmouselocation', '--shell').splitlines())\nprint(json.dumps({'window': window, 'pid': pid, 'active': command('getactivewindow'),\n                  'focus': command('getwindowfocus'), 'x': int(pointer['X']), 'y': int(pointer['Y'])}))\nSETTINGS_INPUT",
+    "viewport_insets": [
+      110,
+      40
+    ],
+    "theme_references": {
+      "dark": "07-settings-general",
+      "light": "07-settings-general-light"
+    },
+    "clipboard_write_command": "xclip -selection clipboard"
+  },
+  "dialogs": {
+    "backends": {
+      "portal": {
+        "available": true,
+        "chooser": "gtk",
+        "environment": {
+          "PUTGD_FILE_DIALOG": ""
+        },
+        "location_keys": [
+          "Ctrl+L"
+        ],
+        "folder_accept_keys": [
+          "Alt+S"
+        ],
+        "geometry_accessible": false
+      },
+      "fallback": {
+        "available": true,
+        "environment": {
+          "PUTGD_FILE_DIALOG": "fallback"
+        },
+        "references": {},
+        "expected_reason": "disabled"
+      }
+    }
+  },
+  "editor": {
+    "restore_maximized_keys": [
+      "Alt+F10"
+    ]
+  },
+  "control_names": {
+    "lineWidth": [
+      "Line width"
+    ],
+    "textFont": [
+      "Font"
+    ],
+    "colorSwatchRed": [
+      "Color Red"
+    ],
+    "colorSwatchOrange": [
+      "Color Orange"
+    ],
+    "colorSwatchYellow": [
+      "Color Yellow"
+    ],
+    "colorSwatchGreen": [
+      "Color Green"
+    ],
+    "colorSwatchBlue": [
+      "Color Blue"
+    ],
+    "colorSwatchWhite": [
+      "Color White"
+    ],
+    "colorSwatchBlack": [
+      "Color Black"
+    ],
+    "windowMaximize": [
+      "Maximize",
+      "Restore"
+    ],
+    "placeMark": [
+      "Place redaction",
+      "Place blur",
+      "Place arrow",
+      "Place rectangle",
+      "Place highlight",
+      "Place text label"
+    ],
+    "historyCategories": [
+      "Show history items"
+    ],
+    "historyList": [
+      "History items and upload activity"
+    ],
+    "historyReceiptExpanded": [
+      "Show advanced receipt details"
+    ],
+    "historyDetails": [
+      "Advanced original receipt details"
+    ],
+    "historyChoiceuploadStatus": [
+      "Upload state"
+    ],
+    "historyManagementExpanded": [
+      "Manage history"
+    ],
+    "historyAddFilter": [
+      "Add a history filter"
+    ],
+    "uploadClipboardBehaviorHelp": [
+      "Help for After uploading"
+    ],
+    "regionSelectionModeHelp": [
+      "Help for While selecting"
+    ],
+    "namingModeHelp": [
+      "Help for Naming"
+    ],
+    "shortcutHelpToggle": [
+      "How shortcuts work"
+    ]
+  },
+  "events": {
+    "clipboardWrite": "xclip -selection clipboard",
+    "panelTheme": {
+      "read": [
+        "env",
+        "-u",
+        "XDG_CONFIG_HOME",
+        "gsettings",
+        "get",
+        "org.cinnamon.theme",
+        "name"
+      ],
+      "write": [
+        "env",
+        "-u",
+        "XDG_CONFIG_HOME",
+        "gsettings",
+        "set",
+        "org.cinnamon.theme",
+        "name"
+      ],
+      "light": "Mint-Y",
+      "dark": "Mint-Y-Dark",
+      "sessionDconf": ".config/dconf",
+      "sessionDconfNote": "#702: the resident reads org.cinnamon.theme with its own gsettings, and dconf reads the user database from $XDG_CONFIG_HOME/dconf/user. Writers (Themes settings, the write vector above) go through dconf-service into the session's ~/.config/dconf whatever their XDG_CONFIG_HOME, so with the private profile alone the resident reads an empty database (the schema default) and never sees the change. The recipe links the private $XDG_CONFIG_HOME/dconf to the session's directory for this event only; every other XDG directory stays private. Measured on a fresh Mint 22 guest: private profile misses every change; with this link (or no private profile) the resident follows it, given the app fix for desktop-theme-only changes, PR #728 (Cinnamon's portal does not report org.cinnamon.theme)."
+    }
+  },
+  "history_window_anchor": {
+    "x": 24,
+    "y": 72
+  },
+  "history_window_anchor_tolerance": 32,
+  "browser": {
+    "command": [
+      "firefox"
+    ],
+    "timeouts": {
+      "protocol": 30,
+      "page": 60
+    }
+  },
+  "links": {
+    "notification_query": {
+      "name": "Upload complete"
+    },
+    "row_open_query": {
+      "name": "Open in browser",
+      "role": "menu item"
+    }
+  },
+  "file_manager": {
+    "process": "nemo",
+    "command": [
+      "nemo"
+    ],
+    "quit": [
+      "nemo",
+      "--quit"
+    ],
+    "view_keys": [
+      "Ctrl+2"
+    ]
+  },
+  "selectors": {
+    "bar_drag": true
+  },
+  "mcp_python": "/home/lab/putgd-surface-mcp/.venv/bin/python",
+  "mcp_helper": "/home/lab/putgd-surface-mcp/.venv/bin/putgd-mcp",
+  "tray": {
+    "icon": {
+      "name": "put.gd",
+      "role": "label",
+      "application": "budgie-panel*"
+    },
+    "notification_server": "budgie-daemon",
+    "resident_notifications": true,
+    "shortcut_channel": "x11",
+    "fixture_issue": 670,
+    "menu": {
+      "role": "label",
+      "reject_origin": true
+    },
+    "references": {
+      "full": "00-tray-menu-idle",
+      "output": "00-tray-output-submenu",
+      "uploading": "00-tray-menu-uploading",
+      "proton-busy": "00-tray-menu-proton-busy",
+      "edit": "00-tray-edit-submenu"
+    },
+    "notification_prepare_cli": true,
+    "menu_prepare_background": true
+  }
+}

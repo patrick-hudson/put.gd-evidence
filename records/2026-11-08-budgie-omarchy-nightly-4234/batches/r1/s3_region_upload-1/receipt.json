@@ -1,0 +1,398 @@
+{
+  "schemaVersion": 2,
+  "environment": {
+    "desktop": "ubuntu-budgie-2404",
+    "host": "f44",
+    "placement": "guest",
+    "guest": "ubuntu-budgie-2404",
+    "package": "deb",
+    "destination": "s3",
+    "build": "2b5e1b2d3c11757f805331e4104eb06b2c79ad5c",
+    "placement_details": {
+      "run_id": "2aabe9b4-baca-4e4f-9593-8a150eb34f04",
+      "lab_profile": "ubuntu-budgie-2404",
+      "run_directory": "/home/patrick/work/np1275/work/lab-runs/np1",
+      "session_root": "/dev/shm/n4cd537fe",
+      "socket": "/dev/shm/n4cd537fe/runtime/putgd/session.sock",
+      "input_backend": "qmp",
+      "frame_backend": "vnc-in-memory"
+    },
+    "target": {
+      "hostname": "putgd-budgie-24",
+      "kernel": "7.0.0-42-generic",
+      "machine": "x86_64",
+      "os": {
+        "ID": "ubuntu",
+        "VERSION_ID": "24.04",
+        "VARIANT_ID": null
+      },
+      "session_type": "x11",
+      "desktop": "Budgie:GNOME",
+      "qt_platform": null
+    },
+    "kwin_entry_staging": [],
+    "clipboard_preservation": {
+      "restored_and_stopped": true,
+      "reviews": [],
+      "ready": true,
+      "preserved_mimes": [],
+      "transport": "xcb",
+      "pid": 124254,
+      "start": "322147",
+      "boot": "7a50025c-af9b-43e5-81db-fd16bdfad1b1",
+      "reaped_pids": []
+    },
+    "observed_build": {
+      "baseVersion": "26.1108.4234",
+      "commitCount": 4234,
+      "dirty": false,
+      "gitCommit": "2b5e1b2d3c11757f805331e4104eb06b2c79ad5c",
+      "gitTree": "33b8f29b0a44ec5c0dc37d154cc0938d3612d328",
+      "packageVersion": "26.1108.4234~nightly",
+      "schemaVersion": 1,
+      "sourceProvenance": "git",
+      "version": "26.1108.4234-nightly"
+    },
+    "shell_health": {
+      "process": "budgie-panel",
+      "pid": 1809,
+      "start": 1439,
+      "cores_readable": false
+    },
+    "operation_ids": [
+      {
+        "operationId": "0d7ae725-4108-4ed7-aee6-632b657094bf"
+      }
+    ],
+    "private_cleanup": "not-owned-or-retained",
+    "cleanup_errors": [
+      "private session root cleanup refused"
+    ],
+    "coverage_export": {
+      "scanned_before_copy": true,
+      "copy_scan_passed": true,
+      "published": true
+    }
+  },
+  "interactions": [
+    {
+      "interaction": "region.to-upload",
+      "desktop": "ubuntu-budgie-2404",
+      "package": "deb",
+      "functional": "failed",
+      "visual": "frames",
+      "receipt": "work/np/r1/s3_region_upload-1/receipt.json",
+      "note": "s3_missing_head_404_count=1; s3_resolved_cloudfront_base_count=1; operationId=0d7ae725-4108-4ed7-aee6-632b657094bf; Capture operation 0d7ae725-4108-4ed7-aee6-632b657094bf; operationId=0d7ae725-4108-4ed7-aee6-632b657094bf; historyId=5bf8bf6c-fd36-4deb-aa7b-deb00a4c12c2; auto_copy_exact_link_count=1; independent desktop clipboard reader; no copy click; upload_count=1; Retained synthetic png sha256=c733fdb40776b2957274a29f214a53e62c646a39c02d32357a61d129b73fcb21; remote_hash_match_count=1; {\"url_host\": \"put.gd\", \"title\": \"[redacted]\", \"matched\": true}; cloudfront_positive_status=200; guest_public_hash_match_count=1; guest_cloudfront_positive_status=200; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; Firefox handler restored; MIME SHA-256 checks passed; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; input target 'history' is obscured by 'budgie-panel' (window 23068684); fixture cleanup failed: owned history and cache: RecipeBlocked; accepted settings: RecipeBlocked; S3 bridge credential: RecipeBlocked; owned directory: RecipeBlocked",
+      "host": "f44",
+      "placement": "guest",
+      "guest": "ubuntu-budgie-2404",
+      "destination": "s3",
+      "review": true,
+      "review_reason": "live UI cleanup failed: input target 'history' is obscured by 'budgie-panel' (window 23068684); desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/outcomes_live.s3_region_upload/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "independent-frozen-pattern",
+          "path": "frames/outcomes_live.s3_region_upload/01-independent-frozen-pattern.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "browser-content",
+          "path": "frames/outcomes_live.s3_region_upload/02-browser-content.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/outcomes_live.s3_region_upload/03-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "outcomes_live.s3_region_upload",
+      "build": "2b5e1b2d3c11757f805331e4104eb06b2c79ad5c",
+      "at": "2026-11-08T18:00:18Z"
+    },
+    {
+      "interaction": "region.drag",
+      "desktop": "ubuntu-budgie-2404",
+      "package": "deb",
+      "functional": "failed",
+      "visual": "frames",
+      "receipt": "work/np/r1/s3_region_upload-1/receipt.json",
+      "note": "s3_missing_head_404_count=1; s3_resolved_cloudfront_base_count=1; operationId=0d7ae725-4108-4ed7-aee6-632b657094bf; Capture operation 0d7ae725-4108-4ed7-aee6-632b657094bf; operationId=0d7ae725-4108-4ed7-aee6-632b657094bf; historyId=5bf8bf6c-fd36-4deb-aa7b-deb00a4c12c2; auto_copy_exact_link_count=1; independent desktop clipboard reader; no copy click; upload_count=1; Retained synthetic png sha256=c733fdb40776b2957274a29f214a53e62c646a39c02d32357a61d129b73fcb21; remote_hash_match_count=1; {\"url_host\": \"put.gd\", \"title\": \"[redacted]\", \"matched\": true}; cloudfront_positive_status=200; guest_public_hash_match_count=1; guest_cloudfront_positive_status=200; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; Firefox handler restored; MIME SHA-256 checks passed; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; input target 'history' is obscured by 'budgie-panel' (window 23068684); fixture cleanup failed: owned history and cache: RecipeBlocked; accepted settings: RecipeBlocked; S3 bridge credential: RecipeBlocked; owned directory: RecipeBlocked",
+      "host": "f44",
+      "placement": "guest",
+      "guest": "ubuntu-budgie-2404",
+      "destination": "s3",
+      "review": true,
+      "review_reason": "live UI cleanup failed: input target 'history' is obscured by 'budgie-panel' (window 23068684); desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/outcomes_live.s3_region_upload/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "independent-frozen-pattern",
+          "path": "frames/outcomes_live.s3_region_upload/01-independent-frozen-pattern.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "browser-content",
+          "path": "frames/outcomes_live.s3_region_upload/02-browser-content.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/outcomes_live.s3_region_upload/03-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "outcomes_live.s3_region_upload",
+      "build": "2b5e1b2d3c11757f805331e4104eb06b2c79ad5c",
+      "at": "2026-11-08T18:00:18Z"
+    },
+    {
+      "interaction": "history.copy-link",
+      "desktop": "ubuntu-budgie-2404",
+      "package": "deb",
+      "functional": "failed",
+      "visual": "frames",
+      "receipt": "work/np/r1/s3_region_upload-1/receipt.json",
+      "note": "s3_missing_head_404_count=1; s3_resolved_cloudfront_base_count=1; operationId=0d7ae725-4108-4ed7-aee6-632b657094bf; Capture operation 0d7ae725-4108-4ed7-aee6-632b657094bf; operationId=0d7ae725-4108-4ed7-aee6-632b657094bf; historyId=5bf8bf6c-fd36-4deb-aa7b-deb00a4c12c2; auto_copy_exact_link_count=1; independent desktop clipboard reader; no copy click; upload_count=1; Retained synthetic png sha256=c733fdb40776b2957274a29f214a53e62c646a39c02d32357a61d129b73fcb21; remote_hash_match_count=1; {\"url_host\": \"put.gd\", \"title\": \"[redacted]\", \"matched\": true}; cloudfront_positive_status=200; guest_public_hash_match_count=1; guest_cloudfront_positive_status=200; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; Firefox handler restored; MIME SHA-256 checks passed; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; input target 'history' is obscured by 'budgie-panel' (window 23068684); fixture cleanup failed: owned history and cache: RecipeBlocked; accepted settings: RecipeBlocked; S3 bridge credential: RecipeBlocked; owned directory: RecipeBlocked",
+      "host": "f44",
+      "placement": "guest",
+      "guest": "ubuntu-budgie-2404",
+      "destination": "s3",
+      "review": true,
+      "review_reason": "live UI cleanup failed: input target 'history' is obscured by 'budgie-panel' (window 23068684); desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/outcomes_live.s3_region_upload/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "independent-frozen-pattern",
+          "path": "frames/outcomes_live.s3_region_upload/01-independent-frozen-pattern.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "browser-content",
+          "path": "frames/outcomes_live.s3_region_upload/02-browser-content.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/outcomes_live.s3_region_upload/03-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "outcomes_live.s3_region_upload",
+      "build": "2b5e1b2d3c11757f805331e4104eb06b2c79ad5c",
+      "at": "2026-11-08T18:00:18Z"
+    },
+    {
+      "interaction": "history.open-link",
+      "desktop": "ubuntu-budgie-2404",
+      "package": "deb",
+      "functional": "failed",
+      "visual": "frames",
+      "receipt": "work/np/r1/s3_region_upload-1/receipt.json",
+      "note": "s3_missing_head_404_count=1; s3_resolved_cloudfront_base_count=1; operationId=0d7ae725-4108-4ed7-aee6-632b657094bf; Capture operation 0d7ae725-4108-4ed7-aee6-632b657094bf; operationId=0d7ae725-4108-4ed7-aee6-632b657094bf; historyId=5bf8bf6c-fd36-4deb-aa7b-deb00a4c12c2; auto_copy_exact_link_count=1; independent desktop clipboard reader; no copy click; upload_count=1; Retained synthetic png sha256=c733fdb40776b2957274a29f214a53e62c646a39c02d32357a61d129b73fcb21; remote_hash_match_count=1; {\"url_host\": \"put.gd\", \"title\": \"[redacted]\", \"matched\": true}; cloudfront_positive_status=200; guest_public_hash_match_count=1; guest_cloudfront_positive_status=200; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; Firefox handler restored; MIME SHA-256 checks passed; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; input target 'history' is obscured by 'budgie-panel' (window 23068684); fixture cleanup failed: owned history and cache: RecipeBlocked; accepted settings: RecipeBlocked; S3 bridge credential: RecipeBlocked; owned directory: RecipeBlocked",
+      "host": "f44",
+      "placement": "guest",
+      "guest": "ubuntu-budgie-2404",
+      "destination": "s3",
+      "review": true,
+      "review_reason": "live UI cleanup failed: input target 'history' is obscured by 'budgie-panel' (window 23068684); desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/outcomes_live.s3_region_upload/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "independent-frozen-pattern",
+          "path": "frames/outcomes_live.s3_region_upload/01-independent-frozen-pattern.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "browser-content",
+          "path": "frames/outcomes_live.s3_region_upload/02-browser-content.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/outcomes_live.s3_region_upload/03-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "outcomes_live.s3_region_upload",
+      "build": "2b5e1b2d3c11757f805331e4104eb06b2c79ad5c",
+      "at": "2026-11-08T18:00:18Z"
+    },
+    {
+      "interaction": "history.delete-remote",
+      "desktop": "ubuntu-budgie-2404",
+      "package": "deb",
+      "functional": "failed",
+      "visual": "frames",
+      "receipt": "work/np/r1/s3_region_upload-1/receipt.json",
+      "note": "s3_missing_head_404_count=1; s3_resolved_cloudfront_base_count=1; operationId=0d7ae725-4108-4ed7-aee6-632b657094bf; Capture operation 0d7ae725-4108-4ed7-aee6-632b657094bf; operationId=0d7ae725-4108-4ed7-aee6-632b657094bf; historyId=5bf8bf6c-fd36-4deb-aa7b-deb00a4c12c2; auto_copy_exact_link_count=1; independent desktop clipboard reader; no copy click; upload_count=1; Retained synthetic png sha256=c733fdb40776b2957274a29f214a53e62c646a39c02d32357a61d129b73fcb21; remote_hash_match_count=1; {\"url_host\": \"put.gd\", \"title\": \"[redacted]\", \"matched\": true}; cloudfront_positive_status=200; guest_public_hash_match_count=1; guest_cloudfront_positive_status=200; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; Firefox handler restored; MIME SHA-256 checks passed; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; input target 'history' is obscured by 'budgie-panel' (window 23068684); fixture cleanup failed: owned history and cache: RecipeBlocked; accepted settings: RecipeBlocked; S3 bridge credential: RecipeBlocked; owned directory: RecipeBlocked",
+      "host": "f44",
+      "placement": "guest",
+      "guest": "ubuntu-budgie-2404",
+      "destination": "s3",
+      "review": true,
+      "review_reason": "live UI cleanup failed: input target 'history' is obscured by 'budgie-panel' (window 23068684); desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/outcomes_live.s3_region_upload/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "independent-frozen-pattern",
+          "path": "frames/outcomes_live.s3_region_upload/01-independent-frozen-pattern.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "browser-content",
+          "path": "frames/outcomes_live.s3_region_upload/02-browser-content.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/outcomes_live.s3_region_upload/03-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "outcomes_live.s3_region_upload",
+      "build": "2b5e1b2d3c11757f805331e4104eb06b2c79ad5c",
+      "at": "2026-11-08T18:00:18Z"
+    },
+    {
+      "interaction": "confirm.history-delete",
+      "desktop": "ubuntu-budgie-2404",
+      "package": "deb",
+      "functional": "failed",
+      "visual": "frames",
+      "receipt": "work/np/r1/s3_region_upload-1/receipt.json",
+      "note": "s3_missing_head_404_count=1; s3_resolved_cloudfront_base_count=1; operationId=0d7ae725-4108-4ed7-aee6-632b657094bf; Capture operation 0d7ae725-4108-4ed7-aee6-632b657094bf; operationId=0d7ae725-4108-4ed7-aee6-632b657094bf; historyId=5bf8bf6c-fd36-4deb-aa7b-deb00a4c12c2; auto_copy_exact_link_count=1; independent desktop clipboard reader; no copy click; upload_count=1; Retained synthetic png sha256=c733fdb40776b2957274a29f214a53e62c646a39c02d32357a61d129b73fcb21; remote_hash_match_count=1; {\"url_host\": \"put.gd\", \"title\": \"[redacted]\", \"matched\": true}; cloudfront_positive_status=200; guest_public_hash_match_count=1; guest_cloudfront_positive_status=200; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; Firefox handler restored; MIME SHA-256 checks passed; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; cleared screen: banners close requested; windows closed: none; input target 'history' is obscured by 'budgie-panel' (window 23068684); fixture cleanup failed: owned history and cache: RecipeBlocked; accepted settings: RecipeBlocked; S3 bridge credential: RecipeBlocked; owned directory: RecipeBlocked",
+      "host": "f44",
+      "placement": "guest",
+      "guest": "ubuntu-budgie-2404",
+      "destination": "s3",
+      "review": true,
+      "review_reason": "live UI cleanup failed: input target 'history' is obscured by 'budgie-panel' (window 23068684); desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/outcomes_live.s3_region_upload/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "independent-frozen-pattern",
+          "path": "frames/outcomes_live.s3_region_upload/01-independent-frozen-pattern.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "browser-content",
+          "path": "frames/outcomes_live.s3_region_upload/02-browser-content.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/outcomes_live.s3_region_upload/03-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "outcomes_live.s3_region_upload",
+      "build": "2b5e1b2d3c11757f805331e4104eb06b2c79ad5c",
+      "at": "2026-11-08T18:00:18Z"
+    }
+  ],
+  "secret_scan": {
+    "quarantine": [],
+    "passed": true,
+    "files": 10,
+    "pngs": 4,
+    "findings": []
+  }
+}
