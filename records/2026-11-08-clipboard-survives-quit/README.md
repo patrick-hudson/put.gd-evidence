@@ -10,7 +10,7 @@ Stock VMs, no clipboard manager added, on the CI packages of `65e00a8e7` (versio
 | `ckoa` Omarchy | Arch | pass | pass | pass | pass | 1110, 881 ms | 51 / 51 |
 | `ckoi` Omarchy | AppImage | pass | pass | pass | pass | 735, 693 ms | 46 / 46 |
 
-Budgie rows upload to the real `put.gd/acceptance/` prefix, which lists 0 keys after each run. Omarchy rows upload to the suite's loopback S3 fixture: the live credential bridge doesn't support this golden yet, and the link flow in put.gd is the same. Omarchy's own `wl-paste --watch` history processes were running, as they are on the stock image.
+Budgie rows upload to the real `put.gd/acceptance/` prefix, which lists 0 keys after each run. Omarchy rows upload to the suite's loopback S3 fixture: the live credential import failed on this golden, and put.gd's own link flow is the same. Omarchy's own `wl-paste --watch` history processes were running, as they are on the stock image.
 
 No keeper remains after the final check on any row. The keeper ran at 1.9 to 4.1 MB resident. On the AppImage rows the AppImage mount is released at quit, and the keeper runs from memory on the host's libraries.
 
