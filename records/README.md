@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-08-kde-clipboard-quit](2026-11-08-kde-clipboard-quit/README.md) | — | KDE clipboard after put.gd quits |
 | [2026-11-08-review-body-findings](2026-11-08-review-body-findings/README.md) | — | Review-body findings: GNOME setup, Hyprland binds, wlr-capture |
 | [2026-11-08-clipboard-survives-quit](2026-11-08-clipboard-survives-quit/README.md) | #1317 | Clipboard survives quitting on Budgie and Hyprland (PR #1317) |
 | [2026-11-08-gnome-one-logout](2026-11-08-gnome-one-logout/README.md) | — | GNOME 50: one logout finishes setup |
