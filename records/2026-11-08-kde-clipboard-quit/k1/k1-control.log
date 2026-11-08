@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/kq/control.py", line 8, in <module>
+    print(g('sudo -n apt-get install -y -q wl-clipboard kolourpaint kate >/tmp/kq-install.log 2>&1; cat /etc/os-release; cat /usr/share/config.kcfg/klipper.kcfg; cat ~/.config/klipperrc 2>/dev/null || true'))
+          ~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/kq/control.py", line 5, in g
+    def g(s): return lab.guest_session(r,s,timeout=200)
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/kq/src/tools/lab/lab.py", line 648, in guest_session
+    return ssh(run, script, timeout=timeout)
+  File "/home/patrick/work/kq/src/tools/lab/lab.py", line 532, in ssh
+    result = command(ssh_args(run, bootstrap) + ['sh', '-s'], timeout=timeout, input=script, check=not refusals)
+  File "/home/patrick/work/kq/src/tools/lab/lab.py", line 88, in command
+    raise LabError(f'{Path(str(args[0])).name} failed (exit {result.returncode})')
+tools.lab.lab.LabError: ssh failed (exit 1)

@@ -1,0 +1,13 @@
+{'schemaVersion': 1, 'version': '26.1105.3986-nightly', 'baseVersion': '26.1105.3986', 'packageVersion': '26.1105.3986~nightly', 'gitCommit': '191f2f41f5ba649e4f471ec100dd7a4ffed1c358', 'gitTree': '1d1ed8ee1e04a1e4c4cd323b214e661cfb96c1bb', 'commitCount': 3986, 'dirty': False, 'sourceProvenance': 'git'}
+{"schemaVersion": 1, "passed": true, "limitBytesExcludingNul": 107, "paths": [{"path": "/run/user/1000/putgd/session.sock", "utf8Bytes": 33, "passed": true}]}
+kde-wayland
+{'acceptedRevision': 'e5e217df90b03bbcfa537a50d9dd0ed1b96266f16c89d28e78d7774c4ff0b493', 'fallbackRescanMs': 2000, 'observedRevision': 'e5e217df90b03bbcfa537a50d9dd0ed1b96266f16c89d28e78d7774c4ff0b493', 'path': '/home/lab/putgd-lab/config/putgd/config.json', 'schemaVersion': 1, 'validation': {'error': {'code': '', 'details': {}, 'message': ''}, 'ok': True}, 'watching': True}
+invoke {'operation': {'action': 'desktop', 'cancelled': False, 'clipboardRevision': '1', 'copyStatus': 'pending', 'created': '2026-11-08T23:43:46.314Z', 'destination': {'credentials': {}, 'profileId': '', 'profileRevision': '', 'providerId': '', 'settings': {}}, 'error': {'code': '', 'details': {}, 'message': ''}, 'id': '02fd3399-f965-4005-92ff-6a269a8e4777', 'invocation': '1', 'items': [], 'phase': 'accepted', 'requestTimeoutMs': None, 'settingsRevision': 'e5e217df90b03bbcfa537a50d9dd0ed1b96266f16c89d28e78d7774c4ff0b493', 'state': 'accepted'}, 'operationId': '02fd3399-f965-4005-92ff-6a269a8e4777'}
+
+{'mode': 'stock', 'action': 'auto-copy', 'before': 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'after': 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'kept': True}
+kde-wayland
+Traceback (most recent call last):
+  File "/home/patrick/work/kq/app.py", line 29, in <module>
+    start();records=c('history.list',{'limit':5});(o/(mode+'-history.json')).write_text(json.dumps(records,indent=2));rid=records['records'][0]['id'];print(c('history.copyImage',{'id':rid}),flush=True);time.sleep(2);before=sha();quit();after=sha();results.append(dict(mode=mode,action='history-copy-image',before=before,after=after,kept=before==after));print(results[-1],flush=True);paste(mode+'-history-paste')
+                                                                                                                          ~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
