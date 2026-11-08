@@ -53,3 +53,28 @@ Lua config, quickshell), with real keyboard and tablet input through QEMU, never
 
 `pictures/` annotated PR pictures; `arch-ci/`, `appimage-ci/` row logs and captures with their references;
 `outputs/` scale, rotation, two-output, screenshot-first; `step1/` probe and UI frames.
+
+## Round 2 (2026-11-08, final head): #1299 fixed, #1300 accepted, tray on the CI build, #1304 checks
+
+Build: CI artifacts of PR #1293 head 571c9f53a (test merge bfd9c820e = `26.1108.4156-dev+gbfd9c820e038`), Arch package
+`putgd-26.1108.4156dev.gbfd9c820e038-1` and AppImage (sha256 b72feb38627d11e3...). The PR head was then rebased onto B's
+18852a0fb (4b24f3b33); B's delta is SettingsWindow text height only. Host: fresh overlay `d3` of golden
+`omarchy-hyprland-20261108` on d69 (Omarchy 4.5.0, Hyprland 0.56.2, quickshell), on the wall (port 5994), real QEMU
+keyboard/tablet input. Files in `round2/`.
+
+| Check | Result |
+| --- | --- |
+| #1299 rotate → back → capture, same resident (`rotate-d3/`) | PID 2790 throughout. Transform 1: 800x1280 completed. Back to 0: 1280x800 completed and matches the screendump except the toast stack (1.6 %). 1→0 again: completed. |
+| #1300 hotkey upload (Arch, `final-arch/`) | Real S3 destination (key set 2 lent to the guest's disposable keychain through `provision_live_credentials.py`; bucket put.gd, isolated prefix `acceptance/d1275-hyprland/<uuid>/`). Origin 200, public 200 `image/png` 1410145 bytes. |
+| #1300 link opened from History in the default browser | `history.openLink` → portal → Chromium, title "Screen-Capture-2026-11-08-00-16-13.png (1280×800) - Chromium" (`pictures/omarchy-chromium-opens-hotkey-upload.png`). |
+| #1300 Nautilus "Upload with put.gd" (Arch) | Upload completed, origin 200, link opened in Chromium (`pictures/omarchy-nautilus-upload-menu.png`, `pictures/omarchy-chromium-opens-nautilus-upload.png`). |
+| #1300 cleanup | Both objects deleted through History (`delete.prepare`/`confirm`, `remote: removed`), origin 403 like a never-existed key; AppImage upload deleted the same way; history cleared; profile removed and routes back to local; lab keychain item and bridge removed (receipt `cleanup_confirmed`); ListObjectsV2 + ListObjectVersions on the prefix: 0 objects, 0 versions, 0 delete markers (`cleanup.log`). |
+| Tray menu on the final CI build | Menu open, "Capture desktop" run from it, completed; Arch and AppImage (`pictures/omarchy-tray-menu-capture-desktop.png`, `final-appimage/`). |
+| AppImage row on the final CI build (`appimage-final/row.log`) | Desktop == screendump; region 0 px; window == `grim -T` 0 px; own window refused; conflicts reported (PRINT, SUPER+SHIFT+S); reload keeps binds; clipboard both ways, PRIMARY unchanged; recording motion 21.0 / 69.6 / 71.1 vs static 0.71; quit leaves Omarchy's 251 binds identical. |
+| AppImage upload + Chromium (`final-appimage/`) | Hotkey upload origin 200, opened in Chromium, deleted (origin 403). The Nautilus entry belongs to the installed Arch package, whose launcher refuses while the AppImage runs ("put.gd from the AppImage is running…"): existing mixed-install guard, so Nautilus upload is accepted on the Arch package only. |
+| #1304 failure notices (PR #1304 CI AppImage, `notices-1304/`) | Notify recorded with dbus-monitor: Cinnamon m74, GNOME f44, KDE d69 each urgency 2 + `transient` (banner frames). Omarchy: the failure notice was not written to quickshell's `live.json`; after a reboot it did not return (`pictures/omarchy-after-reboot-no-transient-failure-1304.png`; the three notices shown came from builds without #1304). |
+
+The "Captured output does not match frozen output geometry" toasts visible in round-2 frames are the three failures of the
+earlier, non-working #1299 attempt (05:53–05:55 UTC, previous resident); every operation of the final resident completed.
+Fluidity (7.6 fps in this software-rendered VM) and #1301 (`no_anim` not observable with animations off) are accepted as
+documented by the coordinator.

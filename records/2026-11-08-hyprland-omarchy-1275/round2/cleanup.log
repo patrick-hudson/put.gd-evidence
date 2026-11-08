@@ -1,0 +1,38 @@
+== credential cleanup 2026-11-08T06:29:47Z
+records 18 with links still available: []
+teardown {"error": {"code": "", "details": {}, "message": ""}, "ok": true, "requestId": "3c5e18fe-575e-4518-9190-f31657e13ed3", "result": {"acceptedRevision": "3750ce7cc66f7dfb6d10fbd0fb263567285a32f8a8aae13d8b8e84b4444fc5cd", "fallbackRescanMs": 2000, "observedRevision": "3750ce7cc66f7dfb6d10fbd0fb263567285
+{
+ "error": {
+  "code": "",
+  "details": {},
+  "message": ""
+ },
+ "ok": true,
+ "requestId": "9cb7a79e-8465-4c26-9c00-591fa4511cb6",
+ "result": {
+  "cleared": true,
+  "pendingDeletionTargetsRetained": 
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import json,sys; s=json.load(sys.stdin)["result"]["settings"]; print("profiles", s.get("profiles"))
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'settings'
+{"error": {"code": "", "details": {}, "message": ""}, "ok": true, "requestId": "52b02cb1-adad-4be5-859b-173492174aa3", "result": {"quitting": true}, "schemaVersion": 1}
+{"socketGone": true}
+profile-refs-done
+config.json
+== prov.py cleanup
+False
+cleanup_confirmed
+0
+0
+    import secretstorage
+ModuleNotFoundError: No module named 'secretstorage'
+2
+0
+aoao 2 "/org/freedesktop/secrets/collection/putgd_5flab/3" "/org/freedesktop/secrets/collection/putgd_5flab/2" 1 "/org/freedesktop/secrets/collection/Default_5fkeyring/1"
+s "Chromium Safe Storage"
+s "Application key for "
+ao 3 "/org/freedesktop/secrets/collection/putgd_5flab" "/org/freedesktop/secrets/collection/session" "/org/freedesktop/secrets/collection/Default_5fkeyring"
+5
+S3 ListObjectsV2 + ListObjectVersions on put.gd/acceptance/d1275-hyprland/ (06:30:46Z, workstation AWS session): 0 objects, 0 versions, 0 delete markers
