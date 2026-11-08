@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-08-budgie-omarchy-nightly-4234](2026-11-08-budgie-omarchy-nightly-4234/README.md) | #4234 | Private Budgie and Omarchy Tier 1 nightly check, build 4234 |
 | [2026-11-08-budgie-acceptance-round4-1275](2026-11-08-budgie-acceptance-round4-1275/README.md) | #1275, #1283 | Budgie adapter acceptance, round 4: the last open items (#1275, PR #1283) |
 | [2026-11-08-pacman-rollout-1285](2026-11-08-pacman-rollout-1285/README.md) | #1285 | Signed pacman rollout and published installer checks (#1285) |
 | [2026-11-08-budgie-acceptance-round3-1275](2026-11-08-budgie-acceptance-round3-1275/README.md) | #1275, #1283 | Budgie adapter acceptance, round 3: review fixes (#1275, PR #1283) |
