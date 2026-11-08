@@ -13,6 +13,8 @@ Evidence for PRs #1320 and #1321, which fix CodeRabbit findings left outside the
 | Symlink `.putgd-extension-old-<32 hex>` | target's files deleted (`victim: []`) | target untouched |
 | `.putgd-extension-backup` and a real dir with `notes.txt` | files deleted | untouched |
 
+The notification screenshot and log, and the `helper_outdated` message on `recording.windows`, come from a separate pass on `5b3f67a73` (`gnome/refusal-and-notification.log`); later commits changed only the stale-directory cleanup and its tests, so that reporting code is the same on the final head.
+
 With the directory writable again, `desktop.setup.recheck` wrote v19 and asked for a logout, and a real logout and typed login reached `ready` with v19 loaded. The stale directory with put.gd's exact name and contents is removed.
 
 ## Hyprland 0.56.2 on Omarchy (d69)
