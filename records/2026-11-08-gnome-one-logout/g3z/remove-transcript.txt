@@ -1,0 +1,12 @@
+/home/patrick/work/g1lo/rm.py:8: SyntaxWarning: invalid escape sequence '\$'
+  print("remove:",r.g("set +e\n/home/lab/.local/bin/putgd.AppImage --remove-gnome-extension 2>&1; echo rc=\$?\n",check=False).strip())
+/home/patrick/work/g1lo/rm.py:11: SyntaxWarning: invalid escape sequence '\$'
+  print("again:",r.g("set +e\n/home/lab/.local/bin/putgd.AppImage --remove-gnome-extension 2>&1; echo rc=\$?\n",check=False).strip())
+before: .putgd-managed extension.js metadata.json  enabled-extensions=['putgd@put.gd'] | disabled-extensions=@as [] | disable-user-extensions=false | 
+resident after quit: none
+remove: put.gd: removed the GNOME extension copy it installed; log out and back in to unload it.
+rc=$?
+after dir: 
+after settings: enabled-extensions=@as [] | disabled-extensions=@as [] | disable-user-extensions=false | 
+again: put.gd: no put.gd-installed GNOME extension copy was found.
+rc=$?

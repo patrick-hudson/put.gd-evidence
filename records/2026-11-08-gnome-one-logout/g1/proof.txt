@@ -1,0 +1,5 @@
+g1 (Ubuntu 26.04, GNOME Shell 50.1, gnome-provisioned golden). See PR #1315 report.
+Baseline: DEB 26.1108.4139 installed; gnome-extensions enable -> does not exist (rc 2).
+gsettings set org.gnome.shell enabled-extensions "['putgd@put.gd']"; real logout (gnome-session-quit), password typed at GDM.
+After: gnome-extensions info -> Version 19, Enabled Yes, State ACTIVE.
+Instant path: adding to enabled-extensions while Shell knows the extension activated it immediately.
