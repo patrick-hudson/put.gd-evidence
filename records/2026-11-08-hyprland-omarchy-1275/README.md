@@ -78,3 +78,12 @@ The "Captured output does not match frozen output geometry" toasts visible in ro
 earlier, non-working #1299 attempt (05:53–05:55 UTC, previous resident); every operation of the final resident completed.
 Fluidity (7.6 fps in this software-rendered VM) and #1301 (`no_anim` not observable with animations off) are accepted as
 documented by the coordinator.
+
+### #1304 re-check on d16c23b22 (transient only on quickshell), 2026-11-08 06:56 UTC
+
+PR #1304 head d16c23b22, CI AppImage `26.1108.4138-dev+gd16c23b2246a` (sha256 f954895633064f9a..., `build-info.json`), overlay d3.
+The upload client's "nothing uploaded" failure notice went out with urgency 2 and `transient` (`notice-and-dbus.txt`),
+showed on screen (`pictures/omarchy-1304-transient-failure-banner.png`), and quickshell's `live.json` kept its six
+put.gd rows unchanged (all from builds without #1304). After a QMP reset (guest uptime 35 s) the same six rows came back
+and the new notice did not (`pictures/omarchy-1304-after-reboot-d16c23b.png`). Files in `round2/notices-1304-d16c23b/`.
+`round2/notices-1304/n-gnome2.json` is the GNOME (f44) DBus summary of the first revision 7fc3232bf.
