@@ -1,0 +1,135 @@
+== 1a catcher none, static pointer, click
+  -- A
+    A 0.001 mapped 1280x800
+== 1b catcher on-demand, static pointer, click
+  -- A
+    A 0.001 mapped 1280x800
+    A 0.032 keyboard-enter
+    A 0.032 pointer-enter 500,400
+    A 1.002 button 110 press
+    A 1.105 button 110 release
+== 2a held on catcher, selector maps exclusive
+  -- A
+    A 0.000 mapped 1280x800
+    A 0.034 keyboard-enter
+    A 0.034 pointer-enter 500,400
+    A 1.002 button 110 press
+    A 1.466 button 110 release
+    A 1.466 keyboard-leave
+    A 1.466 pointer-leave
+  -- B
+    B 0.001 mapped 1280x800
+    B 0.035 keyboard-enter
+    B 0.035 pointer-enter 500,400
+    B 0.801 motion 600,451
+    B 1.004 motion 701,501
+== 2b held on catcher, selector maps on-demand
+  -- A
+    A 0.002 mapped 1280x800
+    A 0.030 keyboard-enter
+    A 0.030 pointer-enter 500,400
+    A 1.000 button 110 press
+    A 1.467 button 110 release
+    A 1.467 keyboard-leave
+    A 1.467 pointer-leave
+  -- B
+    B 0.001 mapped 1280x800
+    B 0.034 keyboard-enter
+    B 0.034 pointer-enter 500,400
+    B 0.801 motion 600,451
+    B 1.004 motion 701,501
+== 2c held on catcher, selector maps none
+  -- A
+    A 0.001 mapped 1280x800
+    A 0.033 keyboard-enter
+    A 0.033 pointer-enter 500,400
+    A 1.001 button 110 press
+    A 2.240 motion 600,451
+    A 2.443 motion 701,501
+    A 2.645 button 110 release
+  -- B
+    B 0.001 mapped 1280x800
+== 3 no press: selector maps none, switches to exclusive at 0.8 s; Esc, then click
+  -- A
+    A 0.001 mapped 1280x800
+    A 0.029 keyboard-enter
+    A 0.029 pointer-enter 500,400
+    A 2.036 keyboard-leave
+    A 2.036 pointer-leave
+  -- B
+    B 0.001 mapped 1280x800
+    B 0.802 switched to exclusive
+    B 0.803 keyboard-enter
+    B 0.803 pointer-enter 500,400
+    B 1.534 key 1 down
+    B 1.553 key 1 up
+    B 1.856 motion 520,410
+    B 2.058 button 110 press
+    B 2.161 button 110 release
+== 4 held on catcher while the selector switches none->exclusive
+  -- A
+    A 0.001 mapped 1280x800
+    A 0.030 keyboard-enter
+    A 0.030 pointer-enter 500,400
+    A 1.002 button 110 press
+    A 2.055 button 110 release
+    A 2.055 keyboard-leave
+    A 2.055 pointer-leave
+  -- B
+    B 0.001 mapped 1280x800
+    B 0.620 switched to exclusive
+    B 0.620 keyboard-enter
+    B 0.620 pointer-enter 500,400
+    B 1.201 motion 650,421
+== 5a press held natively on a none surface while it switches to on-demand
+  -- B
+    B 0.001 mapped 1280x800
+    B 0.803 pointer-enter 520,410
+    B 0.803 motion 520,410
+    B 1.005 button 110 press
+    B 1.510 switched to demand
+    B 2.208 keyboard-enter
+    B 2.208 motion 650,421
+    B 2.411 motion 701,451
+    B 2.613 button 110 release
+== 5b same, switching to exclusive
+  -- B
+    B 0.001 mapped 1280x800
+    B 0.802 pointer-enter 520,410
+    B 0.802 motion 520,410
+    B 1.010 button 110 press
+    B 1.515 switched to exclusive
+    B 1.515 button 110 release
+    B 1.515 keyboard-enter
+    B 2.207 motion 650,421
+    B 2.410 motion 701,451
+== 6 press held on the catcher while the selector switches none->on-demand
+  -- A
+    A 0.001 mapped 1280x800
+    A 0.030 keyboard-enter
+    A 0.030 pointer-enter 500,400
+    A 0.802 button 110 press
+    A 2.432 motion 650,421
+    A 2.634 button 110 release
+  -- B
+    B 0.001 mapped 1280x800
+    B 0.619 switched to demand
+== 7 no press: selector switches none->on-demand: does it get the keyboard while the catcher holds it?
+  -- A
+    A 0.001 mapped 1280x800
+    A 0.030 keyboard-enter
+    A 0.030 pointer-enter 500,400
+    A 2.262 key 1 down
+    A 2.283 key 1 up
+  -- B
+    B 0.001 mapped 1280x800
+    B 0.519 switched to demand
+== 8 selector alone switches none->on-demand: keyboard and click
+  -- B
+    B 0.001 mapped 1280x800
+    B 0.516 switched to demand
+    B 1.557 keyboard-enter
+    B 1.557 pointer-enter 540,421
+    B 1.557 motion 540,421
+    B 1.760 button 110 press
+    B 1.862 button 110 release

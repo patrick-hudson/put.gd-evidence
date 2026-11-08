@@ -1,0 +1,44 @@
+== kde build: 26.1108.4225-dev+g1bb4f1db59bb adapter: kde-wayland helper 0
+== region hotkey + drag 300,200 -> 700,500 (selector up, then drag) #1
+  op: 61fb7d74-dba0-4c42-a7eb-de6aba86dfdc region completed - Screen-Capture-2026-11-08-08-12-47.png
+sizes (400, 300) (400, 300)
+pixels 120000 differing(>8) 0 fraction 0.00000 bbox None
+== region hotkey + drag 300,200 -> 700,500 (selector up, then drag) #2
+  op: cee521c0-cb91-4025-a303-db3394d792c5 region completed - Screen-Capture-2026-11-08-08-12-53.png
+sizes (400, 300) (400, 300)
+pixels 120000 differing(>8) 0 fraction 0.00000 bbox None
+== region hotkey + drag 300,200 -> 700,500 (selector up, then drag) #3
+  op: 0be12071-5263-4829-8253-37109a3087fd region completed - Screen-Capture-2026-11-08-08-12-58.png
+sizes (400, 300) (400, 300)
+pixels 120000 differing(>8) 0 fraction 0.00000 bbox None
+== desktop hotkey
+  op: f7d6e6f1-ce46-4cf1-83b4-0cb232acef13 desktop completed - Screen-Capture-2026-11-08-08-13-03.png
+sizes (1280, 800) (1280, 800)
+pixels 1024000 differing(>8) 29415 fraction 0.02873 bbox (909, 430, 1247, 659)
+(waiting for the capture toast to clear)
+== cancel with esc #1 (pointer does not move)
+  selector visible px=5421; after cancel px=0; new images=0
+== cancel with esc #2 (pointer does not move)
+  selector visible px=5421; after cancel px=0; new images=0
+== cancel with esc #3 (pointer does not move)
+  selector visible px=5421; after cancel px=0; new images=0
+== cancel with right #1 (pointer does not move)
+  selector visible px=5421; after cancel px=0; new images=0
+== cancel with right #2 (pointer does not move)
+  selector visible px=5421; after cancel px=0; new images=0
+== cancel with right #3 (pointer does not move)
+  selector visible px=5421; after cancel px=0; new images=0
+== drag timing: pointer already moving, press 0.15 / 0.3 / 0.8 / 1.5 s after the hotkey
+Traceback (most recent call last):
+  File "<string>", line 6, in <module>
+    px=[r['pixels']['diffPx'] for r in rows if r.get('pixels')]; print('   exact-pixel diffs max', max(px) if px else None, 'n', len(px))
+                                                                                                   ~~~^^^^
+TypeError: '>' not supported between instances of 'NoneType' and 'NoneType'
+   {'0.15': {'ok': 4}, '0.3': {'ok': 4}, '0.8': {'ok': 4}, '1.5': {'ok': 4}}
+== recording, moving pattern, then still control
+/usr/bin/gst-launch-1.0
+{"id": "c97badd4-5d84-4ece-b05e-33febd14e909", "state": "ready", "target": {"kind": "monitor"}, "window": null, "canvas": [1280, 800], "error": {"code": "", "de
+motion: motion=5.086 compared=7 samples=8 durationMs=6033 size=1280x800
+still: {"id": "e9a07184-5732-4ed5-a177-4628e5ff3a1b", "state": "ready", "target": {"kind": "monitor"}, "window": null, "canvas": [1280, 800], "error": {"code": "", "de
+still: motion: motion=0.038 compared=7 samples=8 durationMs=6733 size=1280x800
+== done

@@ -110,3 +110,27 @@ d18601484 differs from it only in B's 0e66920c8 (labwc bridge + a portal test). 
   automatic position (Virtual-1 moved to x=2304) so the drag spanned both outputs; attempt 2 had maximized terminals (uniform
   regions) and waited only 1.5 s after the hotkey, so the first drag did not end the selection (the crosshair is still in its
   frame) and two cases compared one older file. With 2.5 s and distinct content every case completed.
+
+## Round 4 (2026-11-08): early press, #1308, #1301, shared-region regressions
+
+**Final head 1f17e9468** (CI test merge `1bb4f1db59bb`, `26.1108.4225-dev+g1bb4f1db59bb`), PR #1293 against nightly. Packages used, newest first:
+
+| Build | Head | Used for |
+| --- | --- | --- |
+| `1bb4f1db59bb` | 1f17e9468 (final) | Omarchy early-press sweep and keyboard on AppImage and Arch; KDE and Budgie regressions (`head2/`, `regress-kde/`, `regress-budgie/`) |
+| `7e661cc13096` | 9296c85bb | Omarchy full row on AppImage and Arch, real upload, Nautilus plugin, Chromium, tray (`head/`, `final-head-arch/`) |
+| `df80b792e492` | 8ab07477d | Omarchy on both packages: sweeps on one and two outputs, just after an output appears, exact pixels, rotation, keyboard, `no_anim`, no-resident hotkeys, AppImage real upload through Nautilus Scripts (`fix-appimage/`, `fix-arch/`, `*.out`, `last/`, `noanim-fix-arch/`, `nores-*`, `region2-fix-arch/`) |
+
+Since `df80b792e492` only the catcher's cancel paths changed (pointer capability loss; Esc or right-click on the catcher before the selector has started); no capture, region geometry, recording, shortcut, upload or rotation code. Those cancel paths were re-run on the final build.
+
+Early press. Before the fix a press before the selector mapped went to the window underneath and the drag was lost (`selector-ready/`, `selector-ready-kde/`: Hyprland maps at ~0.19 s, KDE's window is ~0.06-0.10 s). `focus-rules/lsx.log` holds twelve bare layer-shell experiments on Hyprland 0.56.2 with real input; they fixed the design: a layer surface with keyboard `none` gets no pointer focus until the pointer moves; a surface that maps with the keyboard, or turns exclusive, releases every held button and the real release is swallowed; switching none to on-demand after mapping releases nothing but only applies at the next motion. `PressCatcher` (Hyprland only) maps a transparent on-demand surface at the hotkey (~0.05 s on this VM) and relays the drag; the selector maps without the keyboard, switches to on-demand after its first frame, and the catcher holds Esc and keyboard selection until then. `design-v3-arch/` is a rejected design kept for the record: switching in the first commit made the surface map with the keyboard and produced wrong-size selections.
+
+Results on Omarchy, press at 0.06 to 1.5 s after the hotkey, pointer static at the start, a terminal under it: settled one output 72/72 and two outputs 72/72 exact on both packages (`df80b792e492`; the only pixel differences are the pointer grim draws); final build 24/24. A press 1.5 s after the hotkey just after an output appears: 16/16. A press 0.3 s after the hotkey just after an output appears: 11 of 16 (with 3 and 2 losses per package): the compositor had not processed the catcher yet (guest load up to 13 on 2 vCPUs from Omarchy's reaction to the output); each lost press left the selector working for the next drag. Keyboard with a static pointer: Esc before and after the selector maps, arrows and Return: 12/12 per package per run.
+
+#1308: `HyprlandShortcuts::finish` answered a pause before the re-apply removed the binds. Fixed; 40/40 runs of `test_hyprland` under contention on d69 (4 parallel streams, 3 busy loops).
+
+#1301: with animations on and a 4 s linear layer fade, slurp (Omarchy's own no_anim overridden by a later rule) ramps over 3.5-3.8 s; put.gd's selector appears in one sampling step; a capture with the fade on contains no selector, 0 px against grim (`noanim-fix-arch/`, and the G sections of `fix-*.out`).
+
+Shared-layer regressions on the final build (`regress-kde/`, `regress-budgie/`, VMs on d69 on the wall, retired through guarded cleanup; goldens re-hashed unchanged): KDE Wayland (`kde-provisioned-20261016`, deb) and Budgie (`fedora45-budgie`, AppImage). Each: region hotkey + drag 3/3 exact pixels, desktop capture, Esc 3/3 and right-click 3/3 with the pointer static (selector visible, gone afterwards, no image), drags at 0.15 to 1.5 s 16/16, recording with motion (KDE 5.09 vs still 0.04, Budgie 23.3 vs still 0.11). The press catcher, deferred keyboard and relay are only called from the Hyprland adapter; on these two the helper keeps taking the keyboard exclusively at map, as before.
+
+Mixed-install guard: the Arch package's Nautilus entry refusing while an AppImage resident runs is the documented `installation_mismatch` behaviour; the AppImage-only row uses the Nautilus Scripts entry the integration installs, with a real upload (`last/`).

@@ -1,0 +1,198 @@
+== AppImage only: Arch package removed: error: package 'putgd' was not found
+AppImage verification finished: == done
+== AppImage: real upload through Nautilus > Scripts
+{'bucket': 'put.gd', 'region': 'us-east-2', 'prefix': 'acceptance/d1275-hyprland/d3928faf27564bb9bfcf8a31858e8ffd/', 'keyring': True}
+{"pid": 325179, "socket": true, "cli": "/tmp/.mount_putgd-DhKcAM/usr/bin/putgd-c
+profile True
+unlock job True 
+unlock completed 
+routes True
+  8 07:12 Upload with put.gd
+files completed  
+{"id": "d52be626-aeb3-40c9-9580-95622ae3ab2f", "name": "nautilus-upload-1275.png", "remote": "not_requested", "link": "https://put.gd/acceptance/d1275-hyprland/d3928faf27564bb9bfcf8a31858e8ffd/nautilus-upload-1275.png", "objectKey": "acceptance/d1275-hyprland/d3928faf27564bb9bfcf8a31858e8ffd/nautilus-upload-1275.png", "linkAvailable": true}
+origin: 200
+{"error": {"code": "", "details": {}, "message": ""}, "ok": true, "requestId": "75fd427c-38a5-457b-abeb-96b48a53ad8e", "result": {"opened": true, "route": "portal"}, "schemaVersion": 1}
+active: chromium | nautilus-upload-1275.png (480×240) - Chromium
+prepare True  {"acknowledgement": "8010779bb79518199b3afa5dde423e5b6b767149668d2f0b2f0f93eb64ea8f75", "cacheNotice": "Co
+confirm True 
+deletion {}
+origin after delete: 403
+route region local True
+route window local True
+route desktop local True
+route clipboard local True
+{"socketGone": true}
+== Arch package
+putgd 26.1108.4222dev.gdf80b792e492-1
+Arch verification finished: == done
+== Arch: real upload, Nautilus plugin, Chromium, tray
+== build
+26.1108.4222-dev+gdf80b792e492
+route desktop upload True
+== desktop hotkey -> upload
+desktop completed  
+{"id": "ab0e8994-769b-462a-9836-e9b988734a23", "name": "Screen-Capture-2026-11-08-07-28-19.png", "remote": "not_requested", "link": "https://put.gd/acceptance/d1275-hyprland/d3928faf27564bb9bfcf8a31858e8ffd/Screen-Capture-2026-11-08-07-28-19.png", "objectKey":
+public: 200 image/png 1948188 | origin: 200
+== open link from History in the default browser
+{"error": {"code": "", "details": {}, "message": ""}, "ok": true, "requestId": "c06c2cd3-e760-4a05-8764-f96aaa21da45", "result": {"opened": true, "route": "portal"}, "schemaVersion": 1}
+active: chromium | Screen-Capture-2026-11-08-07-28-19.png (1280×800) - Chromium
+== Nautilus right-click upload
+desktop completed  
+{"id": "ab0e8994-769b-462a-9836-e9b988734a23", "name": "Screen-Capture-2026-11-08-07-28-19.png", "remote": "not_requested", "link": "https://put.gd/acceptance/d1275-hyprland/d3928faf27564bb9bfcf8a31858e8ffd/Screen-Capture-2026-11-08-07-28-19.png", "objectKey":
+public: 200 image/png 1948188 | origin: 200
+{"error": {"code": "", "details": {}, "message": ""}, "ok": true, "requestId": "aec175cc-e0ce-4093-9b2e-e5fe2954e173", "result": {"opened": true, "route": "portal"}, "schemaVersion": 1}
+== delete both through History
+prepare False invalid_selection {}
+confirm False invalid_request
+deletion {}
+origin after delete: 200 200 | control (never existed): 403
+{"id": "ab0e8994-769b-462a-9836-e9b988734a23", "name": "Screen-Capture-2026-11-08-07-28-19.png", "remote": "not_requested", "link": "https://put.gd/acceptance/d1275-hyprland/d3928faf27564bb9bfcf8a31858e8ffd/Screen-Capture-2026-11-08-07-28-19.png", "objectKey":
+{"id": "81bef445-9541-4299-97b9-471ac9007d99", "name": "Screen-Capture-2026-11-08-07-28-11.png", "remote": "not_requested", "link": "", "objectKey": null, "linkAvailable": false}
+== tray menu -> Capture desktop
+route desktop local True
+Traceback (most recent call last):
+  File "/home/patrick/work/d1275/tray2.py", line 21, in <module>
+    q.execute('input-send-event', {'events': ev_move(cx + 4, 12)}); time.sleep(1.5)
+                                                     ~~~^~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    from PIL import Image; Image.open('/tmp/d1275-final-arch-last-tray.ppm').save('rows/final-arch-last/final-arch-last-tray-menu.png')
+                           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/PIL/Image.py", line 3465, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/d1275-final-arch-last-tray.ppm'
+desktop completed  
+teardown {"error": {"code": "", "details": {}, "message": ""
+{
+ "error": {
+  "code": "",
+  "details": {},
+  "message": ""
+ },
+ "ok": true,
+ "requestId": "dc6acaee-3036-4711-9cd6-b4d
+{"socketGone": true}
+== no resident (Arch, then AppImage)
+== after quit: every put.gd bind is gone, the hotkeys do nothing
+{"socketGone": true}
+{"total": 251, "putgd": [], "omarchyIdentical": true, "missing": [], "extra": []}
+processes: 0 | clients: [] | layers: [] | hyprland alive: yes
+new images: 0
+== after kill -9: stale binds stay until the next start, and firing them is harmless
+{"total": 254, "putgd": [[5, "3", "put.gd: Desktop capture"], [5, "1", "put.gd: Region capture"], [5, "2", "put.gd: Window capture"]], "omarchyIdentical": true, "missing"
+processes: 0 | clients: [] | layers: [] | hyprland alive: yes
+new images: 0
+== next start repairs: one set of binds, a capture works
+{"pid": 362271, "socket": true, "cli": "/usr/bin/putgd-cli"}
+{"total": 254, "putgd": [[5, "3", "put.gd: Desktop capture"], [5, "1", "put.gd: Region capture"], [5, "2", "put.gd: Window capture"]], "omarchyIdentical": true, "missing"
+desktop completed 
+{"socketGone": true}
+{"total": 251, "putgd": [], "omarchyIdentical": true, "missing": [], "extra": []}
+== after quit: every put.gd bind is gone, the hotkeys do nothing
+{"socketGone": true}
+{"total": 251, "putgd": [], "omarchyIdentical": true, "missing": [], "extra": []}
+processes: 0 | clients: [] | layers: [] | hyprland alive: yes
+new images: 0
+== after kill -9: stale binds stay until the next start, and firing them is harmless
+{"total": 254, "putgd": [[5, "3", "put.gd: Desktop capture"], [5, "1", "put.gd: Region capture"], [5, "2", "put.gd: Window capture"]], "omarchyIdentical": true, "missing"
+processes: 0 | clients: [] | layers: [] | hyprland alive: yes
+new images: 0
+== next start repairs: one set of binds, a capture works
+{"pid": 362832, "socket": true, "cli": "/tmp/.mount_putgd-gLHAnd/usr/bin/putgd-c
+{"total": 254, "putgd": [[5, "3", "put.gd: Desktop capture"], [5, "1", "put.gd: Region capture"], [5, "2", "put.gd: Window capture"]], "omarchyIdentical": true, "missing"
+Traceback (most recent call last):
+  File "/home/lab/d/probe/acc.py", line 99, in <module>
+    main()
+    ~~~~^^
+  File "/home/lab/d/probe/acc.py", line 68, in main
+    print(json.dumps(cli(a[1], json.loads(a[2]) if len(a) > 2 else None, timeout=int(a[3]) if len(a) > 3 else 60), indent=1))
+                     ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lab/d/probe/acc.py", line 35, in cli
+    r = subprocess.run(args, capture_output=True, text=True, env=session_env(), timeout=timeout)
+  File "/usr/lib/python3.14/subprocess.py", line 555, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 1875, in _execute_child
+    self._posix_spawn(args, executable, env, restore_signals, close_fds,
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                      p2cread, p2cwrite,
+                      ^^^^^^^^^^^^^^^^^^
+                      c2pread, c2pwrite,
+                      ^^^^^^^^^^^^^^^^^^
+                      errread, errwrite)
+                      ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 1819, in _posix_spawn
+    self.pid = os.posix_spawn(executable, args, env, **kwargs)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/.mount_putgd-gLHAnd/usr/bin/putgd-cli'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import json,sys; o=json.load(sys.stdin)["result"]["operations"][0]; print(o["action"],o["state"],o["error"]["code"])
+                       ~~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/json/__init__.py", line 298, in load
+    return loads(fp.read(),
+        cls=cls, object_hook=object_hook,
+        parse_float=parse_float, parse_int=parse_int,
+        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "/usr/lib/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/home/lab/d/probe/acc.py", line 99, in <module>
+    main()
+    ~~~~^^
+  File "/home/lab/d/probe/acc.py", line 92, in main
+    print(json.dumps(cli('ui.quit')))
+                     ~~~^^^^^^^^^^^
+  File "/home/lab/d/probe/acc.py", line 35, in cli
+    r = subprocess.run(args, capture_output=True, text=True, env=session_env(), timeout=timeout)
+  File "/usr/lib/python3.14/subprocess.py", line 555, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 1875, in _execute_child
+    self._posix_spawn(args, executable, env, restore_signals, close_fds,
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                      p2cread, p2cwrite,
+                      ^^^^^^^^^^^^^^^^^^
+                      c2pread, c2pwrite,
+                      ^^^^^^^^^^^^^^^^^^
+                      errread, errwrite)
+                      ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 1819, in _posix_spawn
+    self.pid = os.posix_spawn(executable, args, env, **kwargs)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/.mount_putgd-gLHAnd/usr/bin/putgd-cli'
+{"total": 254, "putgd": [[5, "3", "put.gd: Desktop capture"], [5, "1", "put.gd: Region capture"], [5, "2", "put.gd: Window capture"]], "omarchyIdentical": true, "missing"
+== cleanup
+False
+cleanup_confirmed
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/.mount_putgd-gLHAnd/usr/bin/putgd-cli'
+0
+LAST-DONE

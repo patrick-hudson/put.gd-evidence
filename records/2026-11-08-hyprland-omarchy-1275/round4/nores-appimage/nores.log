@@ -1,0 +1,101 @@
+== after quit: every put.gd bind is gone, the hotkeys do nothing
+{"socketGone": true}
+{"total": 251, "putgd": [], "omarchyIdentical": true, "missing": [], "extra": []}
+processes: 0 | clients: [] | layers: [] | hyprland alive: yes
+new images: 0
+== after kill -9: stale binds stay until the next start, and firing them is harmless
+{"total": 254, "putgd": [[5, "3", "put.gd: Desktop capture"], [5, "1", "put.gd: Region capture"], [5, "2", "put.gd: Window capture"]], "omarchyIdentical": true, "missing"
+processes: 0 | clients: [] | layers: [] | hyprland alive: yes
+new images: 0
+== next start repairs: one set of binds, a capture works
+{"pid": 362832, "socket": true, "cli": "/tmp/.mount_putgd-gLHAnd/usr/bin/putgd-c
+{"total": 254, "putgd": [[5, "3", "put.gd: Desktop capture"], [5, "1", "put.gd: Region capture"], [5, "2", "put.gd: Window capture"]], "omarchyIdentical": true, "missing"
+Traceback (most recent call last):
+  File "/home/lab/d/probe/acc.py", line 99, in <module>
+    main()
+    ~~~~^^
+  File "/home/lab/d/probe/acc.py", line 68, in main
+    print(json.dumps(cli(a[1], json.loads(a[2]) if len(a) > 2 else None, timeout=int(a[3]) if len(a) > 3 else 60), indent=1))
+                     ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lab/d/probe/acc.py", line 35, in cli
+    r = subprocess.run(args, capture_output=True, text=True, env=session_env(), timeout=timeout)
+  File "/usr/lib/python3.14/subprocess.py", line 555, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 1875, in _execute_child
+    self._posix_spawn(args, executable, env, restore_signals, close_fds,
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                      p2cread, p2cwrite,
+                      ^^^^^^^^^^^^^^^^^^
+                      c2pread, c2pwrite,
+                      ^^^^^^^^^^^^^^^^^^
+                      errread, errwrite)
+                      ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 1819, in _posix_spawn
+    self.pid = os.posix_spawn(executable, args, env, **kwargs)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/.mount_putgd-gLHAnd/usr/bin/putgd-cli'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import json,sys; o=json.load(sys.stdin)["result"]["operations"][0]; print(o["action"],o["state"],o["error"]["code"])
+                       ~~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/json/__init__.py", line 298, in load
+    return loads(fp.read(),
+        cls=cls, object_hook=object_hook,
+        parse_float=parse_float, parse_int=parse_int,
+        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "/usr/lib/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/home/lab/d/probe/acc.py", line 99, in <module>
+    main()
+    ~~~~^^
+  File "/home/lab/d/probe/acc.py", line 92, in main
+    print(json.dumps(cli('ui.quit')))
+                     ~~~^^^^^^^^^^^
+  File "/home/lab/d/probe/acc.py", line 35, in cli
+    r = subprocess.run(args, capture_output=True, text=True, env=session_env(), timeout=timeout)
+  File "/usr/lib/python3.14/subprocess.py", line 555, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 1875, in _execute_child
+    self._posix_spawn(args, executable, env, restore_signals, close_fds,
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                      p2cread, p2cwrite,
+                      ^^^^^^^^^^^^^^^^^^
+                      c2pread, c2pwrite,
+                      ^^^^^^^^^^^^^^^^^^
+                      errread, errwrite)
+                      ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 1819, in _posix_spawn
+    self.pid = os.posix_spawn(executable, args, env, **kwargs)
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/.mount_putgd-gLHAnd/usr/bin/putgd-cli'
+{"total": 254, "putgd": [[5, "3", "put.gd: Desktop capture"], [5, "1", "put.gd: Region capture"], [5, "2", "put.gd: Window capture"]], "omarchyIdentical": true, "missing"
