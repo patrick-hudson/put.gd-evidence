@@ -1,0 +1,38 @@
+2026-11-09T10:29:10.862 command prepare
+2026-11-09T10:29:10.892 qt1: Failed to register with host portal QDBusError("org.freedesktop.portal.Error.Failed", "Could not register app ID: App info not found for 'putgd-record'")
+2026-11-09T10:29:10.893 kde screencast: stream node 111 for DP-2
+2026-11-09T10:29:10.902 result prepare ok
+2026-11-09T10:29:12.653 command start
+2026-11-09T10:29:12.659 pipeline: putgdpipewiresrc name=src path=111 min-buffers=1 keepalive-time=1000 resend-last=true ! video/x-raw,max-framerate=0/1 ! queue name=cq leaky=downstream max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! videoconvert n-threads=4 ! videorate ! video/x-raw,format=I420,framerate=60/1 ! queue name=eq max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! x264enc speed-preset=superfast bitrate=12441 key-int-max=120 bframes=0 threads=8 sliced-threads=false rc-lookahead=10 sync-lookahead=0 name=venc ! h264parse ! queue name=vq max-size-buffers=0 max-size-bytes=0 max-size-time=2000000000 ! matroskamux name=mux ! filesink name=sink location="/var/home/patrick/i1216/set1/sw/data/putgd/recording/879f3548-8244-45ad-8734-834771b8908e/working.mkv"
+2026-11-09T10:29:13.464 started with x264enc on GstSystemClock, max_framerate unthrottled
+2026-11-09T10:29:13.465 result start ok
+2026-11-09T10:29:14.545 rate window: 60 fps, 66 delivered and 0 leaked in 1033 ms, machine 16% busy, recorder 0.81 cores
+2026-11-09T10:29:15.595 rate window: 60 fps, 67 delivered and 0 leaked in 1050 ms, machine 16% busy, recorder 0.83 cores
+2026-11-09T10:29:16.596 rate window: 60 fps, 65 delivered and 0 leaked in 1000 ms, machine 17% busy, recorder 0.86 cores
+2026-11-09T10:29:17.646 rate window: 60 fps, 67 delivered and 0 leaked in 1049 ms, machine 16% busy, recorder 0.86 cores
+2026-11-09T10:29:18.695 rate window: 60 fps, 68 delivered and 0 leaked in 1049 ms, machine 17% busy, recorder 0.85 cores
+2026-11-09T10:29:19.745 rate window: 60 fps, 68 delivered and 0 leaked in 1050 ms, machine 17% busy, recorder 0.89 cores
+2026-11-09T10:29:20.796 rate window: 60 fps, 67 delivered and 0 leaked in 1050 ms, machine 16% busy, recorder 0.88 cores
+2026-11-09T10:29:21.845 rate window: 60 fps, 65 delivered and 0 leaked in 1049 ms, machine 16% busy, recorder 0.90 cores
+2026-11-09T10:29:22.895 rate window: 60 fps, 66 delivered and 0 leaked in 1049 ms, machine 17% busy, recorder 0.91 cores
+2026-11-09T10:29:23.624 command stop
+2026-11-09T10:29:23.709 timestamps: clock GstSystemClock, video lateness 6.7/16.3/27.2 ms (n=658), audio lateness none, frame age 3.3/4.5/17.9 ms (n=660), arrival-stamped frames 0, audio re-anchored 0 times
+2026-11-09T10:29:23.709 frames: 658 reached the video encoder, 0 leaked at the capture queue; source arrivals 700 (interval 3.6/15.7/20.9 ms (n=699)), 0 with a repeated compositor time, contents 660 new / 40 same dropped, cadence lock 2 early dropped / 1 resyncs / 0 changes slotted after a repeat
+2026-11-09T10:29:23.716 review: open
+2026-11-09T10:29:23.723 review: shown
+2026-11-09T10:29:23.723 result stop ok
+2026-11-09T10:29:23.770 command export
+2026-11-09T10:29:23.781 review: frame at 0
+2026-11-09T10:29:23.787 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-09T10:29:23.787 export mp4 wantAudio=0 audioIndex=-1 streams=1
+2026-11-09T10:29:23.798 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-09T10:29:23.799 seek ok: first key pts 0 target 0
+2026-11-09T10:29:23.807 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-09T10:29:23.808 seek ok: first key pts 0 target 0
+2026-11-09T10:29:23.850 review: frame 1280x720
+2026-11-09T10:29:27.574 result export ok
+2026-11-09T10:29:27.582 command savedCopy
+2026-11-09T10:29:27.583 result savedCopy ok
+2026-11-09T10:29:27.615 command cancel
+2026-11-09T10:29:27.615 kde screencast: stream closed
+2026-11-09T10:29:27.615 result cancel ok

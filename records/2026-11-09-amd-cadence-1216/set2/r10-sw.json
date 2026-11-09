@@ -1,0 +1,203 @@
+{
+  "tool": "fluidity_run.py",
+  "command": "record",
+  "host": "aurora-amd",
+  "kernel": "7.2.11-300.fc45.x86_64",
+  "session": {
+    "type": "wayland",
+    "desktop": "KDE",
+    "process": "plasmashell"
+  },
+  "started": "2026-11-09T16:34:40Z",
+  "arguments": {
+    "command": "record",
+    "run": "/var/home/patrick/i1216/set2/sw",
+    "build": [
+      "lab=/var/home/patrick/i1216/putgd-26.1109.4346-nightly-x86_64.AppImage"
+    ],
+    "output": "DP-2",
+    "rounds": 1,
+    "runtime_dir": "/run/user/1000/i1216",
+    "frames": true,
+    "vnc_port": 5900,
+    "fps": 60,
+    "seconds": 10.0,
+    "target": "monitor",
+    "rect": null,
+    "real_data_home": false,
+    "kwin_entry": [
+      "lab"
+    ],
+    "static": false,
+    "env": [
+      "PIPEWIRE_RUNTIME_DIR=/run/user/1000",
+      "LIBVA_DRIVER_NAME=none"
+    ]
+  },
+  "builds": {
+    "lab": {
+      "kind": "appimage",
+      "file": "putgd-26.1109.4346-nightly-x86_64.AppImage",
+      "sha256": "d72454ab90ff75ef5378f141651d83f2c3b341eaa133b3bc86b4ced4efe2714b"
+    }
+  },
+  "rounds": [
+    {
+      "build": "lab",
+      "round": 1,
+      "started": "2026-11-09T16:34:40Z",
+      "fixture": {
+        "ok": true,
+        "state": "covered",
+        "output": "DP-2-HS173PC",
+        "rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "strip": [
+          24,
+          24,
+          24
+        ],
+        "scale": 1
+      },
+      "output": {
+        "model": "DP-2-HS173PC",
+        "name": "DP-2",
+        "rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "scale": 1
+      },
+      "acquisition": "kde-screencast",
+      "liveEncoders": [
+        "x264enc"
+      ],
+      "canvas": [
+        1920,
+        1080
+      ],
+      "frame": "/var/home/patrick/i1216/set2/sw/frames/record-lab-1.png",
+      "machineBusy": 0.216,
+      "cpuMs": {
+        "compositor": 6570,
+        "recorder": 11740,
+        "seconds": 10.0
+      },
+      "progress": {
+        "audioEncoder": "",
+        "bytes": 1793568,
+        "durationUs": 9966666,
+        "encoder": "x264enc",
+        "frameRate": 60,
+        "framesCaptured": 598,
+        "framesDelivered": 1198,
+        "framesDropped": 0,
+        "framesEncoded": 598,
+        "paused": false,
+        "recordingAudio": {
+          "effective": false,
+          "requested": false
+        }
+      },
+      "durationUs": 10983333,
+      "wallSecondsRecorded": 10.0,
+      "load": 2.39404296875,
+      "export": "saved",
+      "clips": {
+        "working": {
+          "ok": true,
+          "clip": "/var/home/patrick/i1216/set2/sw/working/c5344687-cb25-4e7b-849c-083d51aa9775.mkv",
+          "strip": [
+            24,
+            24,
+            24
+          ],
+          "frames": 659,
+          "durationS": 10.984,
+          "clipFps": 60.0,
+          "nominalFps": 60,
+          "unreadable": 0,
+          "distinctSourceFrames": 519,
+          "distinctPerSecond": 47.25,
+          "pairs": {
+            "repeat": 140,
+            "fluid": 447,
+            "skip1": 71,
+            "skip2plus": 0,
+            "backwards": 0
+          },
+          "fluidFraction": 0.6793,
+          "longestStallFrames": 3,
+          "longestStallMs": 50.0,
+          "longestSkipFrames": 1,
+          "longestSkipMs": 16.7,
+          "ptsGapMs": {
+            "min": 16.0,
+            "median": 17.0,
+            "max": 17.0,
+            "offGrid": 0
+          }
+        },
+        "copy": {
+          "ok": true,
+          "clip": "/var/home/patrick/i1216/set2/sw/out/lab-1.mp4",
+          "strip": [
+            24,
+            24,
+            24
+          ],
+          "frames": 659,
+          "durationS": 10.983,
+          "clipFps": 60.0,
+          "nominalFps": 60,
+          "unreadable": 0,
+          "distinctSourceFrames": 519,
+          "distinctPerSecond": 47.25,
+          "pairs": {
+            "repeat": 140,
+            "fluid": 447,
+            "skip1": 71,
+            "skip2plus": 0,
+            "backwards": 0
+          },
+          "fluidFraction": 0.6793,
+          "longestStallFrames": 3,
+          "longestStallMs": 50.0,
+          "longestSkipFrames": 1,
+          "longestSkipMs": 16.7,
+          "ptsGapMs": {
+            "min": 16.67,
+            "median": 16.67,
+            "max": 16.67,
+            "offGrid": 0
+          }
+        }
+      },
+      "ticks": {
+        "ok": true,
+        "file": "/var/home/patrick/i1216/set2/sw/logs/ticks-lab-1.log",
+        "frames": 599,
+        "seconds": 11.12,
+        "nominalMs": 16.67,
+        "meanMs": 18.602,
+        "maxMs": 34.72,
+        "lateFrames": 68,
+        "lateFraction": 0.1137,
+        "missedFrames": 68
+      },
+      "recorder": {
+        "pipeline:": "putgdpipewiresrc name=src path=111 min-buffers=1 keepalive-time=1000 resend-last=true ! video/x-raw,max-framerate=0/1 ! queue name=cq leaky=downstream max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! videoconvert n-threads=4 ! videorate ! video/x-raw,format=I420,framerate=60/1 ! queue name=eq max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! x264enc speed-preset=superfast bitrate=12441 key-int-max=120 bframes=0 threads=8 sliced-threads=false rc-lookahead=10 sync-lookahead=0 name=venc ! h264parse ! queue name=vq max-size-buffers=0 max-size-bytes=0 max-size-time=2000000000 ! matroskamux name=mux ! filesink name=sink location=\"/var/home/patrick/i1216/set2/sw/data/putgd/recording/c5344687-cb25-4e7b-849c-083d51aa9775/working.mkv\"",
+        "started with": "x264enc on GstSystemClock, max_framerate unthrottled",
+        "timestamps:": "clock GstSystemClock, video lateness 2.7/7.8/31.3 ms (n=659), audio lateness none, frame age 2.9/7.7/22.6 ms (n=1295), arrival-stamped frames 0, audio re-anchored 0 times",
+        "frames:": "659 reached the video encoder, 0 leaked at the capture queue; source arrivals 1313 (interval 3.0/8.4/18.5 ms (n=1312)), 0 with a repeated compositor time, contents 1295 new / 18 same dropped, cadence lock 635 early dropped / 0 resyncs / 0 changes slotted after a repeat"
+      },
+      "recorderEnvironment": {}
+    }
+  ]
+}

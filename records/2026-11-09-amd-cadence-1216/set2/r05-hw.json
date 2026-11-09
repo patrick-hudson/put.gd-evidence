@@ -1,0 +1,204 @@
+{
+  "tool": "fluidity_run.py",
+  "command": "record",
+  "host": "aurora-amd",
+  "kernel": "7.2.11-300.fc45.x86_64",
+  "session": {
+    "type": "wayland",
+    "desktop": "KDE",
+    "process": "plasmashell"
+  },
+  "started": "2026-11-09T16:32:31Z",
+  "arguments": {
+    "command": "record",
+    "run": "/var/home/patrick/i1216/set2/hw",
+    "build": [
+      "lab=/var/home/patrick/i1216/putgd-26.1109.4346-nightly-x86_64.AppImage"
+    ],
+    "output": "DP-2",
+    "rounds": 1,
+    "runtime_dir": "/run/user/1000/i1216",
+    "frames": true,
+    "vnc_port": 5900,
+    "fps": 60,
+    "seconds": 10.0,
+    "target": "monitor",
+    "rect": null,
+    "real_data_home": false,
+    "kwin_entry": [
+      "lab"
+    ],
+    "static": false,
+    "env": [
+      "PIPEWIRE_RUNTIME_DIR=/run/user/1000"
+    ]
+  },
+  "builds": {
+    "lab": {
+      "kind": "appimage",
+      "file": "putgd-26.1109.4346-nightly-x86_64.AppImage",
+      "sha256": "d72454ab90ff75ef5378f141651d83f2c3b341eaa133b3bc86b4ced4efe2714b"
+    }
+  },
+  "rounds": [
+    {
+      "build": "lab",
+      "round": 1,
+      "started": "2026-11-09T16:32:31Z",
+      "fixture": {
+        "ok": true,
+        "state": "covered",
+        "output": "DP-2-HS173PC",
+        "rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "strip": [
+          24,
+          24,
+          24
+        ],
+        "scale": 1
+      },
+      "output": {
+        "model": "DP-2-HS173PC",
+        "name": "DP-2",
+        "rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "scale": 1
+      },
+      "acquisition": "kde-screencast",
+      "liveEncoders": [
+        "vah264enc",
+        "vaapih264enc",
+        "x264enc"
+      ],
+      "canvas": [
+        1920,
+        1080
+      ],
+      "frame": "/var/home/patrick/i1216/set2/hw/frames/record-lab-1.png",
+      "machineBusy": 0.186,
+      "cpuMs": {
+        "compositor": 6240,
+        "recorder": 7070,
+        "seconds": 10.0
+      },
+      "progress": {
+        "audioEncoder": "",
+        "bytes": 14468334,
+        "durationUs": 10316666,
+        "encoder": "vah264enc",
+        "frameRate": 60,
+        "framesCaptured": 620,
+        "framesDelivered": 1296,
+        "framesDropped": 0,
+        "framesEncoded": 619,
+        "paused": false,
+        "recordingAudio": {
+          "effective": false,
+          "requested": false
+        }
+      },
+      "durationUs": 10716666,
+      "wallSecondsRecorded": 10.0,
+      "load": 2.5537109375,
+      "export": "saved",
+      "clips": {
+        "working": {
+          "ok": true,
+          "clip": "/var/home/patrick/i1216/set2/hw/working/f10068a4-9cce-477f-8de2-7801261cbf6b.mkv",
+          "strip": [
+            24,
+            24,
+            24
+          ],
+          "frames": 643,
+          "durationS": 10.717,
+          "clipFps": 60.0,
+          "nominalFps": 60,
+          "unreadable": 0,
+          "distinctSourceFrames": 519,
+          "distinctPerSecond": 48.43,
+          "pairs": {
+            "repeat": 124,
+            "fluid": 494,
+            "skip1": 24,
+            "skip2plus": 0,
+            "backwards": 0
+          },
+          "fluidFraction": 0.7695,
+          "longestStallFrames": 2,
+          "longestStallMs": 33.3,
+          "longestSkipFrames": 1,
+          "longestSkipMs": 16.7,
+          "ptsGapMs": {
+            "min": 16.0,
+            "median": 17.0,
+            "max": 17.0,
+            "offGrid": 0
+          }
+        },
+        "copy": {
+          "ok": true,
+          "clip": "/var/home/patrick/i1216/set2/hw/out/lab-1.mp4",
+          "strip": [
+            24,
+            24,
+            24
+          ],
+          "frames": 643,
+          "durationS": 10.717,
+          "clipFps": 60.0,
+          "nominalFps": 60,
+          "unreadable": 0,
+          "distinctSourceFrames": 519,
+          "distinctPerSecond": 48.43,
+          "pairs": {
+            "repeat": 124,
+            "fluid": 494,
+            "skip1": 24,
+            "skip2plus": 0,
+            "backwards": 0
+          },
+          "fluidFraction": 0.7695,
+          "longestStallFrames": 2,
+          "longestStallMs": 33.3,
+          "longestSkipFrames": 1,
+          "longestSkipMs": 16.7,
+          "ptsGapMs": {
+            "min": 16.67,
+            "median": 16.67,
+            "max": 16.67,
+            "offGrid": 0
+          }
+        }
+      },
+      "ticks": {
+        "ok": true,
+        "file": "/var/home/patrick/i1216/set2/hw/logs/ticks-lab-1.log",
+        "frames": 552,
+        "seconds": 10.88,
+        "nominalMs": 16.67,
+        "meanMs": 19.744,
+        "maxMs": 34.42,
+        "lateFrames": 102,
+        "lateFraction": 0.1851,
+        "missedFrames": 102
+      },
+      "recorder": {
+        "pipeline:": "putgdpipewiresrc name=src path=111 min-buffers=1 keepalive-time=1000 resend-last=true ! video/x-raw,max-framerate=0/1 ! queue name=cq leaky=downstream max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! videoconvert n-threads=4 ! videorate ! video/x-raw,format=NV12,framerate=60/1 ! queue name=eq max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! vah264enc bitrate=12441 key-int-max=120 name=venc ! h264parse ! queue name=vq max-size-buffers=0 max-size-bytes=0 max-size-time=2000000000 ! matroskamux name=mux ! filesink name=sink location=\"/var/home/patrick/i1216/set2/hw/data/putgd/recording/f10068a4-9cce-477f-8de2-7801261cbf6b/working.mkv\"",
+        "started with": "vah264enc on GstSystemClock, max_framerate unthrottled",
+        "timestamps:": "clock GstSystemClock, video lateness 17.0/22.6/36.4 ms (n=643), audio lateness none, frame age 3.0/7.4/20.8 ms (n=1280), arrival-stamped frames 0, audio re-anchored 0 times",
+        "frames:": "643 reached the video encoder, 0 leaked at the capture queue; source arrivals 1343 (interval 3.2/8.0/23.7 ms (n=1342)), 0 with a repeated compositor time, contents 1280 new / 63 same dropped, cadence lock 636 early dropped / 0 resyncs / 0 changes slotted after a repeat"
+      },
+      "recorderEnvironment": {}
+    }
+  ]
+}
