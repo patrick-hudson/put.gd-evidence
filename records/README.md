@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-09-editor-tools-1362](2026-11-09-editor-tools-1362/README.md) | #1362 | Editor tools (#1362): step numbers, pen, ellipse, line, pixelate, Copy image |
 | [2026-11-09-issue-835-history-menu-key](2026-11-09-issue-835-history-menu-key/README.md) | — | Issue 835: History row menu and the Menu key |
 | [2026-11-09-amd-cadence-1216](2026-11-09-amd-cadence-1216/README.md) | #1216 | #1216: AMD hardware versus software cadence at 1080p60 |
 | [2026-11-08-omarchy-credentials](2026-11-08-omarchy-credentials/README.md) | — | Omarchy credentials — current nightly 4267 |
