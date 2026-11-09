@@ -1,0 +1,60 @@
+diff --git a/tests/desktop/test_proton_lab.py b/tests/desktop/test_proton_lab.py
+index 913a8e2dd..b818241ea 100644
+--- a/tests/desktop/test_proton_lab.py
++++ b/tests/desktop/test_proton_lab.py
+@@ -493,6 +493,38 @@ class SmokeCheck(unittest.TestCase):
+ 
+ 
+ class QuitResidents(unittest.TestCase):
++    def test_collection_waits_for_provider_processes_but_not_a_clipboard_keeper(self):
++        """A resident or provider helper delays collection; a keeper does not."""
++        for name, remains in [('putgd', True), ('putgd-proton', True), ('putgd-clipboard-keeper', False)]:
++            with self.subTest(name=name), tempfile.TemporaryDirectory(prefix='pg-w-') as temp:
++                root = Path(temp)
++                shutil.copy(shutil.which('sleep'), root/name)
++                child = subprocess.Popen([str(root/name), '30'])
++                try:
++                    (root/'pid').write_text(str(child.pid))
++                    # Restrict real pgrep to our child, preserving its actual name matching.
++                    (root/'pgrep').write_text('#!/bin/sh\nexec '+shutil.which('pgrep')+' "$@" -F "$FIXTURE_PID"\n')
++                    (root/'pgrep').chmod(0o755)
++                    deadline = time.monotonic() + 5
++                    while Path(f'/proc/{child.pid}/exe').resolve() != (root/name).resolve() and time.monotonic() < deadline:
++                        time.sleep(.01)
++                    def ssh(run, command):
++                        """Execute process probes against this fixture PID only."""
++                        if command == proton.QUIT_RESIDENTS:
++                            return ''  # An unresponsive resident must still prevent collection.
++                        return subprocess.check_output(['sh', '-c', command], text=True,
++                            env=dict(os.environ, PATH=f"{root}:{os.environ['PATH']}", FIXTURE_PID=str(root/'pid')))
++                    with mock.patch.object(proton.lab, 'state', return_value={}), mock.patch.object(proton.lab, 'cli'), mock.patch.object(proton.lab, 'ssh', side_effect=ssh):
++                        guest = proton.Guest(root)
++                        if remains:
++                            with self.assertRaises(proton.LabFailure):
++                                guest.stop_app(timeout=.05)
++                        else:
++                            guest.stop_app(timeout=.05)
++                finally:
++                    child.kill()
++                    child.wait()
++
+     def test_a_private_resident_is_quit_with_its_own_environment(self):
+         with tempfile.TemporaryDirectory(prefix='pg-q-') as temp:
+             root = Path(temp)
+diff --git a/tools/lab/proton_lab.py b/tools/lab/proton_lab.py
+index ba9437e8f..35ced4cf1 100644
+--- a/tools/lab/proton_lab.py
++++ b/tools/lab/proton_lab.py
+@@ -643,7 +643,11 @@ class Guest:
+             lab.ssh(self.run, QUIT_RESIDENTS)
+         deadline = time.monotonic() + timeout
+         while time.monotonic() < deadline:
+-            left = lab.ssh(self.run, 'pgrep -u "$(id -u)" "^putgd" || true').split()
++            # Keep waiting for provider helpers after an abnormal resident exit.
++            # Only the keeper (Linux comm truncates it to 15 bytes) cannot use sessions.
++            left = lab.ssh(self.run, '''for pid in $(pgrep -u "$(id -u)" "^putgd"); do
++    [ "$(cat /proc/$pid/comm 2>/dev/null)" = putgd-clipboard ] || printf '%s\\n' "$pid"
++done''').split()
+             if not left:
+                 return
+             time.sleep(1)
