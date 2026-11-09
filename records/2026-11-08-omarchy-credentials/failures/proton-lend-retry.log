@@ -1,0 +1,14 @@
+Proton reused stored account and isolated folder
+Proton capture uploaded and share link ready
+Traceback (most recent call last):
+  File "/home/patrick/work/oc/src/proton_flow.py", line 35, in <module>
+    call('history.clear');patch(dict(profiles=[],actions={a:dict(destination='local',profileId=None,publicationMode='default') for a in ('region','window','desktop','clipboard','edit')}));out.write_text(json.dumps(summary,indent=2));print('Proton restart passed; one file revoked/private, history/profile removed',flush=True)
+                          ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/oc/src/common.py", line 10, in patch
+    s=call('settings.get');return call('settings.patch',dict(patch=p,expectedRevision=s['metadata']['observedRevision']))
+                                  ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/oc/src/common.py", line 8, in call
+    v=json.loads(shell(body));assert v['ok'],v['error']['code'];return v['result']
+                                     ~^^^^^^
+AssertionError: config_invalid
+{"receipts": "/home/patrick/putgd-lab/proton/receipts/2026-11-09T00-01-34Z-o1", "guestKeyring": {"provider": "gnome-keyring", "collection": "Default_keyring", "stock": true}, "testExit": 1, "rotated": false, "carriedBack": "/home/patrick/putgd-lab/proton/receipts/2026-11-09T00-01-34Z-o1/carry-back-1.json", "reference": "putgd-lab-6bf0803f-9afe-4181-8251-822edde35e93"}

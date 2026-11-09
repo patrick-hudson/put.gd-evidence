@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/oc/src/proton_native_flow.py", line 7, in <module>
+    patch(dict(profiles=[p]));a=setup('inspectAccount');p['settings']['accountRootUid']=a['accountRootUid'];patch(dict(profiles=[p],actions=dict(region=dict(destination='upload',profileId='oc-proton',publicationMode='share'))));setup('testDestination');print('Native Proton account and isolated folder reused',flush=True)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/oc/src/common.py", line 10, in patch
+    s=call('settings.get');return call('settings.patch',dict(patch=p,expectedRevision=s['metadata']['observedRevision']))
+                                  ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/oc/src/common.py", line 8, in call
+    v=json.loads(shell(body));assert v['ok'],v['error']['code'];return v['result']
+                                     ~^^^^^^
+AssertionError: config_invalid
+{"receipts": "/home/patrick/putgd-lab/proton/receipts/2026-11-09T00-13-34Z-o1", "guestKeyring": {"provider": "gnome-keyring", "collection": "Default_keyring", "stock": true}, "testExit": 1, "rotated": false, "carriedBack": "/home/patrick/putgd-lab/proton/receipts/2026-11-09T00-13-34Z-o1/carry-back-1.json", "reference": "putgd-lab-6bf0803f-9afe-4181-8251-822edde35e93"}

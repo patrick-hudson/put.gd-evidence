@@ -1,0 +1,18 @@
+Proton existing-session account, isolated folder and connection test passed
+Traceback (most recent call last):
+  File "/home/patrick/work/oc/src/proton_flow.py", line 18, in <module>
+    hid=record['id'];detail=call('history.detail',dict(id=hid));assert detail['linkAvailable'],'no_share_link'
+                                                                       ~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: no_share_link
+Traceback (most recent call last):
+  File "/home/patrick/work/oc/src/proton_lend.py", line 27, in <module>
+    r=p.lend(layout,str(RUN),'oc-credentials','oc-credentials','stock Omarchy credential validation',['python3','proton_flow.py'],guest_factory=Stock)
+  File "/home/patrick/work/oc/src/tools/lab/proton_lab.py", line 733, in lend
+    guest.stop_app()
+    ~~~~~~~~~~~~~~^^
+  File "/home/patrick/work/oc/src/proton_lend.py", line 22, in stop_app
+    super().stop_app()
+    ~~~~~~~~~~~~~~~~^^
+  File "/home/patrick/work/oc/src/tools/lab/proton_lab.py", line 650, in stop_app
+    raise LabFailure('put.gd is still running in the guest; stop it before the session is collected')
+tools.lab.proton_lab.LabFailure: put.gd is still running in the guest; stop it before the session is collected
