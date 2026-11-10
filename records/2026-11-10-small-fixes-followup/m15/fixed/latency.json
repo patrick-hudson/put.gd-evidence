@@ -1,0 +1,36 @@
+{
+    "budgetPassed": false,
+    "displays": [
+        {
+            "height": 1080,
+            "name": "HDMI-1",
+            "scale": 1,
+            "width": 1920,
+            "x": 0,
+            "y": 0
+        }
+    ],
+    "error": "Actual resident selector did not map/paint on every display",
+    "measurementLimit": "Mapping-only observer derived from bench_capture. Stops at ownership-validated MapNotify; no paint or drag timing is claimed. paintMs is a legacy alias of mapMs here. Helper-start estimate uses CLOCK_BOOTTIME and /proc startTicks, with 10ms tick quantization.",
+    "p95PaintMs": -1,
+    "samples": [
+    ],
+    "schemaVersion": 3,
+    "scope": "physical Cinnamon X11 hotkey to validated selector mapping; synthetic canvases; Escape cancellation",
+    "selectorOwnership": "resident or exact supplied executable immediate child PID/start/device/inode",
+    "syntheticDrag": {
+        "endX": 1879,
+        "endY": 1040,
+        "startX": 40,
+        "startY": 20
+    },
+    "timingDefinitions": {
+        "mapMs": "All selector map events discovered and owner/override-redirect validated",
+        "mapOwnershipQueriesMs": "Subset of mapEventDrainMs; synchronous ownership and attribute queries",
+        "paintQueriesMs": "Sum of synchronous position, geometry and white-pixel witness queries",
+        "pollSleepMs": "Actual elapsed one-millisecond poll sleeps, including scheduling delay",
+        "windowWitnesses": "Driver-observed map event, validation and first white drawable pixel per selector"
+    },
+    "warmupInvocations": 5,
+    "witnessMode": "live-outline"
+}

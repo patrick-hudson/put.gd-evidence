@@ -1,0 +1,126 @@
+{
+    "budgetPassed": false,
+    "displays": [
+        {
+            "height": 1080,
+            "name": "HDMI-1",
+            "scale": 1,
+            "width": 1920,
+            "x": 0,
+            "y": 0
+        }
+    ],
+    "error": "Actual resident selector did not map/paint on every display",
+    "measurementLimit": "Mapping-only observer derived from bench_capture. Stops at ownership-validated MapNotify; no paint or drag timing is claimed. paintMs is a legacy alias of mapMs here. Helper-start estimate uses CLOCK_BOOTTIME and /proc startTicks, with 10ms tick quantization.",
+    "p95PaintMs": -1,
+    "samples": [
+        {
+            "driverCosts": {
+                "eventProcessingMs": 2.649141000000042,
+                "hotkeyInjectionMs": 0.605764,
+                "inputInjectionMs": -123.910431,
+                "mapEventDrainMs": 1.6612889999999823,
+                "mapOwnershipQueriesMs": 0.8631209999999925,
+                "paintQueriesMs": 0,
+                "pollIterations": 105,
+                "pollSleepMs": 117.94926299999995
+            },
+            "inputIssuedMs": -1,
+            "mapMs": 122.910431,
+            "paintAfterInputMs": 123.910431,
+            "paintMs": 122.910431,
+            "windowWitnesses": [
+                {
+                    "firstWhiteObservedMs": -1,
+                    "helperStartResolutionMs": 10,
+                    "helperStartToMapUpperMs": 114.49740791320801,
+                    "mapEventObservedMs": 122.575284,
+                    "mapValidatedMs": 122.903579,
+                    "ownerPid": 3909530,
+                    "ownerStartTicks": "167558246",
+                    "probeCount": 0,
+                    "probeMaxMs": 0,
+                    "probeTotalMs": 0
+                }
+            ]
+        },
+        {
+            "driverCosts": {
+                "eventProcessingMs": 1.0393240000000075,
+                "hotkeyInjectionMs": 0.645911,
+                "inputInjectionMs": -80.289697,
+                "mapEventDrainMs": 2.4738720000000405,
+                "mapOwnershipQueriesMs": 2.1551470000000137,
+                "paintQueriesMs": 0,
+                "pollIterations": 67,
+                "pollSleepMs": 75.111543
+            },
+            "inputIssuedMs": -1,
+            "mapMs": 79.289697,
+            "paintAfterInputMs": 80.289697,
+            "paintMs": 79.289697,
+            "windowWitnesses": [
+                {
+                    "firstWhiteObservedMs": -1,
+                    "helperStartResolutionMs": 10,
+                    "helperStartToMapUpperMs": 72.54046607017517,
+                    "mapEventObservedMs": 78.207083,
+                    "mapValidatedMs": 79.283921,
+                    "ownerPid": 3909537,
+                    "ownerStartTicks": "167558309",
+                    "probeCount": 0,
+                    "probeMaxMs": 0,
+                    "probeTotalMs": 0
+                }
+            ]
+        },
+        {
+            "driverCosts": {
+                "eventProcessingMs": 2.670090000000114,
+                "hotkeyInjectionMs": 0.671444,
+                "inputInjectionMs": -129.048991,
+                "mapEventDrainMs": 1.9576870000000854,
+                "mapOwnershipQueriesMs": 1.1101030000000378,
+                "paintQueriesMs": 0,
+                "pollIterations": 103,
+                "pollSleepMs": 122.70141399999994
+            },
+            "inputIssuedMs": -1,
+            "mapMs": 128.048991,
+            "paintAfterInputMs": 129.048991,
+            "paintMs": 128.048991,
+            "windowWitnesses": [
+                {
+                    "firstWhiteObservedMs": -1,
+                    "helperStartResolutionMs": 10,
+                    "helperStartToMapUpperMs": 119.13873481750488,
+                    "mapEventObservedMs": 127.780526,
+                    "mapValidatedMs": 128.041905,
+                    "ownerPid": 3909544,
+                    "ownerStartTicks": "167558368",
+                    "probeCount": 0,
+                    "probeMaxMs": 0,
+                    "probeTotalMs": 0
+                }
+            ]
+        }
+    ],
+    "schemaVersion": 3,
+    "scope": "physical Cinnamon X11 hotkey to validated selector mapping; synthetic canvases; Escape cancellation",
+    "selectorOwnership": "resident or exact supplied executable immediate child PID/start/device/inode",
+    "syntheticDrag": {
+        "endX": 1879,
+        "endY": 1040,
+        "startX": 40,
+        "startY": 20
+    },
+    "timingDefinitions": {
+        "mapMs": "All selector map events discovered and owner/override-redirect validated",
+        "mapOwnershipQueriesMs": "Subset of mapEventDrainMs; synchronous ownership and attribute queries",
+        "paintQueriesMs": "Sum of synchronous position, geometry and white-pixel witness queries",
+        "pollSleepMs": "Actual elapsed one-millisecond poll sleeps, including scheduling delay",
+        "windowWitnesses": "Driver-observed map event, validation and first white drawable pixel per selector"
+    },
+    "warmupInvocations": 5,
+    "witnessMode": "live-outline"
+}
