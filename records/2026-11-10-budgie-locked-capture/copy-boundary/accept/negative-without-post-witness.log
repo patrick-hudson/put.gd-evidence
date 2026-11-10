@@ -1,0 +1,49 @@
+********* Start testing of BudgieLabwcTest *********
+Config: Using QtTest library 6.11.2, Qt 6.11.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 16.2.1 20260819 (Red Hat 16.2.1-2)), fedora 45
+dbus-daemon[4925]: [session uid=1000 pid=4925 pidfd=5] Activating service name='org.freedesktop.portal.Desktop' requested by ':1.0' (uid=1000 pid=4933 comm="/tmp/pgr2-negative/putgd-labwc-fixture" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[4925]: [session uid=1000 pid=4925 pidfd=5] Activating service name='org.freedesktop.impl.portal.PermissionStore' requested by ':1.1' (uid=1000 pid=4936 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[4925]: [session uid=1000 pid=4925 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.PermissionStore'
+dbus-daemon[4925]: [session uid=1000 pid=4925 pidfd=5] Activating service name='org.freedesktop.portal.Documents' requested by ':1.1' (uid=1000 pid=4936 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[4925]: [session uid=1000 pid=4925 pidfd=5] Successfully activated service 'org.freedesktop.portal.Documents'
+
+(/usr/libexec/xdg-desktop-portal:4936): xdg-desktop-portal-WARNING **: 06:39:11.365: Choosing gtk.portal for org.freedesktop.impl.portal.Access as a last-resort fallback
+dbus-daemon[4925]: [session uid=1000 pid=4925 pidfd=5] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.1' (uid=1000 pid=4936 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[4925]: [session uid=1000 pid=4925 pidfd=5] Activating service name='org.gtk.vfs.Daemon' requested by ':1.4' (uid=1000 pid=4961 comm="/usr/libexec/xdg-desktop-portal-gtk" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[4925]: [session uid=1000 pid=4925 pidfd=5] Successfully activated service 'org.gtk.vfs.Daemon'
+dbus-daemon[4925]: [session uid=1000 pid=4925 pidfd=5] Activating service name='org.a11y.Bus' requested by ':1.6' (uid=1000 pid=4961 comm="/usr/libexec/xdg-desktop-portal-gtk" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[4925]: [session uid=1000 pid=4925 pidfd=5] Activated service 'org.a11y.Bus' failed: Failed to execute program org.a11y.Bus: Permission denied
+
+(xdg-desktop-portal-gtk:4961): atspi-WARNING **: 06:39:11.433: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.Spawn.ExecFailed: Failed to execute program org.a11y.Bus: Permission denied
+QINFO  : BudgieLabwcTest::initTestCase() labwc "labwc 0.20.2 (+xwayland +nls +rsvg +libsfdo) wlroots-0.20.2" outputs 2
+PASS   : BudgieLabwcTest::initTestCase()
+dbus-daemon[4925]: [session uid=1000 pid=4925 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.desktop.gtk'
+
+(/usr/libexec/xdg-desktop-portal:4936): xdg-desktop-portal-WARNING **: 06:39:11.488: Choosing gtk.portal for org.freedesktop.impl.portal.Settings as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:4936): xdg-desktop-portal-WARNING **: 06:39:11.489: Choosing gtk.portal for org.freedesktop.impl.portal.FileChooser as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:4936): xdg-desktop-portal-WARNING **: 06:39:11.491: Choosing gtk.portal for org.freedesktop.impl.portal.AppChooser as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:4936): xdg-desktop-portal-WARNING **: 06:39:11.492: Choosing gtk.portal for org.freedesktop.impl.portal.Print as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:4936): xdg-desktop-portal-WARNING **: 06:39:11.493: Choosing gtk.portal for org.freedesktop.impl.portal.Notification as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:4936): xdg-desktop-portal-WARNING **: 06:39:11.494: Choosing gtk.portal for org.freedesktop.impl.portal.Inhibit as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:4936): xdg-desktop-portal-WARNING **: 06:39:11.499: Choosing gtk.portal for org.freedesktop.impl.portal.Account as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:4936): xdg-desktop-portal-WARNING **: 06:39:11.501: Choosing gtk.portal for org.freedesktop.impl.portal.Email as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:4936): xdg-desktop-portal-WARNING **: 06:39:11.503: Choosing gtk.portal for org.freedesktop.impl.portal.DynamicLauncher as a last-resort fallback
+dbus-daemon[4925]: [session uid=1000 pid=4925 pidfd=5] Successfully activated service 'org.freedesktop.portal.Desktop'
+FAIL!  : BudgieLabwcTest::lockDuringCopyIsRefused(output batch) Compared values are not the same
+   Actual   (result.error.code)        : ""
+   Expected (QString("session_locked")): "session_locked"
+   Loc: [/home/patrick/work/pg-cd/tests/integration/test_budgie_labwc.cpp(190)]
+FAIL!  : BudgieLabwcTest::lockDuringCopyIsRefused(frozen window) Compared values are not the same
+   Actual   (result.error.code)        : ""
+   Expected (QString("session_locked")): "session_locked"
+   Loc: [/home/patrick/work/pg-cd/tests/integration/test_budgie_labwc.cpp(190)]
+PASS   : BudgieLabwcTest::cleanupTestCase()
+Totals: 2 passed, 2 failed, 0 skipped, 0 blacklisted, 739ms
+********* Finished testing of BudgieLabwcTest *********

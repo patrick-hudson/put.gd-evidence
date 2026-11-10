@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "stage": "review-followup",
+  "apply": false,
+  "timestampUtc": "2026-11-10T06:40:12.313084+00:00",
+  "ok": true,
+  "runId": "e54b923a-27bc-448f-83c7-3ff2d8d8d5c3",
+  "helperSha256": "4f4561e0d55856b1569cbfac3b3c0325dbdd12d626c394042563554d2b24fec6",
+  "policyInvocation": {
+    "exitCode": 0,
+    "stderr": ""
+  },
+  "policy": {
+    "ok": true,
+    "desktop": "Budgie",
+    "session": {
+      "User": "1000",
+      "Seat": "seat0",
+      "Type": "wayland",
+      "Active": "yes",
+      "State": "active",
+      "LockedHint": "no",
+      "id": "1"
+    },
+    "configurationHome": "/home/lab/.config",
+    "policy": [
+      {
+        "schema": "org.gnome.desktop.session",
+        "key": "idle-delay",
+        "value": "uint32 0"
+      },
+      {
+        "schema": "org.gnome.desktop.screensaver",
+        "key": "lock-enabled",
+        "value": "false"
+      },
+      {
+        "schema": "org.gnome.desktop.screensaver",
+        "key": "idle-activation-enabled",
+        "value": "false"
+      },
+      {
+        "schema": "org.gnome.settings-daemon.plugins.power",
+        "key": "sleep-inactive-ac-timeout",
+        "value": "0"
+      },
+      {
+        "schema": "org.gnome.settings-daemon.plugins.power",
+        "key": "sleep-inactive-ac-type",
+        "value": "'nothing'"
+      },
+      {
+        "schema": "org.gnome.settings-daemon.plugins.power",
+        "key": "sleep-inactive-battery-timeout",
+        "value": "0"
+      },
+      {
+        "schema": "org.gnome.settings-daemon.plugins.power",
+        "key": "sleep-inactive-battery-type",
+        "value": "'nothing'"
+      },
+      {
+        "schema": "org.gnome.settings-daemon.plugins.power",
+        "key": "idle-dim",
+        "value": "false"
+      }
+    ],
+    "inhibitor": {
+      "what": "sleep:idle",
+      "who": "putgd-lab-guest",
+      "mode": "block",
+      "uid": 1000,
+      "pid": 852
+    },
+    "x11": null
+  },
+  "outputs": {
+    "ok": true,
+    "errors": [],
+    "outputs": [
+      {
+        "name": "Virtual-1",
+        "enabled": true,
+        "primary": true,
+        "width": 1280,
+        "height": 800,
+        "x": 0,
+        "y": 0
+      }
+    ]
+  },
+  "visuals": [
+    {
+      "path": "/home/patrick/work/pg-cd/work/lab-runs/bc8/guest-preflight-df525817fb5542d39e4759f17b699a2e-attempt0-head0.ppm",
+      "sha256": "9ec656f22cde5e6bfa71ec2756708165c3a1267c7fbfe0643b6a779777e96b81",
+      "width": 1280,
+      "height": 800,
+      "head": 0
+    }
+  ],
+  "visualAttempts": [
+    {
+      "path": "/home/patrick/work/pg-cd/work/lab-runs/bc8/guest-preflight-df525817fb5542d39e4759f17b699a2e-attempt0-head0.ppm",
+      "sha256": "9ec656f22cde5e6bfa71ec2756708165c3a1267c7fbfe0643b6a779777e96b81",
+      "width": 1280,
+      "height": 800,
+      "head": 0,
+      "visible": true
+    }
+  ],
+  "afterVisualInvocation": {
+    "exitCode": 0,
+    "stderr": ""
+  },
+  "afterVisuals": {
+    "ok": true,
+    "desktop": "Budgie",
+    "session": {
+      "User": "1000",
+      "Seat": "seat0",
+      "Type": "wayland",
+      "Active": "yes",
+      "State": "active",
+      "LockedHint": "no",
+      "id": "1"
+    },
+    "configurationHome": "/home/lab/.config",
+    "policy": [
+      {
+        "schema": "org.gnome.desktop.session",
+        "key": "idle-delay",
+        "value": "uint32 0"
+      },
+      {
+        "schema": "org.gnome.desktop.screensaver",
+        "key": "lock-enabled",
+        "value": "false"
+      },
+      {
+        "schema": "org.gnome.desktop.screensaver",
+        "key": "idle-activation-enabled",
+        "value": "false"
+      },
+      {
+        "schema": "org.gnome.settings-daemon.plugins.power",
+        "key": "sleep-inactive-ac-timeout",
+        "value": "0"
+      },
+      {
+        "schema": "org.gnome.settings-daemon.plugins.power",
+        "key": "sleep-inactive-ac-type",
+        "value": "'nothing'"
+      },
+      {
+        "schema": "org.gnome.settings-daemon.plugins.power",
+        "key": "sleep-inactive-battery-timeout",
+        "value": "0"
+      },
+      {
+        "schema": "org.gnome.settings-daemon.plugins.power",
+        "key": "sleep-inactive-battery-type",
+        "value": "'nothing'"
+      },
+      {
+        "schema": "org.gnome.settings-daemon.plugins.power",
+        "key": "idle-dim",
+        "value": "false"
+      }
+    ],
+    "inhibitor": {
+      "what": "sleep:idle",
+      "who": "putgd-lab-guest",
+      "mode": "block",
+      "uid": 1000,
+      "pid": 852
+    },
+    "x11": null
+  }
+}

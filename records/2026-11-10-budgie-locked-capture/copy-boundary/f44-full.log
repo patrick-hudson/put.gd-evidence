@@ -1,0 +1,99 @@
+Start testing: Nov 10 00:39 CST
+----------------------------------------------------------
+35/146 Testing: budgie_labwc_integration
+35/146 Test: budgie_labwc_integration
+Command: "/usr/bin/dbus-run-session" "--" "/home/patrick/work/pg-cd/build/dev/test_budgie_labwc"
+Directory: /home/patrick/work/pg-cd/build/dev
+"budgie_labwc_integration" start time: Nov 10 00:39 CST
+Output:
+----------------------------------------------------------
+********* Start testing of BudgieLabwcTest *********
+Config: Using QtTest library 6.11.2, Qt 6.11.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 16.2.1 20260819 (Red Hat 16.2.1-2)), fedora 44
+dbus-daemon[3182988]: [session uid=1000 pid=3182988 pidfd=4] Activating service name='org.freedesktop.portal.Desktop' requested by ':1.0' (uid=1000 pid=3182996 comm="/home/patrick/work/pg-cd/build/dev/putgd-labwc-fix" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[3182988]: [session uid=1000 pid=3182988 pidfd=4] Activating service name='org.freedesktop.impl.portal.PermissionStore' requested by ':1.1' (uid=1000 pid=3182999 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[3182988]: [session uid=1000 pid=3182988 pidfd=4] Successfully activated service 'org.freedesktop.impl.portal.PermissionStore'
+dbus-daemon[3182988]: [session uid=1000 pid=3182988 pidfd=4] Activating service name='org.freedesktop.portal.Documents' requested by ':1.1' (uid=1000 pid=3182999 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[3182988]: [session uid=1000 pid=3182988 pidfd=4] Successfully activated service 'org.freedesktop.portal.Documents'
+
+(/usr/libexec/xdg-desktop-portal:3182999): xdg-desktop-portal-WARNING **: 00:39:15.934: Choosing gtk.portal for org.freedesktop.impl.portal.Access as a last-resort fallback
+dbus-daemon[3182988]: [session uid=1000 pid=3182988 pidfd=4] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.1' (uid=1000 pid=3182999 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[3182988]: [session uid=1000 pid=3182988 pidfd=4] Activating service name='org.a11y.Bus' requested by ':1.5' (uid=1000 pid=3183023 comm="/usr/libexec/xdg-desktop-portal-gtk" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[3182988]: [session uid=1000 pid=3182988 pidfd=4] Activated service 'org.a11y.Bus' failed: Failed to execute program org.a11y.Bus: Permission denied
+
+(xdg-desktop-portal-gtk:3183023): dbind-WARNING **: 00:39:15.973: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.Spawn.ExecFailed: Failed to execute program org.a11y.Bus: Permission denied
+dbus-daemon[3182988]: [session uid=1000 pid=3182988 pidfd=4] Activating service name='org.gtk.vfs.Daemon' requested by ':1.4' (uid=1000 pid=3183023 comm="/usr/libexec/xdg-desktop-portal-gtk" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[3182988]: [session uid=1000 pid=3182988 pidfd=4] Successfully activated service 'org.gtk.vfs.Daemon'
+fusermount3: failed to access mountpoint /run/user/1000/gvfs: Permission denied
+dbus-daemon[3182988]: [session uid=1000 pid=3182988 pidfd=4] Successfully activated service 'org.freedesktop.impl.portal.desktop.gtk'
+
+(/usr/libexec/xdg-desktop-portal:3182999): xdg-desktop-portal-WARNING **: 00:39:16.034: Choosing gtk.portal for org.freedesktop.impl.portal.Settings as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3182999): xdg-desktop-portal-WARNING **: 00:39:16.035: Choosing gtk.portal for org.freedesktop.impl.portal.FileChooser as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3182999): xdg-desktop-portal-WARNING **: 00:39:16.036: Choosing gtk.portal for org.freedesktop.impl.portal.AppChooser as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3182999): xdg-desktop-portal-WARNING **: 00:39:16.037: Choosing gtk.portal for org.freedesktop.impl.portal.Print as a last-resort fallback
+QINFO  : BudgieLabwcTest::initTestCase() labwc "labwc 0.9.6 (+xwayland +nls +rsvg +libsfdo)" outputs 2
+PASS   : BudgieLabwcTest::initTestCase()
+
+(/usr/libexec/xdg-desktop-portal:3182999): xdg-desktop-portal-WARNING **: 00:39:16.038: Choosing gtk.portal for org.freedesktop.impl.portal.Notification as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3182999): xdg-desktop-portal-WARNING **: 00:39:16.039: Choosing gtk.portal for org.freedesktop.impl.portal.Inhibit as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3182999): xdg-desktop-portal-WARNING **: 00:39:16.043: Choosing gtk.portal for org.freedesktop.impl.portal.Account as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3182999): xdg-desktop-portal-WARNING **: 00:39:16.044: Choosing gtk.portal for org.freedesktop.impl.portal.Email as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3182999): xdg-desktop-portal-WARNING **: 00:39:16.046: Choosing gtk.portal for org.freedesktop.impl.portal.DynamicLauncher as a last-resort fallback
+dbus-daemon[3182988]: [session uid=1000 pid=3182988 pidfd=4] Successfully activated service 'org.freedesktop.portal.Desktop'
+PASS   : BudgieLabwcTest::visibilityRefusesFullConnectionBacklogWithoutBlocking()
+PASS   : BudgieLabwcTest::visibilityAllowsSlowCompositorSetup()
+PASS   : BudgieLabwcTest::visibilityUsesCaptureCompositor()
+PASS   : BudgieLabwcTest::anonymousInheritedConnectionRefusesRatherThanProbingAnotherSession()
+SKIP   : BudgieLabwcTest::lockedWindowAfterFreezeIsRefused() Compositor has no window capture source
+   Loc: [/home/patrick/work/pg-cd/tests/integration/test_budgie_labwc.cpp(152)]
+PASS   : BudgieLabwcTest::lockDuringCopyIsRefused(output batch)
+SKIP   : BudgieLabwcTest::lockDuringCopyIsRefused(frozen window) Compositor has no window capture source
+   Loc: [/home/patrick/work/pg-cd/tests/integration/test_budgie_labwc.cpp(171)]
+PASS   : BudgieLabwcTest::lockedDesktopCaptureIsRefused()
+PASS   : BudgieLabwcTest::protocolsAdvertised()
+PASS   : BudgieLabwcTest::outputPixelsExact()
+PASS   : BudgieLabwcTest::toplevelsListedAndActive()
+PASS   : BudgieLabwcTest::windowCaptureOrReason()
+PASS   : BudgieLabwcTest::desktopComposite()
+PASS   : BudgieLabwcTest::clipboardBothWays()
+PASS   : BudgieLabwcTest::clipboardOutlivesTheResident()
+PASS   : BudgieLabwcTest::aCopyStillInFlightOutlivesTheResident()
+PASS   : BudgieLabwcTest::anImageOutlivesTheResident()
+PASS   : BudgieLabwcTest::nothingIsKeptWhenAnotherAppOwnsTheClipboard()
+PASS   : BudgieLabwcTest::aClipboardManagerIsLeftToIt()
+PASS   : BudgieLabwcTest::anOversizedResultIsNotKept()
+PASS   : BudgieLabwcTest::rotatedAndFractionalOutputs(90)
+PASS   : BudgieLabwcTest::rotatedAndFractionalOutputs(180)
+PASS   : BudgieLabwcTest::rotatedAndFractionalOutputs(270)
+PASS   : BudgieLabwcTest::rotatedAndFractionalOutputs(flipped)
+PASS   : BudgieLabwcTest::rotatedAndFractionalOutputs(flipped-90)
+PASS   : BudgieLabwcTest::recordingFramesAreUpright(90)
+PASS   : BudgieLabwcTest::recordingFramesAreUpright(flipped-90)
+PASS   : BudgieLabwcTest::displayChangeInvalidates()
+PASS   : BudgieLabwcTest::regionDragExactPixels(live)
+PASS   : BudgieLabwcTest::regionDragExactPixels(screenshot-first)
+PASS   : BudgieLabwcTest::ownWindowsRefused()
+PASS   : BudgieLabwcTest::bridgeKeyNormalization()
+PASS   : BudgieLabwcTest::bridgeReadsRcXml()
+PASS   : BudgieLabwcTest::cleanupTestCase()
+Totals: 33 passed, 0 failed, 2 skipped, 0 blacklisted, 23865ms
+********* Finished testing of BudgieLabwcTest *********
+A connection to the bus can't be made
+<end of output>
+Test time =  23.91 sec
+----------------------------------------------------------
+Test Passed.
+"budgie_labwc_integration" end time: Nov 10 00:39 CST
+"budgie_labwc_integration" time elapsed: 00:00:23
+----------------------------------------------------------
+
+End testing: Nov 10 00:39 CST
+
+integration =  23.91 sec*proc
+

@@ -1,3 +1,7 @@
+# Current work: capture stack acceptance in progress
+
+Review round50 is green and demonstrated; [its raw proof and timing limits](copy-boundary/README.md) are preserved. Both code branches now merge capture13570fca9 and nightlyaedccdf6c under coordinator instruction. Stacked-head guest acceptance is in progress. Companion blanking docs PR1390 is green. The historical packets below retain earlier accepted rounds.
+
 # Budgie: refuse screen reads behind gtklock
 
 Current coordinator follow-up: head2354d9f69 uses a3s frame wait, CI green,10/10 loaded captures and3/3 gtklock refusals. See [three-second demonstration and blanking-policy answer](three-second/README.md). Both PRs remain held for #1368, with three new unverified outside-diff review concerns recorded for the post-merge stage. The earlier caaf acceptance below is historical.
