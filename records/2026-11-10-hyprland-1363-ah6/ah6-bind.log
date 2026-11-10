@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/tmp/p1363-gui.py", line 54, in <module>
+    doc=save('bound-settings',cli('settings.get'));assert doc['document']['actions']['repeat']['shortcut']=='Ctrl+Alt+R';assert doc['document']['actions']['monitor']['shortcut']=='Ctrl+Alt+M';save('bound-capabilities',cli('capabilities'));print('both shortcut bindings persisted',flush=True)
+                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/tmp/p1363-gui.py", line 58, in <module>
+    ox,oy=ORIGIN[1];move(ox+400,oy+400);r=keyop(('ctrl','alt','m'),'key-monitor-head1');im=fetch(r['path']);im.save(E/'key-monitor-head1.png');assert im.size==(1024,768),im.size;print('real repeat refusal + monitor key head1 passed',flush=True)
+                                                                                           ~~~~~^^^^^^^^^^^
+  File "/tmp/p1363-checks.py", line 98, in fetch
+    subprocess.run(['scp', '-q', '-P', str(state['ssh_port'])] + SSH + ['lab@127.0.0.1:' + path, local], check=True, stdin=subprocess.DEVNULL, timeout=120)
+                                                                        ~~~~~~~~~~~~~~~~~^~~~~~
+TypeError: can only concatenate str (not "NoneType") to str
+{'acceptedRevision': 'a30d1872bfd164a29e608c161837b0682c651083ebefad0ee20195ffff6a5517', 'fallbackRescanMs': 2000, 'observedRevision': 'a30d1872bfd164a29e608c161837b0682c651083ebefad0ee20195ffff6a5517', 'path': '/home/lab/.config/putgd/config.json', 'schemaVersion': 1, 'validation': {'error': {'code': '', 'details': {}, 'message': ''}, 'ok': True}, 'watching': True}

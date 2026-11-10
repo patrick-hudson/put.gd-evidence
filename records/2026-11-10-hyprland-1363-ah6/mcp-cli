@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+import sys,shlex,json
+sys.path.insert(0,'/home/patrick/work/i1363/tools/lab')
+import lab
+with open('/home/patrick/work/i1363/work/acceptance-1363/ah6/mcp-cli-call-count',"a") as counter:
+ counter.write("x")
+a=sys.argv[1:]
+if "--params-stdin" in a:
+ a.remove("--params-stdin");a.append(sys.stdin.read())
+r=lab.guest_session('/home/patrick/work/i1363/work/lab-runs/ah6',"putgd-cli "+shlex.join(a)+" || true",timeout=90)
+sys.stdout.write(r)
+sys.exit(0 if json.loads(r)["ok"] else 1)
