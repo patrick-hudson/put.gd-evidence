@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-10-history-page-refinement](2026-11-10-history-page-refinement/README.md) | — | History page refinement: before and after pictures |
 | [2026-11-10-cinnamon-scaling-follow-up-1376](2026-11-10-cinnamon-scaling-follow-up-1376/README.md) | #1376 | Cinnamon scaling follow-up — scroll capture #1376 |
 | [2026-11-10-scroll-capture-lab-probes-1376](2026-11-10-scroll-capture-lab-probes-1376/README.md) | #1376 | Scroll capture lab probes — issue #1376 |
 | [2026-11-10-http-incomplete-reply](2026-11-10-http-incomplete-reply/README.md) | #1393 | A cut-off reply is judged by its own length (#1393): the picture and the stress runs |
