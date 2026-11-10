@@ -1,0 +1,173 @@
+{
+  "host": "omarchy-lab",
+  "desktop": "quickshell",
+  "session": "wayland",
+  "build": {
+    "kind": "installed",
+    "dir": "/usr/bin",
+    "version": "putgd-record 26.1110.4538-dev+g1d19e1e8ac50"
+  },
+  "states": {
+    "off": {
+      "microphones": {
+        "available": true,
+        "defaultIsMonitor": false,
+        "device": {
+          "id": "putgd_lab_12881_mic",
+          "label": "putgd_lab_12881-microphone"
+        },
+        "devices": [
+          {
+            "default": true,
+            "id": "putgd_lab_12881_mic",
+            "label": "putgd_lab_12881-microphone"
+          }
+        ]
+      },
+      "inspect": {
+        "state": "ready",
+        "config": {
+          "adaptiveFps": true,
+          "audio": {
+            "microphone": false,
+            "microphoneDevice": "putgd_lab_12881_mic",
+            "system": false
+          },
+          "budgetBytes": 10902470929,
+          "clickHighlights": false,
+          "codec": "h264",
+          "format": "mp4",
+          "fps": 30,
+          "mime": "video/mp4"
+        },
+        "overlayPlacement": "outside",
+        "overlayExcluded": true,
+        "progress": {
+          "recordingAudio": {
+            "effective": false,
+            "requested": false
+          },
+          "recordingMicrophone": {
+            "available": true,
+            "device": "putgd_lab_12881-microphone",
+            "effective": false,
+            "requested": false
+          }
+        }
+      }
+    },
+    "on": {
+      "microphones": {
+        "available": true,
+        "defaultIsMonitor": false,
+        "device": {
+          "id": "putgd_lab_12881_mic",
+          "label": "putgd_lab_12881-microphone"
+        },
+        "devices": [
+          {
+            "default": true,
+            "id": "putgd_lab_12881_mic",
+            "label": "putgd_lab_12881-microphone"
+          }
+        ]
+      },
+      "inspect": {
+        "state": "ready",
+        "config": {
+          "adaptiveFps": true,
+          "audio": {
+            "microphone": true,
+            "microphoneDevice": "putgd_lab_12881_mic",
+            "system": false
+          },
+          "budgetBytes": 10902414950,
+          "clickHighlights": false,
+          "codec": "h264",
+          "format": "mp4",
+          "fps": 30,
+          "mime": "video/mp4"
+        },
+        "overlayPlacement": "outside",
+        "overlayExcluded": true,
+        "progress": {
+          "recordingAudio": {
+            "effective": false,
+            "requested": false
+          },
+          "recordingMicrophone": {
+            "available": true,
+            "device": "putgd_lab_12881-microphone",
+            "effective": true,
+            "requested": true
+          }
+        }
+      }
+    },
+    "none": {
+      "microphones": {
+        "available": false,
+        "defaultIsMonitor": false,
+        "devices": [],
+        "message": "No microphone is connected.",
+        "reason": "no_microphone"
+      },
+      "inspect": {
+        "state": "ready",
+        "config": {
+          "adaptiveFps": true,
+          "audio": {
+            "microphone": false,
+            "system": false
+          },
+          "budgetBytes": 10902414950,
+          "clickHighlights": false,
+          "codec": "h264",
+          "format": "mp4",
+          "fps": 30,
+          "mime": "video/mp4"
+        },
+        "overlayPlacement": "outside",
+        "overlayExcluded": true,
+        "progress": {
+          "recordingAudio": {
+            "effective": false,
+            "requested": false
+          },
+          "recordingMicrophone": {
+            "available": false,
+            "effective": false,
+            "requested": false,
+            "unavailable": "No microphone is connected."
+          }
+        }
+      }
+    }
+  },
+  "capabilities": {
+    "acquisition": "wlr-capture",
+    "audio": {
+      "microphone": false,
+      "microphoneMessage": "No microphone is connected.",
+      "microphoneReason": "no_microphone",
+      "system": true
+    },
+    "clickHighlights": {
+      "available": true,
+      "drawnBy": "recorder",
+      "route": "hyprland-mouse-binds",
+      "targets": [
+        "monitor",
+        "desktop",
+        "region",
+        "window"
+      ]
+    },
+    "targets": [
+      "monitor",
+      "desktop",
+      "region",
+      "window"
+    ]
+  }
+}

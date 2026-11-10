@@ -1,0 +1,299 @@
+{
+ "host": "omarchy-lab",
+ "kernel": "7.2.15-1-omarchy",
+ "desktop": "quickshell",
+ "session": "wayland",
+ "target": "region",
+ "rect": [
+  0,
+  0,
+  960,
+  540
+ ],
+ "formats": [
+  "mp4"
+ ],
+ "video": "marker",
+ "timing": {
+  "lead": 6.0,
+  "pauseAt": 8.0,
+  "pauseFor": 0.0,
+  "after": 2.0
+ },
+ "builds": {
+  "pr": {
+   "kind": "installed",
+   "dir": "/usr/bin",
+   "version": "putgd-record 26.1110.4538-dev+g1d19e1e8ac50"
+  }
+ },
+ "analyzer": "/",
+ "rounds": [
+  {
+   "build": "pr",
+   "round": 1,
+   "format": "mp4",
+   "started": "2026-11-10T07:51:17Z",
+   "acquisition": "wlr-capture",
+   "liveEncoders": [
+    "x264enc",
+    "openh264enc"
+   ],
+   "audio": {
+    "system": false
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false,
+    "microphoneReason": "no_microphone"
+   },
+   "microphones": {
+    "available": false,
+    "reason": "no_microphone",
+    "device": null,
+    "devices": [],
+    "defaultIsMonitor": false
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "readyFollow": [
+    {
+     "step": "none",
+     "microphone": {
+      "available": false,
+      "effective": false,
+      "requested": false,
+      "unavailable": "No microphone is connected."
+     },
+     "waitedS": null,
+     "frame": "pr-mp4-1-ready-none.png"
+    },
+    {
+     "step": "plugged",
+     "microphone": {
+      "available": true,
+      "device": "putgd_lab_7599-microphone",
+      "effective": false,
+      "requested": false
+     },
+     "waitedS": 0.02,
+     "frame": "pr-mp4-1-ready-plugged.png"
+    },
+    {
+     "step": "on",
+     "microphone": {
+      "available": true,
+      "device": "putgd_lab_7599-microphone",
+      "effective": true,
+      "requested": true
+     },
+     "waitedS": 0.05,
+     "frame": "pr-mp4-1-ready-on.png"
+    },
+    {
+     "step": "pulled",
+     "microphone": {
+      "available": false,
+      "effective": false,
+      "requested": true,
+      "unavailable": "No microphone is connected."
+     },
+     "waitedS": 0.95,
+     "frame": "pr-mp4-1-ready-pulled.png"
+    },
+    {
+     "step": "back",
+     "microphone": {
+      "available": true,
+      "device": "putgd_lab_7599-microphone",
+      "effective": true,
+      "requested": true
+     },
+     "waitedS": 0.03,
+     "frame": "pr-mp4-1-ready-back.png"
+    }
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": {
+     "microphone": true,
+     "system": false
+    },
+    "audioEncoder": "avenc_aac",
+    "recordingMicrophone": {
+     "available": true,
+     "device": "putgd_lab_7599-microphone",
+     "effective": true,
+     "requested": true
+    },
+    "microphoneLost": null
+   },
+   "recordedS": 10.109,
+   "microphoneLostAtStop": null,
+   "load": 2.99365234375,
+   "durationUs": 11699999,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "40e666a4-9c55-4149-953b-f2c4e903373c.mkv",
+     "bytes": 67805,
+     "motion": 7.553,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.14163090128755365,
+       "blocks": 233,
+       "maxAmplitude": 0.34541791541478234,
+       "medianAmplitude": 0
+      },
+      "440": {
+       "activeFraction": 0,
+       "blocks": 233,
+       "maxAmplitude": 0.001278150061562693,
+       "medianAmplitude": 0
+      }
+     },
+     "pairs": 9,
+     "medianMs": 2.7,
+     "spreadMs": 67,
+     "offsetsMs": [
+      -31.3,
+      -31,
+      -30.7,
+      35.7,
+      3,
+      2.7,
+      3,
+      -30.7,
+      2.7
+     ],
+     "pairTimesS": [
+      2.867,
+      3.867,
+      4.867,
+      5.8,
+      6.833,
+      7.833,
+      8.833,
+      9.867,
+      10.833
+     ]
+    },
+    "export": {
+     "file": "pr-mp4-1.mp4",
+     "bytes": 65015,
+     "motion": 7.558,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.14102564102564102,
+       "blocks": 234,
+       "maxAmplitude": 0.34542348986772003,
+       "medianAmplitude": 0
+      },
+      "440": {
+       "activeFraction": 0,
+       "blocks": 234,
+       "maxAmplitude": 0.0012901822473959535,
+       "medianAmplitude": 0
+      }
+     },
+     "pairs": 9,
+     "medianMs": 2.7,
+     "spreadMs": 66.7,
+     "offsetsMs": [
+      -30.7,
+      -30.7,
+      -30.7,
+      36,
+      2.7,
+      2.7,
+      2.7,
+      -30.7,
+      2.7
+     ],
+     "pairTimesS": [
+      2.867,
+      3.867,
+      4.867,
+      5.8,
+      6.833,
+      7.833,
+      8.833,
+      9.867,
+      10.833
+     ]
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 1.0
+    },
+    "fraction": 0.6049,
+    "kept": "/home/lab/r/f/frames/pr-mp4-1.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     960,
+     540
+    ],
+    "sha256": "24afb3a6ac5331b8d1acf5bad2898beab26efb1c629345c2d467e2895e8f2485",
+    "size": [
+     960,
+     540
+    ]
+   }
+  }
+ ],
+ "microphone": {
+  "name": "putgd_lab_7599",
+  "modules": {
+   "sink": 536870916,
+   "holdSink": 536870918
+  },
+  "defaultSource": "@DEFAULT_SOURCE@",
+  "defaultSink": "auto_null",
+  "sink": "putgd_lab_7599_sink",
+  "source": "putgd_lab_7599_mic",
+  "plugged": false
+ },
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "Virtual-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1280,
+    800
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "skipped": "no loopback VNC tile (disposable guest)"
+  },
+  "video": "marker",
+  "hyprland": {
+   "onFocusUnderFullscreen": {
+    "before": 1,
+    "during": 0
+   }
+  }
+ },
+ "microphoneRemoved": {
+  "removed": true,
+  "left": [],
+  "defaultSource": "@DEFAULT_SOURCE@",
+  "defaultSink": "auto_null"
+ },
+ "gpuHangs": []
+}

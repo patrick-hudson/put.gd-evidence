@@ -1,0 +1,212 @@
+{
+ "host": "omarchy-lab",
+ "kernel": "7.2.15-1-omarchy",
+ "desktop": "quickshell",
+ "session": "wayland",
+ "target": "region",
+ "rect": [
+  0,
+  0,
+  960,
+  540
+ ],
+ "formats": [
+  "mp4"
+ ],
+ "video": "marker",
+ "timing": {
+  "lead": 6.0,
+  "pauseAt": 10.0,
+  "pauseFor": 0.0,
+  "after": 2.0
+ },
+ "builds": {
+  "pr": {
+   "kind": "installed",
+   "dir": "/usr/bin",
+   "version": "putgd-record 26.1110.4538-dev+g1d19e1e8ac50"
+  }
+ },
+ "analyzer": "/",
+ "rounds": [
+  {
+   "build": "pr",
+   "round": 1,
+   "format": "mp4",
+   "started": "2026-11-10T07:49:54Z",
+   "acquisition": "wlr-capture",
+   "liveEncoders": [
+    "x264enc",
+    "openh264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": true,
+    "microphoneDevice": {
+     "id": "putgd_lab_6459_mic",
+     "label": "putgd_lab_6459-microphone"
+    }
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": {
+     "microphone": false,
+     "system": true
+    },
+    "audioEncoder": "avenc_aac",
+    "recordingMicrophone": {
+     "available": true,
+     "device": "putgd_lab_6459-microphone",
+     "effective": false,
+     "requested": false
+    },
+    "microphoneLost": null
+   },
+   "recordedS": 12.11,
+   "microphoneLostAtStop": null,
+   "load": 2.470703125,
+   "durationUs": 13699999,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "3aa6d23d-b1ab-4cfa-ab99-819d070a9ca5.mkv",
+     "bytes": 153930,
+     "motion": 20.316,
+     "tones": {
+      "1000": {
+       "activeFraction": 0,
+       "blocks": 273,
+       "maxAmplitude": 0.00015908151765028257,
+       "medianAmplitude": 7.952827407327722e-07
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 273,
+       "maxAmplitude": 0.017020631593595514,
+       "medianAmplitude": 0.016926647982638297
+      }
+     },
+     "pairs": 1,
+     "medianMs": 101.7,
+     "spreadMs": 0,
+     "offsetsMs": [
+      101.7
+     ],
+     "pairTimesS": [
+      0
+     ]
+    },
+    "export": {
+     "file": "pr-mp4-1.mp4",
+     "bytes": 154205,
+     "motion": 20.313,
+     "tones": {
+      "1000": {
+       "activeFraction": 0,
+       "blocks": 273,
+       "maxAmplitude": 0.00015786616453567382,
+       "medianAmplitude": 9.2961084022627e-07
+      },
+      "440": {
+       "activeFraction": 0.9926739926739927,
+       "blocks": 273,
+       "maxAmplitude": 0.017001671018705596,
+       "medianAmplitude": 0.016908991377025014
+      }
+     },
+     "pairs": 1,
+     "medianMs": 102,
+     "spreadMs": 0,
+     "offsetsMs": [
+      102
+     ],
+     "pairTimesS": [
+      0
+     ]
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 1.0
+    },
+    "fraction": 0.6049,
+    "kept": "/home/lab/r/d/frames/pr-mp4-1.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     960,
+     540
+    ],
+    "sha256": "6f9e20960c9e44cdfc5f1499b92585105b6a11c21c4bc62f529644d50e865e69",
+    "size": [
+     960,
+     540
+    ]
+   }
+  }
+ ],
+ "microphone": {
+  "name": "putgd_lab_6459",
+  "modules": {
+   "sink": 536870916,
+   "holdSink": 536870920,
+   "source": 536870917,
+   "hold": 536870918,
+   "system": 536870919
+  },
+  "defaultSource": "@DEFAULT_SOURCE@",
+  "defaultSink": "auto_null",
+  "sink": "putgd_lab_6459_sink",
+  "source": "putgd_lab_6459_mic",
+  "plugged": true,
+  "attempts": 1,
+  "heardPeak": 6553,
+  "systemSink": "putgd_lab_6459_system"
+ },
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "Virtual-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1280,
+    800
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "skipped": "no loopback VNC tile (disposable guest)"
+  },
+  "video": "marker",
+  "hyprland": {
+   "onFocusUnderFullscreen": {
+    "before": 1,
+    "during": 0
+   }
+  }
+ },
+ "microphoneRemoved": {
+  "removed": true,
+  "left": [],
+  "defaultSource": "@DEFAULT_SOURCE@",
+  "defaultSink": "auto_null"
+ },
+ "gpuHangs": []
+}
