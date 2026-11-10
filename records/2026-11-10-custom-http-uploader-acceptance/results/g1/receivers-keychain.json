@@ -1,0 +1,156 @@
+{
+  "receivers": [
+    {
+      "receiver": "chibisafe",
+      "profileId": "rx-chibisafe",
+      "label": "chibisafe",
+      "storedValues": [
+        "header x-api-key"
+      ],
+      "notes": [
+        "This destination sends files and credentials over plain HTTP, as allowed for it."
+      ],
+      "deletionUrl": "",
+      "accepts": [
+        "image",
+        "file"
+      ],
+      "credentials": {
+        "mode": "keychain",
+        "stored": [
+          "headers/x-api-key"
+        ],
+        "missing": []
+      },
+      "test": {
+        "state": "completed",
+        "error": "",
+        "uploadStatus": "uploaded",
+        "publicReachable": true,
+        "cleanupStatus": "unsupported",
+        "linkReturnsFile": true
+      },
+      "upload": {
+        "state": "completed",
+        "uploadStatus": "uploaded",
+        "error": "",
+        "link": "http://192.168.68.71:18362/8iTxXTjEAc90.png",
+        "linkStatus": 200,
+        "linkReturnsFile": true,
+        "historyId": "27eaab8e-5811-44e5-9f2a-164adb480779"
+      },
+      "deletable": false,
+      "deletion": {
+        "offered": false,
+        "refusal": "unsupported_capability",
+        "reason": "This upload came back without a deletion URL, so put.gd cannot delete it from the server. Delete it on the server itself."
+      },
+      "passed": true
+    },
+    {
+      "receiver": "xbackbone",
+      "profileId": "rx-xbackbone",
+      "label": "admin-ShareX",
+      "storedValues": [
+        "argument token"
+      ],
+      "notes": [
+        "This destination sends files and credentials over plain HTTP, as allowed for it."
+      ],
+      "deletionUrl": "{json:url}/delete/{secret:arguments/token}",
+      "accepts": [
+        "image",
+        "text",
+        "file"
+      ],
+      "credentials": {
+        "mode": "keychain",
+        "stored": [
+          "arguments/token"
+        ],
+        "missing": []
+      },
+      "test": {
+        "state": "completed",
+        "error": "",
+        "uploadStatus": "uploaded",
+        "publicReachable": true,
+        "cleanupStatus": "removed",
+        "linkReturnsFile": false
+      },
+      "upload": {
+        "state": "completed",
+        "uploadStatus": "uploaded",
+        "error": "",
+        "link": "http://192.168.68.71:18363/JAka0/loFEGiWO88.png",
+        "linkStatus": 200,
+        "linkReturnsFile": false,
+        "historyId": "4d423683-bb3f-42cc-b324-24bbb59c0ac7"
+      },
+      "deletable": true,
+      "passed": true
+    },
+    {
+      "receiver": "zipline",
+      "profileId": "rx-zipline",
+      "label": "Zipline - http://192.168.68.71:18361 - File",
+      "storedValues": [
+        "header authorization"
+      ],
+      "notes": [
+        "This destination sends files and credentials over plain HTTP, as allowed for it."
+      ],
+      "deletionUrl": "",
+      "accepts": [
+        "image",
+        "text",
+        "file"
+      ],
+      "credentials": {
+        "mode": "keychain",
+        "stored": [
+          "headers/authorization"
+        ],
+        "missing": []
+      },
+      "test": {
+        "state": "completed",
+        "error": "",
+        "uploadStatus": "uploaded",
+        "publicReachable": true,
+        "cleanupStatus": "unsupported",
+        "linkReturnsFile": false
+      },
+      "upload": {
+        "state": "completed",
+        "uploadStatus": "uploaded",
+        "error": "",
+        "link": "http://192.168.68.71:18361/u/a9IeKk.png",
+        "linkStatus": 200,
+        "linkReturnsFile": true,
+        "historyId": "194012df-0a62-4ff5-a463-f630f98dcbc2"
+      },
+      "deletable": false,
+      "deletion": {
+        "offered": false,
+        "refusal": "unsupported_capability",
+        "reason": "This upload came back without a deletion URL, so put.gd cannot delete it from the server. Delete it on the server itself."
+      },
+      "passed": true
+    }
+  ],
+  "scannedRoots": [
+    "/home/lab/putgd-lab/config/putgd",
+    "/home/lab/putgd-lab/data/putgd",
+    "/home/lab/.local/state/putgd"
+  ],
+  "diagnosticsPackageScanned": true,
+  "filesHoldingAToken": [],
+  "cleanupError": null,
+  "passed": true,
+  "keyringEntriesLeft": [
+    "putgd/http/rx-chibisafe",
+    "putgd/http/rx-xbackbone",
+    "putgd/http/rx-zipline"
+  ]
+}

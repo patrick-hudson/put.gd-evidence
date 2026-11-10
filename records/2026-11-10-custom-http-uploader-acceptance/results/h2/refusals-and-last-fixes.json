@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "shortener": {
+    "code": "sxcu_unsupported_type",
+    "details": {},
+    "message": "This file describes a URL shortener, not an uploader. put.gd imports image, text and file uploaders only."
+  },
+  "plainHTTP": {
+    "code": "http_insecure_url",
+    "details": {
+      "field": "requestUrl"
+    },
+    "message": "This address uses plain HTTP, which sends the file and its credentials unencrypted. Use https://, or turn on Allow plain HTTP for this destination."
+  },
+  "busyCodes": [
+    "success",
+    "import_busy"
+  ],
+  "echoClipboardUnchanged": true,
+  "explicitRetryAddedOneCopy": true,
+  "ordinaryWord": {
+    "uploadStatus": "uploaded",
+    "clipboardMatches": true,
+    "filenameInLink": true
+  },
+  "deletionElsewhere": {
+    "delete": false,
+    "reason": "The server returned a deletion URL on another host than this destination's request URL. It would take a stored value of this destination there, so put.gd did not keep it and cannot delete this upload from the server. Delete it on the server itself."
+  },
+  "outcomes": {
+    "lost": {
+      "uploadStatus": "unknown",
+      "errorCode": "http_outcome_unknown"
+    },
+    "cut": {
+      "uploadStatus": "unknown",
+      "errorCode": "http_outcome_unknown"
+    },
+    "server500": {
+      "uploadStatus": "unknown",
+      "errorCode": "http_outcome_unknown"
+    },
+    "echo": {
+      "uploadStatus": "unknown",
+      "errorCode": "http_link_holds_secret"
+    }
+  }
+}
