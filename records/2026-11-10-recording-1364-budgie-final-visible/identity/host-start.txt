@@ -1,0 +1,31 @@
+Tue Nov 10 09:24:20 UTC 2026
+ 03:24:20 up 24 days,  4:08,  9 users,  load average: 0.66, 0.31, 0.41
+    PID COMMAND         %CPU
+2018494 qemu-system-x86 75.4
+2018612 sshd-session     8.3
+2563657 python3          0.5
+1781723 w0vncserver      0.4
+3263925 ChatGPT          0.4
+2018469 sshd-session     0.1
+2141281 tailscaled       0.1
+2197265 containerd       0.0
+3131048 org_kde_powerde  0.0
+2203638 versitygw        0.0
+3130879 kwin_wayland     0.0
+    PID COMMAND
+2018494 qemu-system-x86_64 -machine q35,accel=kvm -cpu host -smp 2 -m 6144 -device virtio-vga,id=video0 -device usb-ehci -device usb-tablet -drive file=/home/patrick/work/put.gd/work/lab-runs/b1364v/disk.qcow2,format=qcow2,if=virtio -netdev user,id=net0,hostfwd=tcp:127.0.0.1:22446-:22 -device virtio-net-pci,netdev=net0 -qmp unix:/home/patrick/work/put.gd/work/lab-runs/b1364v/qmp.sock,server=on,wait=off -vnc 127.0.0.1:46 -display none -daemonize -pidfile /home/patrick/work/put.gd/work/lab-runs/b1364v/qemu.pid
+{
+  "schemaVersion": 1,
+  "id": "cbb9e054-2c70-4b31-8732-54754748441d",
+  "profile": "fedora45-budgie",
+  "guest_user": "lab",
+  "ssh_port": 22446,
+  "vnc_display": 46,
+  "acceleration": "kvm",
+  "golden": "/home/patrick/work/put.gd/work/lab-images/fedora45-budgie/image.qcow2",
+  "golden_sha256": "a6749512438d507ef2b2c47fe675955627464d9a5a85341002f91cd54fb401ad",
+  "bootstrap_key": "/home/patrick/work/put.gd/work/lab-bootstrap-d69/identity",
+  "known_hosts": "/home/patrick/work/put.gd/work/lab-runs/b1364v/known_hosts",
+  "overlay": "/home/patrick/work/put.gd/work/lab-runs/b1364v/disk.qcow2",
+  "pid": 2018494
+}

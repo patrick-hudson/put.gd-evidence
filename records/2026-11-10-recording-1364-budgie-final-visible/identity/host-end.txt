@@ -1,0 +1,16 @@
+Tue Nov 10 09:30:12 UTC 2026
+ 03:30:12 up 24 days,  4:14, 10 users,  load average: 1.00, 0.75, 0.57
+    PID COMMAND         %CPU
+2018494 qemu-system-x86  103
+2018802 sshd-session     3.7
+2563657 python3          0.5
+1781723 w0vncserver      0.4
+3263925 ChatGPT          0.4
+2018469 sshd-session     0.3
+2141281 tailscaled       0.1
+2197265 containerd       0.0
+3131048 org_kde_powerde  0.0
+2203638 versitygw        0.0
+3130879 kwin_wayland     0.0
+3264330 ChatGPT          0.0
+2018494 qemu-system-x86_64 -machine q35,accel=kvm -cpu host -smp 2 -m 6144 -device virtio-vga,id=video0 -device usb-ehci -device usb-tablet -drive file=/home/patrick/work/put.gd/work/lab-runs/b1364v/disk.qcow2,format=qcow2,if=virtio -netdev user,id=net0,hostfwd=tcp:127.0.0.1:22446-:22 -device virtio-net-pci,netdev=net0 -qmp unix:/home/patrick/work/put.gd/work/lab-runs/b1364v/qmp.sock,server=on,wait=off -vnc 127.0.0.1:46 -display none -daemonize -pidfile /home/patrick/work/put.gd/work/lab-runs/b1364v/qemu.pid
