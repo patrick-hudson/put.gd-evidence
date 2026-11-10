@@ -66,8 +66,8 @@ pause), `muted` (the simulated microphone plays, the toggle is off), `leak`
 default input), and on Budgie `nohw` (labwc started with
 `WLR_NO_HARDWARE_CURSORS=1`) and `region-on` / `region-off` (the frames of
 `budgie-cursor.png`). `m74-cD-leak.json` is the unplug run on 4436, before the
-clock fix. Added with build 4480: `d69-kR2.json` and `m74-cR1.json` (`--mic
-late`: the microphone plugged in, switched on, pulled and plugged in again at
+clock fix. Added with build 4480: `d69-kR2.json`, `m74-cR1.json` (AppImage) and
+`m74-cR3.json` (the native package) (`--mic late`: the microphone plugged in, switched on, pulled and plugged in again at
 Ready, then recorded; `readyFollow` holds the steps), and the output-removal
 runs `m74-cO-fallback.json`, `m74-cO2-none.json`, `m74-cO2-mic.json`,
 `d69-kO-fallback.json` and `d69-kO-mic.json` (`--output-gone-at 6`, with
