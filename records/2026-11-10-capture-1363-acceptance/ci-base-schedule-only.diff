@@ -1,0 +1,127 @@
+diff --git a/.github/workflows/nightly.yml b/.github/workflows/nightly.yml
+index 1bfa9881d..d92b7e4af 100644
+--- a/.github/workflows/nightly.yml
++++ b/.github/workflows/nightly.yml
+@@ -1,10 +1,10 @@
+ name: Nightly
+-# Daily at 05:23 UTC on the default branch (nightly), or on demand. `plan` tags
++# Daily at 08:23 UTC on the default branch (nightly), or on demand. `plan` tags
+ # nightly HEAD; when that exact source is already a verified public nightly it
+ # skips, and nothing else runs. GitHub can delay scheduled runs.
+ on:
+   schedule:
+-    - cron: '23 5 * * *'
++    - cron: '23 8 * * *'
+   workflow_dispatch:
+ permissions:
+   contents: read
+diff --git a/AGENTS.md b/AGENTS.md
+index d2f6a0b34..efeb2a6c0 100644
+--- a/AGENTS.md
++++ b/AGENTS.md
+@@ -35,7 +35,7 @@ SSH builds and VMs on the builders are shared; heavy work stays off the workstat
+ The full rules, including one coordinator per session family, are in
+ `docs/lab/remote-builders.md` under "Sharing the lab between concurrent sessions".
+ The automatic nightly desktop check runs from a d69 timer across all five
+-builders and posts to pinned issue #1003. Release lab leases before 07:15 UTC
++builders and posts to pinned issue #1003. Release lab leases before 10:15 UTC
+ for that check; see the same sharing rules.
+ Linux goldens are not kept on the workstation. They live on the
+ Fedora and Debian builders and in a private S3 bucket. Find, copy and restore
+diff --git a/docs/automation/agents.md b/docs/automation/agents.md
+index 7ff44b711..94fc9db6d 100644
+--- a/docs/automation/agents.md
++++ b/docs/automation/agents.md
+@@ -106,7 +106,7 @@ silence means go after that deadline. Before any logout or display-server restar
+ check for Patrick's own apps. If any are present, ask Patrick first; his apps are
+ never leftovers, and silence never means go.
+ The automatic nightly desktop check runs from a d69 timer across the five builders
+-and reports to pinned issue #1003; release lab leases before 07:15 UTC. See
++and reports to pinned issue #1003; release lab leases before 10:15 UTC. See
+ [Sharing the lab between concurrent sessions](../lab/remote-builders.md#sharing-the-lab-between-concurrent-sessions).
+ 
+ Every graphical run must stay visible at the workstation's display wall and
+diff --git a/docs/lab/remote-builders.md b/docs/lab/remote-builders.md
+index 83a17e900..a7f1b3897 100644
+--- a/docs/lab/remote-builders.md
++++ b/docs/lab/remote-builders.md
+@@ -417,10 +417,10 @@ waiting for the lock, over a probe process left behind by a finished test.
+   VMs or encoding runs there. Git, editing, reading and a single
+   short test are fine.
+ 
+-The automatic nightly desktop check runs from d69's timer at 07:30 UTC on all
++The automatic nightly desktop check runs from d69's timer at 10:30 UTC on all
+ five builders, using the holder name `nightly-desktops`, and posts to pinned
+ [issue #1003](https://github.com/patrick-hudson/put.gd-desktop/issues/1003).
+-Release manual desktop leases by 07:15 UTC so the check can acquire them.
++Release manual desktop leases by 10:15 UTC so the check can acquire them.
+ 
+ ### Desktop locks
+ 
+diff --git a/docs/release/ci.md b/docs/release/ci.md
+index b8c22297e..2874813cc 100644
+--- a/docs/release/ci.md
++++ b/docs/release/ci.md
+@@ -12,7 +12,7 @@ dropped on 2026-10-31; CI no longer compiles or provisions Windows.
+ | --- | --- | --- |
+ | `ci.yml` | every pull request, pushes to `nightly`, manual runs; called by nightly and release | contracts, Linux tests, clang ASan/UBSan core tests, packages, the AppImage's pipewiresrc on PipeWire 1.6; on `nightly` pushes, cache pruning |
+ | `package.yml` | called by `ci.yml` | five native packages, AppImage, their SBOMs and vulnerability scan, and with a tag the collected `release-assets` |
+-| `nightly.yml` | 05:23 UTC daily and manual | skip unchanged source, or tag, test, package and publish a nightly, then notify put.gd-site; re-scan the latest stable release's SBOMs |
++| `nightly.yml` | 08:23 UTC daily and manual | skip unchanged source, or tag, test, package and publish a nightly, then notify put.gd-site; re-scan the latest stable release's SBOMs |
+ | `release.yml` | pushes to `main` and manual | tag the stable merge commit, test, package and stage a draft |
+ | `renovate.yml` | 04:17 UTC Mondays and manual; pull requests that change it | open dependency-update pull requests against `nightly`; on pull requests, a read-only lookup ([dependency updates](#dependency-updates)) |
+ 
+diff --git a/docs/release/release.md b/docs/release/release.md
+index daab0e5fa..52c714e42 100644
+--- a/docs/release/release.md
++++ b/docs/release/release.md
+@@ -42,7 +42,7 @@ asset layouts and remain verifiable.
+ 
+ ### Nightly
+ 
+-`.github/workflows/nightly.yml` runs at 05:23 UTC on `nightly` and on demand
++`.github/workflows/nightly.yml` runs at 08:23 UTC on `nightly` and on demand
+ (`gh workflow run nightly.yml --ref nightly`). GitHub can delay scheduled work;
+ this is not a delivery-time guarantee. Its `plan` job derives the nightly tag for
+ `nightly` HEAD. When that exact source is already a complete, verified public
+diff --git a/tests/ci/test_release_channels.py b/tests/ci/test_release_channels.py
+index f1d3ef5f4..3d4c6b957 100644
+--- a/tests/ci/test_release_channels.py
++++ b/tests/ci/test_release_channels.py
+@@ -131,7 +131,7 @@ class Workflows(unittest.TestCase):
+ 
+     def test_nightly_is_scheduled_skips_unchanged_source_and_gates_publication_on_ci(self):
+         nightly = workflow('nightly.yml')
+-        self.assertIn("schedule:\n    - cron: '23 5 * * *'", nightly)
++        self.assertIn("schedule:\n    - cron: '23 8 * * *'", nightly)
+         self.assertIn('  workflow_dispatch:\n', nightly)
+         self.assertNotIn('  push:', nightly)
+         self.assertIn('group: nightly-publication\n  cancel-in-progress: false', nightly)
+diff --git a/tests/desktop/test_surface_nightly_desktops.py b/tests/desktop/test_surface_nightly_desktops.py
+index 66d2c1991..e70c8b555 100644
+--- a/tests/desktop/test_surface_nightly_desktops.py
++++ b/tests/desktop/test_surface_nightly_desktops.py
+@@ -896,7 +896,7 @@ with n.controller_shutdown(workers):
+         self.assertIsNone(nightly.select_release(releases,[latest]))
+         self.assertEqual(nightly.select_release(releases,[latest],True)['tag_name'],latest)
+         timer=(nightly.ROOT/'tools/lab/putgd-nightly-desktops.timer').read_text()
+-        self.assertIn('OnCalendar=*-*-* 07:30:00 UTC',timer)
++        self.assertIn('OnCalendar=*-*-* 10:30:00 UTC',timer)
+         self.assertNotIn('*:00,30',timer)
+ 
+     def test_all_five_hosts_are_dispatched_concurrently(self):
+diff --git a/tools/lab/putgd-nightly-desktops.timer b/tools/lab/putgd-nightly-desktops.timer
+index 8f96d6afb..ea72db355 100644
+--- a/tools/lab/putgd-nightly-desktops.timer
++++ b/tools/lab/putgd-nightly-desktops.timer
+@@ -1,8 +1,8 @@
+ [Unit]
+-Description=Check the newest untested nightly daily at 07:30 UTC
++Description=Check the newest untested nightly daily at 10:30 UTC
+ 
+ [Timer]
+-OnCalendar=*-*-* 07:30:00 UTC
++OnCalendar=*-*-* 10:30:00 UTC
+ Persistent=true
+ Unit=putgd-nightly-desktops.service
+ 

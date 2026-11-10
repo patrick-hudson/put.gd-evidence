@@ -1,0 +1,1124 @@
+﻿2026-11-10T04:07:12.3504759Z Current runner version: '2.338.2'
+2026-11-10T04:07:12.3523757Z ##[group]Runner Image Provisioner
+2026-11-10T04:07:12.3524332Z Hosted Compute Agent
+2026-11-10T04:07:12.3524693Z Version: 20261028.624
+2026-11-10T04:07:12.3525141Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-10T04:07:12.3525594Z Build Date: 2026-10-28T21:51:42Z
+2026-11-10T04:07:12.3526122Z Worker ID: {b5b433e0-35a2-4236-9564-ca09b0055c87}
+2026-11-10T04:07:12.3526561Z Region: westus3
+2026-11-10T04:07:12.3526906Z Cloud: Azure
+2026-11-10T04:07:12.3527499Z ##[endgroup]
+2026-11-10T04:07:12.3528405Z ##[group]Operating System
+2026-11-10T04:07:12.3528868Z Ubuntu
+2026-11-10T04:07:12.3529222Z 24.04.5
+2026-11-10T04:07:12.3529557Z LTS
+2026-11-10T04:07:12.3529930Z ##[endgroup]
+2026-11-10T04:07:12.3530311Z ##[group]Runner Image
+2026-11-10T04:07:12.3530780Z Image: ubuntu-24.04
+2026-11-10T04:07:12.3531155Z Version: 20261101.360.1
+2026-11-10T04:07:12.3531970Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-10T04:07:12.3532930Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-10T04:07:12.3533678Z ##[endgroup]
+2026-11-10T04:07:12.3534371Z ##[group]GITHUB_TOKEN Permissions
+2026-11-10T04:07:12.3535668Z Contents: read
+2026-11-10T04:07:12.3536050Z Metadata: read
+2026-11-10T04:07:12.3536440Z ##[endgroup]
+2026-11-10T04:07:12.3538126Z Secret source: Actions
+2026-11-10T04:07:12.3538721Z Cache mode: write
+2026-11-10T04:07:12.3539268Z Prepare workflow directory
+2026-11-10T04:07:12.3907159Z Prepare all required actions
+2026-11-10T04:07:12.3940678Z Getting action download info
+2026-11-10T04:07:12.7089243Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-11-10T04:07:12.8022583Z Download action repository 'actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333' (SHA:9000827ccba6bdab643e8b6fd33ac0654aef8333)
+2026-11-10T04:07:13.3943144Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+2026-11-10T04:07:13.5706352Z Uses: patrick-hudson/put.gd-desktop/.github/workflows/package.yml@refs/pull/1368/merge (c615c8bd1c1756a65d9ea43ffa18507528b4c63e)
+2026-11-10T04:07:13.5709280Z ##[group] Inputs
+2026-11-10T04:07:13.5709568Z   release_tag: 
+2026-11-10T04:07:13.5709822Z ##[endgroup]
+2026-11-10T04:07:13.5710092Z Complete job name: packages / arch-install
+2026-11-10T04:07:13.6062767Z ##[group]Checking docker version
+2026-11-10T04:07:13.6071426Z ##[command]/usr/bin/docker version --format '{{.Server.APIVersion}}'
+2026-11-10T04:07:14.6593837Z '1.48'
+2026-11-10T04:07:14.6607870Z Docker daemon API version: '1.48'
+2026-11-10T04:07:14.6608179Z ##[command]/usr/bin/docker version --format '{{.Client.APIVersion}}'
+2026-11-10T04:07:14.6787792Z '1.48'
+2026-11-10T04:07:14.6801213Z Docker client API version: '1.48'
+2026-11-10T04:07:14.6804701Z ##[endgroup]
+2026-11-10T04:07:14.6806320Z ##[group]Clean up resources from previous jobs
+2026-11-10T04:07:14.6809995Z ##[command]/usr/bin/docker ps --all --quiet --no-trunc --filter "label=673089"
+2026-11-10T04:07:14.6967990Z ##[command]/usr/bin/docker network prune --force --filter "label=673089"
+2026-11-10T04:07:14.7079414Z ##[endgroup]
+2026-11-10T04:07:14.7079657Z ##[group]Create local container network
+2026-11-10T04:07:14.7086625Z ##[command]/usr/bin/docker network create --label 673089 github_network_72c0506e83b54506bdae62cb638b6624
+2026-11-10T04:07:14.7530858Z a6d0d68d627001d5ffa320a594664f2c0ddfb717a695e3b8393ad3f776356b87
+2026-11-10T04:07:14.7548590Z ##[endgroup]
+2026-11-10T04:07:14.7566407Z ##[group]Starting job container
+2026-11-10T04:07:14.7582939Z ##[command]/usr/bin/docker pull archlinux:base@sha256:823e937464d1528b306a8e1137ef406b9c56e5fee43c7a19e93684d554af74e1
+2026-11-10T04:07:15.4260707Z docker.io/library/archlinux@sha256:823e937464d1528b306a8e1137ef406b9c56e5fee43c7a19e93684d554af74e1: Pulling from library/archlinux
+2026-11-10T04:07:15.4307914Z 3f244b8f0c18: Pulling fs layer
+2026-11-10T04:07:15.4308220Z 432d78c9edb7: Pulling fs layer
+2026-11-10T04:07:15.6206567Z 432d78c9edb7: Verifying Checksum
+2026-11-10T04:07:15.6206830Z 432d78c9edb7: Download complete
+2026-11-10T04:07:15.9445681Z 3f244b8f0c18: Verifying Checksum
+2026-11-10T04:07:15.9446086Z 3f244b8f0c18: Download complete
+2026-11-10T04:07:18.6925241Z 3f244b8f0c18: Pull complete
+2026-11-10T04:07:21.2820745Z 432d78c9edb7: Pull complete
+2026-11-10T04:07:21.2908174Z Digest: sha256:823e937464d1528b306a8e1137ef406b9c56e5fee43c7a19e93684d554af74e1
+2026-11-10T04:07:21.2917540Z Status: Downloaded newer image for archlinux@sha256:823e937464d1528b306a8e1137ef406b9c56e5fee43c7a19e93684d554af74e1
+2026-11-10T04:07:21.2924420Z docker.io/library/archlinux:base@sha256:823e937464d1528b306a8e1137ef406b9c56e5fee43c7a19e93684d554af74e1
+2026-11-10T04:07:21.2986534Z ##[command]/usr/bin/docker create --name e6340397460744f28f6ede59705b79f3_archlinuxbasesha256823e937464d1528b306a8e1137ef406b9c56e5fee43c7a19e93684d554af74e1_c081ed --label 673089 --workdir /__w/put.gd-desktop/put.gd-desktop --network github_network_72c0506e83b54506bdae62cb638b6624  -e "HOME=/github/home" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work":"/__w" -v "/home/runner/actions-runner/cached/2.338.2/externals":"/__e":ro -v "/home/runner/work/_temp":"/__w/_temp" -v "/home/runner/work/_actions":"/__w/_actions" -v "/opt/hostedtoolcache":"/__t" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" --entrypoint "tail" archlinux:base@sha256:823e937464d1528b306a8e1137ef406b9c56e5fee43c7a19e93684d554af74e1 "-f" "/dev/null"
+2026-11-10T04:07:21.3311455Z d6d92d306ee3c1743b06ae68cf6c08f9c69dae50b32350ec84e066dac54f568d
+2026-11-10T04:07:21.3330758Z ##[command]/usr/bin/docker start d6d92d306ee3c1743b06ae68cf6c08f9c69dae50b32350ec84e066dac54f568d
+2026-11-10T04:07:21.9192125Z d6d92d306ee3c1743b06ae68cf6c08f9c69dae50b32350ec84e066dac54f568d
+2026-11-10T04:07:21.9211699Z ##[command]/usr/bin/docker ps --all --filter id=d6d92d306ee3c1743b06ae68cf6c08f9c69dae50b32350ec84e066dac54f568d --filter status=running --no-trunc --format "{{.ID}} {{.Status}}"
+2026-11-10T04:07:21.9312496Z d6d92d306ee3c1743b06ae68cf6c08f9c69dae50b32350ec84e066dac54f568d Up Less than a second
+2026-11-10T04:07:21.9330337Z ##[command]/usr/bin/docker inspect --format "{{range .Config.Env}}{{println .}}{{end}}" d6d92d306ee3c1743b06ae68cf6c08f9c69dae50b32350ec84e066dac54f568d
+2026-11-10T04:07:21.9468757Z CI=true
+2026-11-10T04:07:21.9469057Z HOME=/github/home
+2026-11-10T04:07:21.9469214Z GITHUB_ACTIONS=true
+2026-11-10T04:07:21.9469443Z PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+2026-11-10T04:07:21.9469679Z LANG=C.UTF-8
+2026-11-10T04:07:21.9487695Z ##[endgroup]
+2026-11-10T04:07:21.9494173Z ##[group]Waiting for all services to be ready
+2026-11-10T04:07:21.9495421Z ##[endgroup]
+2026-11-10T04:07:21.9675628Z ##[group]Run pacman -Syu --noconfirm --needed git ca-certificates python
+2026-11-10T04:07:21.9676001Z [36;1mpacman -Syu --noconfirm --needed git ca-certificates python[0m
+2026-11-10T04:07:21.9678519Z shell: sh -e {0}
+2026-11-10T04:07:21.9678752Z env:
+2026-11-10T04:07:21.9678877Z   RELEASE_TAG: 
+2026-11-10T04:07:21.9679103Z   CCACHE_DIR: /home/runner/work/put.gd-desktop/put.gd-desktop/build/ccache-package
+2026-11-10T04:07:21.9679396Z   CCACHE_BASEDIR: /home/runner/work/put.gd-desktop/put.gd-desktop
+2026-11-10T04:07:21.9679601Z   CCACHE_MAXSIZE: 256M
+2026-11-10T04:07:21.9683857Z   PUTGD_UBUNTU_MIRRORS: apt_root=${PUTGD_APT_ROOT:-/etc/apt}
+sources=$(grep -lE 'http://archive\.ubuntu\.com/ubuntu' "$apt_root"/sources.list "$apt_root"/sources.list.d/* 2>/dev/null || true)
+if [ -n "$sources" ]; then
+  probe_dir=$(mktemp -d)
+  # Four sequential probes: <= 12.8 s, <= 8 MiB of response bodies.
+  # 1 MiB/s fetches 483 MiB in ~8 minutes, leaving room in the 20-minute step.
+  floor=1048576
+  for endpoint in ${PUTGD_UBUNTU_MIRROR_HOSTS:-us.archive.ubuntu.com mirrors.edge.kernel.org azure.archive.ubuntu.com archive.ubuntu.com}; do
+    host=${endpoint%%:*}; port=${endpoint#*:}; [ "$port" != "$endpoint" ] || port=80
+    start=$(date +%s%N)
+    # Sample a base noble package: cached indexes can be fast while pool
+  # downloads crawl. This version remains referenced by noble/main.
+  # HTTP/1.0 avoids chunked encoding. Range bounds cooperative servers;
+    # head also bounds servers that ignore Range. A partial body at timeout
+    # is measured too, so a live trickle cannot pass as a fast mirror.
+    timeout --kill-after=0.2s 3s bash -c '
+      exec 3<>/dev/tcp/$1/$2 || exit 1
+      printf "GET /ubuntu/pool/main/g/glibc/libc6_2.39-0ubuntu8_amd64.deb HTTP/1.0\r\nHost: %s\r\nRange: bytes=0-2097151\r\n\r\n" "$1" >&3
+      IFS= read -r status <&3
+      case "$status" in *" 200 "*|*" 206 "*) ;; *) exit 1;; esac
+      while IFS= read -r line <&3; do [ "$line" != $'"'"'\r'"'"' ] || break; done
+      head -c 2097152 <&3 > "$3"
+    ' _ "$host" "$port" "$probe_dir/body" 2>/dev/null || true
+    elapsed=$(( ($(date +%s%N) - start) / 1000000 ))
+    [ "$elapsed" -gt 0 ] || elapsed=1
+    bytes=0
+    [ ! -f "$probe_dir/body" ] || bytes=$(wc -c < "$probe_dir/body")
+    speed=$(( bytes * 1000 / elapsed ))
+    tier=2; label=unavailable
+    if [ "$speed" -ge "$floor" ]; then tier=0; label=fast
+    elif [ "$speed" -gt 0 ]; then tier=1; label=below-floor; fi
+    echo "Ubuntu mirror throughput: $endpoint $speed B/s ($bytes bytes in $elapsed ms; $label; floor=$floor B/s)"
+    printf '%d %d %s\n' "$tier" "$speed" "$endpoint" >> "$probe_dir/rank"
+    rm -f "$probe_dir/body"
+  done
+  priority=0
+  : > "$apt_root/putgd-mirrors.txt"
+  while read -r tier speed endpoint; do
+    priority=$((priority + 1))
+    printf 'http://%s/ubuntu/\tpriority:%d\n' "$endpoint" "$priority" >> "$apt_root/putgd-mirrors.txt"
+  done < <(LC_ALL=C sort -s -k1,1n -k2,2nr "$probe_dir/rank")
+  rm -f "$probe_dir/rank"
+  rmdir "$probe_dir"
+  sed -i -E "s#http://archive\.ubuntu\.com/ubuntu/?#mirror+file:$apt_root/putgd-mirrors.txt#" $sources
+fi
+
+2026-11-10T04:07:21.9688411Z ##[endgroup]
+2026-11-10T04:07:22.0328673Z :: Synchronizing package databases...
+2026-11-10T04:07:22.7740134Z  core downloading...
+2026-11-10T04:07:22.7740348Z  extra downloading...
+2026-11-10T04:07:22.8992988Z warning: ca-certificates-20240618-1 is up to date -- skipping
+2026-11-10T04:07:22.8993426Z :: Starting full system upgrade...
+2026-11-10T04:07:22.9005938Z resolving dependencies...
+2026-11-10T04:07:22.9025611Z looking for conflicting packages...
+2026-11-10T04:07:22.9036315Z 
+2026-11-10T04:07:22.9036550Z Package (17)                  Old Version  New Version  Net Change  Download Size
+2026-11-10T04:07:22.9036942Z 
+2026-11-10T04:07:22.9037172Z core/ca-certificates-mozilla  3.132-1      3.133-1       -0.01 MiB       0.37 MiB
+2026-11-10T04:07:22.9037712Z core/db5.3                                 5.3.28-7       6.48 MiB       1.26 MiB
+2026-11-10T04:07:22.9038366Z core/expat                    2.9.0-1      2.10.0-1       0.01 MiB       0.13 MiB
+2026-11-10T04:07:22.9038764Z core/libnghttp2               1.70.0-1     1.71.0-1       0.00 MiB       0.10 MiB
+2026-11-10T04:07:22.9039189Z core/libnghttp3               1.18.0-1     1.19.0-1       0.00 MiB       0.08 MiB
+2026-11-10T04:07:22.9039590Z core/libngtcp2                1.25.0-1     1.26.0-1       0.00 MiB       0.22 MiB
+2026-11-10T04:07:22.9039953Z core/lz4                      1:1.10.0-2   1:1.11.0-1     0.08 MiB       0.20 MiB
+2026-11-10T04:07:22.9040314Z core/mpdecimal                             4.0.1-3        0.32 MiB       0.10 MiB
+2026-11-10T04:07:22.9040665Z core/perl                                  5.44.0-1      72.30 MiB      20.98 MiB
+2026-11-10T04:07:22.9041014Z extra/perl-error                           0.17031-1      0.04 MiB       0.02 MiB
+2026-11-10T04:07:22.9041397Z extra/perl-mailtools                       2.22-3         0.10 MiB       0.06 MiB
+2026-11-10T04:07:22.9041800Z extra/perl-timedate                        2.35-1         0.15 MiB       0.06 MiB
+2026-11-10T04:07:22.9042177Z core/sqlite                   3.54.0-1     3.54.1-1       0.00 MiB       2.38 MiB
+2026-11-10T04:07:22.9042693Z core/tzdata                   2026e-1      2026f-1        0.00 MiB       0.30 MiB
+2026-11-10T04:07:22.9043056Z extra/zlib-ng                              2.3.3-1        0.28 MiB       0.11 MiB
+2026-11-10T04:07:22.9043411Z extra/git                                  2.56.0-1      33.54 MiB       7.43 MiB
+2026-11-10T04:07:22.9043756Z core/python                                3.14.9-1      73.88 MiB      13.56 MiB
+2026-11-10T04:07:22.9043987Z 
+2026-11-10T04:07:22.9044081Z Total Download Size:    47.36 MiB
+2026-11-10T04:07:22.9044315Z Total Installed Size:  209.21 MiB
+2026-11-10T04:07:22.9044584Z Net Upgrade Size:      187.17 MiB
+2026-11-10T04:07:22.9044731Z 
+2026-11-10T04:07:22.9048535Z :: Proceed with installation? [Y/n] 
+2026-11-10T04:07:22.9048800Z :: Retrieving packages...
+2026-11-10T04:07:23.4695290Z  perl-5.44.0-1-x86_64 downloading...
+2026-11-10T04:07:23.4695733Z  python-3.14.9-1-x86_64 downloading...
+2026-11-10T04:07:23.4695972Z  git-2.56.0-1-x86_64 downloading...
+2026-11-10T04:07:23.4696179Z  sqlite-3.54.1-1-x86_64 downloading...
+2026-11-10T04:07:23.4696429Z  db5.3-5.3.28-7-x86_64 downloading...
+2026-11-10T04:07:23.4696702Z  ca-certificates-mozilla-3.133-1-x86_64 downloading...
+2026-11-10T04:07:23.4696948Z  tzdata-2026f-1-x86_64 downloading...
+2026-11-10T04:07:23.4697120Z  libngtcp2-1.26.0-1-x86_64 downloading...
+2026-11-10T04:07:23.4697512Z  lz4-1:1.11.0-1-x86_64 downloading...
+2026-11-10T04:07:23.4697744Z  expat-2.10.0-1-x86_64 downloading...
+2026-11-10T04:07:23.4697904Z  zlib-ng-2.3.3-1-x86_64 downloading...
+2026-11-10T04:07:23.4698065Z  mpdecimal-4.0.1-3-x86_64 downloading...
+2026-11-10T04:07:23.4698236Z  libnghttp2-1.71.0-1-x86_64 downloading...
+2026-11-10T04:07:23.4698411Z  libnghttp3-1.19.0-1-x86_64 downloading...
+2026-11-10T04:07:23.4698759Z  perl-timedate-2.35-1-any downloading...
+2026-11-10T04:07:23.4699017Z  perl-mailtools-2.22-3-any downloading...
+2026-11-10T04:07:23.4699267Z  perl-error-0.17031-1-any downloading...
+2026-11-10T04:07:23.4699498Z checking keyring...
+2026-11-10T04:07:23.5593081Z checking package integrity...
+2026-11-10T04:07:23.9702381Z loading package files...
+2026-11-10T04:07:23.9923977Z checking for file conflicts...
+2026-11-10T04:07:24.0017903Z :: Processing package changes...
+2026-11-10T04:07:24.0018154Z upgrading tzdata...
+2026-11-10T04:07:24.1862261Z upgrading expat...
+2026-11-10T04:07:24.1933253Z installing db5.3...
+2026-11-10T04:07:24.2048036Z installing perl...
+2026-11-10T04:07:24.4635330Z installing perl-error...
+2026-11-10T04:07:24.4641470Z installing perl-timedate...
+2026-11-10T04:07:24.4679034Z installing perl-mailtools...
+2026-11-10T04:07:24.4698788Z installing zlib-ng...
+2026-11-10T04:07:24.4728525Z upgrading libnghttp2...
+2026-11-10T04:07:24.4743819Z upgrading libnghttp3...
+2026-11-10T04:07:24.4769923Z upgrading lz4...
+2026-11-10T04:07:24.4805078Z upgrading libngtcp2...
+2026-11-10T04:07:24.4847664Z upgrading sqlite...
+2026-11-10T04:07:24.5089202Z upgrading ca-certificates-mozilla...
+2026-11-10T04:07:24.5113049Z installing git...
+2026-11-10T04:07:24.6348995Z Optional dependencies for git
+2026-11-10T04:07:24.6349339Z     git-zsh-completion: upstream zsh completion
+2026-11-10T04:07:24.6349643Z     tk: gitk and git gui
+2026-11-10T04:07:24.6349878Z     openssh: ssh transport and crypto
+2026-11-10T04:07:24.6350152Z     man: show help with `git command --help`
+2026-11-10T04:07:24.6350417Z     perl-libwww: git svn
+2026-11-10T04:07:24.6350711Z     perl-term-readkey: git svn and interactive.singlekey setting
+2026-11-10T04:07:24.6351048Z     perl-io-socket-ssl: git send-email TLS support
+2026-11-10T04:07:24.6351344Z     perl-authen-sasl: git send-email TLS support
+2026-11-10T04:07:24.6351629Z     perl-cgi: gitweb (web interface) support
+2026-11-10T04:07:24.6352000Z     python: git svn & git p4 [pending]
+2026-11-10T04:07:24.6352233Z     subversion: git svn
+2026-11-10T04:07:24.6352518Z     org.freedesktop.secrets: keyring credential helper
+2026-11-10T04:07:24.6352849Z     libsecret: libsecret credential helper [installed]
+2026-11-10T04:07:24.6353349Z     less: the default pager for git
+2026-11-10T04:07:24.6353586Z installing mpdecimal...
+2026-11-10T04:07:24.6367664Z installing python...
+2026-11-10T04:07:24.9239193Z Optional dependencies for python
+2026-11-10T04:07:24.9239727Z     python-setuptools: for building Python packages using tooling that is usually bundled with Python
+2026-11-10T04:07:24.9240483Z     python-pip: for installing Python packages using tooling that is usually bundled with Python
+2026-11-10T04:07:24.9240975Z     python-pipx: for installing Python software not packaged on Arch Linux
+2026-11-10T04:07:24.9241354Z     sqlite: for a default database integration [installed]
+2026-11-10T04:07:24.9241649Z     xz: for lzma [installed]
+2026-11-10T04:07:24.9241853Z     tk: for tkinter
+2026-11-10T04:07:25.5296411Z :: Running post-transaction hooks...
+2026-11-10T04:07:25.5296656Z (1/5) Creating system user accounts...
+2026-11-10T04:07:25.5751289Z Creating group 'git' with GID 969.
+2026-11-10T04:07:25.5751736Z Creating user 'git' (git daemon user) with UID 969 and GID 969.
+2026-11-10T04:07:25.5803315Z (2/5) Reloading system manager configuration...
+2026-11-10T04:07:25.6246692Z   Skipped: Current root is not booted.
+2026-11-10T04:07:25.6258567Z (3/5) Arming ConditionNeedsUpdate...
+2026-11-10T04:07:25.6678298Z (4/5) Rebuilding certificate stores...
+2026-11-10T04:07:26.4514196Z (5/5) Checking for old perl modules...
+2026-11-10T04:07:26.5519336Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-11-10T04:07:26.5519563Z with:
+2026-11-10T04:07:26.5519702Z   repository: patrick-hudson/put.gd-desktop
+2026-11-10T04:07:26.5521211Z   token: ***
+2026-11-10T04:07:26.5521326Z   ssh-strict: true
+2026-11-10T04:07:26.5521442Z   ssh-user: git
+2026-11-10T04:07:26.5521564Z   persist-credentials: true
+2026-11-10T04:07:26.5521698Z   clean: true
+2026-11-10T04:07:26.5521823Z   sparse-checkout-cone-mode: true
+2026-11-10T04:07:26.5521965Z   fetch-depth: 1
+2026-11-10T04:07:26.5522079Z   fetch-tags: false
+2026-11-10T04:07:26.5522212Z   show-progress: true
+2026-11-10T04:07:26.5522331Z   lfs: false
+2026-11-10T04:07:26.5522436Z   submodules: false
+2026-11-10T04:07:26.5522557Z   set-safe-directory: true
+2026-11-10T04:07:26.5522701Z   allow-unsafe-pr-checkout: false
+2026-11-10T04:07:26.5522843Z env:
+2026-11-10T04:07:26.5522947Z   RELEASE_TAG: 
+2026-11-10T04:07:26.5523169Z   CCACHE_DIR: /home/runner/work/put.gd-desktop/put.gd-desktop/build/ccache-package
+2026-11-10T04:07:26.5523442Z   CCACHE_BASEDIR: /home/runner/work/put.gd-desktop/put.gd-desktop
+2026-11-10T04:07:26.5523632Z   CCACHE_MAXSIZE: 256M
+2026-11-10T04:07:26.5527714Z   PUTGD_UBUNTU_MIRRORS: apt_root=${PUTGD_APT_ROOT:-/etc/apt}
+sources=$(grep -lE 'http://archive\.ubuntu\.com/ubuntu' "$apt_root"/sources.list "$apt_root"/sources.list.d/* 2>/dev/null || true)
+if [ -n "$sources" ]; then
+  probe_dir=$(mktemp -d)
+  # Four sequential probes: <= 12.8 s, <= 8 MiB of response bodies.
+  # 1 MiB/s fetches 483 MiB in ~8 minutes, leaving room in the 20-minute step.
+  floor=1048576
+  for endpoint in ${PUTGD_UBUNTU_MIRROR_HOSTS:-us.archive.ubuntu.com mirrors.edge.kernel.org azure.archive.ubuntu.com archive.ubuntu.com}; do
+    host=${endpoint%%:*}; port=${endpoint#*:}; [ "$port" != "$endpoint" ] || port=80
+    start=$(date +%s%N)
+    # Sample a base noble package: cached indexes can be fast while pool
+  # downloads crawl. This version remains referenced by noble/main.
+  # HTTP/1.0 avoids chunked encoding. Range bounds cooperative servers;
+    # head also bounds servers that ignore Range. A partial body at timeout
+    # is measured too, so a live trickle cannot pass as a fast mirror.
+    timeout --kill-after=0.2s 3s bash -c '
+      exec 3<>/dev/tcp/$1/$2 || exit 1
+      printf "GET /ubuntu/pool/main/g/glibc/libc6_2.39-0ubuntu8_amd64.deb HTTP/1.0\r\nHost: %s\r\nRange: bytes=0-2097151\r\n\r\n" "$1" >&3
+      IFS= read -r status <&3
+      case "$status" in *" 200 "*|*" 206 "*) ;; *) exit 1;; esac
+      while IFS= read -r line <&3; do [ "$line" != $'"'"'\r'"'"' ] || break; done
+      head -c 2097152 <&3 > "$3"
+    ' _ "$host" "$port" "$probe_dir/body" 2>/dev/null || true
+    elapsed=$(( ($(date +%s%N) - start) / 1000000 ))
+    [ "$elapsed" -gt 0 ] || elapsed=1
+    bytes=0
+    [ ! -f "$probe_dir/body" ] || bytes=$(wc -c < "$probe_dir/body")
+    speed=$(( bytes * 1000 / elapsed ))
+    tier=2; label=unavailable
+    if [ "$speed" -ge "$floor" ]; then tier=0; label=fast
+    elif [ "$speed" -gt 0 ]; then tier=1; label=below-floor; fi
+    echo "Ubuntu mirror throughput: $endpoint $speed B/s ($bytes bytes in $elapsed ms; $label; floor=$floor B/s)"
+    printf '%d %d %s\n' "$tier" "$speed" "$endpoint" >> "$probe_dir/rank"
+    rm -f "$probe_dir/body"
+  done
+  priority=0
+  : > "$apt_root/putgd-mirrors.txt"
+  while read -r tier speed endpoint; do
+    priority=$((priority + 1))
+    printf 'http://%s/ubuntu/\tpriority:%d\n' "$endpoint" "$priority" >> "$apt_root/putgd-mirrors.txt"
+  done < <(LC_ALL=C sort -s -k1,1n -k2,2nr "$probe_dir/rank")
+  rm -f "$probe_dir/rank"
+  rmdir "$probe_dir"
+  sed -i -E "s#http://archive\.ubuntu\.com/ubuntu/?#mirror+file:$apt_root/putgd-mirrors.txt#" $sources
+fi
+
+2026-11-10T04:07:26.5531844Z ##[endgroup]
+2026-11-10T04:07:26.5563078Z ##[command]/usr/bin/docker exec  d6d92d306ee3c1743b06ae68cf6c08f9c69dae50b32350ec84e066dac54f568d sh -c "cat /etc/*release | grep ^ID"
+2026-11-10T04:07:26.8594846Z Syncing repository: patrick-hudson/put.gd-desktop
+2026-11-10T04:07:26.8595907Z ##[group]Getting Git version info
+2026-11-10T04:07:26.8596118Z Working directory is '/__w/put.gd-desktop/put.gd-desktop'
+2026-11-10T04:07:26.8596419Z [command]/usr/sbin/git version
+2026-11-10T04:07:26.8596556Z git version 2.56.0
+2026-11-10T04:07:26.8603984Z ##[endgroup]
+2026-11-10T04:07:26.8611738Z Temporarily overriding HOME='/__w/_temp/ecb724e5-5d65-4d0a-81d7-1821e7c6adee' before making global git config changes
+2026-11-10T04:07:26.8612225Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-10T04:07:26.8613935Z [command]/usr/sbin/git config --global --add safe.directory /__w/put.gd-desktop/put.gd-desktop
+2026-11-10T04:07:26.8647025Z Deleting the contents of '/__w/put.gd-desktop/put.gd-desktop'
+2026-11-10T04:07:26.8649142Z ##[group]Determining repository object format
+2026-11-10T04:07:26.8650226Z ##[endgroup]
+2026-11-10T04:07:26.8650433Z ##[group]Initializing the repository
+2026-11-10T04:07:26.8652643Z [command]/usr/sbin/git init /__w/put.gd-desktop/put.gd-desktop
+2026-11-10T04:07:26.8697837Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-10T04:07:26.8698421Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-10T04:07:26.8698813Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-10T04:07:26.8699318Z hint: call:
+2026-11-10T04:07:26.8699506Z hint:
+2026-11-10T04:07:26.8699757Z hint: 	git config --global init.defaultBranch <name>
+2026-11-10T04:07:26.8700053Z hint:
+2026-11-10T04:07:26.8700230Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-10T04:07:26.8700514Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-10T04:07:26.8700720Z hint:
+2026-11-10T04:07:26.8700835Z hint: 	git branch -m <name>
+2026-11-10T04:07:26.8700964Z hint:
+2026-11-10T04:07:26.8701141Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-10T04:07:26.8701505Z Initialized empty Git repository in /__w/put.gd-desktop/put.gd-desktop/.git/
+2026-11-10T04:07:26.8705229Z [command]/usr/sbin/git remote add origin https://github.com/patrick-hudson/put.gd-desktop
+2026-11-10T04:07:26.8743943Z ##[endgroup]
+2026-11-10T04:07:26.8744256Z ##[group]Disabling automatic garbage collection
+2026-11-10T04:07:26.8746185Z [command]/usr/sbin/git config --local gc.auto 0
+2026-11-10T04:07:26.8779158Z ##[endgroup]
+2026-11-10T04:07:26.8779543Z ##[group]Setting up auth
+2026-11-10T04:07:26.8780026Z Removing SSH command configuration
+2026-11-10T04:07:26.8783102Z [command]/usr/sbin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-10T04:07:26.8817589Z [command]/usr/sbin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-10T04:07:26.9151775Z Removing HTTP extra header
+2026-11-10T04:07:26.9154347Z [command]/usr/sbin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-10T04:07:26.9188277Z [command]/usr/sbin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-10T04:07:26.9534449Z Removing includeIf entries pointing to credentials config files
+2026-11-10T04:07:26.9534914Z [command]/usr/sbin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-10T04:07:26.9569582Z [command]/usr/sbin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-10T04:07:26.9914200Z [command]/usr/sbin/git config --file /__w/_temp/git-credentials-266c3b85-c713-4cdb-b178-f25c66666465.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-10T04:07:26.9952653Z [command]/usr/sbin/git config --local includeIf.gitdir:/__w/put.gd-desktop/put.gd-desktop/.git.path /__w/_temp/git-credentials-266c3b85-c713-4cdb-b178-f25c66666465.config
+2026-11-10T04:07:26.9986794Z [command]/usr/sbin/git config --local includeIf.gitdir:/__w/put.gd-desktop/put.gd-desktop/.git/worktrees/*.path /__w/_temp/git-credentials-266c3b85-c713-4cdb-b178-f25c66666465.config
+2026-11-10T04:07:27.0020998Z [command]/usr/sbin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-266c3b85-c713-4cdb-b178-f25c66666465.config
+2026-11-10T04:07:27.0054640Z [command]/usr/sbin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-266c3b85-c713-4cdb-b178-f25c66666465.config
+2026-11-10T04:07:27.0088227Z ##[endgroup]
+2026-11-10T04:07:27.0088537Z ##[group]Fetching the repository
+2026-11-10T04:07:27.0094444Z [command]/usr/sbin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +c615c8bd1c1756a65d9ea43ffa18507528b4c63e:refs/remotes/pull/1368/merge
+2026-11-10T04:07:28.7561404Z From https://github.com/patrick-hudson/put.gd-desktop
+2026-11-10T04:07:28.7561781Z  * [new ref]         c615c8bd1c1756a65d9ea43ffa18507528b4c63e -> pull/1368/merge
+2026-11-10T04:07:28.7570062Z ##[endgroup]
+2026-11-10T04:07:28.7570714Z ##[group]Determining the checkout info
+2026-11-10T04:07:28.7571254Z ##[endgroup]
+2026-11-10T04:07:28.7571592Z [command]/usr/sbin/git sparse-checkout disable
+2026-11-10T04:07:28.7612939Z [command]/usr/sbin/git config --local --unset-all extensions.worktreeConfig
+2026-11-10T04:07:28.7645426Z ##[group]Checking out the ref
+2026-11-10T04:07:28.7648101Z [command]/usr/sbin/git checkout --progress --force refs/remotes/pull/1368/merge
+2026-11-10T04:07:28.8752460Z Note: switching to 'refs/remotes/pull/1368/merge'.
+2026-11-10T04:07:28.8753476Z 
+2026-11-10T04:07:28.8753768Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-10T04:07:28.8754073Z changes and commit them, and you can discard any commits you make in this
+2026-11-10T04:07:28.8754340Z state without impacting any branches by switching back to a branch.
+2026-11-10T04:07:28.8754498Z 
+2026-11-10T04:07:28.8754643Z If you want to create a new branch to retain commits you create, you may
+2026-11-10T04:07:28.8754898Z do so (now or later) by using -c with the switch command. Example:
+2026-11-10T04:07:28.8755046Z 
+2026-11-10T04:07:28.8755117Z   git switch -c <new-branch-name>
+2026-11-10T04:07:28.8755273Z 
+2026-11-10T04:07:28.8755336Z Or undo this operation with:
+2026-11-10T04:07:28.8755425Z 
+2026-11-10T04:07:28.8755478Z   git switch -
+2026-11-10T04:07:28.8755548Z 
+2026-11-10T04:07:28.8755670Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-10T04:07:28.8756326Z 
+2026-11-10T04:07:28.8756521Z HEAD is now at c615c8b Merge 89a489d7a2aab9bfb07c1d8f2ebad75597c4190c into 7fc609dc42f8f3c1118d79a63d42ce37ea4a71c9
+2026-11-10T04:07:28.8774498Z ##[endgroup]
+2026-11-10T04:07:28.8838664Z [command]/usr/sbin/git log -1 --format=%H
+2026-11-10T04:07:28.8876557Z c615c8bd1c1756a65d9ea43ffa18507528b4c63e
+2026-11-10T04:07:28.9112359Z ##[group]Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+2026-11-10T04:07:28.9112622Z with:
+2026-11-10T04:07:28.9112762Z   name: release-native-archlinux
+2026-11-10T04:07:28.9112919Z   path: build/arch-artifact
+2026-11-10T04:07:28.9113069Z   merge-multiple: false
+2026-11-10T04:07:28.9113226Z   repository: patrick-hudson/put.gd-desktop
+2026-11-10T04:07:28.9113398Z   run-id: 42752772900
+2026-11-10T04:07:28.9113533Z   skip-decompress: false
+2026-11-10T04:07:28.9113675Z   digest-mismatch: error
+2026-11-10T04:07:28.9113812Z env:
+2026-11-10T04:07:28.9113930Z   RELEASE_TAG: 
+2026-11-10T04:07:28.9114157Z   CCACHE_DIR: /home/runner/work/put.gd-desktop/put.gd-desktop/build/ccache-package
+2026-11-10T04:07:28.9114469Z   CCACHE_BASEDIR: /home/runner/work/put.gd-desktop/put.gd-desktop
+2026-11-10T04:07:28.9114677Z   CCACHE_MAXSIZE: 256M
+2026-11-10T04:07:28.9119349Z   PUTGD_UBUNTU_MIRRORS: apt_root=${PUTGD_APT_ROOT:-/etc/apt}
+sources=$(grep -lE 'http://archive\.ubuntu\.com/ubuntu' "$apt_root"/sources.list "$apt_root"/sources.list.d/* 2>/dev/null || true)
+if [ -n "$sources" ]; then
+  probe_dir=$(mktemp -d)
+  # Four sequential probes: <= 12.8 s, <= 8 MiB of response bodies.
+  # 1 MiB/s fetches 483 MiB in ~8 minutes, leaving room in the 20-minute step.
+  floor=1048576
+  for endpoint in ${PUTGD_UBUNTU_MIRROR_HOSTS:-us.archive.ubuntu.com mirrors.edge.kernel.org azure.archive.ubuntu.com archive.ubuntu.com}; do
+    host=${endpoint%%:*}; port=${endpoint#*:}; [ "$port" != "$endpoint" ] || port=80
+    start=$(date +%s%N)
+    # Sample a base noble package: cached indexes can be fast while pool
+  # downloads crawl. This version remains referenced by noble/main.
+  # HTTP/1.0 avoids chunked encoding. Range bounds cooperative servers;
+    # head also bounds servers that ignore Range. A partial body at timeout
+    # is measured too, so a live trickle cannot pass as a fast mirror.
+    timeout --kill-after=0.2s 3s bash -c '
+      exec 3<>/dev/tcp/$1/$2 || exit 1
+      printf "GET /ubuntu/pool/main/g/glibc/libc6_2.39-0ubuntu8_amd64.deb HTTP/1.0\r\nHost: %s\r\nRange: bytes=0-2097151\r\n\r\n" "$1" >&3
+      IFS= read -r status <&3
+      case "$status" in *" 200 "*|*" 206 "*) ;; *) exit 1;; esac
+      while IFS= read -r line <&3; do [ "$line" != $'"'"'\r'"'"' ] || break; done
+      head -c 2097152 <&3 > "$3"
+    ' _ "$host" "$port" "$probe_dir/body" 2>/dev/null || true
+    elapsed=$(( ($(date +%s%N) - start) / 1000000 ))
+    [ "$elapsed" -gt 0 ] || elapsed=1
+    bytes=0
+    [ ! -f "$probe_dir/body" ] || bytes=$(wc -c < "$probe_dir/body")
+    speed=$(( bytes * 1000 / elapsed ))
+    tier=2; label=unavailable
+    if [ "$speed" -ge "$floor" ]; then tier=0; label=fast
+    elif [ "$speed" -gt 0 ]; then tier=1; label=below-floor; fi
+    echo "Ubuntu mirror throughput: $endpoint $speed B/s ($bytes bytes in $elapsed ms; $label; floor=$floor B/s)"
+    printf '%d %d %s\n' "$tier" "$speed" "$endpoint" >> "$probe_dir/rank"
+    rm -f "$probe_dir/body"
+  done
+  priority=0
+  : > "$apt_root/putgd-mirrors.txt"
+  while read -r tier speed endpoint; do
+    priority=$((priority + 1))
+    printf 'http://%s/ubuntu/\tpriority:%d\n' "$endpoint" "$priority" >> "$apt_root/putgd-mirrors.txt"
+  done < <(LC_ALL=C sort -s -k1,1n -k2,2nr "$probe_dir/rank")
+  rm -f "$probe_dir/rank"
+  rmdir "$probe_dir"
+  sed -i -E "s#http://archive\.ubuntu\.com/ubuntu/?#mirror+file:$apt_root/putgd-mirrors.txt#" $sources
+fi
+
+2026-11-10T04:07:28.9123898Z ##[endgroup]
+2026-11-10T04:07:28.9127120Z ##[command]/usr/bin/docker exec  d6d92d306ee3c1743b06ae68cf6c08f9c69dae50b32350ec84e066dac54f568d sh -c "cat /etc/*release | grep ^ID"
+2026-11-10T04:07:29.1092208Z Downloading single artifact
+2026-11-10T04:07:29.3490758Z Preparing to download the following artifacts:
+2026-11-10T04:07:29.3491854Z - release-native-archlinux (ID: 13733649231, Size: 130465701, Expected Digest: sha256:a540dc2d92adfb51730aaa0abbb039902efbc533505a63c29c67992fe3a6b4bd)
+2026-11-10T04:07:29.8061344Z Redirecting to blob download url: https://productionresultssa32.blob.core.windows.net/actions-results/d65ce13b-b689-889d-8773-8df51ee2042e/workflow-job-run-62459482-4bf2-5b12-8496-d884da4e2d1f/artifacts/4c98bcd9c4fd68b49d251401d0c9a3e8748d0f44e27d1c9d8ef3c82a2ee213f8.zip
+2026-11-10T04:07:29.8062090Z Starting download of artifact to: /__w/put.gd-desktop/put.gd-desktop/build/arch-artifact
+2026-11-10T04:07:30.1644750Z (node:646) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-11-10T04:07:30.1645343Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-10T04:07:32.7789102Z SHA256 digest of downloaded artifact is a540dc2d92adfb51730aaa0abbb039902efbc533505a63c29c67992fe3a6b4bd
+2026-11-10T04:07:32.7789490Z Artifact download completed successfully.
+2026-11-10T04:07:32.7789670Z Total of 1 artifact(s) downloaded
+2026-11-10T04:07:32.7792461Z Download artifact has finished successfully
+2026-11-10T04:07:32.7983027Z ##[group]Run bash tools/releases/smoke-arch.sh build/arch-artifact/*.pkg.tar.zst
+2026-11-10T04:07:32.7983367Z [36;1mbash tools/releases/smoke-arch.sh build/arch-artifact/*.pkg.tar.zst[0m
+2026-11-10T04:07:32.7983654Z shell: sh -e {0}
+2026-11-10T04:07:32.7983776Z env:
+2026-11-10T04:07:32.7983890Z   RELEASE_TAG: 
+2026-11-10T04:07:32.7984099Z   CCACHE_DIR: /home/runner/work/put.gd-desktop/put.gd-desktop/build/ccache-package
+2026-11-10T04:07:32.7984378Z   CCACHE_BASEDIR: /home/runner/work/put.gd-desktop/put.gd-desktop
+2026-11-10T04:07:32.7984574Z   CCACHE_MAXSIZE: 256M
+2026-11-10T04:07:32.7988777Z   PUTGD_UBUNTU_MIRRORS: apt_root=${PUTGD_APT_ROOT:-/etc/apt}
+sources=$(grep -lE 'http://archive\.ubuntu\.com/ubuntu' "$apt_root"/sources.list "$apt_root"/sources.list.d/* 2>/dev/null || true)
+if [ -n "$sources" ]; then
+  probe_dir=$(mktemp -d)
+  # Four sequential probes: <= 12.8 s, <= 8 MiB of response bodies.
+  # 1 MiB/s fetches 483 MiB in ~8 minutes, leaving room in the 20-minute step.
+  floor=1048576
+  for endpoint in ${PUTGD_UBUNTU_MIRROR_HOSTS:-us.archive.ubuntu.com mirrors.edge.kernel.org azure.archive.ubuntu.com archive.ubuntu.com}; do
+    host=${endpoint%%:*}; port=${endpoint#*:}; [ "$port" != "$endpoint" ] || port=80
+    start=$(date +%s%N)
+    # Sample a base noble package: cached indexes can be fast while pool
+  # downloads crawl. This version remains referenced by noble/main.
+  # HTTP/1.0 avoids chunked encoding. Range bounds cooperative servers;
+    # head also bounds servers that ignore Range. A partial body at timeout
+    # is measured too, so a live trickle cannot pass as a fast mirror.
+    timeout --kill-after=0.2s 3s bash -c '
+      exec 3<>/dev/tcp/$1/$2 || exit 1
+      printf "GET /ubuntu/pool/main/g/glibc/libc6_2.39-0ubuntu8_amd64.deb HTTP/1.0\r\nHost: %s\r\nRange: bytes=0-2097151\r\n\r\n" "$1" >&3
+      IFS= read -r status <&3
+      case "$status" in *" 200 "*|*" 206 "*) ;; *) exit 1;; esac
+      while IFS= read -r line <&3; do [ "$line" != $'"'"'\r'"'"' ] || break; done
+      head -c 2097152 <&3 > "$3"
+    ' _ "$host" "$port" "$probe_dir/body" 2>/dev/null || true
+    elapsed=$(( ($(date +%s%N) - start) / 1000000 ))
+    [ "$elapsed" -gt 0 ] || elapsed=1
+    bytes=0
+    [ ! -f "$probe_dir/body" ] || bytes=$(wc -c < "$probe_dir/body")
+    speed=$(( bytes * 1000 / elapsed ))
+    tier=2; label=unavailable
+    if [ "$speed" -ge "$floor" ]; then tier=0; label=fast
+    elif [ "$speed" -gt 0 ]; then tier=1; label=below-floor; fi
+    echo "Ubuntu mirror throughput: $endpoint $speed B/s ($bytes bytes in $elapsed ms; $label; floor=$floor B/s)"
+    printf '%d %d %s\n' "$tier" "$speed" "$endpoint" >> "$probe_dir/rank"
+    rm -f "$probe_dir/body"
+  done
+  priority=0
+  : > "$apt_root/putgd-mirrors.txt"
+  while read -r tier speed endpoint; do
+    priority=$((priority + 1))
+    printf 'http://%s/ubuntu/\tpriority:%d\n' "$endpoint" "$priority" >> "$apt_root/putgd-mirrors.txt"
+  done < <(LC_ALL=C sort -s -k1,1n -k2,2nr "$probe_dir/rank")
+  rm -f "$probe_dir/rank"
+  rmdir "$probe_dir"
+  sed -i -E "s#http://archive\.ubuntu\.com/ubuntu/?#mirror+file:$apt_root/putgd-mirrors.txt#" $sources
+fi
+
+2026-11-10T04:07:32.7992890Z ##[endgroup]
+2026-11-10T04:07:32.8976542Z loading packages...
+2026-11-10T04:07:32.8976779Z resolving dependencies...
+2026-11-10T04:07:33.0260034Z :: There are 5 providers available for org.freedesktop.secrets:
+2026-11-10T04:07:33.0260392Z :: Repository extra
+2026-11-10T04:07:33.0260650Z    1) chipass  2) gnome-keyring  3) keepassxc  4) kwallet  5) oo7
+2026-11-10T04:07:33.0260869Z 
+2026-11-10T04:07:33.0285598Z Enter a number (default=1): 
+2026-11-10T04:07:33.0285933Z :: There are 2 providers available for jack:
+2026-11-10T04:07:33.0286193Z :: Repository extra
+2026-11-10T04:07:33.0286397Z    1) jack2  2) pipewire-jack
+2026-11-10T04:07:33.0286567Z 
+2026-11-10T04:07:33.0318441Z Enter a number (default=1): 
+2026-11-10T04:07:33.0318710Z looking for conflicting packages...
+2026-11-10T04:07:33.0433165Z 
+2026-11-10T04:07:33.0434140Z Package (295)                    New Version                      Net Change  Download Size
+2026-11-10T04:07:33.0434432Z 
+2026-11-10T04:07:33.0434591Z extra/a52dec                     0.8.0-3                            0.13 MiB       0.05 MiB
+2026-11-10T04:07:33.0434990Z extra/aalib                      1.4rc5-19                          0.28 MiB       0.13 MiB
+2026-11-10T04:07:33.0435403Z extra/abseil-cpp                 20260817.0-2                       7.15 MiB       1.35 MiB
+2026-11-10T04:07:33.0435822Z extra/adwaita-cursors            51.0-1                            11.41 MiB       0.35 MiB
+2026-11-10T04:07:33.0436240Z extra/adwaita-fonts              51.0-2                             7.27 MiB       2.17 MiB
+2026-11-10T04:07:33.0436668Z extra/adwaita-icon-theme         51.0-1                             0.92 MiB       0.19 MiB
+2026-11-10T04:07:33.0436966Z extra/adwaita-icon-theme-legacy  46.2-3                             2.23 MiB       2.17 MiB
+2026-11-10T04:07:33.0437447Z extra/alsa-card-profiles         1:1.6.10-1                         0.19 MiB       0.03 MiB
+2026-11-10T04:07:33.0437856Z extra/alsa-lib                   1.2.16.1-1                         1.75 MiB       0.52 MiB
+2026-11-10T04:07:33.0438305Z extra/alsa-topology-conf         1.2.5.1-4                          0.33 MiB       0.01 MiB
+2026-11-10T04:07:33.0438729Z extra/alsa-ucm-conf              1.2.16.1-1                         0.68 MiB       0.13 MiB
+2026-11-10T04:07:33.0439120Z extra/aom                        3.15.3-1                           9.50 MiB       2.97 MiB
+2026-11-10T04:07:33.0439414Z extra/argon2                     20190702-7                         0.11 MiB       0.03 MiB
+2026-11-10T04:07:33.0439671Z extra/at-spi2-core               2.62.1-1                           4.04 MiB       0.58 MiB
+2026-11-10T04:07:33.0439929Z extra/avahi                      1:0.9rc5-2                         1.88 MiB       0.42 MiB
+2026-11-10T04:07:33.0440179Z extra/bluez-libs                 5.87-2                             0.31 MiB       0.09 MiB
+2026-11-10T04:07:33.0440426Z extra/botan                      3.13.0-1                          13.34 MiB       3.80 MiB
+2026-11-10T04:07:33.0440670Z extra/bubblewrap                 0.13.1-1                           0.10 MiB       0.04 MiB
+2026-11-10T04:07:33.0440914Z extra/cairo                      1.18.6-1                           1.77 MiB       0.68 MiB
+2026-11-10T04:07:33.0441162Z extra/cdparanoia                 10.2-10                            0.19 MiB       0.07 MiB
+2026-11-10T04:07:33.0441413Z extra/chipass                    2026.09.0-6                       27.77 MiB      11.53 MiB
+2026-11-10T04:07:33.0441665Z extra/chromaprint                1.6.2-1                            0.14 MiB       0.05 MiB
+2026-11-10T04:07:33.0441914Z extra/dav1d                      1.5.4-1                            1.85 MiB       0.66 MiB
+2026-11-10T04:07:33.0442541Z extra/dconf                      51.0-1                             0.46 MiB       0.11 MiB
+2026-11-10T04:07:33.0442792Z extra/default-cursors            3-1                                0.00 MiB       0.00 MiB
+2026-11-10T04:07:33.0443056Z extra/desktop-file-utils         0.29-1                             0.18 MiB       0.05 MiB
+2026-11-10T04:07:33.0443329Z extra/double-conversion          3.4.0-1                            0.19 MiB       0.06 MiB
+2026-11-10T04:07:33.0443583Z extra/duktape                    2.7.0-7                            0.78 MiB       0.17 MiB
+2026-11-10T04:07:33.0443820Z extra/faac                       2.1-1                              0.19 MiB       0.08 MiB
+2026-11-10T04:07:33.0444051Z extra/faad2                      2.11.4-1                           0.66 MiB       0.23 MiB
+2026-11-10T04:07:33.0444291Z extra/ffmpeg                     2:9.0.2-2                         48.45 MiB      15.16 MiB
+2026-11-10T04:07:33.0444528Z extra/fftw                       3.3.11-1                           8.83 MiB       2.67 MiB
+2026-11-10T04:07:33.0444801Z extra/flac                       1.5.0-1                            1.14 MiB       0.33 MiB
+2026-11-10T04:07:33.0445143Z extra/fluidsynth                 2.6.2-1                            0.84 MiB       0.33 MiB
+2026-11-10T04:07:33.0445391Z extra/fontconfig                 2:2.18.3-2                         1.33 MiB       0.40 MiB
+2026-11-10T04:07:33.0445649Z extra/freeglut                   3.8.0-1                            0.41 MiB       0.18 MiB
+2026-11-10T04:07:33.0445894Z extra/freetype2                  2.15.0-1                           1.74 MiB       0.57 MiB
+2026-11-10T04:07:33.0446141Z extra/fribidi                    1.0.18-1                           0.26 MiB       0.07 MiB
+2026-11-10T04:07:33.0446388Z extra/gdk-pixbuf2                2.44.8-1                           3.01 MiB       0.49 MiB
+2026-11-10T04:07:33.0446635Z extra/giflib                     6.1.3-2                            0.34 MiB       0.10 MiB
+2026-11-10T04:07:33.0446895Z extra/glib-networking            1:2.90.1-1                         0.71 MiB       0.15 MiB
+2026-11-10T04:07:33.0447155Z extra/glslang                    1:1.4.363.0-1                     13.98 MiB       2.60 MiB
+2026-11-10T04:07:33.0447537Z extra/glu                        9.0.3-3                            0.37 MiB       0.15 MiB
+2026-11-10T04:07:33.0447767Z extra/glycin                     2.2.6-1                           19.11 MiB       4.06 MiB
+2026-11-10T04:07:33.0448014Z extra/gperftools                 2.19.2-1                           2.27 MiB       0.55 MiB
+2026-11-10T04:07:33.0448262Z core/gpm                         1.20.7.r38.ge82d1a6-7              0.38 MiB       0.14 MiB
+2026-11-10T04:07:33.0448506Z extra/graphene                   1.10.8-2                           0.98 MiB       0.10 MiB
+2026-11-10T04:07:33.0448761Z extra/graphicsmagick             1.3.49-3                          14.80 MiB       2.77 MiB
+2026-11-10T04:07:33.0449019Z extra/graphite                   1:1.3.15-1                         0.20 MiB       0.08 MiB
+2026-11-10T04:07:33.0449290Z extra/gsettings-desktop-schemas  51.0-1                             6.65 MiB       0.87 MiB
+2026-11-10T04:07:33.0449583Z extra/gsettings-system-schemas   51.0-1                             0.02 MiB       0.01 MiB
+2026-11-10T04:07:33.0449844Z extra/gsm                        1.0.24-1                           0.10 MiB       0.04 MiB
+2026-11-10T04:07:33.0450077Z extra/gssdp                      1.6.6-1                            0.24 MiB       0.06 MiB
+2026-11-10T04:07:33.0450374Z extra/gst-libav                  1.28.8-1                           0.25 MiB       0.10 MiB
+2026-11-10T04:07:33.0450649Z extra/gst-plugin-pipewire        1:1.6.10-1                         0.17 MiB       0.07 MiB
+2026-11-10T04:07:33.0450920Z extra/gst-plugins-bad            1.28.8-1                           3.75 MiB       1.12 MiB
+2026-11-10T04:07:33.0451199Z extra/gst-plugins-bad-libs       1.28.8-1                          14.73 MiB       3.19 MiB
+2026-11-10T04:07:33.0451628Z extra/gst-plugins-base           1.28.8-1                           0.63 MiB       0.21 MiB
+2026-11-10T04:07:33.0451904Z extra/gst-plugins-base-libs      1.28.8-1                          12.85 MiB       2.46 MiB
+2026-11-10T04:07:33.0452176Z extra/gst-plugins-good           1.28.8-1                           7.43 MiB       2.32 MiB
+2026-11-10T04:07:33.0452434Z extra/gst-plugins-ugly           1.28.8-1                           0.55 MiB       0.18 MiB
+2026-11-10T04:07:33.0452690Z extra/gstreamer                  1.28.8-1                          11.91 MiB       2.11 MiB
+2026-11-10T04:07:33.0452933Z extra/gtest                      1.18.0-1                           1.67 MiB       0.39 MiB
+2026-11-10T04:07:33.0453194Z extra/gtk-update-icon-cache      1:4.24.1-1                         0.04 MiB       0.02 MiB
+2026-11-10T04:07:33.0453473Z extra/gtk3                       1:3.24.52-2                       53.22 MiB       8.93 MiB
+2026-11-10T04:07:33.0453714Z extra/gupnp                      1:1.6.10-1                         0.70 MiB       0.13 MiB
+2026-11-10T04:07:33.0453957Z extra/gupnp-igd                  1.6.0-2                            0.11 MiB       0.03 MiB
+2026-11-10T04:07:33.0454286Z extra/harfbuzz                   15.1.0-1                           5.59 MiB       1.51 MiB
+2026-11-10T04:07:33.0454546Z extra/hicolor-icon-theme         0.18-1                             0.05 MiB       0.01 MiB
+2026-11-10T04:07:33.0454801Z extra/hidapi                     0.15.0-1                           0.13 MiB       0.04 MiB
+2026-11-10T04:07:33.0455044Z extra/highway                    1.4.0-1                           10.04 MiB       1.19 MiB
+2026-11-10T04:07:33.0455292Z extra/imagemagick                7.1.2.35-1                        22.48 MiB       8.79 MiB
+2026-11-10T04:07:33.0455542Z extra/imath                      3.2.3-1                           26.54 MiB       3.93 MiB
+2026-11-10T04:07:33.0455792Z extra/imlib2                     1.12.7-3                           1.48 MiB       0.57 MiB
+2026-11-10T04:07:33.0456038Z extra/iso-codes                  4.20.1-1                          22.30 MiB       3.60 MiB
+2026-11-10T04:07:33.0456286Z extra/jack2                      1.9.22-2                           1.84 MiB       0.46 MiB
+2026-11-10T04:07:33.0456523Z extra/jasper                     4.2.9-1                            0.66 MiB       0.20 MiB
+2026-11-10T04:07:33.0456770Z extra/jbigkit                    2.2-1                              0.17 MiB       0.05 MiB
+2026-11-10T04:07:33.0457012Z extra/json-glib                  1.10.8-1                           1.01 MiB       0.17 MiB
+2026-11-10T04:07:33.0457523Z extra/l-smash                    2.14.5-4                           1.02 MiB       0.31 MiB
+2026-11-10T04:07:33.0457768Z extra/lame                       4.0-1                              1.10 MiB       0.30 MiB
+2026-11-10T04:07:33.0458012Z extra/layer-shell-qt             6.8.2-1                            0.15 MiB       0.04 MiB
+2026-11-10T04:07:33.0458337Z extra/lcms2                      2.20-1                             0.70 MiB       0.23 MiB
+2026-11-10T04:07:33.0458581Z extra/libass                     0.17.5-1                           0.30 MiB       0.12 MiB
+2026-11-10T04:07:33.0458852Z extra/libasyncns                 1:0.8+r3+g68cd5af-3                0.05 MiB       0.02 MiB
+2026-11-10T04:07:33.0459131Z extra/libavc1394                 0.5.4-7                            0.12 MiB       0.03 MiB
+2026-11-10T04:07:33.0459404Z extra/libavtp                    0.2.0-3                            0.05 MiB       0.01 MiB
+2026-11-10T04:07:33.0459676Z extra/libb2                      0.98.1-3                           0.13 MiB       0.04 MiB
+2026-11-10T04:07:33.0460058Z extra/libbluray                  1.5.1-1                            1.26 MiB       0.88 MiB
+2026-11-10T04:07:33.0460341Z extra/libbs2b                    3.1.0-11                           0.07 MiB       0.02 MiB
+2026-11-10T04:07:33.0460586Z extra/libbsd                     0.12.2-2                           0.33 MiB       0.16 MiB
+2026-11-10T04:07:33.0460951Z extra/libcaca                    0.99.beta20-7                      2.58 MiB       0.41 MiB
+2026-11-10T04:07:33.0461201Z extra/libcdio                    2.4.0-1                            0.89 MiB       0.26 MiB
+2026-11-10T04:07:33.0461460Z extra/libcloudproviders          0.4.2-1                            0.32 MiB       0.05 MiB
+2026-11-10T04:07:33.0461721Z extra/libcolord                  1.4.8-2                            1.24 MiB       0.18 MiB
+2026-11-10T04:07:33.0461968Z extra/libcups                    2:2.4.20-1                         0.79 MiB       0.28 MiB
+2026-11-10T04:07:33.0462213Z extra/libdaemon                  0.14-6                             0.06 MiB       0.02 MiB
+2026-11-10T04:07:33.0462462Z extra/libdatrie                  0.2.14-1                           0.49 MiB       0.11 MiB
+2026-11-10T04:07:33.0462708Z extra/libdc1394                  2.2.7-2                            1.49 MiB       0.23 MiB
+2026-11-10T04:07:33.0462952Z extra/libdca                     0.0.7-3                            0.22 MiB       0.10 MiB
+2026-11-10T04:07:33.0463194Z extra/libde265                   1.1.3-1                            0.96 MiB       0.35 MiB
+2026-11-10T04:07:33.0463523Z extra/libdeflate                 1.26-1                             0.14 MiB       0.06 MiB
+2026-11-10T04:07:33.0463769Z extra/libdovi                    3.4.0-1                            0.66 MiB       0.28 MiB
+2026-11-10T04:07:33.0464009Z extra/libdrm                     2.4.134-1                          1.28 MiB       0.35 MiB
+2026-11-10T04:07:33.0464251Z extra/libdv                      1.0.0-12                           0.20 MiB       0.08 MiB
+2026-11-10T04:07:33.0464491Z extra/libdvdnav                  7.0.0-1                            0.16 MiB       0.06 MiB
+2026-11-10T04:07:33.0464737Z extra/libdvdread                 7.1.1-1                            0.43 MiB       0.14 MiB
+2026-11-10T04:07:33.0464980Z extra/libebur128                 1.2.6-2                            0.05 MiB       0.02 MiB
+2026-11-10T04:07:33.0465235Z core/libedit                     20260512_3.1-1                     0.27 MiB       0.11 MiB
+2026-11-10T04:07:33.0465489Z extra/libepoxy                   1.5.10-3                           2.64 MiB       0.30 MiB
+2026-11-10T04:07:33.0465784Z extra/libevdev                   1.14.0-1                           0.22 MiB       0.06 MiB
+2026-11-10T04:07:33.0466032Z extra/libfdk-aac                 3.0.0-1                            2.81 MiB       1.30 MiB
+2026-11-10T04:07:33.0466287Z extra/libfreeaptx                0.2.2-1                            0.06 MiB       0.02 MiB
+2026-11-10T04:07:33.0466536Z extra/libglvnd                   1.7.0-3                            3.34 MiB       0.32 MiB
+2026-11-10T04:07:33.0466780Z extra/libgme                     0.6.5-1                            0.33 MiB       0.15 MiB
+2026-11-10T04:07:33.0467027Z extra/libgudev                   238-4                              0.17 MiB       0.03 MiB
+2026-11-10T04:07:33.0467401Z extra/libice                     1.1.2-1                            0.36 MiB       0.08 MiB
+2026-11-10T04:07:33.0467681Z extra/libiec61883                1.2.0-9                            0.12 MiB       0.03 MiB
+2026-11-10T04:07:33.0467930Z extra/libinput                   1.32.0-1                           0.79 MiB       0.23 MiB
+2026-11-10T04:07:33.0468187Z extra/libjpeg-turbo              3.2.1-1                            2.66 MiB       0.59 MiB
+2026-11-10T04:07:33.0468580Z extra/libjxl                     0.12.0-1                           6.78 MiB       1.86 MiB
+2026-11-10T04:07:33.0468948Z extra/liblc3                     1.1.3-2                            0.28 MiB       0.12 MiB
+2026-11-10T04:07:33.0469319Z extra/libldac                    2.0.2.6-1                          0.10 MiB       0.04 MiB
+2026-11-10T04:07:33.0469697Z extra/liblqr                     0.4.3-1                            0.08 MiB       0.03 MiB
+2026-11-10T04:07:33.0470084Z extra/liblrdf                    0.6.1-5                            0.05 MiB       0.02 MiB
+2026-11-10T04:07:33.0470615Z extra/libltc                     1.3.2-2                            0.74 MiB       0.14 MiB
+2026-11-10T04:07:33.0471014Z extra/libmd                      1.3.0-1                            0.13 MiB       0.06 MiB
+2026-11-10T04:07:33.0471262Z extra/libmicrodns                0.2.0-2                            0.04 MiB       0.01 MiB
+2026-11-10T04:07:33.0471509Z extra/libmng                     2.0.3-4                            0.66 MiB       0.18 MiB
+2026-11-10T04:07:33.0471750Z extra/libmodplug                 0.8.9.0-7                          0.37 MiB       0.17 MiB
+2026-11-10T04:07:33.0472007Z extra/libmpcdec                  1:0.1+r475-6                       0.09 MiB       0.04 MiB
+2026-11-10T04:07:33.0472257Z extra/libmpeg2                   0.5.1-11                           0.23 MiB       0.08 MiB
+2026-11-10T04:07:33.0472500Z extra/libmysofa                  1.3.5-1                            1.27 MiB       1.11 MiB
+2026-11-10T04:07:33.0472755Z extra/libnice                    0.1.24-1                           1.86 MiB       0.31 MiB
+2026-11-10T04:07:33.0473175Z extra/libogg                     1.3.6-1                            0.44 MiB       0.19 MiB
+2026-11-10T04:07:33.0473570Z extra/libopenmpt                 0.8.10-1                           2.53 MiB       0.90 MiB
+2026-11-10T04:07:33.0473947Z extra/libpciaccess               0.19-1                             0.06 MiB       0.02 MiB
+2026-11-10T04:07:33.0474200Z extra/libpgm                     5.3.128-4                          0.35 MiB       0.17 MiB
+2026-11-10T04:07:33.0474450Z extra/libpipewire                1:1.6.10-1                         5.78 MiB       1.49 MiB
+2026-11-10T04:07:33.0474705Z extra/libplacebo                 7.360.1-7                          1.61 MiB       0.52 MiB
+2026-11-10T04:07:33.0475122Z extra/libpng                     1.6.59-1                           0.58 MiB       0.25 MiB
+2026-11-10T04:07:33.0475520Z extra/libproxy                   0.5.12-1                           0.10 MiB       0.03 MiB
+2026-11-10T04:07:33.0475850Z extra/libpulse                   17.0+r134+g77d25a1e6-1             1.49 MiB       0.40 MiB
+2026-11-10T04:07:33.0476108Z extra/libraqm                    0.11.0-1                           0.20 MiB       0.04 MiB
+2026-11-10T04:07:33.0476356Z extra/libraw1394                 2.1.2-4                            0.16 MiB       0.05 MiB
+2026-11-10T04:07:33.0476600Z extra/librsvg                    2:2.63.4-1                        10.28 MiB       2.35 MiB
+2026-11-10T04:07:33.0477003Z extra/libsamplerate              0.2.2-3                            1.55 MiB       1.33 MiB
+2026-11-10T04:07:33.0477542Z extra/libshout                   1:2.4.6-5                          0.20 MiB       0.07 MiB
+2026-11-10T04:07:33.0477913Z extra/libsm                      1.2.6-1                            0.26 MiB       0.04 MiB
+2026-11-10T04:07:33.0478286Z extra/libsndfile                 1.2.2-4                            0.93 MiB       0.31 MiB
+2026-11-10T04:07:33.0478699Z extra/libsodium                  1.0.22-1                           0.64 MiB       0.21 MiB
+2026-11-10T04:07:33.0479102Z extra/libsoup3                   3.8.1-1                            2.06 MiB       0.42 MiB
+2026-11-10T04:07:33.0479507Z extra/libsoxr                    0.1.3-5                            0.21 MiB       0.08 MiB
+2026-11-10T04:07:33.0479948Z extra/libsrtp                    1:2.8.1-1                          0.17 MiB       0.05 MiB
+2026-11-10T04:07:33.0480346Z extra/libssh                     0.12.2-1                           0.75 MiB       0.25 MiB
+2026-11-10T04:07:33.0480750Z extra/libstemmer                 3.2.0-1                            0.44 MiB       0.14 MiB
+2026-11-10T04:07:33.0481141Z extra/libthai                    0.1.30-1                           1.24 MiB       0.26 MiB
+2026-11-10T04:07:33.0481384Z extra/libtheora                  1.2.0-1                            2.34 MiB       0.42 MiB
+2026-11-10T04:07:33.0485495Z extra/libtiff                    4.7.2-2                            1.32 MiB       0.40 MiB
+2026-11-10T04:07:33.0485906Z core/libtool                     2.6.2-5                            2.34 MiB       0.42 MiB
+2026-11-10T04:07:33.0486208Z extra/libunibreak                7.0-1                              0.15 MiB       0.03 MiB
+2026-11-10T04:07:33.0486641Z extra/libunwind                  1.8.3-1                            0.30 MiB       0.13 MiB
+2026-11-10T04:07:33.0487045Z extra/liburing                   2.15-1                             0.47 MiB       0.26 MiB
+2026-11-10T04:07:33.0487529Z extra/libva                      2.24.1-1                           1.00 MiB       0.20 MiB
+2026-11-10T04:07:33.0487799Z extra/libvdpau                   1.5-4                              0.28 MiB       0.06 MiB
+2026-11-10T04:07:33.0488043Z extra/libvorbis                  1.3.7-4                            0.83 MiB       0.18 MiB
+2026-11-10T04:07:33.0488347Z extra/libvpl                     2.17.0-1                           0.99 MiB       0.23 MiB
+2026-11-10T04:07:33.0488729Z extra/libvpx                     1.17.0-1                           3.72 MiB       1.32 MiB
+2026-11-10T04:07:33.0489263Z extra/libwacom                   2.20.0-1                           1.61 MiB       0.18 MiB
+2026-11-10T04:07:33.0489527Z extra/libwebp                    1.6.0-2                            1.04 MiB       0.32 MiB
+2026-11-10T04:07:33.0489960Z extra/libwireplumber             0.5.18-1                           1.72 MiB       0.30 MiB
+2026-11-10T04:07:33.0490370Z extra/libx11                     1.8.14-1                           9.84 MiB       2.02 MiB
+2026-11-10T04:07:33.0490770Z extra/libxau                     1.0.12-1                           0.02 MiB       0.01 MiB
+2026-11-10T04:07:33.0491223Z extra/libxcb                     1.17.0-1                           3.87 MiB       0.97 MiB
+2026-11-10T04:07:33.0491664Z extra/libxcomposite              0.4.7-1                            0.02 MiB       0.01 MiB
+2026-11-10T04:07:33.0492112Z extra/libxcursor                 1.2.3-1                            0.07 MiB       0.03 MiB
+2026-11-10T04:07:33.0492503Z extra/libxdamage                 1.1.7-1                            0.02 MiB       0.01 MiB
+2026-11-10T04:07:33.0492875Z extra/libxdmcp                   1.1.5-2                            0.13 MiB       0.03 MiB
+2026-11-10T04:07:33.0493223Z extra/libxext                    1.3.7-1                            0.30 MiB       0.10 MiB
+2026-11-10T04:07:33.0493649Z extra/libxfixes                  6.0.2-1                            0.04 MiB       0.01 MiB
+2026-11-10T04:07:33.0494013Z extra/libxft                     2.3.9-1                            0.13 MiB       0.06 MiB
+2026-11-10T04:07:33.0494418Z extra/libxi                      1.8.4-1                            0.41 MiB       0.07 MiB
+2026-11-10T04:07:33.0494698Z extra/libxinerama                1.1.6-1                            0.02 MiB       0.01 MiB
+2026-11-10T04:07:33.0495128Z extra/libxkbcommon               1.13.2-1                           1.05 MiB       0.27 MiB
+2026-11-10T04:07:33.0495588Z extra/libxkbcommon-x11           1.13.2-1                           0.10 MiB       0.03 MiB
+2026-11-10T04:07:33.0495970Z extra/libxrandr                  1.5.5-1                            0.07 MiB       0.03 MiB
+2026-11-10T04:07:33.0496341Z extra/libxrender                 0.9.13-1                           0.10 MiB       0.03 MiB
+2026-11-10T04:07:33.0496672Z extra/libxshmfence               1.3.3-1                            0.02 MiB       0.01 MiB
+2026-11-10T04:07:33.0496928Z extra/libxslt                    1.1.45-2                           0.78 MiB       0.20 MiB
+2026-11-10T04:07:33.0497171Z extra/libxtst                    1.2.6-1                            0.11 MiB       0.03 MiB
+2026-11-10T04:07:33.0497678Z extra/libxv                      1.0.13-1                           0.06 MiB       0.03 MiB
+2026-11-10T04:07:33.0497955Z extra/libxxf86vm                 1.1.7-1                            0.03 MiB       0.02 MiB
+2026-11-10T04:07:33.0498471Z extra/lilv                       0.28.0-1                           0.20 MiB       0.06 MiB
+2026-11-10T04:07:33.0498712Z extra/llvm-libs                  23.1.4-1                         164.88 MiB      41.44 MiB
+2026-11-10T04:07:33.0498960Z extra/lm_sensors                 1:3.6.2-1                          0.48 MiB       0.13 MiB
+2026-11-10T04:07:33.0499197Z extra/lua                        5.5.1-1                            1.59 MiB       0.38 MiB
+2026-11-10T04:07:33.0499429Z extra/lua54                      5.4.9-1                            1.52 MiB       0.36 MiB
+2026-11-10T04:07:33.0499667Z extra/lv2                        1.18.10-2                          0.98 MiB       0.15 MiB
+2026-11-10T04:07:33.0499898Z core/lzo                         2.10-5                             0.38 MiB       0.09 MiB
+2026-11-10T04:07:33.0500128Z extra/md4c                       0.6.0-2                            0.22 MiB       0.08 MiB
+2026-11-10T04:07:33.0500363Z extra/mesa                       1:26.2.6-1                        53.90 MiB      13.51 MiB
+2026-11-10T04:07:33.0500604Z core/minizip                     1:1.3.2-4                          0.10 MiB       0.03 MiB
+2026-11-10T04:07:33.0500934Z extra/mjpegtools                 2.2.1-4                            2.21 MiB       0.72 MiB
+2026-11-10T04:07:33.0501180Z extra/mpg123                     1.33.7-1                           1.20 MiB       0.45 MiB
+2026-11-10T04:07:33.0501421Z extra/mtdev                      1.1.7-1                            0.05 MiB       0.02 MiB
+2026-11-10T04:07:33.0501658Z extra/neon                       0.37.1-1                           0.78 MiB       0.23 MiB
+2026-11-10T04:07:33.0501891Z core/nspr                        4.40-1                             0.72 MiB       0.20 MiB
+2026-11-10T04:07:33.0502124Z core/nss                         3.133-1                            5.45 MiB       1.73 MiB
+2026-11-10T04:07:33.0502360Z extra/ocl-icd                    2.3.5-1                            0.50 MiB       0.10 MiB
+2026-11-10T04:07:33.0502601Z extra/openal                     1.25.2-2                           2.70 MiB       0.95 MiB
+2026-11-10T04:07:33.0502851Z extra/opencore-amr               0.1.6-2                            0.29 MiB       0.14 MiB
+2026-11-10T04:07:33.0503104Z extra/openexr                    3.5.3-3                            4.90 MiB       1.28 MiB
+2026-11-10T04:07:33.0503346Z extra/openh264                   2.7.0-1                            2.29 MiB       0.66 MiB
+2026-11-10T04:07:33.0503591Z extra/openjpeg2                  2.5.4-1                           13.37 MiB       0.87 MiB
+2026-11-10T04:07:33.0503838Z extra/openjph                    0.33.0-1                           0.81 MiB       0.24 MiB
+2026-11-10T04:07:33.0504083Z extra/opus                       1.6.1-1                            4.16 MiB       3.29 MiB
+2026-11-10T04:07:33.0504315Z extra/orc                        0.4.44-1                           1.45 MiB       0.34 MiB
+2026-11-10T04:07:33.0504552Z extra/pango                      1:1.58.2-1                         2.38 MiB       0.43 MiB
+2026-11-10T04:07:33.0504808Z core/pcre                        8.45-5                             3.54 MiB       1.00 MiB
+2026-11-10T04:07:33.0505051Z extra/pcsclite                   2.5.3-1                            0.31 MiB       0.10 MiB
+2026-11-10T04:07:33.0505298Z extra/pipewire                   1:1.6.10-1                         1.30 MiB       0.27 MiB
+2026-11-10T04:07:33.0505560Z extra/pipewire-audio             1:1.6.10-1                         4.44 MiB       1.30 MiB
+2026-11-10T04:07:33.0505849Z extra/pipewire-session-manager   1:1.6.10-1                         0.00 MiB       0.00 MiB
+2026-11-10T04:07:33.0506117Z extra/pixman                     0.46.4-1                           0.74 MiB       0.28 MiB
+2026-11-10T04:07:33.0506358Z extra/polkit                     128-1                              2.00 MiB       0.42 MiB
+2026-11-10T04:07:33.0506606Z extra/portaudio                  1:19.7.0-4                         0.33 MiB       0.10 MiB
+2026-11-10T04:07:33.0506920Z extra/qrencode                   4.1.1-4                            0.11 MiB       0.04 MiB
+2026-11-10T04:07:33.0507170Z extra/qt6-5compat                6.12.0-1                           2.36 MiB       0.56 MiB
+2026-11-10T04:07:33.0507580Z extra/qt6-base                   6.12.0-3                          67.56 MiB      15.93 MiB
+2026-11-10T04:07:33.0507840Z extra/qt6-declarative            6.12.0-4                         135.16 MiB      19.98 MiB
+2026-11-10T04:07:33.0508105Z extra/qt6-imageformats           6.12.0-1                           0.26 MiB       0.06 MiB
+2026-11-10T04:07:33.0508371Z extra/qt6-shadertools            6.12.0-1                           5.83 MiB       1.81 MiB
+2026-11-10T04:07:33.0508622Z extra/qt6-svg                    6.12.0-1                           1.03 MiB       0.30 MiB
+2026-11-10T04:07:33.0508880Z extra/qt6-translations           6.12.0-1                          15.91 MiB       2.03 MiB
+2026-11-10T04:07:33.0509140Z extra/qt6-wayland                6.12.0-1                           5.25 MiB       0.82 MiB
+2026-11-10T04:07:33.0509399Z extra/qtkeychain-qt6             0.17.0-1                           0.27 MiB       0.07 MiB
+2026-11-10T04:07:33.0509742Z extra/raptor                     2.0.16-9                           1.99 MiB       0.29 MiB
+2026-11-10T04:07:33.0509982Z extra/rav1e                      0.8.1-3                            7.49 MiB       1.58 MiB
+2026-11-10T04:07:33.0510222Z extra/rtmpdump                   1:2.6-2                            0.26 MiB       0.10 MiB
+2026-11-10T04:07:33.0510470Z extra/rubberband                 4.0.0-2                            1.52 MiB       0.29 MiB
+2026-11-10T04:07:33.0510711Z extra/sbc                        2.2-1                              0.21 MiB       0.05 MiB
+2026-11-10T04:07:33.0510952Z extra/sdl2-compat                2.32.74-1                          3.09 MiB       0.46 MiB
+2026-11-10T04:07:33.0511200Z extra/sdl3                       3.4.18-1                           6.98 MiB       1.72 MiB
+2026-11-10T04:07:33.0511438Z extra/serd                       0.32.10-1                          0.17 MiB       0.06 MiB
+2026-11-10T04:07:33.0511689Z extra/shaderc                    2026.4-1                           0.68 MiB       0.16 MiB
+2026-11-10T04:07:33.0511947Z extra/shared-mime-info           2.5.1-2                            5.83 MiB       0.75 MiB
+2026-11-10T04:07:33.0512199Z extra/slang                      2.3.3-4                            3.36 MiB       0.81 MiB
+2026-11-10T04:07:33.0512442Z extra/snappy                     1.3.1-1                            0.11 MiB       0.04 MiB
+2026-11-10T04:07:33.0512684Z extra/sndio                      1.10.0-1                           0.28 MiB       0.12 MiB
+2026-11-10T04:07:33.0512920Z extra/sord                       0.16.22-1                          0.12 MiB       0.04 MiB
+2026-11-10T04:07:33.0513162Z extra/soundtouch                 2.4.1-1                            0.20 MiB       0.07 MiB
+2026-11-10T04:07:33.0513414Z extra/spandsp                    0.0.6-7                            1.59 MiB       0.41 MiB
+2026-11-10T04:07:33.0513654Z extra/speex                      1.2.1-3                            0.64 MiB       0.47 MiB
+2026-11-10T04:07:33.0513897Z extra/speexdsp                   1.2.1-3                            0.54 MiB       0.44 MiB
+2026-11-10T04:07:33.0514157Z extra/spirv-tools                1:1.4.363.0-1                      8.16 MiB       2.12 MiB
+2026-11-10T04:07:33.0514411Z extra/sratom                     0.6.22-1                           0.05 MiB       0.02 MiB
+2026-11-10T04:07:33.0514648Z extra/srt                        1.5.7-2                            1.60 MiB       0.54 MiB
+2026-11-10T04:07:33.0514884Z extra/svt-av1                    4.2.0-1                            5.36 MiB       1.98 MiB
+2026-11-10T04:07:33.0515125Z extra/taglib                     2.3.2-1                            2.38 MiB       0.56 MiB
+2026-11-10T04:07:33.0515373Z extra/tinysparql                 3.12.0-1                           3.92 MiB       1.06 MiB
+2026-11-10T04:07:33.0515748Z extra/tslib                      1.24-1                             0.47 MiB       0.10 MiB
+2026-11-10T04:07:33.0515989Z extra/twolame                    0.4.0-4                            0.24 MiB       0.08 MiB
+2026-11-10T04:07:33.0516237Z extra/v4l-utils                  1.32.0-2                          11.31 MiB       1.99 MiB
+2026-11-10T04:07:33.0516489Z extra/vapoursynth                81-1                              11.91 MiB       3.25 MiB
+2026-11-10T04:07:33.0516738Z extra/vid.stab                   1.1.2-1                            0.52 MiB       0.09 MiB
+2026-11-10T04:07:33.0516979Z extra/vmaf                       3.2.1-1                            7.11 MiB       0.48 MiB
+2026-11-10T04:07:33.0517234Z extra/vulkan-icd-loader          1.4.363.0-1                        0.67 MiB       0.18 MiB
+2026-11-10T04:07:33.0517621Z extra/wavpack                    5.9.0-1                            0.90 MiB       0.51 MiB
+2026-11-10T04:07:33.0517869Z extra/wayland                    1.26.0-1                           0.86 MiB       0.15 MiB
+2026-11-10T04:07:33.0518143Z extra/webrtc-audio-processing-1  1.3-6                              1.48 MiB       0.53 MiB
+2026-11-10T04:07:33.0518495Z extra/wildmidi                   0.5.0-1                            0.27 MiB       0.14 MiB
+2026-11-10T04:07:33.0518747Z extra/wireplumber                0.5.18-1                           1.29 MiB       0.30 MiB
+2026-11-10T04:07:33.0519003Z extra/x264                       3:0.165.r3222.b35605a-2            3.79 MiB       0.75 MiB
+2026-11-10T04:07:33.0519245Z extra/x265                       4.3-1                             21.46 MiB       2.11 MiB
+2026-11-10T04:07:33.0519489Z extra/xcb-proto                  1.17.0-4                           1.03 MiB       0.13 MiB
+2026-11-10T04:07:33.0519734Z extra/xcb-util                   0.4.1-2                            0.03 MiB       0.01 MiB
+2026-11-10T04:07:33.0519989Z extra/xcb-util-cursor            0.1.6-1                            0.03 MiB       0.01 MiB
+2026-11-10T04:07:33.0520275Z extra/xcb-util-image             0.4.1-3                            0.05 MiB       0.02 MiB
+2026-11-10T04:07:33.0520540Z extra/xcb-util-keysyms           0.4.1-5                            0.02 MiB       0.01 MiB
+2026-11-10T04:07:33.0520809Z extra/xcb-util-renderutil        0.3.10-2                           0.03 MiB       0.01 MiB
+2026-11-10T04:07:33.0521074Z extra/xcb-util-wm                0.4.2-2                            0.21 MiB       0.03 MiB
+2026-11-10T04:07:33.0521346Z extra/xdg-utils                  1.2.1-2                            0.30 MiB       0.06 MiB
+2026-11-10T04:07:33.0521603Z extra/xkeyboard-config           2.49-1                            10.37 MiB       0.88 MiB
+2026-11-10T04:07:33.0521861Z extra/xorg-xprop                 1.2.8-1                            0.05 MiB       0.03 MiB
+2026-11-10T04:07:33.0522117Z extra/xorgproto                  2026.1-1                           1.47 MiB       0.24 MiB
+2026-11-10T04:07:33.0522368Z extra/xvidcore                   1.3.7-4                            0.66 MiB       0.22 MiB
+2026-11-10T04:07:33.0522608Z extra/xxhash                     0.8.4-1                            0.42 MiB       0.10 MiB
+2026-11-10T04:07:33.0522851Z extra/zbar                       0.23.95-1                          0.78 MiB       0.26 MiB
+2026-11-10T04:07:33.0523086Z extra/zeromq                     4.3.5-3                            3.03 MiB       0.55 MiB
+2026-11-10T04:07:33.0523320Z extra/zimg                       3.0.6-2                            0.70 MiB       0.24 MiB
+2026-11-10T04:07:33.0523550Z extra/zint                       2.16.0-2                           0.94 MiB       0.50 MiB
+2026-11-10T04:07:33.0523783Z extra/zix                        0.8.2-1                            0.13 MiB       0.04 MiB
+2026-11-10T04:07:33.0524013Z extra/zvbi                       0.2.46-1                           1.10 MiB       0.37 MiB
+2026-11-10T04:07:33.0524269Z extra/zxing-cpp                  3.1.1-1                            1.85 MiB       0.83 MiB
+2026-11-10T04:07:33.0524611Z putgd                            26.1110.4465dev.gc615c8bd1c17-1  314.08 MiB               
+2026-11-10T04:07:33.0524764Z 
+2026-11-10T04:07:33.0524830Z Total Download Size:    275.15 MiB
+2026-11-10T04:07:33.0524986Z Total Installed Size:  1503.21 MiB
+2026-11-10T04:07:33.0525080Z 
+2026-11-10T04:07:33.0525175Z :: Proceed with installation? [Y/n] 
+2026-11-10T04:07:33.0525335Z :: Retrieving packages...
+2026-11-10T04:07:36.5340130Z  llvm-libs-23.1.4-1-x86_64 downloading...
+2026-11-10T04:07:36.5340388Z  qt6-declarative-6.12.0-4-x86_64 downloading...
+2026-11-10T04:07:36.5340592Z  qt6-base-6.12.0-3-x86_64 downloading...
+2026-11-10T04:07:36.5340759Z  ffmpeg-2:9.0.2-2-x86_64 downloading...
+2026-11-10T04:07:36.5340918Z  mesa-1:26.2.6-1-x86_64 downloading...
+2026-11-10T04:07:36.5341073Z  chipass-2026.09.0-6-x86_64 downloading...
+2026-11-10T04:07:36.5341230Z  gtk3-1:3.24.52-2-x86_64 downloading...
+2026-11-10T04:07:36.5341390Z  imagemagick-7.1.2.35-1-x86_64 downloading...
+2026-11-10T04:07:36.5341594Z  glycin-2.2.6-1-x86_64 downloading...
+2026-11-10T04:07:36.5341743Z  imath-3.2.3-1-x86_64 downloading...
+2026-11-10T04:07:36.5341894Z  botan-3.13.0-1-x86_64 downloading...
+2026-11-10T04:07:36.5342249Z  iso-codes-4.20.1-1-any downloading...
+2026-11-10T04:07:36.5342402Z  opus-1.6.1-1-x86_64 downloading...
+2026-11-10T04:07:36.5342551Z  vapoursynth-81-1-x86_64 downloading...
+2026-11-10T04:07:36.5342735Z  gst-plugins-bad-libs-1.28.8-1-x86_64 downloading...
+2026-11-10T04:07:36.5342910Z  aom-3.15.3-1-x86_64 downloading...
+2026-11-10T04:07:36.5343065Z  graphicsmagick-1.3.49-3-x86_64 downloading...
+2026-11-10T04:07:36.5343227Z  fftw-3.3.11-1-x86_64 downloading...
+2026-11-10T04:07:36.5343380Z  glslang-1:1.4.363.0-1-x86_64 downloading...
+2026-11-10T04:07:36.5343560Z  gst-plugins-base-libs-1.28.8-1-x86_64 downloading...
+2026-11-10T04:07:36.5343738Z  librsvg-2:2.63.4-1-x86_64 downloading...
+2026-11-10T04:07:36.5343902Z  gst-plugins-good-1.28.8-1-x86_64 downloading...
+2026-11-10T04:07:36.5344078Z  adwaita-fonts-51.0-2-any downloading...
+2026-11-10T04:07:36.5344259Z  adwaita-icon-theme-legacy-46.2-3-any downloading...
+2026-11-10T04:07:36.5344445Z  spirv-tools-1:1.4.363.0-1-x86_64 downloading...
+2026-11-10T04:07:36.5344611Z  gstreamer-1.28.8-1-x86_64 downloading...
+2026-11-10T04:07:36.5344763Z  x265-4.3-1-x86_64 downloading...
+2026-11-10T04:07:36.5344918Z  qt6-translations-6.12.0-1-any downloading...
+2026-11-10T04:07:36.5345082Z  libx11-1.8.14-1-x86_64 downloading...
+2026-11-10T04:07:36.5345230Z  v4l-utils-1.32.0-2-x86_64 downloading...
+2026-11-10T04:07:36.5345383Z  svt-av1-4.2.0-1-x86_64 downloading...
+2026-11-10T04:07:36.5345528Z  libjxl-0.12.0-1-x86_64 downloading...
+2026-11-10T04:07:36.5345686Z  qt6-shadertools-6.12.0-1-x86_64 downloading...
+2026-11-10T04:07:36.5345847Z  nss-3.133-1-x86_64 downloading...
+2026-11-10T04:07:36.5345986Z  sdl3-3.4.18-1-x86_64 downloading...
+2026-11-10T04:07:36.5346129Z  rav1e-0.8.1-3-x86_64 downloading...
+2026-11-10T04:07:36.5346276Z  harfbuzz-15.1.0-1-x86_64 downloading...
+2026-11-10T04:07:36.5346434Z  libpipewire-1:1.6.10-1-x86_64 downloading...
+2026-11-10T04:07:36.5346600Z  abseil-cpp-20260817.0-2-x86_64 downloading...
+2026-11-10T04:07:36.5346777Z  libsamplerate-0.2.2-3-x86_64 downloading...
+2026-11-10T04:07:36.5346934Z  libvpx-1.17.0-1-x86_64 downloading...
+2026-11-10T04:07:36.5347095Z  pipewire-audio-1:1.6.10-1-x86_64 downloading...
+2026-11-10T04:07:36.5347418Z  libfdk-aac-3.0.0-1-x86_64 downloading...
+2026-11-10T04:07:36.5347616Z  openexr-3.5.3-3-x86_64 downloading...
+2026-11-10T04:07:36.5347763Z  highway-1.4.0-1-x86_64 downloading...
+2026-11-10T04:07:36.5347925Z  gst-plugins-bad-1.28.8-1-x86_64 downloading...
+2026-11-10T04:07:36.5348089Z  libmysofa-1.3.5-1-x86_64 downloading...
+2026-11-10T04:07:36.5348247Z  tinysparql-3.12.0-1-x86_64 downloading...
+2026-11-10T04:07:36.5348401Z  pcre-8.45-5-x86_64 downloading...
+2026-11-10T04:07:36.5348544Z  libxcb-1.17.0-1-x86_64 downloading...
+2026-11-10T04:07:36.5348688Z  openal-1.25.2-2-x86_64 downloading...
+2026-11-10T04:07:36.5348958Z  libopenmpt-0.8.10-1-x86_64 downloading...
+2026-11-10T04:07:36.5349111Z  libbluray-1.5.1-1-x86_64 downloading...
+2026-11-10T04:07:36.5349270Z  xkeyboard-config-2.49-1-any downloading...
+2026-11-10T04:07:36.5349435Z  openjpeg2-2.5.4-1-x86_64 downloading...
+2026-11-10T04:07:36.5349611Z  gsettings-desktop-schemas-51.0-1-any downloading...
+2026-11-10T04:07:36.5349790Z  zxing-cpp-3.1.1-1-x86_64 downloading...
+2026-11-10T04:07:36.5349945Z  qt6-wayland-6.12.0-1-x86_64 downloading...
+2026-11-10T04:07:36.5350099Z  slang-2.3.3-4-x86_64 downloading...
+2026-11-10T04:07:36.5350259Z  x264-3:0.165.r3222.b35605a-2-x86_64 downloading...
+2026-11-10T04:07:36.5350445Z  shared-mime-info-2.5.1-2-x86_64 downloading...
+2026-11-10T04:07:36.5350612Z  mjpegtools-2.2.1-4-x86_64 downloading...
+2026-11-10T04:07:36.5350765Z  cairo-1.18.6-1-x86_64 downloading...
+2026-11-10T04:07:36.5350910Z  openh264-2.7.0-1-x86_64 downloading...
+2026-11-10T04:07:36.5351059Z  dav1d-1.5.4-1-x86_64 downloading...
+2026-11-10T04:07:36.5351215Z  libjpeg-turbo-3.2.1-1-x86_64 downloading...
+2026-11-10T04:07:36.5351376Z  at-spi2-core-2.62.1-1-x86_64 downloading...
+2026-11-10T04:07:36.5351719Z  imlib2-1.12.7-3-x86_64 downloading...
+2026-11-10T04:07:36.5351972Z  freetype2-2.15.0-1-x86_64 downloading...
+2026-11-10T04:07:36.5352126Z  taglib-2.3.2-1-x86_64 downloading...
+2026-11-10T04:07:36.5352277Z  qt6-5compat-6.12.0-1-x86_64 downloading...
+2026-11-10T04:07:36.5352435Z  gperftools-2.19.2-1-x86_64 downloading...
+2026-11-10T04:07:36.5352614Z  zeromq-4.3.5-3-x86_64 downloading...
+2026-11-10T04:07:36.5352758Z  srt-1.5.7-2-x86_64 downloading...
+2026-11-10T04:07:36.5352929Z  webrtc-audio-processing-1-1.3-6-x86_64 downloading...
+2026-11-10T04:07:36.5353114Z  libplacebo-7.360.1-7-x86_64 downloading...
+2026-11-10T04:07:36.5353276Z  alsa-lib-1.2.16.1-1-x86_64 downloading...
+2026-11-10T04:07:36.5353426Z  wavpack-5.9.0-1-x86_64 downloading...
+2026-11-10T04:07:36.5353570Z  zint-2.16.0-2-x86_64 downloading...
+2026-11-10T04:07:36.5353719Z  gdk-pixbuf2-2.44.8-1-x86_64 downloading...
+2026-11-10T04:07:36.5353877Z  vmaf-3.2.1-1-x86_64 downloading...
+2026-11-10T04:07:36.5354025Z  speex-1.2.1-3-x86_64 downloading...
+2026-11-10T04:07:36.5354167Z  jack2-1.9.22-2-x86_64 downloading...
+2026-11-10T04:07:36.5354322Z  sdl2-compat-2.32.74-1-x86_64 downloading...
+2026-11-10T04:07:36.5354596Z  mpg123-1.33.7-1-x86_64 downloading...
+2026-11-10T04:07:36.5354746Z  speexdsp-1.2.1-3-x86_64 downloading...
+2026-11-10T04:07:36.5354897Z  pango-1:1.58.2-1-x86_64 downloading...
+2026-11-10T04:07:36.5355047Z  libtheora-1.2.0-1-x86_64 downloading...
+2026-11-10T04:07:36.5355197Z  libtool-2.6.2-5-x86_64 downloading...
+2026-11-10T04:07:36.5355347Z  polkit-128-1-x86_64 downloading...
+2026-11-10T04:07:36.5355492Z  libsoup3-3.8.1-1-x86_64 downloading...
+2026-11-10T04:07:36.5355639Z  avahi-1:0.9rc5-2-x86_64 downloading...
+2026-11-10T04:07:36.5355786Z  spandsp-0.0.6-7-x86_64 downloading...
+2026-11-10T04:07:36.5355946Z  libcaca-0.99.beta20-7-x86_64 downloading...
+2026-11-10T04:07:36.5356129Z  libpulse-17.0+r134+g77d25a1e6-1-x86_64 downloading...
+2026-11-10T04:07:36.5356303Z  libtiff-4.7.2-2-x86_64 downloading...
+2026-11-10T04:07:36.5356456Z  fontconfig-2:2.18.3-2-x86_64 downloading...
+2026-11-10T04:07:37.8669951Z error: failed retrieving file 'wildmidi-0.5.0-1-x86_64.pkg.tar.zst.sig' from fastly.mirror.pkgbuild.com : 
+2026-11-10T04:07:37.8670444Z  gtest-1.18.0-1-x86_64 downloading...
+2026-11-10T04:07:37.8670682Z  lua-5.5.1-1-x86_64 downloading...
+2026-11-10T04:07:37.8670912Z  zvbi-0.2.46-1-x86_64 downloading...
+2026-11-10T04:07:37.8671139Z  lua54-5.4.9-1-x86_64 downloading...
+2026-11-10T04:07:37.8671375Z  adwaita-cursors-51.0-1-any downloading...
+2026-11-10T04:07:37.8671630Z  libdrm-2.4.134-1-x86_64 downloading...
+2026-11-10T04:07:37.8671861Z  libde265-1.1.3-1-x86_64 downloading...
+2026-11-10T04:07:37.8672091Z  orc-0.4.44-1-x86_64 downloading...
+2026-11-10T04:07:37.8672312Z  flac-1.5.0-1-x86_64 downloading...
+2026-11-10T04:07:37.8672540Z  fluidsynth-2.6.2-1-x86_64 downloading...
+2026-11-10T04:07:37.8673032Z  libwebp-1.6.0-2-x86_64 downloading...
+2026-11-10T04:07:37.8673264Z  libglvnd-1.7.0-3-x86_64 downloading...
+2026-11-10T04:07:37.8673498Z  libnice-0.1.24-1-x86_64 downloading...
+2026-11-10T04:07:37.8673722Z  l-smash-2.14.5-4-x86_64 downloading...
+2026-11-10T04:07:37.8673874Z  libsndfile-1.2.2-4-x86_64 downloading...
+2026-11-10T04:07:37.8674022Z  lame-4.0-1-x86_64 downloading...
+2026-11-10T04:07:37.8674180Z  libwireplumber-0.5.18-1-x86_64 downloading...
+2026-11-10T04:07:37.8674348Z  wireplumber-0.5.18-1-x86_64 downloading...
+2026-11-10T04:07:37.8674503Z  qt6-svg-6.12.0-1-x86_64 downloading...
+2026-11-10T04:07:37.8674647Z  libepoxy-1.5.10-3-x86_64 downloading...
+2026-11-10T04:07:37.8674802Z  rubberband-4.0.0-2-x86_64 downloading...
+2026-11-10T04:07:37.8674950Z  raptor-2.0.16-9-x86_64 downloading...
+2026-11-10T04:07:37.8675095Z  pixman-0.46.4-1-x86_64 downloading...
+2026-11-10T04:07:37.8675238Z  libcups-2:2.4.20-1-x86_64 downloading...
+2026-11-10T04:07:37.8675517Z error: failed retrieving file 'libunwind-1.8.3-1-x86_64.pkg.tar.zst' from fastly.mirror.pkgbuild.com : 
+2026-11-10T04:07:37.8675778Z  libdovi-3.4.0-1-x86_64 downloading...
+2026-11-10T04:07:37.8675931Z  libxkbcommon-1.13.2-1-x86_64 downloading...
+2026-11-10T04:07:37.8676196Z  pipewire-1:1.6.10-1-x86_64 downloading...
+2026-11-10T04:07:37.8676343Z  libthai-0.1.30-1-x86_64 downloading...
+2026-11-10T04:07:37.8676490Z  liburing-2.15-1-x86_64 downloading...
+2026-11-10T04:07:37.8676632Z  zbar-0.23.95-1-x86_64 downloading...
+2026-11-10T04:07:37.8676773Z  libcdio-2.4.0-1-x86_64 downloading...
+2026-11-10T04:07:37.8676918Z  libssh-0.12.2-1-x86_64 downloading...
+2026-11-10T04:07:37.8677059Z  libpng-1.6.59-1-x86_64 downloading...
+2026-11-10T04:07:37.8677353Z  openjph-0.33.0-1-x86_64 downloading...
+2026-11-10T04:07:37.8677600Z  xorgproto-2026.1-1-any downloading...
+2026-11-10T04:07:37.8677831Z  zimg-3.0.6-2-x86_64 downloading...
+2026-11-10T04:07:37.8678062Z  neon-0.37.1-1-x86_64 downloading...
+2026-11-10T04:07:37.8678285Z  faad2-2.11.4-1-x86_64 downloading...
+2026-11-10T04:07:37.8678515Z  libvpl-2.17.0-1-x86_64 downloading...
+2026-11-10T04:07:37.8678745Z  libdc1394-2.2.7-2-x86_64 downloading...
+2026-11-10T04:07:37.8678975Z  lcms2-2.20-1-x86_64 downloading...
+2026-11-10T04:07:37.8679202Z  libinput-1.32.0-1-x86_64 downloading...
+2026-11-10T04:07:37.8679437Z  xvidcore-1.3.7-4-x86_64 downloading...
+2026-11-10T04:07:37.8679694Z  gst-plugins-base-1.28.8-1-x86_64 downloading...
+2026-11-10T04:07:37.8679957Z  libsodium-1.0.22-1-x86_64 downloading...
+2026-11-10T04:07:37.8680193Z  jasper-4.2.9-1-x86_64 downloading...
+2026-11-10T04:07:37.8680419Z  libva-2.24.1-1-x86_64 downloading...
+2026-11-10T04:07:37.8680573Z  libxslt-1.1.45-2-x86_64 downloading...
+2026-11-10T04:07:37.8680718Z  nspr-4.40-1-x86_64 downloading...
+2026-11-10T04:07:37.8680873Z  adwaita-icon-theme-51.0-1-any downloading...
+2026-11-10T04:07:37.8681034Z  libogg-1.3.6-1-x86_64 downloading...
+2026-11-10T04:07:37.8681172Z  libmng-2.0.3-4-x86_64 downloading...
+2026-11-10T04:07:37.8681336Z  vulkan-icd-loader-1.4.363.0-1-x86_64 downloading...
+2026-11-10T04:07:37.8681509Z  libwacom-2.20.0-1-x86_64 downloading...
+2026-11-10T04:07:37.8681653Z  libcolord-1.4.8-2-x86_64 downloading...
+2026-11-10T04:07:37.8681796Z  freeglut-3.8.0-1-x86_64 downloading...
+2026-11-10T04:07:37.8681961Z  gst-plugins-ugly-1.28.8-1-x86_64 downloading...
+2026-11-10T04:07:37.8682125Z  libvorbis-1.3.7-4-x86_64 downloading...
+2026-11-10T04:07:37.8682396Z  libpgm-5.3.128-4-x86_64 downloading...
+2026-11-10T04:07:37.8682648Z  duktape-2.7.0-7-x86_64 downloading...
+2026-11-10T04:07:37.8683025Z  json-glib-1.10.8-1-x86_64 downloading...
+2026-11-10T04:07:37.8683342Z  libmodplug-0.8.9.0-7-x86_64 downloading...
+2026-11-10T04:07:37.8683562Z  shaderc-2026.4-1-x86_64 downloading...
+2026-11-10T04:07:37.8683828Z  libbsd-0.12.2-2-x86_64 downloading...
+2026-11-10T04:07:37.8684046Z  glu-9.0.3-3-x86_64 downloading...
+2026-11-10T04:07:37.8684322Z  lv2-1.18.10-2-x86_64 downloading...
+2026-11-10T04:07:37.8684583Z  glib-networking-1:2.90.1-1-x86_64 downloading...
+2026-11-10T04:07:37.8684907Z  wayland-1.26.0-1-x86_64 downloading...
+2026-11-10T04:07:37.8685167Z  libgme-0.6.5-1-x86_64 downloading...
+2026-11-10T04:07:37.8685414Z  libltc-1.3.2-2-x86_64 downloading...
+2026-11-10T04:07:37.8685693Z  wildmidi-0.5.0-1-x86_64 downloading...
+2026-11-10T04:07:37.8685927Z  opencore-amr-0.1.6-2-x86_64 downloading...
+2026-11-10T04:07:37.8686146Z  libstemmer-3.2.0-1-x86_64 downloading...
+2026-11-10T04:07:37.8696345Z  libdvdread-7.1.1-1-x86_64 downloading...
+2026-11-10T04:07:37.8696618Z  gpm-1.20.7.r38.ge82d1a6-7-x86_64 downloading...
+2026-11-10T04:07:37.8696910Z  aalib-1.4rc5-19-x86_64 downloading...
+2026-11-10T04:07:37.8697148Z  lm_sensors-1:3.6.2-1-x86_64 downloading...
+2026-11-10T04:07:37.8697516Z  libunwind-1.8.3-1-x86_64 downloading...
+2026-11-10T04:07:37.8697967Z error: failed retrieving file 'gpm-1.20.7.r38.ge82d1a6-7-x86_64.pkg.tar.zst.sig' from fastly.mirror.pkgbuild.com : 
+2026-11-10T04:07:37.8698586Z warning: too many errors from fastly.mirror.pkgbuild.com, skipping for the remainder of this transaction
+2026-11-10T04:07:37.8699186Z error: failed retrieving file 'aalib-1.4rc5-19-x86_64.pkg.tar.zst.sig' from fastly.mirror.pkgbuild.com : 
+2026-11-10T04:07:37.8699446Z warning: failed to retrieve some files
+2026-11-10T04:07:37.8699761Z error: failed to commit transaction (failed to retrieve some files)
+2026-11-10T04:07:37.8915507Z Errors occurred, no packages were upgraded.
+2026-11-10T04:07:37.8990426Z ##[error]Process completed with exit code 1.
+2026-11-10T04:07:37.9039073Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+2026-11-10T04:07:37.9039411Z with:
+2026-11-10T04:07:37.9039564Z   name: arch-install-evidence
+2026-11-10T04:07:37.9039708Z   path: build/arch-smoke/
+2026-11-10T04:07:37.9039839Z   if-no-files-found: warn
+2026-11-10T04:07:37.9039970Z   compression-level: 6
+2026-11-10T04:07:37.9040090Z   overwrite: false
+2026-11-10T04:07:37.9040212Z   include-hidden-files: false
+2026-11-10T04:07:37.9040346Z   archive: true
+2026-11-10T04:07:37.9040458Z env:
+2026-11-10T04:07:37.9040574Z   RELEASE_TAG: 
+2026-11-10T04:07:37.9040774Z   CCACHE_DIR: /home/runner/work/put.gd-desktop/put.gd-desktop/build/ccache-package
+2026-11-10T04:07:37.9041036Z   CCACHE_BASEDIR: /home/runner/work/put.gd-desktop/put.gd-desktop
+2026-11-10T04:07:37.9041220Z   CCACHE_MAXSIZE: 256M
+2026-11-10T04:07:37.9044970Z   PUTGD_UBUNTU_MIRRORS: apt_root=${PUTGD_APT_ROOT:-/etc/apt}
+sources=$(grep -lE 'http://archive\.ubuntu\.com/ubuntu' "$apt_root"/sources.list "$apt_root"/sources.list.d/* 2>/dev/null || true)
+if [ -n "$sources" ]; then
+  probe_dir=$(mktemp -d)
+  # Four sequential probes: <= 12.8 s, <= 8 MiB of response bodies.
+  # 1 MiB/s fetches 483 MiB in ~8 minutes, leaving room in the 20-minute step.
+  floor=1048576
+  for endpoint in ${PUTGD_UBUNTU_MIRROR_HOSTS:-us.archive.ubuntu.com mirrors.edge.kernel.org azure.archive.ubuntu.com archive.ubuntu.com}; do
+    host=${endpoint%%:*}; port=${endpoint#*:}; [ "$port" != "$endpoint" ] || port=80
+    start=$(date +%s%N)
+    # Sample a base noble package: cached indexes can be fast while pool
+  # downloads crawl. This version remains referenced by noble/main.
+  # HTTP/1.0 avoids chunked encoding. Range bounds cooperative servers;
+    # head also bounds servers that ignore Range. A partial body at timeout
+    # is measured too, so a live trickle cannot pass as a fast mirror.
+    timeout --kill-after=0.2s 3s bash -c '
+      exec 3<>/dev/tcp/$1/$2 || exit 1
+      printf "GET /ubuntu/pool/main/g/glibc/libc6_2.39-0ubuntu8_amd64.deb HTTP/1.0\r\nHost: %s\r\nRange: bytes=0-2097151\r\n\r\n" "$1" >&3
+      IFS= read -r status <&3
+      case "$status" in *" 200 "*|*" 206 "*) ;; *) exit 1;; esac
+      while IFS= read -r line <&3; do [ "$line" != $'"'"'\r'"'"' ] || break; done
+      head -c 2097152 <&3 > "$3"
+    ' _ "$host" "$port" "$probe_dir/body" 2>/dev/null || true
+    elapsed=$(( ($(date +%s%N) - start) / 1000000 ))
+    [ "$elapsed" -gt 0 ] || elapsed=1
+    bytes=0
+    [ ! -f "$probe_dir/body" ] || bytes=$(wc -c < "$probe_dir/body")
+    speed=$(( bytes * 1000 / elapsed ))
+    tier=2; label=unavailable
+    if [ "$speed" -ge "$floor" ]; then tier=0; label=fast
+    elif [ "$speed" -gt 0 ]; then tier=1; label=below-floor; fi
+    echo "Ubuntu mirror throughput: $endpoint $speed B/s ($bytes bytes in $elapsed ms; $label; floor=$floor B/s)"
+    printf '%d %d %s\n' "$tier" "$speed" "$endpoint" >> "$probe_dir/rank"
+    rm -f "$probe_dir/body"
+  done
+  priority=0
+  : > "$apt_root/putgd-mirrors.txt"
+  while read -r tier speed endpoint; do
+    priority=$((priority + 1))
+    printf 'http://%s/ubuntu/\tpriority:%d\n' "$endpoint" "$priority" >> "$apt_root/putgd-mirrors.txt"
+  done < <(LC_ALL=C sort -s -k1,1n -k2,2nr "$probe_dir/rank")
+  rm -f "$probe_dir/rank"
+  rmdir "$probe_dir"
+  sed -i -E "s#http://archive\.ubuntu\.com/ubuntu/?#mirror+file:$apt_root/putgd-mirrors.txt#" $sources
+fi
+
+2026-11-10T04:07:37.9049011Z ##[endgroup]
+2026-11-10T04:07:37.9051163Z ##[command]/usr/bin/docker exec  d6d92d306ee3c1743b06ae68cf6c08f9c69dae50b32350ec84e066dac54f568d sh -c "cat /etc/*release | grep ^ID"
+2026-11-10T04:07:38.0635692Z ##[warning]No files were found with the provided path: build/arch-smoke/. No artifacts will be uploaded.
+2026-11-10T04:07:38.0783240Z Post job cleanup.
+2026-11-10T04:07:38.0787604Z ##[command]/usr/bin/docker exec  d6d92d306ee3c1743b06ae68cf6c08f9c69dae50b32350ec84e066dac54f568d sh -c "cat /etc/*release | grep ^ID"
+2026-11-10T04:07:38.2000287Z [command]/usr/sbin/git version
+2026-11-10T04:07:38.2038374Z git version 2.56.0
+2026-11-10T04:07:38.2062275Z Temporarily overriding HOME='/__w/_temp/27841d9f-525d-4910-982f-1f2c74fa4f5f' before making global git config changes
+2026-11-10T04:07:38.2062959Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-10T04:07:38.2064643Z [command]/usr/sbin/git config --global --add safe.directory /__w/put.gd-desktop/put.gd-desktop
+2026-11-10T04:07:38.2099322Z Removing SSH command configuration
+2026-11-10T04:07:38.2102670Z [command]/usr/sbin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-10T04:07:38.2140338Z [command]/usr/sbin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-10T04:07:38.2494049Z Removing HTTP extra header
+2026-11-10T04:07:38.2494330Z [command]/usr/sbin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-10T04:07:38.2528616Z [command]/usr/sbin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-10T04:07:38.2881706Z Removing includeIf entries pointing to credentials config files
+2026-11-10T04:07:38.2890751Z [command]/usr/sbin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-10T04:07:38.2930802Z includeif.gitdir:/__w/put.gd-desktop/put.gd-desktop/.git.path
+2026-11-10T04:07:38.2931154Z includeif.gitdir:/__w/put.gd-desktop/put.gd-desktop/.git/worktrees/*.path
+2026-11-10T04:07:38.2931443Z includeif.gitdir:/github/workspace/.git.path
+2026-11-10T04:07:38.2931672Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-10T04:07:38.2936657Z [command]/usr/sbin/git config --local --get-all includeif.gitdir:/__w/put.gd-desktop/put.gd-desktop/.git.path
+2026-11-10T04:07:38.2961925Z /__w/_temp/git-credentials-266c3b85-c713-4cdb-b178-f25c66666465.config
+2026-11-10T04:07:38.2972433Z [command]/usr/sbin/git config --local --unset includeif.gitdir:/__w/put.gd-desktop/put.gd-desktop/.git.path \/__w\/_temp\/git\-credentials\-266c3b85\-c713\-4cdb\-b178\-f25c66666465\.config
+2026-11-10T04:07:38.3065675Z [command]/usr/sbin/git config --local --get-all includeif.gitdir:/__w/put.gd-desktop/put.gd-desktop/.git/worktrees/*.path
+2026-11-10T04:07:38.3093889Z /__w/_temp/git-credentials-266c3b85-c713-4cdb-b178-f25c66666465.config
+2026-11-10T04:07:38.3105405Z [command]/usr/sbin/git config --local --unset includeif.gitdir:/__w/put.gd-desktop/put.gd-desktop/.git/worktrees/*.path \/__w\/_temp\/git\-credentials\-266c3b85\-c713\-4cdb\-b178\-f25c66666465\.config
+2026-11-10T04:07:38.3143525Z [command]/usr/sbin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-10T04:07:38.3169571Z /github/runner_temp/git-credentials-266c3b85-c713-4cdb-b178-f25c66666465.config
+2026-11-10T04:07:38.3174558Z [command]/usr/sbin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-266c3b85\-c713\-4cdb\-b178\-f25c66666465\.config
+2026-11-10T04:07:38.3209274Z [command]/usr/sbin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-10T04:07:38.3234939Z /github/runner_temp/git-credentials-266c3b85-c713-4cdb-b178-f25c66666465.config
+2026-11-10T04:07:38.3240058Z [command]/usr/sbin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-266c3b85\-c713\-4cdb\-b178\-f25c66666465\.config
+2026-11-10T04:07:38.3275075Z [command]/usr/sbin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-10T04:07:38.3594639Z Removing credentials config '/__w/_temp/git-credentials-266c3b85-c713-4cdb-b178-f25c66666465.config'
+2026-11-10T04:07:38.3716966Z Stop and remove container: e6340397460744f28f6ede59705b79f3_archlinuxbasesha256823e937464d1528b306a8e1137ef406b9c56e5fee43c7a19e93684d554af74e1_c081ed
+2026-11-10T04:07:38.3720343Z ##[command]/usr/bin/docker rm --force d6d92d306ee3c1743b06ae68cf6c08f9c69dae50b32350ec84e066dac54f568d
+2026-11-10T04:07:42.1523444Z d6d92d306ee3c1743b06ae68cf6c08f9c69dae50b32350ec84e066dac54f568d
+2026-11-10T04:07:42.1552235Z Remove container network: github_network_72c0506e83b54506bdae62cb638b6624
+2026-11-10T04:07:42.1555441Z ##[command]/usr/bin/docker network rm github_network_72c0506e83b54506bdae62cb638b6624
+2026-11-10T04:07:42.2374883Z github_network_72c0506e83b54506bdae62cb638b6624
+2026-11-10T04:07:42.2430914Z Cleaning up orphan processes
