@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/tmp/sp1398/scroll_run.py", line 164, in <module>
+    if __name__=='__main__':sys.exit(main())
+                                     ^^^^^^
+  File "/tmp/sp1398/scroll_run.py", line 97, in main
+    a=p.parse_args();out=Path(a.out).resolve();out.mkdir(mode=0o700,parents=True,exist_ok=False)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: '/tmp/sp1398/firefox'

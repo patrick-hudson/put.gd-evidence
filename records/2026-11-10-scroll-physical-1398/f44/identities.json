@@ -1,0 +1,27 @@
+{
+  "uname -a": {
+    "stdout": "Linux fedora 7.2.11-200.fc44.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Oct 15 15:58:58 UTC 2026 x86_64 GNU/Linux\n",
+    "stderr": "",
+    "exit": 0
+  },
+  "loginctl list-sessions": {
+    "stdout": "SESSION  UID USER    SEAT  LEADER  CLASS   TTY  IDLE SINCE\n  11370 1000 patrick seat0 3460457 user    tty2 no   -\n  11374 1000 patrick -     3461789 user    -    no   -\n  11394 1000 patrick -     3464704 user    -    no   -\n  11484 1000 patrick -     3471696 user    -    no   -\n      2 1000 patrick -     1051    manager -    no   -\n   4347 1000 patrick -     679488  user    -    no   -\n   4348 1000 patrick -     679489  user    -    no   -\n   4349 1000 patrick -     679492  user    -    no   -\n   4402 1000 patrick -     693177  user    -    no   -\n\n9 sessions listed.\n",
+    "stderr": "",
+    "exit": 0
+  },
+  "putgd-cli --version-json": {
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"version\": \"26.1110.4635-dev+ge3c1bd6b840a\",\n  \"baseVersion\": \"26.1110.4635\",\n  \"packageVersion\": \"26.1110.4635~dev+ge3c1bd6b840a\",\n  \"gitCommit\": \"e3c1bd6b840a0aae351918bd4c6ef481bfa82d88\",\n  \"gitTree\": \"983ff17ca3ee6a06259ad617629c00cdc8a8c3c8\",\n  \"commitCount\": 4635,\n  \"dirty\": false,\n  \"sourceProvenance\": \"git\"\n}\n\n",
+    "stderr": "",
+    "exit": 0
+  },
+  "dpkg-query -W cinnamon muffin kwin-wayland plasma-workspace firefox putgd": {
+    "stdout": "",
+    "stderr": "dpkg-query: no packages found matching cinnamon\ndpkg-query: no packages found matching muffin\ndpkg-query: no packages found matching kwin-wayland\ndpkg-query: no packages found matching plasma-workspace\ndpkg-query: no packages found matching firefox\ndpkg-query: no packages found matching putgd\n",
+    "exit": 1
+  },
+  "rpm -q gnome-shell mutter firefox putgd": {
+    "stdout": "gnome-shell-50.6-1.fc44.x86_64\nmutter-50.6-1.fc44.x86_64\nfirefox-158.0.1-2.fc44.x86_64\nputgd-26.1110.4635~dev+ge3c1bd6b840a-1.fc44.x86_64\n",
+    "stderr": "",
+    "exit": 0
+  }
+}

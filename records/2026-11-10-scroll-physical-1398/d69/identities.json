@@ -1,0 +1,27 @@
+{
+  "uname -a": {
+    "stdout": "Linux debian 6.12.107+deb13-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.12.107-1 (2026-08-29) x86_64 GNU/Linux\n",
+    "stderr": "",
+    "exit": 0
+  },
+  "loginctl list-sessions": {
+    "stdout": "SESSION  UID USER    SEAT  LEADER  CLASS   TTY  IDLE SINCE\n  13951 1000 patrick -     2008815 user    -    no   -\n      2 1000 patrick -     937     manager -    no   -\n  26256 1000 patrick seat0 3127355 user    tty1 no   -\n  26346 1000 patrick seat0 3130797 user    tty1 no   -\n  40640 1000 patrick -     2563627 user    -    no   -\n  40641 1000 patrick -     2563628 user    -    no   -\n  40642 1000 patrick -     2563631 user    -    no   -\n  48915 1000 patrick -     2649142 user    -    no   -\n  48931 1000 patrick -     2649402 user    -    no   -\n  48941 1000 patrick -     2649569 user    -    no   -\n  48943 1000 patrick -     2649600 user    -    no   -\n  48948 1000 patrick -     2649758 user    -    no   -\n  48956 1000 patrick -     2650131 user    -    no   -\n  48957 1000 patrick -     2650133 user    -    no   -\n  49027 1000 patrick -     2652741 user    -    no   -\n  49219 1000 patrick -     2657064 user    -    no   -\n  49221 1000 patrick -     2657126 user    -    no   -\n  49223 1000 patrick -     2657364 user    -    no   -\n\n18 sessions listed.\n",
+    "stderr": "",
+    "exit": 0
+  },
+  "putgd-cli --version-json": {
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"version\": \"26.1110.4635-dev+ge3c1bd6b840a\",\n  \"baseVersion\": \"26.1110.4635\",\n  \"packageVersion\": \"26.1110.4635~dev+ge3c1bd6b840a\",\n  \"gitCommit\": \"e3c1bd6b840a0aae351918bd4c6ef481bfa82d88\",\n  \"gitTree\": \"983ff17ca3ee6a06259ad617629c00cdc8a8c3c8\",\n  \"commitCount\": 4635,\n  \"dirty\": false,\n  \"sourceProvenance\": \"git\"\n}\n\n",
+    "stderr": "",
+    "exit": 0
+  },
+  "dpkg-query -W cinnamon muffin kwin-wayland plasma-workspace firefox putgd": {
+    "stdout": "firefox\t\nkwin-wayland\t4:6.3.6-1\nplasma-workspace\t4:6.3.6-2\nputgd\t26.1110.4635~dev+ge3c1bd6b840a\n",
+    "stderr": "dpkg-query: no packages found matching cinnamon\ndpkg-query: no packages found matching muffin\n",
+    "exit": 1
+  },
+  "rpm -q gnome-shell mutter firefox putgd": {
+    "stdout": "package gnome-shell is not installed\npackage mutter is not installed\npackage firefox is not installed\npackage putgd is not installed\n",
+    "stderr": "error: Unable to open sqlite database /var/lib/rpm/rpmdb.sqlite: unable to open database file\nerror: cannot open Packages index using sqlite - Operation not permitted (1)\nerror: cannot open Packages database in /var/lib/rpm\nerror: Unable to open sqlite database /var/lib/rpm/rpmdb.sqlite: unable to open database file\nerror: cannot open Packages index using sqlite - Operation not permitted (1)\nerror: cannot open Packages database in /var/lib/rpm\nerror: Unable to open sqlite database /var/lib/rpm/rpmdb.sqlite: unable to open database file\nerror: cannot open Packages index using sqlite - Operation not permitted (1)\nerror: cannot open Packages database in /var/lib/rpm\nerror: Unable to open sqlite database /var/lib/rpm/rpmdb.sqlite: unable to open database file\nerror: cannot open Packages index using sqlite - Operation not permitted (1)\nerror: cannot open Packages database in /var/lib/rpm\n",
+    "exit": 4
+  }
+}

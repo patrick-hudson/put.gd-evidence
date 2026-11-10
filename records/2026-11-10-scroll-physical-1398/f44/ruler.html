@@ -1,0 +1,8 @@
+<!doctype html><meta charset="utf-8"><title>put.gd acceptance synthetic ruler</title><style>body{margin:0;background:#666}#view{position:absolute;left:100px;top:100px;width:960px;height:600px;overflow-y:scroll;scrollbar-width:none;background:#fafafa}canvas{display:block}header,footer{position:sticky;height:40px;z-index:1}header{top:0;background:#205080}footer{bottom:0;background:#806020}</style><div id="view"></div><script>
+const q=new URLSearchParams(location.search),rows=+(q.get('rows')||60),sticky=q.has('sticky'),view=document.querySelector('#view');
+function pattern(r,l){if(l<2)return 65535;if(l<30)return r;let x=(Math.imul(r,2654435761)+l*40503+0x9e3779b9)>>>0;x^=x>>>15;x=Math.imul(x,0x2c1b3c6d);x^=x>>>12;x=Math.imul(x,0x297a2d39);x^=x>>>15;let b=x&65535;return b===0||b===65535?0x5a5a^l:b}
+if(sticky)view.append(document.createElement('header'));
+for(let r=0;r<rows;r++){let c=document.createElement('canvas');c.width=960;c.height=40;let ctx=c.getContext('2d');ctx.fillStyle='#fafafa';ctx.fillRect(0,0,960,40);ctx.fillStyle='#101010';ctx.font='13px monospace';ctx.fillText(r,4,20);for(let l=0;l<40;l++){let b=pattern(r,l);for(let i=0;i<16;i++)if(b&(0x8000>>i))ctx.fillRect(64+i*55,l,55,1)}view.append(c)}
+if(sticky)view.append(document.createElement('footer'));
+view.scrollTop=+(q.get('start')||0);document.title+=' rows='+rows+' dpr='+devicePixelRatio;
+</script>

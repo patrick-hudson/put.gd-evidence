@@ -1,0 +1,8 @@
+socket bytes 38
+Traceback (most recent call last):
+  File "/tmp/sp1398/setup.py", line 16, in <module>
+    s=rpc('settings.get');(a/'original-private-settings.json').write_text(json.dumps(s))
+  File "/tmp/sp1398/setup.py", line 12, in rpc
+    r=subprocess.run(['putgd-cli','--socket',str(a/'runtime/putgd/session.sock'),m,json.dumps(p)],env=env,text=True,capture_output=True);o=json.loads(r.stdout);assert o['ok'],o;return o['result']
+                                                                                                                                                                       ~^^^^^^
+AssertionError: {'error': {'code': 'session_unavailable', 'details': {}, 'message': 'Start the resident put.gd app in this user session'}, 'ok': False, 'requestId': 'db62929f-0382-4826-87f2-1ff2663de880', 'result': {}, 'schemaVersion': 1}

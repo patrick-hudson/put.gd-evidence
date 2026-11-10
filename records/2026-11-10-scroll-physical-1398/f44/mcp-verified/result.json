@@ -1,0 +1,47 @@
+{
+  "host": "fedora",
+  "prHead": "fe8cd713a22f2c68207de76e43da5f0e56d95243",
+  "mergeCommit": "e3c1bd6b840a0aae351918bd4c6ef481bfa82d88",
+  "run": 42897860301,
+  "package": "/tmp/sp1398/putgd-26.1110.4635~dev+ge3c1bd6b840a-1.fc44.x86_64.rpm",
+  "packageSha256": "4ca190067df69d39ab02dbe05b65756367b952fa63a1b8a945cfebaa7a92e855",
+  "arguments": {
+    "socket": null,
+    "cli": "putgd-cli",
+    "out": "/tmp/sp1398/mcp-verified",
+    "package": "/tmp/sp1398/putgd-26.1110.4635~dev+ge3c1bd6b840a-1.fc44.x86_64.rpm",
+    "rect": null,
+    "rows": 60,
+    "first_pixel": 0,
+    "height": null,
+    "header": 0,
+    "footer": 0,
+    "scale": 1,
+    "code_width": null,
+    "scrollbar": 0,
+    "format": "fixture",
+    "max_height": null,
+    "expect_end": "end_of_content",
+    "control": null,
+    "after": 3,
+    "open": null,
+    "page": null,
+    "png_root": [],
+    "verify_png": "/tmp/sp1398/mcp-capture.png",
+    "timeout": 240
+  },
+  "verification": {
+    "pass": false,
+    "size": [
+      960,
+      2400
+    ],
+    "expectedHeight": 2400,
+    "errors": [
+      "pixel (627,0) row 0 line 0 got (84, 84, 90) expected 16",
+      "12715 unexpected pixels in barcode interiors (cursor/overlay or wrong content)"
+    ],
+    "unexpectedPixels": 12715,
+    "coverage": "every scanline; full barcode cell interiors excluding labels, cell edges and scrollbar; visual check still required outside barcode"
+  }
+}
