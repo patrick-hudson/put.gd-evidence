@@ -1,0 +1,299 @@
+{
+ "host": "fedora",
+ "kernel": "7.2.11-200.fc44.x86_64",
+ "desktop": "gnome-shell",
+ "session": "wayland",
+ "target": "region",
+ "rect": [
+  0,
+  0,
+  960,
+  540
+ ],
+ "formats": [
+  "mp4",
+  "webm"
+ ],
+ "video": "marker",
+ "timing": {
+  "lead": 6.0,
+  "pauseAt": 12.0,
+  "pauseFor": 0.0,
+  "after": 2.0
+ },
+ "builds": {
+  "pr": {
+   "kind": "installed",
+   "dir": "/usr/bin",
+   "version": "putgd-record 26.1110.4538-dev+g1d19e1e8ac50"
+  }
+ },
+ "analyzer": "/",
+ "rounds": [
+  {
+   "build": "pr",
+   "round": 1,
+   "format": "mp4",
+   "started": "2026-11-10T07:45:11Z",
+   "acquisition": "mutter-screencast",
+   "liveEncoders": [
+    "openh264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false,
+    "microphoneReason": "default_is_monitor"
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": {
+     "microphone": false,
+     "system": true
+    },
+    "audioEncoder": "avenc_aac",
+    "recordingMicrophone": {
+     "available": false,
+     "effective": false,
+     "requested": false,
+     "unavailable": "The system's default input is the monitor of an output, not a microphone. Plug one in, or choose a device in Settings."
+    },
+    "microphoneLost": null
+   },
+   "outputGoneAtS": 6.205,
+   "outputGone": {
+    "fallback": true,
+    "defaultSink": "putgd_lab_3208264_fallback",
+    "defaultSource": "putgd_lab_s2_gnome_system.monitor",
+    "sinks": [
+     "raop_sink.localhost.local.192.168.68.52.37981",
+     "alsa_output.pci-0000_00_1f.3.analog-stereo",
+     "raop_sink.ecobee-vulcan.local.192.168.68.53.7000",
+     "raop_sink.Family-Room.local.192.168.68.59.7000",
+     "putgd_lab_s2_gnome_system",
+     "putgd_lab_3208264_fallback"
+    ]
+   },
+   "afterOutputGone": {
+    "state": "recording",
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "durationUs": 8666666,
+    "systemAudioLost": null,
+    "recordedFrom": [
+     "putgd_lab_3208264_fallback.monitor"
+    ]
+   },
+   "recordedS": 14.258,
+   "microphoneLostAtStop": null,
+   "load": 1.30712890625,
+   "durationUs": 14933333,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "dfa560e4-f2d9-42e9-be95-8125bd569b42.mkv",
+     "bytes": 233592,
+     "motion": 37.238,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.15202702702702703,
+       "blocks": 296,
+       "maxAmplitude": 0.3453271329129243,
+       "medianAmplitude": 7.992763443172723e-07
+      },
+      "440": {
+       "activeFraction": 0.9966216216216216,
+       "blocks": 296,
+       "maxAmplitude": 0.0186947021076735,
+       "medianAmplitude": 0.016926167466541752
+      }
+     },
+     "pairs": 15,
+     "medianMs": -5.3,
+     "spreadMs": 134.7,
+     "offsetsMs": [
+      -4.7,
+      28.7,
+      -5,
+      29.3,
+      -5.3,
+      -5,
+      -5.3,
+      -5,
+      -37.7,
+      -38.3,
+      -71,
+      -70.7,
+      -105.3,
+      -71,
+      -71.3
+     ],
+     "pairTimesS": [
+      0.167,
+      1.133,
+      2.167,
+      3.133,
+      4.167,
+      5.167,
+      6.167,
+      7.167,
+      8.2,
+      9.2,
+      10.233,
+      11.233,
+      12.267,
+      13.233,
+      14.233
+     ]
+    },
+    "export": {
+     "file": "pr-mp4-1.mp4",
+     "bytes": 236175,
+     "motion": 37.23,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.15151515151515152,
+       "blocks": 297,
+       "maxAmplitude": 0.34528670608037915,
+       "medianAmplitude": 1.1373310619445686e-06
+      },
+      "440": {
+       "activeFraction": 0.9966329966329966,
+       "blocks": 297,
+       "maxAmplitude": 0.021254982252459153,
+       "medianAmplitude": 0.016913948824847286
+      }
+     },
+     "pairs": 15,
+     "medianMs": -4.7,
+     "spreadMs": 133.3,
+     "offsetsMs": [
+      -4.7,
+      28.7,
+      -4.7,
+      28.7,
+      -4.7,
+      -4.7,
+      -4.7,
+      -4.7,
+      -38,
+      -38,
+      -71.3,
+      -71.3,
+      -104.7,
+      -71.3,
+      -71.3
+     ],
+     "pairTimesS": [
+      0.167,
+      1.133,
+      2.167,
+      3.133,
+      4.167,
+      5.167,
+      6.167,
+      7.167,
+      8.2,
+      9.2,
+      10.233,
+      11.233,
+      12.267,
+      13.233,
+      14.233
+     ]
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 1.0
+    },
+    "fraction": 0.5556,
+    "kept": "/home/patrick/work/s1364s2/runs/output/frames/pr-mp4-1.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     960,
+     540
+    ],
+    "sha256": "7d5798c7dff1b6526e4b5977e61ca3692eb62671a8fa94b525880faf53b153c4",
+    "size": [
+     960,
+     540
+    ]
+   }
+  },
+  {
+   "build": "pr",
+   "round": 1,
+   "format": "webm",
+   "error": "virtual_mic unplug-output: no private output in this state; create it with --system-sink"
+  }
+ ],
+ "microphone": {
+  "name": "putgd_lab_3208264",
+  "modules": {
+   "system": 536870917
+  },
+  "defaultSource": "putgd_lab_s2_gnome_system.monitor",
+  "defaultSink": "putgd_lab_s2_gnome_system",
+  "systemSink": "putgd_lab_3208264_system"
+ },
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "HDMI-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "check": "precheck",
+   "fraction": 1.0,
+   "framebuffer": [
+    1920,
+    1080
+   ],
+   "minFraction": 0.98,
+   "ok": true,
+   "output": [
+    "HDMI-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ]
+  },
+  "video": "marker"
+ },
+ "microphoneRemoved": {
+  "removed": true,
+  "left": [],
+  "defaultSource": "putgd_lab_s2_gnome_system.monitor",
+  "defaultSink": "putgd_lab_s2_gnome_system"
+ },
+ "gpuHangs": []
+}

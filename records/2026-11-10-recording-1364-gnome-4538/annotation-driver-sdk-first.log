@@ -1,0 +1,89 @@
+dbus-daemon[3218520]: [session uid=1000 pid=3218520 pidfd=5] Activating service name='org.freedesktop.portal.Desktop' requested by ':1.0' (uid=1000 pid=3218523 comm="/home/patrick/work/s1364s2/root/usr/bin/putgd" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[3218520]: [session uid=1000 pid=3218520 pidfd=5] Activating service name='org.freedesktop.impl.portal.PermissionStore' requested by ':1.1' (uid=1000 pid=3218538 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[3218520]: [session uid=1000 pid=3218520 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.PermissionStore'
+dbus-daemon[3218520]: [session uid=1000 pid=3218520 pidfd=5] Activating service name='org.freedesktop.portal.Documents' requested by ':1.1' (uid=1000 pid=3218538 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[3218520]: [session uid=1000 pid=3218520 pidfd=5] Successfully activated service 'org.freedesktop.portal.Documents'
+
+(/usr/libexec/xdg-desktop-portal:3218538): xdg-desktop-portal-WARNING **: 02:02:20.011: Choosing gtk.portal for org.freedesktop.impl.portal.Access as a last-resort fallback
+dbus-daemon[3218520]: [session uid=1000 pid=3218520 pidfd=5] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.1' (uid=1000 pid=3218538 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[3218520]: [session uid=1000 pid=3218520 pidfd=5] Activating service name='org.a11y.Bus' requested by ':1.5' (uid=1000 pid=3218566 comm="/usr/libexec/xdg-desktop-portal-gtk" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[3218520]: [session uid=1000 pid=3218520 pidfd=5] Activated service 'org.a11y.Bus' failed: Failed to execute program org.a11y.Bus: Permission denied
+
+(xdg-desktop-portal-gtk:3218566): dbind-WARNING **: 02:02:20.052: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.Spawn.ExecFailed: Failed to execute program org.a11y.Bus: Permission denied
+dbus-daemon[3218520]: [session uid=1000 pid=3218520 pidfd=5] Activating service name='org.gtk.vfs.Daemon' requested by ':1.4' (uid=1000 pid=3218566 comm="/usr/libexec/xdg-desktop-portal-gtk" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[3218520]: [session uid=1000 pid=3218520 pidfd=5] Successfully activated service 'org.gtk.vfs.Daemon'
+fusermount3: failed to access mountpoint /run/user/1000/gvfs: Permission denied
+dbus-daemon[3218520]: [session uid=1000 pid=3218520 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.desktop.gtk'
+
+(/usr/libexec/xdg-desktop-portal:3218538): xdg-desktop-portal-WARNING **: 02:02:20.121: Choosing gtk.portal for org.freedesktop.impl.portal.Settings as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3218538): xdg-desktop-portal-WARNING **: 02:02:20.122: Choosing gtk.portal for org.freedesktop.impl.portal.FileChooser as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3218538): xdg-desktop-portal-WARNING **: 02:02:20.123: Choosing gtk.portal for org.freedesktop.impl.portal.AppChooser as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3218538): xdg-desktop-portal-WARNING **: 02:02:20.125: Choosing gtk.portal for org.freedesktop.impl.portal.Print as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3218538): xdg-desktop-portal-WARNING **: 02:02:20.126: Choosing gtk.portal for org.freedesktop.impl.portal.Notification as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3218538): xdg-desktop-portal-WARNING **: 02:02:20.127: Choosing gtk.portal for org.freedesktop.impl.portal.Inhibit as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3218538): xdg-desktop-portal-WARNING **: 02:02:20.133: Choosing gtk.portal for org.freedesktop.impl.portal.Account as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3218538): xdg-desktop-portal-WARNING **: 02:02:20.135: Choosing gtk.portal for org.freedesktop.impl.portal.Email as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3218538): xdg-desktop-portal-WARNING **: 02:02:20.137: Choosing gtk.portal for org.freedesktop.impl.portal.DynamicLauncher as a last-resort fallback
+dbus-daemon[3218520]: [session uid=1000 pid=3218520 pidfd=5] Successfully activated service 'org.freedesktop.portal.Desktop'
+  + Exception Group Traceback (most recent call last):
+  |   File "/home/patrick/work/s1364s2/annotate_mcp.py", line 38, in <module>
+  |     try:asyncio.run(main())
+  |         ~~~~~~~~~~~^^^^^^^^
+  |   File "/usr/lib64/python3.14/asyncio/runners.py", line 205, in run
+  |     return runner.run(main)
+  |            ~~~~~~~~~~^^^^^^
+  |   File "/usr/lib64/python3.14/asyncio/runners.py", line 128, in run
+  |     return self._loop.run_until_complete(task)
+  |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  |   File "/usr/lib64/python3.14/asyncio/base_events.py", line 720, in run_until_complete
+  |     return future.result()
+  |            ~~~~~~~~~~~~~^^
+  |   File "/home/patrick/work/s1364s2/annotate_mcp.py", line 14, in main
+  |     async with stdio_client(StdioServerParameters(command=str(exe),args=['--cli',str(root/'putgd-cli'),'--socket',str(runtime/'putgd/session.sock')],env=env)) as (read,write):
+  |                ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/usr/lib64/python3.14/contextlib.py", line 235, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "/home/patrick/work/s1364s2/src/tools/mcp/.venv/lib64/python3.14/site-packages/mcp/client/stdio.py", line 201, in stdio_client
+  |     async with anyio.create_task_group() as tg:
+  |                ~~~~~~~~~~~~~~~~~~~~~~~^^
+  |   File "/home/patrick/work/s1364s2/src/tools/mcp/.venv/lib64/python3.14/site-packages/anyio/_backends/_asyncio.py", line 847, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "/home/patrick/work/s1364s2/src/tools/mcp/.venv/lib64/python3.14/site-packages/mcp/client/stdio.py", line 205, in stdio_client
+    |     yield read_stream, write_stream
+    |   File "/home/patrick/work/s1364s2/annotate_mcp.py", line 15, in main
+    |     async with ClientSession(read,write) as s:
+    |                ~~~~~~~~~~~~~^^^^^^^^^^^^
+    |   File "/home/patrick/work/s1364s2/src/tools/mcp/.venv/lib64/python3.14/site-packages/mcp/client/session.py", line 514, in __aexit__
+    |     result = await self._task_group.__aexit__(exc_type, exc_val, exc_tb)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/patrick/work/s1364s2/src/tools/mcp/.venv/lib64/python3.14/site-packages/anyio/_backends/_asyncio.py", line 847, in __aexit__
+    |     raise BaseExceptionGroup(
+    |         "unhandled errors in a TaskGroup", self._exceptions
+    |     ) from None
+    | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "/home/patrick/work/s1364s2/annotate_mcp.py", line 26, in main
+      |     try:op=(await call('open_editor',{'source':'file','path':item['source']}))['operationId'];break
+      |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      |   File "/home/patrick/work/s1364s2/annotate_mcp.py", line 19, in call
+      |     if reply.structuredContent:r=reply.structuredContent
+      |        ^^^^^^^^^^^^^^^^^^^^^^^
+      |   File "/home/patrick/work/s1364s2/src/tools/mcp/.venv/lib64/python3.14/site-packages/pydantic/main.py", line 1110, in __getattr__
+      |     raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+      | AttributeError: 'CallToolResult' object has no attribute 'structuredContent'. Did you mean: 'structured_content'?
+      +------------------------------------
+A connection to the bus can't be made

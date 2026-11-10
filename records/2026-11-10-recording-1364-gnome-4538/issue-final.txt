@@ -1,0 +1,38 @@
+Recordings carry system audio only. Add the microphone, so a clip can be narrated, and optional click highlights, so a viewer can see what was pressed.
+
+## Microphone
+
+- A microphone toggle on the recording bar beside system audio, off by default and remembered. A small level meter shows that it is live.
+- Uses the system default input; **Settings → Capture → Screen recording** can pick another device.
+- Mixed with system audio into the clip's one audio track. MP4 and WebM only; GIF and WebP stay silent.
+- `recording.prepare` already reserves `audio.microphone` and refuses it. It becomes live, and capabilities report whether a microphone is available.
+- The microphone is never opened unless the toggle is on, and it is released at Stop.
+- The monitor of an output is never offered or used as a microphone. On a machine with nothing plugged in, the system default source can be the output's monitor (it is on three of the lab builders); the toggle then reports that no microphone is available.
+- A microphone that disappears during a recording does not end or damage the recording; the rest of the clip is silent on that input.
+
+## Click highlights
+
+- An optional ring drawn at the pointer on each click, rendered into the clip. Off by default.
+- This needs pointer button events from the desktop, and the routes differ: XInput2 on X11, the Shell extension on GNOME, a compositor effect or script on KWin, and whatever labwc and Hyprland expose. **Prove a route on each desktop before building.**
+- Decided by Patrick on 2026-11-09: it ships on every desktop where a workable route exists. A desktop is left out only on real proof that there is no way to get click events there: every candidate route tried, each with a minimal reproduction or the upstream source that rules it out. A desktop left out is recorded in its `docs/desktops/` page, in `docs/design/recording.md` and in the app's Desktop support details.
+
+## Rules
+
+- Follow `docs/design/recording.md`. Review, trim, masks and export are unchanged apart from the new audio.
+- Narration stays in sync with the picture across pause and resume and across an adaptive frame-rate change.
+- Full agent control through session methods, `putgd-cli` and the MCP helper.
+
+## Acceptance
+
+On Cinnamon, GNOME, KDE, Budgie and Hyprland from the PR's packages: a recording with a known tone played into a simulated microphone (a PipeWire null sink with a remap source, on the builders and in the VMs; no real microphone and not the workstation), exported as MP4 and WebM, with the tone present and in sync with a visible marker (the bound is below); the same with system audio mixed in; pause and resume keep alignment; the toggle off records no microphone audio; with only an output monitor present the toggle reports no microphone; removing the simulated microphone mid-recording leaves a playable clip. Each clip also shows motion. Click highlights: a scripted click sequence appears at the right places and times on every desktop that has a route.
+
+### Sync bound (revised 2026-11-10 from measurements)
+
+The first version of this issue asked for alignment within one frame (33 ms). Measurements on the published nightly showed that bound is tighter than the product meets today and close to the method's own run-to-run spread: system audio on nightly measured up to +36 ms on physical GNOME (f44) and +11 to +54 ms in the Budgie guest, an unmodified third-party recorder in the same Budgie guest measured −56 to +43 ms, and single runs on physical Cinnamon and Plasma vary by about ±20 ms around zero.
+
+The bound for acceptance is therefore:
+- sound no more than 45 ms ahead of the picture and no more than 125 ms behind it (the detectability thresholds of ITU-R BT.1359), as the median of a run; and
+- no worse than nightly's system-audio alignment on the same desktop, beyond that run-to-run spread.
+
+One frame stays the target and is reported, but it is not the pass line. Evidence: https://github.com/patrick-hudson/put.gd-evidence/tree/59b03d5170c9c7125016e204ef062b17510702f0/records/2026-11-10-recording-1364-independent-stage1b
+

@@ -1,0 +1,43 @@
+{
+  "host": "fedora",
+  "desktop": "gnome-shell",
+  "session": "wayland",
+  "build": {
+    "kind": "installed",
+    "dir": "/usr/bin",
+    "version": "putgd-record 26.1110.4538-dev+g1d19e1e8ac50"
+  },
+  "states": {
+    "settings": {
+      "shown": "settings"
+    }
+  },
+  "capabilities": {
+    "acquisition": "mutter-screencast",
+    "audio": {
+      "microphone": true,
+      "microphoneDevice": {
+        "id": "alsa_input.pci-0000_00_1f.3.analog-stereo",
+        "label": "Built-in Audio Analog Stereo"
+      },
+      "system": true
+    },
+    "clickHighlights": {
+      "available": true,
+      "drawnBy": "recorder",
+      "route": "gnome-shell-extension",
+      "targets": [
+        "monitor",
+        "desktop",
+        "region",
+        "window"
+      ]
+    },
+    "targets": [
+      "monitor",
+      "desktop",
+      "region",
+      "window"
+    ]
+  }
+}

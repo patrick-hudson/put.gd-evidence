@@ -1,0 +1,53 @@
+{
+  "host": "fedora",
+  "desktop": "gnome-shell",
+  "session": "wayland",
+  "build": {
+    "kind": "installed",
+    "dir": "/home/patrick/work/s1364b/roots/nightly/usr/bin",
+    "version": "putgd-record 26.1109.4346-nightly"
+  },
+  "states": {
+    "off": {
+      "microphones": {
+        "notInThisBuild": true
+      },
+      "inspect": {
+        "state": "ready",
+        "config": {
+          "adaptiveFps": true,
+          "audio": {
+            "microphone": false,
+            "system": false
+          },
+          "budgetBytes": 231537748650,
+          "codec": "h264",
+          "format": "mp4",
+          "fps": 30,
+          "mime": "video/mp4"
+        },
+        "overlayPlacement": "outside",
+        "overlayExcluded": true,
+        "progress": {
+          "recordingAudio": {
+            "effective": false,
+            "requested": false
+          }
+        }
+      }
+    }
+  },
+  "capabilities": {
+    "acquisition": "mutter-screencast",
+    "audio": {
+      "microphone": false,
+      "system": true
+    },
+    "targets": [
+      "monitor",
+      "desktop",
+      "region",
+      "window"
+    ]
+  }
+}

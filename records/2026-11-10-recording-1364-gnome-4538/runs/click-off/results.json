@@ -1,0 +1,91 @@
+{
+ "host": "fedora",
+ "kernel": "7.2.11-200.fc44.x86_64",
+ "desktop": "gnome-shell",
+ "session": "wayland",
+ "target": "monitor",
+ "rect": [
+  0,
+  0,
+  960,
+  540
+ ],
+ "formats": [
+  "mp4"
+ ],
+ "video": "marker",
+ "timing": {
+  "lead": 3.0,
+  "pauseAt": 14.0,
+  "pauseFor": 0.0,
+  "after": 2.0
+ },
+ "builds": {
+  "pr": {
+   "kind": "installed",
+   "dir": "/usr/bin",
+   "version": "putgd-record 26.1110.4538-dev+g1d19e1e8ac50"
+  }
+ },
+ "analyzer": "/",
+ "rounds": [
+  {
+   "build": "pr",
+   "round": 1,
+   "format": "mp4",
+   "error": "recording.prepare failed: invalid_request Only region targets take a rect"
+  }
+ ],
+ "microphone": {
+  "name": "putgd_lab_3210638",
+  "modules": {
+   "system": 536870919
+  },
+  "defaultSource": "putgd_lab_s2_gnome_system.monitor",
+  "defaultSink": "putgd_lab_s2_gnome_system",
+  "systemSink": "putgd_lab_3210638_system"
+ },
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "HDMI-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "check": "precheck",
+   "fraction": 0.9999,
+   "framebuffer": [
+    1920,
+    1080
+   ],
+   "minFraction": 0.98,
+   "ok": true,
+   "output": [
+    "HDMI-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ]
+  },
+  "video": "marker"
+ },
+ "microphoneRemoved": {
+  "removed": true,
+  "left": [],
+  "defaultSource": "putgd_lab_s2_gnome_system.monitor",
+  "defaultSink": "putgd_lab_s2_gnome_system"
+ },
+ "gpuHangs": []
+}
