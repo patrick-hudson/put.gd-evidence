@@ -21,6 +21,7 @@ they were tested on. Each picture names its build in its caption.
 | 26.1110.4437 | 69ad2c6ee | the microphone is no longer the X11 pipeline's clock (a clip that stopped where the microphone was unplugged) |
 | 26.1110.4459 | 7e8b3a2e1 | the Click highlights row of Desktop support details shows its whole text and the window-recording limit |
 | 26.1110.4465 | 8806fd580 | `progress.clickHighlightsError` stays in `recording.inspect` |
+| 26.1110.4480 | 598648cc7 | the ready bar follows microphones that come and go; `recording.audio` |
 
 Nothing between 4436 and 4465 changes the recording bar, the Settings page or
 how a ring is drawn, so the bar and ring pictures taken on 4436 stand.
@@ -49,6 +50,8 @@ how a ring is drawn, so the bar and ring pictures taken on 4436 stand.
 | `budgie-cursor.png` | Budgie: the cursor labwc paints beside the one put.gd draws when click highlights are on |
 | `alignment-chart.png` | Audio minus video for every marker flash of a microphone-only recording, MP4 and WebM, per desktop |
 | `unplug-clip-length.png` | Seconds of clip kept when the microphone is unplugged mid-recording, before and after the clock fix |
+| `bar-ready-follow-kde63.png`, `bar-ready-follow-cinnamon.png` | The bar at Ready while a microphone is plugged in, switched on, pulled and plugged in again (build 4480) |
+| `output-removed-clip-length.png` | Seconds of clip kept when the output system audio is recorded from is removed mid-recording, and what the recorder read afterwards |
 
 ## Numbers
 
@@ -63,7 +66,13 @@ pause), `muted` (the simulated microphone plays, the toggle is off), `leak`
 default input), and on Budgie `nohw` (labwc started with
 `WLR_NO_HARDWARE_CURSORS=1`) and `region-on` / `region-off` (the frames of
 `budgie-cursor.png`). `m74-cD-leak.json` is the unplug run on 4436, before the
-clock fix.
+clock fix. Added with build 4480: `d69-kR2.json` and `m74-cR1.json` (`--mic
+late`: the microphone plugged in, switched on, pulled and plugged in again at
+Ready, then recorded; `readyFollow` holds the steps), and the output-removal
+runs `m74-cO-fallback.json`, `m74-cO2-none.json`, `m74-cO2-mic.json`,
+`d69-kO-fallback.json` and `d69-kO-mic.json` (`--output-gone-at 6`, with
+another output to move to, with none, and with a microphone as the default
+input).
 
 Ring times are measured from the pointer's own arrival in the same clip; a
 ring's place is the distance of its centre from the press. On Plasma the ring
