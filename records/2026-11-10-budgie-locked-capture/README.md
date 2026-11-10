@@ -10,8 +10,8 @@ After: all three immediate desktop requests under the visibly active real gtkloc
 
 Lock-state routes checked on nightly:
 
-- logind session 1 LockedHint remained no while gtklock was visible. No useful Lock/Unlock change was observed in the saved monitor output.
-- org.buddiesofbudgie.BudgieScreenlock publishes Lock, Dim, Undim, OnBattery, ScreenPowerResume and Suspend, but no lock-state query/signal; Properties.GetAll is empty.
+- logind session 1 LockedHint remained no while gtklock was visible. This does not prove that every logind signal route is absent; it establishes that LockedHint is unusable for the observed real lock.
+- org.buddiesofbudgie.BudgieScreenlock publishes Lock, Dim, Undim, OnBattery, ScreenPowerResume and ScreenPowerSuspend, but no lock-state query/signal; Properties.GetAll is empty.
 - gtklock owns anonymous session-bus connections, with no well-known state service. Its introspection exposed GTK application/window objects; a second unique connection timed out. No usable state was established there.
 - A minimal independent raw Wayland client receives layer configure and display sync in both states, but a fresh wl_surface.frame on an overlay only arrives unlocked. The source and JSON are included. This is the useful signal for the tested labwc/gtklock combination.
 
@@ -24,3 +24,5 @@ The real labwc integration test uses an ext-session-lock fixture with opaque pre
 The annotated picture uses the nightly saved lock-screen PNG on the left and a QMP witness of the actual locked guest on the right, beside results copied from the real operation JSON. Labels/arrow were applied by the exact-package production editor after unlocking. No protected input is shown. No upload, physical desktop test, unrelated desktop acceptance, workstation build or workstation test was run.
 
 Full raw captures and experiments remain in checksum-verified private archives indexed in restore-index.json. Both guests were stopped and overlays retired with guarded cleanup after export; receipts are included. Goldens remain unchanged.
+
+The fixed-locked-operation.json under before/repro is an intermediate prototype result, not the final native-package acceptance; after/accept contains the authoritative final results.
