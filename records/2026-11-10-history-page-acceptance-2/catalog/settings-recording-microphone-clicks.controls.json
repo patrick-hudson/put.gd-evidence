@@ -1,0 +1,500 @@
+{
+    "class": "putgd::MainWindow",
+    "controls": [
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "applicationMenu",
+            "rect": [
+                12,
+                12,
+                32,
+                32
+            ],
+            "text": "Application menu"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "windowMinimize",
+            "rect": [
+                1324,
+                12,
+                32,
+                32
+            ],
+            "text": "Minimize"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "windowMaximize",
+            "rect": [
+                1360,
+                12,
+                32,
+                32
+            ],
+            "text": "Maximize"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "windowClose",
+            "rect": [
+                1396,
+                12,
+                32,
+                32
+            ],
+            "text": "Close window"
+        },
+        {
+            "class": "putgd::Ui::Segmented",
+            "enabled": true,
+            "kind": "tabs",
+            "name": "mainNavigation",
+            "rect": [
+                548,
+                8,
+                344,
+                40
+            ],
+            "tabs": [
+                {
+                    "current": false,
+                    "rect": [
+                        548,
+                        8,
+                        110,
+                        40
+                    ],
+                    "text": "History"
+                },
+                {
+                    "current": false,
+                    "rect": [
+                        658,
+                        8,
+                        124,
+                        40
+                    ],
+                    "text": "Destinations"
+                },
+                {
+                    "current": true,
+                    "rect": [
+                        782,
+                        8,
+                        110,
+                        40
+                    ],
+                    "text": "Settings"
+                }
+            ],
+            "text": ""
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                12,
+                64,
+                153,
+                36
+            ],
+            "text": "Capture region"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                173,
+                64,
+                160,
+                36
+            ],
+            "text": "Capture window"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                341,
+                64,
+                161,
+                36
+            ],
+            "text": "Capture monitor"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                510,
+                64,
+                162,
+                36
+            ],
+            "text": "Capture desktop"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                689,
+                64,
+                219,
+                36
+            ],
+            "text": "Capture region && edit"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                916,
+                64,
+                148,
+                36
+            ],
+            "text": "Record screen"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                1262,
+                64,
+                166,
+                36
+            ],
+            "text": "Upload clipboard"
+        },
+        {
+            "class": "QListWidget",
+            "enabled": true,
+            "kind": "list",
+            "name": "settingsNavigation",
+            "rect": [
+                16,
+                124,
+                184,
+                156
+            ],
+            "rows": 4,
+            "text": ""
+        },
+        {
+            "class": "QTabWidget",
+            "enabled": true,
+            "kind": "focusable",
+            "name": "settingsTabs",
+            "rect": [
+                216,
+                108,
+                1224,
+                812
+            ],
+            "text": ""
+        },
+        {
+            "class": "QComboBox",
+            "count": 3,
+            "enabled": true,
+            "kind": "choice",
+            "name": "defaultCaptureDestination",
+            "rect": [
+                528,
+                246,
+                464,
+                36
+            ],
+            "text": "Proton Drive"
+        },
+        {
+            "class": "QComboBox",
+            "count": 3,
+            "enabled": true,
+            "kind": "choice",
+            "name": "defaultCaptureSharing",
+            "rect": [
+                528,
+                298,
+                464,
+                36
+            ],
+            "text": "Destination default — shared link"
+        },
+        {
+            "checkable": true,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "uploadClipboardBehaviorHelp",
+            "rect": [
+                366,
+                356,
+                24,
+                24
+            ],
+            "text": "Copy each link writes successful upload links individually. Copy a list writes one newline-separated list in submission order after overlapping uploads finish. Copying something yourself pauses automatic copies; links stay available in History. Applies to new operations."
+        },
+        {
+            "class": "QComboBox",
+            "count": 2,
+            "enabled": true,
+            "kind": "choice",
+            "name": "uploadClipboardBehavior",
+            "rect": [
+                528,
+                350,
+                464,
+                36
+            ],
+            "text": "Copy each link as it finishes"
+        },
+        {
+            "checkable": true,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureExceptionsToggle",
+            "rect": [
+                978,
+                402,
+                14,
+                36
+            ],
+            "text": ""
+        },
+        {
+            "checkable": true,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "regionSelectionModeHelp",
+            "rect": [
+                365,
+                546,
+                24,
+                24
+            ],
+            "text": "Live desktop keeps the screen updating while you drag; close an open menu first. Screenshot first captures every monitor before the selector opens and cuts your region from that picture, so open menus and tooltips are included. Applies to new captures."
+        },
+        {
+            "class": "QComboBox",
+            "count": 2,
+            "enabled": true,
+            "kind": "choice",
+            "name": "regionSelectionMode",
+            "rect": [
+                528,
+                540,
+                464,
+                36
+            ],
+            "text": "Live desktop"
+        },
+        {
+            "checkable": true,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "recordingFrameRateHelp",
+            "rect": [
+                337,
+                684,
+                24,
+                24
+            ],
+            "text": "Frames per second for new recordings. 60 looks smoother and takes about twice the work to convert and encode. When the computer can't keep up during a recording, put.gd lowers the rate for the rest of it (60 to 30, then 15) so the desktop you're recording stays responsive; the clip keeps its full length. Applies to new recordings."
+        },
+        {
+            "class": "QComboBox",
+            "count": 2,
+            "enabled": true,
+            "kind": "choice",
+            "name": "recordingFrameRate",
+            "rect": [
+                528,
+                678,
+                464,
+                36
+            ],
+            "text": "30 frames per second"
+        },
+        {
+            "checkable": true,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "recordingMicrophoneDeviceHelp",
+            "rect": [
+                343,
+                736,
+                24,
+                24
+            ],
+            "text": "The input the recording bar's Microphone toggle opens. System default follows the sound settings; an output's monitor is never used as a microphone. The microphone is opened only while the toggle is on and released when the recording stops."
+        },
+        {
+            "class": "QComboBox",
+            "count": 3,
+            "enabled": true,
+            "kind": "choice",
+            "name": "recordingMicrophoneDevice",
+            "rect": [
+                528,
+                730,
+                464,
+                36
+            ],
+            "text": "System default"
+        },
+        {
+            "checkable": true,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "recordingClickHighlightsHelp",
+            "rect": [
+                420,
+                839,
+                24,
+                24
+            ],
+            "text": "Draws a ring at the pointer on each click in new recordings, so a viewer can see what was pressed. Where the desktop reports clicks, the ring is drawn into the clip only; on Plasma, KWin's own click effect is switched on for the length of the recording and also shows on the screen."
+        },
+        {
+            "checkable": true,
+            "checked": false,
+            "class": "QCheckBox",
+            "enabled": true,
+            "kind": "button",
+            "name": "recordingClickHighlights",
+            "rect": [
+                968,
+                834,
+                24,
+                36
+            ],
+            "text": "Draw a ring at each click"
+        }
+    ],
+    "height": 960,
+    "keys": [
+        {
+            "context": 3,
+            "enabled": true,
+            "keys": [
+                "Esc"
+            ],
+            "name": "historyDetailsEscape",
+            "text": ""
+        },
+        {
+            "context": 0,
+            "enabled": true,
+            "keys": [
+                "Return",
+                "Enter"
+            ],
+            "name": "",
+            "text": ""
+        },
+        {
+            "context": 0,
+            "enabled": true,
+            "keys": [
+                "Menu",
+                "Shift+F10"
+            ],
+            "name": "",
+            "text": ""
+        },
+        {
+            "context": 3,
+            "enabled": true,
+            "keys": [
+                "Alt+Left"
+            ],
+            "name": "historyPreviousPage",
+            "text": ""
+        },
+        {
+            "context": 3,
+            "enabled": true,
+            "keys": [
+                "Alt+Right"
+            ],
+            "name": "historyNextPage",
+            "text": ""
+        },
+        {
+            "context": 0,
+            "enabled": true,
+            "keys": [
+                "Alt+Up"
+            ],
+            "name": "moveDestinationUp",
+            "text": "Move up"
+        },
+        {
+            "context": 0,
+            "enabled": false,
+            "keys": [
+                "Alt+Down"
+            ],
+            "name": "moveDestinationDown",
+            "text": "Move down"
+        }
+    ],
+    "width": 1440
+}

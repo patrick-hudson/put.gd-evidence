@@ -1,0 +1,41 @@
+usage: -c [-h] --desktop DESKTOP --host {m74,f44,d69,k72,aurora-amd,boat}
+          --placement {native,guest,boat} [--guest GUEST] [--run RUN]
+          [--host-profile HOST_PROFILE] [--lock-session LOCK_SESSION]
+          [--bin-dir BIN_DIR] [--session-root SESSION_ROOT]
+          [--boat-id BOAT_ID] --package {deb,rpm,appimage,source}
+          --destination {local,s3,b2,proton} --recipes RECIPES --catalog
+          CATALOG --build BUILD --out OUT [--campaign CAMPAIGN]
+          [--coverage COVERAGE] [--profiles PROFILES]
+
+Run portable interaction recipes on a lab.py guest or a physical.py host. Run
+this on the QEMU host (including boat), not on the workstation. Target
+lifecycle and VNC wall forwarding stay with lab.py and the campaign owner.
+
+options:
+  -h, --help            show this help message and exit
+  --desktop DESKTOP
+  --host {m74,f44,d69,k72,aurora-amd,boat}
+  --placement {native,guest,boat}
+  --guest GUEST
+  --run RUN             existing lab.py run directory or id under work/lab-
+                        runs
+  --host-profile HOST_PROFILE
+                        physical.py pinned host JSON
+  --lock-session LOCK_SESSION
+                        held physical desktop lock session id
+  --bin-dir BIN_DIR     target directory holding source/AppImage executables
+  --session-root SESSION_ROOT
+                        new private target XDG root (live campaigns use guest
+                        tmpfs)
+  --boat-id BOAT_ID     required boat sandbox identity for placement=boat
+  --package {deb,rpm,appimage,source}
+  --destination {local,s3,b2,proton}
+  --recipes RECIPES     comma-separated recipe/interactions globs or lane
+                        names
+  --catalog CATALOG
+  --build BUILD         exact clean commit of the resident and catalog: 12-40
+                        hex
+  --out OUT
+  --campaign CAMPAIGN
+  --coverage COVERAGE
+  --profiles PROFILES

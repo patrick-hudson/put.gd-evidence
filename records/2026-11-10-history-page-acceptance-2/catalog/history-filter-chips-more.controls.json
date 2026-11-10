@@ -1,0 +1,609 @@
+{
+    "class": "putgd::MainWindow",
+    "controls": [
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "applicationMenu",
+            "rect": [
+                12,
+                8,
+                32,
+                32
+            ],
+            "text": "Application menu"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "windowMinimize",
+            "rect": [
+                944,
+                8,
+                32,
+                32
+            ],
+            "text": "Minimize"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "windowMaximize",
+            "rect": [
+                980,
+                8,
+                32,
+                32
+            ],
+            "text": "Maximize"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "windowClose",
+            "rect": [
+                1016,
+                8,
+                32,
+                32
+            ],
+            "text": "Close window"
+        },
+        {
+            "class": "putgd::Ui::Segmented",
+            "enabled": true,
+            "kind": "tabs",
+            "name": "mainNavigation",
+            "rect": [
+                358,
+                4,
+                344,
+                40
+            ],
+            "tabs": [
+                {
+                    "current": true,
+                    "rect": [
+                        358,
+                        4,
+                        110,
+                        40
+                    ],
+                    "text": "History"
+                },
+                {
+                    "current": false,
+                    "rect": [
+                        468,
+                        4,
+                        124,
+                        40
+                    ],
+                    "text": "Destinations"
+                },
+                {
+                    "current": false,
+                    "rect": [
+                        592,
+                        4,
+                        110,
+                        40
+                    ],
+                    "text": "Settings"
+                }
+            ],
+            "text": ""
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                12,
+                56,
+                137,
+                32
+            ],
+            "text": "Capture region"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                153,
+                56,
+                93,
+                32
+            ],
+            "text": "Window"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                250,
+                56,
+                91,
+                32
+            ],
+            "text": "Monitor"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                345,
+                56,
+                94,
+                32
+            ],
+            "text": "Desktop"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                448,
+                56,
+                207,
+                32
+            ],
+            "text": "Capture region && edit"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                659,
+                56,
+                132,
+                32
+            ],
+            "text": "Record screen"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                898,
+                56,
+                150,
+                32
+            ],
+            "text": "Upload clipboard"
+        },
+        {
+            "class": "QListWidget",
+            "enabled": true,
+            "kind": "list",
+            "name": "historyCategories",
+            "rect": [
+                16,
+                104,
+                184,
+                193
+            ],
+            "rows": 6,
+            "text": "Other files includes clipboard text and any file that is not an image or a recording."
+        },
+        {
+            "class": "QLineEdit",
+            "echo": 0,
+            "enabled": true,
+            "kind": "field",
+            "name": "historySearch",
+            "readOnly": false,
+            "rect": [
+                443,
+                112,
+                282,
+                36
+            ],
+            "text": "Search history"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "historyFiltersExpanded",
+            "rect": [
+                741,
+                112,
+                111,
+                36
+            ],
+            "text": "Filter"
+        },
+        {
+            "checkable": true,
+            "checked": true,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "historyListMode",
+            "rect": [
+                870,
+                114,
+                34,
+                32
+            ],
+            "text": "List view"
+        },
+        {
+            "checkable": true,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "historyGridMode",
+            "rect": [
+                906,
+                114,
+                34,
+                32
+            ],
+            "text": "Gallery view"
+        },
+        {
+            "checkable": true,
+            "checked": true,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "historyDetailsToggle",
+            "rect": [
+                958,
+                112,
+                36,
+                36
+            ],
+            "text": "Details open when you select an item"
+        },
+        {
+            "checkable": true,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "historyManagementExpanded",
+            "rect": [
+                1010,
+                113,
+                34,
+                34
+            ],
+            "text": "Manage"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "historyFilterChipsMore",
+            "rect": [
+                688,
+                196,
+                83,
+                36
+            ],
+            "text": "+2 more"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "historyClearFilters",
+            "rect": [
+                779,
+                196,
+                103,
+                36
+            ],
+            "text": "Clear filters"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "historyFilterChipEditfrom",
+            "rect": [
+                249,
+                153,
+                147,
+                34
+            ],
+            "text": "From: June 10, 2026"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "historyFilterChipRemovefrom",
+            "rect": [
+                396,
+                158,
+                24,
+                24
+            ],
+            "text": "Remove from filter: June 10, 2026"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "historyFilterChipEditto",
+            "rect": [
+                433,
+                153,
+                166,
+                34
+            ],
+            "text": "Through: June 15, 2026"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "historyFilterChipRemoveto",
+            "rect": [
+                599,
+                158,
+                24,
+                24
+            ],
+            "text": "Remove through filter: June 15, 2026"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "historyFilterChipEditprofileId",
+            "rect": [
+                636,
+                153,
+                173,
+                34
+            ],
+            "text": "Destination: Proton Drive"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "historyFilterChipRemoveprofileId",
+            "rect": [
+                809,
+                158,
+                24,
+                24
+            ],
+            "text": "Remove destination filter: Proton Drive"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "historyFilterChipEdituploadStatus",
+            "rect": [
+                846,
+                153,
+                164,
+                34
+            ],
+            "text": "Upload state: Uploaded"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "historyFilterChipRemoveuploadStatus",
+            "rect": [
+                1010,
+                158,
+                24,
+                24
+            ],
+            "text": "Remove upload state filter: Uploaded"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "historyFilterChipEditlocalStatus",
+            "rect": [
+                249,
+                197,
+                179,
+                34
+            ],
+            "text": "Local copy: Not requested"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "historyFilterChipRemovelocalStatus",
+            "rect": [
+                428,
+                202,
+                24,
+                24
+            ],
+            "text": "Remove local copy filter: Not requested"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "historyFilterChipEditremoteStatus",
+            "rect": [
+                465,
+                197,
+                187,
+                34
+            ],
+            "text": "Remote file state: Available"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "historyFilterChipRemoveremoteStatus",
+            "rect": [
+                652,
+                202,
+                24,
+                24
+            ],
+            "text": "Remove remote file state filter: Available"
+        },
+        {
+            "class": "QListView",
+            "enabled": true,
+            "kind": "list",
+            "name": "historyList",
+            "rect": [
+                232,
+                240,
+                820,
+                400
+            ],
+            "rows": 44,
+            "text": ""
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureOutputSummary",
+            "rect": [
+                18,
+                643,
+                369,
+                35
+            ],
+            "text": "Capture output · Shared link · Proton Drive + local copy"
+        }
+    ],
+    "height": 680,
+    "keys": [
+        {
+            "context": 3,
+            "enabled": false,
+            "keys": [
+                "Esc"
+            ],
+            "name": "historyDetailsEscape",
+            "text": ""
+        },
+        {
+            "context": 0,
+            "enabled": true,
+            "keys": [
+                "Return",
+                "Enter"
+            ],
+            "name": "",
+            "text": ""
+        },
+        {
+            "context": 0,
+            "enabled": true,
+            "keys": [
+                "Menu",
+                "Shift+F10"
+            ],
+            "name": "",
+            "text": ""
+        },
+        {
+            "context": 3,
+            "enabled": true,
+            "keys": [
+                "Alt+Left"
+            ],
+            "name": "historyPreviousPage",
+            "text": ""
+        },
+        {
+            "context": 3,
+            "enabled": true,
+            "keys": [
+                "Alt+Right"
+            ],
+            "name": "historyNextPage",
+            "text": ""
+        }
+    ],
+    "width": 1060
+}

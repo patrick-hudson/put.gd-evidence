@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 2,
+  "campaign": "history-p2-k72",
+  "entries": [
+    {
+      "interaction": "dialog.history-save-as",
+      "desktop": "kubuntu-kde-wayland",
+      "package": "deb",
+      "functional": "failed",
+      "visual": "frames",
+      "receipt": "/tmp/hp2kout4/receipt.json",
+      "note": "operationId=26aba214-e685-4612-b2d4-4ad62481ee60; Requested chooser backend: portal; Chooser state at failure: {\"backend\": \"portal\", \"dialog\": \"historySaveAs\", \"fallbackReason\": null, \"last\": null, \"mode\": \"save\", \"open\": true, \"parentWindow\": \"\", \"title\": \"Save original file as\"}; timeout: desktop chooser top-level is accessible and drawn",
+      "host": "k72",
+      "placement": "native",
+      "destination": "local",
+      "review": true,
+      "review_reason": "desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/dialogs.history_save_as_portal/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "before",
+          "path": "frames/dialogs.history_save_as_portal/01-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "dialog-failure",
+          "path": "frames/dialogs.history_save_as_portal/02-dialog-failure.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/dialogs.history_save_as_portal/03-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "dialogs.history_save_as_portal",
+      "build": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+      "at": "2026-11-10T20:55:38Z"
+    },
+    {
+      "interaction": "dialog.history-save-as",
+      "desktop": "kubuntu-kde-wayland",
+      "package": "deb",
+      "functional": "passed",
+      "visual": "frames",
+      "receipt": "/tmp/hp2kout4/receipt.json",
+      "note": "operationId=8b5dd441-e4fb-4ca0-a8a8-ca1c711e3423; Requested chooser backend: fallback; Fallback accessible surfaces: [{\"application\": \"putgd-ui\", \"name\": \"Save original file as\", \"pid\": 2634667, \"rect\": [550, 267, 820, 520], \"role\": \"dialog\"}]; Chooser ready: backend=fallback, mode=save, title=Save original file as; Fallback accessible surfaces: [{\"application\": \"putgd-ui\", \"name\": \"Save original file as\", \"pid\": 2634667, \"rect\": [550, 267, 820, 520], \"role\": \"dialog\"}]; Chooser ready: backend=fallback, mode=save, title=Save original file as; Saved original: 4b809b5ca9f1076f378c55ed3500eb219dd427bdf5ff32c30e90d73a660fe2cb  [redacted]",
+      "host": "k72",
+      "placement": "native",
+      "destination": "local",
+      "review": true,
+      "review_reason": "No current fallback save chooser catalog capture is registered; No current fallback save chooser catalog capture is registered",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/dialogs.history_save_as_fallback/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "before",
+          "path": "frames/dialogs.history_save_as_fallback/01-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "dialog-ready",
+          "path": "frames/dialogs.history_save_as_fallback/02-dialog-ready.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after-cancel",
+          "path": "frames/dialogs.history_save_as_fallback/03-after-cancel.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "dialog-ready",
+          "path": "frames/dialogs.history_save_as_fallback/04-dialog-ready.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "path-entered",
+          "path": "frames/dialogs.history_save_as_fallback/05-path-entered.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/dialogs.history_save_as_fallback/06-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/dialogs.history_save_as_fallback/07-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "dialogs.history_save_as_fallback",
+      "build": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+      "at": "2026-11-10T20:58:39Z"
+    },
+    {
+      "interaction": "history.search",
+      "desktop": "kubuntu-kde-wayland",
+      "package": "deb",
+      "functional": "failed",
+      "visual": "frames",
+      "receipt": "/tmp/hp2kout4/receipt.json",
+      "note": "operationId=f0c95cf4-a789-442c-807d-145041ec8cc6; recipe deadline exceeded: history.search",
+      "host": "k72",
+      "placement": "native",
+      "destination": "local",
+      "review": true,
+      "review_reason": "catalog mismatch (distance=0.844507, tolerance=0.025): actual=/tmp/hp2kout4/frames/history.search/01-before.png reference=/home/patrick/work/put.gd-history-ui/work/accept/2026-11-10-history-page-acceptance-2/catalog/01-history-list.png",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/history.search/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "before",
+          "path": "frames/history.search/01-before.png",
+          "window": "history",
+          "reference": "01-history-list",
+          "distance": 0.8445071211220944,
+          "tolerance": 0.025
+        },
+        {
+          "label": "after",
+          "path": "frames/history.search/02-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "history.search",
+      "build": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+      "at": "2026-11-10T21:01:02Z"
+    },
+    {
+      "interaction": "history.categories",
+      "desktop": "kubuntu-kde-wayland",
+      "package": "deb",
+      "functional": "blocked",
+      "visual": "frames",
+      "receipt": "/tmp/hp2kout4/receipt.json",
+      "issue": 666,
+      "note": "operationId=2c732b2e-0e0a-40eb-a33c-e674c37bfe1c; fake credential collection is restricted to a disposable nested guest",
+      "host": "k72",
+      "placement": "native",
+      "destination": "local",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/history.categories/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/history.categories/01-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "history.categories",
+      "build": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+      "at": "2026-11-10T21:02:11Z"
+    },
+    {
+      "interaction": "history.clear-filters",
+      "desktop": "kubuntu-kde-wayland",
+      "package": "deb",
+      "functional": "failed",
+      "visual": "frames",
+      "receipt": "/tmp/hp2kout4/receipt.json",
+      "note": "runner interrupted by SIGTERM",
+      "host": "k72",
+      "placement": "native",
+      "destination": "local",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/history.clear_filters/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/history.clear_filters/01-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "history.clear_filters",
+      "build": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+      "at": "2026-11-10T21:02:41Z"
+    }
+  ]
+}

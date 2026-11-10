@@ -1,0 +1,572 @@
+{
+    "class": "putgd::MainWindow",
+    "controls": [
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "applicationMenu",
+            "rect": [
+                12,
+                8,
+                32,
+                32
+            ],
+            "text": "Application menu"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "windowMinimize",
+            "rect": [
+                944,
+                8,
+                32,
+                32
+            ],
+            "text": "Minimize"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "windowMaximize",
+            "rect": [
+                980,
+                8,
+                32,
+                32
+            ],
+            "text": "Maximize"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "windowClose",
+            "rect": [
+                1016,
+                8,
+                32,
+                32
+            ],
+            "text": "Close window"
+        },
+        {
+            "class": "putgd::Ui::Segmented",
+            "enabled": true,
+            "kind": "tabs",
+            "name": "mainNavigation",
+            "rect": [
+                358,
+                4,
+                344,
+                40
+            ],
+            "tabs": [
+                {
+                    "current": false,
+                    "rect": [
+                        358,
+                        4,
+                        110,
+                        40
+                    ],
+                    "text": "History"
+                },
+                {
+                    "current": true,
+                    "rect": [
+                        468,
+                        4,
+                        124,
+                        40
+                    ],
+                    "text": "Destinations"
+                },
+                {
+                    "current": false,
+                    "rect": [
+                        592,
+                        4,
+                        110,
+                        40
+                    ],
+                    "text": "Settings"
+                }
+            ],
+            "text": ""
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                12,
+                56,
+                137,
+                32
+            ],
+            "text": "Capture region"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                153,
+                56,
+                93,
+                32
+            ],
+            "text": "Window"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                250,
+                56,
+                91,
+                32
+            ],
+            "text": "Monitor"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                345,
+                56,
+                94,
+                32
+            ],
+            "text": "Desktop"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                448,
+                56,
+                207,
+                32
+            ],
+            "text": "Capture region && edit"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                659,
+                56,
+                132,
+                32
+            ],
+            "text": "Record screen"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                898,
+                56,
+                150,
+                32
+            ],
+            "text": "Upload clipboard"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QPushButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "chooseCommandOutput",
+            "rect": [
+                926,
+                104,
+                122,
+                36
+            ],
+            "text": "Change output"
+        },
+        {
+            "class": "QListWidget",
+            "enabled": true,
+            "kind": "list",
+            "name": "destinationList",
+            "rect": [
+                16,
+                164,
+                184,
+                412
+            ],
+            "rows": 2,
+            "text": ""
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QPushButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "addS3Destination",
+            "rect": [
+                16,
+                588,
+                184,
+                36
+            ],
+            "text": "Add destination"
+        },
+        {
+            "class": "QComboBox",
+            "count": 36,
+            "enabled": true,
+            "kind": "choice",
+            "name": "s3RegionChoices",
+            "rect": [
+                461,
+                134,
+                531,
+                36
+            ],
+            "text": "us-east-1"
+        },
+        {
+            "class": "QLineEdit",
+            "echo": 0,
+            "enabled": true,
+            "kind": "field",
+            "name": "s3ObjectPrefix",
+            "readOnly": false,
+            "rect": [
+                461,
+                186,
+                531,
+                36
+            ],
+            "text": "Bucket root"
+        },
+        {
+            "checkable": true,
+            "checked": false,
+            "class": "QCheckBox",
+            "enabled": true,
+            "kind": "button",
+            "name": "customEndpoint",
+            "rect": [
+                264,
+                363,
+                173,
+                32
+            ],
+            "text": "Use a custom endpoint"
+        },
+        {
+            "checkable": true,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "customEndpointHelp",
+            "rect": [
+                441,
+                367,
+                24,
+                24
+            ],
+            "text": "Show and edit the S3 service endpoint. An unchanged AWS endpoint follows the selected region; custom endpoints are preserved. Unchecking hides this editor without changing an existing custom endpoint."
+        },
+        {
+            "checkable": true,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "s3StorageClassHelp",
+            "rect": [
+                352,
+                417,
+                24,
+                24
+            ],
+            "text": "The S3 storage class requested for new uploads. STANDARD is the default. Other classes can have different access, retrieval and storage costs; use a value supported by your destination. This setting doesn't change the class of existing objects."
+        },
+        {
+            "class": "QLineEdit",
+            "echo": 0,
+            "enabled": true,
+            "kind": "field",
+            "name": "s3StorageClass",
+            "readOnly": false,
+            "rect": [
+                461,
+                411,
+                531,
+                36
+            ],
+            "text": "The S3 storage class requested for new uploads. STANDARD is the default. Other classes can have different access, retrieval and storage costs; use a value supported by your destination. This setting doesn't change the class of existing objects."
+        },
+        {
+            "checkable": true,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "s3ConnectTimeoutMsControlHelp",
+            "rect": [
+                373,
+                469,
+                24,
+                24
+            ],
+            "text": "The connection timeout shown in seconds, with millisecond precision. The default is 5 seconds. It limits how long a storage request waits to establish a connection; it is separate from the overall request timeout below."
+        },
+        {
+            "class": "QDoubleSpinBox",
+            "enabled": true,
+            "kind": "stepper",
+            "name": "s3ConnectTimeoutMsControl",
+            "rect": [
+                461,
+                463,
+                228,
+                38
+            ],
+            "text": "5 seconds"
+        },
+        {
+            "checkable": true,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "s3RequestTimeoutMsControlHelp",
+            "rect": [
+                373,
+                523,
+                24,
+                24
+            ],
+            "text": "The request timeout shown in seconds, with millisecond precision. The default is 60 seconds. It controls the storage client's request timeout. Allow enough time for your connection and file sizes; a timed-out upload may still need reconciliation before its remote result is known."
+        },
+        {
+            "class": "QDoubleSpinBox",
+            "enabled": true,
+            "kind": "stepper",
+            "name": "s3RequestTimeoutMsControl",
+            "rect": [
+                461,
+                517,
+                228,
+                38
+            ],
+            "text": "60 seconds"
+        },
+        {
+            "checkable": true,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "s3LowSpeedBytesPerSecondControlHelp",
+            "rect": [
+                421,
+                577,
+                24,
+                24
+            ],
+            "text": "The minimum sustained transfer rate in whole KB/s (1 KB = 1024 bytes). The default, Any progress, treats any data still moving as progress. A transfer below this rate for the low-speed window is considered stalled. This is a stall threshold, not an upload speed limit or a file-size limit."
+        },
+        {
+            "class": "QDoubleSpinBox",
+            "enabled": true,
+            "kind": "stepper",
+            "name": "s3LowSpeedBytesPerSecondControl",
+            "rect": [
+                461,
+                571,
+                177,
+                38
+            ],
+            "text": "Any progress"
+        },
+        {
+            "checkable": true,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "s3LowSpeedTimeSecondsControlHelp",
+            "rect": [
+                390,
+                631,
+                24,
+                24
+            ],
+            "text": "The number of seconds a transfer may remain below the minimum transfer rate before it is considered stalled. The default is 30 seconds. It works with Minimum transfer and doesn't cap an upload's total duration."
+        },
+        {
+            "class": "QDoubleSpinBox",
+            "enabled": true,
+            "kind": "stepper",
+            "name": "s3LowSpeedTimeSecondsControl",
+            "rect": [
+                461,
+                625,
+                225,
+                38
+            ],
+            "text": "30 seconds"
+        },
+        {
+            "class": "QLabel",
+            "enabled": true,
+            "kind": "focusable",
+            "name": "s3EndpointValue",
+            "rect": [
+                461,
+                311,
+                531,
+                36
+            ],
+            "text": "https://s3.us-east-1.amazonaws.com"
+        },
+        {
+            "checkable": true,
+            "checked": true,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "advancedSettings",
+            "rect": [
+                978,
+                259,
+                14,
+                36
+            ],
+            "text": ""
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureOutputSummary",
+            "rect": [
+                18,
+                643,
+                193,
+                35
+            ],
+            "text": "Captures have no output"
+        }
+    ],
+    "height": 680,
+    "keys": [
+        {
+            "context": 3,
+            "enabled": true,
+            "keys": [
+                "Esc"
+            ],
+            "name": "historyDetailsEscape",
+            "text": ""
+        },
+        {
+            "context": 0,
+            "enabled": true,
+            "keys": [
+                "Return",
+                "Enter"
+            ],
+            "name": "",
+            "text": ""
+        },
+        {
+            "context": 0,
+            "enabled": true,
+            "keys": [
+                "Menu",
+                "Shift+F10"
+            ],
+            "name": "",
+            "text": ""
+        },
+        {
+            "context": 3,
+            "enabled": true,
+            "keys": [
+                "Alt+Left"
+            ],
+            "name": "historyPreviousPage",
+            "text": ""
+        },
+        {
+            "context": 3,
+            "enabled": true,
+            "keys": [
+                "Alt+Right"
+            ],
+            "name": "historyNextPage",
+            "text": ""
+        },
+        {
+            "context": 0,
+            "enabled": true,
+            "keys": [
+                "Alt+Up"
+            ],
+            "name": "moveDestinationUp",
+            "text": "Move up"
+        },
+        {
+            "context": 0,
+            "enabled": false,
+            "keys": [
+                "Alt+Down"
+            ],
+            "name": "moveDestinationDown",
+            "text": "Move down"
+        }
+    ],
+    "width": 1060
+}

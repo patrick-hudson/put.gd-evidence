@@ -1,0 +1,501 @@
+{
+    "class": "putgd::MainWindow",
+    "controls": [
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "applicationMenu",
+            "rect": [
+                12,
+                12,
+                32,
+                32
+            ],
+            "text": "Application menu"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "windowMinimize",
+            "rect": [
+                1324,
+                12,
+                32,
+                32
+            ],
+            "text": "Minimize"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "windowMaximize",
+            "rect": [
+                1360,
+                12,
+                32,
+                32
+            ],
+            "text": "Maximize"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "windowClose",
+            "rect": [
+                1396,
+                12,
+                32,
+                32
+            ],
+            "text": "Close window"
+        },
+        {
+            "class": "putgd::Ui::Segmented",
+            "enabled": true,
+            "kind": "tabs",
+            "name": "mainNavigation",
+            "rect": [
+                548,
+                8,
+                344,
+                40
+            ],
+            "tabs": [
+                {
+                    "current": false,
+                    "rect": [
+                        548,
+                        8,
+                        110,
+                        40
+                    ],
+                    "text": "History"
+                },
+                {
+                    "current": false,
+                    "rect": [
+                        658,
+                        8,
+                        124,
+                        40
+                    ],
+                    "text": "Destinations"
+                },
+                {
+                    "current": true,
+                    "rect": [
+                        782,
+                        8,
+                        110,
+                        40
+                    ],
+                    "text": "Settings"
+                }
+            ],
+            "text": ""
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                12,
+                64,
+                153,
+                36
+            ],
+            "text": "Capture region"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                173,
+                64,
+                160,
+                36
+            ],
+            "text": "Capture window"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                341,
+                64,
+                161,
+                36
+            ],
+            "text": "Capture monitor"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                510,
+                64,
+                162,
+                36
+            ],
+            "text": "Capture desktop"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                689,
+                64,
+                219,
+                36
+            ],
+            "text": "Capture region && edit"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                916,
+                64,
+                148,
+                36
+            ],
+            "text": "Record screen"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                1262,
+                64,
+                166,
+                36
+            ],
+            "text": "Upload clipboard"
+        },
+        {
+            "class": "QListWidget",
+            "enabled": true,
+            "kind": "list",
+            "name": "settingsNavigation",
+            "rect": [
+                16,
+                124,
+                184,
+                156
+            ],
+            "rows": 4,
+            "text": ""
+        },
+        {
+            "class": "QTabWidget",
+            "enabled": true,
+            "kind": "focusable",
+            "name": "settingsTabs",
+            "rect": [
+                216,
+                108,
+                1224,
+                812
+            ],
+            "text": ""
+        },
+        {
+            "checkable": true,
+            "checked": true,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "historyRetentionChoiceHelp",
+            "rect": [
+                368,
+                227,
+                24,
+                24
+            ],
+            "text": "How many days completed history metadata is retained before automatic pruning. Choose Forever to keep history indefinitely, or enter a number of days. Removing old history metadata doesn't delete remote uploads or your saved local files."
+        },
+        {
+            "class": "QComboBox",
+            "count": 4,
+            "enabled": true,
+            "kind": "choice",
+            "name": "historyRetentionChoice",
+            "rect": [
+                528,
+                221,
+                464,
+                36
+            ],
+            "text": "Forever"
+        },
+        {
+            "class": "QComboBox",
+            "count": 7,
+            "enabled": true,
+            "kind": "choice",
+            "name": "failedArtifactChoice",
+            "rect": [
+                528,
+                328,
+                464,
+                36
+            ],
+            "text": "7 days"
+        },
+        {
+            "class": "QLineEdit",
+            "echo": 0,
+            "enabled": true,
+            "kind": "field",
+            "name": "recentActivityLimit",
+            "readOnly": false,
+            "rect": [
+                872,
+                418,
+                120,
+                36
+            ],
+            "text": "The maximum number of recent operation snapshots available to History. The default is 100. This bounds the activity list; it doesn't set the complete upload-history retention period below."
+        },
+        {
+            "checkable": true,
+            "checked": true,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "resourceLimitsToggle",
+            "rect": [
+                248,
+                462,
+                760,
+                52
+            ],
+            "text": "Resource limits"
+        },
+        {
+            "class": "QLineEdit",
+            "echo": 0,
+            "enabled": true,
+            "kind": "field",
+            "name": "concurrentUploads",
+            "readOnly": false,
+            "rect": [
+                451,
+                579,
+                120,
+                36
+            ],
+            "text": "How many files upload at the same time, across every capture and batch. The default is 3. A new capture starts while a large or slow upload continues, and a large file uses one upload however long it takes. Each S3 upload runs in its own small worker process (about 40 MB); Proton Drive uploads one file at a time per account whatever this is set to. Higher values help many small files more than one large one."
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QPushButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "",
+            "rect": [
+                579,
+                579,
+                66,
+                36
+            ],
+            "text": "Reset"
+        },
+        {
+            "class": "QComboBox",
+            "count": 2,
+            "enabled": true,
+            "kind": "choice",
+            "name": "maxFileBytesChoice",
+            "rect": [
+                451,
+                627,
+                120,
+                36
+            ],
+            "text": "Auto"
+        },
+        {
+            "class": "QComboBox",
+            "count": 2,
+            "enabled": true,
+            "kind": "choice",
+            "name": "maxBatchBytesChoice",
+            "rect": [
+                451,
+                675,
+                120,
+                36
+            ],
+            "text": "Auto"
+        },
+        {
+            "class": "QComboBox",
+            "count": 2,
+            "enabled": true,
+            "kind": "choice",
+            "name": "pendingArtifactBytesChoice",
+            "rect": [
+                451,
+                723,
+                120,
+                36
+            ],
+            "text": "Auto"
+        },
+        {
+            "class": "QLineEdit",
+            "echo": 0,
+            "enabled": true,
+            "kind": "field",
+            "name": "maxFiles",
+            "readOnly": false,
+            "rect": [
+                451,
+                792,
+                120,
+                36
+            ],
+            "text": "The maximum number of files accepted from one clipboard action. The default is 100. A batch above this limit is rejected before uploading its files. This is a per-action limit and doesn't restrict the total number of history entries."
+        },
+        {
+            "class": "QLineEdit",
+            "echo": 0,
+            "enabled": true,
+            "kind": "field",
+            "name": "pendingOperations",
+            "readOnly": false,
+            "rect": [
+                451,
+                840,
+                120,
+                36
+            ],
+            "text": "The maximum number of queued operations waiting for processing, in addition to those currently running. The default is 8. When the queue is full, a new action is rejected rather than accumulating more pending work."
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureOutputSummary",
+            "rect": [
+                18,
+                923,
+                369,
+                35
+            ],
+            "text": "Capture output · Shared link · Proton Drive + local copy"
+        }
+    ],
+    "height": 960,
+    "keys": [
+        {
+            "context": 3,
+            "enabled": true,
+            "keys": [
+                "Esc"
+            ],
+            "name": "historyDetailsEscape",
+            "text": ""
+        },
+        {
+            "context": 0,
+            "enabled": true,
+            "keys": [
+                "Return",
+                "Enter"
+            ],
+            "name": "",
+            "text": ""
+        },
+        {
+            "context": 0,
+            "enabled": true,
+            "keys": [
+                "Menu",
+                "Shift+F10"
+            ],
+            "name": "",
+            "text": ""
+        },
+        {
+            "context": 3,
+            "enabled": true,
+            "keys": [
+                "Alt+Left"
+            ],
+            "name": "historyPreviousPage",
+            "text": ""
+        },
+        {
+            "context": 3,
+            "enabled": true,
+            "keys": [
+                "Alt+Right"
+            ],
+            "name": "historyNextPage",
+            "text": ""
+        },
+        {
+            "context": 0,
+            "enabled": true,
+            "keys": [
+                "Alt+Up"
+            ],
+            "name": "moveDestinationUp",
+            "text": "Move up"
+        },
+        {
+            "context": 0,
+            "enabled": false,
+            "keys": [
+                "Alt+Down"
+            ],
+            "name": "moveDestinationDown",
+            "text": "Move down"
+        }
+    ],
+    "width": 1440
+}

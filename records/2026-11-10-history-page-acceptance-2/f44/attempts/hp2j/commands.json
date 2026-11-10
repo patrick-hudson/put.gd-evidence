@@ -1,0 +1,1245 @@
+[
+  {
+    "method": "diagnostics",
+    "params": {},
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "5bda9cd2-87e5-41a5-acf6-53353ac74937",
+      "result": {
+        "activeOperations": 0,
+        "artifactCleanup": {
+          "automatic": false,
+          "incompleteUploadNotice": null,
+          "intervalMs": 3600000,
+          "last": null,
+          "running": false
+        },
+        "backend": "Qt",
+        "build": {
+          "baseVersion": "26.1110.4614",
+          "commitCount": 4614,
+          "dirty": false,
+          "gitCommit": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+          "gitTree": "2e4e888dbd72187de60b5739b98554e594ac65bf",
+          "packageVersion": "26.1110.4614~dev+g8662a5fd13b3",
+          "schemaVersion": 1,
+          "sourceProvenance": "git",
+          "version": "26.1110.4614-dev+g8662a5fd13b3"
+        },
+        "capabilities": {
+          "editor": {
+            "admissionPixels": 24000000,
+            "available": true,
+            "blurStyles": [
+              "blur",
+              "pixelate"
+            ],
+            "commands": [
+              "inspect",
+              "apply",
+              "preview",
+              "saveCopy",
+              "copy",
+              "fileDialog",
+              "view",
+              "submit",
+              "cancel",
+              "raise"
+            ],
+            "fileFormats": [
+              "png",
+              "jpeg"
+            ],
+            "open": false,
+            "output": "png",
+            "shapes": [
+              "redact",
+              "blur",
+              "arrow",
+              "rectangle",
+              "text",
+              "highlight",
+              "step",
+              "pen",
+              "ellipse",
+              "line"
+            ],
+            "sources": [
+              "region",
+              "window",
+              "desktop",
+              "clipboard",
+              "file"
+            ]
+          },
+          "providers": {
+            "backblaze-b2": {
+              "conditionalCreate": true,
+              "conditionalDelete": false,
+              "conditionalReplace": false,
+              "delete": true,
+              "deletionEffect": "Deletes exactly the uploaded B2 file version by its ID. put.gd never uploads over a visible file, so the name then shows nothing, or an older version that was hidden before the upload. Authorized links stop working when they expire.",
+              "maximumNameBytes": 1023,
+              "maximumObjectBytes": 10000000000000,
+              "privateUploads": false,
+              "referenceDelete": false,
+              "serverNamesObjects": false,
+              "sharing": false,
+              "stat": true,
+              "urls": true,
+              "versionAddressing": true
+            },
+            "custom-http": {
+              "conditionalCreate": false,
+              "conditionalDelete": false,
+              "conditionalReplace": false,
+              "delete": false,
+              "deletionEffect": "Asks the server to delete this upload through the deletion URL it returned with the link. What the server removes, and how soon the link stops working, is up to the server.",
+              "maximumNameBytes": 255,
+              "maximumObjectBytes": null,
+              "privateUploads": false,
+              "referenceDelete": true,
+              "serverNamesObjects": true,
+              "sharing": false,
+              "stat": false,
+              "urls": true,
+              "versionAddressing": false
+            },
+            "proton-drive": {
+              "conditionalCreate": true,
+              "conditionalDelete": false,
+              "conditionalReplace": false,
+              "delete": false,
+              "deletionEffect": "Safe remote deletion is unavailable: Proton does not expose an atomic revision-guarded file deletion. Revoke share links separately.",
+              "maximumNameBytes": 255,
+              "maximumObjectBytes": null,
+              "privateUploads": true,
+              "referenceDelete": false,
+              "serverNamesObjects": false,
+              "sharing": true,
+              "stat": true,
+              "urls": true,
+              "versionAddressing": false
+            },
+            "s3": {
+              "conditionalCreate": true,
+              "conditionalDelete": true,
+              "conditionalReplace": true,
+              "delete": true,
+              "deletionEffect": "Guarded origin removal; selected versions only; browser/CDN caches may retain bytes",
+              "maximumNameBytes": 1024,
+              "maximumObjectBytes": 5497558138880,
+              "privateUploads": false,
+              "referenceDelete": false,
+              "serverNamesObjects": false,
+              "sharing": false,
+              "stat": true,
+              "urls": true,
+              "versionAddressing": true
+            }
+          },
+          "recording": {
+            "active": null,
+            "audio": {
+              "microphone": false,
+              "system": false
+            },
+            "available": false,
+            "clickHighlights": {
+              "available": false,
+              "drawnBy": "recorder",
+              "message": "put.gd's GNOME extension is not installed. Reinstall the put.gd package.",
+              "reason": "gnome_extension_missing",
+              "route": "gnome-shell-extension",
+              "targets": [
+                "monitor",
+                "desktop",
+                "region",
+                "window"
+              ]
+            },
+            "codecs": {},
+            "commands": [
+              "windows",
+              "microphones",
+              "prepare",
+              "start",
+              "pause",
+              "resume",
+              "stop",
+              "cancel",
+              "inspect",
+              "select",
+              "raise",
+              "overlay",
+              "audio",
+              "edit",
+              "preview",
+              "review",
+              "saveCopy",
+              "upload"
+            ],
+            "editCommands": [
+              "setTrim",
+              "resetTrim",
+              "addMask",
+              "updateMask",
+              "removeMask"
+            ],
+            "formats": [],
+            "limits": {
+              "animationMaxEdge": 1280,
+              "animationMaxUs": 60000000,
+              "maxFileBytes": 1099511627776,
+              "maxMasks": 64
+            },
+            "maskKinds": [
+              "blur",
+              "solid"
+            ],
+            "overlayExclusion": {},
+            "reason": "recording_not_probed",
+            "states": [
+              "preparing",
+              "ready",
+              "starting",
+              "recording",
+              "paused",
+              "stopping",
+              "reviewing",
+              "exporting",
+              "submitted",
+              "cancelled",
+              "failed"
+            ],
+            "targets": [],
+            "timeUnit": "microseconds",
+            "windowList": true
+          },
+          "source": {
+            "adapter": "gnome-wayland",
+            "capture": {
+              "desktop": {
+                "available": false,
+                "consent": "one-time-extension-setup",
+                "error": {
+                  "code": "gnome_extension_missing",
+                  "details": {
+                    "shellVersion": "50.6"
+                  },
+                  "message": "put.gd's GNOME extension is not installed. Reinstall the put.gd package."
+                },
+                "mode": "compositor-native"
+              },
+              "monitor": {
+                "available": false,
+                "consent": "one-time-extension-setup",
+                "error": {
+                  "code": "gnome_extension_missing",
+                  "details": {
+                    "shellVersion": "50.6"
+                  },
+                  "message": "put.gd's GNOME extension is not installed. Reinstall the put.gd package."
+                },
+                "mode": "compositor-native"
+              },
+              "region": {
+                "available": false,
+                "consent": "one-time-extension-setup",
+                "error": {
+                  "code": "gnome_extension_missing",
+                  "details": {
+                    "shellVersion": "50.6"
+                  },
+                  "message": "put.gd's GNOME extension is not installed. Reinstall the put.gd package."
+                },
+                "mode": "compositor-native"
+              },
+              "repeat": {
+                "available": false,
+                "consent": "one-time-extension-setup",
+                "error": {
+                  "code": "gnome_extension_missing",
+                  "details": {
+                    "shellVersion": "50.6"
+                  },
+                  "message": "put.gd's GNOME extension is not installed. Reinstall the put.gd package."
+                },
+                "mode": "compositor-native",
+                "remembered": false
+              },
+              "window": {
+                "available": false,
+                "consent": "one-time-extension-setup",
+                "error": {
+                  "code": "gnome_extension_missing",
+                  "details": {
+                    "shellVersion": "50.6"
+                  },
+                  "message": "put.gd's GNOME extension is not installed. Reinstall the put.gd package."
+                },
+                "mode": "compositor-native"
+              }
+            },
+            "clipboard": {
+              "available": false,
+              "error": {
+                "code": "gnome_extension_missing",
+                "details": {
+                  "shellVersion": "50.6"
+                },
+                "message": "put.gd's GNOME extension is not installed. Reinstall the put.gd package."
+              },
+              "import": "bounded-mutter-selection",
+              "result": "st-clipboard-only",
+              "types": [
+                "files",
+                "image",
+                "text"
+              ]
+            },
+            "delay": {
+              "available": false,
+              "error": {
+                "code": "gnome_extension_missing",
+                "details": {
+                  "shellVersion": "50.6"
+                },
+                "message": "put.gd's GNOME extension is not installed. Reinstall the put.gd package."
+              },
+              "indicator": "shell-actor",
+              "seconds": [
+                3,
+                5,
+                10
+              ]
+            },
+            "helper": {
+              "available": false,
+              "captureVersion": 1,
+              "error": {
+                "code": "gnome_extension_missing",
+                "details": {
+                  "shellVersion": "50.6"
+                },
+                "message": "put.gd's GNOME extension is not installed. Reinstall the put.gd package."
+              },
+              "outdated": false,
+              "packagedExtensionVersion": 21,
+              "protocol": 1,
+              "recordingVersion": 0,
+              "setup": {
+                "code": "gnome_extension_missing",
+                "details": {
+                  "shellVersion": "50.6"
+                },
+                "message": "put.gd's GNOME extension is not installed. Reinstall the put.gd package.",
+                "state": "not_installed"
+              },
+              "uuid": "putgd@put.gd"
+            },
+            "shortcuts": {
+              "available": false,
+              "bindings": {
+                "clipboard": {
+                  "bound": false,
+                  "error": "disabled",
+                  "requested": ""
+                },
+                "desktop": {
+                  "bound": false,
+                  "error": "disabled",
+                  "requested": ""
+                },
+                "edit": {
+                  "bound": false,
+                  "error": "disabled",
+                  "requested": ""
+                },
+                "monitor": {
+                  "bound": false,
+                  "error": "disabled",
+                  "requested": ""
+                },
+                "record": {
+                  "bound": false,
+                  "error": "disabled",
+                  "requested": ""
+                },
+                "region": {
+                  "bound": false,
+                  "error": "disabled",
+                  "requested": ""
+                },
+                "repeat": {
+                  "bound": false,
+                  "error": "disabled",
+                  "requested": ""
+                },
+                "window": {
+                  "bound": false,
+                  "error": "disabled",
+                  "requested": ""
+                }
+              }
+            }
+          }
+        },
+        "journalReady": true,
+        "locations": {
+          "config": {
+            "path": "/tmp/hp2j/config/putgd",
+            "state": "current"
+          },
+          "data": {
+            "path": "/tmp/hp2j/data/putgd",
+            "state": "current"
+          },
+          "schemaVersion": 1
+        },
+        "logging": {
+          "available": true,
+          "bytes": 3154,
+          "debugLogging": false,
+          "debugLoggingExpiresAt": null,
+          "degraded": false,
+          "degradedReason": null,
+          "directory": "/tmp/hp2j/state/putgd/logs",
+          "droppedRecords": 0,
+          "files": 1,
+          "oldestRecord": "2026-11-10T20:47:20.457Z",
+          "retention": {
+            "bytes": 52428800,
+            "days": 14
+          },
+          "rotationBytes": 5242880
+        },
+        "loggingDegraded": false,
+        "memory": {
+          "allocatorReclamationCount": 0,
+          "allocatorReclamationPending": true,
+          "allocatorReclamationSupported": true,
+          "imagePageReleaseCount": 0,
+          "imagePageReleasePending": false,
+          "lastAllocatorReclamationUsec": 0,
+          "lastImagePageReleaseBytes": 0,
+          "lastImagePageReleaseUsec": 0
+        },
+        "previews": {
+          "queued": 0,
+          "running": false
+        },
+        "qtVersion": "6.12.0",
+        "release": {
+          "kind": "none",
+          "url": "",
+          "version": "26.1110.4614-dev+g8662a5fd13b3"
+        },
+        "schemaVersion": 1,
+        "storage": {
+          "backblaze-b2": {
+            "activeHelpers": 0,
+            "protocolVersion": 1
+          },
+          "custom-http": {
+            "activeHelpers": 0,
+            "protocolVersion": 1
+          },
+          "proton-drive": {
+            "activeHelpers": 0,
+            "protocolVersion": 1
+          },
+          "s3": {
+            "lanes": 1,
+            "moduleLiveDrivers": 0,
+            "queuedRequests": 0,
+            "retainedDrivers": 0,
+            "workerStarted": false
+          }
+        },
+        "uncleanExit": {
+          "detected": false,
+          "last": null,
+          "recent": []
+        },
+        "uploadSlots": {
+          "active": 0,
+          "capacity": 1,
+          "lent": 0,
+          "operations": 0,
+          "waiting": 0
+        }
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "capabilities",
+    "params": {},
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "5f0f3850-a086-492c-ad98-3afaeefb962e",
+      "result": {
+        "editor": {
+          "admissionPixels": 24000000,
+          "available": true,
+          "blurStyles": [
+            "blur",
+            "pixelate"
+          ],
+          "commands": [
+            "inspect",
+            "apply",
+            "preview",
+            "saveCopy",
+            "copy",
+            "fileDialog",
+            "view",
+            "submit",
+            "cancel",
+            "raise"
+          ],
+          "fileFormats": [
+            "png",
+            "jpeg"
+          ],
+          "open": false,
+          "output": "png",
+          "shapes": [
+            "redact",
+            "blur",
+            "arrow",
+            "rectangle",
+            "text",
+            "highlight",
+            "step",
+            "pen",
+            "ellipse",
+            "line"
+          ],
+          "sources": [
+            "region",
+            "window",
+            "desktop",
+            "clipboard",
+            "file"
+          ]
+        },
+        "providers": {
+          "backblaze-b2": {
+            "conditionalCreate": true,
+            "conditionalDelete": false,
+            "conditionalReplace": false,
+            "delete": true,
+            "deletionEffect": "Deletes exactly the uploaded B2 file version by its ID. put.gd never uploads over a visible file, so the name then shows nothing, or an older version that was hidden before the upload. Authorized links stop working when they expire.",
+            "maximumNameBytes": 1023,
+            "maximumObjectBytes": 10000000000000,
+            "privateUploads": false,
+            "referenceDelete": false,
+            "serverNamesObjects": false,
+            "sharing": false,
+            "stat": true,
+            "urls": true,
+            "versionAddressing": true
+          },
+          "custom-http": {
+            "conditionalCreate": false,
+            "conditionalDelete": false,
+            "conditionalReplace": false,
+            "delete": false,
+            "deletionEffect": "Asks the server to delete this upload through the deletion URL it returned with the link. What the server removes, and how soon the link stops working, is up to the server.",
+            "maximumNameBytes": 255,
+            "maximumObjectBytes": null,
+            "privateUploads": false,
+            "referenceDelete": true,
+            "serverNamesObjects": true,
+            "sharing": false,
+            "stat": false,
+            "urls": true,
+            "versionAddressing": false
+          },
+          "proton-drive": {
+            "conditionalCreate": true,
+            "conditionalDelete": false,
+            "conditionalReplace": false,
+            "delete": false,
+            "deletionEffect": "Safe remote deletion is unavailable: Proton does not expose an atomic revision-guarded file deletion. Revoke share links separately.",
+            "maximumNameBytes": 255,
+            "maximumObjectBytes": null,
+            "privateUploads": true,
+            "referenceDelete": false,
+            "serverNamesObjects": false,
+            "sharing": true,
+            "stat": true,
+            "urls": true,
+            "versionAddressing": false
+          },
+          "s3": {
+            "conditionalCreate": true,
+            "conditionalDelete": true,
+            "conditionalReplace": true,
+            "delete": true,
+            "deletionEffect": "Guarded origin removal; selected versions only; browser/CDN caches may retain bytes",
+            "maximumNameBytes": 1024,
+            "maximumObjectBytes": 5497558138880,
+            "privateUploads": false,
+            "referenceDelete": false,
+            "serverNamesObjects": false,
+            "sharing": false,
+            "stat": true,
+            "urls": true,
+            "versionAddressing": true
+          }
+        },
+        "recording": {
+          "active": null,
+          "audio": {
+            "microphone": false,
+            "system": false
+          },
+          "available": false,
+          "clickHighlights": {
+            "available": false,
+            "drawnBy": "recorder",
+            "message": "put.gd's GNOME extension is not installed. Reinstall the put.gd package.",
+            "reason": "gnome_extension_missing",
+            "route": "gnome-shell-extension",
+            "targets": [
+              "monitor",
+              "desktop",
+              "region",
+              "window"
+            ]
+          },
+          "codecs": {},
+          "commands": [
+            "windows",
+            "microphones",
+            "prepare",
+            "start",
+            "pause",
+            "resume",
+            "stop",
+            "cancel",
+            "inspect",
+            "select",
+            "raise",
+            "overlay",
+            "audio",
+            "edit",
+            "preview",
+            "review",
+            "saveCopy",
+            "upload"
+          ],
+          "editCommands": [
+            "setTrim",
+            "resetTrim",
+            "addMask",
+            "updateMask",
+            "removeMask"
+          ],
+          "formats": [],
+          "limits": {
+            "animationMaxEdge": 1280,
+            "animationMaxUs": 60000000,
+            "maxFileBytes": 1099511627776,
+            "maxMasks": 64
+          },
+          "maskKinds": [
+            "blur",
+            "solid"
+          ],
+          "overlayExclusion": {},
+          "reason": "recording_not_probed",
+          "states": [
+            "preparing",
+            "ready",
+            "starting",
+            "recording",
+            "paused",
+            "stopping",
+            "reviewing",
+            "exporting",
+            "submitted",
+            "cancelled",
+            "failed"
+          ],
+          "targets": [],
+          "timeUnit": "microseconds",
+          "windowList": true
+        },
+        "source": {
+          "adapter": "gnome-wayland",
+          "capture": {
+            "desktop": {
+              "available": false,
+              "consent": "one-time-extension-setup",
+              "error": {
+                "code": "gnome_extension_missing",
+                "details": {
+                  "shellVersion": "50.6"
+                },
+                "message": "put.gd's GNOME extension is not installed. Reinstall the put.gd package."
+              },
+              "mode": "compositor-native"
+            },
+            "monitor": {
+              "available": false,
+              "consent": "one-time-extension-setup",
+              "error": {
+                "code": "gnome_extension_missing",
+                "details": {
+                  "shellVersion": "50.6"
+                },
+                "message": "put.gd's GNOME extension is not installed. Reinstall the put.gd package."
+              },
+              "mode": "compositor-native"
+            },
+            "region": {
+              "available": false,
+              "consent": "one-time-extension-setup",
+              "error": {
+                "code": "gnome_extension_missing",
+                "details": {
+                  "shellVersion": "50.6"
+                },
+                "message": "put.gd's GNOME extension is not installed. Reinstall the put.gd package."
+              },
+              "mode": "compositor-native"
+            },
+            "repeat": {
+              "available": false,
+              "consent": "one-time-extension-setup",
+              "error": {
+                "code": "gnome_extension_missing",
+                "details": {
+                  "shellVersion": "50.6"
+                },
+                "message": "put.gd's GNOME extension is not installed. Reinstall the put.gd package."
+              },
+              "mode": "compositor-native",
+              "remembered": false
+            },
+            "window": {
+              "available": false,
+              "consent": "one-time-extension-setup",
+              "error": {
+                "code": "gnome_extension_missing",
+                "details": {
+                  "shellVersion": "50.6"
+                },
+                "message": "put.gd's GNOME extension is not installed. Reinstall the put.gd package."
+              },
+              "mode": "compositor-native"
+            }
+          },
+          "clipboard": {
+            "available": false,
+            "error": {
+              "code": "gnome_extension_missing",
+              "details": {
+                "shellVersion": "50.6"
+              },
+              "message": "put.gd's GNOME extension is not installed. Reinstall the put.gd package."
+            },
+            "import": "bounded-mutter-selection",
+            "result": "st-clipboard-only",
+            "types": [
+              "files",
+              "image",
+              "text"
+            ]
+          },
+          "delay": {
+            "available": false,
+            "error": {
+              "code": "gnome_extension_missing",
+              "details": {
+                "shellVersion": "50.6"
+              },
+              "message": "put.gd's GNOME extension is not installed. Reinstall the put.gd package."
+            },
+            "indicator": "shell-actor",
+            "seconds": [
+              3,
+              5,
+              10
+            ]
+          },
+          "helper": {
+            "available": false,
+            "captureVersion": 1,
+            "error": {
+              "code": "gnome_extension_missing",
+              "details": {
+                "shellVersion": "50.6"
+              },
+              "message": "put.gd's GNOME extension is not installed. Reinstall the put.gd package."
+            },
+            "outdated": false,
+            "packagedExtensionVersion": 21,
+            "protocol": 1,
+            "recordingVersion": 0,
+            "setup": {
+              "code": "gnome_extension_missing",
+              "details": {
+                "shellVersion": "50.6"
+              },
+              "message": "put.gd's GNOME extension is not installed. Reinstall the put.gd package.",
+              "state": "not_installed"
+            },
+            "uuid": "putgd@put.gd"
+          },
+          "shortcuts": {
+            "available": false,
+            "bindings": {
+              "clipboard": {
+                "bound": false,
+                "error": "disabled",
+                "requested": ""
+              },
+              "desktop": {
+                "bound": false,
+                "error": "disabled",
+                "requested": ""
+              },
+              "edit": {
+                "bound": false,
+                "error": "disabled",
+                "requested": ""
+              },
+              "monitor": {
+                "bound": false,
+                "error": "disabled",
+                "requested": ""
+              },
+              "record": {
+                "bound": false,
+                "error": "disabled",
+                "requested": ""
+              },
+              "region": {
+                "bound": false,
+                "error": "disabled",
+                "requested": ""
+              },
+              "repeat": {
+                "bound": false,
+                "error": "disabled",
+                "requested": ""
+              },
+              "window": {
+                "bound": false,
+                "error": "disabled",
+                "requested": ""
+              }
+            }
+          }
+        }
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "settings.get",
+    "params": {},
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "173e1296-cfad-45bc-9996-4ad5305bcd3b",
+      "result": {
+        "document": {
+          "actions": {
+            "clipboard": {
+              "destination": "local",
+              "profileId": null,
+              "shortcut": ""
+            },
+            "desktop": {
+              "destination": "local",
+              "profileId": null,
+              "shortcut": ""
+            },
+            "edit": {
+              "destination": "local",
+              "profileId": null,
+              "shortcut": ""
+            },
+            "monitor": {
+              "destination": "local",
+              "profileId": null,
+              "shortcut": ""
+            },
+            "record": {
+              "shortcut": ""
+            },
+            "region": {
+              "destination": "local",
+              "profileId": null,
+              "shortcut": ""
+            },
+            "repeat": {
+              "shortcut": ""
+            },
+            "window": {
+              "destination": "local",
+              "profileId": null,
+              "shortcut": ""
+            }
+          },
+          "archive": {
+            "folders": {
+              "images": null,
+              "other": null,
+              "text": null,
+              "videos": null
+            },
+            "keepUploads": true,
+            "root": "/tmp/hp2j/files"
+          },
+          "limits": {
+            "clipboardTextBytes": 16777216,
+            "concurrentUploads": 1,
+            "imageBytes": 536870912,
+            "imagePixels": 100000000,
+            "maxBatchBytes": "auto",
+            "maxFileBytes": "auto",
+            "maxFiles": 100,
+            "pendingArtifactBytes": "auto",
+            "pendingImageBytes": 67108864,
+            "pendingOperations": 8
+          },
+          "naming": {
+            "captureTemplate": "Screen-Capture-{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}.{ext}",
+            "collisionPolicy": "rename",
+            "fileTemplate": "{name}.{ext}",
+            "imageTemplate": "Image-{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}.{ext}",
+            "mode": "original",
+            "textTemplate": "Text-{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}.{ext}"
+          },
+          "preferences": {
+            "appearance": {
+              "theme": "dark"
+            },
+            "launchAtLogin": false,
+            "notifications": true,
+            "unlockCredentialsAtStartup": false,
+            "updates": {
+              "check": false
+            },
+            "uploadClipboardBehavior": "each_link"
+          },
+          "profiles": [],
+          "retention": {
+            "failedArtifactDays": 7,
+            "historyRetentionDays": null,
+            "previewCacheBytes": 268435456,
+            "recentActivityLimit": 100
+          },
+          "schemaVersion": 1
+        },
+        "effectiveLimits": {
+          "disk": {
+            "availableBytes": 3627446272,
+            "freeBytes": 4701188096,
+            "reserveBytes": 1073741824,
+            "reservedBytes": 0,
+            "totalBytes": 8320131072
+          },
+          "maxBatchBytes": null,
+          "maxFileBytes": null,
+          "pendingArtifactBytes": null
+        },
+        "metadata": {
+          "acceptedRevision": "97ac33bf9611e09cf0e0f7f65155db0a11dd8e4b5ca4457a0b44195eb90874f4",
+          "fallbackRescanMs": 2000,
+          "observedRevision": "97ac33bf9611e09cf0e0f7f65155db0a11dd8e4b5ca4457a0b44195eb90874f4",
+          "path": "/tmp/hp2j/config/putgd/config.json",
+          "schemaVersion": 1,
+          "validation": {
+            "error": {
+              "code": "",
+              "details": {},
+              "message": ""
+            },
+            "ok": true
+          },
+          "watching": true
+        }
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "editor.open",
+    "params": {
+      "source": "file",
+      "path": "/tmp/hp2j/synthetic.png"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "20e1e6d7-1944-453c-b2f8-f3746b4061c6",
+      "result": {
+        "operation": {
+          "action": "edit",
+          "cancelled": false,
+          "clipboardRevision": "0",
+          "copyStatus": "pending",
+          "created": "2026-11-10T20:47:20.548Z",
+          "destination": {
+            "credentials": {},
+            "profileId": "",
+            "profileRevision": "",
+            "providerId": "",
+            "settings": {}
+          },
+          "error": {
+            "code": "",
+            "details": {},
+            "message": ""
+          },
+          "id": "0fe5e909-2b92-449b-ba32-180c78b1c3ab",
+          "invocation": "1",
+          "items": [],
+          "phase": "accepted",
+          "requestTimeoutMs": null,
+          "settingsRevision": "97ac33bf9611e09cf0e0f7f65155db0a11dd8e4b5ca4457a0b44195eb90874f4",
+          "state": "accepted"
+        },
+        "operationId": "0fe5e909-2b92-449b-ba32-180c78b1c3ab"
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "editor.submit",
+    "params": {
+      "id": "0fe5e909-2b92-449b-ba32-180c78b1c3ab"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "4076827c-2cd1-40ca-a4da-804bf43974e5",
+      "result": {
+        "operationId": "0fe5e909-2b92-449b-ba32-180c78b1c3ab",
+        "submitted": true
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "operation.inspect",
+    "params": {
+      "id": "0fe5e909-2b92-449b-ba32-180c78b1c3ab"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "977ec0b1-28a6-417c-a265-b7d4b6d16560",
+      "result": {
+        "action": "edit",
+        "cancelled": false,
+        "clipboardRevision": "0",
+        "copyStatus": "pending",
+        "created": "2026-11-10T20:47:20.548Z",
+        "destination": {
+          "credentials": {},
+          "profileId": "",
+          "profileRevision": "",
+          "providerId": "",
+          "settings": {}
+        },
+        "error": {
+          "code": "",
+          "details": {},
+          "message": ""
+        },
+        "id": "0fe5e909-2b92-449b-ba32-180c78b1c3ab",
+        "invocation": "1",
+        "items": [],
+        "phase": "editing",
+        "requestTimeoutMs": null,
+        "settingsRevision": "97ac33bf9611e09cf0e0f7f65155db0a11dd8e4b5ca4457a0b44195eb90874f4",
+        "state": "editing"
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "operation.inspect",
+    "params": {
+      "id": "0fe5e909-2b92-449b-ba32-180c78b1c3ab"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "d99db4c6-6943-4b38-9137-05034ae11ca7",
+      "result": {
+        "action": "edit",
+        "cancelled": false,
+        "clipboardRevision": "0",
+        "copyStatus": "failed",
+        "created": "2026-11-10T20:47:20.548Z",
+        "destination": {
+          "credentials": {},
+          "profileId": "",
+          "profileRevision": "",
+          "providerId": "",
+          "settings": {}
+        },
+        "error": {
+          "code": "clipboard_unavailable",
+          "details": {},
+          "message": "GNOME helper cannot own CLIPBOARD"
+        },
+        "id": "0fe5e909-2b92-449b-ba32-180c78b1c3ab",
+        "invocation": "1",
+        "items": [
+          {
+            "artifact": {
+              "bytes": 177,
+              "category": "images",
+              "id": "58e38f4c-3d24-4a78-bc80-3fa2b28822c7",
+              "mime": "image/png",
+              "name": "Screen-Capture-2026-11-10-14-47-20.png",
+              "namingPrepared": true,
+              "originalFile": false,
+              "previewPath": "/tmp/hp2j/data/putgd/artifacts/../previews/58e38f4c-3d24-4a78-bc80-3fa2b28822c7.png",
+              "sha256": "f2bda8133cc3cb7faf16348acb37c240d997dbd7db28f2b293cf67637ff02fa0"
+            },
+            "candidate": "",
+            "concurrencyToken": "",
+            "condition": "",
+            "error": {
+              "code": "",
+              "details": {},
+              "message": ""
+            },
+            "local": {
+              "error": {
+                "code": "",
+                "details": {},
+                "message": ""
+              },
+              "path": "/tmp/hp2j/files/images/Screen-Capture-2026-11-10-14-47-20.png",
+              "status": "saved"
+            },
+            "objectReference": {},
+            "phase": "stored",
+            "publicationId": "6bbe5da2-cb43-4bf4-acd1-2c6094fc681a",
+            "receipt": {
+              "concurrencyToken": "",
+              "destination": {
+                "credentials": {},
+                "profileId": "",
+                "profileRevision": "",
+                "providerId": "",
+                "settings": {}
+              },
+              "directUrl": "",
+              "objectReference": {},
+              "publicationId": "",
+              "schemaVersion": 1
+            },
+            "remoteStatus": "not_requested",
+            "shareIntent": "",
+            "shareIntentOptions": {},
+            "shareStatus": "not_requested",
+            "uploadProgress": null,
+            "uploadStatus": "local_only"
+          }
+        ],
+        "phase": "completed",
+        "requestTimeoutMs": null,
+        "settingsRevision": "97ac33bf9611e09cf0e0f7f65155db0a11dd8e4b5ca4457a0b44195eb90874f4",
+        "state": "completed"
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "ui.quit",
+    "params": {},
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "b7cb2e83-e76f-404e-8080-50ba75865384",
+      "result": {
+        "quitting": true
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "ui.show",
+    "params": {
+      "view": "history"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "5b135b6f-60b6-4549-8195-f895c0936c2b",
+      "result": {
+        "shown": "history"
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "ui.quit",
+    "params": {},
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "97f87adb-3206-4716-9451-6cf644e84213",
+      "result": {
+        "quitting": true
+      },
+      "schemaVersion": 1
+    }
+  }
+]

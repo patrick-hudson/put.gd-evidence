@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 2,
+  "environment": {
+    "desktop": "kubuntu-kde-wayland",
+    "host": "k72",
+    "placement": "native",
+    "guest": null,
+    "package": "deb",
+    "destination": "local",
+    "build": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+    "placement_details": {
+      "run_id": "history-p2-k72",
+      "lab_profile": "kubuntu-kde-wayland",
+      "run_directory": "/tmp/hp2k",
+      "session_root": "/tmp/hp2kt",
+      "socket": "/tmp/hp2kt/runtime/putgd/session.sock",
+      "input_backend": "vnc",
+      "frame_backend": "vnc-in-memory"
+    },
+    "target": {
+      "hostname": "kubuntu",
+      "kernel": "7.0.0-38-generic",
+      "machine": "x86_64",
+      "os": {
+        "ID": "ubuntu",
+        "VERSION_ID": "26.04",
+        "VARIANT_ID": null
+      },
+      "session_type": "wayland",
+      "desktop": "KDE",
+      "qt_platform": "wayland"
+    },
+    "kwin_entry_staging": [],
+    "clipboard_preservation": {
+      "restored_and_stopped": true,
+      "reviews": [],
+      "ready": true,
+      "preserved_mimes": [],
+      "transport": "wayland",
+      "pid": 2661493,
+      "start": "102534801",
+      "boot": "a4df139d-cadf-4e3e-845a-151648c295c3",
+      "reaped_pids": []
+    },
+    "observed_build": {
+      "baseVersion": "26.1110.4614",
+      "commitCount": 4614,
+      "dirty": false,
+      "gitCommit": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+      "gitTree": "2e4e888dbd72187de60b5739b98554e594ac65bf",
+      "packageVersion": "26.1110.4614~dev+g8662a5fd13b3",
+      "schemaVersion": 1,
+      "sourceProvenance": "git",
+      "version": "26.1110.4614-dev+g8662a5fd13b3"
+    },
+    "shell_health": {
+      "process": "plasmashell",
+      "pid": 3440893,
+      "start": 14079622,
+      "cores_readable": true
+    },
+    "operation_ids": [
+      {
+        "operationId": "9e1a4bcd-9ab0-489e-aaee-ca0501d8ef06"
+      },
+      {
+        "operationId": "0320bdb6-f44b-49ee-ad2b-4d527b6ce233"
+      },
+      {
+        "operationId": "96397caf-48cb-4ff1-8523-e0bf1222562d"
+      }
+    ],
+    "private_cleanup": "resident-log-and-state-root-removed",
+    "coverage_export": {
+      "scanned_before_copy": true,
+      "copy_scan_passed": true,
+      "published": true
+    }
+  },
+  "interactions": [
+    {
+      "interaction": "history.receipt-details",
+      "desktop": "kubuntu-kde-wayland",
+      "package": "deb",
+      "functional": "failed",
+      "visual": "frames",
+      "receipt": "/tmp/hp2kout5/receipt.json",
+      "note": "operationId=9e1a4bcd-9ab0-489e-aaee-ca0501d8ef06; recipe deadline exceeded: history.receipt_details",
+      "host": "k72",
+      "placement": "native",
+      "destination": "local",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/history.receipt_details/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/history.receipt_details/01-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "history.receipt_details",
+      "build": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+      "at": "2026-11-10T21:06:37Z"
+    },
+    {
+      "interaction": "history.multi-select",
+      "desktop": "kubuntu-kde-wayland",
+      "package": "deb",
+      "functional": "failed",
+      "visual": "frames",
+      "receipt": "/tmp/hp2kout5/receipt.json",
+      "note": "operationId=0320bdb6-f44b-49ee-ad2b-4d527b6ce233; operationId=96397caf-48cb-4ff1-8523-e0bf1222562d; History list keyboard focus verified through native accessibility; timeout: visible binary size summary",
+      "host": "k72",
+      "placement": "native",
+      "destination": "local",
+      "review": true,
+      "review_reason": "catalog mismatch (distance=0.841214, tolerance=0.025): actual=/tmp/hp2kout5/frames/history.multi_select/01-before.png reference=/home/patrick/work/put.gd-history-ui/work/accept/2026-11-10-history-page-acceptance-2/catalog/01-history-list.png; SIGTERM fell due during fixture cleanup; the earlier failure stays the result (RecipeFailed: runner interrupted by SIGTERM)",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/history.multi_select/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "before",
+          "path": "frames/history.multi_select/01-before.png",
+          "window": "history",
+          "reference": "01-history-list",
+          "distance": 0.841214072543618,
+          "tolerance": 0.025
+        },
+        {
+          "label": "after",
+          "path": "frames/history.multi_select/02-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "history.multi_select",
+      "build": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+      "at": "2026-11-10T21:08:48Z"
+    }
+  ],
+  "secret_scan": {
+    "quarantine": [],
+    "passed": true,
+    "files": 10,
+    "pngs": 5,
+    "findings": []
+  }
+}

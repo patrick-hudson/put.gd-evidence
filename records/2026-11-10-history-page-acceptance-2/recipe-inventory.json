@@ -1,0 +1,965 @@
+[
+  {
+    "recipe": "dialogs.history_save_as_portal",
+    "interactions": [
+      "dialog.history-save-as"
+    ],
+    "needs": [
+      "file-dialog-portal",
+      "history"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 300
+  },
+  {
+    "recipe": "dialogs.history_save_as_fallback",
+    "interactions": [
+      "dialog.history-save-as"
+    ],
+    "needs": [
+      "file-dialog-fallback",
+      "history"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 300
+  },
+  {
+    "recipe": "history.search",
+    "interactions": [
+      "history.search"
+    ],
+    "needs": [
+      "history-row"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.categories",
+    "interactions": [
+      "history.categories"
+    ],
+    "needs": [
+      "history_rows"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.clear_filters",
+    "interactions": [
+      "history.clear-filters"
+    ],
+    "needs": [
+      "history_rows"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.preview",
+    "interactions": [
+      "history.preview",
+      "history.expand-preview"
+    ],
+    "needs": [
+      "history-row"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.receipt_details",
+    "interactions": [
+      "history.receipt-details"
+    ],
+    "needs": [
+      "history-row"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.multi_select",
+    "interactions": [
+      "history.multi-select"
+    ],
+    "needs": [
+      "history_pair"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.paging",
+    "interactions": [
+      "history.paging"
+    ],
+    "needs": [
+      "history_paging"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.key_menu",
+    "interactions": [
+      "history.key-menu"
+    ],
+    "needs": [
+      "history-row"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.inspector_more",
+    "interactions": [
+      "history.inspector-more"
+    ],
+    "needs": [
+      "history-row",
+      "file-dialog-fallback"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.saved_copy_strip",
+    "interactions": [
+      "history.saved-copy-strip"
+    ],
+    "needs": [
+      "history_saved_copy"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.retry_upload",
+    "interactions": [
+      "history.retry-upload"
+    ],
+    "needs": [
+      "history_retry_upload",
+      "history_retry_local"
+    ],
+    "destinations": [
+      "local",
+      "s3"
+    ],
+    "timeout": 180
+  },
+  {
+    "recipe": "history.active_banner",
+    "interactions": [
+      "history.active-banner"
+    ],
+    "needs": [
+      "history_active_uploads"
+    ],
+    "destinations": [
+      "local",
+      "s3"
+    ],
+    "timeout": 180
+  },
+  {
+    "recipe": "history.cancel_all",
+    "interactions": [
+      "history.cancel-all-dialog",
+      "confirm.history-cancel-all"
+    ],
+    "needs": [
+      "history_active_uploads"
+    ],
+    "destinations": [
+      "local",
+      "s3"
+    ],
+    "timeout": 240
+  },
+  {
+    "recipe": "history.delete_remote",
+    "interactions": [
+      "history.delete-remote",
+      "confirm.history-delete"
+    ],
+    "needs": [
+      "history_delete"
+    ],
+    "destinations": [
+      "local",
+      "s3"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.clear_history",
+    "interactions": [
+      "history.more-menu",
+      "confirm.history-clear"
+    ],
+    "needs": [
+      "history_rows"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 240
+  },
+  {
+    "recipe": "history.application_menu",
+    "interactions": [
+      "shell.app-menu"
+    ],
+    "needs": [
+      "history-row"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.capture_help",
+    "interactions": [
+      "shell.app-menu-capture-help"
+    ],
+    "needs": [
+      "history-row"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.header_context_menu",
+    "interactions": [
+      "shell.header-context-menu"
+    ],
+    "needs": [
+      "history-row"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.header_drag",
+    "interactions": [
+      "shell.header-drag"
+    ],
+    "needs": [
+      "history-row"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 180
+  },
+  {
+    "recipe": "history.edge_resize",
+    "interactions": [
+      "shell.edge-resize",
+      "shell.minimum-size"
+    ],
+    "needs": [
+      "history-row"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 180
+  },
+  {
+    "recipe": "history.maximize",
+    "interactions": [
+      "shell.window-maximize"
+    ],
+    "needs": [
+      "history-row"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.minimize",
+    "interactions": [
+      "shell.window-minimize"
+    ],
+    "needs": [
+      "history-row"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.close_window",
+    "interactions": [
+      "shell.window-close"
+    ],
+    "needs": [
+      "history-row"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.cli_version",
+    "interactions": [
+      "cli.version"
+    ],
+    "needs": [
+      "launcher"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.launcher_history",
+    "interactions": [
+      "cli.launcher-history",
+      "cli.second-launch"
+    ],
+    "needs": [
+      "history-row",
+      "launcher"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 240
+  },
+  {
+    "recipe": "history.mcp_inspect",
+    "interactions": [
+      "mcp.inspect"
+    ],
+    "needs": [],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.view_modes",
+    "interactions": [
+      "history.view-gallery",
+      "history.view-list"
+    ],
+    "needs": [
+      "history-row"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 240
+  },
+  {
+    "recipe": "history.enter_details",
+    "interactions": [
+      "history.key-enter"
+    ],
+    "needs": [
+      "history-row"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 180
+  },
+  {
+    "recipe": "history.escape_details",
+    "interactions": [
+      "history.key-esc"
+    ],
+    "needs": [
+      "history-row"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 180
+  },
+  {
+    "recipe": "history.autosave_status",
+    "interactions": [
+      "shell.autosave-status"
+    ],
+    "needs": [
+      "settings-save-failure"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 240
+  },
+  {
+    "recipe": "history.command_tooltips",
+    "interactions": [
+      "shell.command-tooltips"
+    ],
+    "needs": [
+      "app-profile"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 600
+  },
+  {
+    "recipe": "history.save_diagnostics",
+    "interactions": [
+      "history.save-diagnostics"
+    ],
+    "needs": [
+      "history_retry_upload",
+      "app-profile"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 240
+  },
+  {
+    "recipe": "history.local_copy_settings",
+    "interactions": [
+      "history.local-copy-settings"
+    ],
+    "needs": [
+      "history_retry_local"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 240
+  },
+  {
+    "recipe": "history.compact_details",
+    "interactions": [
+      "history.compact"
+    ],
+    "needs": [
+      "history-row"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 180
+  },
+  {
+    "recipe": "history.navigation",
+    "interactions": [
+      "shell.nav"
+    ],
+    "needs": [
+      "app-profile"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 240
+  },
+  {
+    "recipe": "history.quit_application",
+    "interactions": [
+      "shell.app-menu-quit"
+    ],
+    "needs": [
+      "resident-lifecycle"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 240
+  },
+  {
+    "recipe": "history.output_summary",
+    "interactions": [
+      "shell.output-summary"
+    ],
+    "needs": [
+      "settings-action-routes"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 240
+  },
+  {
+    "recipe": "history.output_warning",
+    "interactions": [
+      "shell.output-warning"
+    ],
+    "needs": [
+      "settings-no-output"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 240
+  },
+  {
+    "recipe": "history.first_launch",
+    "interactions": [
+      "shell.first-launch"
+    ],
+    "needs": [],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 240
+  },
+  {
+    "recipe": "history.list_gestures",
+    "interactions": [
+      "history.list"
+    ],
+    "needs": [
+      "history_rows"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 240
+  },
+  {
+    "recipe": "history.command_region",
+    "interactions": [
+      "shell.command-capture-region"
+    ],
+    "needs": [
+      "app-profile",
+      "selector-desktop"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 360
+  },
+  {
+    "recipe": "history.command_window",
+    "interactions": [
+      "shell.command-capture-window"
+    ],
+    "needs": [
+      "app-profile",
+      "selector-desktop"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 360
+  },
+  {
+    "recipe": "history.command_desktop",
+    "interactions": [
+      "shell.command-capture-desktop"
+    ],
+    "needs": [
+      "app-profile",
+      "selector-desktop"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 360
+  },
+  {
+    "recipe": "history.command_edit",
+    "interactions": [
+      "shell.command-capture-edit"
+    ],
+    "needs": [
+      "app-profile",
+      "selector-desktop"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 360
+  },
+  {
+    "recipe": "history.command_record",
+    "interactions": [
+      "shell.command-record"
+    ],
+    "needs": [
+      "app-profile",
+      "selector-desktop"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 360
+  },
+  {
+    "recipe": "history.command_clipboard",
+    "interactions": [
+      "shell.command-upload-clipboard"
+    ],
+    "needs": [
+      "app-profile",
+      "events.clipboard"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 360
+  },
+  {
+    "recipe": "history.cli_actions",
+    "interactions": [
+      "cli.action-invoke"
+    ],
+    "needs": [
+      "app-profile",
+      "selector-desktop",
+      "events.clipboard"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 480
+  },
+  {
+    "recipe": "history.mcp_actions",
+    "interactions": [
+      "mcp.perform-action"
+    ],
+    "needs": [
+      "app-profile",
+      "selector-desktop",
+      "events.clipboard"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 480
+  },
+  {
+    "recipe": "history.edit_again",
+    "interactions": [
+      "history.edit-again"
+    ],
+    "needs": [
+      "history-row"
+    ],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 240
+  },
+  {
+    "recipe": "history.blocked_history_filters",
+    "interactions": [
+      "history.filters"
+    ],
+    "needs": [],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.blocked_history_row_primary",
+    "interactions": [
+      "history.row-primary"
+    ],
+    "needs": [],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.blocked_history_row_menu",
+    "interactions": [
+      "history.row-menu"
+    ],
+    "needs": [],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.blocked_history_retry_deletion",
+    "interactions": [
+      "history.retry-deletion"
+    ],
+    "needs": [],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.blocked_history_empty_states",
+    "interactions": [
+      "history.empty-states"
+    ],
+    "needs": [],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.blocked_shell_button_layout",
+    "interactions": [
+      "shell.button-layout"
+    ],
+    "needs": [],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.blocked_shell_edit_source_menu",
+    "interactions": [
+      "shell.edit-source-menu"
+    ],
+    "needs": [],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.blocked_shell_drop_image",
+    "interactions": [
+      "shell.drop-image"
+    ],
+    "needs": [],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.blocked_shell_narrow_labels",
+    "interactions": [
+      "shell.narrow-labels"
+    ],
+    "needs": [],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.blocked_shell_action_recovery_banner",
+    "interactions": [
+      "shell.action-recovery-banner"
+    ],
+    "needs": [],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.blocked_shell_edit_chooser_failure",
+    "interactions": [
+      "shell.edit-chooser-failure"
+    ],
+    "needs": [],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.blocked_cli_launcher_background",
+    "interactions": [
+      "cli.launcher-background"
+    ],
+    "needs": [],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.blocked_cli_history",
+    "interactions": [
+      "cli.history"
+    ],
+    "needs": [],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.blocked_mcp_operations",
+    "interactions": [
+      "mcp.operations"
+    ],
+    "needs": [],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "history.blocked_mcp_history",
+    "interactions": [
+      "mcp.history"
+    ],
+    "needs": [],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "links.history_link_field",
+    "interactions": [
+      "history.link-field"
+    ],
+    "needs": [
+      "upload"
+    ],
+    "destinations": [
+      "local",
+      "s3",
+      "proton"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "links.history_copy_link",
+    "interactions": [
+      "history.copy-link"
+    ],
+    "needs": [
+      "upload"
+    ],
+    "destinations": [
+      "local",
+      "s3",
+      "proton"
+    ],
+    "timeout": 120.0
+  },
+  {
+    "recipe": "links.history_open_link",
+    "interactions": [
+      "history.open-link"
+    ],
+    "needs": [
+      "upload"
+    ],
+    "destinations": [
+      "local",
+      "s3",
+      "proton"
+    ],
+    "timeout": 240
+  },
+  {
+    "recipe": "outcomes.copy_image",
+    "interactions": [
+      "history.inspector-more"
+    ],
+    "needs": [],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 300
+  },
+  {
+    "recipe": "outcomes.link_browser",
+    "interactions": [
+      "history.copy-link",
+      "history.open-link"
+    ],
+    "needs": [],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 300
+  },
+  {
+    "recipe": "outcomes.history_delete",
+    "interactions": [
+      "history.delete-remote",
+      "confirm.history-delete"
+    ],
+    "needs": [],
+    "destinations": [
+      "local"
+    ],
+    "timeout": 300
+  },
+  {
+    "recipe": "outcomes_live.s3_region_upload",
+    "interactions": [
+      "region.to-upload",
+      "region.drag",
+      "history.copy-link",
+      "history.open-link",
+      "history.delete-remote",
+      "confirm.history-delete"
+    ],
+    "needs": [],
+    "destinations": [
+      "s3"
+    ],
+    "timeout": 720
+  },
+  {
+    "recipe": "outcomes_live.proton_region_upload",
+    "interactions": [
+      "region.to-upload",
+      "region.drag",
+      "history.copy-link",
+      "history.open-link",
+      "history.proton-sharing",
+      "confirm.revoke-link"
+    ],
+    "needs": [],
+    "destinations": [
+      "proton"
+    ],
+    "timeout": 720
+  }
+]

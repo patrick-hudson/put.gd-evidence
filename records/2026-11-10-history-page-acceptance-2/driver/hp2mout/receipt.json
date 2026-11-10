@@ -1,0 +1,417 @@
+{
+  "schemaVersion": 2,
+  "environment": {
+    "desktop": "mint-cinnamon-x11",
+    "host": "m74",
+    "placement": "native",
+    "guest": null,
+    "package": "deb",
+    "destination": "local",
+    "build": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+    "placement_details": {
+      "run_id": "history-p2-m74",
+      "lab_profile": "mint-cinnamon-x11",
+      "run_directory": "/tmp/hp2m",
+      "session_root": "/tmp/hp2mr",
+      "socket": "/tmp/hp2mr/runtime/putgd/session.sock",
+      "input_backend": "vnc",
+      "frame_backend": "vnc-in-memory"
+    },
+    "target": {
+      "hostname": "mint-builder",
+      "kernel": "6.14.0-37-generic",
+      "machine": "x86_64",
+      "os": {
+        "ID": "linuxmint",
+        "VERSION_ID": "22.3",
+        "VARIANT_ID": null
+      },
+      "session_type": "x11",
+      "desktop": "X-Cinnamon",
+      "qt_platform": "xcb"
+    },
+    "kwin_entry_staging": [],
+    "clipboard_preservation": {
+      "restored_and_stopped": true,
+      "reviews": [],
+      "ready": true,
+      "preserved_mimes": [
+        "image/png",
+        "application/x-qt-image"
+      ],
+      "transport": "xcb",
+      "pid": 201686,
+      "start": "174168263",
+      "boot": "4ba460ee-1af9-4ae8-b832-d1c54cdb642f",
+      "reaped_pids": []
+    },
+    "observed_build": {
+      "baseVersion": "26.1110.4614",
+      "commitCount": 4614,
+      "dirty": false,
+      "gitCommit": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+      "gitTree": "2e4e888dbd72187de60b5739b98554e594ac65bf",
+      "packageVersion": "26.1110.4614~dev+g8662a5fd13b3",
+      "schemaVersion": 1,
+      "sourceProvenance": "git",
+      "version": "26.1110.4614-dev+g8662a5fd13b3"
+    },
+    "shell_health": {
+      "process": "cinnamon",
+      "pid": 625683,
+      "start": 22110437,
+      "cores_readable": true
+    },
+    "operation_ids": [
+      {
+        "operationId": "18a9bf7a-52a3-4d51-9d7a-6482beb7e091"
+      },
+      {
+        "operationId": "bd6c6e03-e169-4662-8f36-a9aa5b6c40ac"
+      },
+      {
+        "operationId": "72ce3726-3750-41de-b202-1f33d6935076"
+      },
+      {
+        "operationId": "8479dd04-20e4-4741-a6fb-45bc246f18b4"
+      },
+      {
+        "operationId": "7d245acf-9409-4321-8ee4-314e8f305db0"
+      },
+      {
+        "operationId": "457456ac-7d00-4ea2-aff1-eae0d1246493"
+      }
+    ],
+    "private_cleanup": "resident-log-and-state-root-removed",
+    "coverage_export": {
+      "scanned_before_copy": true,
+      "copy_scan_passed": true,
+      "published": true
+    }
+  },
+  "interactions": [
+    {
+      "interaction": "dialog.history-save-as",
+      "desktop": "mint-cinnamon-x11",
+      "package": "deb",
+      "functional": "blocked",
+      "visual": "frames",
+      "receipt": "/tmp/hp2mout/receipt.json",
+      "issue": 671,
+      "note": "operationId=18a9bf7a-52a3-4d51-9d7a-6482beb7e091; Requested chooser backend: portal; Chooser state at failure: {\"backend\": \"fallback\", \"dialog\": \"historySaveAs\", \"fallbackReason\": \"org.freedesktop.DBus.Error.NoReply\", \"last\": null, \"mode\": \"save\", \"open\": true, \"parentWindow\": null, \"title\": \"Save original file as\"}; Portal changed backend before becoming ready; fallbackReason=org.freedesktop.DBus.Error.NoReply",
+      "host": "m74",
+      "placement": "native",
+      "destination": "local",
+      "review": true,
+      "review_reason": "desktop-drawn frames need visual judgement",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/dialogs.history_save_as_portal/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "before",
+          "path": "frames/dialogs.history_save_as_portal/01-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "dialog-failure",
+          "path": "frames/dialogs.history_save_as_portal/02-dialog-failure.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/dialogs.history_save_as_portal/03-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "dialogs.history_save_as_portal",
+      "build": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+      "at": "2026-11-10T20:51:15Z"
+    },
+    {
+      "interaction": "dialog.history-save-as",
+      "desktop": "mint-cinnamon-x11",
+      "package": "deb",
+      "functional": "failed",
+      "visual": "frames",
+      "receipt": "/tmp/hp2mout/receipt.json",
+      "note": "operationId=bd6c6e03-e169-4662-8f36-a9aa5b6c40ac; Requested chooser backend: fallback; Fallback accessible surfaces: [{\"application\": \"putgd-ui\", \"name\": \"Save original file as\", \"pid\": 205950, \"rect\": [539, 193, 820, 520], \"role\": \"dialog\"}]; Chooser ready: backend=fallback, mode=save, title=Save original file as; Fallback accessible surfaces: [{\"application\": \"putgd-ui\", \"name\": \"Save original file as\", \"pid\": 205950, \"rect\": [539, 193, 820, 520], \"role\": \"dialog\"}]; Chooser ready: backend=fallback, mode=save, title=Save original file as; Chooser state at failure: {\"backend\": null, \"dialog\": \"historySaveAs\", \"fallbackReason\": null, \"last\": {\"backend\": \"fallback\", \"error\": null, \"fallbackReason\": \"disabled\", \"mode\": \"save\", \"path\": \"/tmp/pgfd.-yckpse-/history copy.png\", \"status\": \"chosen\"}, \"mode\": null, \"open\": false, \"parentWindow\": null, \"title\": null}; resident received the exact typed path",
+      "host": "m74",
+      "placement": "native",
+      "destination": "local",
+      "review": true,
+      "review_reason": "No current fallback save chooser catalog capture is registered; No current fallback save chooser catalog capture is registered",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/dialogs.history_save_as_fallback/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "before",
+          "path": "frames/dialogs.history_save_as_fallback/01-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "dialog-ready",
+          "path": "frames/dialogs.history_save_as_fallback/02-dialog-ready.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after-cancel",
+          "path": "frames/dialogs.history_save_as_fallback/03-after-cancel.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "dialog-ready",
+          "path": "frames/dialogs.history_save_as_fallback/04-dialog-ready.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "path-entered",
+          "path": "frames/dialogs.history_save_as_fallback/05-path-entered.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "dialog-failure",
+          "path": "frames/dialogs.history_save_as_fallback/06-dialog-failure.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/dialogs.history_save_as_fallback/07-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "dialogs.history_save_as_fallback",
+      "build": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+      "at": "2026-11-10T20:54:26Z"
+    },
+    {
+      "interaction": "history.search",
+      "desktop": "mint-cinnamon-x11",
+      "package": "deb",
+      "functional": "failed",
+      "visual": "frames",
+      "receipt": "/tmp/hp2mout/receipt.json",
+      "note": "operationId=72ce3726-3750-41de-b202-1f33d6935076; recipe deadline exceeded: history.search",
+      "host": "m74",
+      "placement": "native",
+      "destination": "local",
+      "review": true,
+      "review_reason": "catalog mismatch (distance=0.035543, tolerance=0.025): actual=/tmp/hp2mout/frames/history.search/01-before.png reference=/home/patrick/work/put.gd-history-ui/work/accept/2026-11-10-history-page-acceptance-2/catalog/01-history-list.png",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/history.search/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "before",
+          "path": "frames/history.search/01-before.png",
+          "window": "history",
+          "reference": "01-history-list",
+          "distance": 0.03554274586326725,
+          "tolerance": 0.025
+        },
+        {
+          "label": "after",
+          "path": "frames/history.search/02-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "history.search",
+      "build": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+      "at": "2026-11-10T20:56:45Z"
+    },
+    {
+      "interaction": "history.categories",
+      "desktop": "mint-cinnamon-x11",
+      "package": "deb",
+      "functional": "blocked",
+      "visual": "frames",
+      "receipt": "/tmp/hp2mout/receipt.json",
+      "issue": 666,
+      "note": "operationId=8479dd04-20e4-4741-a6fb-45bc246f18b4; fake credential collection is restricted to a disposable nested guest",
+      "host": "m74",
+      "placement": "native",
+      "destination": "local",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/history.categories/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/history.categories/01-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "history.categories",
+      "build": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+      "at": "2026-11-10T20:57:43Z"
+    },
+    {
+      "interaction": "history.clear-filters",
+      "desktop": "mint-cinnamon-x11",
+      "package": "deb",
+      "functional": "blocked",
+      "visual": "frames",
+      "receipt": "/tmp/hp2mout/receipt.json",
+      "issue": 666,
+      "note": "operationId=7d245acf-9409-4321-8ee4-314e8f305db0; fake credential collection is restricted to a disposable nested guest",
+      "host": "m74",
+      "placement": "native",
+      "destination": "local",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/history.clear_filters/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/history.clear_filters/01-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "history.clear_filters",
+      "build": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+      "at": "2026-11-10T20:58:41Z"
+    },
+    {
+      "interaction": "history.preview",
+      "desktop": "mint-cinnamon-x11",
+      "package": "deb",
+      "functional": "failed",
+      "visual": "frames",
+      "receipt": "/tmp/hp2mout/receipt.json",
+      "note": "operationId=457456ac-7d00-4ea2-aff1-eae0d1246493; recipe deadline exceeded: history.preview",
+      "host": "m74",
+      "placement": "native",
+      "destination": "local",
+      "review": true,
+      "review_reason": "SIGTERM fell due during fixture cleanup; the earlier failure stays the result (RecipeFailed: runner interrupted by SIGTERM)",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/history.preview/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/history.preview/01-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "history.preview",
+      "build": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+      "at": "2026-11-10T21:01:00Z"
+    },
+    {
+      "interaction": "history.expand-preview",
+      "desktop": "mint-cinnamon-x11",
+      "package": "deb",
+      "functional": "failed",
+      "visual": "frames",
+      "receipt": "/tmp/hp2mout/receipt.json",
+      "note": "operationId=457456ac-7d00-4ea2-aff1-eae0d1246493; recipe deadline exceeded: history.preview",
+      "host": "m74",
+      "placement": "native",
+      "destination": "local",
+      "review": true,
+      "review_reason": "SIGTERM fell due during fixture cleanup; the earlier failure stays the result (RecipeFailed: runner interrupted by SIGTERM)",
+      "frames": [
+        {
+          "label": "before",
+          "path": "frames/history.preview/00-before.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        },
+        {
+          "label": "after",
+          "path": "frames/history.preview/01-after.png",
+          "window": null,
+          "reference": null,
+          "distance": null,
+          "tolerance": null
+        }
+      ],
+      "recipe": "history.preview",
+      "build": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+      "at": "2026-11-10T21:01:00Z"
+    }
+  ],
+  "secret_scan": {
+    "quarantine": [],
+    "passed": true,
+    "files": 26,
+    "pngs": 21,
+    "findings": []
+  }
+}

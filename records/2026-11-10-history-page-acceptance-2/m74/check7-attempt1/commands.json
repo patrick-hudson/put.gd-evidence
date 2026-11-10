@@ -1,0 +1,3571 @@
+[
+  {
+    "method": "diagnostics",
+    "params": {},
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "7a449648-307b-41bb-961a-8f4f235ac6f2",
+      "result": {
+        "activeOperations": 0,
+        "artifactCleanup": {
+          "automatic": false,
+          "incompleteUploadNotice": null,
+          "intervalMs": 3600000,
+          "last": null,
+          "running": false
+        },
+        "backend": "Qt",
+        "build": {
+          "baseVersion": "26.1110.4614",
+          "commitCount": 4614,
+          "dirty": false,
+          "gitCommit": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+          "gitTree": "2e4e888dbd72187de60b5739b98554e594ac65bf",
+          "packageVersion": "26.1110.4614~dev+g8662a5fd13b3",
+          "schemaVersion": 1,
+          "sourceProvenance": "git",
+          "version": "26.1110.4614-dev+g8662a5fd13b3"
+        },
+        "capabilities": {
+          "editor": {
+            "admissionPixels": 24000000,
+            "available": true,
+            "blurStyles": [
+              "blur",
+              "pixelate"
+            ],
+            "commands": [
+              "inspect",
+              "apply",
+              "preview",
+              "saveCopy",
+              "copy",
+              "fileDialog",
+              "view",
+              "submit",
+              "cancel",
+              "raise"
+            ],
+            "fileFormats": [
+              "png",
+              "jpeg"
+            ],
+            "open": false,
+            "output": "png",
+            "shapes": [
+              "redact",
+              "blur",
+              "arrow",
+              "rectangle",
+              "text",
+              "highlight",
+              "step",
+              "pen",
+              "ellipse",
+              "line"
+            ],
+            "sources": [
+              "region",
+              "window",
+              "desktop",
+              "clipboard",
+              "file"
+            ]
+          },
+          "providers": {
+            "backblaze-b2": {
+              "conditionalCreate": true,
+              "conditionalDelete": false,
+              "conditionalReplace": false,
+              "delete": true,
+              "deletionEffect": "Deletes exactly the uploaded B2 file version by its ID. put.gd never uploads over a visible file, so the name then shows nothing, or an older version that was hidden before the upload. Authorized links stop working when they expire.",
+              "maximumNameBytes": 1023,
+              "maximumObjectBytes": 10000000000000,
+              "privateUploads": false,
+              "referenceDelete": false,
+              "serverNamesObjects": false,
+              "sharing": false,
+              "stat": true,
+              "urls": true,
+              "versionAddressing": true
+            },
+            "custom-http": {
+              "conditionalCreate": false,
+              "conditionalDelete": false,
+              "conditionalReplace": false,
+              "delete": false,
+              "deletionEffect": "Asks the server to delete this upload through the deletion URL it returned with the link. What the server removes, and how soon the link stops working, is up to the server.",
+              "maximumNameBytes": 255,
+              "maximumObjectBytes": null,
+              "privateUploads": false,
+              "referenceDelete": true,
+              "serverNamesObjects": true,
+              "sharing": false,
+              "stat": false,
+              "urls": true,
+              "versionAddressing": false
+            },
+            "proton-drive": {
+              "conditionalCreate": true,
+              "conditionalDelete": false,
+              "conditionalReplace": false,
+              "delete": false,
+              "deletionEffect": "Safe remote deletion is unavailable: Proton does not expose an atomic revision-guarded file deletion. Revoke share links separately.",
+              "maximumNameBytes": 255,
+              "maximumObjectBytes": null,
+              "privateUploads": true,
+              "referenceDelete": false,
+              "serverNamesObjects": false,
+              "sharing": true,
+              "stat": true,
+              "urls": true,
+              "versionAddressing": false
+            },
+            "s3": {
+              "conditionalCreate": true,
+              "conditionalDelete": true,
+              "conditionalReplace": true,
+              "delete": true,
+              "deletionEffect": "Guarded origin removal; selected versions only; browser/CDN caches may retain bytes",
+              "maximumNameBytes": 1024,
+              "maximumObjectBytes": 5497558138880,
+              "privateUploads": false,
+              "referenceDelete": false,
+              "serverNamesObjects": false,
+              "sharing": false,
+              "stat": true,
+              "urls": true,
+              "versionAddressing": true
+            }
+          },
+          "recording": {
+            "active": null,
+            "audio": {
+              "microphone": false,
+              "system": false
+            },
+            "available": false,
+            "clickHighlights": {
+              "available": false,
+              "drawnBy": "recorder",
+              "message": "This desktop gives put.gd no pointer clicks, so recordings cannot highlight them.",
+              "reason": "click_route_missing",
+              "route": "none",
+              "targets": []
+            },
+            "codecs": {},
+            "commands": [
+              "windows",
+              "microphones",
+              "prepare",
+              "start",
+              "pause",
+              "resume",
+              "stop",
+              "cancel",
+              "inspect",
+              "select",
+              "raise",
+              "overlay",
+              "audio",
+              "edit",
+              "preview",
+              "review",
+              "saveCopy",
+              "upload"
+            ],
+            "editCommands": [
+              "setTrim",
+              "resetTrim",
+              "addMask",
+              "updateMask",
+              "removeMask"
+            ],
+            "formats": [],
+            "limits": {
+              "animationMaxEdge": 1280,
+              "animationMaxUs": 60000000,
+              "maxFileBytes": 1099511627776,
+              "maxMasks": 64
+            },
+            "maskKinds": [
+              "blur",
+              "solid"
+            ],
+            "overlayExclusion": {},
+            "reason": "recording_not_probed",
+            "states": [
+              "preparing",
+              "ready",
+              "starting",
+              "recording",
+              "paused",
+              "stopping",
+              "reviewing",
+              "exporting",
+              "submitted",
+              "cancelled",
+              "failed"
+            ],
+            "targets": [],
+            "timeUnit": "microseconds",
+            "windowList": false
+          },
+          "source": {
+            "adapter": "cinnamon-core-x11",
+            "capture": {
+              "desktop": {
+                "available": true,
+                "consent": "none",
+                "helper": {
+                  "active": false,
+                  "build": {
+                    "baseVersion": "26.1110.4614",
+                    "commitCount": 4614,
+                    "dirty": false,
+                    "gitCommit": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+                    "gitTree": "2e4e888dbd72187de60b5739b98554e594ac65bf",
+                    "packageVersion": "26.1110.4614~dev+g8662a5fd13b3",
+                    "schemaVersion": 1,
+                    "sourceProvenance": "git",
+                    "version": "26.1110.4614-dev+g8662a5fd13b3"
+                  },
+                  "lastExit": {},
+                  "processId": 0
+                },
+                "mode": "visible-pixels"
+              },
+              "monitor": {
+                "available": true,
+                "consent": "none",
+                "helper": {
+                  "active": false,
+                  "build": {
+                    "baseVersion": "26.1110.4614",
+                    "commitCount": 4614,
+                    "dirty": false,
+                    "gitCommit": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+                    "gitTree": "2e4e888dbd72187de60b5739b98554e594ac65bf",
+                    "packageVersion": "26.1110.4614~dev+g8662a5fd13b3",
+                    "schemaVersion": 1,
+                    "sourceProvenance": "git",
+                    "version": "26.1110.4614-dev+g8662a5fd13b3"
+                  },
+                  "lastExit": {},
+                  "processId": 0
+                },
+                "mode": "visible-pixels"
+              },
+              "region": {
+                "available": true,
+                "consent": "none",
+                "helper": {
+                  "active": false,
+                  "build": {
+                    "baseVersion": "26.1110.4614",
+                    "commitCount": 4614,
+                    "dirty": false,
+                    "gitCommit": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+                    "gitTree": "2e4e888dbd72187de60b5739b98554e594ac65bf",
+                    "packageVersion": "26.1110.4614~dev+g8662a5fd13b3",
+                    "schemaVersion": 1,
+                    "sourceProvenance": "git",
+                    "version": "26.1110.4614-dev+g8662a5fd13b3"
+                  },
+                  "lastExit": {},
+                  "processId": 0
+                },
+                "mode": "visible-pixels"
+              },
+              "repeat": {
+                "available": true,
+                "consent": "none",
+                "helper": {
+                  "active": false,
+                  "build": {
+                    "baseVersion": "26.1110.4614",
+                    "commitCount": 4614,
+                    "dirty": false,
+                    "gitCommit": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+                    "gitTree": "2e4e888dbd72187de60b5739b98554e594ac65bf",
+                    "packageVersion": "26.1110.4614~dev+g8662a5fd13b3",
+                    "schemaVersion": 1,
+                    "sourceProvenance": "git",
+                    "version": "26.1110.4614-dev+g8662a5fd13b3"
+                  },
+                  "lastExit": {},
+                  "processId": 0
+                },
+                "mode": "visible-pixels",
+                "remembered": false
+              },
+              "window": {
+                "available": true,
+                "consent": "none",
+                "helper": {
+                  "active": false,
+                  "build": {
+                    "baseVersion": "26.1110.4614",
+                    "commitCount": 4614,
+                    "dirty": false,
+                    "gitCommit": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+                    "gitTree": "2e4e888dbd72187de60b5739b98554e594ac65bf",
+                    "packageVersion": "26.1110.4614~dev+g8662a5fd13b3",
+                    "schemaVersion": 1,
+                    "sourceProvenance": "git",
+                    "version": "26.1110.4614-dev+g8662a5fd13b3"
+                  },
+                  "lastExit": {},
+                  "processId": 0
+                },
+                "mode": "visible-pixels"
+              }
+            },
+            "clipboard": {
+              "available": true,
+              "import": "asynchronous-x11-selection",
+              "result": "native-x11-ownership",
+              "types": [
+                "files",
+                "image",
+                "text"
+              ]
+            },
+            "delay": {
+              "available": true,
+              "indicator": "helper-window",
+              "seconds": [
+                3,
+                5,
+                10
+              ]
+            },
+            "shortcuts": {
+              "available": true,
+              "bindings": {
+                "clipboard": {
+                  "bound": false,
+                  "error": "disabled",
+                  "requested": ""
+                },
+                "desktop": {
+                  "bound": false,
+                  "error": "disabled",
+                  "requested": ""
+                },
+                "edit": {
+                  "bound": false,
+                  "error": "disabled",
+                  "requested": ""
+                },
+                "monitor": {
+                  "bound": false,
+                  "error": "disabled",
+                  "requested": ""
+                },
+                "record": {
+                  "bound": false,
+                  "error": "disabled",
+                  "requested": ""
+                },
+                "region": {
+                  "bound": false,
+                  "error": "disabled",
+                  "requested": ""
+                },
+                "repeat": {
+                  "bound": false,
+                  "error": "disabled",
+                  "requested": ""
+                },
+                "window": {
+                  "bound": false,
+                  "error": "disabled",
+                  "requested": ""
+                }
+              },
+              "keyPaths": {
+                "lastActivation": {},
+                "passive": true,
+                "raw": {
+                  "available": true,
+                  "xinput": "2.2"
+                }
+              }
+            }
+          }
+        },
+        "journalReady": true,
+        "locations": {
+          "config": {
+            "path": "/tmp/hp2c/config/putgd",
+            "state": "current"
+          },
+          "data": {
+            "path": "/tmp/hp2c/data/putgd",
+            "state": "current"
+          },
+          "schemaVersion": 1
+        },
+        "logging": {
+          "available": true,
+          "bytes": 4357,
+          "debugLogging": false,
+          "debugLoggingExpiresAt": null,
+          "degraded": false,
+          "degradedReason": null,
+          "directory": "/tmp/hp2c/state/putgd/logs",
+          "droppedRecords": 0,
+          "files": 1,
+          "oldestRecord": "2026-11-10T21:02:08.684Z",
+          "retention": {
+            "bytes": 52428800,
+            "days": 14
+          },
+          "rotationBytes": 5242880
+        },
+        "loggingDegraded": false,
+        "memory": {
+          "allocatorReclamationCount": 0,
+          "allocatorReclamationPending": true,
+          "allocatorReclamationSupported": true,
+          "imagePageReleaseCount": 0,
+          "imagePageReleasePending": false,
+          "lastAllocatorReclamationUsec": 0,
+          "lastImagePageReleaseBytes": 0,
+          "lastImagePageReleaseUsec": 0
+        },
+        "previews": {
+          "queued": 0,
+          "running": false
+        },
+        "qtVersion": "6.4.2",
+        "release": {
+          "kind": "none",
+          "url": "",
+          "version": "26.1110.4614-dev+g8662a5fd13b3"
+        },
+        "schemaVersion": 1,
+        "storage": {
+          "backblaze-b2": {
+            "activeHelpers": 0,
+            "protocolVersion": 1
+          },
+          "custom-http": {
+            "activeHelpers": 0,
+            "protocolVersion": 1
+          },
+          "proton-drive": {
+            "activeHelpers": 0,
+            "protocolVersion": 1
+          },
+          "s3": {
+            "lanes": 1,
+            "moduleLiveDrivers": 0,
+            "queuedRequests": 0,
+            "retainedDrivers": 0,
+            "workerStarted": false
+          }
+        },
+        "uncleanExit": {
+          "detected": false,
+          "last": null,
+          "recent": []
+        },
+        "uploadSlots": {
+          "active": 0,
+          "capacity": 1,
+          "lent": 0,
+          "operations": 0,
+          "waiting": 0
+        }
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "capabilities",
+    "params": {},
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "547d3d66-c0b6-48d4-a9ee-7f0356eeea99",
+      "result": {
+        "editor": {
+          "admissionPixels": 24000000,
+          "available": true,
+          "blurStyles": [
+            "blur",
+            "pixelate"
+          ],
+          "commands": [
+            "inspect",
+            "apply",
+            "preview",
+            "saveCopy",
+            "copy",
+            "fileDialog",
+            "view",
+            "submit",
+            "cancel",
+            "raise"
+          ],
+          "fileFormats": [
+            "png",
+            "jpeg"
+          ],
+          "open": false,
+          "output": "png",
+          "shapes": [
+            "redact",
+            "blur",
+            "arrow",
+            "rectangle",
+            "text",
+            "highlight",
+            "step",
+            "pen",
+            "ellipse",
+            "line"
+          ],
+          "sources": [
+            "region",
+            "window",
+            "desktop",
+            "clipboard",
+            "file"
+          ]
+        },
+        "providers": {
+          "backblaze-b2": {
+            "conditionalCreate": true,
+            "conditionalDelete": false,
+            "conditionalReplace": false,
+            "delete": true,
+            "deletionEffect": "Deletes exactly the uploaded B2 file version by its ID. put.gd never uploads over a visible file, so the name then shows nothing, or an older version that was hidden before the upload. Authorized links stop working when they expire.",
+            "maximumNameBytes": 1023,
+            "maximumObjectBytes": 10000000000000,
+            "privateUploads": false,
+            "referenceDelete": false,
+            "serverNamesObjects": false,
+            "sharing": false,
+            "stat": true,
+            "urls": true,
+            "versionAddressing": true
+          },
+          "custom-http": {
+            "conditionalCreate": false,
+            "conditionalDelete": false,
+            "conditionalReplace": false,
+            "delete": false,
+            "deletionEffect": "Asks the server to delete this upload through the deletion URL it returned with the link. What the server removes, and how soon the link stops working, is up to the server.",
+            "maximumNameBytes": 255,
+            "maximumObjectBytes": null,
+            "privateUploads": false,
+            "referenceDelete": true,
+            "serverNamesObjects": true,
+            "sharing": false,
+            "stat": false,
+            "urls": true,
+            "versionAddressing": false
+          },
+          "proton-drive": {
+            "conditionalCreate": true,
+            "conditionalDelete": false,
+            "conditionalReplace": false,
+            "delete": false,
+            "deletionEffect": "Safe remote deletion is unavailable: Proton does not expose an atomic revision-guarded file deletion. Revoke share links separately.",
+            "maximumNameBytes": 255,
+            "maximumObjectBytes": null,
+            "privateUploads": true,
+            "referenceDelete": false,
+            "serverNamesObjects": false,
+            "sharing": true,
+            "stat": true,
+            "urls": true,
+            "versionAddressing": false
+          },
+          "s3": {
+            "conditionalCreate": true,
+            "conditionalDelete": true,
+            "conditionalReplace": true,
+            "delete": true,
+            "deletionEffect": "Guarded origin removal; selected versions only; browser/CDN caches may retain bytes",
+            "maximumNameBytes": 1024,
+            "maximumObjectBytes": 5497558138880,
+            "privateUploads": false,
+            "referenceDelete": false,
+            "serverNamesObjects": false,
+            "sharing": false,
+            "stat": true,
+            "urls": true,
+            "versionAddressing": true
+          }
+        },
+        "recording": {
+          "active": null,
+          "audio": {
+            "microphone": false,
+            "system": false
+          },
+          "available": false,
+          "clickHighlights": {
+            "available": false,
+            "drawnBy": "recorder",
+            "message": "This desktop gives put.gd no pointer clicks, so recordings cannot highlight them.",
+            "reason": "click_route_missing",
+            "route": "none",
+            "targets": []
+          },
+          "codecs": {},
+          "commands": [
+            "windows",
+            "microphones",
+            "prepare",
+            "start",
+            "pause",
+            "resume",
+            "stop",
+            "cancel",
+            "inspect",
+            "select",
+            "raise",
+            "overlay",
+            "audio",
+            "edit",
+            "preview",
+            "review",
+            "saveCopy",
+            "upload"
+          ],
+          "editCommands": [
+            "setTrim",
+            "resetTrim",
+            "addMask",
+            "updateMask",
+            "removeMask"
+          ],
+          "formats": [],
+          "limits": {
+            "animationMaxEdge": 1280,
+            "animationMaxUs": 60000000,
+            "maxFileBytes": 1099511627776,
+            "maxMasks": 64
+          },
+          "maskKinds": [
+            "blur",
+            "solid"
+          ],
+          "overlayExclusion": {},
+          "reason": "recording_not_probed",
+          "states": [
+            "preparing",
+            "ready",
+            "starting",
+            "recording",
+            "paused",
+            "stopping",
+            "reviewing",
+            "exporting",
+            "submitted",
+            "cancelled",
+            "failed"
+          ],
+          "targets": [],
+          "timeUnit": "microseconds",
+          "windowList": false
+        },
+        "source": {
+          "adapter": "cinnamon-core-x11",
+          "capture": {
+            "desktop": {
+              "available": true,
+              "consent": "none",
+              "helper": {
+                "active": false,
+                "build": {
+                  "baseVersion": "26.1110.4614",
+                  "commitCount": 4614,
+                  "dirty": false,
+                  "gitCommit": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+                  "gitTree": "2e4e888dbd72187de60b5739b98554e594ac65bf",
+                  "packageVersion": "26.1110.4614~dev+g8662a5fd13b3",
+                  "schemaVersion": 1,
+                  "sourceProvenance": "git",
+                  "version": "26.1110.4614-dev+g8662a5fd13b3"
+                },
+                "lastExit": {},
+                "processId": 0
+              },
+              "mode": "visible-pixels"
+            },
+            "monitor": {
+              "available": true,
+              "consent": "none",
+              "helper": {
+                "active": false,
+                "build": {
+                  "baseVersion": "26.1110.4614",
+                  "commitCount": 4614,
+                  "dirty": false,
+                  "gitCommit": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+                  "gitTree": "2e4e888dbd72187de60b5739b98554e594ac65bf",
+                  "packageVersion": "26.1110.4614~dev+g8662a5fd13b3",
+                  "schemaVersion": 1,
+                  "sourceProvenance": "git",
+                  "version": "26.1110.4614-dev+g8662a5fd13b3"
+                },
+                "lastExit": {},
+                "processId": 0
+              },
+              "mode": "visible-pixels"
+            },
+            "region": {
+              "available": true,
+              "consent": "none",
+              "helper": {
+                "active": false,
+                "build": {
+                  "baseVersion": "26.1110.4614",
+                  "commitCount": 4614,
+                  "dirty": false,
+                  "gitCommit": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+                  "gitTree": "2e4e888dbd72187de60b5739b98554e594ac65bf",
+                  "packageVersion": "26.1110.4614~dev+g8662a5fd13b3",
+                  "schemaVersion": 1,
+                  "sourceProvenance": "git",
+                  "version": "26.1110.4614-dev+g8662a5fd13b3"
+                },
+                "lastExit": {},
+                "processId": 0
+              },
+              "mode": "visible-pixels"
+            },
+            "repeat": {
+              "available": true,
+              "consent": "none",
+              "helper": {
+                "active": false,
+                "build": {
+                  "baseVersion": "26.1110.4614",
+                  "commitCount": 4614,
+                  "dirty": false,
+                  "gitCommit": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+                  "gitTree": "2e4e888dbd72187de60b5739b98554e594ac65bf",
+                  "packageVersion": "26.1110.4614~dev+g8662a5fd13b3",
+                  "schemaVersion": 1,
+                  "sourceProvenance": "git",
+                  "version": "26.1110.4614-dev+g8662a5fd13b3"
+                },
+                "lastExit": {},
+                "processId": 0
+              },
+              "mode": "visible-pixels",
+              "remembered": false
+            },
+            "window": {
+              "available": true,
+              "consent": "none",
+              "helper": {
+                "active": false,
+                "build": {
+                  "baseVersion": "26.1110.4614",
+                  "commitCount": 4614,
+                  "dirty": false,
+                  "gitCommit": "8662a5fd13b38dd5fe922ed951be09a7e9ec2b69",
+                  "gitTree": "2e4e888dbd72187de60b5739b98554e594ac65bf",
+                  "packageVersion": "26.1110.4614~dev+g8662a5fd13b3",
+                  "schemaVersion": 1,
+                  "sourceProvenance": "git",
+                  "version": "26.1110.4614-dev+g8662a5fd13b3"
+                },
+                "lastExit": {},
+                "processId": 0
+              },
+              "mode": "visible-pixels"
+            }
+          },
+          "clipboard": {
+            "available": true,
+            "import": "asynchronous-x11-selection",
+            "result": "native-x11-ownership",
+            "types": [
+              "files",
+              "image",
+              "text"
+            ]
+          },
+          "delay": {
+            "available": true,
+            "indicator": "helper-window",
+            "seconds": [
+              3,
+              5,
+              10
+            ]
+          },
+          "shortcuts": {
+            "available": true,
+            "bindings": {
+              "clipboard": {
+                "bound": false,
+                "error": "disabled",
+                "requested": ""
+              },
+              "desktop": {
+                "bound": false,
+                "error": "disabled",
+                "requested": ""
+              },
+              "edit": {
+                "bound": false,
+                "error": "disabled",
+                "requested": ""
+              },
+              "monitor": {
+                "bound": false,
+                "error": "disabled",
+                "requested": ""
+              },
+              "record": {
+                "bound": false,
+                "error": "disabled",
+                "requested": ""
+              },
+              "region": {
+                "bound": false,
+                "error": "disabled",
+                "requested": ""
+              },
+              "repeat": {
+                "bound": false,
+                "error": "disabled",
+                "requested": ""
+              },
+              "window": {
+                "bound": false,
+                "error": "disabled",
+                "requested": ""
+              }
+            },
+            "keyPaths": {
+              "lastActivation": {},
+              "passive": true,
+              "raw": {
+                "available": true,
+                "xinput": "2.2"
+              }
+            }
+          }
+        }
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "settings.get",
+    "params": {},
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "2c97f951-88f2-498a-8375-cce59bdab255",
+      "result": {
+        "document": {
+          "actions": {
+            "clipboard": {
+              "destination": "local",
+              "profileId": null,
+              "shortcut": ""
+            },
+            "desktop": {
+              "destination": "local",
+              "profileId": null,
+              "shortcut": ""
+            },
+            "edit": {
+              "destination": "local",
+              "profileId": null,
+              "shortcut": ""
+            },
+            "monitor": {
+              "destination": "local",
+              "profileId": null,
+              "shortcut": ""
+            },
+            "record": {
+              "shortcut": ""
+            },
+            "region": {
+              "destination": "local",
+              "profileId": null,
+              "shortcut": ""
+            },
+            "repeat": {
+              "shortcut": ""
+            },
+            "window": {
+              "destination": "local",
+              "profileId": null,
+              "shortcut": ""
+            }
+          },
+          "archive": {
+            "folders": {
+              "images": null,
+              "other": null,
+              "text": null,
+              "videos": null
+            },
+            "keepUploads": true,
+            "root": "/tmp/hp2c/files"
+          },
+          "limits": {
+            "clipboardTextBytes": 16777216,
+            "concurrentUploads": 1,
+            "imageBytes": 536870912,
+            "imagePixels": 100000000,
+            "maxBatchBytes": "auto",
+            "maxFileBytes": "auto",
+            "maxFiles": 100,
+            "pendingArtifactBytes": "auto",
+            "pendingImageBytes": 67108864,
+            "pendingOperations": 8
+          },
+          "naming": {
+            "captureTemplate": "Screen-Capture-{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}.{ext}",
+            "collisionPolicy": "rename",
+            "fileTemplate": "{name}.{ext}",
+            "imageTemplate": "Image-{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}.{ext}",
+            "mode": "original",
+            "textTemplate": "Text-{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}.{ext}"
+          },
+          "preferences": {
+            "appearance": {
+              "theme": "dark"
+            },
+            "launchAtLogin": false,
+            "notifications": true,
+            "unlockCredentialsAtStartup": false,
+            "updates": {
+              "check": false
+            },
+            "uploadClipboardBehavior": "each_link"
+          },
+          "profiles": [],
+          "retention": {
+            "failedArtifactDays": 7,
+            "historyRetentionDays": null,
+            "previewCacheBytes": 268435456,
+            "recentActivityLimit": 100
+          },
+          "schemaVersion": 1
+        },
+        "effectiveLimits": {
+          "disk": {
+            "availableBytes": 122578100224,
+            "freeBytes": 126873067520,
+            "reserveBytes": 4294967296,
+            "reservedBytes": 0,
+            "totalBytes": 250375106560
+          },
+          "maxBatchBytes": null,
+          "maxFileBytes": null,
+          "pendingArtifactBytes": null
+        },
+        "metadata": {
+          "acceptedRevision": "be847ebca429f418b7379139daba790512768ec79f0952c3d69b8170ff727f9c",
+          "fallbackRescanMs": 2000,
+          "observedRevision": "be847ebca429f418b7379139daba790512768ec79f0952c3d69b8170ff727f9c",
+          "path": "/tmp/hp2c/config/putgd/config.json",
+          "schemaVersion": 1,
+          "validation": {
+            "error": {
+              "code": "",
+              "details": {},
+              "message": ""
+            },
+            "ok": true
+          },
+          "watching": true
+        }
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "settings.importUploader",
+    "params": {
+      "path": "/tmp/hp2c/loopback.sxcu",
+      "expectedRevision": "be847ebca429f418b7379139daba790512768ec79f0952c3d69b8170ff727f9c",
+      "profileId": "history-p2-loopback",
+      "credentialMode": "session"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "a6aac5e4-6e78-46fc-b9fb-b46775702959",
+      "result": {
+        "credentials": {
+          "mode": "session"
+        },
+        "label": "Synthetic token-free loopback",
+        "metadata": {
+          "acceptedRevision": "fb6688f56d7746c08ced4b825d3597e9c7ffcf6ef1e13a2c3f858ec93f8fb07b",
+          "fallbackRescanMs": 2000,
+          "observedRevision": "fb6688f56d7746c08ced4b825d3597e9c7ffcf6ef1e13a2c3f858ec93f8fb07b",
+          "path": "/tmp/hp2c/config/putgd/config.json",
+          "schemaVersion": 1,
+          "validation": {
+            "error": {
+              "code": "",
+              "details": {},
+              "message": ""
+            },
+            "ok": true
+          },
+          "watching": true
+        },
+        "notes": [
+          "The file names no destination type; it was imported for images, text and files."
+        ],
+        "profileId": "history-p2-loopback",
+        "provider": "custom-http",
+        "storedValues": []
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "settings.get",
+    "params": {},
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "0aed8adc-f90a-4427-990b-d93a5c6a14bc",
+      "result": {
+        "document": {
+          "actions": {
+            "clipboard": {
+              "destination": "local",
+              "profileId": null,
+              "shortcut": ""
+            },
+            "desktop": {
+              "destination": "local",
+              "profileId": null,
+              "shortcut": ""
+            },
+            "edit": {
+              "destination": "local",
+              "profileId": null,
+              "shortcut": ""
+            },
+            "monitor": {
+              "destination": "local",
+              "profileId": null,
+              "shortcut": ""
+            },
+            "record": {
+              "shortcut": ""
+            },
+            "region": {
+              "destination": "local",
+              "profileId": null,
+              "shortcut": ""
+            },
+            "repeat": {
+              "shortcut": ""
+            },
+            "window": {
+              "destination": "local",
+              "profileId": null,
+              "shortcut": ""
+            }
+          },
+          "archive": {
+            "folders": {
+              "images": null,
+              "other": null,
+              "text": null,
+              "videos": null
+            },
+            "keepUploads": true,
+            "root": "/tmp/hp2c/files"
+          },
+          "limits": {
+            "clipboardTextBytes": 16777216,
+            "concurrentUploads": 1,
+            "imageBytes": 536870912,
+            "imagePixels": 100000000,
+            "maxBatchBytes": "auto",
+            "maxFileBytes": "auto",
+            "maxFiles": 100,
+            "pendingArtifactBytes": "auto",
+            "pendingImageBytes": 67108864,
+            "pendingOperations": 8
+          },
+          "naming": {
+            "captureTemplate": "Screen-Capture-{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}.{ext}",
+            "collisionPolicy": "rename",
+            "fileTemplate": "{name}.{ext}",
+            "imageTemplate": "Image-{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}.{ext}",
+            "mode": "original",
+            "textTemplate": "Text-{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}.{ext}"
+          },
+          "preferences": {
+            "appearance": {
+              "theme": "dark"
+            },
+            "launchAtLogin": false,
+            "notifications": true,
+            "unlockCredentialsAtStartup": false,
+            "updates": {
+              "check": false
+            },
+            "uploadClipboardBehavior": "each_link"
+          },
+          "profiles": [
+            {
+              "credentials": {
+                "mode": "session",
+                "reference": null
+              },
+              "id": "history-p2-loopback",
+              "label": "Synthetic token-free loopback",
+              "provider": "custom-http",
+              "settings": {
+                "accepts": [
+                  "image",
+                  "text",
+                  "file"
+                ],
+                "allowInsecureHttp": false,
+                "arguments": [],
+                "body": "multipart",
+                "connectTimeoutMs": 10000,
+                "data": "",
+                "dataSecret": false,
+                "deletionUrl": "{json:files[0].delete}",
+                "errorMessage": "",
+                "fileFormName": "file",
+                "headers": [],
+                "parameters": [],
+                "requestMethod": "POST",
+                "requestTimeoutMs": 600000,
+                "requestUrl": "http://127.0.0.1:41115/upload/json",
+                "responseUrl": "{json:files[0].url}",
+                "secrets": [],
+                "thumbnailUrl": ""
+              }
+            }
+          ],
+          "retention": {
+            "failedArtifactDays": 7,
+            "historyRetentionDays": null,
+            "previewCacheBytes": 268435456,
+            "recentActivityLimit": 100
+          },
+          "schemaVersion": 1
+        },
+        "effectiveLimits": {
+          "disk": {
+            "availableBytes": 122578087936,
+            "freeBytes": 126873055232,
+            "reserveBytes": 4294967296,
+            "reservedBytes": 0,
+            "totalBytes": 250375106560
+          },
+          "maxBatchBytes": null,
+          "maxFileBytes": null,
+          "pendingArtifactBytes": null
+        },
+        "metadata": {
+          "acceptedRevision": "fb6688f56d7746c08ced4b825d3597e9c7ffcf6ef1e13a2c3f858ec93f8fb07b",
+          "fallbackRescanMs": 2000,
+          "observedRevision": "fb6688f56d7746c08ced4b825d3597e9c7ffcf6ef1e13a2c3f858ec93f8fb07b",
+          "path": "/tmp/hp2c/config/putgd/config.json",
+          "schemaVersion": 1,
+          "validation": {
+            "error": {
+              "code": "",
+              "details": {},
+              "message": ""
+            },
+            "ok": true
+          },
+          "watching": true
+        }
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "settings.patch",
+    "params": {
+      "expectedRevision": "fb6688f56d7746c08ced4b825d3597e9c7ffcf6ef1e13a2c3f858ec93f8fb07b",
+      "patch": {
+        "actions": {
+          "edit": {
+            "destination": "upload",
+            "profileId": "history-p2-loopback",
+            "shortcut": ""
+          }
+        }
+      }
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "89b5f23b-9b17-4dc8-be12-61a817d81bea",
+      "result": {
+        "acceptedRevision": "95b109600c6da2de9106481069dbcd9e9bb232e747a4faaf5482e02d65938c29",
+        "fallbackRescanMs": 2000,
+        "observedRevision": "95b109600c6da2de9106481069dbcd9e9bb232e747a4faaf5482e02d65938c29",
+        "path": "/tmp/hp2c/config/putgd/config.json",
+        "schemaVersion": 1,
+        "validation": {
+          "error": {
+            "code": "",
+            "details": {},
+            "message": ""
+          },
+          "ok": true
+        },
+        "watching": true
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "editor.open",
+    "params": {
+      "source": "file",
+      "path": "/tmp/hp2c/Synthetic-check7-1.png"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "168a0d4b-1618-4022-b4a8-49f02b053c0e",
+      "result": {
+        "operation": {
+          "action": "edit",
+          "cancelled": false,
+          "clipboardRevision": "4",
+          "copyStatus": "pending",
+          "created": "2026-11-10T21:02:09.280Z",
+          "destination": {
+            "credentials": {
+              "mode": "session",
+              "reference": null
+            },
+            "profileId": "history-p2-loopback",
+            "profileRevision": "95b109600c6da2de9106481069dbcd9e9bb232e747a4faaf5482e02d65938c29",
+            "providerId": "custom-http",
+            "settings": {
+              "accepts": [
+                "image",
+                "text",
+                "file"
+              ],
+              "allowInsecureHttp": false,
+              "arguments": [],
+              "body": "multipart",
+              "connectTimeoutMs": 10000,
+              "data": "",
+              "dataSecret": false,
+              "deletionUrl": "{json:files[0].delete}",
+              "errorMessage": "",
+              "fileFormName": "file",
+              "headers": [],
+              "parameters": [],
+              "requestMethod": "POST",
+              "requestTimeoutMs": 600000,
+              "requestUrl": "http://127.0.0.1:41115/upload/json",
+              "responseUrl": "{json:files[0].url}",
+              "secrets": [],
+              "thumbnailUrl": ""
+            }
+          },
+          "error": {
+            "code": "",
+            "details": {},
+            "message": ""
+          },
+          "id": "054d02fd-57d5-449e-81e3-42144ddcc524",
+          "invocation": "1",
+          "items": [],
+          "phase": "accepted",
+          "requestTimeoutMs": null,
+          "settingsRevision": "95b109600c6da2de9106481069dbcd9e9bb232e747a4faaf5482e02d65938c29",
+          "state": "accepted"
+        },
+        "operationId": "054d02fd-57d5-449e-81e3-42144ddcc524"
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "editor.submit",
+    "params": {
+      "id": "054d02fd-57d5-449e-81e3-42144ddcc524"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "6e344511-1777-4224-a9dc-b266e9a1e232",
+      "result": {
+        "operationId": "054d02fd-57d5-449e-81e3-42144ddcc524",
+        "submitted": true
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "operation.inspect",
+    "params": {
+      "id": "054d02fd-57d5-449e-81e3-42144ddcc524"
+    },
+    "reply": {
+      "ok": true,
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "result": {
+        "id": "054d02fd-57d5-449e-81e3-42144ddcc524",
+        "state": "editing"
+      }
+    }
+  },
+  {
+    "method": "operation.inspect",
+    "params": {
+      "id": "054d02fd-57d5-449e-81e3-42144ddcc524"
+    },
+    "reply": {
+      "ok": true,
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "result": {
+        "id": "054d02fd-57d5-449e-81e3-42144ddcc524",
+        "state": "running"
+      }
+    }
+  },
+  {
+    "method": "operation.inspect",
+    "params": {
+      "id": "054d02fd-57d5-449e-81e3-42144ddcc524"
+    },
+    "reply": {
+      "ok": true,
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "result": {
+        "id": "054d02fd-57d5-449e-81e3-42144ddcc524",
+        "state": "completed"
+      }
+    }
+  },
+  {
+    "method": "history.list",
+    "params": {
+      "limit": 20
+    },
+    "reply": {
+      "ok": true,
+      "result": {
+        "records": [
+          {
+            "id": "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4",
+            "operationId": "054d02fd-57d5-449e-81e3-42144ddcc524",
+            "name": "Screen-Capture-2026-11-10-15-02-09.png"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "method": "history.detail",
+    "params": {
+      "id": "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+    },
+    "reply": {
+      "ok": true,
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "result": {
+        "id": "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4",
+        "remoteStatus": "not_requested",
+        "uploadStatus": "uploaded",
+        "name": "Screen-Capture-2026-11-10-15-02-09.png"
+      }
+    }
+  },
+  {
+    "method": "editor.open",
+    "params": {
+      "source": "file",
+      "path": "/tmp/hp2c/Synthetic-check7-2.png"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "9a5b833f-c58c-42f6-9867-fc893e6d6a84",
+      "result": {
+        "operation": {
+          "action": "edit",
+          "cancelled": false,
+          "clipboardRevision": "7",
+          "copyStatus": "pending",
+          "created": "2026-11-10T21:02:10.567Z",
+          "destination": {
+            "credentials": {
+              "mode": "session",
+              "reference": null
+            },
+            "profileId": "history-p2-loopback",
+            "profileRevision": "95b109600c6da2de9106481069dbcd9e9bb232e747a4faaf5482e02d65938c29",
+            "providerId": "custom-http",
+            "settings": {
+              "accepts": [
+                "image",
+                "text",
+                "file"
+              ],
+              "allowInsecureHttp": false,
+              "arguments": [],
+              "body": "multipart",
+              "connectTimeoutMs": 10000,
+              "data": "",
+              "dataSecret": false,
+              "deletionUrl": "{json:files[0].delete}",
+              "errorMessage": "",
+              "fileFormName": "file",
+              "headers": [],
+              "parameters": [],
+              "requestMethod": "POST",
+              "requestTimeoutMs": 600000,
+              "requestUrl": "http://127.0.0.1:41115/upload/json",
+              "responseUrl": "{json:files[0].url}",
+              "secrets": [],
+              "thumbnailUrl": ""
+            }
+          },
+          "error": {
+            "code": "",
+            "details": {},
+            "message": ""
+          },
+          "id": "6a82b588-074b-4dbf-8b31-028a36f575b5",
+          "invocation": "2",
+          "items": [],
+          "phase": "accepted",
+          "requestTimeoutMs": null,
+          "settingsRevision": "95b109600c6da2de9106481069dbcd9e9bb232e747a4faaf5482e02d65938c29",
+          "state": "accepted"
+        },
+        "operationId": "6a82b588-074b-4dbf-8b31-028a36f575b5"
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "editor.submit",
+    "params": {
+      "id": "6a82b588-074b-4dbf-8b31-028a36f575b5"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "02ea7191-d43f-434b-99d9-7be2372e3e25",
+      "result": {
+        "operationId": "6a82b588-074b-4dbf-8b31-028a36f575b5",
+        "submitted": true
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "operation.inspect",
+    "params": {
+      "id": "6a82b588-074b-4dbf-8b31-028a36f575b5"
+    },
+    "reply": {
+      "ok": true,
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "result": {
+        "id": "6a82b588-074b-4dbf-8b31-028a36f575b5",
+        "state": "editing"
+      }
+    }
+  },
+  {
+    "method": "operation.inspect",
+    "params": {
+      "id": "6a82b588-074b-4dbf-8b31-028a36f575b5"
+    },
+    "reply": {
+      "ok": true,
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "result": {
+        "id": "6a82b588-074b-4dbf-8b31-028a36f575b5",
+        "state": "running"
+      }
+    }
+  },
+  {
+    "method": "operation.inspect",
+    "params": {
+      "id": "6a82b588-074b-4dbf-8b31-028a36f575b5"
+    },
+    "reply": {
+      "ok": true,
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "result": {
+        "id": "6a82b588-074b-4dbf-8b31-028a36f575b5",
+        "state": "completed"
+      }
+    }
+  },
+  {
+    "method": "history.list",
+    "params": {
+      "limit": 20
+    },
+    "reply": {
+      "ok": true,
+      "result": {
+        "records": [
+          {
+            "id": "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+            "operationId": "6a82b588-074b-4dbf-8b31-028a36f575b5",
+            "name": "Screen-Capture-2026-11-10-15-02-10.png"
+          },
+          {
+            "id": "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4",
+            "operationId": "054d02fd-57d5-449e-81e3-42144ddcc524",
+            "name": "Screen-Capture-2026-11-10-15-02-09.png"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "method": "history.detail",
+    "params": {
+      "id": "f634e9bd-b3fc-4dae-975b-846b746e0e13"
+    },
+    "reply": {
+      "ok": true,
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "result": {
+        "id": "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+        "remoteStatus": "not_requested",
+        "uploadStatus": "uploaded",
+        "name": "Screen-Capture-2026-11-10-15-02-10.png"
+      }
+    }
+  },
+  {
+    "method": "editor.open",
+    "params": {
+      "source": "file",
+      "path": "/tmp/hp2c/Synthetic-check7-3.png"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "c9dc9ce6-d95f-4bc7-a948-b44f344a00f4",
+      "result": {
+        "operation": {
+          "action": "edit",
+          "cancelled": false,
+          "clipboardRevision": "10",
+          "copyStatus": "pending",
+          "created": "2026-11-10T21:02:11.886Z",
+          "destination": {
+            "credentials": {
+              "mode": "session",
+              "reference": null
+            },
+            "profileId": "history-p2-loopback",
+            "profileRevision": "95b109600c6da2de9106481069dbcd9e9bb232e747a4faaf5482e02d65938c29",
+            "providerId": "custom-http",
+            "settings": {
+              "accepts": [
+                "image",
+                "text",
+                "file"
+              ],
+              "allowInsecureHttp": false,
+              "arguments": [],
+              "body": "multipart",
+              "connectTimeoutMs": 10000,
+              "data": "",
+              "dataSecret": false,
+              "deletionUrl": "{json:files[0].delete}",
+              "errorMessage": "",
+              "fileFormName": "file",
+              "headers": [],
+              "parameters": [],
+              "requestMethod": "POST",
+              "requestTimeoutMs": 600000,
+              "requestUrl": "http://127.0.0.1:41115/upload/json",
+              "responseUrl": "{json:files[0].url}",
+              "secrets": [],
+              "thumbnailUrl": ""
+            }
+          },
+          "error": {
+            "code": "",
+            "details": {},
+            "message": ""
+          },
+          "id": "7b8fe050-f689-43d2-93f8-0f3ecb25f629",
+          "invocation": "3",
+          "items": [],
+          "phase": "accepted",
+          "requestTimeoutMs": null,
+          "settingsRevision": "95b109600c6da2de9106481069dbcd9e9bb232e747a4faaf5482e02d65938c29",
+          "state": "accepted"
+        },
+        "operationId": "7b8fe050-f689-43d2-93f8-0f3ecb25f629"
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "editor.submit",
+    "params": {
+      "id": "7b8fe050-f689-43d2-93f8-0f3ecb25f629"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "1b07e4b0-4aff-4c64-95bf-8e0b4c26d276",
+      "result": {
+        "operationId": "7b8fe050-f689-43d2-93f8-0f3ecb25f629",
+        "submitted": true
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "operation.inspect",
+    "params": {
+      "id": "7b8fe050-f689-43d2-93f8-0f3ecb25f629"
+    },
+    "reply": {
+      "ok": true,
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "result": {
+        "id": "7b8fe050-f689-43d2-93f8-0f3ecb25f629",
+        "state": "editing"
+      }
+    }
+  },
+  {
+    "method": "operation.inspect",
+    "params": {
+      "id": "7b8fe050-f689-43d2-93f8-0f3ecb25f629"
+    },
+    "reply": {
+      "ok": true,
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "result": {
+        "id": "7b8fe050-f689-43d2-93f8-0f3ecb25f629",
+        "state": "running"
+      }
+    }
+  },
+  {
+    "method": "operation.inspect",
+    "params": {
+      "id": "7b8fe050-f689-43d2-93f8-0f3ecb25f629"
+    },
+    "reply": {
+      "ok": true,
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "result": {
+        "id": "7b8fe050-f689-43d2-93f8-0f3ecb25f629",
+        "state": "completed"
+      }
+    }
+  },
+  {
+    "method": "history.list",
+    "params": {
+      "limit": 20
+    },
+    "reply": {
+      "ok": true,
+      "result": {
+        "records": [
+          {
+            "id": "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+            "operationId": "7b8fe050-f689-43d2-93f8-0f3ecb25f629",
+            "name": "Screen-Capture-2026-11-10-15-02-11.png"
+          },
+          {
+            "id": "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+            "operationId": "6a82b588-074b-4dbf-8b31-028a36f575b5",
+            "name": "Screen-Capture-2026-11-10-15-02-10.png"
+          },
+          {
+            "id": "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4",
+            "operationId": "054d02fd-57d5-449e-81e3-42144ddcc524",
+            "name": "Screen-Capture-2026-11-10-15-02-09.png"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "method": "history.detail",
+    "params": {
+      "id": "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3"
+    },
+    "reply": {
+      "ok": true,
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "result": {
+        "id": "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+        "remoteStatus": "not_requested",
+        "uploadStatus": "uploaded",
+        "name": "Screen-Capture-2026-11-10-15-02-11.png"
+      }
+    }
+  },
+  {
+    "method": "ui.show",
+    "params": {
+      "view": "history"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "5a9ae016-3eb5-4f8a-b059-c562594832dc",
+      "result": {
+        "shown": "history"
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "ui.history",
+    "params": {
+      "action": "inspect"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "53f7802d-8a11-43d0-8eaa-42c16a927a54",
+      "result": {
+        "activeFilters": [],
+        "activeOperationCount": 0,
+        "busy": false,
+        "canExpandPreview": false,
+        "canRetryLoading": false,
+        "canRetryPreview": false,
+        "cancelAllConfirmation": {
+          "open": false,
+          "operationIds": []
+        },
+        "categoryTotals": {
+          "all": 3,
+          "failed": 0,
+          "images": 3,
+          "text+other": 0,
+          "videos": 0
+        },
+        "copyJob": {},
+        "countLabel": "3 items",
+        "days": [
+          {
+            "day": "2026-11-10",
+            "files": 3,
+            "heading": "Today"
+          }
+        ],
+        "deletableIds": [],
+        "deletion": {},
+        "deletionConfirmationOpen": false,
+        "detailsOpen": false,
+        "detailsOrigin": "list",
+        "detailsWanted": true,
+        "eligibleLinkIds": [],
+        "filterChips": [],
+        "filtersLabel": "Filters",
+        "filtersPanelOpen": false,
+        "foldedFilters": 0,
+        "galleryScroll": 0,
+        "gridMode": false,
+        "heading": "All items",
+        "inspectorVisible": false,
+        "layout": "split",
+        "page": {
+          "firstItem": 1,
+          "lastItem": 3,
+          "limit": 50,
+          "loading": false,
+          "offset": 0,
+          "page": 1,
+          "pageCount": 1,
+          "total": 3
+        },
+        "previewExpanded": false,
+        "query": {
+          "category": "",
+          "from": "",
+          "limit": 50,
+          "localStatus": "",
+          "mime": "",
+          "offset": 0,
+          "profileId": "",
+          "remoteStatus": "",
+          "search": "",
+          "to": "",
+          "uploadStatus": ""
+        },
+        "rows": 3,
+        "savedCopyFolder": {},
+        "savedCopyVisible": false,
+        "savedPath": "",
+        "selectedIds": [],
+        "selectedRows": 0,
+        "selectionActions": [],
+        "selectionHeader": false,
+        "selectionSummary": {},
+        "total": 3
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "ui.history",
+    "params": {
+      "action": "closeDetails"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "94c39e15-adef-40f8-af9b-65fd8a55dd8f",
+      "result": {
+        "activeFilters": [],
+        "activeOperationCount": 0,
+        "busy": false,
+        "canExpandPreview": false,
+        "canRetryLoading": false,
+        "canRetryPreview": false,
+        "cancelAllConfirmation": {
+          "open": false,
+          "operationIds": []
+        },
+        "categoryTotals": {
+          "all": 3,
+          "failed": 0,
+          "images": 3,
+          "text+other": 0,
+          "videos": 0
+        },
+        "copyJob": {},
+        "countLabel": "3 items",
+        "days": [
+          {
+            "day": "2026-11-10",
+            "files": 3,
+            "heading": "Today"
+          }
+        ],
+        "deletableIds": [],
+        "deletion": {},
+        "deletionConfirmationOpen": false,
+        "detailsOpen": false,
+        "detailsOrigin": "list",
+        "detailsWanted": false,
+        "eligibleLinkIds": [],
+        "filterChips": [],
+        "filtersLabel": "Filters",
+        "filtersPanelOpen": false,
+        "foldedFilters": 0,
+        "galleryScroll": 0,
+        "gridMode": false,
+        "heading": "All items",
+        "inspectorVisible": false,
+        "layout": "split",
+        "page": {
+          "firstItem": 1,
+          "lastItem": 3,
+          "limit": 50,
+          "loading": false,
+          "offset": 0,
+          "page": 1,
+          "pageCount": 1,
+          "total": 3
+        },
+        "previewExpanded": false,
+        "query": {
+          "category": "",
+          "from": "",
+          "limit": 50,
+          "localStatus": "",
+          "mime": "",
+          "offset": 0,
+          "profileId": "",
+          "remoteStatus": "",
+          "search": "",
+          "to": "",
+          "uploadStatus": ""
+        },
+        "rows": 3,
+        "savedCopyFolder": {},
+        "savedCopyVisible": false,
+        "savedPath": "",
+        "selectedIds": [],
+        "selectedRows": 0,
+        "selectionActions": [],
+        "selectionHeader": false,
+        "selectionSummary": {},
+        "total": 3
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "ui.history",
+    "params": {
+      "action": "inspect"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "ce8bda85-7f63-4479-bf65-f2e543674c22",
+      "result": {
+        "activeFilters": [],
+        "activeOperationCount": 0,
+        "busy": false,
+        "canExpandPreview": false,
+        "canRetryLoading": false,
+        "canRetryPreview": false,
+        "cancelAllConfirmation": {
+          "open": false,
+          "operationIds": []
+        },
+        "categoryTotals": {
+          "all": 3,
+          "failed": 0,
+          "images": 3,
+          "text+other": 0,
+          "videos": 0
+        },
+        "copyJob": {},
+        "countLabel": "3 items",
+        "days": [
+          {
+            "day": "2026-11-10",
+            "files": 3,
+            "heading": "Today"
+          }
+        ],
+        "deletableIds": [],
+        "deletion": {},
+        "deletionConfirmationOpen": false,
+        "detailsOpen": false,
+        "detailsOrigin": "list",
+        "detailsWanted": false,
+        "eligibleLinkIds": [],
+        "filterChips": [],
+        "filtersLabel": "Filters",
+        "filtersPanelOpen": false,
+        "foldedFilters": 0,
+        "galleryScroll": 0,
+        "gridMode": false,
+        "heading": "All items",
+        "inspectorVisible": false,
+        "layout": "split",
+        "page": {
+          "firstItem": 1,
+          "lastItem": 3,
+          "limit": 50,
+          "loading": false,
+          "offset": 0,
+          "page": 1,
+          "pageCount": 1,
+          "total": 3
+        },
+        "previewExpanded": false,
+        "query": {
+          "category": "",
+          "from": "",
+          "limit": 50,
+          "localStatus": "",
+          "mime": "",
+          "offset": 0,
+          "profileId": "",
+          "remoteStatus": "",
+          "search": "",
+          "to": "",
+          "uploadStatus": ""
+        },
+        "rows": 3,
+        "savedCopyFolder": {},
+        "savedCopyVisible": false,
+        "savedPath": "",
+        "selectedIds": [],
+        "selectedRows": 0,
+        "selectionActions": [],
+        "selectionHeader": false,
+        "selectionSummary": {},
+        "total": 3
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "ui.history",
+    "params": {
+      "action": "select",
+      "ids": [
+        "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4",
+        "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+        "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3"
+      ]
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "d7bf3043-0f8f-4345-b7c7-cb7bf971a310",
+      "result": {
+        "activeFilters": [],
+        "activeOperationCount": 0,
+        "busy": false,
+        "canExpandPreview": false,
+        "canRetryLoading": false,
+        "canRetryPreview": false,
+        "cancelAllConfirmation": {
+          "open": false,
+          "operationIds": []
+        },
+        "categoryTotals": {
+          "all": 3,
+          "failed": 0,
+          "images": 3,
+          "text+other": 0,
+          "videos": 0
+        },
+        "copyJob": {},
+        "countLabel": "3 items",
+        "days": [
+          {
+            "day": "2026-11-10",
+            "files": 3,
+            "heading": "Today"
+          }
+        ],
+        "deletableIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "deletion": {},
+        "deletionConfirmationOpen": false,
+        "detailsOpen": false,
+        "detailsOrigin": "list",
+        "detailsWanted": false,
+        "eligibleLinkIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "filterChips": [],
+        "filtersLabel": "Filters",
+        "filtersPanelOpen": false,
+        "foldedFilters": 0,
+        "galleryScroll": 0,
+        "gridMode": false,
+        "heading": "All items",
+        "inspectorVisible": false,
+        "layout": "split",
+        "page": {
+          "firstItem": 1,
+          "lastItem": 3,
+          "limit": 50,
+          "loading": false,
+          "offset": 0,
+          "page": 1,
+          "pageCount": 1,
+          "total": 3
+        },
+        "previewExpanded": false,
+        "query": {
+          "category": "",
+          "from": "",
+          "limit": 50,
+          "localStatus": "",
+          "mime": "",
+          "offset": 0,
+          "profileId": "",
+          "remoteStatus": "",
+          "search": "",
+          "to": "",
+          "uploadStatus": ""
+        },
+        "rows": 3,
+        "savedCopyFolder": {},
+        "savedCopyVisible": false,
+        "savedPath": "",
+        "selectedIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "selectedRows": 3,
+        "selectionActions": [
+          "copyLinks",
+          "delete",
+          "clearSelection"
+        ],
+        "selectionHeader": true,
+        "selectionSummary": {
+          "bytes": 531,
+          "destinations": [
+            "Synthetic token-free loopback"
+          ],
+          "files": 3,
+          "items": 3,
+          "uploadStates": {
+            "uploaded": 3
+          }
+        },
+        "total": 3
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "ui.history",
+    "params": {
+      "action": "inspect"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "866f213b-48c9-4ae0-97e5-dc79d6051f9e",
+      "result": {
+        "activeFilters": [],
+        "activeOperationCount": 0,
+        "busy": false,
+        "canExpandPreview": false,
+        "canRetryLoading": false,
+        "canRetryPreview": false,
+        "cancelAllConfirmation": {
+          "open": false,
+          "operationIds": []
+        },
+        "categoryTotals": {
+          "all": 3,
+          "failed": 0,
+          "images": 3,
+          "text+other": 0,
+          "videos": 0
+        },
+        "copyJob": {},
+        "countLabel": "3 items",
+        "days": [
+          {
+            "day": "2026-11-10",
+            "files": 3,
+            "heading": "Today"
+          }
+        ],
+        "deletableIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "deletion": {},
+        "deletionConfirmationOpen": false,
+        "detailsOpen": false,
+        "detailsOrigin": "list",
+        "detailsWanted": false,
+        "eligibleLinkIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "filterChips": [],
+        "filtersLabel": "Filters",
+        "filtersPanelOpen": false,
+        "foldedFilters": 0,
+        "galleryScroll": 0,
+        "gridMode": false,
+        "heading": "All items",
+        "inspectorVisible": false,
+        "layout": "split",
+        "page": {
+          "firstItem": 1,
+          "lastItem": 3,
+          "limit": 50,
+          "loading": false,
+          "offset": 0,
+          "page": 1,
+          "pageCount": 1,
+          "total": 3
+        },
+        "previewExpanded": false,
+        "query": {
+          "category": "",
+          "from": "",
+          "limit": 50,
+          "localStatus": "",
+          "mime": "",
+          "offset": 0,
+          "profileId": "",
+          "remoteStatus": "",
+          "search": "",
+          "to": "",
+          "uploadStatus": ""
+        },
+        "rows": 3,
+        "savedCopyFolder": {},
+        "savedCopyVisible": false,
+        "savedPath": "",
+        "selectedIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "selectedRows": 3,
+        "selectionActions": [
+          "copyLinks",
+          "delete",
+          "clearSelection"
+        ],
+        "selectionHeader": true,
+        "selectionSummary": {
+          "bytes": 531,
+          "destinations": [
+            "Synthetic token-free loopback"
+          ],
+          "files": 3,
+          "items": 3,
+          "uploadStates": {
+            "uploaded": 3
+          }
+        },
+        "total": 3
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "ui.history",
+    "params": {
+      "action": "inspect"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "b6458ef3-3f76-4cc0-a8f5-2de5e1fc5efa",
+      "result": {
+        "activeFilters": [],
+        "activeOperationCount": 0,
+        "busy": false,
+        "canExpandPreview": false,
+        "canRetryLoading": false,
+        "canRetryPreview": false,
+        "cancelAllConfirmation": {
+          "open": false,
+          "operationIds": []
+        },
+        "categoryTotals": {
+          "all": 3,
+          "failed": 0,
+          "images": 3,
+          "text+other": 0,
+          "videos": 0
+        },
+        "copyJob": {},
+        "countLabel": "3 items",
+        "days": [
+          {
+            "day": "2026-11-10",
+            "files": 3,
+            "heading": "Today"
+          }
+        ],
+        "deletableIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "deletion": {},
+        "deletionConfirmationOpen": false,
+        "detailsOpen": false,
+        "detailsOrigin": "list",
+        "detailsWanted": false,
+        "eligibleLinkIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "filterChips": [],
+        "filtersLabel": "Filters",
+        "filtersPanelOpen": false,
+        "foldedFilters": 0,
+        "galleryScroll": 0,
+        "gridMode": false,
+        "heading": "All items",
+        "inspectorVisible": false,
+        "layout": "split",
+        "page": {
+          "firstItem": 1,
+          "lastItem": 3,
+          "limit": 50,
+          "loading": false,
+          "offset": 0,
+          "page": 1,
+          "pageCount": 1,
+          "total": 3
+        },
+        "previewExpanded": false,
+        "query": {
+          "category": "",
+          "from": "",
+          "limit": 50,
+          "localStatus": "",
+          "mime": "",
+          "offset": 0,
+          "profileId": "",
+          "remoteStatus": "",
+          "search": "",
+          "to": "",
+          "uploadStatus": ""
+        },
+        "rows": 3,
+        "savedCopyFolder": {},
+        "savedCopyVisible": false,
+        "savedPath": "",
+        "selectedIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "selectedRows": 3,
+        "selectionActions": [
+          "copyLinks",
+          "delete",
+          "clearSelection"
+        ],
+        "selectionHeader": true,
+        "selectionSummary": {
+          "bytes": 531,
+          "destinations": [
+            "Synthetic token-free loopback"
+          ],
+          "files": 3,
+          "items": 3,
+          "uploadStates": {
+            "uploaded": 3
+          }
+        },
+        "total": 3
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "ui.history",
+    "params": {
+      "action": "copySelectedLinks"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "591303dd-9a91-4a8b-87e5-37d80ebb56cc",
+      "result": {
+        "activeFilters": [],
+        "activeOperationCount": 0,
+        "busy": false,
+        "canExpandPreview": false,
+        "canRetryLoading": false,
+        "canRetryPreview": false,
+        "cancelAllConfirmation": {
+          "open": false,
+          "operationIds": []
+        },
+        "categoryTotals": {
+          "all": 3,
+          "failed": 0,
+          "images": 3,
+          "text+other": 0,
+          "videos": 0
+        },
+        "copyJob": {},
+        "countLabel": "3 items",
+        "days": [
+          {
+            "day": "2026-11-10",
+            "files": 3,
+            "heading": "Today"
+          }
+        ],
+        "deletableIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "deletion": {},
+        "deletionConfirmationOpen": false,
+        "detailsOpen": false,
+        "detailsOrigin": "list",
+        "detailsWanted": false,
+        "eligibleLinkIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "filterChips": [],
+        "filtersLabel": "Filters",
+        "filtersPanelOpen": false,
+        "foldedFilters": 0,
+        "galleryScroll": 0,
+        "gridMode": false,
+        "heading": "All items",
+        "inspectorVisible": false,
+        "layout": "split",
+        "page": {
+          "firstItem": 1,
+          "lastItem": 3,
+          "limit": 50,
+          "loading": false,
+          "offset": 0,
+          "page": 1,
+          "pageCount": 1,
+          "total": 3
+        },
+        "previewExpanded": false,
+        "query": {
+          "category": "",
+          "from": "",
+          "limit": 50,
+          "localStatus": "",
+          "mime": "",
+          "offset": 0,
+          "profileId": "",
+          "remoteStatus": "",
+          "search": "",
+          "to": "",
+          "uploadStatus": ""
+        },
+        "rows": 3,
+        "savedCopyFolder": {},
+        "savedCopyVisible": false,
+        "savedPath": "",
+        "selectedIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "selectedRows": 3,
+        "selectionActions": [
+          "copyLinks",
+          "delete",
+          "clearSelection"
+        ],
+        "selectionHeader": true,
+        "selectionSummary": {
+          "bytes": 531,
+          "destinations": [
+            "Synthetic token-free loopback"
+          ],
+          "files": 3,
+          "items": 3,
+          "uploadStates": {
+            "uploaded": 3
+          }
+        },
+        "total": 3
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "ui.history",
+    "params": {
+      "action": "inspect"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "6d9c5593-4af8-451b-b260-0585bc1e8ce7",
+      "result": {
+        "activeFilters": [],
+        "activeOperationCount": 0,
+        "busy": false,
+        "canExpandPreview": false,
+        "canRetryLoading": false,
+        "canRetryPreview": false,
+        "cancelAllConfirmation": {
+          "open": false,
+          "operationIds": []
+        },
+        "categoryTotals": {
+          "all": 3,
+          "failed": 0,
+          "images": 3,
+          "text+other": 0,
+          "videos": 0
+        },
+        "copyJob": {},
+        "countLabel": "3 items",
+        "days": [
+          {
+            "day": "2026-11-10",
+            "files": 3,
+            "heading": "Today"
+          }
+        ],
+        "deletableIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "deletion": {},
+        "deletionConfirmationOpen": false,
+        "detailsOpen": false,
+        "detailsOrigin": "list",
+        "detailsWanted": false,
+        "eligibleLinkIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "filterChips": [],
+        "filtersLabel": "Filters",
+        "filtersPanelOpen": false,
+        "foldedFilters": 0,
+        "galleryScroll": 0,
+        "gridMode": false,
+        "heading": "All items",
+        "inspectorVisible": false,
+        "layout": "split",
+        "page": {
+          "firstItem": 1,
+          "lastItem": 3,
+          "limit": 50,
+          "loading": false,
+          "offset": 0,
+          "page": 1,
+          "pageCount": 1,
+          "total": 3
+        },
+        "previewExpanded": false,
+        "query": {
+          "category": "",
+          "from": "",
+          "limit": 50,
+          "localStatus": "",
+          "mime": "",
+          "offset": 0,
+          "profileId": "",
+          "remoteStatus": "",
+          "search": "",
+          "to": "",
+          "uploadStatus": ""
+        },
+        "rows": 3,
+        "savedCopyFolder": {},
+        "savedCopyVisible": false,
+        "savedPath": "",
+        "selectedIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "selectedRows": 3,
+        "selectionActions": [
+          "copyLinks",
+          "delete",
+          "clearSelection"
+        ],
+        "selectionHeader": true,
+        "selectionSummary": {
+          "bytes": 531,
+          "destinations": [
+            "Synthetic token-free loopback"
+          ],
+          "files": 3,
+          "items": 3,
+          "uploadStates": {
+            "uploaded": 3
+          }
+        },
+        "total": 3
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "ui.history",
+    "params": {
+      "action": "deleteSelected"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "a782518d-963e-4904-b9ff-f30de5b4a108",
+      "result": {
+        "activeFilters": [],
+        "activeOperationCount": 0,
+        "busy": false,
+        "canExpandPreview": false,
+        "canRetryLoading": false,
+        "canRetryPreview": false,
+        "cancelAllConfirmation": {
+          "open": false,
+          "operationIds": []
+        },
+        "categoryTotals": {
+          "all": 3,
+          "failed": 0,
+          "images": 3,
+          "text+other": 0,
+          "videos": 0
+        },
+        "copyJob": {},
+        "countLabel": "3 items",
+        "days": [
+          {
+            "day": "2026-11-10",
+            "files": 3,
+            "heading": "Today"
+          }
+        ],
+        "deletableIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "deletion": {},
+        "deletionConfirmationOpen": false,
+        "detailsOpen": false,
+        "detailsOrigin": "list",
+        "detailsWanted": false,
+        "eligibleLinkIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "filterChips": [],
+        "filtersLabel": "Filters",
+        "filtersPanelOpen": false,
+        "foldedFilters": 0,
+        "galleryScroll": 0,
+        "gridMode": false,
+        "heading": "All items",
+        "inspectorVisible": false,
+        "layout": "split",
+        "page": {
+          "firstItem": 1,
+          "lastItem": 3,
+          "limit": 50,
+          "loading": false,
+          "offset": 0,
+          "page": 1,
+          "pageCount": 1,
+          "total": 3
+        },
+        "previewExpanded": false,
+        "query": {
+          "category": "",
+          "from": "",
+          "limit": 50,
+          "localStatus": "",
+          "mime": "",
+          "offset": 0,
+          "profileId": "",
+          "remoteStatus": "",
+          "search": "",
+          "to": "",
+          "uploadStatus": ""
+        },
+        "rows": 3,
+        "savedCopyFolder": {},
+        "savedCopyVisible": false,
+        "savedPath": "",
+        "selectedIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "selectedRows": 3,
+        "selectionActions": [
+          "copyLinks",
+          "delete",
+          "clearSelection"
+        ],
+        "selectionHeader": true,
+        "selectionSummary": {
+          "bytes": 531,
+          "destinations": [
+            "Synthetic token-free loopback"
+          ],
+          "files": 3,
+          "items": 3,
+          "uploadStates": {
+            "uploaded": 3
+          }
+        },
+        "total": 3
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "ui.history",
+    "params": {
+      "action": "inspect"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "70618c3a-d728-4fe5-be23-7030c00a5f23",
+      "result": {
+        "activeFilters": [],
+        "activeOperationCount": 0,
+        "busy": false,
+        "canExpandPreview": false,
+        "canRetryLoading": false,
+        "canRetryPreview": false,
+        "cancelAllConfirmation": {
+          "open": false,
+          "operationIds": []
+        },
+        "categoryTotals": {
+          "all": 3,
+          "failed": 0,
+          "images": 3,
+          "text+other": 0,
+          "videos": 0
+        },
+        "copyJob": {},
+        "countLabel": "3 items",
+        "days": [
+          {
+            "day": "2026-11-10",
+            "files": 3,
+            "heading": "Today"
+          }
+        ],
+        "deletableIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "deletion": {},
+        "deletionConfirmationOpen": true,
+        "detailsOpen": false,
+        "detailsOrigin": "list",
+        "detailsWanted": false,
+        "eligibleLinkIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "filterChips": [],
+        "filtersLabel": "Filters",
+        "filtersPanelOpen": false,
+        "foldedFilters": 0,
+        "galleryScroll": 0,
+        "gridMode": false,
+        "heading": "All items",
+        "inspectorVisible": false,
+        "layout": "split",
+        "page": {
+          "firstItem": 1,
+          "lastItem": 3,
+          "limit": 50,
+          "loading": false,
+          "offset": 0,
+          "page": 1,
+          "pageCount": 1,
+          "total": 3
+        },
+        "previewExpanded": false,
+        "query": {
+          "category": "",
+          "from": "",
+          "limit": 50,
+          "localStatus": "",
+          "mime": "",
+          "offset": 0,
+          "profileId": "",
+          "remoteStatus": "",
+          "search": "",
+          "to": "",
+          "uploadStatus": ""
+        },
+        "rows": 3,
+        "savedCopyFolder": {},
+        "savedCopyVisible": false,
+        "savedPath": "",
+        "selectedIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "selectedRows": 3,
+        "selectionActions": [
+          "copyLinks",
+          "delete",
+          "clearSelection"
+        ],
+        "selectionHeader": true,
+        "selectionSummary": {
+          "bytes": 531,
+          "destinations": [
+            "Synthetic token-free loopback"
+          ],
+          "files": 3,
+          "items": 3,
+          "uploadStates": {
+            "uploaded": 3
+          }
+        },
+        "total": 3
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "ui.history",
+    "params": {
+      "action": "inspect"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "806e2739-18da-40a6-8677-15218d875311",
+      "result": {
+        "activeFilters": [],
+        "activeOperationCount": 0,
+        "busy": false,
+        "canExpandPreview": false,
+        "canRetryLoading": false,
+        "canRetryPreview": false,
+        "cancelAllConfirmation": {
+          "open": false,
+          "operationIds": []
+        },
+        "categoryTotals": {
+          "all": 3,
+          "failed": 0,
+          "images": 3,
+          "text+other": 0,
+          "videos": 0
+        },
+        "copyJob": {},
+        "countLabel": "3 items",
+        "days": [
+          {
+            "day": "2026-11-10",
+            "files": 3,
+            "heading": "Today"
+          }
+        ],
+        "deletableIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "deletion": {},
+        "deletionConfirmationOpen": true,
+        "detailsOpen": false,
+        "detailsOrigin": "list",
+        "detailsWanted": false,
+        "eligibleLinkIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "filterChips": [],
+        "filtersLabel": "Filters",
+        "filtersPanelOpen": false,
+        "foldedFilters": 0,
+        "galleryScroll": 0,
+        "gridMode": false,
+        "heading": "All items",
+        "inspectorVisible": false,
+        "layout": "split",
+        "page": {
+          "firstItem": 1,
+          "lastItem": 3,
+          "limit": 50,
+          "loading": false,
+          "offset": 0,
+          "page": 1,
+          "pageCount": 1,
+          "total": 3
+        },
+        "previewExpanded": false,
+        "query": {
+          "category": "",
+          "from": "",
+          "limit": 50,
+          "localStatus": "",
+          "mime": "",
+          "offset": 0,
+          "profileId": "",
+          "remoteStatus": "",
+          "search": "",
+          "to": "",
+          "uploadStatus": ""
+        },
+        "rows": 3,
+        "savedCopyFolder": {},
+        "savedCopyVisible": false,
+        "savedPath": "",
+        "selectedIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "selectedRows": 3,
+        "selectionActions": [
+          "copyLinks",
+          "delete",
+          "clearSelection"
+        ],
+        "selectionHeader": true,
+        "selectionSummary": {
+          "bytes": 531,
+          "destinations": [
+            "Synthetic token-free loopback"
+          ],
+          "files": 3,
+          "items": 3,
+          "uploadStates": {
+            "uploaded": 3
+          }
+        },
+        "total": 3
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "ui.history",
+    "params": {
+      "action": "cancelConfirmation"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "6e6c7ec9-6201-4976-9eac-bc5e5c56675c",
+      "result": {
+        "activeFilters": [],
+        "activeOperationCount": 0,
+        "busy": false,
+        "canExpandPreview": false,
+        "canRetryLoading": false,
+        "canRetryPreview": false,
+        "cancelAllConfirmation": {
+          "open": false,
+          "operationIds": []
+        },
+        "categoryTotals": {
+          "all": 3,
+          "failed": 0,
+          "images": 3,
+          "text+other": 0,
+          "videos": 0
+        },
+        "copyJob": {},
+        "countLabel": "3 items",
+        "days": [
+          {
+            "day": "2026-11-10",
+            "files": 3,
+            "heading": "Today"
+          }
+        ],
+        "deletableIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "deletion": {},
+        "deletionConfirmationOpen": false,
+        "detailsOpen": false,
+        "detailsOrigin": "list",
+        "detailsWanted": false,
+        "eligibleLinkIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "filterChips": [],
+        "filtersLabel": "Filters",
+        "filtersPanelOpen": false,
+        "foldedFilters": 0,
+        "galleryScroll": 0,
+        "gridMode": false,
+        "heading": "All items",
+        "inspectorVisible": false,
+        "layout": "split",
+        "page": {
+          "firstItem": 1,
+          "lastItem": 3,
+          "limit": 50,
+          "loading": false,
+          "offset": 0,
+          "page": 1,
+          "pageCount": 1,
+          "total": 3
+        },
+        "previewExpanded": false,
+        "query": {
+          "category": "",
+          "from": "",
+          "limit": 50,
+          "localStatus": "",
+          "mime": "",
+          "offset": 0,
+          "profileId": "",
+          "remoteStatus": "",
+          "search": "",
+          "to": "",
+          "uploadStatus": ""
+        },
+        "rows": 3,
+        "savedCopyFolder": {},
+        "savedCopyVisible": false,
+        "savedPath": "",
+        "selectedIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "selectedRows": 3,
+        "selectionActions": [
+          "copyLinks",
+          "delete",
+          "clearSelection"
+        ],
+        "selectionHeader": true,
+        "selectionSummary": {
+          "bytes": 531,
+          "destinations": [
+            "Synthetic token-free loopback"
+          ],
+          "files": 3,
+          "items": 3,
+          "uploadStates": {
+            "uploaded": 3
+          }
+        },
+        "total": 3
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "ui.history",
+    "params": {
+      "action": "inspect"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "26d71122-6bdf-4869-95f1-d0cd58adddf0",
+      "result": {
+        "activeFilters": [],
+        "activeOperationCount": 0,
+        "busy": false,
+        "canExpandPreview": false,
+        "canRetryLoading": false,
+        "canRetryPreview": false,
+        "cancelAllConfirmation": {
+          "open": false,
+          "operationIds": []
+        },
+        "categoryTotals": {
+          "all": 3,
+          "failed": 0,
+          "images": 3,
+          "text+other": 0,
+          "videos": 0
+        },
+        "copyJob": {},
+        "countLabel": "3 items",
+        "days": [
+          {
+            "day": "2026-11-10",
+            "files": 3,
+            "heading": "Today"
+          }
+        ],
+        "deletableIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "deletion": {},
+        "deletionConfirmationOpen": false,
+        "detailsOpen": false,
+        "detailsOrigin": "list",
+        "detailsWanted": false,
+        "eligibleLinkIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "filterChips": [],
+        "filtersLabel": "Filters",
+        "filtersPanelOpen": false,
+        "foldedFilters": 0,
+        "galleryScroll": 0,
+        "gridMode": false,
+        "heading": "All items",
+        "inspectorVisible": false,
+        "layout": "split",
+        "page": {
+          "firstItem": 1,
+          "lastItem": 3,
+          "limit": 50,
+          "loading": false,
+          "offset": 0,
+          "page": 1,
+          "pageCount": 1,
+          "total": 3
+        },
+        "previewExpanded": false,
+        "query": {
+          "category": "",
+          "from": "",
+          "limit": 50,
+          "localStatus": "",
+          "mime": "",
+          "offset": 0,
+          "profileId": "",
+          "remoteStatus": "",
+          "search": "",
+          "to": "",
+          "uploadStatus": ""
+        },
+        "rows": 3,
+        "savedCopyFolder": {},
+        "savedCopyVisible": false,
+        "savedPath": "",
+        "selectedIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "selectedRows": 3,
+        "selectionActions": [
+          "copyLinks",
+          "delete",
+          "clearSelection"
+        ],
+        "selectionHeader": true,
+        "selectionSummary": {
+          "bytes": 531,
+          "destinations": [
+            "Synthetic token-free loopback"
+          ],
+          "files": 3,
+          "items": 3,
+          "uploadStates": {
+            "uploaded": 3
+          }
+        },
+        "total": 3
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "ui.history",
+    "params": {
+      "action": "inspect"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "aceed424-dcf2-4ccb-a7bf-ffb4835b43ae",
+      "result": {
+        "activeFilters": [],
+        "activeOperationCount": 0,
+        "busy": false,
+        "canExpandPreview": false,
+        "canRetryLoading": false,
+        "canRetryPreview": false,
+        "cancelAllConfirmation": {
+          "open": false,
+          "operationIds": []
+        },
+        "categoryTotals": {
+          "all": 3,
+          "failed": 0,
+          "images": 3,
+          "text+other": 0,
+          "videos": 0
+        },
+        "copyJob": {},
+        "countLabel": "3 items",
+        "days": [
+          {
+            "day": "2026-11-10",
+            "files": 3,
+            "heading": "Today"
+          }
+        ],
+        "deletableIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "deletion": {},
+        "deletionConfirmationOpen": false,
+        "detailsOpen": false,
+        "detailsOrigin": "list",
+        "detailsWanted": false,
+        "eligibleLinkIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "filterChips": [],
+        "filtersLabel": "Filters",
+        "filtersPanelOpen": false,
+        "foldedFilters": 0,
+        "galleryScroll": 0,
+        "gridMode": false,
+        "heading": "All items",
+        "inspectorVisible": false,
+        "layout": "split",
+        "page": {
+          "firstItem": 1,
+          "lastItem": 3,
+          "limit": 50,
+          "loading": false,
+          "offset": 0,
+          "page": 1,
+          "pageCount": 1,
+          "total": 3
+        },
+        "previewExpanded": false,
+        "query": {
+          "category": "",
+          "from": "",
+          "limit": 50,
+          "localStatus": "",
+          "mime": "",
+          "offset": 0,
+          "profileId": "",
+          "remoteStatus": "",
+          "search": "",
+          "to": "",
+          "uploadStatus": ""
+        },
+        "rows": 3,
+        "savedCopyFolder": {},
+        "savedCopyVisible": false,
+        "savedPath": "",
+        "selectedIds": [
+          "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+          "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+          "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+        ],
+        "selectedRows": 3,
+        "selectionActions": [
+          "copyLinks",
+          "delete",
+          "clearSelection"
+        ],
+        "selectionHeader": true,
+        "selectionSummary": {
+          "bytes": 531,
+          "destinations": [
+            "Synthetic token-free loopback"
+          ],
+          "files": 3,
+          "items": 3,
+          "uploadStates": {
+            "uploaded": 3
+          }
+        },
+        "total": 3
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "history.detail",
+    "params": {
+      "id": "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+    },
+    "reply": {
+      "ok": true,
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "result": {
+        "id": "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4",
+        "remoteStatus": "not_requested",
+        "uploadStatus": "uploaded",
+        "name": "Screen-Capture-2026-11-10-15-02-09.png"
+      }
+    }
+  },
+  {
+    "method": "ui.history",
+    "params": {
+      "action": "cancelConfirmation"
+    },
+    "reply": {
+      "error": {
+        "code": "history_confirmation_unavailable",
+        "details": {},
+        "message": "No deletion confirmation is open."
+      },
+      "ok": false,
+      "requestId": "d0873c7d-0645-4c1e-b923-112b78993adb",
+      "result": {},
+      "schemaVersion": 1
+    }
+  },
+  {
+    "method": "history.detail",
+    "params": {
+      "id": "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4"
+    },
+    "reply": {
+      "ok": true,
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "result": {
+        "id": "d3a30773-c9fe-44bf-a66d-14c77e8e5bb4",
+        "remoteStatus": "not_requested",
+        "uploadStatus": "uploaded",
+        "name": "Screen-Capture-2026-11-10-15-02-09.png"
+      }
+    }
+  },
+  {
+    "method": "history.detail",
+    "params": {
+      "id": "f634e9bd-b3fc-4dae-975b-846b746e0e13"
+    },
+    "reply": {
+      "ok": true,
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "result": {
+        "id": "f634e9bd-b3fc-4dae-975b-846b746e0e13",
+        "remoteStatus": "not_requested",
+        "uploadStatus": "uploaded",
+        "name": "Screen-Capture-2026-11-10-15-02-10.png"
+      }
+    }
+  },
+  {
+    "method": "history.detail",
+    "params": {
+      "id": "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3"
+    },
+    "reply": {
+      "ok": true,
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "result": {
+        "id": "6b9df6c7-8bc7-4447-a9e1-4bf43c9259a3",
+        "remoteStatus": "not_requested",
+        "uploadStatus": "uploaded",
+        "name": "Screen-Capture-2026-11-10-15-02-11.png"
+      }
+    }
+  },
+  {
+    "method": "ui.quit",
+    "params": {},
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "a2c6d893-e5b4-44ff-b4b3-88bb1b570769",
+      "result": {
+        "quitting": true
+      },
+      "schemaVersion": 1
+    }
+  }
+]

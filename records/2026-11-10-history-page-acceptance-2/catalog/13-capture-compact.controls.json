@@ -1,0 +1,412 @@
+{
+    "class": "putgd::MainWindow",
+    "controls": [
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "applicationMenu",
+            "rect": [
+                12,
+                8,
+                32,
+                32
+            ],
+            "text": "Application menu"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "windowMinimize",
+            "rect": [
+                944,
+                8,
+                32,
+                32
+            ],
+            "text": "Minimize"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "windowMaximize",
+            "rect": [
+                980,
+                8,
+                32,
+                32
+            ],
+            "text": "Maximize"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "windowClose",
+            "rect": [
+                1016,
+                8,
+                32,
+                32
+            ],
+            "text": "Close window"
+        },
+        {
+            "class": "putgd::Ui::Segmented",
+            "enabled": true,
+            "kind": "tabs",
+            "name": "mainNavigation",
+            "rect": [
+                358,
+                4,
+                344,
+                40
+            ],
+            "tabs": [
+                {
+                    "current": false,
+                    "rect": [
+                        358,
+                        4,
+                        110,
+                        40
+                    ],
+                    "text": "History"
+                },
+                {
+                    "current": false,
+                    "rect": [
+                        468,
+                        4,
+                        124,
+                        40
+                    ],
+                    "text": "Destinations"
+                },
+                {
+                    "current": true,
+                    "rect": [
+                        592,
+                        4,
+                        110,
+                        40
+                    ],
+                    "text": "Settings"
+                }
+            ],
+            "text": ""
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                12,
+                56,
+                137,
+                32
+            ],
+            "text": "Capture region"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                153,
+                56,
+                93,
+                32
+            ],
+            "text": "Window"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                250,
+                56,
+                91,
+                32
+            ],
+            "text": "Monitor"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                345,
+                56,
+                94,
+                32
+            ],
+            "text": "Desktop"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                448,
+                56,
+                207,
+                32
+            ],
+            "text": "Capture region && edit"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                659,
+                56,
+                132,
+                32
+            ],
+            "text": "Record screen"
+        },
+        {
+            "checkable": false,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureActionButton",
+            "rect": [
+                898,
+                56,
+                150,
+                32
+            ],
+            "text": "Upload clipboard"
+        },
+        {
+            "class": "QListWidget",
+            "enabled": true,
+            "kind": "list",
+            "name": "settingsNavigation",
+            "rect": [
+                16,
+                112,
+                184,
+                156
+            ],
+            "rows": 4,
+            "text": ""
+        },
+        {
+            "class": "QTabWidget",
+            "enabled": true,
+            "kind": "focusable",
+            "name": "settingsTabs",
+            "rect": [
+                216,
+                96,
+                844,
+                544
+            ],
+            "text": ""
+        },
+        {
+            "class": "QComboBox",
+            "count": 3,
+            "enabled": true,
+            "kind": "choice",
+            "name": "defaultCaptureDestination",
+            "rect": [
+                528,
+                226,
+                464,
+                36
+            ],
+            "text": "Proton Drive"
+        },
+        {
+            "class": "QComboBox",
+            "count": 3,
+            "enabled": true,
+            "kind": "choice",
+            "name": "defaultCaptureSharing",
+            "rect": [
+                528,
+                278,
+                464,
+                36
+            ],
+            "text": "Destination default — shared link"
+        },
+        {
+            "checkable": true,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "uploadClipboardBehaviorHelp",
+            "rect": [
+                366,
+                336,
+                24,
+                24
+            ],
+            "text": "Copy each link writes successful upload links individually. Copy a list writes one newline-separated list in submission order after overlapping uploads finish. Copying something yourself pauses automatic copies; links stay available in History. Applies to new operations."
+        },
+        {
+            "class": "QComboBox",
+            "count": 2,
+            "enabled": true,
+            "kind": "choice",
+            "name": "uploadClipboardBehavior",
+            "rect": [
+                528,
+                330,
+                464,
+                36
+            ],
+            "text": "Copy each link as it finishes"
+        },
+        {
+            "checkable": true,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "captureExceptionsToggle",
+            "rect": [
+                978,
+                382,
+                14,
+                36
+            ],
+            "text": ""
+        },
+        {
+            "checkable": true,
+            "checked": false,
+            "class": "QToolButton",
+            "enabled": true,
+            "kind": "button",
+            "name": "regionSelectionModeHelp",
+            "rect": [
+                365,
+                526,
+                24,
+                24
+            ],
+            "text": "Live desktop keeps the screen updating while you drag; close an open menu first. Screenshot first captures every monitor before the selector opens and cuts your region from that picture, so open menus and tooltips are included. Applies to new captures."
+        },
+        {
+            "class": "QComboBox",
+            "count": 2,
+            "enabled": true,
+            "kind": "choice",
+            "name": "regionSelectionMode",
+            "rect": [
+                528,
+                520,
+                464,
+                36
+            ],
+            "text": "Live desktop"
+        }
+    ],
+    "height": 680,
+    "keys": [
+        {
+            "context": 3,
+            "enabled": true,
+            "keys": [
+                "Esc"
+            ],
+            "name": "historyDetailsEscape",
+            "text": ""
+        },
+        {
+            "context": 0,
+            "enabled": true,
+            "keys": [
+                "Return",
+                "Enter"
+            ],
+            "name": "",
+            "text": ""
+        },
+        {
+            "context": 0,
+            "enabled": true,
+            "keys": [
+                "Menu",
+                "Shift+F10"
+            ],
+            "name": "",
+            "text": ""
+        },
+        {
+            "context": 3,
+            "enabled": true,
+            "keys": [
+                "Alt+Left"
+            ],
+            "name": "historyPreviousPage",
+            "text": ""
+        },
+        {
+            "context": 3,
+            "enabled": true,
+            "keys": [
+                "Alt+Right"
+            ],
+            "name": "historyNextPage",
+            "text": ""
+        },
+        {
+            "context": 0,
+            "enabled": true,
+            "keys": [
+                "Alt+Up"
+            ],
+            "name": "moveDestinationUp",
+            "text": "Move up"
+        },
+        {
+            "context": 0,
+            "enabled": false,
+            "keys": [
+                "Alt+Down"
+            ],
+            "name": "moveDestinationDown",
+            "text": "Move down"
+        }
+    ],
+    "width": 1060
+}
