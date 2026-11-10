@@ -1,0 +1,578 @@
+[
+  {
+    "case": "cap1",
+    "reportedPass": false,
+    "capture": {
+      "bytes": 47316,
+      "elapsedMs": 5407,
+      "endReason": "end_of_content",
+      "height": 600,
+      "id": "4a1e5973-21ad-48c7-8dde-e8feab2b9db3",
+      "lowConfidenceSteps": 0,
+      "operationId": "4a1e5973-21ad-48c7-8dde-e8feab2b9db3",
+      "pixelsPerNotch": 0,
+      "rect": [
+        0,
+        100,
+        1280,
+        600
+      ],
+      "result": {
+        "appliedMaxHeight": 2000,
+        "bytes": 47316,
+        "endReason": "end_of_content",
+        "height": 600,
+        "id": "4a1e5973-21ad-48c7-8dde-e8feab2b9db3",
+        "sha256": "faa15bc7c79ad488cb6be432924e300d8e546037c651dca41d0db106cc583579",
+        "stats": {
+          "elapsedMs": 5407,
+          "lowConfidenceSteps": 0,
+          "pixelsPerNotch": 0,
+          "steps": 2
+        },
+        "truncated": false,
+        "width": 1280
+      },
+      "state": "done",
+      "stats": {
+        "elapsedMs": 5407,
+        "lowConfidenceSteps": 0,
+        "pixelsPerNotch": 0,
+        "steps": 2
+      },
+      "steps": 2,
+      "truncated": false
+    },
+    "candidateStartPixels": []
+  },
+  {
+    "case": "finecap",
+    "reportedPass": true,
+    "capture": {
+      "bytes": 36602,
+      "elapsedMs": 8995,
+      "endReason": "height_cap",
+      "height": 2000,
+      "id": "e5c53b19-bbff-4401-ac9e-28b7643cbc13",
+      "lowConfidenceSteps": 0,
+      "note": "Stopped at 2,000 px. The page continues below.",
+      "operationId": "e5c53b19-bbff-4401-ac9e-28b7643cbc13",
+      "pixelsPerNotch": 0,
+      "rect": [
+        0,
+        0,
+        1280,
+        700
+      ],
+      "result": {
+        "appliedMaxHeight": 2000,
+        "bytes": 36602,
+        "endReason": "height_cap",
+        "height": 2000,
+        "id": "e5c53b19-bbff-4401-ac9e-28b7643cbc13",
+        "sha256": "b1481c6467e38a3852de8c27be9e2c35e7fe0ef0e3735f57f7c58f898a9d0d98",
+        "stats": {
+          "elapsedMs": 8995,
+          "lowConfidenceSteps": 0,
+          "pixelsPerNotch": 0,
+          "steps": 7
+        },
+        "truncated": true,
+        "width": 1280
+      },
+      "state": "done",
+      "stats": {
+        "elapsedMs": 8995,
+        "lowConfidenceSteps": 0,
+        "pixelsPerNotch": 0,
+        "steps": 7
+      },
+      "steps": 7,
+      "truncated": true
+    },
+    "candidateStartPixels": [
+      0
+    ],
+    "prefixVerification": {
+      "pass": true,
+      "size": [
+        1280,
+        2000
+      ],
+      "expectedHeight": 2000,
+      "errors": [],
+      "unexpectedPixels": 0,
+      "coverage": "every scanline; full barcode cell interiors excluding labels, cell edges and scrollbar; visual check still required outside barcode"
+    }
+  },
+  {
+    "case": "plain",
+    "reportedPass": false,
+    "capture": {
+      "bytes": 45490,
+      "elapsedMs": 4262,
+      "endReason": "lost_track",
+      "height": 907,
+      "id": "30a48b40-b0bd-40bf-8703-83d5efac4053",
+      "lowConfidenceSteps": 0,
+      "operationId": "30a48b40-b0bd-40bf-8703-83d5efac4053",
+      "pixelsPerNotch": 0,
+      "rect": [
+        0,
+        0,
+        1280,
+        700
+      ],
+      "result": {
+        "appliedMaxHeight": 5000,
+        "bytes": 45490,
+        "endReason": "lost_track",
+        "height": 907,
+        "id": "30a48b40-b0bd-40bf-8703-83d5efac4053",
+        "note": "after scrolling back the last stitched frame was not found (NoMatch)",
+        "sha256": "c305854c81fabff7333a05396099505ff91f8974e43a1b520c8aa18db9d2a182",
+        "stats": {
+          "elapsedMs": 4262,
+          "lowConfidenceSteps": 0,
+          "pixelsPerNotch": 0,
+          "steps": 3
+        },
+        "truncated": true,
+        "width": 1280
+      },
+      "state": "done",
+      "stats": {
+        "elapsedMs": 4262,
+        "lowConfidenceSteps": 0,
+        "pixelsPerNotch": 0,
+        "steps": 3
+      },
+      "steps": 3,
+      "truncated": true
+    },
+    "candidateStartPixels": [
+      0
+    ],
+    "prefixVerification": {
+      "pass": false,
+      "size": [
+        1280,
+        907
+      ],
+      "expectedHeight": 907,
+      "errors": [
+        "pixel (926,602) row 15 line 2 got (233, 233, 233) expected 250",
+        "36489 unexpected pixels in barcode interiors (cursor/overlay or wrong content)"
+      ],
+      "unexpectedPixels": 36489,
+      "coverage": "every scanline; full barcode cell interiors excluding labels, cell edges and scrollbar; visual check still required outside barcode"
+    }
+  },
+  {
+    "case": "plainclean",
+    "reportedPass": false,
+    "capture": {
+      "bytes": 21141,
+      "elapsedMs": 3170,
+      "endReason": "lost_track",
+      "height": 1205,
+      "id": "fe7b05ab-88a0-4ed4-9b29-178f3ac75681",
+      "lowConfidenceSteps": 0,
+      "operationId": "fe7b05ab-88a0-4ed4-9b29-178f3ac75681",
+      "pixelsPerNotch": 108,
+      "rect": [
+        0,
+        0,
+        1280,
+        800
+      ],
+      "result": {
+        "appliedMaxHeight": 5000,
+        "bytes": 21141,
+        "endReason": "lost_track",
+        "height": 1205,
+        "id": "fe7b05ab-88a0-4ed4-9b29-178f3ac75681",
+        "note": "after scrolling back the last stitched frame was not found (NoMatch)",
+        "sha256": "9d057d70794c2b2b712af264b18046ccfc44e7bbfe21042790483013d6842c82",
+        "stats": {
+          "elapsedMs": 3170,
+          "lowConfidenceSteps": 0,
+          "pixelsPerNotch": 108,
+          "steps": 5
+        },
+        "truncated": true,
+        "width": 1280
+      },
+      "state": "done",
+      "stats": {
+        "elapsedMs": 3170,
+        "lowConfidenceSteps": 0,
+        "pixelsPerNotch": 108,
+        "steps": 5
+      },
+      "steps": 5,
+      "truncated": true
+    },
+    "candidateStartPixels": [
+      0
+    ],
+    "prefixVerification": {
+      "pass": true,
+      "size": [
+        1280,
+        1205
+      ],
+      "expectedHeight": 1205,
+      "errors": [],
+      "unexpectedPixels": 0,
+      "coverage": "every scanline; full barcode cell interiors excluding labels, cell edges and scrollbar; visual check still required outside barcode"
+    }
+  },
+  {
+    "case": "canceloff",
+    "reportedPass": true,
+    "capture": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "height": 1158,
+      "id": "0d08bb66-1bc7-434e-b5d6-2a7add726467",
+      "operationId": "0d08bb66-1bc7-434e-b5d6-2a7add726467",
+      "pixelsPerNotch": 229,
+      "rect": [
+        0,
+        0,
+        1280,
+        800
+      ],
+      "state": "cancelled",
+      "steps": 2
+    }
+  },
+  {
+    "case": "nativeqt",
+    "reportedPass": false,
+    "capture": {
+      "bytes": 41178,
+      "elapsedMs": 2944,
+      "endReason": "lost_track",
+      "height": 675,
+      "id": "3210fd59-e109-426f-ba1e-02beb50b2cfb",
+      "lowConfidenceSteps": 0,
+      "operationId": "3210fd59-e109-426f-ba1e-02beb50b2cfb",
+      "pixelsPerNotch": 0,
+      "rect": [
+        0,
+        100,
+        1280,
+        600
+      ],
+      "result": {
+        "appliedMaxHeight": 2000,
+        "bytes": 41178,
+        "endReason": "lost_track",
+        "height": 675,
+        "id": "3210fd59-e109-426f-ba1e-02beb50b2cfb",
+        "note": "after scrolling back the last stitched frame was not found (NoMatch)",
+        "sha256": "b5656d302b3b28c90d5a2f5ca8e5cfb8e31a9ae73cbef1f44041c4a0c69cdd1e",
+        "stats": {
+          "elapsedMs": 2944,
+          "lowConfidenceSteps": 0,
+          "pixelsPerNotch": 0,
+          "steps": 2
+        },
+        "truncated": true,
+        "width": 1280
+      },
+      "state": "done",
+      "stats": {
+        "elapsedMs": 2944,
+        "lowConfidenceSteps": 0,
+        "pixelsPerNotch": 0,
+        "steps": 2
+      },
+      "steps": 2,
+      "truncated": true
+    },
+    "candidateStartPixels": [
+      60
+    ],
+    "prefixVerification": {
+      "pass": false,
+      "size": [
+        1280,
+        675
+      ],
+      "expectedHeight": 675,
+      "errors": [
+        "pixel (926,502) row 14 line 2 got (233, 233, 233) expected 250",
+        "34364 unexpected pixels in barcode interiors (cursor/overlay or wrong content)"
+      ],
+      "unexpectedPixels": 34364,
+      "coverage": "every scanline; full barcode cell interiors excluding labels, cell edges and scrollbar; visual check still required outside barcode"
+    }
+  },
+  {
+    "case": "stopoff",
+    "reportedPass": false,
+    "capture": {
+      "bytes": 17225,
+      "elapsedMs": 1203,
+      "endReason": "stopped",
+      "height": 1007,
+      "id": "15c4c88b-2947-4f18-8329-66a77a94c828",
+      "lowConfidenceSteps": 0,
+      "operationId": "15c4c88b-2947-4f18-8329-66a77a94c828",
+      "pixelsPerNotch": 121,
+      "rect": [
+        0,
+        0,
+        1280,
+        800
+      ],
+      "result": {
+        "appliedMaxHeight": 30000,
+        "bytes": 17225,
+        "endReason": "stopped",
+        "height": 1007,
+        "id": "15c4c88b-2947-4f18-8329-66a77a94c828",
+        "sha256": "b447916b5a41273a410f3ac4f40d55c5e93264a94baa92406cefcdff921bf50e",
+        "stats": {
+          "elapsedMs": 1203,
+          "lowConfidenceSteps": 0,
+          "pixelsPerNotch": 121,
+          "steps": 3
+        },
+        "truncated": true,
+        "width": 1280
+      },
+      "state": "done",
+      "stats": {
+        "elapsedMs": 1203,
+        "lowConfidenceSteps": 0,
+        "pixelsPerNotch": 121,
+        "steps": 3
+      },
+      "steps": 3,
+      "truncated": true
+    },
+    "candidateStartPixels": [
+      0
+    ],
+    "prefixVerification": {
+      "pass": true,
+      "size": [
+        1280,
+        1007
+      ],
+      "expectedHeight": 1007,
+      "errors": [],
+      "unexpectedPixels": 0,
+      "coverage": "every scanline; full barcode cell interiors excluding labels, cell edges and scrollbar; visual check still required outside barcode"
+    }
+  },
+  {
+    "case": "cancel",
+    "reportedPass": true,
+    "capture": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "height": 0,
+      "id": "004afcff-9059-4d9e-b257-e7890bbc3cf2",
+      "operationId": "004afcff-9059-4d9e-b257-e7890bbc3cf2",
+      "pixelsPerNotch": 0,
+      "rect": [
+        0,
+        0,
+        1280,
+        800
+      ],
+      "state": "cancelled",
+      "steps": 0
+    }
+  },
+  {
+    "case": "sticky",
+    "reportedPass": true,
+    "capture": {
+      "bytes": 45063,
+      "elapsedMs": 6480,
+      "endReason": "end_of_content",
+      "height": 2480,
+      "id": "716d30c2-7cf3-477a-9afe-c1c7bbeb4862",
+      "lowConfidenceSteps": 0,
+      "operationId": "716d30c2-7cf3-477a-9afe-c1c7bbeb4862",
+      "pixelsPerNotch": 343,
+      "rect": [
+        0,
+        0,
+        1280,
+        800
+      ],
+      "result": {
+        "appliedMaxHeight": 5000,
+        "bytes": 45063,
+        "endReason": "end_of_content",
+        "height": 2480,
+        "id": "716d30c2-7cf3-477a-9afe-c1c7bbeb4862",
+        "sha256": "db8be2986af03ade1d79adf7d1b5848b8db8fc72bb1c7ee1cc1abdc5d04b919b",
+        "stats": {
+          "elapsedMs": 6480,
+          "lowConfidenceSteps": 0,
+          "pixelsPerNotch": 343,
+          "steps": 12
+        },
+        "truncated": false,
+        "width": 1280
+      },
+      "state": "done",
+      "stats": {
+        "elapsedMs": 6480,
+        "lowConfidenceSteps": 0,
+        "pixelsPerNotch": 343,
+        "steps": 12
+      },
+      "steps": 12,
+      "truncated": false
+    },
+    "candidateStartPixels": []
+  },
+  {
+    "case": "nativegtk",
+    "reportedPass": false,
+    "capture": {
+      "bytes": 36391,
+      "elapsedMs": 5720,
+      "endReason": "height_cap",
+      "height": 2000,
+      "id": "e4fc62b0-3a63-4e1d-8d90-138aacf99d06",
+      "lowConfidenceSteps": 0,
+      "note": "Stopped at 2,000 px. The page continues below.",
+      "operationId": "e4fc62b0-3a63-4e1d-8d90-138aacf99d06",
+      "pixelsPerNotch": 414,
+      "rect": [
+        0,
+        30,
+        1280,
+        700
+      ],
+      "result": {
+        "appliedMaxHeight": 2000,
+        "bytes": 36391,
+        "endReason": "height_cap",
+        "height": 2000,
+        "id": "e4fc62b0-3a63-4e1d-8d90-138aacf99d06",
+        "sha256": "e0e4420804df3ae3858620054a153392a5d9eeb8f0769a773394eaf1f4f394be",
+        "stats": {
+          "elapsedMs": 5720,
+          "lowConfidenceSteps": 0,
+          "pixelsPerNotch": 414,
+          "steps": 8
+        },
+        "truncated": true,
+        "width": 1280
+      },
+      "state": "done",
+      "stats": {
+        "elapsedMs": 5720,
+        "lowConfidenceSteps": 0,
+        "pixelsPerNotch": 414,
+        "steps": 8
+      },
+      "steps": 8,
+      "truncated": true
+    },
+    "candidateStartPixels": []
+  },
+  {
+    "case": "plainfull",
+    "reportedPass": false,
+    "capture": {
+      "bytes": 72419,
+      "elapsedMs": 5857,
+      "endReason": "lost_track",
+      "height": 1214,
+      "id": "b75b53bb-ec4e-47c2-b039-ba0d58b7b122",
+      "lowConfidenceSteps": 0,
+      "operationId": "b75b53bb-ec4e-47c2-b039-ba0d58b7b122",
+      "pixelsPerNotch": 0,
+      "rect": [
+        0,
+        0,
+        1280,
+        800
+      ],
+      "result": {
+        "appliedMaxHeight": 5000,
+        "bytes": 72419,
+        "endReason": "lost_track",
+        "height": 1214,
+        "id": "b75b53bb-ec4e-47c2-b039-ba0d58b7b122",
+        "note": "the frame stream went quiet and the content moved past the overlap meanwhile",
+        "sha256": "7aa56d46719b7eb21b27013c6f5dfbb791f90dfe02cc039c59b221ed3a6fb495",
+        "stats": {
+          "elapsedMs": 5857,
+          "lowConfidenceSteps": 0,
+          "pixelsPerNotch": 0,
+          "steps": 4
+        },
+        "truncated": true,
+        "width": 1280
+      },
+      "state": "done",
+      "stats": {
+        "elapsedMs": 5857,
+        "lowConfidenceSteps": 0,
+        "pixelsPerNotch": 0,
+        "steps": 4
+      },
+      "steps": 4,
+      "truncated": true
+    },
+    "candidateStartPixels": [
+      0
+    ],
+    "prefixVerification": {
+      "pass": false,
+      "size": [
+        1280,
+        1214
+      ],
+      "expectedHeight": 1214,
+      "errors": [
+        "pixel (926,602) row 15 line 2 got (233, 233, 233) expected 250",
+        "62533 unexpected pixels in barcode interiors (cursor/overlay or wrong content)"
+      ],
+      "unexpectedPixels": 62533,
+      "coverage": "every scanline; full barcode cell interiors excluding labels, cell edges and scrollbar; visual check still required outside barcode"
+    }
+  },
+  {
+    "case": "stop",
+    "reportedPass": true,
+    "capture": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "height": 0,
+      "id": "a459f394-ac96-421e-ac03-6b7d466a5c2e",
+      "operationId": "a459f394-ac96-421e-ac03-6b7d466a5c2e",
+      "pixelsPerNotch": 0,
+      "rect": [
+        0,
+        0,
+        1280,
+        800
+      ],
+      "state": "cancelled",
+      "steps": 0
+    }
+  }
+]

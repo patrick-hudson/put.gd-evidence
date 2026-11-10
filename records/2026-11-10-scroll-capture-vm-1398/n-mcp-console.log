@@ -1,0 +1,58 @@
+  + Exception Group Traceback (most recent call last):
+  |   File "/home/patrick/work/svm1398/vm_mcp_run.py", line 25, in <module>
+  |     asyncio.run(main())
+  |     ~~~~~~~~~~~^^^^^^^^
+  |   File "/usr/lib/python3.13/asyncio/runners.py", line 195, in run
+  |     return runner.run(main)
+  |            ~~~~~~~~~~^^^^^^
+  |   File "/usr/lib/python3.13/asyncio/runners.py", line 118, in run
+  |     return self._loop.run_until_complete(task)
+  |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  |   File "/usr/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+  |     return future.result()
+  |            ~~~~~~~~~~~~~^^
+  |   File "/home/patrick/work/svm1398/vm_mcp_run.py", line 8, in main
+  |     async with stdio_client(params) as (read,write):
+  |                ~~~~~~~~~~~~^^^^^^^^
+  |   File "/usr/lib/python3.13/contextlib.py", line 235, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "/home/patrick/work/svm1398/repo/tools/mcp/.venv/lib/python3.13/site-packages/mcp/client/stdio.py", line 201, in stdio_client
+  |     async with anyio.create_task_group() as tg:
+  |                ~~~~~~~~~~~~~~~~~~~~~~~^^
+  |   File "/home/patrick/work/svm1398/repo/tools/mcp/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 847, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "/home/patrick/work/svm1398/repo/tools/mcp/.venv/lib/python3.13/site-packages/mcp/client/stdio.py", line 205, in stdio_client
+    |     yield read_stream, write_stream
+    |   File "/home/patrick/work/svm1398/vm_mcp_run.py", line 9, in main
+    |     async with ClientSession(read,write) as session:
+    |                ~~~~~~~~~~~~~^^^^^^^^^^^^
+    |   File "/home/patrick/work/svm1398/repo/tools/mcp/.venv/lib/python3.13/site-packages/mcp/client/session.py", line 514, in __aexit__
+    |     result = await self._task_group.__aexit__(exc_type, exc_val, exc_tb)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/patrick/work/svm1398/repo/tools/mcp/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 847, in __aexit__
+    |     raise BaseExceptionGroup(
+    |         "unhandled errors in a TaskGroup", self._exceptions
+    |     ) from None
+    | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "/home/patrick/work/svm1398/vm_mcp_run.py", line 14, in main
+      |     a=await call('prepare_scroll_capture',{'rect':rect,'max_height':2000});i=a['id']
+      |                                                                              ~^^^^^^
+      | KeyError: 'id'
+      +------------------------------------
+Traceback (most recent call last):
+  File "/home/patrick/work/rolling-capture-research/acceptance/vm_remote.py", line 5, in <module>
+    if __name__=='__main__':remote(sys.argv[1])
+                            ^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/rolling-capture-research/acceptance/vm_remote.py", line 4, in remote
+    def remote(s,**kw):return subprocess.run(SSH+[s],check=True,**kw)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['ssh', '-i', '/home/patrick/.ssh/awskey_110724', '-o', 'BatchMode=yes', '-o', 'StrictHostKeyChecking=yes', '-o', 'UserKnownHostsFile=/home/patrick/work/put.gd/work/remote-builders/d69/known_hosts', 'patrick@192.168.68.69', '~/work/svm1398/repo/tools/mcp/.venv/bin/python ~/work/svm1398/vm_mcp_run.py n']' returned non-zero exit status 1.
