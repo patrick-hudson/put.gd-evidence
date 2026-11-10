@@ -9,6 +9,8 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-10-recording-1364-hyprland-4538](2026-11-10-recording-1364-hyprland-4538/README.md) | #4538 | Hyprland recording acceptance, PR 1372 build 4538 |
+| [2026-11-10-plasma-1364](2026-11-10-plasma-1364/README.md) | #1364, #1372 | PR #1372 — physical Aurora Plasma / Wayland acceptance |
 | [2026-11-10-recording-1364-cinnamon-4538](2026-11-10-recording-1364-cinnamon-4538/README.md) | #1372, #4538 | PR #1372 acceptance — Cinnamon X11, build 4538 |
 | [2026-11-10-hyprland-1363-ah7-followup](2026-11-10-hyprland-1363-ah7-followup/README.md) | — | Hyprland countdown locator follow-up — ah7 |
 | [2026-11-10-plasma-1363-ap6](2026-11-10-plasma-1363-ap6/README.md) | — | PR 1368 Plasma Wayland acceptance — ap6 |
