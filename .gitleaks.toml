@@ -66,3 +66,11 @@ condition = "AND"
 paths = ['''^records/2026-10-21-appimage-ca-bundle-329/lab/i329\.py$''']
 regexTarget = "secret"
 regexes = ['''^AKIAPUTGDI329SYNTHETIC$''']
+
+[[allowlists]]
+description = "Literal X11 shortcut in the small-fixes native evidence runners"
+targetRules = ["generic-api-key"]
+condition = "AND"
+paths = ['''^records/2026-11-10-small-fixes-followup/tools/pg1380-(?:native2?|map-run2?|map-final-run|map-balanced)\.py$''']
+regexTarget = "secret"
+regexes = ['''^ctrl\+shift\+F12$''']
