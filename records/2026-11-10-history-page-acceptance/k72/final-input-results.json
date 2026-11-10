@@ -1,0 +1,10 @@
+{
+  "search": "001",
+  "countLabel": "1 of 236 items",
+  "realCloseButton": true,
+  "staysClosed": true,
+  "realEnter": true,
+  "realEsc": true,
+  "galleryRange": 1,
+  "stopped": "RuntimeError('ERROR:dbus.connection:Unable to set arguments (\\'/tmp/h396k/resize.js\\', \\'history1396-resize\\') according to signature \\'s\\': <class \\'TypeError\\'>: Fewer items found in D-Bus signature than in Python arguments\\nTraceback (most recent call last):\\n  File \"/home/patrick/putgd-lab/h1396-ci/control.py\", line 119, in <module>\\n    bus=dbus.SessionBus();api=dbus.Interface(bus.get_object(\\'org.kde.KWin\\',\\'/Scripting\\'),\\'org.kde.kwin.Scripting\\');n=api.loadScript(str(path),\\'history1396-resize\\');dbus.Interface(bus.get_object(\\'org.kde.KWin\\',\\'/Scripting/Script\\'+str(n)),\\'org.kde.kwin.Script\\').run();time.sleep(.3);api.unloadScript(\\'history1396-resize\\');path.unlink()\\n                                                                                                                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/usr/lib/python3/dist-packages/dbus/proxies.py\", line 72, in __call__\\n    return self._proxy_method(*args, **keywords)\\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\\n  File \"/usr/lib/python3/dist-packages/dbus/proxies.py\", line 141, in __call__\\n    return self._connection.call_blocking(self._named_service,\\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^\\n                                          self._object_path,\\n                                          ^^^^^^^^^^^^^^^^^^\\n    ...<3 lines>...\\n                                          args,\\n                                          ^^^^^\\n                                          **keywords)\\n                                          ^^^^^^^^^^^\\n  File \"/usr/lib/python3/dist-packages/dbus/connection.py\", line 687, in call_blocking\\n    message.append(signature=signature, *args)\\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\nTypeError: Fewer items found in D-Bus signature than in Python arguments\\n')"
+}
