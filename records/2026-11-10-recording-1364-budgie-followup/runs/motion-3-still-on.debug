@@ -1,0 +1,101 @@
+2026-11-10T08:47:16.881 command prepare
+2026-11-10T08:47:16.972 microphone: unavailable (no_microphone)
+2026-11-10T08:47:17.032 result prepare ok
+2026-11-10T08:47:17.036 qt1: Failed to register with host portal QDBusError("org.freedesktop.portal.Error.Failed", "Could not register app ID: App info not found for 'putgd-record'")
+2026-11-10T08:47:17.051 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x564b91dfe170 but 0x0 is focused
+2026-11-10T08:47:17.051 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x564b91dfe170 but 0x0 is focused
+2026-11-10T08:47:17.097 command overlay
+2026-11-10T08:47:17.097 result overlay ok
+2026-11-10T08:47:20.381 command start
+2026-11-10T08:47:20.419 pipeline: appsrc name=src is-live=true format=time do-timestamp=false leaky-type=downstream max-buffers=2 caps="video/x-raw,format=RGBx,width=1280,height=800,framerate=0/1" ! videoscale ! video/x-raw,width=1280,height=800,pixel-aspect-ratio=1/1 ! queue name=cq leaky=downstream max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! videocrop left=0 top=0 right=0 bottom=400 ! videoconvert n-threads=2 ! videorate ! video/x-raw,format=I420,framerate=30/1 ! queue name=eq max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! x264enc speed-preset=veryfast bitrate=1536 key-int-max=60 bframes=0 threads=2 sliced-threads=false rc-lookahead=10 sync-lookahead=0 name=venc ! h264parse ! queue name=vq max-size-buffers=0 max-size-bytes=0 max-size-time=2000000000 ! matroskamux name=mux ! filesink name=sink location="/home/lab/b1364f/r/motion-3-still-on/data/putgd/recording/db4fe040-46c7-495e-aead-21cb21b65c25/working.mkv" pulsesrc name=asrc device="@DEFAULT_MONITOR@" ! audioconvert ! audioresample ! audio/x-raw,rate=48000,channels=2 ! voaacenc bitrate=128000 name=aenc ! aacparse ! queue name=aq max-size-buffers=0 max-size-bytes=0 max-size-time=2000000000 ! mux.
+2026-11-10T08:47:21.930 started with x264enc + voaacenc (system audio) on GstSystemClock
+2026-11-10T08:47:21.931 result start ok
+2026-11-10T08:47:23.031 rate window: 30 fps, 64 delivered and 1 leaked in 1050 ms, machine 36% busy, recorder 0.41 cores
+2026-11-10T08:47:24.082 rate window: 30 fps, 63 delivered and 0 leaked in 1049 ms, machine 27% busy, recorder 0.27 cores
+2026-11-10T08:47:25.130 rate window: 30 fps, 63 delivered and 0 leaked in 1049 ms, machine 28% busy, recorder 0.27 cores
+2026-11-10T08:47:26.036 command click
+2026-11-10T08:47:26.036 result click ok
+2026-11-10T08:47:26.131 rate window: 30 fps, 60 delivered and 0 leaked in 1000 ms, machine 30% busy, recorder 0.25 cores
+2026-11-10T08:47:27.181 rate window: 30 fps, 65 delivered and 0 leaked in 1049 ms, machine 29% busy, recorder 0.28 cores
+2026-11-10T08:47:28.231 rate window: 30 fps, 62 delivered and 0 leaked in 1049 ms, machine 26% busy, recorder 0.25 cores
+2026-11-10T08:47:29.281 rate window: 30 fps, 64 delivered and 0 leaked in 1049 ms, machine 28% busy, recorder 0.27 cores
+2026-11-10T08:47:30.032 command click
+2026-11-10T08:47:30.032 result click ok
+2026-11-10T08:47:30.331 rate window: 30 fps, 64 delivered and 0 leaked in 1049 ms, machine 30% busy, recorder 0.26 cores
+2026-11-10T08:47:31.331 rate window: 30 fps, 60 delivered and 0 leaked in 1000 ms, machine 29% busy, recorder 0.27 cores
+2026-11-10T08:47:32.381 rate window: 30 fps, 63 delivered and 0 leaked in 1049 ms, machine 27% busy, recorder 0.25 cores
+2026-11-10T08:47:33.430 rate window: 30 fps, 63 delivered and 0 leaked in 1049 ms, machine 28% busy, recorder 0.27 cores
+2026-11-10T08:47:34.030 command click
+2026-11-10T08:47:34.030 result click ok
+2026-11-10T08:47:34.431 rate window: 30 fps, 61 delivered and 0 leaked in 1000 ms, machine 29% busy, recorder 0.28 cores
+2026-11-10T08:47:35.432 rate window: 30 fps, 60 delivered and 0 leaked in 1000 ms, machine 29% busy, recorder 0.27 cores
+2026-11-10T08:47:36.480 rate window: 30 fps, 63 delivered and 0 leaked in 1048 ms, machine 28% busy, recorder 0.26 cores
+2026-11-10T08:47:37.481 rate window: 30 fps, 60 delivered and 0 leaked in 1000 ms, machine 27% busy, recorder 0.26 cores
+2026-11-10T08:47:38.038 command stop
+2026-11-10T08:47:38.086 timestamps: clock GstSystemClock, video lateness -23.1/86.3/1556.5 ms (n=529), audio lateness -3.2/7.4/20.2 ms (n=1759), frame age 0.7/1.9/13.7 ms (n=607), arrival-stamped frames 0, audio re-anchored 0 times
+2026-11-10T08:47:38.086 frames: 529 reached the video encoder, 1 leaked at the capture queue; source arrivals 973 (interval 0.9/16.6/24.8 ms (n=972)), 0 with a repeated compositor time, contents 577 new / 366 same dropped, cadence lock 123 early dropped / 0 resyncs / 4 changes slotted after a repeat
+2026-11-10T08:47:38.086 clicks: 3 received, rings drawn into 39 frames
+2026-11-10T08:47:38.098 review: open
+2026-11-10T08:47:38.125 review: shown
+2026-11-10T08:47:38.125 result stop ok
+2026-11-10T08:47:38.238 review: frame at 0
+2026-11-10T08:47:38.249 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:38.249 seek ok: first key pts 0 target 0
+2026-11-10T08:47:38.257 review: frame 1280x400
+2026-11-10T08:47:38.258 command export
+2026-11-10T08:47:38.275 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:38.276 export mp4 wantAudio=1 audioIndex=1 streams=2
+2026-11-10T08:47:38.293 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x564b92365f50 but 0x0 is focused
+2026-11-10T08:47:38.294 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x564b92365f50 but 0x0 is focused
+2026-11-10T08:47:38.319 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:38.320 seek ok: first key pts 0 target 0
+2026-11-10T08:47:41.001 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:41.003 export audio lead 30000 us of silence
+2026-11-10T08:47:42.556 export audio samples=845216
+2026-11-10T08:47:42.562 result export ok
+2026-11-10T08:47:42.578 command savedCopy
+2026-11-10T08:47:42.580 result savedCopy ok
+2026-11-10T08:47:42.827 command cancel
+2026-11-10T08:47:42.828 result cancel ok
+2026-11-10T08:47:42.828 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x564b92365f50 but 0x0 is focused
+2026-11-10T08:47:42.828 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x564b92365f50 but 0x0 is focused
+2026-11-10T08:47:42.828 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x564b92365f50 but 0x0 is focused
+2026-11-10T08:47:42.828 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x564b92365f50 but 0x0 is focused
+2026-11-10T08:47:42.828 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x564b92365f50 but 0x0 is focused
+2026-11-10T08:47:42.828 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x564b92365f50 but 0x0 is focused
+2026-11-10T08:47:43.531 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:43.541 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:43.541 seek ok: first key pts 0 target 1102
+2026-11-10T08:47:43.592 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:43.592 seek ok: first key pts 2000 target 3306
+2026-11-10T08:47:43.642 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:43.644 seek ok: first key pts 4000 target 5510
+2026-11-10T08:47:43.692 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:43.692 seek ok: first key pts 6000 target 7715
+2026-11-10T08:47:43.723 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:43.724 seek ok: first key pts 8000 target 9919
+2026-11-10T08:47:43.761 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:43.761 seek ok: first key pts 12000 target 12123
+2026-11-10T08:47:43.774 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:43.774 seek ok: first key pts 14000 target 14327
+2026-11-10T08:47:43.803 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:43.804 seek ok: first key pts 16000 target 16531
+2026-11-10T08:47:44.731 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:44.743 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:44.744 seek ok: first key pts 0 target 16928
+2026-11-10T08:47:44.774 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:44.775 seek ok: first key pts 30720 target 50784
+2026-11-10T08:47:44.804 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:44.804 seek ok: first key pts 61440 target 84640
+2026-11-10T08:47:44.855 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:44.857 seek ok: first key pts 92160 target 118496
+2026-11-10T08:47:44.909 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:44.909 seek ok: first key pts 122880 target 152352
+2026-11-10T08:47:44.951 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:44.951 seek ok: first key pts 184320 target 186208
+2026-11-10T08:47:44.962 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:44.963 seek ok: first key pts 215040 target 220064
+2026-11-10T08:47:44.978 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:44.979 seek ok: first key pts 245760 target 253920
+2026-11-10T08:47:45.801 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T08:47:45.802 seek ok: first key pts 122880 target 135424
