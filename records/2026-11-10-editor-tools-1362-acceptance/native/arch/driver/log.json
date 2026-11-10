@@ -1,0 +1,5815 @@
+{
+ "schemaVersion": 1,
+ "scenario": "editor-tools-1362",
+ "ok": true,
+ "checks": {
+  "editor.open ok": {
+   "ok": true,
+   "detail": {
+    "code": "",
+    "details": {},
+    "message": ""
+   }
+  },
+  "editor.inspect ok": {
+   "ok": true,
+   "detail": {
+    "code": "",
+    "details": {},
+    "message": ""
+   }
+  },
+  "opened at full size": {
+   "ok": true,
+   "detail": 1200
+  },
+  "editor.apply ok": {
+   "ok": true,
+   "detail": {
+    "code": "",
+    "details": {},
+    "message": ""
+   }
+  },
+  "every new kind was created": {
+   "ok": true,
+   "detail": [
+    "redact",
+    "step",
+    "step",
+    "step",
+    "pen",
+    "ellipse",
+    "line",
+    "blur",
+    "redact",
+    "rectangle"
+   ]
+  },
+  "steps count up from 1": {
+   "ok": true
+  },
+  "pixelate style kept": {
+   "ok": true
+  },
+  "editor.view ok": {
+   "ok": true,
+   "detail": {
+    "code": "",
+    "details": {},
+    "message": ""
+   }
+  },
+  "tool step": {
+   "ok": true
+  },
+  "tool pen": {
+   "ok": true
+  },
+  "tool ellipse": {
+   "ok": true
+  },
+  "tool line": {
+   "ok": true
+  },
+  "next number follows the highest step": {
+   "ok": true,
+   "detail": 4
+  },
+  "Next number sets the placed step": {
+   "ok": true,
+   "detail": {
+    "at": [
+     600,
+     380
+    ],
+    "color": "#dc2626",
+    "id": 11,
+    "kind": "step",
+    "number": 10,
+    "rect": [
+     580,
+     360,
+     40,
+     40
+    ],
+    "size": 40
+   }
+  },
+  "undo removes the placed step": {
+   "ok": true
+  },
+  "redo restores it": {
+   "ok": true
+  },
+  "blur style pixelate": {
+   "ok": true
+  },
+  "editor.preview ok": {
+   "ok": true,
+   "detail": {
+    "code": "",
+    "details": {},
+    "message": ""
+   }
+  },
+  "editor.copy ok": {
+   "ok": true,
+   "detail": {
+    "code": "",
+    "details": {},
+    "message": ""
+   }
+  },
+  "copied": {
+   "ok": true
+  },
+  "clipboard holds a PNG (wl-paste)": {
+   "ok": true,
+   "detail": "wl-paste"
+  },
+  "clipboard bytes are the copied PNG": {
+   "ok": true,
+   "detail": {
+    "clipboard": "d7437abe82a7e9e402991b3b9d57a7b6a1f7f30c5db1e05ff812948bd4e5b3db",
+    "reply": "d7437abe82a7e9e402991b3b9d57a7b6a1f7f30c5db1e05ff812948bd4e5b3db"
+   }
+  },
+  "pasted size": {
+   "ok": true,
+   "detail": [
+    1200,
+    760
+   ]
+  },
+  "redacted token is black in the paste": {
+   "ok": true,
+   "detail": []
+  },
+  "annotation over second redaction contains only black and its own red": {
+   "ok": true,
+   "detail": [
+    "000000",
+    "ff0000"
+   ]
+  },
+  "editor.saveCopy ok": {
+   "ok": true,
+   "detail": {
+    "code": "",
+    "details": {},
+    "message": ""
+   }
+  },
+  "Save a copy is the same PNG": {
+   "ok": true
+  },
+  "window reports the copy": {
+   "ok": true,
+   "detail": {
+    "status": "copied"
+   }
+  },
+  "still editing, nothing handed off": {
+   "ok": true
+  },
+  "editor.submit ok": {
+   "ok": true,
+   "detail": {
+    "code": "",
+    "details": {},
+    "message": ""
+   }
+  },
+  "operation.inspect answers": {
+   "ok": true,
+   "detail": {
+    "code": "",
+    "details": {},
+    "message": ""
+   }
+  },
+  "upload completed": {
+   "ok": true,
+   "detail": "completed"
+  },
+  "editor.cancel ok": {
+   "ok": true,
+   "detail": {
+    "code": "",
+    "details": {},
+    "message": ""
+   }
+  },
+  "sources differing only beneath redactions export identical bytes": {
+   "ok": true,
+   "detail": [
+    "2f5e2229d7be78db12bcd83f63fb0088dd2eafa84c78be8a252775cc8915d93d",
+    "2f5e2229d7be78db12bcd83f63fb0088dd2eafa84c78be8a252775cc8915d93d"
+   ]
+  }
+ },
+ "calls": [
+  {
+   "method": "editor.open",
+   "params": {
+    "source": "file",
+    "path": "/tmp/en62/driver/synthetic-source.png"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "b41e409a-7be1-4939-aa2a-b4573de6d15a",
+    "result": {
+     "operation": {
+      "action": "edit",
+      "cancelled": false,
+      "clipboardRevision": "0",
+      "copyStatus": "pending",
+      "created": "2026-11-10T01:26:47.000Z",
+      "destination": {
+       "credentials": {
+        "mode": "session",
+        "reference": null
+       },
+       "profileId": "editor-fixture",
+       "profileRevision": "7b7805245f1d0b25d9615cb93393080ae1db36dcefea43d95fd0949e346d05a1",
+       "providerId": "s3",
+       "settings": {
+        "aclMode": "public-read",
+        "addressing": "path",
+        "bucket": "editor-fixture",
+        "connectTimeoutMs": 5000,
+        "endpoint": "http://127.0.0.1:35025",
+        "lowSpeedBytesPerSecond": 1,
+        "lowSpeedTimeSeconds": 30,
+        "objectPrefix": "native1362/",
+        "publicUrlBase": "http://127.0.0.1:35025/editor-fixture",
+        "region": "us-east-1",
+        "requestTimeoutMs": 60000,
+        "storageClass": "STANDARD"
+       }
+      },
+      "error": {
+       "code": "",
+       "details": {},
+       "message": ""
+      },
+      "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+      "invocation": "1",
+      "items": [],
+      "phase": "accepted",
+      "requestTimeoutMs": null,
+      "settingsRevision": "7b7805245f1d0b25d9615cb93393080ae1db36dcefea43d95fd0949e346d05a1",
+      "state": "accepted"
+     },
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08"
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.inspect",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "7917d85f-b90c-4310-9061-810f7a6980b4",
+    "result": {
+     "canRedo": false,
+     "canUndo": false,
+     "crop": [
+      0,
+      0,
+      1200,
+      760
+     ],
+     "destination": "Upload to put.gd development destination \u00b7 Shared link",
+     "height": 760,
+     "historyTruncated": false,
+     "modified": false,
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "phase": "editing",
+     "preparation": null,
+     "shapes": [],
+     "view": {
+      "busy": false,
+      "cancelLabel": "Cancel",
+      "canvasSize": [
+       1015,
+       586
+      ],
+      "copying": false,
+      "cropPending": false,
+      "destination": {
+       "above": false,
+       "sharingMode": "Shared link",
+       "text": "put.gd development destination \u00b7 Shared link"
+      },
+      "discardConfirmation": {
+       "open": false,
+       "text": null
+      },
+      "editingText": false,
+      "fitted": true,
+      "geometry": null,
+      "geometryDetails": {
+       "open": false,
+       "visible": false
+      },
+      "keyboardHelp": {
+       "open": false,
+       "text": "[ / ]: Cycle marks\nArrows: Move\nShift+arrows: Resize\nCtrl+arrows: Move 10 px\nCtrl+Shift+arrows: Resize 10 px\nTab: Focus properties\nDelete: Remove mark\nEscape: Deselect\nInsert: Place mark\nShift+drag: Square, circle, 45\u00b0 line\nCtrl+Z: Undo\nCtrl+Shift+Z: Redo\nCtrl+Shift+C: Copy image"
+      },
+      "lastCopiedPath": null,
+      "lastCopy": null,
+      "lastSave": {
+       "status": null
+      },
+      "lastShowInFolder": null,
+      "message": null,
+      "nextStepNumber": 1,
+      "preparationFailure": null,
+      "propertiesWidth": 240,
+      "saveDetailsOpen": false,
+      "saveFeedbackVisible": false,
+      "savingCopy": false,
+      "scheme": "dark",
+      "selectedShapeId": null,
+      "selection": "No marks. Insert places a redaction in the middle. Alt+arrow keys pan the image; Alt+Shift+arrow keys pan farther.",
+      "style": {
+       "blurStyle": "blur",
+       "color": "#dc2626",
+       "font": "IBM Plex Sans",
+       "fontPixels": 28,
+       "stepSize": 40,
+       "strength": 12,
+       "width": 4
+      },
+      "textOutsideImage": false,
+      "tool": "redact",
+      "visibleRect": [
+       0,
+       0,
+       1200,
+       760
+      ],
+      "zoomPercent": 72.9
+     },
+     "width": 1200
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.apply",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+    "commands": [
+     {
+      "op": "add",
+      "shape": {
+       "kind": "redact",
+       "rect": [
+        300,
+        214,
+        420,
+        36
+       ]
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "step",
+       "at": [
+        120,
+        140
+       ]
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "step",
+       "at": [
+        120,
+        280
+       ],
+       "color": "#facc15"
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "step",
+       "at": [
+        120,
+        420
+       ],
+       "color": "#3b82f6",
+       "size": 56
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "pen",
+       "width": 4,
+       "color": "#dc2626",
+       "points": [
+        [
+         160,
+         582
+        ],
+        [
+         190,
+         618
+        ],
+        [
+         220,
+         582
+        ],
+        [
+         250,
+         618
+        ],
+        [
+         280,
+         582
+        ],
+        [
+         310,
+         618
+        ],
+        [
+         340,
+         582
+        ],
+        [
+         370,
+         618
+        ],
+        [
+         400,
+         582
+        ],
+        [
+         430,
+         618
+        ],
+        [
+         460,
+         582
+        ],
+        [
+         490,
+         618
+        ],
+        [
+         520,
+         582
+        ],
+        [
+         550,
+         618
+        ]
+       ]
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "ellipse",
+       "rect": [
+        760,
+        120,
+        320,
+        180
+       ],
+       "width": 4
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "line",
+       "from": [
+        180,
+        520
+       ],
+       "to": [
+        1000,
+        520
+       ],
+       "color": "#22c55e",
+       "width": 4
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "blur",
+       "rect": [
+        700,
+        360,
+        380,
+        140
+       ],
+       "style": "pixelate",
+       "strength": 12
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "redact",
+       "rect": [
+        900,
+        570,
+        200,
+        100
+       ]
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "rectangle",
+       "rect": [
+        940,
+        590,
+        80,
+        40
+       ],
+       "color": "#ff0000",
+       "width": 4
+      }
+     }
+    ]
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "1e6de49a-e16e-41c2-b083-711ff1da0281",
+    "result": {
+     "created": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "state": {
+      "canRedo": false,
+      "canUndo": true,
+      "crop": [
+       0,
+       0,
+       1200,
+       760
+      ],
+      "height": 760,
+      "historyTruncated": false,
+      "modified": true,
+      "shapes": [
+       {
+        "id": 1,
+        "kind": "redact",
+        "rect": [
+         300,
+         214,
+         420,
+         36
+        ]
+       },
+       {
+        "at": [
+         120,
+         140
+        ],
+        "color": "#dc2626",
+        "id": 2,
+        "kind": "step",
+        "number": 1,
+        "rect": [
+         100,
+         120,
+         40,
+         40
+        ],
+        "size": 40
+       },
+       {
+        "at": [
+         120,
+         280
+        ],
+        "color": "#facc15",
+        "id": 3,
+        "kind": "step",
+        "number": 2,
+        "rect": [
+         100,
+         260,
+         40,
+         40
+        ],
+        "size": 40
+       },
+       {
+        "at": [
+         120,
+         420
+        ],
+        "color": "#3b82f6",
+        "id": 4,
+        "kind": "step",
+        "number": 3,
+        "rect": [
+         92,
+         392,
+         56,
+         56
+        ],
+        "size": 56
+       },
+       {
+        "color": "#dc2626",
+        "id": 5,
+        "kind": "pen",
+        "points": [
+         [
+          160,
+          582
+         ],
+         [
+          190,
+          618
+         ],
+         [
+          220,
+          582
+         ],
+         [
+          250,
+          618
+         ],
+         [
+          280,
+          582
+         ],
+         [
+          310,
+          618
+         ],
+         [
+          340,
+          582
+         ],
+         [
+          370,
+          618
+         ],
+         [
+          400,
+          582
+         ],
+         [
+          430,
+          618
+         ],
+         [
+          460,
+          582
+         ],
+         [
+          490,
+          618
+         ],
+         [
+          520,
+          582
+         ],
+         [
+          550,
+          618
+         ]
+        ],
+        "rect": [
+         160,
+         582,
+         391,
+         37
+        ],
+        "width": 4
+       },
+       {
+        "color": "#dc2626",
+        "id": 6,
+        "kind": "ellipse",
+        "rect": [
+         760,
+         120,
+         320,
+         180
+        ],
+        "width": 4
+       },
+       {
+        "color": "#22c55e",
+        "from": [
+         180,
+         520
+        ],
+        "id": 7,
+        "kind": "line",
+        "to": [
+         1000,
+         520
+        ],
+        "width": 4
+       },
+       {
+        "id": 8,
+        "kind": "blur",
+        "rect": [
+         700,
+         360,
+         380,
+         140
+        ],
+        "strength": 12,
+        "style": "pixelate"
+       },
+       {
+        "id": 9,
+        "kind": "redact",
+        "rect": [
+         900,
+         570,
+         200,
+         100
+        ]
+       },
+       {
+        "color": "#ff0000",
+        "id": 10,
+        "kind": "rectangle",
+        "rect": [
+         940,
+         590,
+         80,
+         40
+        ],
+        "width": 4
+       }
+      ],
+      "width": 1200
+     }
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.inspect",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "e4277fda-db85-4cf6-9ba2-896363bf8d05",
+    "result": {
+     "canRedo": false,
+     "canUndo": true,
+     "crop": [
+      0,
+      0,
+      1200,
+      760
+     ],
+     "destination": "Upload to put.gd development destination \u00b7 Shared link",
+     "height": 760,
+     "historyTruncated": false,
+     "modified": true,
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "phase": "editing",
+     "preparation": null,
+     "shapes": [
+      {
+       "id": 1,
+       "kind": "redact",
+       "rect": [
+        300,
+        214,
+        420,
+        36
+       ]
+      },
+      {
+       "at": [
+        120,
+        140
+       ],
+       "color": "#dc2626",
+       "id": 2,
+       "kind": "step",
+       "number": 1,
+       "rect": [
+        100,
+        120,
+        40,
+        40
+       ],
+       "size": 40
+      },
+      {
+       "at": [
+        120,
+        280
+       ],
+       "color": "#facc15",
+       "id": 3,
+       "kind": "step",
+       "number": 2,
+       "rect": [
+        100,
+        260,
+        40,
+        40
+       ],
+       "size": 40
+      },
+      {
+       "at": [
+        120,
+        420
+       ],
+       "color": "#3b82f6",
+       "id": 4,
+       "kind": "step",
+       "number": 3,
+       "rect": [
+        92,
+        392,
+        56,
+        56
+       ],
+       "size": 56
+      },
+      {
+       "color": "#dc2626",
+       "id": 5,
+       "kind": "pen",
+       "points": [
+        [
+         160,
+         582
+        ],
+        [
+         190,
+         618
+        ],
+        [
+         220,
+         582
+        ],
+        [
+         250,
+         618
+        ],
+        [
+         280,
+         582
+        ],
+        [
+         310,
+         618
+        ],
+        [
+         340,
+         582
+        ],
+        [
+         370,
+         618
+        ],
+        [
+         400,
+         582
+        ],
+        [
+         430,
+         618
+        ],
+        [
+         460,
+         582
+        ],
+        [
+         490,
+         618
+        ],
+        [
+         520,
+         582
+        ],
+        [
+         550,
+         618
+        ]
+       ],
+       "rect": [
+        160,
+        582,
+        391,
+        37
+       ],
+       "width": 4
+      },
+      {
+       "color": "#dc2626",
+       "id": 6,
+       "kind": "ellipse",
+       "rect": [
+        760,
+        120,
+        320,
+        180
+       ],
+       "width": 4
+      },
+      {
+       "color": "#22c55e",
+       "from": [
+        180,
+        520
+       ],
+       "id": 7,
+       "kind": "line",
+       "to": [
+        1000,
+        520
+       ],
+       "width": 4
+      },
+      {
+       "id": 8,
+       "kind": "blur",
+       "rect": [
+        700,
+        360,
+        380,
+        140
+       ],
+       "strength": 12,
+       "style": "pixelate"
+      },
+      {
+       "id": 9,
+       "kind": "redact",
+       "rect": [
+        900,
+        570,
+        200,
+        100
+       ]
+      },
+      {
+       "color": "#ff0000",
+       "id": 10,
+       "kind": "rectangle",
+       "rect": [
+        940,
+        590,
+        80,
+        40
+       ],
+       "width": 4
+      }
+     ],
+     "view": {
+      "busy": false,
+      "cancelLabel": "Discard\u2026",
+      "canvasSize": [
+       1015,
+       586
+      ],
+      "copying": false,
+      "cropPending": false,
+      "destination": {
+       "above": false,
+       "sharingMode": "Shared link",
+       "text": "put.gd development destination \u00b7 Shared link"
+      },
+      "discardConfirmation": {
+       "open": false,
+       "text": null
+      },
+      "editingText": false,
+      "fitted": true,
+      "geometry": null,
+      "geometryDetails": {
+       "open": false,
+       "visible": false
+      },
+      "keyboardHelp": {
+       "open": false,
+       "text": "[ / ]: Cycle marks\nArrows: Move\nShift+arrows: Resize\nCtrl+arrows: Move 10 px\nCtrl+Shift+arrows: Resize 10 px\nTab: Focus properties\nDelete: Remove mark\nEscape: Deselect\nInsert: Place mark\nShift+drag: Square, circle, 45\u00b0 line\nCtrl+Z: Undo\nCtrl+Shift+Z: Redo\nCtrl+Shift+C: Copy image"
+      },
+      "lastCopiedPath": null,
+      "lastCopy": null,
+      "lastSave": {
+       "status": null
+      },
+      "lastShowInFolder": null,
+      "message": null,
+      "nextStepNumber": 4,
+      "preparationFailure": null,
+      "propertiesWidth": 240,
+      "saveDetailsOpen": false,
+      "saveFeedbackVisible": false,
+      "savingCopy": false,
+      "scheme": "dark",
+      "selectedShapeId": null,
+      "selection": "10 marks, none selected. Insert places a redaction in the middle. [ and ] cycle marks; Escape deselects. Tab leaves the canvas. Alt+arrow keys pan the image; Alt+Shift+arrow keys pan farther.",
+      "style": {
+       "blurStyle": "blur",
+       "color": "#dc2626",
+       "font": "IBM Plex Sans",
+       "fontPixels": 28,
+       "stepSize": 40,
+       "strength": 12,
+       "width": 4
+      },
+      "textOutsideImage": false,
+      "tool": "redact",
+      "visibleRect": [
+       0,
+       0,
+       1200,
+       760
+      ],
+      "zoomPercent": 72.9
+     },
+     "width": 1200
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.view",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+    "action": "tool",
+    "tool": "step"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "f4f8f81b-f1ed-4ebc-80d3-8da23eb5c110",
+    "result": {
+     "busy": false,
+     "cancelLabel": "Discard\u2026",
+     "canvasSize": [
+      1015,
+      586
+     ],
+     "copying": false,
+     "cropPending": false,
+     "destination": {
+      "above": false,
+      "sharingMode": "Shared link",
+      "text": "put.gd development destination \u00b7 Shared link"
+     },
+     "discardConfirmation": {
+      "open": false,
+      "text": null
+     },
+     "editingText": false,
+     "fitted": true,
+     "geometry": null,
+     "geometryDetails": {
+      "open": false,
+      "visible": false
+     },
+     "keyboardHelp": {
+      "open": false,
+      "text": "[ / ]: Cycle marks\nArrows: Move\nShift+arrows: Resize\nCtrl+arrows: Move 10 px\nCtrl+Shift+arrows: Resize 10 px\nTab: Focus properties\nDelete: Remove mark\nEscape: Deselect\nInsert: Place mark\nShift+drag: Square, circle, 45\u00b0 line\nCtrl+Z: Undo\nCtrl+Shift+Z: Redo\nCtrl+Shift+C: Copy image"
+     },
+     "lastCopiedPath": null,
+     "lastCopy": null,
+     "lastSave": {
+      "status": null
+     },
+     "lastShowInFolder": null,
+     "message": null,
+     "nextStepNumber": 4,
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "preparationFailure": null,
+     "propertiesWidth": 240,
+     "saveDetailsOpen": false,
+     "saveFeedbackVisible": false,
+     "savingCopy": false,
+     "scheme": "dark",
+     "selectedShapeId": null,
+     "selection": "10 marks, none selected. Insert places a step in the middle. The next step is number 4. [ and ] cycle marks; Escape deselects. Tab leaves the canvas. Alt+arrow keys pan the image; Alt+Shift+arrow keys pan farther.",
+     "style": {
+      "blurStyle": "blur",
+      "color": "#dc2626",
+      "font": "IBM Plex Sans",
+      "fontPixels": 28,
+      "stepSize": 40,
+      "strength": 12,
+      "width": 4
+     },
+     "textOutsideImage": false,
+     "tool": "step",
+     "visibleRect": [
+      0,
+      0,
+      1200,
+      760
+     ],
+     "zoomPercent": 72.9
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.view",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+    "action": "tool",
+    "tool": "pen"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "b47fd7d3-da69-48f0-8261-611b04b78003",
+    "result": {
+     "busy": false,
+     "cancelLabel": "Discard\u2026",
+     "canvasSize": [
+      1015,
+      586
+     ],
+     "copying": false,
+     "cropPending": false,
+     "destination": {
+      "above": false,
+      "sharingMode": "Shared link",
+      "text": "put.gd development destination \u00b7 Shared link"
+     },
+     "discardConfirmation": {
+      "open": false,
+      "text": null
+     },
+     "editingText": false,
+     "fitted": true,
+     "geometry": null,
+     "geometryDetails": {
+      "open": false,
+      "visible": false
+     },
+     "keyboardHelp": {
+      "open": false,
+      "text": "[ / ]: Cycle marks\nArrows: Move\nShift+arrows: Resize\nCtrl+arrows: Move 10 px\nCtrl+Shift+arrows: Resize 10 px\nTab: Focus properties\nDelete: Remove mark\nEscape: Deselect\nInsert: Place mark\nShift+drag: Square, circle, 45\u00b0 line\nCtrl+Z: Undo\nCtrl+Shift+Z: Redo\nCtrl+Shift+C: Copy image"
+     },
+     "lastCopiedPath": null,
+     "lastCopy": null,
+     "lastSave": {
+      "status": null
+     },
+     "lastShowInFolder": null,
+     "message": null,
+     "nextStepNumber": 4,
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "preparationFailure": null,
+     "propertiesWidth": 240,
+     "saveDetailsOpen": false,
+     "saveFeedbackVisible": false,
+     "savingCopy": false,
+     "scheme": "dark",
+     "selectedShapeId": null,
+     "selection": "10 marks, none selected. Insert places a pen stroke in the middle. [ and ] cycle marks; Escape deselects. Tab leaves the canvas. Alt+arrow keys pan the image; Alt+Shift+arrow keys pan farther.",
+     "style": {
+      "blurStyle": "blur",
+      "color": "#dc2626",
+      "font": "IBM Plex Sans",
+      "fontPixels": 28,
+      "stepSize": 40,
+      "strength": 12,
+      "width": 4
+     },
+     "textOutsideImage": false,
+     "tool": "pen",
+     "visibleRect": [
+      0,
+      0,
+      1200,
+      760
+     ],
+     "zoomPercent": 72.9
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.view",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+    "action": "tool",
+    "tool": "ellipse"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "4a26c0c6-9e84-4953-b600-f3f4815aaad3",
+    "result": {
+     "busy": false,
+     "cancelLabel": "Discard\u2026",
+     "canvasSize": [
+      1015,
+      586
+     ],
+     "copying": false,
+     "cropPending": false,
+     "destination": {
+      "above": false,
+      "sharingMode": "Shared link",
+      "text": "put.gd development destination \u00b7 Shared link"
+     },
+     "discardConfirmation": {
+      "open": false,
+      "text": null
+     },
+     "editingText": false,
+     "fitted": true,
+     "geometry": null,
+     "geometryDetails": {
+      "open": false,
+      "visible": false
+     },
+     "keyboardHelp": {
+      "open": false,
+      "text": "[ / ]: Cycle marks\nArrows: Move\nShift+arrows: Resize\nCtrl+arrows: Move 10 px\nCtrl+Shift+arrows: Resize 10 px\nTab: Focus properties\nDelete: Remove mark\nEscape: Deselect\nInsert: Place mark\nShift+drag: Square, circle, 45\u00b0 line\nCtrl+Z: Undo\nCtrl+Shift+Z: Redo\nCtrl+Shift+C: Copy image"
+     },
+     "lastCopiedPath": null,
+     "lastCopy": null,
+     "lastSave": {
+      "status": null
+     },
+     "lastShowInFolder": null,
+     "message": null,
+     "nextStepNumber": 4,
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "preparationFailure": null,
+     "propertiesWidth": 240,
+     "saveDetailsOpen": false,
+     "saveFeedbackVisible": false,
+     "savingCopy": false,
+     "scheme": "dark",
+     "selectedShapeId": null,
+     "selection": "10 marks, none selected. Insert places a ellipse in the middle. [ and ] cycle marks; Escape deselects. Tab leaves the canvas. Alt+arrow keys pan the image; Alt+Shift+arrow keys pan farther.",
+     "style": {
+      "blurStyle": "blur",
+      "color": "#dc2626",
+      "font": "IBM Plex Sans",
+      "fontPixels": 28,
+      "stepSize": 40,
+      "strength": 12,
+      "width": 4
+     },
+     "textOutsideImage": false,
+     "tool": "ellipse",
+     "visibleRect": [
+      0,
+      0,
+      1200,
+      760
+     ],
+     "zoomPercent": 72.9
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.view",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+    "action": "tool",
+    "tool": "line"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "aae6cd1b-881b-43d0-9ffc-10cd4d26d9d8",
+    "result": {
+     "busy": false,
+     "cancelLabel": "Discard\u2026",
+     "canvasSize": [
+      1015,
+      586
+     ],
+     "copying": false,
+     "cropPending": false,
+     "destination": {
+      "above": false,
+      "sharingMode": "Shared link",
+      "text": "put.gd development destination \u00b7 Shared link"
+     },
+     "discardConfirmation": {
+      "open": false,
+      "text": null
+     },
+     "editingText": false,
+     "fitted": true,
+     "geometry": null,
+     "geometryDetails": {
+      "open": false,
+      "visible": false
+     },
+     "keyboardHelp": {
+      "open": false,
+      "text": "[ / ]: Cycle marks\nArrows: Move\nShift+arrows: Resize\nCtrl+arrows: Move 10 px\nCtrl+Shift+arrows: Resize 10 px\nTab: Focus properties\nDelete: Remove mark\nEscape: Deselect\nInsert: Place mark\nShift+drag: Square, circle, 45\u00b0 line\nCtrl+Z: Undo\nCtrl+Shift+Z: Redo\nCtrl+Shift+C: Copy image"
+     },
+     "lastCopiedPath": null,
+     "lastCopy": null,
+     "lastSave": {
+      "status": null
+     },
+     "lastShowInFolder": null,
+     "message": null,
+     "nextStepNumber": 4,
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "preparationFailure": null,
+     "propertiesWidth": 240,
+     "saveDetailsOpen": false,
+     "saveFeedbackVisible": false,
+     "savingCopy": false,
+     "scheme": "dark",
+     "selectedShapeId": null,
+     "selection": "10 marks, none selected. Insert places a line in the middle. [ and ] cycle marks; Escape deselects. Tab leaves the canvas. Alt+arrow keys pan the image; Alt+Shift+arrow keys pan farther.",
+     "style": {
+      "blurStyle": "blur",
+      "color": "#dc2626",
+      "font": "IBM Plex Sans",
+      "fontPixels": 28,
+      "stepSize": 40,
+      "strength": 12,
+      "width": 4
+     },
+     "textOutsideImage": false,
+     "tool": "line",
+     "visibleRect": [
+      0,
+      0,
+      1200,
+      760
+     ],
+     "zoomPercent": 72.9
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.view",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+    "action": "tool",
+    "tool": "step"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "1f50d539-3612-4722-9362-6d8c5a3816c5",
+    "result": {
+     "busy": false,
+     "cancelLabel": "Discard\u2026",
+     "canvasSize": [
+      1015,
+      586
+     ],
+     "copying": false,
+     "cropPending": false,
+     "destination": {
+      "above": false,
+      "sharingMode": "Shared link",
+      "text": "put.gd development destination \u00b7 Shared link"
+     },
+     "discardConfirmation": {
+      "open": false,
+      "text": null
+     },
+     "editingText": false,
+     "fitted": true,
+     "geometry": null,
+     "geometryDetails": {
+      "open": false,
+      "visible": false
+     },
+     "keyboardHelp": {
+      "open": false,
+      "text": "[ / ]: Cycle marks\nArrows: Move\nShift+arrows: Resize\nCtrl+arrows: Move 10 px\nCtrl+Shift+arrows: Resize 10 px\nTab: Focus properties\nDelete: Remove mark\nEscape: Deselect\nInsert: Place mark\nShift+drag: Square, circle, 45\u00b0 line\nCtrl+Z: Undo\nCtrl+Shift+Z: Redo\nCtrl+Shift+C: Copy image"
+     },
+     "lastCopiedPath": null,
+     "lastCopy": null,
+     "lastSave": {
+      "status": null
+     },
+     "lastShowInFolder": null,
+     "message": null,
+     "nextStepNumber": 4,
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "preparationFailure": null,
+     "propertiesWidth": 240,
+     "saveDetailsOpen": false,
+     "saveFeedbackVisible": false,
+     "savingCopy": false,
+     "scheme": "dark",
+     "selectedShapeId": null,
+     "selection": "10 marks, none selected. Insert places a step in the middle. The next step is number 4. [ and ] cycle marks; Escape deselects. Tab leaves the canvas. Alt+arrow keys pan the image; Alt+Shift+arrow keys pan farther.",
+     "style": {
+      "blurStyle": "blur",
+      "color": "#dc2626",
+      "font": "IBM Plex Sans",
+      "fontPixels": 28,
+      "stepSize": 40,
+      "strength": 12,
+      "width": 4
+     },
+     "textOutsideImage": false,
+     "tool": "step",
+     "visibleRect": [
+      0,
+      0,
+      1200,
+      760
+     ],
+     "zoomPercent": 72.9
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.view",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+    "action": "inspect"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "27954ca4-60ab-4467-b17c-005f9143648c",
+    "result": {
+     "busy": false,
+     "cancelLabel": "Discard\u2026",
+     "canvasSize": [
+      1015,
+      586
+     ],
+     "copying": false,
+     "cropPending": false,
+     "destination": {
+      "above": false,
+      "sharingMode": "Shared link",
+      "text": "put.gd development destination \u00b7 Shared link"
+     },
+     "discardConfirmation": {
+      "open": false,
+      "text": null
+     },
+     "editingText": false,
+     "fitted": true,
+     "geometry": null,
+     "geometryDetails": {
+      "open": false,
+      "visible": false
+     },
+     "keyboardHelp": {
+      "open": false,
+      "text": "[ / ]: Cycle marks\nArrows: Move\nShift+arrows: Resize\nCtrl+arrows: Move 10 px\nCtrl+Shift+arrows: Resize 10 px\nTab: Focus properties\nDelete: Remove mark\nEscape: Deselect\nInsert: Place mark\nShift+drag: Square, circle, 45\u00b0 line\nCtrl+Z: Undo\nCtrl+Shift+Z: Redo\nCtrl+Shift+C: Copy image"
+     },
+     "lastCopiedPath": null,
+     "lastCopy": null,
+     "lastSave": {
+      "status": null
+     },
+     "lastShowInFolder": null,
+     "message": null,
+     "nextStepNumber": 4,
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "preparationFailure": null,
+     "propertiesWidth": 240,
+     "saveDetailsOpen": false,
+     "saveFeedbackVisible": false,
+     "savingCopy": false,
+     "scheme": "dark",
+     "selectedShapeId": null,
+     "selection": "10 marks, none selected. Insert places a step in the middle. The next step is number 4. [ and ] cycle marks; Escape deselects. Tab leaves the canvas. Alt+arrow keys pan the image; Alt+Shift+arrow keys pan farther.",
+     "style": {
+      "blurStyle": "blur",
+      "color": "#dc2626",
+      "font": "IBM Plex Sans",
+      "fontPixels": 28,
+      "stepSize": 40,
+      "strength": 12,
+      "width": 4
+     },
+     "textOutsideImage": false,
+     "tool": "step",
+     "visibleRect": [
+      0,
+      0,
+      1200,
+      760
+     ],
+     "zoomPercent": 72.9
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.view",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+    "action": "stepNumber",
+    "number": 10
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "fbd13b92-323b-41d5-8543-9edc7cabd5e3",
+    "result": {
+     "busy": false,
+     "cancelLabel": "Discard\u2026",
+     "canvasSize": [
+      1015,
+      586
+     ],
+     "copying": false,
+     "cropPending": false,
+     "destination": {
+      "above": false,
+      "sharingMode": "Shared link",
+      "text": "put.gd development destination \u00b7 Shared link"
+     },
+     "discardConfirmation": {
+      "open": false,
+      "text": null
+     },
+     "editingText": false,
+     "fitted": true,
+     "geometry": null,
+     "geometryDetails": {
+      "open": false,
+      "visible": false
+     },
+     "keyboardHelp": {
+      "open": false,
+      "text": "[ / ]: Cycle marks\nArrows: Move\nShift+arrows: Resize\nCtrl+arrows: Move 10 px\nCtrl+Shift+arrows: Resize 10 px\nTab: Focus properties\nDelete: Remove mark\nEscape: Deselect\nInsert: Place mark\nShift+drag: Square, circle, 45\u00b0 line\nCtrl+Z: Undo\nCtrl+Shift+Z: Redo\nCtrl+Shift+C: Copy image"
+     },
+     "lastCopiedPath": null,
+     "lastCopy": null,
+     "lastSave": {
+      "status": null
+     },
+     "lastShowInFolder": null,
+     "message": null,
+     "nextStepNumber": 10,
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "preparationFailure": null,
+     "propertiesWidth": 240,
+     "saveDetailsOpen": false,
+     "saveFeedbackVisible": false,
+     "savingCopy": false,
+     "scheme": "dark",
+     "selectedShapeId": null,
+     "selection": "10 marks, none selected. Insert places a step in the middle. The next step is number 10. [ and ] cycle marks; Escape deselects. Tab leaves the canvas. Alt+arrow keys pan the image; Alt+Shift+arrow keys pan farther.",
+     "style": {
+      "blurStyle": "blur",
+      "color": "#dc2626",
+      "font": "IBM Plex Sans",
+      "fontPixels": 28,
+      "stepSize": 40,
+      "strength": 12,
+      "width": 4
+     },
+     "textOutsideImage": false,
+     "tool": "step",
+     "visibleRect": [
+      0,
+      0,
+      1200,
+      760
+     ],
+     "zoomPercent": 72.9
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.view",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+    "action": "place"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "5749272f-2620-4511-b6d2-4406f358da0e",
+    "result": {
+     "busy": false,
+     "cancelLabel": "Discard\u2026",
+     "canvasSize": [
+      1015,
+      586
+     ],
+     "copying": false,
+     "cropPending": false,
+     "destination": {
+      "above": false,
+      "sharingMode": "Shared link",
+      "text": "put.gd development destination \u00b7 Shared link"
+     },
+     "discardConfirmation": {
+      "open": false,
+      "text": null
+     },
+     "editingText": false,
+     "fitted": true,
+     "geometry": [
+      580,
+      360,
+      40,
+      40
+     ],
+     "geometryDetails": {
+      "open": false,
+      "visible": false
+     },
+     "keyboardHelp": {
+      "open": false,
+      "text": "[ / ]: Cycle marks\nArrows: Move\nShift+arrows: Resize\nCtrl+arrows: Move 10 px\nCtrl+Shift+arrows: Resize 10 px\nTab: Focus properties\nDelete: Remove mark\nEscape: Deselect\nInsert: Place mark\nShift+drag: Square, circle, 45\u00b0 line\nCtrl+Z: Undo\nCtrl+Shift+Z: Redo\nCtrl+Shift+C: Copy image"
+     },
+     "lastCopiedPath": null,
+     "lastCopy": null,
+     "lastSave": {
+      "status": null
+     },
+     "lastShowInFolder": null,
+     "message": null,
+     "nextStepNumber": 11,
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "preparationFailure": null,
+     "propertiesWidth": 240,
+     "saveDetailsOpen": false,
+     "saveFeedbackVisible": false,
+     "savingCopy": false,
+     "scheme": "dark",
+     "selectedShapeId": 11,
+     "selection": "Step 11 of 11 selected, number 10 centred at x 600, y 380, 40 px across. Arrow keys move it, Shift+arrow keys resize it, Delete removes it, [ and ] cycle marks, Tab leaves the canvas for properties, Escape deselects. Alt+arrow keys pan the image; Alt+Shift+arrow keys pan farther.",
+     "style": {
+      "blurStyle": "blur",
+      "color": "#dc2626",
+      "font": "IBM Plex Sans",
+      "fontPixels": 28,
+      "stepSize": 40,
+      "strength": 12,
+      "width": 4
+     },
+     "textOutsideImage": false,
+     "tool": "step",
+     "visibleRect": [
+      0,
+      0,
+      1200,
+      760
+     ],
+     "zoomPercent": 72.9
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.inspect",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "1e0cab41-2798-4b1f-a0e9-adcd1a74aa08",
+    "result": {
+     "canRedo": false,
+     "canUndo": true,
+     "crop": [
+      0,
+      0,
+      1200,
+      760
+     ],
+     "destination": "Upload to put.gd development destination \u00b7 Shared link",
+     "height": 760,
+     "historyTruncated": false,
+     "modified": true,
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "phase": "editing",
+     "preparation": null,
+     "shapes": [
+      {
+       "id": 1,
+       "kind": "redact",
+       "rect": [
+        300,
+        214,
+        420,
+        36
+       ]
+      },
+      {
+       "at": [
+        120,
+        140
+       ],
+       "color": "#dc2626",
+       "id": 2,
+       "kind": "step",
+       "number": 1,
+       "rect": [
+        100,
+        120,
+        40,
+        40
+       ],
+       "size": 40
+      },
+      {
+       "at": [
+        120,
+        280
+       ],
+       "color": "#facc15",
+       "id": 3,
+       "kind": "step",
+       "number": 2,
+       "rect": [
+        100,
+        260,
+        40,
+        40
+       ],
+       "size": 40
+      },
+      {
+       "at": [
+        120,
+        420
+       ],
+       "color": "#3b82f6",
+       "id": 4,
+       "kind": "step",
+       "number": 3,
+       "rect": [
+        92,
+        392,
+        56,
+        56
+       ],
+       "size": 56
+      },
+      {
+       "color": "#dc2626",
+       "id": 5,
+       "kind": "pen",
+       "points": [
+        [
+         160,
+         582
+        ],
+        [
+         190,
+         618
+        ],
+        [
+         220,
+         582
+        ],
+        [
+         250,
+         618
+        ],
+        [
+         280,
+         582
+        ],
+        [
+         310,
+         618
+        ],
+        [
+         340,
+         582
+        ],
+        [
+         370,
+         618
+        ],
+        [
+         400,
+         582
+        ],
+        [
+         430,
+         618
+        ],
+        [
+         460,
+         582
+        ],
+        [
+         490,
+         618
+        ],
+        [
+         520,
+         582
+        ],
+        [
+         550,
+         618
+        ]
+       ],
+       "rect": [
+        160,
+        582,
+        391,
+        37
+       ],
+       "width": 4
+      },
+      {
+       "color": "#dc2626",
+       "id": 6,
+       "kind": "ellipse",
+       "rect": [
+        760,
+        120,
+        320,
+        180
+       ],
+       "width": 4
+      },
+      {
+       "color": "#22c55e",
+       "from": [
+        180,
+        520
+       ],
+       "id": 7,
+       "kind": "line",
+       "to": [
+        1000,
+        520
+       ],
+       "width": 4
+      },
+      {
+       "id": 8,
+       "kind": "blur",
+       "rect": [
+        700,
+        360,
+        380,
+        140
+       ],
+       "strength": 12,
+       "style": "pixelate"
+      },
+      {
+       "id": 9,
+       "kind": "redact",
+       "rect": [
+        900,
+        570,
+        200,
+        100
+       ]
+      },
+      {
+       "color": "#ff0000",
+       "id": 10,
+       "kind": "rectangle",
+       "rect": [
+        940,
+        590,
+        80,
+        40
+       ],
+       "width": 4
+      },
+      {
+       "at": [
+        600,
+        380
+       ],
+       "color": "#dc2626",
+       "id": 11,
+       "kind": "step",
+       "number": 10,
+       "rect": [
+        580,
+        360,
+        40,
+        40
+       ],
+       "size": 40
+      }
+     ],
+     "view": {
+      "busy": false,
+      "cancelLabel": "Discard\u2026",
+      "canvasSize": [
+       1015,
+       586
+      ],
+      "copying": false,
+      "cropPending": false,
+      "destination": {
+       "above": false,
+       "sharingMode": "Shared link",
+       "text": "put.gd development destination \u00b7 Shared link"
+      },
+      "discardConfirmation": {
+       "open": false,
+       "text": null
+      },
+      "editingText": false,
+      "fitted": true,
+      "geometry": [
+       580,
+       360,
+       40,
+       40
+      ],
+      "geometryDetails": {
+       "open": false,
+       "visible": false
+      },
+      "keyboardHelp": {
+       "open": false,
+       "text": "[ / ]: Cycle marks\nArrows: Move\nShift+arrows: Resize\nCtrl+arrows: Move 10 px\nCtrl+Shift+arrows: Resize 10 px\nTab: Focus properties\nDelete: Remove mark\nEscape: Deselect\nInsert: Place mark\nShift+drag: Square, circle, 45\u00b0 line\nCtrl+Z: Undo\nCtrl+Shift+Z: Redo\nCtrl+Shift+C: Copy image"
+      },
+      "lastCopiedPath": null,
+      "lastCopy": null,
+      "lastSave": {
+       "status": null
+      },
+      "lastShowInFolder": null,
+      "message": null,
+      "nextStepNumber": 11,
+      "preparationFailure": null,
+      "propertiesWidth": 240,
+      "saveDetailsOpen": false,
+      "saveFeedbackVisible": false,
+      "savingCopy": false,
+      "scheme": "dark",
+      "selectedShapeId": 11,
+      "selection": "Step 11 of 11 selected, number 10 centred at x 600, y 380, 40 px across. Arrow keys move it, Shift+arrow keys resize it, Delete removes it, [ and ] cycle marks, Tab leaves the canvas for properties, Escape deselects. Alt+arrow keys pan the image; Alt+Shift+arrow keys pan farther.",
+      "style": {
+       "blurStyle": "blur",
+       "color": "#dc2626",
+       "font": "IBM Plex Sans",
+       "fontPixels": 28,
+       "stepSize": 40,
+       "strength": 12,
+       "width": 4
+      },
+      "textOutsideImage": false,
+      "tool": "step",
+      "visibleRect": [
+       0,
+       0,
+       1200,
+       760
+      ],
+      "zoomPercent": 72.9
+     },
+     "width": 1200
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.inspect",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "1bdb1d57-335d-44a4-94f5-117e603754cb",
+    "result": {
+     "canRedo": false,
+     "canUndo": true,
+     "crop": [
+      0,
+      0,
+      1200,
+      760
+     ],
+     "destination": "Upload to put.gd development destination \u00b7 Shared link",
+     "height": 760,
+     "historyTruncated": false,
+     "modified": true,
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "phase": "editing",
+     "preparation": null,
+     "shapes": [
+      {
+       "id": 1,
+       "kind": "redact",
+       "rect": [
+        300,
+        214,
+        420,
+        36
+       ]
+      },
+      {
+       "at": [
+        120,
+        140
+       ],
+       "color": "#dc2626",
+       "id": 2,
+       "kind": "step",
+       "number": 1,
+       "rect": [
+        100,
+        120,
+        40,
+        40
+       ],
+       "size": 40
+      },
+      {
+       "at": [
+        120,
+        280
+       ],
+       "color": "#facc15",
+       "id": 3,
+       "kind": "step",
+       "number": 2,
+       "rect": [
+        100,
+        260,
+        40,
+        40
+       ],
+       "size": 40
+      },
+      {
+       "at": [
+        120,
+        420
+       ],
+       "color": "#3b82f6",
+       "id": 4,
+       "kind": "step",
+       "number": 3,
+       "rect": [
+        92,
+        392,
+        56,
+        56
+       ],
+       "size": 56
+      },
+      {
+       "color": "#dc2626",
+       "id": 5,
+       "kind": "pen",
+       "points": [
+        [
+         160,
+         582
+        ],
+        [
+         190,
+         618
+        ],
+        [
+         220,
+         582
+        ],
+        [
+         250,
+         618
+        ],
+        [
+         280,
+         582
+        ],
+        [
+         310,
+         618
+        ],
+        [
+         340,
+         582
+        ],
+        [
+         370,
+         618
+        ],
+        [
+         400,
+         582
+        ],
+        [
+         430,
+         618
+        ],
+        [
+         460,
+         582
+        ],
+        [
+         490,
+         618
+        ],
+        [
+         520,
+         582
+        ],
+        [
+         550,
+         618
+        ]
+       ],
+       "rect": [
+        160,
+        582,
+        391,
+        37
+       ],
+       "width": 4
+      },
+      {
+       "color": "#dc2626",
+       "id": 6,
+       "kind": "ellipse",
+       "rect": [
+        760,
+        120,
+        320,
+        180
+       ],
+       "width": 4
+      },
+      {
+       "color": "#22c55e",
+       "from": [
+        180,
+        520
+       ],
+       "id": 7,
+       "kind": "line",
+       "to": [
+        1000,
+        520
+       ],
+       "width": 4
+      },
+      {
+       "id": 8,
+       "kind": "blur",
+       "rect": [
+        700,
+        360,
+        380,
+        140
+       ],
+       "strength": 12,
+       "style": "pixelate"
+      },
+      {
+       "id": 9,
+       "kind": "redact",
+       "rect": [
+        900,
+        570,
+        200,
+        100
+       ]
+      },
+      {
+       "color": "#ff0000",
+       "id": 10,
+       "kind": "rectangle",
+       "rect": [
+        940,
+        590,
+        80,
+        40
+       ],
+       "width": 4
+      },
+      {
+       "at": [
+        600,
+        380
+       ],
+       "color": "#dc2626",
+       "id": 11,
+       "kind": "step",
+       "number": 10,
+       "rect": [
+        580,
+        360,
+        40,
+        40
+       ],
+       "size": 40
+      }
+     ],
+     "view": {
+      "busy": false,
+      "cancelLabel": "Discard\u2026",
+      "canvasSize": [
+       1015,
+       586
+      ],
+      "copying": false,
+      "cropPending": false,
+      "destination": {
+       "above": false,
+       "sharingMode": "Shared link",
+       "text": "put.gd development destination \u00b7 Shared link"
+      },
+      "discardConfirmation": {
+       "open": false,
+       "text": null
+      },
+      "editingText": false,
+      "fitted": true,
+      "geometry": [
+       580,
+       360,
+       40,
+       40
+      ],
+      "geometryDetails": {
+       "open": false,
+       "visible": false
+      },
+      "keyboardHelp": {
+       "open": false,
+       "text": "[ / ]: Cycle marks\nArrows: Move\nShift+arrows: Resize\nCtrl+arrows: Move 10 px\nCtrl+Shift+arrows: Resize 10 px\nTab: Focus properties\nDelete: Remove mark\nEscape: Deselect\nInsert: Place mark\nShift+drag: Square, circle, 45\u00b0 line\nCtrl+Z: Undo\nCtrl+Shift+Z: Redo\nCtrl+Shift+C: Copy image"
+      },
+      "lastCopiedPath": null,
+      "lastCopy": null,
+      "lastSave": {
+       "status": null
+      },
+      "lastShowInFolder": null,
+      "message": null,
+      "nextStepNumber": 11,
+      "preparationFailure": null,
+      "propertiesWidth": 240,
+      "saveDetailsOpen": false,
+      "saveFeedbackVisible": false,
+      "savingCopy": false,
+      "scheme": "dark",
+      "selectedShapeId": 11,
+      "selection": "Step 11 of 11 selected, number 10 centred at x 600, y 380, 40 px across. Arrow keys move it, Shift+arrow keys resize it, Delete removes it, [ and ] cycle marks, Tab leaves the canvas for properties, Escape deselects. Alt+arrow keys pan the image; Alt+Shift+arrow keys pan farther.",
+      "style": {
+       "blurStyle": "blur",
+       "color": "#dc2626",
+       "font": "IBM Plex Sans",
+       "fontPixels": 28,
+       "stepSize": 40,
+       "strength": 12,
+       "width": 4
+      },
+      "textOutsideImage": false,
+      "tool": "step",
+      "visibleRect": [
+       0,
+       0,
+       1200,
+       760
+      ],
+      "zoomPercent": 72.9
+     },
+     "width": 1200
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.apply",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+    "commands": [
+     {
+      "op": "undo"
+     }
+    ]
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "41d07370-a937-49d0-90ec-f35b7b243b65",
+    "result": {
+     "created": [],
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "state": {
+      "canRedo": true,
+      "canUndo": true,
+      "crop": [
+       0,
+       0,
+       1200,
+       760
+      ],
+      "height": 760,
+      "historyTruncated": false,
+      "modified": true,
+      "shapes": [
+       {
+        "id": 1,
+        "kind": "redact",
+        "rect": [
+         300,
+         214,
+         420,
+         36
+        ]
+       },
+       {
+        "at": [
+         120,
+         140
+        ],
+        "color": "#dc2626",
+        "id": 2,
+        "kind": "step",
+        "number": 1,
+        "rect": [
+         100,
+         120,
+         40,
+         40
+        ],
+        "size": 40
+       },
+       {
+        "at": [
+         120,
+         280
+        ],
+        "color": "#facc15",
+        "id": 3,
+        "kind": "step",
+        "number": 2,
+        "rect": [
+         100,
+         260,
+         40,
+         40
+        ],
+        "size": 40
+       },
+       {
+        "at": [
+         120,
+         420
+        ],
+        "color": "#3b82f6",
+        "id": 4,
+        "kind": "step",
+        "number": 3,
+        "rect": [
+         92,
+         392,
+         56,
+         56
+        ],
+        "size": 56
+       },
+       {
+        "color": "#dc2626",
+        "id": 5,
+        "kind": "pen",
+        "points": [
+         [
+          160,
+          582
+         ],
+         [
+          190,
+          618
+         ],
+         [
+          220,
+          582
+         ],
+         [
+          250,
+          618
+         ],
+         [
+          280,
+          582
+         ],
+         [
+          310,
+          618
+         ],
+         [
+          340,
+          582
+         ],
+         [
+          370,
+          618
+         ],
+         [
+          400,
+          582
+         ],
+         [
+          430,
+          618
+         ],
+         [
+          460,
+          582
+         ],
+         [
+          490,
+          618
+         ],
+         [
+          520,
+          582
+         ],
+         [
+          550,
+          618
+         ]
+        ],
+        "rect": [
+         160,
+         582,
+         391,
+         37
+        ],
+        "width": 4
+       },
+       {
+        "color": "#dc2626",
+        "id": 6,
+        "kind": "ellipse",
+        "rect": [
+         760,
+         120,
+         320,
+         180
+        ],
+        "width": 4
+       },
+       {
+        "color": "#22c55e",
+        "from": [
+         180,
+         520
+        ],
+        "id": 7,
+        "kind": "line",
+        "to": [
+         1000,
+         520
+        ],
+        "width": 4
+       },
+       {
+        "id": 8,
+        "kind": "blur",
+        "rect": [
+         700,
+         360,
+         380,
+         140
+        ],
+        "strength": 12,
+        "style": "pixelate"
+       },
+       {
+        "id": 9,
+        "kind": "redact",
+        "rect": [
+         900,
+         570,
+         200,
+         100
+        ]
+       },
+       {
+        "color": "#ff0000",
+        "id": 10,
+        "kind": "rectangle",
+        "rect": [
+         940,
+         590,
+         80,
+         40
+        ],
+        "width": 4
+       }
+      ],
+      "width": 1200
+     }
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.inspect",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "2a5a7372-fbba-4dcb-b32e-42c6fd29f39b",
+    "result": {
+     "canRedo": true,
+     "canUndo": true,
+     "crop": [
+      0,
+      0,
+      1200,
+      760
+     ],
+     "destination": "Upload to put.gd development destination \u00b7 Shared link",
+     "height": 760,
+     "historyTruncated": false,
+     "modified": true,
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "phase": "editing",
+     "preparation": null,
+     "shapes": [
+      {
+       "id": 1,
+       "kind": "redact",
+       "rect": [
+        300,
+        214,
+        420,
+        36
+       ]
+      },
+      {
+       "at": [
+        120,
+        140
+       ],
+       "color": "#dc2626",
+       "id": 2,
+       "kind": "step",
+       "number": 1,
+       "rect": [
+        100,
+        120,
+        40,
+        40
+       ],
+       "size": 40
+      },
+      {
+       "at": [
+        120,
+        280
+       ],
+       "color": "#facc15",
+       "id": 3,
+       "kind": "step",
+       "number": 2,
+       "rect": [
+        100,
+        260,
+        40,
+        40
+       ],
+       "size": 40
+      },
+      {
+       "at": [
+        120,
+        420
+       ],
+       "color": "#3b82f6",
+       "id": 4,
+       "kind": "step",
+       "number": 3,
+       "rect": [
+        92,
+        392,
+        56,
+        56
+       ],
+       "size": 56
+      },
+      {
+       "color": "#dc2626",
+       "id": 5,
+       "kind": "pen",
+       "points": [
+        [
+         160,
+         582
+        ],
+        [
+         190,
+         618
+        ],
+        [
+         220,
+         582
+        ],
+        [
+         250,
+         618
+        ],
+        [
+         280,
+         582
+        ],
+        [
+         310,
+         618
+        ],
+        [
+         340,
+         582
+        ],
+        [
+         370,
+         618
+        ],
+        [
+         400,
+         582
+        ],
+        [
+         430,
+         618
+        ],
+        [
+         460,
+         582
+        ],
+        [
+         490,
+         618
+        ],
+        [
+         520,
+         582
+        ],
+        [
+         550,
+         618
+        ]
+       ],
+       "rect": [
+        160,
+        582,
+        391,
+        37
+       ],
+       "width": 4
+      },
+      {
+       "color": "#dc2626",
+       "id": 6,
+       "kind": "ellipse",
+       "rect": [
+        760,
+        120,
+        320,
+        180
+       ],
+       "width": 4
+      },
+      {
+       "color": "#22c55e",
+       "from": [
+        180,
+        520
+       ],
+       "id": 7,
+       "kind": "line",
+       "to": [
+        1000,
+        520
+       ],
+       "width": 4
+      },
+      {
+       "id": 8,
+       "kind": "blur",
+       "rect": [
+        700,
+        360,
+        380,
+        140
+       ],
+       "strength": 12,
+       "style": "pixelate"
+      },
+      {
+       "id": 9,
+       "kind": "redact",
+       "rect": [
+        900,
+        570,
+        200,
+        100
+       ]
+      },
+      {
+       "color": "#ff0000",
+       "id": 10,
+       "kind": "rectangle",
+       "rect": [
+        940,
+        590,
+        80,
+        40
+       ],
+       "width": 4
+      }
+     ],
+     "view": {
+      "busy": false,
+      "cancelLabel": "Discard\u2026",
+      "canvasSize": [
+       1015,
+       586
+      ],
+      "copying": false,
+      "cropPending": false,
+      "destination": {
+       "above": false,
+       "sharingMode": "Shared link",
+       "text": "put.gd development destination \u00b7 Shared link"
+      },
+      "discardConfirmation": {
+       "open": false,
+       "text": null
+      },
+      "editingText": false,
+      "fitted": true,
+      "geometry": null,
+      "geometryDetails": {
+       "open": false,
+       "visible": false
+      },
+      "keyboardHelp": {
+       "open": false,
+       "text": "[ / ]: Cycle marks\nArrows: Move\nShift+arrows: Resize\nCtrl+arrows: Move 10 px\nCtrl+Shift+arrows: Resize 10 px\nTab: Focus properties\nDelete: Remove mark\nEscape: Deselect\nInsert: Place mark\nShift+drag: Square, circle, 45\u00b0 line\nCtrl+Z: Undo\nCtrl+Shift+Z: Redo\nCtrl+Shift+C: Copy image"
+      },
+      "lastCopiedPath": null,
+      "lastCopy": null,
+      "lastSave": {
+       "status": null
+      },
+      "lastShowInFolder": null,
+      "message": null,
+      "nextStepNumber": 4,
+      "preparationFailure": null,
+      "propertiesWidth": 240,
+      "saveDetailsOpen": false,
+      "saveFeedbackVisible": false,
+      "savingCopy": false,
+      "scheme": "dark",
+      "selectedShapeId": null,
+      "selection": "10 marks, none selected. Insert places a step in the middle. The next step is number 4. [ and ] cycle marks; Escape deselects. Tab leaves the canvas. Alt+arrow keys pan the image; Alt+Shift+arrow keys pan farther.",
+      "style": {
+       "blurStyle": "blur",
+       "color": "#dc2626",
+       "font": "IBM Plex Sans",
+       "fontPixels": 28,
+       "stepSize": 40,
+       "strength": 12,
+       "width": 4
+      },
+      "textOutsideImage": false,
+      "tool": "step",
+      "visibleRect": [
+       0,
+       0,
+       1200,
+       760
+      ],
+      "zoomPercent": 72.9
+     },
+     "width": 1200
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.apply",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+    "commands": [
+     {
+      "op": "redo"
+     }
+    ]
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "a5160cde-008a-485f-83b4-318f327a04d9",
+    "result": {
+     "created": [],
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "state": {
+      "canRedo": false,
+      "canUndo": true,
+      "crop": [
+       0,
+       0,
+       1200,
+       760
+      ],
+      "height": 760,
+      "historyTruncated": false,
+      "modified": true,
+      "shapes": [
+       {
+        "id": 1,
+        "kind": "redact",
+        "rect": [
+         300,
+         214,
+         420,
+         36
+        ]
+       },
+       {
+        "at": [
+         120,
+         140
+        ],
+        "color": "#dc2626",
+        "id": 2,
+        "kind": "step",
+        "number": 1,
+        "rect": [
+         100,
+         120,
+         40,
+         40
+        ],
+        "size": 40
+       },
+       {
+        "at": [
+         120,
+         280
+        ],
+        "color": "#facc15",
+        "id": 3,
+        "kind": "step",
+        "number": 2,
+        "rect": [
+         100,
+         260,
+         40,
+         40
+        ],
+        "size": 40
+       },
+       {
+        "at": [
+         120,
+         420
+        ],
+        "color": "#3b82f6",
+        "id": 4,
+        "kind": "step",
+        "number": 3,
+        "rect": [
+         92,
+         392,
+         56,
+         56
+        ],
+        "size": 56
+       },
+       {
+        "color": "#dc2626",
+        "id": 5,
+        "kind": "pen",
+        "points": [
+         [
+          160,
+          582
+         ],
+         [
+          190,
+          618
+         ],
+         [
+          220,
+          582
+         ],
+         [
+          250,
+          618
+         ],
+         [
+          280,
+          582
+         ],
+         [
+          310,
+          618
+         ],
+         [
+          340,
+          582
+         ],
+         [
+          370,
+          618
+         ],
+         [
+          400,
+          582
+         ],
+         [
+          430,
+          618
+         ],
+         [
+          460,
+          582
+         ],
+         [
+          490,
+          618
+         ],
+         [
+          520,
+          582
+         ],
+         [
+          550,
+          618
+         ]
+        ],
+        "rect": [
+         160,
+         582,
+         391,
+         37
+        ],
+        "width": 4
+       },
+       {
+        "color": "#dc2626",
+        "id": 6,
+        "kind": "ellipse",
+        "rect": [
+         760,
+         120,
+         320,
+         180
+        ],
+        "width": 4
+       },
+       {
+        "color": "#22c55e",
+        "from": [
+         180,
+         520
+        ],
+        "id": 7,
+        "kind": "line",
+        "to": [
+         1000,
+         520
+        ],
+        "width": 4
+       },
+       {
+        "id": 8,
+        "kind": "blur",
+        "rect": [
+         700,
+         360,
+         380,
+         140
+        ],
+        "strength": 12,
+        "style": "pixelate"
+       },
+       {
+        "id": 9,
+        "kind": "redact",
+        "rect": [
+         900,
+         570,
+         200,
+         100
+        ]
+       },
+       {
+        "color": "#ff0000",
+        "id": 10,
+        "kind": "rectangle",
+        "rect": [
+         940,
+         590,
+         80,
+         40
+        ],
+        "width": 4
+       },
+       {
+        "at": [
+         600,
+         380
+        ],
+        "color": "#dc2626",
+        "id": 11,
+        "kind": "step",
+        "number": 10,
+        "rect": [
+         580,
+         360,
+         40,
+         40
+        ],
+        "size": 40
+       }
+      ],
+      "width": 1200
+     }
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.inspect",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "d5882ae1-fe1a-4392-94a5-e97adc9cecd2",
+    "result": {
+     "canRedo": false,
+     "canUndo": true,
+     "crop": [
+      0,
+      0,
+      1200,
+      760
+     ],
+     "destination": "Upload to put.gd development destination \u00b7 Shared link",
+     "height": 760,
+     "historyTruncated": false,
+     "modified": true,
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "phase": "editing",
+     "preparation": null,
+     "shapes": [
+      {
+       "id": 1,
+       "kind": "redact",
+       "rect": [
+        300,
+        214,
+        420,
+        36
+       ]
+      },
+      {
+       "at": [
+        120,
+        140
+       ],
+       "color": "#dc2626",
+       "id": 2,
+       "kind": "step",
+       "number": 1,
+       "rect": [
+        100,
+        120,
+        40,
+        40
+       ],
+       "size": 40
+      },
+      {
+       "at": [
+        120,
+        280
+       ],
+       "color": "#facc15",
+       "id": 3,
+       "kind": "step",
+       "number": 2,
+       "rect": [
+        100,
+        260,
+        40,
+        40
+       ],
+       "size": 40
+      },
+      {
+       "at": [
+        120,
+        420
+       ],
+       "color": "#3b82f6",
+       "id": 4,
+       "kind": "step",
+       "number": 3,
+       "rect": [
+        92,
+        392,
+        56,
+        56
+       ],
+       "size": 56
+      },
+      {
+       "color": "#dc2626",
+       "id": 5,
+       "kind": "pen",
+       "points": [
+        [
+         160,
+         582
+        ],
+        [
+         190,
+         618
+        ],
+        [
+         220,
+         582
+        ],
+        [
+         250,
+         618
+        ],
+        [
+         280,
+         582
+        ],
+        [
+         310,
+         618
+        ],
+        [
+         340,
+         582
+        ],
+        [
+         370,
+         618
+        ],
+        [
+         400,
+         582
+        ],
+        [
+         430,
+         618
+        ],
+        [
+         460,
+         582
+        ],
+        [
+         490,
+         618
+        ],
+        [
+         520,
+         582
+        ],
+        [
+         550,
+         618
+        ]
+       ],
+       "rect": [
+        160,
+        582,
+        391,
+        37
+       ],
+       "width": 4
+      },
+      {
+       "color": "#dc2626",
+       "id": 6,
+       "kind": "ellipse",
+       "rect": [
+        760,
+        120,
+        320,
+        180
+       ],
+       "width": 4
+      },
+      {
+       "color": "#22c55e",
+       "from": [
+        180,
+        520
+       ],
+       "id": 7,
+       "kind": "line",
+       "to": [
+        1000,
+        520
+       ],
+       "width": 4
+      },
+      {
+       "id": 8,
+       "kind": "blur",
+       "rect": [
+        700,
+        360,
+        380,
+        140
+       ],
+       "strength": 12,
+       "style": "pixelate"
+      },
+      {
+       "id": 9,
+       "kind": "redact",
+       "rect": [
+        900,
+        570,
+        200,
+        100
+       ]
+      },
+      {
+       "color": "#ff0000",
+       "id": 10,
+       "kind": "rectangle",
+       "rect": [
+        940,
+        590,
+        80,
+        40
+       ],
+       "width": 4
+      },
+      {
+       "at": [
+        600,
+        380
+       ],
+       "color": "#dc2626",
+       "id": 11,
+       "kind": "step",
+       "number": 10,
+       "rect": [
+        580,
+        360,
+        40,
+        40
+       ],
+       "size": 40
+      }
+     ],
+     "view": {
+      "busy": false,
+      "cancelLabel": "Discard\u2026",
+      "canvasSize": [
+       1015,
+       586
+      ],
+      "copying": false,
+      "cropPending": false,
+      "destination": {
+       "above": false,
+       "sharingMode": "Shared link",
+       "text": "put.gd development destination \u00b7 Shared link"
+      },
+      "discardConfirmation": {
+       "open": false,
+       "text": null
+      },
+      "editingText": false,
+      "fitted": true,
+      "geometry": null,
+      "geometryDetails": {
+       "open": false,
+       "visible": false
+      },
+      "keyboardHelp": {
+       "open": false,
+       "text": "[ / ]: Cycle marks\nArrows: Move\nShift+arrows: Resize\nCtrl+arrows: Move 10 px\nCtrl+Shift+arrows: Resize 10 px\nTab: Focus properties\nDelete: Remove mark\nEscape: Deselect\nInsert: Place mark\nShift+drag: Square, circle, 45\u00b0 line\nCtrl+Z: Undo\nCtrl+Shift+Z: Redo\nCtrl+Shift+C: Copy image"
+      },
+      "lastCopiedPath": null,
+      "lastCopy": null,
+      "lastSave": {
+       "status": null
+      },
+      "lastShowInFolder": null,
+      "message": null,
+      "nextStepNumber": 11,
+      "preparationFailure": null,
+      "propertiesWidth": 240,
+      "saveDetailsOpen": false,
+      "saveFeedbackVisible": false,
+      "savingCopy": false,
+      "scheme": "dark",
+      "selectedShapeId": null,
+      "selection": "11 marks, none selected. Insert places a step in the middle. The next step is number 11. [ and ] cycle marks; Escape deselects. Tab leaves the canvas. Alt+arrow keys pan the image; Alt+Shift+arrow keys pan farther.",
+      "style": {
+       "blurStyle": "blur",
+       "color": "#dc2626",
+       "font": "IBM Plex Sans",
+       "fontPixels": 28,
+       "stepSize": 40,
+       "strength": 12,
+       "width": 4
+      },
+      "textOutsideImage": false,
+      "tool": "step",
+      "visibleRect": [
+       0,
+       0,
+       1200,
+       760
+      ],
+      "zoomPercent": 72.9
+     },
+     "width": 1200
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.apply",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+    "commands": [
+     {
+      "op": "remove",
+      "shapeId": 11
+     }
+    ]
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "060676c5-7585-4bce-99da-9f08bae51f57",
+    "result": {
+     "created": [],
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "state": {
+      "canRedo": false,
+      "canUndo": true,
+      "crop": [
+       0,
+       0,
+       1200,
+       760
+      ],
+      "height": 760,
+      "historyTruncated": false,
+      "modified": true,
+      "shapes": [
+       {
+        "id": 1,
+        "kind": "redact",
+        "rect": [
+         300,
+         214,
+         420,
+         36
+        ]
+       },
+       {
+        "at": [
+         120,
+         140
+        ],
+        "color": "#dc2626",
+        "id": 2,
+        "kind": "step",
+        "number": 1,
+        "rect": [
+         100,
+         120,
+         40,
+         40
+        ],
+        "size": 40
+       },
+       {
+        "at": [
+         120,
+         280
+        ],
+        "color": "#facc15",
+        "id": 3,
+        "kind": "step",
+        "number": 2,
+        "rect": [
+         100,
+         260,
+         40,
+         40
+        ],
+        "size": 40
+       },
+       {
+        "at": [
+         120,
+         420
+        ],
+        "color": "#3b82f6",
+        "id": 4,
+        "kind": "step",
+        "number": 3,
+        "rect": [
+         92,
+         392,
+         56,
+         56
+        ],
+        "size": 56
+       },
+       {
+        "color": "#dc2626",
+        "id": 5,
+        "kind": "pen",
+        "points": [
+         [
+          160,
+          582
+         ],
+         [
+          190,
+          618
+         ],
+         [
+          220,
+          582
+         ],
+         [
+          250,
+          618
+         ],
+         [
+          280,
+          582
+         ],
+         [
+          310,
+          618
+         ],
+         [
+          340,
+          582
+         ],
+         [
+          370,
+          618
+         ],
+         [
+          400,
+          582
+         ],
+         [
+          430,
+          618
+         ],
+         [
+          460,
+          582
+         ],
+         [
+          490,
+          618
+         ],
+         [
+          520,
+          582
+         ],
+         [
+          550,
+          618
+         ]
+        ],
+        "rect": [
+         160,
+         582,
+         391,
+         37
+        ],
+        "width": 4
+       },
+       {
+        "color": "#dc2626",
+        "id": 6,
+        "kind": "ellipse",
+        "rect": [
+         760,
+         120,
+         320,
+         180
+        ],
+        "width": 4
+       },
+       {
+        "color": "#22c55e",
+        "from": [
+         180,
+         520
+        ],
+        "id": 7,
+        "kind": "line",
+        "to": [
+         1000,
+         520
+        ],
+        "width": 4
+       },
+       {
+        "id": 8,
+        "kind": "blur",
+        "rect": [
+         700,
+         360,
+         380,
+         140
+        ],
+        "strength": 12,
+        "style": "pixelate"
+       },
+       {
+        "id": 9,
+        "kind": "redact",
+        "rect": [
+         900,
+         570,
+         200,
+         100
+        ]
+       },
+       {
+        "color": "#ff0000",
+        "id": 10,
+        "kind": "rectangle",
+        "rect": [
+         940,
+         590,
+         80,
+         40
+        ],
+        "width": 4
+       }
+      ],
+      "width": 1200
+     }
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.view",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+    "action": "tool",
+    "tool": "blur"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "0a396d36-8298-450d-bdb1-3b622e84daf1",
+    "result": {
+     "busy": false,
+     "cancelLabel": "Discard\u2026",
+     "canvasSize": [
+      1015,
+      586
+     ],
+     "copying": false,
+     "cropPending": false,
+     "destination": {
+      "above": false,
+      "sharingMode": "Shared link",
+      "text": "put.gd development destination \u00b7 Shared link"
+     },
+     "discardConfirmation": {
+      "open": false,
+      "text": null
+     },
+     "editingText": false,
+     "fitted": true,
+     "geometry": null,
+     "geometryDetails": {
+      "open": false,
+      "visible": false
+     },
+     "keyboardHelp": {
+      "open": false,
+      "text": "[ / ]: Cycle marks\nArrows: Move\nShift+arrows: Resize\nCtrl+arrows: Move 10 px\nCtrl+Shift+arrows: Resize 10 px\nTab: Focus properties\nDelete: Remove mark\nEscape: Deselect\nInsert: Place mark\nShift+drag: Square, circle, 45\u00b0 line\nCtrl+Z: Undo\nCtrl+Shift+Z: Redo\nCtrl+Shift+C: Copy image"
+     },
+     "lastCopiedPath": null,
+     "lastCopy": null,
+     "lastSave": {
+      "status": null
+     },
+     "lastShowInFolder": null,
+     "message": null,
+     "nextStepNumber": 4,
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "preparationFailure": null,
+     "propertiesWidth": 240,
+     "saveDetailsOpen": false,
+     "saveFeedbackVisible": false,
+     "savingCopy": false,
+     "scheme": "dark",
+     "selectedShapeId": null,
+     "selection": "10 marks, none selected. Insert places a blur in the middle. [ and ] cycle marks; Escape deselects. Tab leaves the canvas. Alt+arrow keys pan the image; Alt+Shift+arrow keys pan farther.",
+     "style": {
+      "blurStyle": "blur",
+      "color": "#dc2626",
+      "font": "IBM Plex Sans",
+      "fontPixels": 28,
+      "stepSize": 40,
+      "strength": 12,
+      "width": 4
+     },
+     "textOutsideImage": false,
+     "tool": "blur",
+     "visibleRect": [
+      0,
+      0,
+      1200,
+      760
+     ],
+     "zoomPercent": 72.9
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.view",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+    "action": "blurStyle",
+    "style": "pixelate"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "c8172f54-c9c1-4307-bbbf-a7f7670b2571",
+    "result": {
+     "busy": false,
+     "cancelLabel": "Discard\u2026",
+     "canvasSize": [
+      1015,
+      586
+     ],
+     "copying": false,
+     "cropPending": false,
+     "destination": {
+      "above": false,
+      "sharingMode": "Shared link",
+      "text": "put.gd development destination \u00b7 Shared link"
+     },
+     "discardConfirmation": {
+      "open": false,
+      "text": null
+     },
+     "editingText": false,
+     "fitted": true,
+     "geometry": null,
+     "geometryDetails": {
+      "open": false,
+      "visible": false
+     },
+     "keyboardHelp": {
+      "open": false,
+      "text": "[ / ]: Cycle marks\nArrows: Move\nShift+arrows: Resize\nCtrl+arrows: Move 10 px\nCtrl+Shift+arrows: Resize 10 px\nTab: Focus properties\nDelete: Remove mark\nEscape: Deselect\nInsert: Place mark\nShift+drag: Square, circle, 45\u00b0 line\nCtrl+Z: Undo\nCtrl+Shift+Z: Redo\nCtrl+Shift+C: Copy image"
+     },
+     "lastCopiedPath": null,
+     "lastCopy": null,
+     "lastSave": {
+      "status": null
+     },
+     "lastShowInFolder": null,
+     "message": null,
+     "nextStepNumber": 4,
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "preparationFailure": null,
+     "propertiesWidth": 240,
+     "saveDetailsOpen": false,
+     "saveFeedbackVisible": false,
+     "savingCopy": false,
+     "scheme": "dark",
+     "selectedShapeId": null,
+     "selection": "10 marks, none selected. Insert places a blur in the middle. [ and ] cycle marks; Escape deselects. Tab leaves the canvas. Alt+arrow keys pan the image; Alt+Shift+arrow keys pan farther.",
+     "style": {
+      "blurStyle": "pixelate",
+      "color": "#dc2626",
+      "font": "IBM Plex Sans",
+      "fontPixels": 28,
+      "stepSize": 40,
+      "strength": 12,
+      "width": 4
+     },
+     "textOutsideImage": false,
+     "tool": "blur",
+     "visibleRect": [
+      0,
+      0,
+      1200,
+      760
+     ],
+     "zoomPercent": 72.9
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.view",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+    "action": "blurStyle",
+    "style": "blur"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "c3674e0d-4424-4d90-978d-427b17bceefd",
+    "result": {
+     "busy": false,
+     "cancelLabel": "Discard\u2026",
+     "canvasSize": [
+      1015,
+      586
+     ],
+     "copying": false,
+     "cropPending": false,
+     "destination": {
+      "above": false,
+      "sharingMode": "Shared link",
+      "text": "put.gd development destination \u00b7 Shared link"
+     },
+     "discardConfirmation": {
+      "open": false,
+      "text": null
+     },
+     "editingText": false,
+     "fitted": true,
+     "geometry": null,
+     "geometryDetails": {
+      "open": false,
+      "visible": false
+     },
+     "keyboardHelp": {
+      "open": false,
+      "text": "[ / ]: Cycle marks\nArrows: Move\nShift+arrows: Resize\nCtrl+arrows: Move 10 px\nCtrl+Shift+arrows: Resize 10 px\nTab: Focus properties\nDelete: Remove mark\nEscape: Deselect\nInsert: Place mark\nShift+drag: Square, circle, 45\u00b0 line\nCtrl+Z: Undo\nCtrl+Shift+Z: Redo\nCtrl+Shift+C: Copy image"
+     },
+     "lastCopiedPath": null,
+     "lastCopy": null,
+     "lastSave": {
+      "status": null
+     },
+     "lastShowInFolder": null,
+     "message": null,
+     "nextStepNumber": 4,
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "preparationFailure": null,
+     "propertiesWidth": 240,
+     "saveDetailsOpen": false,
+     "saveFeedbackVisible": false,
+     "savingCopy": false,
+     "scheme": "dark",
+     "selectedShapeId": null,
+     "selection": "10 marks, none selected. Insert places a blur in the middle. [ and ] cycle marks; Escape deselects. Tab leaves the canvas. Alt+arrow keys pan the image; Alt+Shift+arrow keys pan farther.",
+     "style": {
+      "blurStyle": "blur",
+      "color": "#dc2626",
+      "font": "IBM Plex Sans",
+      "fontPixels": 28,
+      "stepSize": 40,
+      "strength": 12,
+      "width": 4
+     },
+     "textOutsideImage": false,
+     "tool": "blur",
+     "visibleRect": [
+      0,
+      0,
+      1200,
+      760
+     ],
+     "zoomPercent": 72.9
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.view",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+    "action": "tool",
+    "tool": "select"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "4b2cda8a-7de2-49db-ac1d-12cefb3837e3",
+    "result": {
+     "busy": false,
+     "cancelLabel": "Discard\u2026",
+     "canvasSize": [
+      1015,
+      586
+     ],
+     "copying": false,
+     "cropPending": false,
+     "destination": {
+      "above": false,
+      "sharingMode": "Shared link",
+      "text": "put.gd development destination \u00b7 Shared link"
+     },
+     "discardConfirmation": {
+      "open": false,
+      "text": null
+     },
+     "editingText": false,
+     "fitted": true,
+     "geometry": null,
+     "geometryDetails": {
+      "open": false,
+      "visible": false
+     },
+     "keyboardHelp": {
+      "open": false,
+      "text": "[ / ]: Cycle marks\nArrows: Move\nShift+arrows: Resize\nCtrl+arrows: Move 10 px\nCtrl+Shift+arrows: Resize 10 px\nTab: Focus properties\nDelete: Remove mark\nEscape: Deselect\nInsert: Place mark\nShift+drag: Square, circle, 45\u00b0 line\nCtrl+Z: Undo\nCtrl+Shift+Z: Redo\nCtrl+Shift+C: Copy image"
+     },
+     "lastCopiedPath": null,
+     "lastCopy": null,
+     "lastSave": {
+      "status": null
+     },
+     "lastShowInFolder": null,
+     "message": null,
+     "nextStepNumber": 4,
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "preparationFailure": null,
+     "propertiesWidth": 240,
+     "saveDetailsOpen": false,
+     "saveFeedbackVisible": false,
+     "savingCopy": false,
+     "scheme": "dark",
+     "selectedShapeId": null,
+     "selection": "10 marks, none selected. [ and ] cycle marks; Escape deselects. Tab leaves the canvas. Alt+arrow keys pan the image; Alt+Shift+arrow keys pan farther.",
+     "style": {
+      "blurStyle": "blur",
+      "color": "#dc2626",
+      "font": "IBM Plex Sans",
+      "fontPixels": 28,
+      "stepSize": 40,
+      "strength": 12,
+      "width": 4
+     },
+     "textOutsideImage": false,
+     "tool": "select",
+     "visibleRect": [
+      0,
+      0,
+      1200,
+      760
+     ],
+     "zoomPercent": 72.9
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.preview",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+    "maxEdge": 1200
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "c42a52aa-d057-47c6-bea9-a0d9899734dd",
+    "result": {
+     "height": 760,
+     "mime": "image/png",
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "png": "<32592 base64 chars>",
+     "sourceHeight": 760,
+     "sourceWidth": 1200,
+     "width": 1200
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.copy",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "532b497a-18d8-44b9-a7f8-b260042a31be",
+    "result": {
+     "bytes": 24443,
+     "copied": true,
+     "height": 760,
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "sha256": "d7437abe82a7e9e402991b3b9d57a7b6a1f7f30c5db1e05ff812948bd4e5b3db",
+     "width": 1200
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.saveCopy",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+    "path": "/tmp/en62/driver/saved-copy.png",
+    "overwrite": true
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "73930d4d-aa3f-4daa-b7f2-db3dde2e1521",
+    "result": {
+     "bytes": 24443,
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "path": "/tmp/en62/driver/saved-copy.png",
+     "saved": true,
+     "sha256": "d7437abe82a7e9e402991b3b9d57a7b6a1f7f30c5db1e05ff812948bd4e5b3db"
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.view",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+    "action": "inspect"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "1ede61f1-75cc-4c8f-bf81-6b2ed2a3b7c4",
+    "result": {
+     "busy": false,
+     "cancelLabel": "Discard\u2026",
+     "canvasSize": [
+      1015,
+      586
+     ],
+     "copying": false,
+     "cropPending": false,
+     "destination": {
+      "above": false,
+      "sharingMode": "Shared link",
+      "text": "put.gd development destination \u00b7 Shared link"
+     },
+     "discardConfirmation": {
+      "open": false,
+      "text": null
+     },
+     "editingText": false,
+     "fitted": true,
+     "geometry": null,
+     "geometryDetails": {
+      "open": false,
+      "visible": false
+     },
+     "keyboardHelp": {
+      "open": false,
+      "text": "[ / ]: Cycle marks\nArrows: Move\nShift+arrows: Resize\nCtrl+arrows: Move 10 px\nCtrl+Shift+arrows: Resize 10 px\nTab: Focus properties\nDelete: Remove mark\nEscape: Deselect\nInsert: Place mark\nShift+drag: Square, circle, 45\u00b0 line\nCtrl+Z: Undo\nCtrl+Shift+Z: Redo\nCtrl+Shift+C: Copy image"
+     },
+     "lastCopiedPath": null,
+     "lastCopy": {
+      "status": "copied"
+     },
+     "lastSave": {
+      "current": true,
+      "name": "saved-copy.png",
+      "path": "/tmp/en62/driver/saved-copy.png",
+      "status": "saved"
+     },
+     "lastShowInFolder": null,
+     "message": null,
+     "nextStepNumber": 4,
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "preparationFailure": null,
+     "propertiesWidth": 240,
+     "saveDetailsOpen": false,
+     "saveFeedbackVisible": true,
+     "savingCopy": false,
+     "scheme": "dark",
+     "selectedShapeId": null,
+     "selection": "10 marks, none selected. [ and ] cycle marks; Escape deselects. Tab leaves the canvas. Alt+arrow keys pan the image; Alt+Shift+arrow keys pan farther.",
+     "style": {
+      "blurStyle": "blur",
+      "color": "#dc2626",
+      "font": "IBM Plex Sans",
+      "fontPixels": 28,
+      "stepSize": 40,
+      "strength": 12,
+      "width": 4
+     },
+     "textOutsideImage": false,
+     "tool": "select",
+     "visibleRect": [
+      0,
+      0,
+      1200,
+      760
+     ],
+     "zoomPercent": 72.9
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.inspect",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "d69d6a67-d6db-404c-af9b-5815a3c05593",
+    "result": {
+     "canRedo": false,
+     "canUndo": true,
+     "crop": [
+      0,
+      0,
+      1200,
+      760
+     ],
+     "destination": "Upload to put.gd development destination \u00b7 Shared link",
+     "height": 760,
+     "historyTruncated": false,
+     "modified": true,
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "phase": "editing",
+     "preparation": null,
+     "shapes": [
+      {
+       "id": 1,
+       "kind": "redact",
+       "rect": [
+        300,
+        214,
+        420,
+        36
+       ]
+      },
+      {
+       "at": [
+        120,
+        140
+       ],
+       "color": "#dc2626",
+       "id": 2,
+       "kind": "step",
+       "number": 1,
+       "rect": [
+        100,
+        120,
+        40,
+        40
+       ],
+       "size": 40
+      },
+      {
+       "at": [
+        120,
+        280
+       ],
+       "color": "#facc15",
+       "id": 3,
+       "kind": "step",
+       "number": 2,
+       "rect": [
+        100,
+        260,
+        40,
+        40
+       ],
+       "size": 40
+      },
+      {
+       "at": [
+        120,
+        420
+       ],
+       "color": "#3b82f6",
+       "id": 4,
+       "kind": "step",
+       "number": 3,
+       "rect": [
+        92,
+        392,
+        56,
+        56
+       ],
+       "size": 56
+      },
+      {
+       "color": "#dc2626",
+       "id": 5,
+       "kind": "pen",
+       "points": [
+        [
+         160,
+         582
+        ],
+        [
+         190,
+         618
+        ],
+        [
+         220,
+         582
+        ],
+        [
+         250,
+         618
+        ],
+        [
+         280,
+         582
+        ],
+        [
+         310,
+         618
+        ],
+        [
+         340,
+         582
+        ],
+        [
+         370,
+         618
+        ],
+        [
+         400,
+         582
+        ],
+        [
+         430,
+         618
+        ],
+        [
+         460,
+         582
+        ],
+        [
+         490,
+         618
+        ],
+        [
+         520,
+         582
+        ],
+        [
+         550,
+         618
+        ]
+       ],
+       "rect": [
+        160,
+        582,
+        391,
+        37
+       ],
+       "width": 4
+      },
+      {
+       "color": "#dc2626",
+       "id": 6,
+       "kind": "ellipse",
+       "rect": [
+        760,
+        120,
+        320,
+        180
+       ],
+       "width": 4
+      },
+      {
+       "color": "#22c55e",
+       "from": [
+        180,
+        520
+       ],
+       "id": 7,
+       "kind": "line",
+       "to": [
+        1000,
+        520
+       ],
+       "width": 4
+      },
+      {
+       "id": 8,
+       "kind": "blur",
+       "rect": [
+        700,
+        360,
+        380,
+        140
+       ],
+       "strength": 12,
+       "style": "pixelate"
+      },
+      {
+       "id": 9,
+       "kind": "redact",
+       "rect": [
+        900,
+        570,
+        200,
+        100
+       ]
+      },
+      {
+       "color": "#ff0000",
+       "id": 10,
+       "kind": "rectangle",
+       "rect": [
+        940,
+        590,
+        80,
+        40
+       ],
+       "width": 4
+      }
+     ],
+     "view": {
+      "busy": false,
+      "cancelLabel": "Discard\u2026",
+      "canvasSize": [
+       1015,
+       586
+      ],
+      "copying": false,
+      "cropPending": false,
+      "destination": {
+       "above": false,
+       "sharingMode": "Shared link",
+       "text": "put.gd development destination \u00b7 Shared link"
+      },
+      "discardConfirmation": {
+       "open": false,
+       "text": null
+      },
+      "editingText": false,
+      "fitted": true,
+      "geometry": null,
+      "geometryDetails": {
+       "open": false,
+       "visible": false
+      },
+      "keyboardHelp": {
+       "open": false,
+       "text": "[ / ]: Cycle marks\nArrows: Move\nShift+arrows: Resize\nCtrl+arrows: Move 10 px\nCtrl+Shift+arrows: Resize 10 px\nTab: Focus properties\nDelete: Remove mark\nEscape: Deselect\nInsert: Place mark\nShift+drag: Square, circle, 45\u00b0 line\nCtrl+Z: Undo\nCtrl+Shift+Z: Redo\nCtrl+Shift+C: Copy image"
+      },
+      "lastCopiedPath": null,
+      "lastCopy": {
+       "status": "copied"
+      },
+      "lastSave": {
+       "current": true,
+       "name": "saved-copy.png",
+       "path": "/tmp/en62/driver/saved-copy.png",
+       "status": "saved"
+      },
+      "lastShowInFolder": null,
+      "message": null,
+      "nextStepNumber": 4,
+      "preparationFailure": null,
+      "propertiesWidth": 240,
+      "saveDetailsOpen": false,
+      "saveFeedbackVisible": true,
+      "savingCopy": false,
+      "scheme": "dark",
+      "selectedShapeId": null,
+      "selection": "10 marks, none selected. [ and ] cycle marks; Escape deselects. Tab leaves the canvas. Alt+arrow keys pan the image; Alt+Shift+arrow keys pan farther.",
+      "style": {
+       "blurStyle": "blur",
+       "color": "#dc2626",
+       "font": "IBM Plex Sans",
+       "fontPixels": 28,
+       "stepSize": 40,
+       "strength": 12,
+       "width": 4
+      },
+      "textOutsideImage": false,
+      "tool": "select",
+      "visibleRect": [
+       0,
+       0,
+       1200,
+       760
+      ],
+      "zoomPercent": 72.9
+     },
+     "width": 1200
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.submit",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "0417b66c-27dc-4c5c-a979-993c96e5a936",
+    "result": {
+     "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "submitted": true
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "operation.inspect",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "86b42150-9836-4c9d-8a0e-15662d029e51",
+    "result": {
+     "action": "edit",
+     "cancelled": false,
+     "clipboardRevision": "0",
+     "copyStatus": "pending",
+     "created": "2026-11-10T01:26:47.000Z",
+     "destination": {
+      "credentials": {
+       "mode": "session",
+       "reference": null
+      },
+      "profileId": "editor-fixture",
+      "profileRevision": "7b7805245f1d0b25d9615cb93393080ae1db36dcefea43d95fd0949e346d05a1",
+      "providerId": "s3",
+      "settings": {
+       "aclMode": "public-read",
+       "addressing": "path",
+       "bucket": "editor-fixture",
+       "connectTimeoutMs": 5000,
+       "endpoint": "http://127.0.0.1:35025",
+       "lowSpeedBytesPerSecond": 1,
+       "lowSpeedTimeSeconds": 30,
+       "objectPrefix": "native1362/",
+       "publicUrlBase": "http://127.0.0.1:35025/editor-fixture",
+       "region": "us-east-1",
+       "requestTimeoutMs": 60000,
+       "storageClass": "STANDARD"
+      }
+     },
+     "error": {
+      "code": "",
+      "details": {},
+      "message": ""
+     },
+     "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "invocation": "1",
+     "items": [],
+     "phase": "editing",
+     "requestTimeoutMs": null,
+     "settingsRevision": "7b7805245f1d0b25d9615cb93393080ae1db36dcefea43d95fd0949e346d05a1",
+     "state": "editing"
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "operation.inspect",
+   "params": {
+    "id": "7328976d-12f1-4900-994c-1b76b1061b08"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "a5ecbeeb-e8f0-40f8-a72e-8bc0e6549788",
+    "result": {
+     "action": "edit",
+     "cancelled": false,
+     "clipboardRevision": "0",
+     "copyStatus": "suppressed",
+     "created": "2026-11-10T01:26:47.000Z",
+     "destination": {
+      "credentials": {
+       "mode": "session",
+       "reference": null
+      },
+      "profileId": "editor-fixture",
+      "profileRevision": "7b7805245f1d0b25d9615cb93393080ae1db36dcefea43d95fd0949e346d05a1",
+      "providerId": "s3",
+      "settings": {
+       "aclMode": "public-read",
+       "addressing": "path",
+       "bucket": "editor-fixture",
+       "connectTimeoutMs": 5000,
+       "endpoint": "http://127.0.0.1:35025",
+       "lowSpeedBytesPerSecond": 1,
+       "lowSpeedTimeSeconds": 30,
+       "objectPrefix": "native1362/",
+       "publicUrlBase": "http://127.0.0.1:35025/editor-fixture",
+       "region": "us-east-1",
+       "requestTimeoutMs": 60000,
+       "storageClass": "STANDARD"
+      }
+     },
+     "error": {
+      "code": "",
+      "details": {},
+      "message": ""
+     },
+     "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+     "invocation": "1",
+     "items": [
+      {
+       "artifact": {
+        "bytes": 24443,
+        "category": "images",
+        "id": "23803755-f6c7-40db-b93a-ddcbb1833494",
+        "mime": "image/png",
+        "name": "Screen-Capture-2026-11-09-19-26-47.png",
+        "namingPrepared": true,
+        "originalFile": false,
+        "previewPath": "/tmp/en62/data/putgd/artifacts/../previews/23803755-f6c7-40db-b93a-ddcbb1833494.png",
+        "sha256": "d7437abe82a7e9e402991b3b9d57a7b6a1f7f30c5db1e05ff812948bd4e5b3db"
+       },
+       "candidate": "Screen-Capture-2026-11-09-19-26-47.png",
+       "concurrencyToken": "",
+       "condition": "absent",
+       "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+       },
+       "local": {
+        "error": {
+         "code": "",
+         "details": {},
+         "message": ""
+        },
+        "path": "/tmp/en62/files/images/Screen-Capture-2026-11-09-19-26-47.png",
+        "status": "saved"
+       },
+       "objectReference": {
+        "key": "native1362/Screen-Capture-2026-11-09-19-26-47.png",
+        "schemaVersion": 1
+       },
+       "phase": "uploaded",
+       "publicationId": "592ea673-78b7-4dc9-9c0a-5dc3d859bc75",
+       "receipt": {
+        "concurrencyToken": "\"68a5dd8c58b82383a99829d25f273477\"",
+        "destination": {
+         "credentials": {
+          "mode": "session",
+          "reference": null
+         },
+         "profileId": "editor-fixture",
+         "profileRevision": "7b7805245f1d0b25d9615cb93393080ae1db36dcefea43d95fd0949e346d05a1",
+         "providerId": "s3",
+         "settings": {
+          "aclMode": "public-read",
+          "addressing": "path",
+          "bucket": "editor-fixture",
+          "connectTimeoutMs": 5000,
+          "endpoint": "http://127.0.0.1:35025",
+          "lowSpeedBytesPerSecond": 1,
+          "lowSpeedTimeSeconds": 30,
+          "objectPrefix": "native1362/",
+          "publicUrlBase": "http://127.0.0.1:35025/editor-fixture",
+          "region": "us-east-1",
+          "requestTimeoutMs": 60000,
+          "storageClass": "STANDARD"
+         }
+        },
+        "directUrl": "http://127.0.0.1:35025/editor-fixture/native1362/Screen-Capture-2026-11-09-19-26-47.png",
+        "objectReference": {
+         "bytes": 24443,
+         "key": "native1362/Screen-Capture-2026-11-09-19-26-47.png",
+         "schemaVersion": 1,
+         "sha256": "d7437abe82a7e9e402991b3b9d57a7b6a1f7f30c5db1e05ff812948bd4e5b3db",
+         "versionId": ""
+        },
+        "publicationId": "592ea673-78b7-4dc9-9c0a-5dc3d859bc75",
+        "schemaVersion": 1
+       },
+       "remoteStatus": "not_requested",
+       "shareIntent": "",
+       "shareIntentOptions": {},
+       "shareStatus": "not_requested",
+       "uploadProgress": {
+        "bytesTotal": 24443,
+        "bytesTransferred": 24443,
+        "phase": "finalizing"
+       },
+       "uploadStatus": "uploaded"
+      }
+     ],
+     "phase": "completed",
+     "requestTimeoutMs": null,
+     "settingsRevision": "7b7805245f1d0b25d9615cb93393080ae1db36dcefea43d95fd0949e346d05a1",
+     "state": "completed"
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.open",
+   "params": {
+    "source": "file",
+    "path": "/tmp/en62/driver/synthetic-source.png"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "0c54aee3-d0af-4219-9821-a5fa3749891f",
+    "result": {
+     "operation": {
+      "action": "edit",
+      "cancelled": false,
+      "clipboardRevision": "1",
+      "copyStatus": "pending",
+      "created": "2026-11-10T01:26:51.030Z",
+      "destination": {
+       "credentials": {
+        "mode": "session",
+        "reference": null
+       },
+       "profileId": "editor-fixture",
+       "profileRevision": "7b7805245f1d0b25d9615cb93393080ae1db36dcefea43d95fd0949e346d05a1",
+       "providerId": "s3",
+       "settings": {
+        "aclMode": "public-read",
+        "addressing": "path",
+        "bucket": "editor-fixture",
+        "connectTimeoutMs": 5000,
+        "endpoint": "http://127.0.0.1:35025",
+        "lowSpeedBytesPerSecond": 1,
+        "lowSpeedTimeSeconds": 30,
+        "objectPrefix": "native1362/",
+        "publicUrlBase": "http://127.0.0.1:35025/editor-fixture",
+        "region": "us-east-1",
+        "requestTimeoutMs": 60000,
+        "storageClass": "STANDARD"
+       }
+      },
+      "error": {
+       "code": "",
+       "details": {},
+       "message": ""
+      },
+      "id": "48cbf563-c4f3-4791-8a02-edaaadd9b7a5",
+      "invocation": "3",
+      "items": [],
+      "phase": "accepted",
+      "requestTimeoutMs": null,
+      "settingsRevision": "7b7805245f1d0b25d9615cb93393080ae1db36dcefea43d95fd0949e346d05a1",
+      "state": "accepted"
+     },
+     "operationId": "48cbf563-c4f3-4791-8a02-edaaadd9b7a5"
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.apply",
+   "params": {
+    "id": "48cbf563-c4f3-4791-8a02-edaaadd9b7a5",
+    "commands": [
+     {
+      "op": "add",
+      "shape": {
+       "kind": "redact",
+       "rect": [
+        300,
+        214,
+        420,
+        36
+       ]
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "pen",
+       "width": 4,
+       "color": "#dc2626",
+       "points": [
+        [
+         160,
+         582
+        ],
+        [
+         190,
+         618
+        ],
+        [
+         220,
+         582
+        ],
+        [
+         250,
+         618
+        ],
+        [
+         280,
+         582
+        ],
+        [
+         310,
+         618
+        ],
+        [
+         340,
+         582
+        ],
+        [
+         370,
+         618
+        ],
+        [
+         400,
+         582
+        ],
+        [
+         430,
+         618
+        ],
+        [
+         460,
+         582
+        ],
+        [
+         490,
+         618
+        ],
+        [
+         520,
+         582
+        ],
+        [
+         550,
+         618
+        ]
+       ]
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "ellipse",
+       "rect": [
+        760,
+        120,
+        320,
+        180
+       ],
+       "width": 4
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "line",
+       "from": [
+        180,
+        520
+       ],
+       "to": [
+        1000,
+        520
+       ],
+       "color": "#22c55e",
+       "width": 4
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "blur",
+       "rect": [
+        700,
+        360,
+        380,
+        140
+       ],
+       "style": "pixelate",
+       "strength": 12
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "redact",
+       "rect": [
+        900,
+        570,
+        200,
+        100
+       ]
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "rectangle",
+       "rect": [
+        940,
+        590,
+        80,
+        40
+       ],
+       "color": "#ff0000",
+       "width": 4
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "blur",
+       "rect": [
+        300,
+        214,
+        420,
+        36
+       ],
+       "style": "blur",
+       "strength": 12
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "blur",
+       "rect": [
+        900,
+        570,
+        200,
+        100
+       ],
+       "style": "pixelate",
+       "strength": 12
+      }
+     }
+    ]
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "99f8fee4-e063-430c-b936-03e5613c5361",
+    "result": {
+     "created": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "operationId": "48cbf563-c4f3-4791-8a02-edaaadd9b7a5",
+     "state": {
+      "canRedo": false,
+      "canUndo": true,
+      "crop": [
+       0,
+       0,
+       1200,
+       760
+      ],
+      "height": 760,
+      "historyTruncated": false,
+      "modified": true,
+      "shapes": [
+       {
+        "id": 1,
+        "kind": "redact",
+        "rect": [
+         300,
+         214,
+         420,
+         36
+        ]
+       },
+       {
+        "color": "#dc2626",
+        "id": 2,
+        "kind": "pen",
+        "points": [
+         [
+          160,
+          582
+         ],
+         [
+          190,
+          618
+         ],
+         [
+          220,
+          582
+         ],
+         [
+          250,
+          618
+         ],
+         [
+          280,
+          582
+         ],
+         [
+          310,
+          618
+         ],
+         [
+          340,
+          582
+         ],
+         [
+          370,
+          618
+         ],
+         [
+          400,
+          582
+         ],
+         [
+          430,
+          618
+         ],
+         [
+          460,
+          582
+         ],
+         [
+          490,
+          618
+         ],
+         [
+          520,
+          582
+         ],
+         [
+          550,
+          618
+         ]
+        ],
+        "rect": [
+         160,
+         582,
+         391,
+         37
+        ],
+        "width": 4
+       },
+       {
+        "color": "#dc2626",
+        "id": 3,
+        "kind": "ellipse",
+        "rect": [
+         760,
+         120,
+         320,
+         180
+        ],
+        "width": 4
+       },
+       {
+        "color": "#22c55e",
+        "from": [
+         180,
+         520
+        ],
+        "id": 4,
+        "kind": "line",
+        "to": [
+         1000,
+         520
+        ],
+        "width": 4
+       },
+       {
+        "id": 5,
+        "kind": "blur",
+        "rect": [
+         700,
+         360,
+         380,
+         140
+        ],
+        "strength": 12,
+        "style": "pixelate"
+       },
+       {
+        "id": 6,
+        "kind": "redact",
+        "rect": [
+         900,
+         570,
+         200,
+         100
+        ]
+       },
+       {
+        "color": "#ff0000",
+        "id": 7,
+        "kind": "rectangle",
+        "rect": [
+         940,
+         590,
+         80,
+         40
+        ],
+        "width": 4
+       },
+       {
+        "id": 8,
+        "kind": "blur",
+        "rect": [
+         300,
+         214,
+         420,
+         36
+        ],
+        "strength": 12,
+        "style": "blur"
+       },
+       {
+        "id": 9,
+        "kind": "blur",
+        "rect": [
+         900,
+         570,
+         200,
+         100
+        ],
+        "strength": 12,
+        "style": "pixelate"
+       }
+      ],
+      "width": 1200
+     }
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.saveCopy",
+   "params": {
+    "id": "48cbf563-c4f3-4791-8a02-edaaadd9b7a5",
+    "path": "/tmp/en62/driver/baseline-invariance.png",
+    "overwrite": true
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "a9c9fb63-3a31-45e2-8c3a-eb031ad332ec",
+    "result": {
+     "bytes": 18226,
+     "operationId": "48cbf563-c4f3-4791-8a02-edaaadd9b7a5",
+     "path": "/tmp/en62/driver/baseline-invariance.png",
+     "saved": true,
+     "sha256": "2f5e2229d7be78db12bcd83f63fb0088dd2eafa84c78be8a252775cc8915d93d"
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.cancel",
+   "params": {
+    "id": "48cbf563-c4f3-4791-8a02-edaaadd9b7a5"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "dce83a03-c315-45de-bc41-9547f3ffb58d",
+    "result": {
+     "cancelled": true,
+     "operationId": "48cbf563-c4f3-4791-8a02-edaaadd9b7a5"
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.open",
+   "params": {
+    "source": "file",
+    "path": "/tmp/en62/driver/synthetic-variant.png"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "d8486dc2-e345-4e65-b280-e365515d2820",
+    "result": {
+     "operation": {
+      "action": "edit",
+      "cancelled": false,
+      "clipboardRevision": "1",
+      "copyStatus": "pending",
+      "created": "2026-11-10T01:26:51.641Z",
+      "destination": {
+       "credentials": {
+        "mode": "session",
+        "reference": null
+       },
+       "profileId": "editor-fixture",
+       "profileRevision": "7b7805245f1d0b25d9615cb93393080ae1db36dcefea43d95fd0949e346d05a1",
+       "providerId": "s3",
+       "settings": {
+        "aclMode": "public-read",
+        "addressing": "path",
+        "bucket": "editor-fixture",
+        "connectTimeoutMs": 5000,
+        "endpoint": "http://127.0.0.1:35025",
+        "lowSpeedBytesPerSecond": 1,
+        "lowSpeedTimeSeconds": 30,
+        "objectPrefix": "native1362/",
+        "publicUrlBase": "http://127.0.0.1:35025/editor-fixture",
+        "region": "us-east-1",
+        "requestTimeoutMs": 60000,
+        "storageClass": "STANDARD"
+       }
+      },
+      "error": {
+       "code": "",
+       "details": {},
+       "message": ""
+      },
+      "id": "e4f611be-f943-4940-860d-4a8b3b28135a",
+      "invocation": "4",
+      "items": [],
+      "phase": "accepted",
+      "requestTimeoutMs": null,
+      "settingsRevision": "7b7805245f1d0b25d9615cb93393080ae1db36dcefea43d95fd0949e346d05a1",
+      "state": "accepted"
+     },
+     "operationId": "e4f611be-f943-4940-860d-4a8b3b28135a"
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.apply",
+   "params": {
+    "id": "e4f611be-f943-4940-860d-4a8b3b28135a",
+    "commands": [
+     {
+      "op": "add",
+      "shape": {
+       "kind": "redact",
+       "rect": [
+        300,
+        214,
+        420,
+        36
+       ]
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "pen",
+       "width": 4,
+       "color": "#dc2626",
+       "points": [
+        [
+         160,
+         582
+        ],
+        [
+         190,
+         618
+        ],
+        [
+         220,
+         582
+        ],
+        [
+         250,
+         618
+        ],
+        [
+         280,
+         582
+        ],
+        [
+         310,
+         618
+        ],
+        [
+         340,
+         582
+        ],
+        [
+         370,
+         618
+        ],
+        [
+         400,
+         582
+        ],
+        [
+         430,
+         618
+        ],
+        [
+         460,
+         582
+        ],
+        [
+         490,
+         618
+        ],
+        [
+         520,
+         582
+        ],
+        [
+         550,
+         618
+        ]
+       ]
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "ellipse",
+       "rect": [
+        760,
+        120,
+        320,
+        180
+       ],
+       "width": 4
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "line",
+       "from": [
+        180,
+        520
+       ],
+       "to": [
+        1000,
+        520
+       ],
+       "color": "#22c55e",
+       "width": 4
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "blur",
+       "rect": [
+        700,
+        360,
+        380,
+        140
+       ],
+       "style": "pixelate",
+       "strength": 12
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "redact",
+       "rect": [
+        900,
+        570,
+        200,
+        100
+       ]
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "rectangle",
+       "rect": [
+        940,
+        590,
+        80,
+        40
+       ],
+       "color": "#ff0000",
+       "width": 4
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "blur",
+       "rect": [
+        300,
+        214,
+        420,
+        36
+       ],
+       "style": "blur",
+       "strength": 12
+      }
+     },
+     {
+      "op": "add",
+      "shape": {
+       "kind": "blur",
+       "rect": [
+        900,
+        570,
+        200,
+        100
+       ],
+       "style": "pixelate",
+       "strength": 12
+      }
+     }
+    ]
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "1bf0aacd-98af-40e3-999e-d1395e0a997d",
+    "result": {
+     "created": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "operationId": "e4f611be-f943-4940-860d-4a8b3b28135a",
+     "state": {
+      "canRedo": false,
+      "canUndo": true,
+      "crop": [
+       0,
+       0,
+       1200,
+       760
+      ],
+      "height": 760,
+      "historyTruncated": false,
+      "modified": true,
+      "shapes": [
+       {
+        "id": 1,
+        "kind": "redact",
+        "rect": [
+         300,
+         214,
+         420,
+         36
+        ]
+       },
+       {
+        "color": "#dc2626",
+        "id": 2,
+        "kind": "pen",
+        "points": [
+         [
+          160,
+          582
+         ],
+         [
+          190,
+          618
+         ],
+         [
+          220,
+          582
+         ],
+         [
+          250,
+          618
+         ],
+         [
+          280,
+          582
+         ],
+         [
+          310,
+          618
+         ],
+         [
+          340,
+          582
+         ],
+         [
+          370,
+          618
+         ],
+         [
+          400,
+          582
+         ],
+         [
+          430,
+          618
+         ],
+         [
+          460,
+          582
+         ],
+         [
+          490,
+          618
+         ],
+         [
+          520,
+          582
+         ],
+         [
+          550,
+          618
+         ]
+        ],
+        "rect": [
+         160,
+         582,
+         391,
+         37
+        ],
+        "width": 4
+       },
+       {
+        "color": "#dc2626",
+        "id": 3,
+        "kind": "ellipse",
+        "rect": [
+         760,
+         120,
+         320,
+         180
+        ],
+        "width": 4
+       },
+       {
+        "color": "#22c55e",
+        "from": [
+         180,
+         520
+        ],
+        "id": 4,
+        "kind": "line",
+        "to": [
+         1000,
+         520
+        ],
+        "width": 4
+       },
+       {
+        "id": 5,
+        "kind": "blur",
+        "rect": [
+         700,
+         360,
+         380,
+         140
+        ],
+        "strength": 12,
+        "style": "pixelate"
+       },
+       {
+        "id": 6,
+        "kind": "redact",
+        "rect": [
+         900,
+         570,
+         200,
+         100
+        ]
+       },
+       {
+        "color": "#ff0000",
+        "id": 7,
+        "kind": "rectangle",
+        "rect": [
+         940,
+         590,
+         80,
+         40
+        ],
+        "width": 4
+       },
+       {
+        "id": 8,
+        "kind": "blur",
+        "rect": [
+         300,
+         214,
+         420,
+         36
+        ],
+        "strength": 12,
+        "style": "blur"
+       },
+       {
+        "id": 9,
+        "kind": "blur",
+        "rect": [
+         900,
+         570,
+         200,
+         100
+        ],
+        "strength": 12,
+        "style": "pixelate"
+       }
+      ],
+      "width": 1200
+     }
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.saveCopy",
+   "params": {
+    "id": "e4f611be-f943-4940-860d-4a8b3b28135a",
+    "path": "/tmp/en62/driver/variant-invariance.png",
+    "overwrite": true
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "eb599cba-c8f0-4eaf-abfb-3fa390550518",
+    "result": {
+     "bytes": 18226,
+     "operationId": "e4f611be-f943-4940-860d-4a8b3b28135a",
+     "path": "/tmp/en62/driver/variant-invariance.png",
+     "saved": true,
+     "sha256": "2f5e2229d7be78db12bcd83f63fb0088dd2eafa84c78be8a252775cc8915d93d"
+    },
+    "schemaVersion": 1
+   }
+  },
+  {
+   "method": "editor.cancel",
+   "params": {
+    "id": "e4f611be-f943-4940-860d-4a8b3b28135a"
+   },
+   "reply": {
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "ok": true,
+    "requestId": "e680754e-4e57-4a23-bc4c-36b36a49874e",
+    "result": {
+     "cancelled": true,
+     "operationId": "e4f611be-f943-4940-860d-4a8b3b28135a"
+    },
+    "schemaVersion": 1
+   }
+  }
+ ],
+ "operationId": "7328976d-12f1-4900-994c-1b76b1061b08",
+ "operation": {
+  "action": "edit",
+  "cancelled": false,
+  "clipboardRevision": "0",
+  "copyStatus": "suppressed",
+  "created": "2026-11-10T01:26:47.000Z",
+  "destination": {
+   "credentials": {
+    "mode": "session",
+    "reference": null
+   },
+   "profileId": "editor-fixture",
+   "profileRevision": "7b7805245f1d0b25d9615cb93393080ae1db36dcefea43d95fd0949e346d05a1",
+   "providerId": "s3",
+   "settings": {
+    "aclMode": "public-read",
+    "addressing": "path",
+    "bucket": "editor-fixture",
+    "connectTimeoutMs": 5000,
+    "endpoint": "http://127.0.0.1:35025",
+    "lowSpeedBytesPerSecond": 1,
+    "lowSpeedTimeSeconds": 30,
+    "objectPrefix": "native1362/",
+    "publicUrlBase": "http://127.0.0.1:35025/editor-fixture",
+    "region": "us-east-1",
+    "requestTimeoutMs": 60000,
+    "storageClass": "STANDARD"
+   }
+  },
+  "error": {
+   "code": "",
+   "details": {},
+   "message": ""
+  },
+  "id": "7328976d-12f1-4900-994c-1b76b1061b08",
+  "invocation": "1",
+  "items": [
+   {
+    "artifact": {
+     "bytes": 24443,
+     "category": "images",
+     "id": "23803755-f6c7-40db-b93a-ddcbb1833494",
+     "mime": "image/png",
+     "name": "Screen-Capture-2026-11-09-19-26-47.png",
+     "namingPrepared": true,
+     "originalFile": false,
+     "previewPath": "/tmp/en62/data/putgd/artifacts/../previews/23803755-f6c7-40db-b93a-ddcbb1833494.png",
+     "sha256": "d7437abe82a7e9e402991b3b9d57a7b6a1f7f30c5db1e05ff812948bd4e5b3db"
+    },
+    "candidate": "Screen-Capture-2026-11-09-19-26-47.png",
+    "concurrencyToken": "",
+    "condition": "absent",
+    "error": {
+     "code": "",
+     "details": {},
+     "message": ""
+    },
+    "local": {
+     "error": {
+      "code": "",
+      "details": {},
+      "message": ""
+     },
+     "path": "/tmp/en62/files/images/Screen-Capture-2026-11-09-19-26-47.png",
+     "status": "saved"
+    },
+    "objectReference": {
+     "key": "native1362/Screen-Capture-2026-11-09-19-26-47.png",
+     "schemaVersion": 1
+    },
+    "phase": "uploaded",
+    "publicationId": "592ea673-78b7-4dc9-9c0a-5dc3d859bc75",
+    "receipt": {
+     "concurrencyToken": "\"68a5dd8c58b82383a99829d25f273477\"",
+     "destination": {
+      "credentials": {
+       "mode": "session",
+       "reference": null
+      },
+      "profileId": "editor-fixture",
+      "profileRevision": "7b7805245f1d0b25d9615cb93393080ae1db36dcefea43d95fd0949e346d05a1",
+      "providerId": "s3",
+      "settings": {
+       "aclMode": "public-read",
+       "addressing": "path",
+       "bucket": "editor-fixture",
+       "connectTimeoutMs": 5000,
+       "endpoint": "http://127.0.0.1:35025",
+       "lowSpeedBytesPerSecond": 1,
+       "lowSpeedTimeSeconds": 30,
+       "objectPrefix": "native1362/",
+       "publicUrlBase": "http://127.0.0.1:35025/editor-fixture",
+       "region": "us-east-1",
+       "requestTimeoutMs": 60000,
+       "storageClass": "STANDARD"
+      }
+     },
+     "directUrl": "http://127.0.0.1:35025/editor-fixture/native1362/Screen-Capture-2026-11-09-19-26-47.png",
+     "objectReference": {
+      "bytes": 24443,
+      "key": "native1362/Screen-Capture-2026-11-09-19-26-47.png",
+      "schemaVersion": 1,
+      "sha256": "d7437abe82a7e9e402991b3b9d57a7b6a1f7f30c5db1e05ff812948bd4e5b3db",
+      "versionId": ""
+     },
+     "publicationId": "592ea673-78b7-4dc9-9c0a-5dc3d859bc75",
+     "schemaVersion": 1
+    },
+    "remoteStatus": "not_requested",
+    "shareIntent": "",
+    "shareIntentOptions": {},
+    "shareStatus": "not_requested",
+    "uploadProgress": {
+     "bytesTotal": 24443,
+     "bytesTransferred": 24443,
+     "phase": "finalizing"
+    },
+    "uploadStatus": "uploaded"
+   }
+  ],
+  "phase": "completed",
+  "requestTimeoutMs": null,
+  "settingsRevision": "7b7805245f1d0b25d9615cb93393080ae1db36dcefea43d95fd0949e346d05a1",
+  "state": "completed"
+ }
+}
