@@ -1,0 +1,49 @@
+test_http_200_trickle_is_demoted_below_fast_mirror (test_ubuntu_mirrors.UbuntuMirrors.test_http_200_trickle_is_demoted_below_fast_mirror) ... FAIL
+test_dead_mirror_stays_last (test_ubuntu_mirrors.UbuntuMirrors.test_dead_mirror_stays_last) ... FAIL
+test_all_slow_still_yields_usable_speed_ordered_list (test_ubuntu_mirrors.UbuntuMirrors.test_all_slow_still_yields_usable_speed_ordered_list) ... FAIL
+
+======================================================================
+FAIL: test_http_200_trickle_is_demoted_below_fast_mirror (test_ubuntu_mirrors.UbuntuMirrors.test_http_200_trickle_is_demoted_below_fast_mirror)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/patrick/work/ubuntu-mirror-1381/tests/ci/test_ubuntu_mirrors.py", line 97, in test_http_200_trickle_is_demoted_below_fast_mirror
+    self.assertEqual(self.mirrors(), [f'http://{fast}/ubuntu/', f'http://{slow}/ubuntu/'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['http://127.0.0.1:43589/ubuntu/', 'http://127.0.0.1:34545/ubuntu/'] != ['http://127.0.0.1:34545/ubuntu/', 'http://127.0.0.1:43589/ubuntu/']
+
+First differing element 0:
+'http://127.0.0.1:43589/ubuntu/'
+'http://127.0.0.1:34545/ubuntu/'
+
+- ['http://127.0.0.1:43589/ubuntu/', 'http://127.0.0.1:34545/ubuntu/']
++ ['http://127.0.0.1:34545/ubuntu/', 'http://127.0.0.1:43589/ubuntu/']
+
+======================================================================
+FAIL: test_dead_mirror_stays_last (test_ubuntu_mirrors.UbuntuMirrors.test_dead_mirror_stays_last)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/patrick/work/ubuntu-mirror-1381/tests/ci/test_ubuntu_mirrors.py", line 116, in test_dead_mirror_stays_last
+    self.assertIn(f'{endpoint} 0 B/s', output)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '127.0.0.1:40285 0 B/s' not found in 'Ubuntu mirrors reachable: 127.0.0.1:42069\n'
+
+======================================================================
+FAIL: test_all_slow_still_yields_usable_speed_ordered_list (test_ubuntu_mirrors.UbuntuMirrors.test_all_slow_still_yields_usable_speed_ordered_list)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/patrick/work/ubuntu-mirror-1381/tests/ci/test_ubuntu_mirrors.py", line 122, in test_all_slow_still_yields_usable_speed_ordered_list
+    self.assertEqual(self.mirrors(), [f'http://{slow}/ubuntu/', f'http://{slower}/ubuntu/'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['http://127.0.0.1:35795/ubuntu/', 'http://127.0.0.1:40119/ubuntu/'] != ['http://127.0.0.1:40119/ubuntu/', 'http://127.0.0.1:35795/ubuntu/']
+
+First differing element 0:
+'http://127.0.0.1:35795/ubuntu/'
+'http://127.0.0.1:40119/ubuntu/'
+
+- ['http://127.0.0.1:35795/ubuntu/', 'http://127.0.0.1:40119/ubuntu/']
++ ['http://127.0.0.1:40119/ubuntu/', 'http://127.0.0.1:35795/ubuntu/']
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.545s
+
+FAILED (failures=3)
