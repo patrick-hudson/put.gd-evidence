@@ -1,0 +1,30 @@
+{
+  "head": "a047dde62ba943cb15b38d7206d8df5f167249ce",
+  "requiredWorkflow": 42739011540,
+  "attempt1": {
+    "conclusion": "failure",
+    "jobs": [
+      "linux (24.04)",
+      "sanitizers (clang ASan/UBSan)"
+    ],
+    "step": "Install distro dependencies",
+    "reason": "20-minute action timeout while downloading Ubuntu packages",
+    "testsStarted": false,
+    "privateLogSha256": "8b5d0b8a1f509def0e2842618585c28b063b9423dc256eb51e14dc9e2416e52d"
+  },
+  "retry": "Only failed jobs rerun at the same head; final required CI summary passed.",
+  "attempt2": {
+    "conclusion": "failure",
+    "job": "linux (24.04)",
+    "step": "Install distro dependencies",
+    "reason": "20-minute timeout while downloading Ubuntu packages from us.archive.ubuntu.com",
+    "testsStarted": false,
+    "privateLogSha256": "ba1705626a4656e811a1ee4e442cebf729dba0c7d319c03f3ce0f385b135778f",
+    "sanitizers": "success"
+  },
+  "attempt3": {
+    "conclusion": "success",
+    "workflow": 42739011540,
+    "sourceChanged": false
+  }
+}

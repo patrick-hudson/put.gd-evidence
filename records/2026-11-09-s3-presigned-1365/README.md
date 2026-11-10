@@ -1,5 +1,11 @@
 # S3 expiring links and History renewal — issue #1365
 
+Review correction and nightly-merge acceptance passed at **`a047dde62ba943cb15b38d7206d8df5f167249ce`**, version **`26.1110.4430-dev+ga047dde62ba9`**. Required and full package CI are green. See [the merged-head correction record](REVIEW-a047.md) for regression proof, focused **Plasma/Wayland** acceptance, four new annotated pictures and cleanup.
+
+Only the S3 form at 100%/150% and the S3/B2 explicit-unlock pictures were retaken at a047. All other pictures and the full five-desktop/storage/browser/redaction/memory results remain the accepted d089 evidence below, as the coordinator requested. No pull request was merged.
+
+## Original accepted record at d08932782
+
 Feature acceptance passed for code PR [#1366](https://github.com/patrick-hudson/put.gd-desktop/pull/1366), head `d0893278229dad138f55521b9ae6bf59dc2886d8`, version `26.1109.4410-dev+gd0893278229d`. Documentation is separate in [#1367](https://github.com/patrick-hudson/put.gd-desktop/pull/1367). No merge was performed.
 
 Required [PR CI](https://github.com/patrick-hudson/put.gd-desktop/actions/runs/42722893045) and the [complete package workflow](https://github.com/patrick-hudson/put.gd-desktop/actions/runs/42722899262) passed at that exact code head. The local S3 SigV4 oracle, S3 worker/protocol, B2 identity/renewal, History persistence, configuration, CLI/MCP, GUI and redaction tests run in CI. Selected job results are retained in `data/ci-*.json`. Development also passed the production MCP helper's seven integration tests, ten configuration tests, the 199-state catalog/control map and 28-state secret inventory on Debian builder d69. Those development checks are distinguished from native package acceptance below.
