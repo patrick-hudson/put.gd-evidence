@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-10-budgie-locked-capture](2026-11-10-budgie-locked-capture/README.md) | — | Budgie: refuse screenshot reads behind real session-lock surfaces |
 | [2026-11-10-hyprland-selector-cursor](2026-11-10-hyprland-selector-cursor/README.md) | — | Hyprland selector cursor: nightly reproduction and native-package fix |
 | [2026-11-10-recording-microphone-clicks-1364](2026-11-10-recording-microphone-clicks-1364/README.md) | #1364 | Microphone in recordings and click highlights (#1364) |
 | [2026-11-10-ubuntu-mirror-1381](2026-11-10-ubuntu-mirror-1381/README.md) | #1381 | Ubuntu container mirror throughput (#1381) |
