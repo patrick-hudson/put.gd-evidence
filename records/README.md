@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-10-history-page-acceptance](2026-11-10-history-page-acceptance/README.md) | — | History page native desktop acceptance — 2026-11-10 |
 | [2026-11-10-scroll-capture-integration-1376](2026-11-10-scroll-capture-integration-1376/README.md) | #1376 | Scroll capture integration for issue 1376 |
 | [2026-11-10-history-page-refinement](2026-11-10-history-page-refinement/README.md) | — | History page refinement: before and after pictures |
 | [2026-11-10-cinnamon-scaling-follow-up-1376](2026-11-10-cinnamon-scaling-follow-up-1376/README.md) | #1376 | Cinnamon scaling follow-up — scroll capture #1376 |
