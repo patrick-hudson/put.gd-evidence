@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-10-scroll-capture-lab-probes-1376](2026-11-10-scroll-capture-lab-probes-1376/README.md) | #1376 | Scroll capture lab probes — issue #1376 |
 | [2026-11-10-http-incomplete-reply](2026-11-10-http-incomplete-reply/README.md) | #1393 | A cut-off reply is judged by its own length (#1393): the picture and the stress runs |
 | [2026-11-10-recording-1364-budgie-final-visible](2026-11-10-recording-1364-budgie-final-visible/README.md) | — | Final cell — visible control bar, build 4548 |
 | [2026-11-10-recording-1364-final-assembly](2026-11-10-recording-1364-final-assembly/README.md) | — | Final recording acceptance assembly — Budgie pending last cell |
