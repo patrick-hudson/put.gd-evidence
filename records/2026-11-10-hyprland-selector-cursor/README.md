@@ -1,5 +1,9 @@
 # Hyprland selector cursor: nightly reproduction and native-package fix
 
+Final stacked head is `ccf0ebb728a31a92c0fa30fd305aa6864f6cb0fc`, including capture `13570fca9` and nightly `962ac8c0b`. Its PR CI `42774482912` and full exact-head package CI `42774824781` are green. The [fresh capture-feature baseline](stack-baseline20/README.md) reproduces 8 cross cursors in 20 real dragged regions. Final-head acceptance is pending release of a recording quiet-row host; no result for that final guest matrix is claimed yet. The initial packet below remains historical.
+
+## Initial package and review packet
+
 Part of put.gd-desktop #1384; code PR #1386. Branch head b88e817a1882c555d4c30ec6ab5bcfee7e91e5a6. Before: plain nightly 7fc609dc42f8f3c1118d79a63d42ce37ea4a71c9. After: exact native Arch CI package 26.1110.4451-dev+gb88e817a1882 from completed full workflow 42755841566. PR CI 42755825515 also passes. Package build commit and tree are in after/accept/version.json.
 
 ![Annotated actual before and after captures](after/accept/d-before-after.png)
@@ -16,4 +20,4 @@ Pictures were composed on d69 from actual capture pixels; the corner is enlarged
 
 Full raw PNG sets and failed experiments are retained in private checksum-verified archives on workstation and d69, indexed in restore-index.json. Guest overlays were stopped and retired with the guarded cleanup after export; receipts accompany this record.
 
-Current PR head77d9ffb12ea1f93e183eb000f2f5dabf69555bbf changes only the regression test, leaving pictured production code identical. Its CI42759842181 is green after the Ubuntu26 dependency-install timeout retry. Both CodeRabbit bodies and walkthrough read, no outside-diff findings/open threads. See review-follow-up.md and builder-source-audit.json.
+Initial review head77d9ffb12ea1f93e183eb000f2f5dabf69555bbf changes only the regression test, leaving pictured production code identical. Its CI42759842181 is green after the Ubuntu26 dependency-install timeout retry. Both CodeRabbit bodies and walkthrough read, no outside-diff findings/open threads. See review-follow-up.md and builder-source-audit.json.
