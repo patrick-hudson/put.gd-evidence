@@ -1,0 +1,10 @@
+C-final desktop capture after real gtklock unlock completed
+Traceback (most recent call last):
+  File "/tmp/pg-bc9-protocol-tests.py", line 11, in <module>
+    lab.ssh(r,'test ! -e /tmp/pgbt; install -d -m 700 /tmp/pgbt; tar -xf /tmp/pgct.tar -C /tmp/pgbt; sudo -n install -d -m 755 -o lab -g lab /home/patrick/work/pg-cd/tools/lab')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/pg-cd/tools/lab/lab.py", line 532, in ssh
+    result = command(ssh_args(run, bootstrap) + ['sh', '-s'], timeout=timeout, input=script, check=not refusals)
+  File "/home/patrick/work/pg-cd/tools/lab/lab.py", line 88, in command
+    raise LabError(f'{Path(str(args[0])).name} failed (exit {result.returncode})')
+lab.LabError: ssh failed (exit 1)

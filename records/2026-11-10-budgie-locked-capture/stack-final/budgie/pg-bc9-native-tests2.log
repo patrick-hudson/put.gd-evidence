@@ -1,0 +1,110 @@
+{"preflightSocketBytes": {"/tmp/pgbu": 9, "/tmp/pgl-000000/wayland-0": 25, "/tmp/pgl-000000/wrong-compositor": 32, "/tmp/pgl-000000/putgd/session.sock": 34, "/tmp/pg-vis-000000/display": 26, "/tmp/pg-peer-000000/display": 27, "/run/dbus/system_bus_socket": 27, "/tmp/dbus-iecP8q7EMs": 20}, "temporarySuffix": "QTemporaryDir six-character suffix; representative equal-length names checked before test launch"}
+********* Start testing of BudgieLabwcTest *********
+Config: Using QtTest library 6.11.2, Qt 6.11.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 16.2.1 20260819 (Red Hat 16.2.1-2)), fedora 45
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activating service name='org.freedesktop.portal.Desktop' requested by ':1.0' (uid=1000 pid=18633 comm="/tmp/pgbu/putgd-labwc-fixture" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activating service name='org.freedesktop.impl.portal.PermissionStore' requested by ':1.1' (uid=1000 pid=18636 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.PermissionStore'
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activating service name='org.freedesktop.portal.Documents' requested by ':1.1' (uid=1000 pid=18636 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Successfully activated service 'org.freedesktop.portal.Documents'
+
+(/usr/libexec/xdg-desktop-portal:18636): xdg-desktop-portal-WARNING **: 08:37:31.044: Choosing gtk.portal for org.freedesktop.impl.portal.Access as a last-resort fallback
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.1' (uid=1000 pid=18636 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+
+(xdg-desktop-portal-gtk:18660): Gtk-WARNING **: 08:37:31.063: cannot open display: 
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activated service 'org.freedesktop.impl.portal.desktop.gtk' failed: Process org.freedesktop.impl.portal.desktop.gtk exited with status 1
+
+(/usr/libexec/xdg-desktop-portal:18636): xdg-desktop-portal-WARNING **: 08:37:31.088: Choosing gtk.portal for org.freedesktop.impl.portal.Settings as a last-resort fallback
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.1' (uid=1000 pid=18636 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+
+(xdg-desktop-portal-gtk:18667): Gtk-WARNING **: 08:37:31.105: cannot open display: 
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activated service 'org.freedesktop.impl.portal.desktop.gtk' failed: Process org.freedesktop.impl.portal.desktop.gtk exited with status 1
+
+(/usr/libexec/xdg-desktop-portal:18636): xdg-desktop-portal-WARNING **: 08:37:31.108: Failed to create settings proxy: Error calling StartServiceByName for org.freedesktop.impl.portal.desktop.gtk: Process org.freedesktop.impl.portal.desktop.gtk exited with status 1
+
+(/usr/libexec/xdg-desktop-portal:18636): xdg-desktop-portal-WARNING **: 08:37:31.108: Not providing Settings portal: No working backend
+
+(/usr/libexec/xdg-desktop-portal:18636): xdg-desktop-portal-WARNING **: 08:37:31.108: Choosing gtk.portal for org.freedesktop.impl.portal.FileChooser as a last-resort fallback
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.1' (uid=1000 pid=18636 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+
+(xdg-desktop-portal-gtk:18670): Gtk-WARNING **: 08:37:31.126: cannot open display: 
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activated service 'org.freedesktop.impl.portal.desktop.gtk' failed: Process org.freedesktop.impl.portal.desktop.gtk exited with status 1
+
+(/usr/libexec/xdg-desktop-portal:18636): xdg-desktop-portal-WARNING **: 08:37:31.128: Failed to create file chooser proxy: Error calling StartServiceByName for org.freedesktop.impl.portal.desktop.gtk: Process org.freedesktop.impl.portal.desktop.gtk exited with status 1
+
+(/usr/libexec/xdg-desktop-portal:18636): xdg-desktop-portal-WARNING **: 08:37:31.128: Choosing gtk.portal for org.freedesktop.impl.portal.AppChooser as a last-resort fallback
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.1' (uid=1000 pid=18636 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+QINFO  : BudgieLabwcTest::initTestCase() labwc "labwc 0.20.2 (+xwayland +nls +rsvg +libsfdo) wlroots-0.20.2" outputs 2
+PASS   : BudgieLabwcTest::initTestCase()
+
+(xdg-desktop-portal-gtk:18673): Gtk-WARNING **: 08:37:31.147: cannot open display: 
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activated service 'org.freedesktop.impl.portal.desktop.gtk' failed: Process org.freedesktop.impl.portal.desktop.gtk exited with status 1
+
+(/usr/libexec/xdg-desktop-portal:18636): xdg-desktop-portal-WARNING **: 08:37:31.149: Failed to create app chooser proxy: Error calling StartServiceByName for org.freedesktop.impl.portal.desktop.gtk: Process org.freedesktop.impl.portal.desktop.gtk exited with status 1
+
+(/usr/libexec/xdg-desktop-portal:18636): xdg-desktop-portal-WARNING **: 08:37:31.149: Choosing gtk.portal for org.freedesktop.impl.portal.Print as a last-resort fallback
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.1' (uid=1000 pid=18636 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+
+(xdg-desktop-portal-gtk:18677): Gtk-WARNING **: 08:37:31.167: cannot open display: 
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activated service 'org.freedesktop.impl.portal.desktop.gtk' failed: Process org.freedesktop.impl.portal.desktop.gtk exited with status 1
+
+(/usr/libexec/xdg-desktop-portal:18636): xdg-desktop-portal-WARNING **: 08:37:31.169: Failed to create print proxy: Error calling StartServiceByName for org.freedesktop.impl.portal.desktop.gtk: Process org.freedesktop.impl.portal.desktop.gtk exited with status 1
+
+(/usr/libexec/xdg-desktop-portal:18636): xdg-desktop-portal-WARNING **: 08:37:31.169: Choosing gtk.portal for org.freedesktop.impl.portal.Notification as a last-resort fallback
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.1' (uid=1000 pid=18636 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+
+(xdg-desktop-portal-gtk:18680): Gtk-WARNING **: 08:37:31.186: cannot open display: 
+PASS   : BudgieLabwcTest::visibilityRefusesFullConnectionBacklogWithoutBlocking()
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activated service 'org.freedesktop.impl.portal.desktop.gtk' failed: Process org.freedesktop.impl.portal.desktop.gtk exited with status 1
+
+(/usr/libexec/xdg-desktop-portal:18636): xdg-desktop-portal-WARNING **: 08:37:31.188: Failed to create notification proxy: Error calling StartServiceByName for org.freedesktop.impl.portal.desktop.gtk: Process org.freedesktop.impl.portal.desktop.gtk exited with status 1
+
+(/usr/libexec/xdg-desktop-portal:18636): xdg-desktop-portal-WARNING **: 08:37:31.188: Choosing gtk.portal for org.freedesktop.impl.portal.Inhibit as a last-resort fallback
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.1' (uid=1000 pid=18636 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+
+(xdg-desktop-portal-gtk:18683): Gtk-WARNING **: 08:37:31.205: cannot open display: 
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activated service 'org.freedesktop.impl.portal.desktop.gtk' failed: Process org.freedesktop.impl.portal.desktop.gtk exited with status 1
+
+(/usr/libexec/xdg-desktop-portal:18636): xdg-desktop-portal-WARNING **: 08:37:31.208: Failed to create inhibit proxy: Error calling StartServiceByName for org.freedesktop.impl.portal.desktop.gtk: Process org.freedesktop.impl.portal.desktop.gtk exited with status 1
+
+(/usr/libexec/xdg-desktop-portal:18636): xdg-desktop-portal-WARNING **: 08:37:31.208: The location portal requires an access impl
+
+(/usr/libexec/xdg-desktop-portal:18636): xdg-desktop-portal-WARNING **: 08:37:31.208: The camera portal requires an access impl
+
+(/usr/libexec/xdg-desktop-portal:18636): xdg-desktop-portal-WARNING **: 08:37:31.208: Choosing gtk.portal for org.freedesktop.impl.portal.Account as a last-resort fallback
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.1' (uid=1000 pid=18636 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+
+(xdg-desktop-portal-gtk:18686): Gtk-WARNING **: 08:37:31.226: cannot open display: 
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activated service 'org.freedesktop.impl.portal.desktop.gtk' failed: Process org.freedesktop.impl.portal.desktop.gtk exited with status 1
+
+(/usr/libexec/xdg-desktop-portal:18636): xdg-desktop-portal-WARNING **: 08:37:31.228: Failed to create account proxy: Error calling StartServiceByName for org.freedesktop.impl.portal.desktop.gtk: Process org.freedesktop.impl.portal.desktop.gtk exited with status 1
+
+(/usr/libexec/xdg-desktop-portal:18636): xdg-desktop-portal-WARNING **: 08:37:31.228: Choosing gtk.portal for org.freedesktop.impl.portal.Email as a last-resort fallback
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.1' (uid=1000 pid=18636 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+
+(xdg-desktop-portal-gtk:18689): Gtk-WARNING **: 08:37:31.246: cannot open display: 
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activated service 'org.freedesktop.impl.portal.desktop.gtk' failed: Process org.freedesktop.impl.portal.desktop.gtk exited with status 1
+
+(/usr/libexec/xdg-desktop-portal:18636): xdg-desktop-portal-WARNING **: 08:37:31.248: Failed to create email proxy: Error calling StartServiceByName for org.freedesktop.impl.portal.desktop.gtk: Process org.freedesktop.impl.portal.desktop.gtk exited with status 1
+
+(/usr/libexec/xdg-desktop-portal:18636): xdg-desktop-portal-WARNING **: 08:37:31.248: Choosing gtk.portal for org.freedesktop.impl.portal.DynamicLauncher as a last-resort fallback
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.1' (uid=1000 pid=18636 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+
+(xdg-desktop-portal-gtk:18692): Gtk-WARNING **: 08:37:31.266: cannot open display: 
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Activated service 'org.freedesktop.impl.portal.desktop.gtk' failed: Process org.freedesktop.impl.portal.desktop.gtk exited with status 1
+
+(/usr/libexec/xdg-desktop-portal:18636): xdg-desktop-portal-WARNING **: 08:37:31.268: Failed to create dynamic_launcher proxy: Error calling StartServiceByName for org.freedesktop.impl.portal.desktop.gtk: Process org.freedesktop.impl.portal.desktop.gtk exited with status 1
+dbus-daemon[18625]: [session uid=1000 pid=18625 pidfd=5] Successfully activated service 'org.freedesktop.portal.Desktop'
+PASS   : BudgieLabwcTest::visibilityAllowsSlowCompositorSetup()
+PASS   : BudgieLabwcTest::visibilityUsesCaptureCompositor()
+PASS   : BudgieLabwcTest::anonymousInheritedConnectionRefusesRatherThanProbingAnotherSession()
+PASS   : BudgieLabwcTest::captureConnectionReconnectsOnlyAfterPixelConnectionLoss(display path)
+PASS   : BudgieLabwcTest::captureConnectionReconnectsOnlyAfterPixelConnectionLoss(inherited socket)
+PASS   : BudgieLabwcTest::countdownLockQueryUsesVisibility()
+PASS   : BudgieLabwcTest::lockedWindowAfterFreezeIsRefused()
+PASS   : BudgieLabwcTest::lockDuringCopyIsRefused(output batch)
+PASS   : BudgieLabwcTest::lockDuringCopyIsRefused(frozen window)
+PASS   : BudgieLabwcTest::lockedDesktopCaptureIsRefused()
+PASS   : BudgieLabwcTest::cleanupTestCase()
+Totals: 13 passed, 0 failed, 0 skipped, 0 blacklisted, 17649ms
+********* Finished testing of BudgieLabwcTest *********
+

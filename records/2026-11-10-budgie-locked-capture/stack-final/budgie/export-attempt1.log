@@ -1,0 +1,12 @@
+{'quitting': True}
+{'status': 'stopped', 'evidence': '/home/patrick/work/pg-cd/work/lab-runs/bc9'}
+tar: layout.json: Cannot stat: No such file or directory
+tar: Exiting with failure status due to previous errors
+Traceback (most recent call last):
+  File "/tmp/pg-final-export-run.py", line 15, in <module>
+    p=Path('/tmp')/('pg-'+name+'-evidence.tar');subprocess.run(['tar','-cf',str(p),'-C',str(r),*members],check=True)
+                                                ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['tar', '-cf', '/tmp/pg-bc9-evidence.tar', '-C', '/home/patrick/work/pg-cd/work/lab-runs/bc9', 'state.json', 'accept', 'package.json', 'layout.json', 'guest-preflight-73374dd021ac4a199b633dc184086ef7-attempt0-head0.ppm', 'guest-preflight-73374dd021ac4a199b633dc184086ef7-attempt1-head0.ppm', 'guest-preflight-73374dd021ac4a199b633dc184086ef7-attempt2-head0.ppm', 'guest-preflight-73374dd021ac4a199b633dc184086ef7-attempt3-head0.ppm', 'guest-preflight-73374dd021ac4a199b633dc184086ef7-attempt0-head1.ppm', 'guest-preflight-73374dd021ac4a199b633dc184086ef7.json', 'guest-preflight-d3cbb6f081e04de694821ab37f5c11d6-attempt0-head0.ppm', 'guest-preflight-d3cbb6f081e04de694821ab37f5c11d6-attempt0-head1.ppm', 'guest-preflight-d3cbb6f081e04de694821ab37f5c11d6.json', 'guest-preflight-fd679c3ed3254adfb7fd711dff66d534-attempt0-head0.ppm', 'guest-preflight-fd679c3ed3254adfb7fd711dff66d534-attempt0-head1.ppm', 'guest-preflight-fd679c3ed3254adfb7fd711dff66d534.json', 'guest-preflight-3db5b7f0698a4f618b94994d6734eb22-attempt0-head0.ppm', 'guest-preflight-3db5b7f0698a4f618b94994d6734eb22-attempt0-head1.ppm', 'guest-preflight-3db5b7f0698a4f618b94994d6734eb22.json', 'guest-preflight-18657210864c4fadb2d16dd81426f276-attempt0-head0.ppm', 'guest-preflight-18657210864c4fadb2d16dd81426f276-attempt0-head1.ppm', 'guest-preflight-18657210864c4fadb2d16dd81426f276.json']' returned non-zero exit status 2.
