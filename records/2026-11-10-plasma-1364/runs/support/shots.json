@@ -1,0 +1,894 @@
+{
+  "host": "aurora-amd",
+  "desktop": "plasmashell",
+  "session": "wayland",
+  "build": {
+    "kind": "appimage",
+    "file": "pr.AppImage",
+    "sha256": "54c1a92618d23e651d8469577b0699252cd65b36e32df388aadf83593181c1d1"
+  },
+  "states": {
+    "support": {
+      "diagnostics": {
+        "autosave": "",
+        "debugLogging": {
+          "enabled": false,
+          "expiresAt": null,
+          "text": "Records detailed logs for a maintainer and turns itself off after 24 hours. Credentials, tokens and file contents are never logged."
+        },
+        "desktopSupport": {
+          "details": {
+            "activeOperations": 0,
+            "artifactCleanup": {
+              "automatic": false,
+              "incompleteUploadNotice": null,
+              "intervalMs": 3600000,
+              "last": null,
+              "running": false
+            },
+            "backend": "Qt",
+            "build": {
+              "baseVersion": "26.1110.4538",
+              "commitCount": 4538,
+              "dirty": false,
+              "gitCommit": "1d19e1e8ac506ddb12a80904749536dafdc9117a",
+              "gitTree": "93ae895ea84a5a19a2b3de877573aa9f3189e480",
+              "packageVersion": "26.1110.4538~dev+g1d19e1e8ac50",
+              "schemaVersion": 1,
+              "sourceProvenance": "git",
+              "version": "26.1110.4538-dev+g1d19e1e8ac50"
+            },
+            "capabilities": {
+              "editor": {
+                "admissionPixels": 24000000,
+                "available": true,
+                "blurStyles": [
+                  "blur",
+                  "pixelate"
+                ],
+                "commands": [
+                  "inspect",
+                  "apply",
+                  "preview",
+                  "saveCopy",
+                  "copy",
+                  "fileDialog",
+                  "view",
+                  "submit",
+                  "cancel",
+                  "raise"
+                ],
+                "fileFormats": [
+                  "png",
+                  "jpeg"
+                ],
+                "open": false,
+                "output": "png",
+                "shapes": [
+                  "redact",
+                  "blur",
+                  "arrow",
+                  "rectangle",
+                  "text",
+                  "highlight",
+                  "step",
+                  "pen",
+                  "ellipse",
+                  "line"
+                ],
+                "sources": [
+                  "region",
+                  "window",
+                  "desktop",
+                  "clipboard",
+                  "file"
+                ]
+              },
+              "providers": {
+                "backblaze-b2": {
+                  "conditionalCreate": true,
+                  "conditionalDelete": false,
+                  "conditionalReplace": false,
+                  "delete": true,
+                  "deletionEffect": "Deletes exactly the uploaded B2 file version by its ID. put.gd never uploads over a visible file, so the name then shows nothing, or an older version that was hidden before the upload. Authorized links stop working when they expire.",
+                  "maximumNameBytes": 1023,
+                  "maximumObjectBytes": 10000000000000,
+                  "privateUploads": false,
+                  "referenceDelete": false,
+                  "serverNamesObjects": false,
+                  "sharing": false,
+                  "stat": true,
+                  "urls": true,
+                  "versionAddressing": true
+                },
+                "custom-http": {
+                  "conditionalCreate": false,
+                  "conditionalDelete": false,
+                  "conditionalReplace": false,
+                  "delete": false,
+                  "deletionEffect": "Asks the server to delete this upload through the deletion URL it returned with the link. What the server removes, and how soon the link stops working, is up to the server.",
+                  "maximumNameBytes": 255,
+                  "maximumObjectBytes": null,
+                  "privateUploads": false,
+                  "referenceDelete": true,
+                  "serverNamesObjects": true,
+                  "sharing": false,
+                  "stat": false,
+                  "urls": true,
+                  "versionAddressing": false
+                },
+                "proton-drive": {
+                  "conditionalCreate": true,
+                  "conditionalDelete": false,
+                  "conditionalReplace": false,
+                  "delete": false,
+                  "deletionEffect": "Safe remote deletion is unavailable: Proton does not expose an atomic revision-guarded file deletion. Revoke share links separately.",
+                  "maximumNameBytes": 255,
+                  "maximumObjectBytes": null,
+                  "privateUploads": true,
+                  "referenceDelete": false,
+                  "serverNamesObjects": false,
+                  "sharing": true,
+                  "stat": true,
+                  "urls": true,
+                  "versionAddressing": false
+                },
+                "s3": {
+                  "conditionalCreate": true,
+                  "conditionalDelete": true,
+                  "conditionalReplace": true,
+                  "delete": true,
+                  "deletionEffect": "Guarded origin removal; selected versions only; browser/CDN caches may retain bytes",
+                  "maximumNameBytes": 1024,
+                  "maximumObjectBytes": 5497558138880,
+                  "privateUploads": false,
+                  "referenceDelete": false,
+                  "serverNamesObjects": false,
+                  "sharing": false,
+                  "stat": true,
+                  "urls": true,
+                  "versionAddressing": true
+                }
+              },
+              "recording": {
+                "acquisition": "kde-screencast",
+                "active": null,
+                "audio": {
+                  "microphone": true,
+                  "system": true
+                },
+                "available": true,
+                "clickHighlights": {
+                  "available": true,
+                  "drawnBy": "compositor",
+                  "note": "KWin draws the rings on the screen for the length of the recording; window recordings carry none.",
+                  "route": "kwin-mouseclick-effect",
+                  "targetReasons": {
+                    "window": "KWin draws the click rings on the screen; a window recording's stream carries the window alone, so it has none."
+                  },
+                  "targets": [
+                    "monitor",
+                    "desktop",
+                    "region"
+                  ]
+                },
+                "codecs": {
+                  "mp4": [
+                    "h264",
+                    "h265"
+                  ],
+                  "webm": [
+                    "vp9"
+                  ]
+                },
+                "commands": [
+                  "windows",
+                  "microphones",
+                  "prepare",
+                  "start",
+                  "pause",
+                  "resume",
+                  "stop",
+                  "cancel",
+                  "inspect",
+                  "select",
+                  "raise",
+                  "overlay",
+                  "audio",
+                  "edit",
+                  "preview",
+                  "review",
+                  "saveCopy",
+                  "upload"
+                ],
+                "editCommands": [
+                  "setTrim",
+                  "resetTrim",
+                  "addMask",
+                  "updateMask",
+                  "removeMask"
+                ],
+                "exportEncoders": {
+                  "h264": [
+                    "h264_vaapi",
+                    "libx264"
+                  ],
+                  "h265": [
+                    "hevc_vaapi",
+                    "libx265"
+                  ],
+                  "vp9": [
+                    "libvpx-vp9"
+                  ]
+                },
+                "ffmpeg": {
+                  "avcodec": "63.1.102",
+                  "avfilter": "12.1.102",
+                  "avformat": "63.1.102",
+                  "avutil": "61.1.102",
+                  "encoderFailures": {
+                    "h264_nvenc": "libcuda.so.1 is not installed",
+                    "hevc_nvenc": "libcuda.so.1 is not installed"
+                  },
+                  "encoders": {
+                    "aac": true,
+                    "gif": true,
+                    "h264_nvenc": true,
+                    "h264_vaapi": true,
+                    "hevc_nvenc": true,
+                    "hevc_vaapi": true,
+                    "libopenh264": false,
+                    "libopus": true,
+                    "libvorbis": false,
+                    "libvpx-vp9": true,
+                    "libwebp_anim": true,
+                    "libx264": true,
+                    "libx265": true,
+                    "vp9_vaapi": false
+                  },
+                  "filters": {
+                    "asetpts": true,
+                    "atrim": true,
+                    "avgblur": true,
+                    "crop": true,
+                    "drawbox": true,
+                    "format": true,
+                    "fps": true,
+                    "palettegen": true,
+                    "paletteuse": true,
+                    "scale": true,
+                    "setpts": true,
+                    "trim": true
+                  },
+                  "h264Decoder": {
+                    "failure": null,
+                    "name": "h264",
+                    "usable": true
+                  },
+                  "muxers": {
+                    "gif": true,
+                    "matroska": true,
+                    "mp4": true,
+                    "webm": true,
+                    "webp": true
+                  }
+                },
+                "formats": [
+                  "mp4",
+                  "webm",
+                  "gif",
+                  "webp"
+                ],
+                "gstreamer": {
+                  "audioSources": [
+                    "pulsesrc",
+                    "pipewiresrc"
+                  ],
+                  "available": true,
+                  "elements": {
+                    "aacparse": "1.24.2",
+                    "appsink": "1.24.2",
+                    "appsrc": "1.24.2",
+                    "audioconvert": "1.24.2",
+                    "audiomixer": "1.24.2",
+                    "audioresample": "1.24.2",
+                    "avenc_aac": null,
+                    "compositor": null,
+                    "fdkaacenc": null,
+                    "h264parse": "1.24.2",
+                    "identity": "1.24.2",
+                    "matroskamux": "1.24.2",
+                    "mp4mux": null,
+                    "openh264enc": null,
+                    "pipewiresrc": "1.0.5",
+                    "pulsesrc": "1.24.2",
+                    "vaapih264enc": "1.24.2",
+                    "vah264enc": "1.24.2",
+                    "vah264lpenc": null,
+                    "videoconvert": "1.24.2",
+                    "videocrop": "1.24.2",
+                    "videorate": "1.24.2",
+                    "videoscale": "1.24.2",
+                    "voaacenc": "1.24.2",
+                    "vp9enc": null,
+                    "webmmux": "1.24.2",
+                    "webpenc": null,
+                    "x264enc": "1.24.1",
+                    "x265enc": null,
+                    "ximagesrc": "1.24.2"
+                  },
+                  "encoderFailures": {},
+                  "liveAacEncoders": [
+                    "voaacenc"
+                  ],
+                  "liveH264Encoders": [
+                    "vah264enc",
+                    "vaapih264enc",
+                    "x264enc"
+                  ],
+                  "liveSources": [
+                    "ximagesrc",
+                    "pipewiresrc"
+                  ],
+                  "pluginDirectories": [
+                    "/tmp/.mount_pr.AppCAamiI/usr/lib/gstreamer-1.0"
+                  ],
+                  "usableH264Encoders": [
+                    "vah264enc",
+                    "vaapih264enc",
+                    "x264enc"
+                  ],
+                  "version": "GStreamer 1.24.2",
+                  "webpAnimated": false
+                },
+                "kdeScreencast": {
+                  "available": true,
+                  "hidesRequester": true,
+                  "kwinVersion": "6.8.2",
+                  "outputs": [
+                    {
+                      "logical": [
+                        0,
+                        0,
+                        1920,
+                        1080
+                      ],
+                      "name": "DP-2"
+                    }
+                  ],
+                  "version": 5
+                },
+                "limits": {
+                  "animationMaxEdge": 1280,
+                  "animationMaxUs": 60000000,
+                  "maxFileBytes": 1099511627776,
+                  "maxMasks": 64
+                },
+                "liveCapture": {
+                  "audio": true,
+                  "encoder": true,
+                  "source": true
+                },
+                "maskKinds": [
+                  "blur",
+                  "solid"
+                ],
+                "overlayExclusion": {},
+                "pipewire": {
+                  "socket": "/run/user/1000/pipewire-0"
+                },
+                "portal": {
+                  "available": true,
+                  "cursorModes": 7,
+                  "portalVersion": 6,
+                  "sourceTypes": 7
+                },
+                "reason": null,
+                "schemaVersion": 1,
+                "session": "wayland",
+                "states": [
+                  "preparing",
+                  "ready",
+                  "starting",
+                  "recording",
+                  "paused",
+                  "stopping",
+                  "reviewing",
+                  "exporting",
+                  "submitted",
+                  "cancelled",
+                  "failed"
+                ],
+                "targets": [
+                  "monitor",
+                  "desktop",
+                  "region",
+                  "window"
+                ],
+                "timeUnit": "microseconds",
+                "windowAcquisition": "kde-screencast",
+                "windowList": true
+              },
+              "source": {
+                "adapter": "kde-wayland",
+                "capture": {
+                  "desktop": {
+                    "available": true,
+                    "error": "",
+                    "interface": "org.kde.KWin.ScreenShot2",
+                    "interface_version": 5,
+                    "mode": "compositor-native",
+                    "permission": "restricted-desktop-entry",
+                    "permission_entry_matches_executable": true,
+                    "permission_rejected": false
+                  },
+                  "monitor": {
+                    "available": true,
+                    "error": "",
+                    "interface": "org.kde.KWin.ScreenShot2",
+                    "interface_version": 5,
+                    "mode": "compositor-native",
+                    "permission": "restricted-desktop-entry",
+                    "permission_entry_matches_executable": true,
+                    "permission_rejected": false
+                  },
+                  "region": {
+                    "available": true,
+                    "error": "",
+                    "helper": {
+                      "active": false,
+                      "build": {
+                        "baseVersion": "26.1110.4538",
+                        "commitCount": 4538,
+                        "dirty": false,
+                        "gitCommit": "1d19e1e8ac506ddb12a80904749536dafdc9117a",
+                        "gitTree": "93ae895ea84a5a19a2b3de877573aa9f3189e480",
+                        "packageVersion": "26.1110.4538~dev+g1d19e1e8ac50",
+                        "schemaVersion": 1,
+                        "sourceProvenance": "git",
+                        "version": "26.1110.4538-dev+g1d19e1e8ac50"
+                      },
+                      "cleanupRequired": false,
+                      "lastExit": {},
+                      "processId": 0
+                    },
+                    "interface": "org.kde.KWin.ScreenShot2",
+                    "interface_version": 5,
+                    "mode": "compositor-native",
+                    "permission": "restricted-desktop-entry",
+                    "permission_entry_matches_executable": true,
+                    "permission_rejected": false
+                  },
+                  "repeat": {
+                    "available": true,
+                    "error": "",
+                    "interface": "org.kde.KWin.ScreenShot2",
+                    "interface_version": 5,
+                    "mode": "compositor-native",
+                    "permission": "restricted-desktop-entry",
+                    "permission_entry_matches_executable": true,
+                    "permission_rejected": false,
+                    "remembered": false
+                  },
+                  "window": {
+                    "available": true,
+                    "error": "",
+                    "interface": "org.kde.KWin.ScreenShot2",
+                    "interface_version": 5,
+                    "mode": "compositor-native",
+                    "permission": "restricted-desktop-entry",
+                    "permission_entry_matches_executable": true,
+                    "permission_rejected": false
+                  }
+                },
+                "captureHelper": {
+                  "active": false,
+                  "build": {
+                    "baseVersion": "26.1110.4538",
+                    "commitCount": 4538,
+                    "dirty": false,
+                    "gitCommit": "1d19e1e8ac506ddb12a80904749536dafdc9117a",
+                    "gitTree": "93ae895ea84a5a19a2b3de877573aa9f3189e480",
+                    "packageVersion": "26.1110.4538~dev+g1d19e1e8ac50",
+                    "schemaVersion": 1,
+                    "sourceProvenance": "git",
+                    "version": "26.1110.4538-dev+g1d19e1e8ac50"
+                  },
+                  "cleanupRequired": false,
+                  "lastExit": {},
+                  "processId": 0
+                },
+                "clipboard": {
+                  "available": true,
+                  "error": "",
+                  "import": "ext-data-control-v1",
+                  "protocol_version": 1,
+                  "result": "ext-data-control-v1-clipboard-only",
+                  "types": [
+                    "files",
+                    "image",
+                    "text"
+                  ]
+                },
+                "delay": {
+                  "available": true,
+                  "indicator": "layer-surface",
+                  "seconds": [
+                    3,
+                    5,
+                    10
+                  ]
+                },
+                "outputs": {
+                  "available": true,
+                  "error": "",
+                  "outputs": 1,
+                  "protocol": "wl-output+xdg-output",
+                  "protocol_version": 3,
+                  "revision": 4
+                },
+                "resident": "qt-core",
+                "shortcuts": {
+                  "available": true,
+                  "bindings": {
+                    "clipboard": {
+                      "actual": [],
+                      "bound": false,
+                      "effective": "",
+                      "layout": 0,
+                      "requested": "",
+                      "state": "unbound"
+                    },
+                    "desktop": {
+                      "actual": [
+                        "Ctrl+#"
+                      ],
+                      "bound": true,
+                      "effective": "Ctrl+#",
+                      "layout": 0,
+                      "requested": "Ctrl+Shift+3",
+                      "state": "bound"
+                    },
+                    "edit": {
+                      "actual": [],
+                      "bound": false,
+                      "effective": "",
+                      "layout": 0,
+                      "requested": "",
+                      "state": "unbound"
+                    },
+                    "monitor": {
+                      "actual": [],
+                      "bound": false,
+                      "effective": "",
+                      "layout": 0,
+                      "requested": "",
+                      "state": "unbound"
+                    },
+                    "record": {
+                      "actual": [],
+                      "bound": false,
+                      "effective": "",
+                      "layout": 0,
+                      "requested": "",
+                      "state": "unbound"
+                    },
+                    "region": {
+                      "actual": [
+                        "Ctrl+!"
+                      ],
+                      "bound": true,
+                      "effective": "Ctrl+!",
+                      "layout": 0,
+                      "requested": "Ctrl+Shift+1",
+                      "state": "bound"
+                    },
+                    "repeat": {
+                      "actual": [],
+                      "bound": false,
+                      "effective": "",
+                      "layout": 0,
+                      "requested": "",
+                      "state": "unbound"
+                    },
+                    "window": {
+                      "actual": [
+                        "Ctrl+@"
+                      ],
+                      "bound": true,
+                      "effective": "Ctrl+@",
+                      "layout": 0,
+                      "requested": "Ctrl+Shift+2",
+                      "state": "bound"
+                    }
+                  }
+                }
+              }
+            },
+            "fileManagerMenu": {
+              "announce": false,
+              "firstRun": false,
+              "launcher": "/home/patrick/.local/share/putgd/file-manager/putgd-upload",
+              "removed": [],
+              "restartable": [],
+              "skipped": [],
+              "written": []
+            },
+            "journalReady": true,
+            "locations": {
+              "config": {
+                "path": "/var/home/patrick/a1364/runs/support/config/putgd",
+                "state": "current"
+              },
+              "data": {
+                "path": "/home/patrick/.local/share/putgd",
+                "state": "current"
+              },
+              "schemaVersion": 1
+            },
+            "logging": {
+              "available": true,
+              "bytes": 12781,
+              "debugLogging": false,
+              "debugLoggingExpiresAt": null,
+              "degraded": false,
+              "degradedReason": null,
+              "directory": "/var/home/patrick/a1364/runs/support/state/putgd/logs",
+              "droppedRecords": 0,
+              "files": 2,
+              "oldestRecord": "2026-11-10T08:01:43.466Z",
+              "retention": {
+                "bytes": 52428800,
+                "days": 14
+              },
+              "rotationBytes": 5242880
+            },
+            "loggingDegraded": false,
+            "loginSession": {
+              "id": "2722",
+              "reason": "not_graphical",
+              "type": "tty",
+              "watched": false
+            },
+            "loginStartup": {
+              "applied": true,
+              "enabled": false
+            },
+            "memory": {
+              "allocatorReclamationCount": 0,
+              "allocatorReclamationPending": true,
+              "allocatorReclamationSupported": true,
+              "imagePageReleaseCount": 0,
+              "imagePageReleasePending": false,
+              "lastAllocatorReclamationUsec": 0,
+              "lastImagePageReleaseBytes": 0,
+              "lastImagePageReleaseUsec": 0
+            },
+            "previews": {
+              "queued": 0,
+              "running": false
+            },
+            "qtVersion": "6.12.0",
+            "release": {
+              "kind": "none",
+              "url": "",
+              "version": "26.1110.4538-dev+g1d19e1e8ac50"
+            },
+            "schemaVersion": 1,
+            "shortcuts": {
+              "available": true,
+              "bindings": {
+                "clipboard": {
+                  "actual": [],
+                  "bound": false,
+                  "effective": "",
+                  "layout": 0,
+                  "requested": "",
+                  "state": "unbound"
+                },
+                "desktop": {
+                  "actual": [
+                    "Ctrl+#"
+                  ],
+                  "bound": true,
+                  "effective": "Ctrl+#",
+                  "layout": 0,
+                  "requested": "Ctrl+Shift+3",
+                  "state": "bound"
+                },
+                "edit": {
+                  "actual": [],
+                  "bound": false,
+                  "effective": "",
+                  "layout": 0,
+                  "requested": "",
+                  "state": "unbound"
+                },
+                "monitor": {
+                  "actual": [],
+                  "bound": false,
+                  "effective": "",
+                  "layout": 0,
+                  "requested": "",
+                  "state": "unbound"
+                },
+                "record": {
+                  "actual": [],
+                  "bound": false,
+                  "effective": "",
+                  "layout": 0,
+                  "requested": "",
+                  "state": "unbound"
+                },
+                "region": {
+                  "actual": [
+                    "Ctrl+!"
+                  ],
+                  "bound": true,
+                  "effective": "Ctrl+!",
+                  "layout": 0,
+                  "requested": "Ctrl+Shift+1",
+                  "state": "bound"
+                },
+                "repeat": {
+                  "actual": [],
+                  "bound": false,
+                  "effective": "",
+                  "layout": 0,
+                  "requested": "",
+                  "state": "unbound"
+                },
+                "window": {
+                  "actual": [
+                    "Ctrl+@"
+                  ],
+                  "bound": true,
+                  "effective": "Ctrl+@",
+                  "layout": 0,
+                  "requested": "Ctrl+Shift+2",
+                  "state": "bound"
+                }
+              }
+            },
+            "storage": {
+              "backblaze-b2": {
+                "activeHelpers": 0,
+                "protocolVersion": 1
+              },
+              "custom-http": {
+                "activeHelpers": 0,
+                "protocolVersion": 1
+              },
+              "proton-drive": {
+                "activeHelpers": 0,
+                "protocolVersion": 1
+              },
+              "s3": {
+                "lanes": 1,
+                "moduleLiveDrivers": 0,
+                "queuedRequests": 0,
+                "retainedDrivers": 0,
+                "workerStarted": false
+              }
+            },
+            "trayAvailable": true,
+            "trayIcon": {
+              "calendarOverride": false,
+              "glyph": "turkey",
+              "localDate": "2026-11-10",
+              "shown": "turkey"
+            },
+            "trayTint": {
+              "color": "#383834",
+              "panel": "light",
+              "source": "kde-default"
+            },
+            "ui": {
+              "checkpointBytes": 0,
+              "lastExit": {},
+              "pid": 1236552,
+              "state": "ready"
+            },
+            "uncleanExit": {
+              "detected": false,
+              "last": null,
+              "recent": []
+            },
+            "update": {
+              "action": null,
+              "attemptedAt": null,
+              "build": {
+                "channel": null,
+                "kind": "none",
+                "packageTarget": "appimage",
+                "reason": "development_build",
+                "supported": false,
+                "version": "26.1110.4538-dev+g1d19e1e8ac50"
+              },
+              "channel": null,
+              "channelSetting": "build",
+              "channelSource": "setting",
+              "check": true,
+              "checkedAt": null,
+              "checking": false,
+              "enabled": false,
+              "error": null,
+              "install": {
+                "available": false,
+                "backup": null,
+                "image": "/var/home/patrick/a1364/pr.AppImage",
+                "installed": null,
+                "kind": "update",
+                "reason": "development_build",
+                "restartRequired": false,
+                "running": false,
+                "state": "idle",
+                "switch": null
+              },
+              "nextCheckAt": null,
+              "notifies": false,
+              "reason": "development_build",
+              "result": null,
+              "supported": false
+            },
+            "uploadSlots": {
+              "active": 0,
+              "capacity": 3,
+              "lent": 0,
+              "operations": 0,
+              "waiting": 0
+            }
+          },
+          "expanded": true
+        },
+        "loggingDegraded": {
+          "degraded": false,
+          "text": ""
+        },
+        "logs": {
+          "bytes": 12781,
+          "files": 2,
+          "oldestRecord": "2026-11-10T08:01:43.466Z",
+          "text": "2 files \u00b7 0.01 MB \u00b7 oldest record 11/10/26 2:01\u202fAM \u00b7 kept 14 days, up to 50 MB"
+        },
+        "package": {
+          "open": false
+        },
+        "uncleanExit": {
+          "last": null,
+          "text": "None recorded."
+        }
+      },
+      "shown": "support"
+    }
+  },
+  "capabilities": {
+    "acquisition": "kde-screencast",
+    "audio": {
+      "microphone": false,
+      "microphoneMessage": "The system's default input is the monitor of an output, not a microphone. Plug one in, or choose a device in Settings.",
+      "microphoneReason": "default_is_monitor",
+      "system": true
+    },
+    "clickHighlights": {
+      "available": true,
+      "drawnBy": "compositor",
+      "note": "KWin draws the rings on the screen for the length of the recording; window recordings carry none.",
+      "route": "kwin-mouseclick-effect",
+      "targetReasons": {
+        "window": "KWin draws the click rings on the screen; a window recording's stream carries the window alone, so it has none."
+      },
+      "targets": [
+        "monitor",
+        "desktop",
+        "region"
+      ]
+    },
+    "targets": [
+      "monitor",
+      "desktop",
+      "region",
+      "window"
+    ]
+  }
+}

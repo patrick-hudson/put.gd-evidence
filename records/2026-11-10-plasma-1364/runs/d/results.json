@@ -1,0 +1,261 @@
+{
+ "host": "aurora-amd",
+ "kernel": "7.2.11-300.fc45.x86_64",
+ "desktop": "plasmashell",
+ "session": "wayland",
+ "target": "region",
+ "rect": [
+  0,
+  0,
+  960,
+  540
+ ],
+ "formats": [
+  "mp4"
+ ],
+ "video": "marker",
+ "timing": {
+  "lead": 6.0,
+  "pauseAt": 12.0,
+  "pauseFor": 0.0,
+  "after": 2.0
+ },
+ "builds": {
+  "pr": {
+   "kind": "appimage",
+   "file": "pr.AppImage",
+   "sha256": "54c1a92618d23e651d8469577b0699252cd65b36e32df388aadf83593181c1d1"
+  }
+ },
+ "analyzer": "/var/home/patrick/a1364/analyzer/squashfs-root",
+ "rounds": [
+  {
+   "build": "pr",
+   "round": 1,
+   "format": "mp4",
+   "started": "2026-11-10T07:46:46Z",
+   "acquisition": "kde-screencast",
+   "liveEncoders": [
+    "vah264enc",
+    "vaapih264enc",
+    "x264enc"
+   ],
+   "audio": {
+    "system": false,
+    "microphone": true,
+    "microphoneDevice": "putgd_lab_1203044_mic"
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false,
+    "microphoneReason": "default_is_monitor"
+   },
+   "microphones": {
+    "available": true,
+    "reason": null,
+    "device": {
+     "id": "putgd_lab_1203044_mic",
+     "label": "putgd_lab_1203044-microphone"
+    },
+    "devices": [
+     "alsa_input.pci-0000_04_00.6.analog-stereo",
+     "putgd_lab_1203044_mic"
+    ],
+    "defaultIsMonitor": true
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": {
+     "microphone": true,
+     "system": false
+    },
+    "audioEncoder": "voaacenc",
+    "recordingMicrophone": {
+     "available": true,
+     "device": "putgd_lab_1203044-microphone",
+     "effective": true,
+     "requested": true
+    },
+    "microphoneLost": null
+   },
+   "unpluggedAtS": 6.074,
+   "afterUnplug": {
+    "state": "recording",
+    "microphoneLost": "The microphone was disconnected; the rest of the recording has no microphone audio."
+   },
+   "recordedS": 14.087,
+   "microphoneLostAtStop": "The microphone was disconnected; the rest of the recording has no microphone audio.",
+   "load": 0.8330078125,
+   "durationUs": 14699999,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "800bb568-22bc-4083-9e84-61d1a517c8a8.mkv",
+     "bytes": 2774688,
+     "motion": 22.261,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.13740458015267176,
+       "blocks": 131,
+       "maxAmplitude": 0.34536720888418027,
+       "medianAmplitude": 7.211249578010293e-07
+      },
+      "440": {
+       "activeFraction": 0,
+       "blocks": 131,
+       "maxAmplitude": 0.002049512087708556,
+       "medianAmplitude": 6.550009206847831e-07
+      }
+     },
+     "pairs": 6,
+     "medianMs": 31.7,
+     "spreadMs": 33.3,
+     "offsetsMs": [
+      -1.3,
+      -1,
+      -0.7,
+      31.7,
+      32,
+      31.7
+     ],
+     "pairTimesS": [
+      0.833,
+      1.833,
+      2.833,
+      3.8,
+      4.8,
+      5.8
+     ]
+    },
+    "export": {
+     "file": "pr-mp4-1.mp4",
+     "bytes": 136049,
+     "motion": 22.178,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.13636363636363635,
+       "blocks": 132,
+       "maxAmplitude": 0.3451940995271787,
+       "medianAmplitude": 6.862900196887229e-07
+      },
+      "440": {
+       "activeFraction": 0,
+       "blocks": 132,
+       "maxAmplitude": 0.001564215006844201,
+       "medianAmplitude": 6.847181218442552e-07
+      }
+     },
+     "pairs": 6,
+     "medianMs": 32,
+     "spreadMs": 33.3,
+     "offsetsMs": [
+      -1.3,
+      -1.3,
+      -1.3,
+      32,
+      32,
+      32
+     ],
+     "pairTimesS": [
+      0.833,
+      1.833,
+      2.833,
+      3.8,
+      4.8,
+      5.8
+     ]
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 1.0
+    },
+    "fraction": 0.5556,
+    "kept": "/var/home/patrick/a1364/runs/d/frames/pr-mp4-1.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     960,
+     540
+    ],
+    "sha256": "39dbe7169cae336dd2067223a709fc6eb026334cadf16a748a9be93e44805616",
+    "size": [
+     960,
+     540
+    ]
+   }
+  }
+ ],
+ "microphone": {
+  "name": "putgd_lab_1203044",
+  "modules": {
+   "sink": 536870917,
+   "holdSink": 536870920,
+   "source": 536870921,
+   "hold": 536870918,
+   "system": 536870919
+  },
+  "defaultSource": "plasma1364_private.monitor",
+  "defaultSink": "plasma1364_private",
+  "sink": "putgd_lab_1203044_sink",
+  "source": "putgd_lab_1203044_mic",
+  "plugged": true,
+  "attempts": 1,
+  "heardPeak": 6561,
+  "systemSink": "putgd_lab_1203044_system",
+  "madeDefault": true
+ },
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "DP-2"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "check": "precheck",
+   "fraction": 1.0,
+   "framebuffer": [
+    1920,
+    1080
+   ],
+   "minFraction": 0.98,
+   "ok": true,
+   "output": [
+    "DP-2"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ]
+  },
+  "video": "marker"
+ },
+ "microphoneRemoved": {
+  "removed": true,
+  "left": [],
+  "defaultSource": "plasma1364_private.monitor",
+  "defaultSink": "plasma1364_private"
+ },
+ "gpuHangs": []
+}

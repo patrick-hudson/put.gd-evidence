@@ -1,0 +1,204 @@
+{
+ "host": "aurora-amd",
+ "kernel": "7.2.11-300.fc45.x86_64",
+ "desktop": "plasmashell",
+ "session": "wayland",
+ "target": "region",
+ "rect": [
+  0,
+  0,
+  960,
+  540
+ ],
+ "formats": [
+  "mp4"
+ ],
+ "video": "marker",
+ "timing": {
+  "lead": 6.0,
+  "pauseAt": 10.0,
+  "pauseFor": 0.0,
+  "after": 2.0
+ },
+ "builds": {
+  "pr": {
+   "kind": "appimage",
+   "file": "pr.AppImage",
+   "sha256": "54c1a92618d23e651d8469577b0699252cd65b36e32df388aadf83593181c1d1"
+  }
+ },
+ "analyzer": "/var/home/patrick/a1364/analyzer/squashfs-root",
+ "rounds": [
+  {
+   "build": "pr",
+   "round": 1,
+   "format": "mp4",
+   "started": "2026-11-10T07:46:13Z",
+   "acquisition": "kde-screencast",
+   "liveEncoders": [
+    "vah264enc",
+    "vaapih264enc",
+    "x264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false,
+    "microphoneReason": "default_is_monitor"
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": {
+     "microphone": false,
+     "system": true
+    },
+    "audioEncoder": "voaacenc",
+    "recordingMicrophone": {
+     "available": false,
+     "effective": false,
+     "requested": false,
+     "unavailable": "The system's default input is the monitor of an output, not a microphone. Plug one in, or choose a device in Settings."
+    },
+    "microphoneLost": null
+   },
+   "recordedS": 12.011,
+   "microphoneLostAtStop": null,
+   "load": 0.62890625,
+   "durationUs": 12566666,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "ac6b5af8-3858-44f9-98fd-4c7239f6b02f.mkv",
+     "bytes": 2457381,
+     "motion": 7.286,
+     "tones": {
+      "1000": {
+       "activeFraction": 0,
+       "blocks": 251,
+       "maxAmplitude": 0.00034294244908824646,
+       "medianAmplitude": 8.89321096963657e-07
+      },
+      "440": {
+       "activeFraction": 0.9960159362549801,
+       "blocks": 251,
+       "maxAmplitude": 0.017024095415842586,
+       "medianAmplitude": 0.016961410934965483
+      }
+     },
+     "error": "av_sync_unpaired: No flash has a tone burst within half a period"
+    },
+    "export": {
+     "file": "pr-mp4-1.mp4",
+     "bytes": 141329,
+     "motion": 7.256,
+     "tones": {
+      "1000": {
+       "activeFraction": 0,
+       "blocks": 251,
+       "maxAmplitude": 0.0003791738735110697,
+       "medianAmplitude": 1.0156809058960852e-06
+      },
+      "440": {
+       "activeFraction": 0.9920318725099602,
+       "blocks": 251,
+       "maxAmplitude": 0.01700019123896742,
+       "medianAmplitude": 0.016916838232546798
+      }
+     },
+     "error": "av_sync_unpaired: No flash has a tone burst within half a period"
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 1.0
+    },
+    "fraction": 0.5556,
+    "kept": "/var/home/patrick/a1364/runs/c/frames/pr-mp4-1.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     960,
+     540
+    ],
+    "sha256": "c2e057ea39acb2563bff465b3a28fe77271cb15ba824cdc359889c819c560c3d",
+    "size": [
+     960,
+     540
+    ]
+   }
+  }
+ ],
+ "microphone": {
+  "name": "putgd_lab_1201674",
+  "modules": {
+   "sink": 536870917,
+   "holdSink": 536870921,
+   "source": 536870918,
+   "hold": 536870919,
+   "system": 536870920
+  },
+  "defaultSource": "plasma1364_private.monitor",
+  "defaultSink": "plasma1364_private",
+  "sink": "putgd_lab_1201674_sink",
+  "source": "putgd_lab_1201674_mic",
+  "plugged": true,
+  "attempts": 1,
+  "heardPeak": 6561,
+  "systemSink": "putgd_lab_1201674_system"
+ },
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "DP-2"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "check": "precheck",
+   "fraction": 1.0,
+   "framebuffer": [
+    1920,
+    1080
+   ],
+   "minFraction": 0.98,
+   "ok": true,
+   "output": [
+    "DP-2"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ]
+  },
+  "video": "marker"
+ },
+ "microphoneRemoved": {
+  "removed": true,
+  "left": [],
+  "defaultSource": "plasma1364_private.monitor",
+  "defaultSink": "plasma1364_private"
+ },
+ "gpuHangs": []
+}

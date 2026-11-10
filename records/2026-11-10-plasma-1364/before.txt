@@ -1,0 +1,61 @@
+aurora-amd
+Tue Nov 10 07:43:40 AM UTC 2026
+plasma-workspace-6.8.2-1.fc45.x86_64
+kwin-6.8.2-2.fc45.x86_64
+Type=wayland
+LockedHint=no
+alsa_input.pci-0000_04_00.6.analog-stereo
+alsa_output.pci-0000_04_00.6.analog-stereo
+1	libpipewire-module-rt	{
+            nice.level    = -11
+            rt.prio       = 60
+            #rt.time.soft = -1
+            #rt.time.hard = -1
+            #rlimits.enabled = true
+            rtportal.enabled = false
+            #rtkit.enabled = true
+            #uclamp.min = 0
+            #uclamp.max = 1024
+        }	
+2	libpipewire-module-protocol-native	{
+            # List of server Unix sockets, and optionally permissions
+            #sockets = [ { name = "pipewire-0" }, { name = "pipewire-0-manager" } ]
+        }	
+4	libpipewire-module-profiler	{
+            #profile.interval.ms = 0
+        }	
+6	libpipewire-module-metadata		
+8	libpipewire-module-spa-device-factory		
+10	libpipewire-module-spa-node-factory		
+12	libpipewire-module-client-node		
+14	libpipewire-module-client-device		
+16	libpipewire-module-portal		
+17	libpipewire-module-access	{
+            # Socket-specific access permissions
+            #access.socket = { pipewire-0 = "default", pipewire-0-manager = "unrestricted" }
+
+            # Deprecated legacy mode (not socket-based),
+            # for now enabled by default if access.socket is not specified
+            #access.legacy = true
+        }	
+18	libpipewire-module-adapter		
+20	libpipewire-module-link-factory	{
+            #allow.link.passive = false
+	}	
+22	libpipewire-module-session-manager		
+29	libpipewire-module-raop-discover		
+87	libpipewire-module-raop-sink	{ "raop.ip": "192.168.68.59", "raop.ifindex": 2, "raop.port": 7000, "raop.name": "1EFC235D4BB6@Family Room", "raop.hostname": "Family-Room.local", "raop.domain": "local", "raop.audio.codec": "PCM", "raop.encryption.type": "fp_sap25", "device.model": "AppleTV14,1", "raop.transport": "udp"}	
+94	libpipewire-module-raop-sink	{ "raop.ip": "192.168.68.52", "raop.ifindex": 2, "raop.port": 38411, "raop.name": "6C70CB32F5EC@Q-Series Soundbar", "raop.hostname": "localhost.local", "raop.domain": "local", "raop.audio.codec": "PCM", "raop.encryption.type": "none", "device.model": "HW-Q990C", "raop.transport": "udp"}	
+96	libpipewire-module-raop-sink	{ "raop.ip": "192.168.68.53", "raop.ifindex": 2, "raop.port": 7000, "raop.name": "034267884B7C@Main House Zone", "raop.hostname": "ecobee-vulcan.local", "raop.domain": "local", "raop.audio.codec": "PCM", "raop.encryption.type": "auth_setup", "device.model": "EB-STATE5", "raop.transport": "udp"}	
+536870912	module-always-sink		
+536870913	module-device-manager		
+536870914	module-device-restore		
+536870915	module-stream-restore		
+52	alsa_output.pci-0000_04_00.1.hdmi-stereo-extra3.monitor	PipeWire	s32le 2ch 48000Hz	SUSPENDED
+54	alsa_output.pci-0000_04_00.6.analog-stereo.monitor	PipeWire	s32le 2ch 48000Hz	SUSPENDED
+55	alsa_input.pci-0000_04_00.6.analog-stereo	PipeWire	s32le 2ch 48000Hz	SUSPENDED
+89	raop_sink.Family-Room.local.192.168.68.59.7000.monitor	PipeWire	s16le 2ch 44100Hz	SUSPENDED
+98	raop_sink.localhost.local.192.168.68.52.38411.monitor	PipeWire	s16le 2ch 44100Hz	SUSPENDED
+99	raop_sink.ecobee-vulcan.local.192.168.68.53.7000.monitor	PipeWire	s16le 2ch 44100Hz	SUSPENDED
+(false,)
+('',)

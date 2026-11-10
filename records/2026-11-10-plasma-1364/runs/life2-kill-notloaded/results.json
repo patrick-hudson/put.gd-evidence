@@ -1,0 +1,97 @@
+{
+ "host": "aurora-amd",
+ "kernel": "7.2.11-300.fc45.x86_64",
+ "desktop": "plasmashell",
+ "session": "wayland",
+ "target": "monitor",
+ "rect": null,
+ "formats": [
+  "mp4"
+ ],
+ "video": "marker",
+ "timing": {
+  "lead": 3.0,
+  "pauseAt": 14.0,
+  "pauseFor": 0.0,
+  "after": 2.0
+ },
+ "builds": {
+  "pr": {
+   "kind": "appimage",
+   "file": "pr.AppImage",
+   "sha256": "54c1a92618d23e651d8469577b0699252cd65b36e32df388aadf83593181c1d1"
+  }
+ },
+ "analyzer": "/var/home/patrick/a1364/analyzer/squashfs-root",
+ "rounds": [
+  {
+   "mode": "kill",
+   "before": {
+    "loaded": "(false,)",
+    "support": "('',)"
+   },
+   "during": {
+    "loaded": "(true,)",
+    "support": "('mouseclick:\\ncolor1: #ff0000\\ncolor2: #00ff00\\ncolor3: #0000ff\\nlineWidth: 1\\nringLife: 300\\nringSize: 20\\nringCount: 2\\nshowText: true\\nfont: Noto Sans,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0\\nenabled: true\\n',)"
+   },
+   "killedPid": 1224898,
+   "inspectError": "recording.inspect failed: recording_unavailable No recording is active",
+   "after": {
+    "loaded": "(false,)",
+    "support": "('',)"
+   }
+  }
+ ],
+ "microphone": {
+  "name": "putgd_lab_1224250",
+  "modules": {
+   "system": 536870919
+  },
+  "defaultSource": "plasma1364_private.monitor",
+  "defaultSink": "plasma1364_private",
+  "systemSink": "putgd_lab_1224250_system"
+ },
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "DP-2"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "check": "precheck",
+   "fraction": 0.9999,
+   "framebuffer": [
+    1920,
+    1080
+   ],
+   "minFraction": 0.98,
+   "ok": true,
+   "output": [
+    "DP-2"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ]
+  },
+  "video": "marker"
+ },
+ "microphoneRemoved": {
+  "removed": true,
+  "left": [],
+  "defaultSource": "plasma1364_private.monitor",
+  "defaultSink": "plasma1364_private"
+ },
+ "gpuHangs": []
+}
