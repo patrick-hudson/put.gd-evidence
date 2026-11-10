@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-10-recording-1364-assembly-4538](2026-11-10-recording-1364-assembly-4538/README.md) | #4538 | Independent recording acceptance assembly — build4538, Budgie open |
 | [2026-11-10-recording-1364-hyprland-4538-hide-bar](2026-11-10-recording-1364-hyprland-4538-hide-bar/README.md) | — | Hyprland acceptance follow-up with supplied hide-bar driver |
 | [2026-11-10-recording-1364-gnome-4538](2026-11-10-recording-1364-gnome-4538/README.md) | #1364, #4538 | Independent #1364 stage 2: GNOME on physical f44 |
 | [2026-11-10-recording-1364-budgie](2026-11-10-recording-1364-budgie/README.md) | #1364, #1372 | Budgie acceptance — PR #1372 / issue #1364 |
