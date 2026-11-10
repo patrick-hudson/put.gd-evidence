@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-10-ubuntu-mirror-1381](2026-11-10-ubuntu-mirror-1381/README.md) | #1381 | Ubuntu container mirror throughput (#1381) |
 | [2026-11-10-small-fixes-final](2026-11-10-small-fixes-final/README.md) | — | Final revisions: redaction edge patches and runtime Qt accessibility branch |
 | [2026-11-10-capture-monitor-delay-repeat](2026-11-10-capture-monitor-delay-repeat/README.md) | #1363 | Capture monitor, delayed capture and Repeat last region (#1363) |
 | [2026-11-10-small-fixes-followup](2026-11-10-small-fixes-followup/README.md) | — | Small fixes: paint cost and native Cinnamon follow-up |
