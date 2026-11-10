@@ -1,0 +1,20 @@
+# PR 1368 Budgie acceptance, 2026-11-10
+
+PASS a–e. f is an observation: immediate desktop capture while gtklock is up completes with a picture of the lock screen, not the unlocked desktop.
+
+Guest ab9 on d69 (192.168.68.69), Fedora45 Budgie10.10.3-3.fc45 / labwc0.20.2-2.fc45, native Wayland. Fresh overlay of immutable Fedora45 Budgie golden, two connected heads: Virtual-1 1280x800 at1024,0 and Virtual-2 1024x768 at0,0. QEMU PID1853957, run6113db71-532a-417e-a71a-d71b66527514. Both heads visible through tunnel putgd-vm-1363-ab9 on wall ports6090/6091 while testing. Owner demos and guest bc8 untouched.
+
+PR head13570fca94df85b799755494d4914fb7009f7e4d. CI42763770262, release-appimage, build4498, version26.1110.4498-dev+g0cf6a17ae4f2. Build tree1e2d35a411dc2f281b3c3414c87503a62476eba8 matches the head. AppImage SHA256 f9239c5b1e75a4559eccfe3cea0a331b211b133cdc7cd6d83524c93e0d2007ee. No compilation. Actual mapped QtCore qVersion6.12.0 (qt-version.log and loaded-qt.txt).
+
+- a: checks.py all15 passed (checks.log), including both native monitor sizes, desktop2304x800, repeat refusal and identical300x200 region, layout invalidation/restoration, visible5-second countdown omitted from capture, delayed region, click/API cancellation and locked-countdown refusal/unlock.
+- b: Settings GUI recorded Ctrl+Alt+R for Repeat and Ctrl+Alt+M for Capture monitor. Capabilities reports both bound through labwc-bridge. Real keys produced repeat_unavailable with “There is no region to repeat yet. Capture a region first.” before any region; monitor key on pointer head1 produced1024x768. After a region, real repeat key returned identical300x200 pixels (real-key-repeat and immediate-shortcut files).
+- c: added Capture monitor exception through Settings, local only; tested against a different unavailable synthetic upload default. Monitor completed locally with empty destination profileId (monitor-exception-result.json, route-proof.log). No network destination or user objects changed.
+- d: selected3 seconds in the window button menu. Window desktop capture and tray monitor capture displayed countdowns, completed, and omitted the pill from saved pixels (window-delay3-omission.json and tray-delay3-omission.json). Tray menu displayed3seconds. Cancelled a further GUI/tray-started3-second countdown by clicking the pill; operation has cancelled=true, error=cancelled, items=[] and no output (tray-click-cancel.json).
+- e: with GUI delay3 selected, real Ctrl+Shift+1 region capture completed immediately after drag (<2.8seconds), no countdown; real Ctrl+Alt+R returned identical pixels. immediate-shortcut.json records timing.
+- f: gtklock visibly up, CLI immediate desktop capture completed; returned image shows the lock screen on both heads. See budgie-locked-witness.png, budgie-immediate-locked.json, budgie-immediate-locked-capture.png and restored desktop witness. No product fix attempted.
+
+Pictures annotated through put.gd production editor session methods: budgie-bound-shortcuts.png (both confirmed bridge bindings boxed), budgie-tray-countdown.png (tray-started3-second pill boxed). Cropped to app surfaces; full unannotated witnesses retained.
+
+Harness attempts: first install request preceded state.json and returned missing-state; retried after launch readiness. Enabling Keep a local copy removed the no-output banner and shifted rows; an initial Repeat click instead bound Capture window, then key returned target_unavailable. Saved harness-wrong-row.png, corrected GUI coordinates, moved Window toCtrl+Alt+W, bound Repeat toCtrl+Alt+R, repeated real-key tests successfully. No product failure. Qt probe initially used a mangled symbol; corrected to qVersion. All final results use the corrected commands. VM prelaunch QMP path51bytes and resident socket path46bytes are below107bytes; socket-paths.json retained.
+
+Run ended: resident editor work completed; VM stopped, workstation tunnel stopped and wall entries removed. Evidence exported with checksum verification before guarded overlay cleanup; cleanup receipt retained. No owned VM or test process left on d69. Host-side evidence and immutable golden retained.

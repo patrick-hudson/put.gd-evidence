@@ -1,0 +1,3 @@
+from pathlib import Path
+import json,hashlib
+R=Path('/home/patrick/work/i1363/work/lab-runs/ab9');E=Path('/home/patrick/work/i1363/work/acceptance-1363/ab9');s=json.loads((R/'state.json').read_text());c=dict(run=str(R),runId=s['id'],completed=True,outcome='passed');(E/'completion.json').write_text(json.dumps(c,indent=2));files={str(p.relative_to(E)):hashlib.sha256(p.read_bytes()).hexdigest() for p in E.rglob('*') if p.is_file() and p.name!='cleanup-manifest.json'};(E/'cleanup-manifest.json').write_text(json.dumps(dict(schemaVersion=1,kind='vm-overlay-cleanup-evidence',**c,files=files),indent=2))
