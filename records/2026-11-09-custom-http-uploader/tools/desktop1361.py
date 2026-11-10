@@ -14,6 +14,7 @@ thing shown, and captures put.gd's window with ImageMagick `import`.
   --sxcu     folder with xbackbone.sxcu and zipline.sxcu from tools/lab/http_receivers
   --fixture  tests/fixtures/http_uploader_server.py of the same source
   --form-only  stop after the Settings form pictures (01 to 07)
+  --echo-only  only picture 16: a receiver that repeats the stored token in its link
 
 Needs xdotool, wmctrl, ImageMagick, python3-pil and firefox. Every link opens in Firefox with a
 throwaway profile through a temporary handler; ~/.config/mimeapps.list is restored byte for
@@ -37,6 +38,7 @@ parser.add_argument('--run', required=True)
 parser.add_argument('--sxcu', required=True)
 parser.add_argument('--fixture', required=True)
 parser.add_argument('--form-only', action='store_true', help='stop after the Settings form pictures (01 to 07)')
+parser.add_argument('--echo-only', action='store_true', help='only picture 16: a receiver that repeats the stored token in its link')
 options = parser.parse_args()
 
 HOME = Path.home()
@@ -226,6 +228,16 @@ def main():
     w = window(pid=pid)
     frame = geometry(w)
     say('window', w, frame)
+
+    if options.echo_only:
+        document = cli('settings.get')['result']['document']
+        actions = {name: dict(action, shortcut='') for name, action in document['actions'].items()}  # no global shortcuts from this private resident
+        cli('settings.patch', {'patch': {'actions': actions}, 'expectedRevision': revision()})
+        png = R / 'own/putgd-custom-uploader-check.png'
+        image = Image.new('RGB', (640, 360), (24, 26, 30))
+        ImageDraw.Draw(image).text((40, 160), 'put.gd #1361 synthetic upload', fill=(244, 196, 48))
+        image.save(png)
+        return echoed(w, png)
 
     # 1. Add destination: the menu with the new type.
     click(w, 92, frame[3] - 74)
@@ -420,6 +432,37 @@ def main():
     park()
     shot('13-after-retry', w)
     (SHOTS / 'tmp-history.png').unlink(missing_ok=True)
+    echoed(w, png, base)
+
+
+def echoed(w, png, base=None):
+    """10. A receiver that repeats the stored token in the link it returns: the link is not
+    recorded or copied, and History says so. The token is never on screen."""
+    import urllib.request
+    if base is None:
+        procs['fixture'] = subprocess.Popen([sys.executable, options.fixture], stdout=subprocess.PIPE, text=True)
+        base = 'http://127.0.0.1:' + procs['fixture'].stdout.readline().strip()
+    scripted = R / 'own/echoing.sxcu'
+    scripted.write_text(json.dumps({'Version': '17.0.0', 'Name': 'Echoing receiver', 'DestinationType': 'ImageUploader, FileUploader', 'RequestMethod': 'POST', 'RequestURL': base + '/upload/json',
+                                    'Headers': {'Authorization': 'Bearer putgd-synthetic-uploader-token-not-real'}, 'Body': 'MultipartFormData', 'FileFormName': 'file',
+                                    'URL': '{json:files[0].url}', 'DeletionURL': '{json:files[0].delete}'}))
+    scripted.chmod(0o600)
+    added = cli('settings.importUploader', {'path': str(scripted), 'expectedRevision': revision(), 'profileId': 'echoing', 'credentialMode': 'session'})
+    say('echoing import', added['ok'], added['error'].get('code'))
+    request = urllib.request.Request(base + '/__rules', data=json.dumps({'rules': [{'call': 'upload', 'store': True, 'echo': 'url'}]}).encode(), headers={'Content-Type': 'application/json'}, method='POST')
+    urllib.request.urlopen(request, timeout=10).read()
+    record = upload(png, 'echoing')
+    detail = cli('history.detail', {'id': record['id']})['result']
+    held = 'putgd-synthetic-uploader-token-not-real' in json.dumps(detail) or 'putgd-synthetic-uploader-token-not-real' in json.dumps(record)
+    (SHOTS / 'echoed.json').write_text(json.dumps({'uploadStatus': record['uploadStatus'], 'error': (record.get('error') or {}).get('code', ''),
+                                                    'linkRecorded': bool((record.get('receipt') or {}).get('directUrl')), 'tokenInTheRecord': held}, indent=1))
+    say('echoed link:', record['uploadStatus'], (record.get('error') or {}).get('code', ''), 'token in the record:', held)
+    cli('ui.show', {'view': 'history'})
+    time.sleep(2)
+    cli('ui.history', {'action': 'select', 'ids': [record['id']]})
+    time.sleep(1.5)
+    park()
+    shot('16-link-holds-stored-value', w)
 
 
 try:

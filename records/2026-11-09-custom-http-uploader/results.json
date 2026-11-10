@@ -1,16 +1,23 @@
 {
  "build": {
   "host": "m74 (Linux Mint 22.3, Cinnamon, X11, Qt 6.4.2)",
-  "source": "put.gd-desktop feat/custom-http-uploader at 8f69043ee (PR #1371 head), dev build of that tree; a build without git metadata, so the window shows 0.0.0-dev.unknown"
+  "source": "put.gd-desktop feat/custom-http-uploader, dev builds of the tree on m74; a build without git metadata, so the window shows 0.0.0-dev.unknown",
+  "pictures01to14": "taken at 8f69043ee",
+  "pictures15and16AndAllNumbersHere": "taken at 72d41fd6f (PR #1371 head after the review fix round and the merge of nightly cdac6e4b3)"
  },
  "ctest": {
   "http_uploader_rules": {
-   "passed": 158,
+   "passed": 203,
    "failed": 0
   },
   "http_uploader_integration": {
-   "passed": 41,
+   "passed": 67,
    "failed": 0
+  },
+  "wholeSuite": {
+   "passed": 145,
+   "failed": 1,
+   "failedTest": "capture_process_integration: needs the X11 shortcut adapter, which a run over SSH without a display does not have; not a file of this branch"
   }
  },
  "realReceivers": {
@@ -50,6 +57,17 @@
   "timeoutsAfterScrollingOverThem": {
    "connectTimeoutMs": 10000,
    "requestTimeoutMs": 600000
+  },
+  "linkThatRepeatsAStoredValue": {
+   "uploadStatus": "unknown",
+   "error": "http_link_holds_secret",
+   "linkRecorded": false,
+   "tokenInTheRecord": false
   }
+ },
+ "catalog": {
+  "darkRender": "passed",
+  "surfaceMapCheck": "passed",
+  "secretControlPinCheck": "passed"
  }
 }

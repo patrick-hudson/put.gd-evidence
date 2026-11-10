@@ -5,7 +5,11 @@ is a separate record made from the PR's CI packages.
 
 ## Build and host
 
-- Source: `feat/custom-http-uploader` at `8f69043ee` (PR #1371 head when taken).
+- Source: `feat/custom-http-uploader`. Pictures 01 to 14 were taken at `8f69043ee`. Pictures 15
+  and 16 and every number below were taken at `72d41fd6f`, the PR head after the review fix round
+  and the merge of `nightly` (cdac6e4b3). Between the two, no file of the Settings form or of
+  History changed what pictures 01 to 14 show: the fix round changed the worker, the import and
+  their tests, and the merge brought the image editor's changes.
 - Build: a dev build of that tree on **m74** (Linux Mint 22.3, Cinnamon, X11, Qt 6.4.2). The
   build tree has no git metadata, so the window's version reads `0.0.0-dev.unknown`.
 - Receivers: Zipline 4.8.3, Chibisafe 6.7.0 and XBackBone 3.8.2 in rootless Podman pods on
@@ -16,8 +20,11 @@ is a separate record made from the PR's CI packages.
 
 `results.json` has the numbers. In short:
 
-- `http_uploader_rules`: 158 passed, 0 failed. `http_uploader_integration` (production provider
-  and worker against the scripted loopback receiver): 41 passed, 0 failed.
+- `http_uploader_rules`: 203 passed, 0 failed. `http_uploader_integration` (production provider
+  and worker against the scripted loopback receiver): 67 passed, 0 failed. The whole suite on
+  m74: 145 of 146; `capture_process_integration` fails over SSH without a display (it needs the
+  X11 shortcut adapter) and is no file of this branch.
+- The dark catalog renders, and the surface map check and the secret-control pin check pass.
 - The three real receivers through a headless private resident (`check_uploads.py
   --allow-insecure-http`): Test connection, upload and link fetch pass for all three. XBackBone's
   upload is deleted through its deletion URL and the link then answers 404. Zipline and Chibisafe
@@ -28,6 +35,9 @@ is a separate record made from the PR's CI packages.
   storing the token, Test connection, an upload, the real Firefox (throwaway profile) loading the
   uploaded link, the prepared deletion and the deletion, an upload with no deletion URL, and a
   lost reply followed by an explicit Retry that leaves two copies on the scripted receiver.
+- A scripted receiver that repeats the stored token in the link it returns: the upload ends with
+  an unknown outcome (`http_link_holds_secret`), no link is recorded, and the token is in no part
+  of the History record.
 
 ## Pictures
 
@@ -53,7 +63,8 @@ and labels) were drawn with put.gd's own image editor through `putgd-cli` (`edit
 | `12-retry-may-duplicate.png` | A lost reply: outcome unknown, and the duplicate-on-retry notice |
 | `13-after-retry.png` | After Retry upload: uploaded, the notice gone, two copies on the receiver |
 | `14-no-deletion-url.png` | An upload to Zipline: no Delete button, and the reason |
-| `15-test-suites.png` | Terminal panel with the parser, scripted-receiver and real-receiver results |
+| `15-test-suites.png` | Panel with the parser, scripted-receiver and real-receiver results at `72d41fd6f` |
+| `16-link-holds-stored-value.png` | A receiver repeated the stored token in its link: not recorded, outcome unknown, the row named and not the value |
 
 `catalog-150/` has two renders of the same form from `putgd-ui-catalog` of the same build at
 150% text scale (synthetic catalog data).
@@ -65,5 +76,9 @@ and labels) were drawn with put.gd's own image editor through `putgd-cli` (`edit
   Allow plain HTTP box and Delete from destination), captures put.gd's window with ImageMagick,
   and opens the link in Firefox with a throwaway profile through a temporary handler;
   `~/.config/mimeapps.list` is restored byte for byte. Run under the m74 desktop lock.
-- `tools/headless-check.sh`: the real-receiver check against a headless resident.
+- `tools/desktop1361.py --echo-only` takes picture 16 alone, in about 30 seconds under the lock.
+- `tools/headless-check.sh`: the real-receiver check against a headless resident, then the dark
+  catalog with the surface map and pin checks.
+- `tools/panel1361.py`: draws picture 15 from the output of `ctest -R http_uploader -V` and the
+  report of `check_uploads.py`.
 - The token rows are shown masked and were never revealed; no picture or file here holds a token.

@@ -1,7 +1,7 @@
 #!/bin/sh
-# #1361: annotate pictures through put.gd's own editor in a headless private resident.
-# usage: annotate-run.sh IN_DIR OUT_DIR SPEC
-R=$HOME/work/i1361-run6
+# #1361 fix round: annotate pictures through put.gd's own editor in a headless private resident.
+# usage: annotate-run2.sh IN_DIR OUT_DIR SPEC
+R=$HOME/work/i1361-run6/annotate
 B=$HOME/work/i1361/build/dev
 mkdir -p $R/cfg $R/data $R/state $R/cache $R/rt && chmod 700 $R $R/rt
 export XDG_CONFIG_HOME=$R/cfg XDG_DATA_HOME=$R/data XDG_STATE_HOME=$R/state XDG_CACHE_HOME=$R/cache XDG_RUNTIME_DIR=$R/rt
@@ -12,7 +12,7 @@ setsid dbus-run-session -- sh -c 'exec '$B'/putgd --background' > $R/resident.lo
 i=0; while [ ! -S $R/rt/putgd/session.sock ] && [ $i -lt 100 ]; do sleep 0.2; i=$((i+1)); done
 [ -S $R/rt/putgd/session.sock ] || { echo "resident did not start"; exit 3; }
 sleep 4
-python3 $HOME/work/i1361-annotate1361.py --cli $B/putgd-cli --in "$1" --out "$2" --spec "$3"
+python3 $HOME/work/i1361-run6/annotate1361.py --cli $B/putgd-cli --in "$1" --out "$2" --spec "$3"
 echo "annotate exit=$?"
 $B/putgd-cli ui.quit > /dev/null 2>&1
 sleep 2
