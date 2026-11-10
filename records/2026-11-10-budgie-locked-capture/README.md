@@ -1,3 +1,5 @@
+> Follow-up: the initial unlocked refusal was reproduced and traced in fresh guests. See [startup investigation](startup-investigation/README.md). Head4b7e01d2b fixes the shared setup/frame deadline; its exact-head native acceptance is pending. The original native results below describe head930.
+
 # Budgie: refuse screenshot reads behind real session-lock surfaces
 
 Part of put.gd-desktop #1383; code PR #1385. Plain nightly 7fc609dc42f8f3c1118d79a63d42ce37ea4a71c9 reproduced the reported privacy bug: an agent desktop request completed and saved a picture of gtklock. Fresh d69 KVM guests, on the wall: Budgie 10.10.3, labwc 0.20.2, gtklock 4.0.0.
