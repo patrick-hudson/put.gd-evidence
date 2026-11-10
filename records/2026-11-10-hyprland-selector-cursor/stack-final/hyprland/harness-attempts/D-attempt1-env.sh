@@ -1,0 +1,9 @@
+export WAYLAND_DISPLAY=/run/user/1000/wayland-1
+export HYPRLAND_INSTANCE_SIGNATURE=efb50993780079460b0cbed1363e2166a2de1d9f_1794297889_1137969611
+export XDG_RUNTIME_DIR=/run/user/1000
+export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+export XDG_CURRENT_DESKTOP=Hyprland
+export XDG_SESSION_TYPE=wayland
+export QT_QPA_PLATFORM=wayland
+export XDG_CONFIG_HOME=/home/lab/putgd-lab/config
+export XDG_DATA_HOME=/home/lab/putgd-lab/data

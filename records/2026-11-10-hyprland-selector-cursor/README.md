@@ -1,23 +1,43 @@
-# Hyprland selector cursor: nightly reproduction and native-package fix
+# Hyprland selector cursor: final stacked-head acceptance
 
-Final stacked head is `ccf0ebb728a31a92c0fa30fd305aa6864f6cb0fc`, including capture `13570fca9` and nightly `962ac8c0b`. Its PR CI `42774482912` and full exact-head package CI `42774824781` are green. The [fresh capture-feature baseline](stack-baseline20/README.md) reproduces 8 cross cursors in 20 real dragged regions. Final-head acceptance is pending release of a recording quiet-row host; no result for that final guest matrix is claimed yet. The initial packet below remains historical.
+Part of #1384; code PR #1386 at **ccf0ebb728a31a92c0fa30fd305aa6864f6cb0fc**, with capture13570fca9 and nightly962ac8c0b merged. PR CI42774482912 and full exact-head package CI42774824781 are green. Native Arch and AppImage **26.1110.4515-dev+gccf0ebb728a3** identify this direct head, tree019a1b2fa09761b5d7e19ffdfe1fe6cd9ad3b699. Package SHA, every installed native binary and running resident were verified.
 
-## Initial package and review packet
+![Actual capture135 baseline and final native-head captures, enlarged and annotated in the final native editor](stack-final/hyprland/d-final-before-after.png)
 
-Part of put.gd-desktop #1384; code PR #1386. Branch head b88e817a1882c555d4c30ec6ab5bcfee7e91e5a6. Before: plain nightly 7fc609dc42f8f3c1118d79a63d42ce37ea4a71c9. After: exact native Arch CI package 26.1110.4451-dev+gb88e817a1882 from completed full workflow 42755841566. PR CI 42755825515 also passes. Package build commit and tree are in after/accept/version.json.
+Acceptance blanks the cursor on every selector surface before transparent-frame cleanup and the existing unmap fence. Clearing widget pixels did not remove the separate compositor cursor surface. No new delay was added. The two-surface mouse/keyboard regression requires synchronous CursorChange before finished/clearing/dismissing; original and ordering-mutation failures are retained. Both restored component suites pass on f44; implementation source matches the final head.
 
-![Annotated actual before and after captures](after/accept/d-before-after.png)
+## Strict final cursor measure
 
-Fresh d69 KVM guests, displayed on the wall: Omarchy 4.5.0, Hyprland 0.56.2, software llvmpipe LLVM 23.1.3. Two monitors, 1280x800+0+0 and 1024x768+1280+0. A static wallpaper, 300x200 region from (300,300) to (600,500), pointer remains at release until the virtual pointer disconnects. Thirty captures each; selector waits rotate 0.4, 0.8 and 2.5 seconds. Each capture is compared pixel-for-pixel with a cursor-free grim reference after moving the pointer away.
+Fresh software-rendered two-head Omarchy4.5/Hyprland0.56.2 KVM guest hc5 on released f44,2vCPU/6GB. Actual300x200 drags (300,300)-(600,500), selector waits rotate0.4/0.8/2.5s, eight motion steps. Each saved image is compared across **every RGB pixel** against an independent grim reference after moving the pointer away. There is no corner waiver or tolerance.
 
-Nightly: 6/30 leak the same 59 pixels, bounding box (289,189)-(300,200), across all wait buckets. Branch: 0/30; all 30 match their reference exactly. Raw results, operation JSON and sample 14 capture/reference/diff are retained here. First one-head nightly run: 0/24. An earlier attempt with Settings open produced unrelated hover-border changes; it is excluded from the 30-sample result and preserved privately. A Fedora helper experiment failed Arch dynamic linking before capture; no build identity check was weakened. We then used the native Arch package above.
+| CI package / action | Samples | Images with any difference |
+| --- | ---: | ---: |
+| Before: capture13570fca9 / CI4498, fresh d69hc4 | 20 | **8**, each59pixels in final11x11;0other differences |
+| Final ccf0 / nativeCI4515, immediate dragged region | 20 | **0** |
+| Final ccf0 / nativeCI4515, delayed region3s | 10 | **0** |
+| Final ccf0 / nativeCI4515, immediate repeat at release pointer position | 10 | **0** |
 
-The fix blanks all selector cursors at acceptance, before the existing transparent-frame cleanup and unmap fence. A two-surface regression covers mouse and keyboard acceptance: it fails on nightly with CrossCursor, passes after with BlankCursor before the selected signal. Both overlay suites passed on f44. No new frame delay was added.
+Delayed regions are followed immediately by Repeat before moving the pointer for the independent reference; no grace period is inserted. All40 final images are bit-exact. The coordinator's independent capture135 run found9/20; this lane's separate same-measure baseline is8/20. Original plain nightly7fc609dc4 reproduced6/30 on two heads and0/24 on one head; waits from every bucket reproduced it. Hardware cursor behavior was not tested.
 
-This demonstrates the race and its mitigation on the reported software-rendered two-head guest. It does not establish hardware cursor behavior or a compositor-wide upstream reproduction independent of put.gd. No physical desktop, S3 upload, or unrelated desktop acceptance was run for this fix. No workstation build or test was run.
+## Current capture-feature matrix
 
-Pictures were composed on d69 from actual capture pixels; the corner is enlarged 12x with nearest-neighbor sampling. Labels and arrow were applied by the production editor from the exact native head. Source composition and editor drivers are included. Source pixels are unchanged.
+Each final branch's CI package ran the complete current coordination fifteen-check driver on both fresh guest desktops, one owned guest at a time. The native D package and C AppImage ran sequentially in hc5; the two AppImages ran sequentially in fresh Budgie bc9, restarting the resident before each sequence.
 
-Full raw PNG sets and failed experiments are retained in private checksum-verified archives on workstation and d69, indexed in restore-index.json. Guest overlays were stopped and retired with the guarded cleanup after export; receipts accompany this record.
+| Head / package | Budgie10.10.3/labwc0.20.2 | Omarchy4.5/Hyprland0.56.2 |
+| --- | --- | --- |
+| D ccf0 / CI4515 | **15/15 PASS** | **15/15 PASS** |
+| C ec54 / CI4522 | **15/15 PASS** | **15/15 PASS** |
 
-Initial review head77d9ffb12ea1f93e183eb000f2f5dabf69555bbf changes only the regression test, leaving pictured production code identical. Its CI42759842181 is green after the Ubuntu26 dependency-install timeout retry. Both CodeRabbit bodies and walkthrough read, no outside-diff findings/open threads. See review-follow-up.md and builder-source-audit.json.
+Driver original SHA40fca26fa709742d8b29b18d1630275c9df90c5c28782d9666da939d31b25524; corrected real-pill locator and all fifteen assertions unchanged. Only own ROOT and protected-input unlock were adapted. Its existing Hyprland corner allowance is not used by the strict40-image supplement above.
+
+The first D driver attempt did not invoke the locker because setup lacked OMARCHY_PATH and used an absolute display name unlike the shell's IPC identity. Both screenshots were visibly unlocked, so the protected-input guard withheld all login input. The exact helper was stopped after PID/start-time verification. Correct public shell environment plus a required IPC ping fixed setup; the complete successful fifteen-check rerun, including a real visible lock and recovery, is separate. Failed frames/logs and diagnostics are preserved.
+
+The stacked review also found a pending Wayland countdown-sync callback whose listener owner could be destroyed. Its destructor now destroys/nulls that fence in both independent code branches. This is a source-lifetime correction, not a claimed reproduced crash; the real click/API cancellation cases pass in all four matrix cells.
+
+## Evidence and retirement
+
+stack-final/ contains final actual captures/diffs/operation JSON for all40 cursor samples, one whole independent reference per measure (every reference retained privately), both desktop driver logs, exact package/running receipts, final native editor source/apply/save records, source parity and overlay-retirement receipts. stack-baseline20/ contains the capture135 before measure.
+
+Full private archives retain every raw reference, complete failed attempts and private history. hc5 archive7064ea743199c853b10bbaa3d9ce8ee0b2336a786fa4a206098f040e837b8888; bc9 archiveb8e1640730370ca065be04bc9f451065514f8dd9d0c55d6a534018d6355125f7. Both verified builder/workstation before guarded overlay retirement; exact QEMU processes absent, own wall entries/tunnels removed, immutable goldens preserved. No physical desktop, upload, workstation build/test/encoding or independent upstream compositor reproduction was used. The product mitigation is demonstrated on the reported software-rendered guest.
+
+Earlier native4451 results and original review remain historical in after/, review-follow-up.md and historical-summary-before-final-stack.md.
