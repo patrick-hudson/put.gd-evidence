@@ -1,0 +1,55 @@
+{
+ "host": "fedora",
+ "kernel": "7.2.11-200.fc44.x86_64",
+ "desktop": "gnome-shell",
+ "session": "wayland",
+ "target": "region",
+ "rect": [
+  0,
+  0,
+  960,
+  540
+ ],
+ "formats": [
+  "mp4",
+  "webm"
+ ],
+ "video": "marker",
+ "timing": {
+  "lead": 6.0,
+  "pauseAt": 14.0,
+  "pauseFor": 0.0,
+  "after": 2.0
+ },
+ "builds": {
+  "nightly": {
+   "kind": "installed",
+   "dir": "/home/patrick/work/s1364b/roots/nightly/usr/bin",
+   "version": "putgd-record 26.1109.4346-nightly"
+  },
+  "pr": {
+   "kind": "installed",
+   "dir": "/home/patrick/work/s1364b/roots/pr/usr/bin",
+   "version": "putgd-record 26.1110.4480-dev+g20f4c6911013"
+  }
+ },
+ "analyzer": "/home/patrick/work/s1364b/roots/pr",
+ "rounds": [],
+ "microphone": {
+  "name": "putgd_lab_3175875",
+  "modules": {
+   "system": 536870916
+  },
+  "defaultSource": "alsa_input.pci-0000_00_1f.3.analog-stereo",
+  "defaultSink": "alsa_output.pci-0000_00_1f.3.analog-stereo",
+  "systemSink": "putgd_lab_3175875_system"
+ },
+ "error": "cover precheck failed, nothing recorded: {\"check\": \"precheck\", \"fraction\": 0.615, \"framebuffer\": [1920, 1080], \"minFraction\": 0.98, \"ok\": false, \"output\": [\"HDMI-1\"], \"rect\": [0, 0, 1920, 1080]}",
+ "microphoneRemoved": {
+  "removed": true,
+  "left": [],
+  "defaultSource": "alsa_input.pci-0000_00_1f.3.analog-stereo",
+  "defaultSink": "alsa_output.pci-0000_00_1f.3.analog-stereo"
+ },
+ "gpuHangs": []
+}

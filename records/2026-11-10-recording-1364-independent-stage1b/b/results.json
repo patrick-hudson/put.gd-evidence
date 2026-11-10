@@ -1,0 +1,880 @@
+{
+ "host": "fedora",
+ "kernel": "7.2.11-300.fc45.x86_64",
+ "desktop": "budgie-panel",
+ "session": "wayland",
+ "target": "region",
+ "rect": [
+  0,
+  0,
+  960,
+  540
+ ],
+ "formats": [
+  "mp4"
+ ],
+ "video": "marker",
+ "timing": {
+  "lead": 6.0,
+  "pauseAt": 14.0,
+  "pauseFor": 0.0,
+  "after": 2.0
+ },
+ "builds": {
+  "nightly": {
+   "kind": "appimage",
+   "file": "nightly.AppImage",
+   "sha256": "d72454ab90ff75ef5378f141651d83f2c3b341eaa133b3bc86b4ced4efe2714b"
+  }
+ },
+ "analyzer": "/home/lab/an/squashfs-root",
+ "rounds": [
+  {
+   "build": "nightly",
+   "round": 1,
+   "format": "mp4",
+   "started": "2026-11-10T06:09:23Z",
+   "acquisition": "wlr-capture",
+   "liveEncoders": [
+    "x264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": null,
+    "audioEncoder": "voaacenc",
+    "recordingMicrophone": null,
+    "microphoneLost": null
+   },
+   "recordedS": 16.02,
+   "microphoneLostAtStop": null,
+   "load": 1.46630859375,
+   "durationUs": 17599999,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "ffc270ab-d085-42b4-828d-6a97f4b654be.mkv",
+     "bytes": 329194,
+     "motion": 7.552,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.1457142857142857,
+       "blocks": 350,
+       "maxAmplitude": 0.3452609223443357,
+       "medianAmplitude": 6.539887666531185e-07
+      },
+      "440": {
+       "activeFraction": 0.9971428571428571,
+       "blocks": 350,
+       "maxAmplitude": 0.021470746884904874,
+       "medianAmplitude": 0.016957553047822326
+      }
+     },
+     "pairs": 16,
+     "medianMs": 43,
+     "spreadMs": 33.7,
+     "offsetsMs": [
+      9.7,
+      43,
+      43.3,
+      42.7,
+      43,
+      43.3,
+      42.7,
+      43,
+      42.7,
+      43,
+      43.3,
+      42.7,
+      43,
+      43.3,
+      42.7,
+      43
+     ],
+     "pairTimesS": [
+      1.8,
+      2.767,
+      3.767,
+      4.767,
+      5.767,
+      6.767,
+      7.767,
+      8.767,
+      9.767,
+      10.767,
+      11.767,
+      12.767,
+      13.767,
+      14.767,
+      15.767,
+      16.767
+     ]
+    },
+    "export": {
+     "file": "nightly-mp4-1.mp4",
+     "bytes": 224267,
+     "motion": 7.556,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.1452991452991453,
+       "blocks": 351,
+       "maxAmplitude": 0.3453539340774689,
+       "medianAmplitude": 1.178330951075456e-06
+      },
+      "440": {
+       "activeFraction": 0.9971509971509972,
+       "blocks": 351,
+       "maxAmplitude": 0.018643259667568825,
+       "medianAmplitude": 0.016914170573232936
+      }
+     },
+     "pairs": 16,
+     "medianMs": 43.3,
+     "spreadMs": 33.3,
+     "offsetsMs": [
+      10,
+      43.3,
+      43.3,
+      43.3,
+      43.3,
+      43.3,
+      43.3,
+      43.3,
+      43.3,
+      43.3,
+      43.3,
+      43.3,
+      43.3,
+      43.3,
+      43.3,
+      43.3
+     ],
+     "pairTimesS": [
+      1.8,
+      2.767,
+      3.767,
+      4.767,
+      5.767,
+      6.767,
+      7.767,
+      8.767,
+      9.767,
+      10.767,
+      11.767,
+      12.767,
+      13.767,
+      14.767,
+      15.767,
+      16.767
+     ]
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 1.0
+    },
+    "fraction": 0.6049,
+    "kept": "/home/lab/r/frames/nightly-mp4-1.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     960,
+     540
+    ],
+    "sha256": "532ee6eb534353289bd0de6e131804b6b074ad66394f1754036f5d2207fbc4ba",
+    "size": [
+     960,
+     540
+    ]
+   },
+   "thirdParty": {
+    "command": [
+     "wf-recorder",
+     "--no-dmabuf",
+     "--audio=putgd_lab_5927_system.monitor",
+     "--codec=libvpx-vp9",
+     "--pixel-format=yuv420p",
+     "-p",
+     "deadline=realtime",
+     "-p",
+     "cpu-used=8",
+     "--audio-codec=aac",
+     "--framerate=30",
+     "--geometry=0,0 960x540",
+     "--file=/home/lab/r/out/wf-1.mkv"
+    ],
+    "source": "putgd_lab_5927_system.monitor",
+    "defaultSink": "putgd_lab_5927_system",
+    "pid": 7292,
+    "exit": 0,
+    "av": {
+     "audioSeconds": 17.69,
+     "bursts": 17,
+     "flashes": 17,
+     "maxMs": 43.7,
+     "medianMs": -56,
+     "minMs": -123,
+     "offsetsMs": [
+      43.7,
+      -23,
+      -88.7,
+      -89.3,
+      -123,
+      -88.7,
+      -56.3,
+      -89,
+      -56.3,
+      -56,
+      -55.7,
+      -56.3,
+      -56,
+      -22.7,
+      -23.3,
+      -23,
+      -23.3
+     ],
+     "pairTimesS": [
+      0.7,
+      1.767,
+      2.833,
+      3.833,
+      4.867,
+      5.833,
+      6.8,
+      7.833,
+      8.8,
+      9.8,
+      10.8,
+      11.8,
+      12.8,
+      13.767,
+      14.767,
+      15.767,
+      16.767
+     ],
+     "pairs": 17,
+     "peak": 0.247,
+     "periodMs": 1000,
+     "spreadMs": 166.7,
+     "videoFrames": 530
+    },
+    "motion": 7.544,
+    "frame": {
+     "edges": {
+      "left": 1.0,
+      "top": 1.0
+     },
+     "fraction": 0.6049,
+     "kept": "/home/lab/r/frames/wf-1.png",
+     "minFraction": 0.5,
+     "ok": true,
+     "rect": [
+      0,
+      0,
+      960,
+      540
+     ],
+     "sha256": "b6f55b569bb65e1e0a76f66b3e8c7f5a5718db72cfa0c591cdc615960fc30708",
+     "size": [
+      960,
+      540
+     ]
+    }
+   }
+  },
+  {
+   "build": "nightly",
+   "round": 2,
+   "format": "mp4",
+   "started": "2026-11-10T06:10:16Z",
+   "acquisition": "wlr-capture",
+   "liveEncoders": [
+    "x264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": null,
+    "audioEncoder": "voaacenc",
+    "recordingMicrophone": null,
+    "microphoneLost": null
+   },
+   "recordedS": 16.019,
+   "microphoneLostAtStop": null,
+   "load": 1.37353515625,
+   "durationUs": 17599999,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "36bfe02b-ea5f-4e33-9cbe-9e441a0e050a.mkv",
+     "bytes": 329561,
+     "motion": 33.099,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.15472779369627507,
+       "blocks": 349,
+       "maxAmplitude": 0.3454419719004393,
+       "medianAmplitude": 1.181060471603513e-06
+      },
+      "440": {
+       "activeFraction": 0.997134670487106,
+       "blocks": 349,
+       "maxAmplitude": 0.02026763812936225,
+       "medianAmplitude": 0.01695235422895419
+      }
+     },
+     "pairs": 16,
+     "medianMs": 13.3,
+     "spreadMs": 33.7,
+     "offsetsMs": [
+      13.3,
+      12.7,
+      13,
+      12.7,
+      13,
+      13.3,
+      12.7,
+      13,
+      13.3,
+      12.7,
+      46,
+      45.7,
+      46,
+      46.3,
+      45.7,
+      46
+     ],
+     "pairTimesS": [
+      2.133,
+      3.133,
+      4.133,
+      5.133,
+      6.133,
+      7.133,
+      8.133,
+      9.133,
+      10.133,
+      11.133,
+      12.1,
+      13.1,
+      14.1,
+      15.1,
+      16.1,
+      17.1
+     ]
+    },
+    "export": {
+     "file": "nightly-mp4-2.mp4",
+     "bytes": 228240,
+     "motion": 33.09,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.15428571428571428,
+       "blocks": 350,
+       "maxAmplitude": 0.34533508000809177,
+       "medianAmplitude": 1.4890765768763754e-06
+      },
+      "440": {
+       "activeFraction": 0.9942857142857143,
+       "blocks": 350,
+       "maxAmplitude": 0.0203134244700115,
+       "medianAmplitude": 0.016928281831860036
+      }
+     },
+     "pairs": 16,
+     "medianMs": 12.7,
+     "spreadMs": 33.3,
+     "offsetsMs": [
+      12.7,
+      12.7,
+      12.7,
+      12.7,
+      12.7,
+      12.7,
+      12.7,
+      12.7,
+      12.7,
+      12.7,
+      46,
+      46,
+      46,
+      46,
+      46,
+      46
+     ],
+     "pairTimesS": [
+      2.133,
+      3.133,
+      4.133,
+      5.133,
+      6.133,
+      7.133,
+      8.133,
+      9.133,
+      10.133,
+      11.133,
+      12.1,
+      13.1,
+      14.1,
+      15.1,
+      16.1,
+      17.1
+     ]
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 1.0
+    },
+    "fraction": 0.6049,
+    "kept": "/home/lab/r/frames/nightly-mp4-2.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     960,
+     540
+    ],
+    "sha256": "32dc3fe7928fe1967b38697956cf807a778569ad286b9d10d3382e6d9b29918c",
+    "size": [
+     960,
+     540
+    ]
+   },
+   "thirdParty": {
+    "command": [
+     "wf-recorder",
+     "--no-dmabuf",
+     "--audio=putgd_lab_5927_system.monitor",
+     "--codec=libvpx-vp9",
+     "--pixel-format=yuv420p",
+     "-p",
+     "deadline=realtime",
+     "-p",
+     "cpu-used=8",
+     "--audio-codec=aac",
+     "--framerate=30",
+     "--geometry=0,0 960x540",
+     "--file=/home/lab/r/out/wf-2.mkv"
+    ],
+    "source": "putgd_lab_5927_system.monitor",
+    "defaultSink": "putgd_lab_5927_system",
+    "pid": 7862,
+    "exit": 0,
+    "av": {
+     "audioSeconds": 17.69,
+     "bursts": 18,
+     "flashes": 18,
+     "maxMs": 26.3,
+     "medianMs": 26,
+     "minMs": -7.3,
+     "offsetsMs": [
+      25.7,
+      26,
+      -7.3,
+      26,
+      26.3,
+      25.7,
+      26,
+      26.3,
+      25.7,
+      26,
+      25.7,
+      -7,
+      26.3,
+      25.7,
+      26,
+      26.3,
+      25.7,
+      26
+     ],
+     "pairTimesS": [
+      0,
+      1,
+      2.033,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11.033,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+     ],
+     "pairs": 18,
+     "peak": 0.251,
+     "periodMs": 1000,
+     "spreadMs": 33.7,
+     "videoFrames": 530
+    },
+    "motion": 7.57,
+    "frame": {
+     "edges": {
+      "left": 1.0,
+      "top": 1.0
+     },
+     "fraction": 0.6049,
+     "kept": "/home/lab/r/frames/wf-2.png",
+     "minFraction": 0.5,
+     "ok": true,
+     "rect": [
+      0,
+      0,
+      960,
+      540
+     ],
+     "sha256": "9b928fad76101d7fa302bf09d54a30011377076a6bed59dbee8bc13e66828fe2",
+     "size": [
+      960,
+      540
+     ]
+    }
+   }
+  },
+  {
+   "build": "nightly",
+   "round": 3,
+   "format": "mp4",
+   "started": "2026-11-10T06:11:09Z",
+   "acquisition": "wlr-capture",
+   "liveEncoders": [
+    "x264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": null,
+    "audioEncoder": "voaacenc",
+    "recordingMicrophone": null,
+    "microphoneLost": null
+   },
+   "recordedS": 16.022,
+   "microphoneLostAtStop": null,
+   "load": 1.6005859375,
+   "durationUs": 17566666,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "764d272f-554e-4d98-b347-593f42f69c91.mkv",
+     "bytes": 330586,
+     "motion": 58.645,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.14613180515759314,
+       "blocks": 349,
+       "maxAmplitude": 0.3453948547441158,
+       "medianAmplitude": 1.0187643892220044e-06
+      },
+      "440": {
+       "activeFraction": 0.997134670487106,
+       "blocks": 349,
+       "maxAmplitude": 0.019893174227589523,
+       "medianAmplitude": 0.016951499622477172
+      }
+     },
+     "pairs": 16,
+     "medianMs": 38,
+     "spreadMs": 33.3,
+     "offsetsMs": [
+      38.3,
+      37.7,
+      38,
+      38.3,
+      37.7,
+      38,
+      37.7,
+      38,
+      38.3,
+      37.7,
+      38,
+      38.3,
+      37.7,
+      71,
+      37.7,
+      38
+     ],
+     "pairTimesS": [
+      2.5,
+      3.5,
+      4.5,
+      5.5,
+      6.5,
+      7.5,
+      8.5,
+      9.5,
+      10.5,
+      11.5,
+      12.5,
+      13.5,
+      14.5,
+      15.467,
+      16.5,
+      17.5
+     ]
+    },
+    "export": {
+     "file": "nightly-mp4-3.mp4",
+     "bytes": 227953,
+     "motion": 58.628,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.1457142857142857,
+       "blocks": 350,
+       "maxAmplitude": 0.3453052315857233,
+       "medianAmplitude": 1.380207164842595e-06
+      },
+      "440": {
+       "activeFraction": 0.9942857142857143,
+       "blocks": 350,
+       "maxAmplitude": 0.01993082248390748,
+       "medianAmplitude": 0.016924802351880867
+      }
+     },
+     "pairs": 16,
+     "medianMs": 38,
+     "spreadMs": 33.3,
+     "offsetsMs": [
+      38,
+      38,
+      38,
+      38,
+      38,
+      38,
+      38,
+      38,
+      38,
+      38,
+      38,
+      38,
+      38,
+      71.3,
+      38,
+      38
+     ],
+     "pairTimesS": [
+      2.5,
+      3.5,
+      4.5,
+      5.5,
+      6.5,
+      7.5,
+      8.5,
+      9.5,
+      10.5,
+      11.5,
+      12.5,
+      13.5,
+      14.5,
+      15.467,
+      16.5,
+      17.5
+     ]
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 1.0
+    },
+    "fraction": 0.6049,
+    "kept": "/home/lab/r/frames/nightly-mp4-3.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     960,
+     540
+    ],
+    "sha256": "8241e2f22be71c836ac1e8f02df1d3abffae74bb225bcbb9134bb70941591a46",
+    "size": [
+     960,
+     540
+    ]
+   },
+   "thirdParty": {
+    "command": [
+     "wf-recorder",
+     "--no-dmabuf",
+     "--audio=putgd_lab_5927_system.monitor",
+     "--codec=libvpx-vp9",
+     "--pixel-format=yuv420p",
+     "-p",
+     "deadline=realtime",
+     "-p",
+     "cpu-used=8",
+     "--audio-codec=aac",
+     "--framerate=30",
+     "--geometry=0,0 960x540",
+     "--file=/home/lab/r/out/wf-3.mkv"
+    ],
+    "source": "putgd_lab_5927_system.monitor",
+    "defaultSink": "putgd_lab_5927_system",
+    "pid": 8350,
+    "exit": 0,
+    "av": {
+     "audioSeconds": 17.69,
+     "bursts": 18,
+     "flashes": 18,
+     "maxMs": 76.3,
+     "medianMs": 43.3,
+     "minMs": 42.7,
+     "offsetsMs": [
+      43.3,
+      42.7,
+      43,
+      43.3,
+      75.7,
+      76,
+      75.7,
+      76,
+      76.3,
+      42.7,
+      43,
+      43.3,
+      42.7,
+      76,
+      75.7,
+      76,
+      43.3,
+      42.7
+     ],
+     "pairTimesS": [
+      0.333,
+      1.333,
+      2.333,
+      3.333,
+      4.3,
+      5.3,
+      6.3,
+      7.3,
+      8.3,
+      9.333,
+      10.333,
+      11.333,
+      12.333,
+      13.3,
+      14.3,
+      15.3,
+      16.333,
+      17.333
+     ],
+     "pairs": 18,
+     "peak": 0.247,
+     "periodMs": 1000,
+     "spreadMs": 33.7,
+     "videoFrames": 530
+    },
+    "motion": 33.081,
+    "frame": {
+     "edges": {
+      "left": 1.0,
+      "top": 1.0
+     },
+     "fraction": 0.6049,
+     "kept": "/home/lab/r/frames/wf-3.png",
+     "minFraction": 0.5,
+     "ok": true,
+     "rect": [
+      0,
+      0,
+      960,
+      540
+     ],
+     "sha256": "6c88b2e60c972a6ae39ce90ba5d9ac74b5952e785dd97d4ad18a4c691acff8c7",
+     "size": [
+      960,
+      540
+     ]
+    }
+   }
+  }
+ ],
+ "microphone": {
+  "name": "putgd_lab_5927",
+  "modules": {
+   "system": 536870916
+  },
+  "defaultSource": "@DEFAULT_SOURCE@",
+  "defaultSink": "auto_null",
+  "systemSink": "putgd_lab_5927_system"
+ },
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "Virtual-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1280,
+    800
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "skipped": "no loopback VNC tile (disposable guest)"
+  },
+  "video": "marker"
+ },
+ "microphoneRemoved": {
+  "removed": true,
+  "left": [],
+  "defaultSource": "@DEFAULT_SOURCE@",
+  "defaultSink": "auto_null"
+ },
+ "gpuHangs": []
+}

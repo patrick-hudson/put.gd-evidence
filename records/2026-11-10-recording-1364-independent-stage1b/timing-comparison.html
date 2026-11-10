@@ -1,0 +1,25 @@
+<!doctype html><html><head><meta charset="utf-8"></head><body>
+<style>
+#timing1b {font-family:var(--font-sans);color:var(--foreground)}
+#timing1b .legend {display:flex;gap:18px;flex-wrap:wrap;margin:8px 0 14px}
+#timing1b .row {margin:10px 0}
+#timing1b .plot {height:30px;position:relative;margin:4px 8px;background:var(--secondary)}
+#timing1b .band {position:absolute;left:29.17%;width:41.66%;height:100%;background:var(--success);opacity:.14}
+#timing1b .zero {position:absolute;left:50%;height:100%;border-left:1px solid var(--border)}
+#timing1b .mark {position:absolute;width:7px;height:7px;border-radius:50%;background:var(--chart-1);transform:translateX(-50%)}
+#timing1b .square {border-radius:0;background:var(--chart-2)}
+#timing1b .axis {display:flex;justify-content:space-between;margin:0 8px;color:var(--muted-foreground)}
+</style>
+<div id="timing1b" role="img" aria-label="Every stage 1b system-audio recording median. The shaded band is plus or minus one 30 fps frame. Hyprland repeat has no large early PR offset; GNOME and Budgie retain measured failures.">
+<h3>System audio: recording medians</h3>
+<div class="legend"><span>● Nightly</span><span>■ PR (wf-recorder on Budgie)</span><span>Shaded: ±33.3 ms</span></div>
+<div id="rows1b"></div><div class="axis"><span>−80 ms</span><span>0</span><span>+80 ms</span></div>
+</div><script>
+const data1b=[["Hyprland \u00b7 MP4", [17.3, 8.7, -11.3, 33.3, -14], [4.7, 14.7, 18, 12.7, 16]], ["Hyprland \u00b7 WEBM", [14.5, 7.5, 23.5, 21.5, 17.5], [1.5, 1.5, 1.5, 9.5, 5.5]], ["Cinnamon \u00b7 MP4", [-17.3, -11.3, -10.7], [-21.3, 4, -8]], ["Cinnamon \u00b7 WEBM", [-0.5, -19.5, 17.5], [-15.5, -14.5, 1.5]], ["Plasma \u00b7 MP4", [7.3, -4.7, 6.7], [-10, -12, -2.7]], ["Plasma \u00b7 WEBM", [13.5, 25.5, -16.5], [16.5, -2.5, 17.5]], ["GNOME \u00b7 MP4", [8.7, 36, 28.7], [40, 14.7, 21.3]], ["GNOME \u00b7 WEBM", [29.5, 7.5, 35.5], [23.5, 13.5, 28.5]], ["Budgie \u00b7 nightly vs wf-recorder", [43.3, 12.7, 38], [-56, 26, 43.3]]];
+const root1b=document.getElementById('rows1b');
+for(const [label,nightly,other] of data1b){
+ const row=document.createElement('div');row.className='row';const text=document.createElement('div');text.textContent=label;row.append(text);
+ const plot=document.createElement('div');plot.className='plot';plot.innerHTML='<div class="band"></div><div class="zero"></div>';
+ [nightly,other].forEach((values,kind)=>values.forEach((v,i)=>{const mark=document.createElement('span');mark.className='mark'+(kind?' square':'');mark.style.left=((v+80)/160*100)+'%';mark.style.top=((kind?15:2)+(i%3)*3)+'px';plot.append(mark);}));row.append(plot);root1b.append(row);
+}
+</script></body></html>

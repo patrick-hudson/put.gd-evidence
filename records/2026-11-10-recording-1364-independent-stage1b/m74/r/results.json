@@ -1,0 +1,2289 @@
+{
+ "host": "mint-builder",
+ "kernel": "6.14.0-37-generic",
+ "desktop": "cinnamon",
+ "session": "x11",
+ "target": "region",
+ "rect": [
+  0,
+  0,
+  960,
+  540
+ ],
+ "formats": [
+  "mp4",
+  "webm"
+ ],
+ "video": "marker",
+ "timing": {
+  "lead": 6.0,
+  "pauseAt": 14.0,
+  "pauseFor": 0.0,
+  "after": 2.0
+ },
+ "builds": {
+  "nightly": {
+   "kind": "installed",
+   "dir": "/home/patrick/work/s1364b/roots/nightly/usr/bin",
+   "version": "putgd-record 26.1109.4346-nightly"
+  },
+  "pr": {
+   "kind": "installed",
+   "dir": "/home/patrick/work/s1364b/roots/pr/usr/bin",
+   "version": "putgd-record 26.1110.4480-dev+g20f4c6911013"
+  }
+ },
+ "analyzer": "/home/patrick/work/s1364b/roots/pr",
+ "rounds": [
+  {
+   "build": "nightly",
+   "round": 1,
+   "format": "mp4",
+   "started": "2026-11-10T05:51:40Z",
+   "acquisition": "x11",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc",
+    "openh264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": null,
+    "audioEncoder": "avenc_aac",
+    "recordingMicrophone": null,
+    "microphoneLost": null
+   },
+   "recordedS": 16.038,
+   "microphoneLostAtStop": null,
+   "load": 0.837890625,
+   "durationUs": 16233333,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "f8ffe20e-c9cd-4b9b-810a-b8e02947b6e8.mkv",
+     "bytes": 215655,
+     "motion": 6.07,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.14814814814814814,
+       "blocks": 324,
+       "maxAmplitude": 0.34530439349211794,
+       "medianAmplitude": 7.979144100975369e-07
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 324,
+       "maxAmplitude": 0.01765419450857019,
+       "medianAmplitude": 0.016949718104839466
+      }
+     },
+     "pairs": 16,
+     "medianMs": -17,
+     "spreadMs": 0.7,
+     "offsetsMs": [
+      -16.7,
+      -17.3,
+      -17,
+      -17.3,
+      -17,
+      -16.7,
+      -17.3,
+      -17,
+      -16.7,
+      -17.3,
+      -17,
+      -17.3,
+      -17,
+      -16.7,
+      -17.3,
+      -17
+     ],
+     "pairTimesS": [
+      0.833,
+      1.833,
+      2.833,
+      3.833,
+      4.833,
+      5.833,
+      6.833,
+      7.833,
+      8.833,
+      9.833,
+      10.833,
+      11.833,
+      12.833,
+      13.833,
+      14.833,
+      15.833
+     ]
+    },
+    "export": {
+     "file": "nightly-mp4-1.mp4",
+     "bytes": 207562,
+     "motion": 6.051,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.14814814814814814,
+       "blocks": 324,
+       "maxAmplitude": 0.3453043451333249,
+       "medianAmplitude": 7.94981287166426e-07
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 324,
+       "maxAmplitude": 0.017654588545678866,
+       "medianAmplitude": 0.01694979306479302
+      }
+     },
+     "pairs": 16,
+     "medianMs": -17.3,
+     "spreadMs": 0,
+     "offsetsMs": [
+      -17.3,
+      -17.3,
+      -17.3,
+      -17.3,
+      -17.3,
+      -17.3,
+      -17.3,
+      -17.3,
+      -17.3,
+      -17.3,
+      -17.3,
+      -17.3,
+      -17.3,
+      -17.3,
+      -17.3,
+      -17.3
+     ],
+     "pairTimesS": [
+      0.833,
+      1.833,
+      2.833,
+      3.833,
+      4.833,
+      5.833,
+      6.833,
+      7.833,
+      8.833,
+      9.833,
+      10.833,
+      11.833,
+      12.833,
+      13.833,
+      14.833,
+      15.833
+     ]
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 1.0
+    },
+    "fraction": 0.5556,
+    "kept": "/home/patrick/work/s1364b/r/frames/nightly-mp4-1.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     960,
+     540
+    ],
+    "sha256": "ede06aeae3158d5c3ed568070ab36596579f79dca413bc615e88a6c468378b92",
+    "size": [
+     960,
+     540
+    ]
+   }
+  },
+  {
+   "build": "pr",
+   "round": 1,
+   "format": "mp4",
+   "started": "2026-11-10T05:52:09Z",
+   "acquisition": "x11",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc",
+    "openh264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false,
+    "microphoneReason": "default_is_monitor"
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": {
+     "microphone": false,
+     "system": true
+    },
+    "audioEncoder": "avenc_aac",
+    "recordingMicrophone": {
+     "available": false,
+     "effective": false,
+     "requested": false,
+     "unavailable": "The system's default input is the monitor of an output, not a microphone. Plug one in, or choose a device in Settings."
+    },
+    "microphoneLost": null
+   },
+   "recordedS": 16.045,
+   "microphoneLostAtStop": null,
+   "load": 1.73388671875,
+   "durationUs": 16199999,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "5850a8f0-39c4-465b-88df-f32bec142d56.mkv",
+     "bytes": 215738,
+     "motion": 10.923,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.14814814814814814,
+       "blocks": 324,
+       "maxAmplitude": 0.345310785228867,
+       "medianAmplitude": 1.0271571998880352e-06
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 324,
+       "maxAmplitude": 0.01898221179786149,
+       "medianAmplitude": 0.01695033708928054
+      }
+     },
+     "pairs": 16,
+     "medianMs": -20.7,
+     "spreadMs": 33.7,
+     "offsetsMs": [
+      11.7,
+      12,
+      12.3,
+      12,
+      12.3,
+      -21.3,
+      -21,
+      -20.7,
+      -21.3,
+      -21,
+      -20.7,
+      -21,
+      -20.7,
+      -21.3,
+      -21,
+      -20.7
+     ],
+     "pairTimesS": [
+      0.4,
+      1.4,
+      2.4,
+      3.4,
+      4.4,
+      5.433,
+      6.433,
+      7.433,
+      8.433,
+      9.433,
+      10.433,
+      11.433,
+      12.433,
+      13.433,
+      14.433,
+      15.433
+     ]
+    },
+    "export": {
+     "file": "pr-mp4-1.mp4",
+     "bytes": 206817,
+     "motion": 10.901,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.14814814814814814,
+       "blocks": 324,
+       "maxAmplitude": 0.34531104135672014,
+       "medianAmplitude": 1.0375783527272774e-06
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 324,
+       "maxAmplitude": 0.018980593757567835,
+       "medianAmplitude": 0.016950345868160473
+      }
+     },
+     "pairs": 16,
+     "medianMs": -21.3,
+     "spreadMs": 33.3,
+     "offsetsMs": [
+      12,
+      12,
+      12,
+      12,
+      12,
+      -21.3,
+      -21.3,
+      -21.3,
+      -21.3,
+      -21.3,
+      -21.3,
+      -21.3,
+      -21.3,
+      -21.3,
+      -21.3,
+      -21.3
+     ],
+     "pairTimesS": [
+      0.4,
+      1.4,
+      2.4,
+      3.4,
+      4.4,
+      5.433,
+      6.433,
+      7.433,
+      8.433,
+      9.433,
+      10.433,
+      11.433,
+      12.433,
+      13.433,
+      14.433,
+      15.433
+     ]
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 1.0
+    },
+    "fraction": 0.5556,
+    "kept": "/home/patrick/work/s1364b/r/frames/pr-mp4-1.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     960,
+     540
+    ],
+    "sha256": "bf6e5ac4c1c8f5a9a8c240fb6dac52cb182de949a05fbbd2299ce14f9366fc37",
+    "size": [
+     960,
+     540
+    ]
+   }
+  },
+  {
+   "build": "nightly",
+   "round": 1,
+   "format": "webm",
+   "started": "2026-11-10T05:52:38Z",
+   "acquisition": "x11",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc",
+    "openh264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": null,
+    "audioEncoder": "avenc_aac",
+    "recordingMicrophone": null,
+    "microphoneLost": null
+   },
+   "recordedS": 16.047,
+   "microphoneLostAtStop": null,
+   "load": 2.76171875,
+   "durationUs": 16199999,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "e355af7b-322f-4586-bcc3-f2c2041431a2.mkv",
+     "bytes": 216318,
+     "motion": 10.925,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.14814814814814814,
+       "blocks": 324,
+       "maxAmplitude": 0.34531863429489085,
+       "medianAmplitude": 1.04750799218203e-06
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 324,
+       "maxAmplitude": 0.019883333674183153,
+       "medianAmplitude": 0.016941237799067154
+      }
+     },
+     "pairs": 16,
+     "medianMs": -1,
+     "spreadMs": 0.7,
+     "offsetsMs": [
+      -1,
+      -0.7,
+      -1.3,
+      -1,
+      -0.7,
+      -1.3,
+      -1,
+      -0.7,
+      -1,
+      -0.7,
+      -1.3,
+      -1,
+      -0.7,
+      -1.3,
+      -1,
+      -0.7
+     ],
+     "pairTimesS": [
+      0.533,
+      1.533,
+      2.533,
+      3.533,
+      4.533,
+      5.533,
+      6.533,
+      7.533,
+      8.533,
+      9.533,
+      10.533,
+      11.533,
+      12.533,
+      13.533,
+      14.533,
+      15.533
+     ]
+    },
+    "export": {
+     "file": "nightly-webm-1.webm",
+     "bytes": 407047,
+     "motion": 10.922,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.14814814814814814,
+       "blocks": 324,
+       "maxAmplitude": 0.3473381473914121,
+       "medianAmplitude": 1.235424666695582e-06
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 324,
+       "maxAmplitude": 0.019945629630951405,
+       "medianAmplitude": 0.016946348337475343
+      }
+     },
+     "pairs": 16,
+     "medianMs": -0.5,
+     "spreadMs": 0,
+     "offsetsMs": [
+      -0.5,
+      -0.5,
+      -0.5,
+      -0.5,
+      -0.5,
+      -0.5,
+      -0.5,
+      -0.5,
+      -0.5,
+      -0.5,
+      -0.5,
+      -0.5,
+      -0.5,
+      -0.5,
+      -0.5,
+      -0.5
+     ],
+     "pairTimesS": [
+      0.533,
+      1.533,
+      2.533,
+      3.533,
+      4.533,
+      5.533,
+      6.533,
+      7.533,
+      8.533,
+      9.533,
+      10.533,
+      11.533,
+      12.533,
+      13.533,
+      14.533,
+      15.533
+     ]
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 1.0
+    },
+    "fraction": 0.5556,
+    "kept": "/home/patrick/work/s1364b/r/frames/nightly-webm-1.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     960,
+     540
+    ],
+    "sha256": "e86331fdd245b2eed1b25312c9ce14ca188a66852dcea52189fb063b29f59788",
+    "size": [
+     960,
+     540
+    ]
+   }
+  },
+  {
+   "build": "pr",
+   "round": 1,
+   "format": "webm",
+   "started": "2026-11-10T05:53:07Z",
+   "acquisition": "x11",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc",
+    "openh264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false,
+    "microphoneReason": "default_is_monitor"
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": {
+     "microphone": false,
+     "system": true
+    },
+    "audioEncoder": "avenc_aac",
+    "recordingMicrophone": {
+     "available": false,
+     "effective": false,
+     "requested": false,
+     "unavailable": "The system's default input is the monitor of an output, not a microphone. Plug one in, or choose a device in Settings."
+    },
+    "microphoneLost": null
+   },
+   "recordedS": 16.035,
+   "microphoneLostAtStop": null,
+   "load": 2.66748046875,
+   "durationUs": 16199999,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "ec17871b-0d29-4cd0-9f94-1da8a28933ad.mkv",
+     "bytes": 214218,
+     "motion": 6.069,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.14814814814814814,
+       "blocks": 324,
+       "maxAmplitude": 0.3453174917988288,
+       "medianAmplitude": 6.420222281782414e-07
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 324,
+       "maxAmplitude": 0.017606543755851307,
+       "medianAmplitude": 0.016941336714465318
+      }
+     },
+     "pairs": 16,
+     "medianMs": -16,
+     "spreadMs": 33.7,
+     "offsetsMs": [
+      17,
+      17.3,
+      -16.3,
+      -16,
+      -16.3,
+      -16,
+      -15.7,
+      -16.3,
+      -16,
+      -15.7,
+      -16.3,
+      -16,
+      -16.3,
+      -16,
+      -15.7,
+      -16.3
+     ],
+     "pairTimesS": [
+      0.567,
+      1.567,
+      2.6,
+      3.6,
+      4.6,
+      5.6,
+      6.6,
+      7.6,
+      8.6,
+      9.6,
+      10.6,
+      11.6,
+      12.6,
+      13.6,
+      14.6,
+      15.6
+     ]
+    },
+    "export": {
+     "file": "pr-webm-1.webm",
+     "bytes": 407061,
+     "motion": 6.068,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.14814814814814814,
+       "blocks": 324,
+       "maxAmplitude": 0.34573429642980624,
+       "medianAmplitude": 1.1837916477783293e-06
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 324,
+       "maxAmplitude": 0.017616798891652064,
+       "medianAmplitude": 0.01694701098608407
+      }
+     },
+     "pairs": 16,
+     "medianMs": -15.5,
+     "spreadMs": 33,
+     "offsetsMs": [
+      17.5,
+      17.5,
+      -15.5,
+      -15.5,
+      -15.5,
+      -15.5,
+      -15.5,
+      -15.5,
+      -15.5,
+      -15.5,
+      -15.5,
+      -15.5,
+      -15.5,
+      -15.5,
+      -15.5,
+      -15.5
+     ],
+     "pairTimesS": [
+      0.567,
+      1.567,
+      2.6,
+      3.6,
+      4.6,
+      5.6,
+      6.6,
+      7.6,
+      8.6,
+      9.6,
+      10.6,
+      11.6,
+      12.6,
+      13.6,
+      14.6,
+      15.6
+     ]
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 1.0
+    },
+    "fraction": 0.5556,
+    "kept": "/home/patrick/work/s1364b/r/frames/pr-webm-1.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     960,
+     540
+    ],
+    "sha256": "9e033bf32d373e4e826520cdb33c90d69053809f92e915566e003862dd0221c0",
+    "size": [
+     960,
+     540
+    ]
+   }
+  },
+  {
+   "build": "nightly",
+   "round": 2,
+   "format": "mp4",
+   "started": "2026-11-10T05:53:35Z",
+   "acquisition": "x11",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc",
+    "openh264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": null,
+    "audioEncoder": "avenc_aac",
+    "recordingMicrophone": null,
+    "microphoneLost": null
+   },
+   "recordedS": 16.041,
+   "microphoneLostAtStop": null,
+   "load": 2.4140625,
+   "durationUs": 16166666,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "07d8ad62-8fd9-42c3-9cda-44f0c8150c1d.mkv",
+     "bytes": 215621,
+     "motion": 10.924,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.14860681114551083,
+       "blocks": 323,
+       "maxAmplitude": 0.34521956596616427,
+       "medianAmplitude": 7.580060539616654e-07
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 323,
+       "maxAmplitude": 0.0197884207225477,
+       "medianAmplitude": 0.016943307223446443
+      }
+     },
+     "pairs": 16,
+     "medianMs": -11,
+     "spreadMs": 33.3,
+     "offsetsMs": [
+      22,
+      21.7,
+      -11,
+      -10.7,
+      -11.3,
+      -11,
+      -10.7,
+      -11.3,
+      -11,
+      -11.3,
+      -11,
+      -10.7,
+      -11.3,
+      -11,
+      -10.7,
+      21.7
+     ],
+     "pairTimesS": [
+      0.3,
+      1.3,
+      2.333,
+      3.333,
+      4.333,
+      5.333,
+      6.333,
+      7.333,
+      8.333,
+      9.333,
+      10.333,
+      11.333,
+      12.333,
+      13.333,
+      14.333,
+      15.3
+     ]
+    },
+    "export": {
+     "file": "nightly-mp4-2.mp4",
+     "bytes": 206816,
+     "motion": 10.897,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.14860681114551083,
+       "blocks": 323,
+       "maxAmplitude": 0.34521955480953376,
+       "medianAmplitude": 7.50231740072183e-07
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 323,
+       "maxAmplitude": 0.019788474778748164,
+       "medianAmplitude": 0.016943236891359636
+      }
+     },
+     "pairs": 16,
+     "medianMs": -11.3,
+     "spreadMs": 33.3,
+     "offsetsMs": [
+      22,
+      22,
+      -11.3,
+      -11.3,
+      -11.3,
+      -11.3,
+      -11.3,
+      -11.3,
+      -11.3,
+      -11.3,
+      -11.3,
+      -11.3,
+      -11.3,
+      -11.3,
+      -11.3,
+      22
+     ],
+     "pairTimesS": [
+      0.3,
+      1.3,
+      2.333,
+      3.333,
+      4.333,
+      5.333,
+      6.333,
+      7.333,
+      8.333,
+      9.333,
+      10.333,
+      11.333,
+      12.333,
+      13.333,
+      14.333,
+      15.3
+     ]
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 1.0
+    },
+    "fraction": 0.5556,
+    "kept": "/home/patrick/work/s1364b/r/frames/nightly-mp4-2.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     960,
+     540
+    ],
+    "sha256": "49d1717b35fa9aa329afe07c695e4afea0a4a5e72b133bd3280b86ee096e8288",
+    "size": [
+     960,
+     540
+    ]
+   }
+  },
+  {
+   "build": "pr",
+   "round": 2,
+   "format": "mp4",
+   "started": "2026-11-10T05:54:04Z",
+   "acquisition": "x11",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc",
+    "openh264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false,
+    "microphoneReason": "default_is_monitor"
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": {
+     "microphone": false,
+     "system": true
+    },
+    "audioEncoder": "avenc_aac",
+    "recordingMicrophone": {
+     "available": false,
+     "effective": false,
+     "requested": false,
+     "unavailable": "The system's default input is the monitor of an output, not a microphone. Plug one in, or choose a device in Settings."
+    },
+    "microphoneLost": null
+   },
+   "recordedS": 16.046,
+   "microphoneLostAtStop": null,
+   "load": 3.232421875,
+   "durationUs": 16199999,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "c03fe8d1-4bbf-443f-8997-dc171e0e8ce1.mkv",
+     "bytes": 215458,
+     "motion": 7.688,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.14814814814814814,
+       "blocks": 324,
+       "maxAmplitude": 0.3453264570085785,
+       "medianAmplitude": 9.559031013161698e-07
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 324,
+       "maxAmplitude": 0.01889768563229305,
+       "medianAmplitude": 0.016938887484076487
+      }
+     },
+     "pairs": 16,
+     "medianMs": 4,
+     "spreadMs": 0.7,
+     "offsetsMs": [
+      4.3,
+      3.7,
+      4,
+      3.7,
+      4,
+      4.3,
+      3.7,
+      4,
+      4.3,
+      3.7,
+      4,
+      3.7,
+      4,
+      4.3,
+      3.7,
+      4
+     ],
+     "pairTimesS": [
+      0.3,
+      1.3,
+      2.3,
+      3.3,
+      4.3,
+      5.3,
+      6.3,
+      7.3,
+      8.3,
+      9.3,
+      10.3,
+      11.3,
+      12.3,
+      13.3,
+      14.3,
+      15.3
+     ]
+    },
+    "export": {
+     "file": "pr-mp4-2.mp4",
+     "bytes": 206916,
+     "motion": 8.479,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.14814814814814814,
+       "blocks": 324,
+       "maxAmplitude": 0.3453264613904066,
+       "medianAmplitude": 9.416145801569007e-07
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 324,
+       "maxAmplitude": 0.018897607385904715,
+       "medianAmplitude": 0.016938875454142664
+      }
+     },
+     "pairs": 16,
+     "medianMs": 4,
+     "spreadMs": 0,
+     "offsetsMs": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+     ],
+     "pairTimesS": [
+      0.3,
+      1.3,
+      2.3,
+      3.3,
+      4.3,
+      5.3,
+      6.3,
+      7.3,
+      8.3,
+      9.3,
+      10.3,
+      11.3,
+      12.3,
+      13.3,
+      14.3,
+      15.3
+     ]
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 1.0
+    },
+    "fraction": 0.5556,
+    "kept": "/home/patrick/work/s1364b/r/frames/pr-mp4-2.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     960,
+     540
+    ],
+    "sha256": "8fcd8c04c0870a100cbaeb363633d405f7d17bfffca4453cc3e3f7ca35d00580",
+    "size": [
+     960,
+     540
+    ]
+   }
+  },
+  {
+   "build": "nightly",
+   "round": 2,
+   "format": "webm",
+   "started": "2026-11-10T05:54:33Z",
+   "acquisition": "x11",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc",
+    "openh264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": null,
+    "audioEncoder": "avenc_aac",
+    "recordingMicrophone": null,
+    "microphoneLost": null
+   },
+   "recordedS": 16.045,
+   "microphoneLostAtStop": null,
+   "load": 2.978515625,
+   "durationUs": 16199999,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "695f499b-9f49-4434-8188-816a95b00915.mkv",
+     "bytes": 215544,
+     "motion": 10.925,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.14814814814814814,
+       "blocks": 324,
+       "maxAmplitude": 0.34527146124839975,
+       "medianAmplitude": 8.867219032293679e-07
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 324,
+       "maxAmplitude": 0.02015404372090218,
+       "medianAmplitude": 0.016943694090663167
+      }
+     },
+     "pairs": 16,
+     "medianMs": -19.7,
+     "spreadMs": 67,
+     "offsetsMs": [
+      46.7,
+      13,
+      13.3,
+      12.7,
+      -20,
+      -19.7,
+      -20.3,
+      -20,
+      12.7,
+      -20,
+      -19.7,
+      12.7,
+      -20,
+      -19.7,
+      -20.3,
+      -20
+     ],
+     "pairTimesS": [
+      0.633,
+      1.667,
+      2.667,
+      3.667,
+      4.7,
+      5.7,
+      6.7,
+      7.7,
+      8.667,
+      9.7,
+      10.7,
+      11.667,
+      12.7,
+      13.7,
+      14.7,
+      15.7
+     ]
+    },
+    "export": {
+     "file": "nightly-webm-2.webm",
+     "bytes": 409845,
+     "motion": 10.93,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.14814814814814814,
+       "blocks": 324,
+       "maxAmplitude": 0.3478816221730303,
+       "medianAmplitude": 1.1008253046165837e-06
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 324,
+       "maxAmplitude": 0.020151510757991188,
+       "medianAmplitude": 0.016952355008736233
+      }
+     },
+     "pairs": 16,
+     "medianMs": -19.5,
+     "spreadMs": 67,
+     "offsetsMs": [
+      47.5,
+      13.5,
+      13.5,
+      13.5,
+      -19.5,
+      -19.5,
+      -19.5,
+      -19.5,
+      13.5,
+      -19.5,
+      -19.5,
+      13.5,
+      -19.5,
+      -19.5,
+      -19.5,
+      -19.5
+     ],
+     "pairTimesS": [
+      0.633,
+      1.667,
+      2.667,
+      3.667,
+      4.7,
+      5.7,
+      6.7,
+      7.7,
+      8.667,
+      9.7,
+      10.7,
+      11.667,
+      12.7,
+      13.7,
+      14.7,
+      15.7
+     ]
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 1.0
+    },
+    "fraction": 0.5556,
+    "kept": "/home/patrick/work/s1364b/r/frames/nightly-webm-2.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     960,
+     540
+    ],
+    "sha256": "a7847a1f1205f5dec6d9c0c9bc913d04cf7389106dec0ca320b41e125f405f09",
+    "size": [
+     960,
+     540
+    ]
+   }
+  },
+  {
+   "build": "pr",
+   "round": 2,
+   "format": "webm",
+   "started": "2026-11-10T05:55:02Z",
+   "acquisition": "x11",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc",
+    "openh264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false,
+    "microphoneReason": "default_is_monitor"
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": {
+     "microphone": false,
+     "system": true
+    },
+    "audioEncoder": "avenc_aac",
+    "recordingMicrophone": {
+     "available": false,
+     "effective": false,
+     "requested": false,
+     "unavailable": "The system's default input is the monitor of an output, not a microphone. Plug one in, or choose a device in Settings."
+    },
+    "microphoneLost": null
+   },
+   "recordedS": 16.043,
+   "microphoneLostAtStop": null,
+   "load": 2.3798828125,
+   "durationUs": 16233333,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "5d03b0d2-400d-48c6-8061-ebece610513a.mkv",
+     "bytes": 215362,
+     "motion": 19.827,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.15692307692307692,
+       "blocks": 325,
+       "maxAmplitude": 0.3453517712153086,
+       "medianAmplitude": 8.562721411528138e-07
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 325,
+       "maxAmplitude": 0.018066343486092075,
+       "medianAmplitude": 0.0169490810424703
+      }
+     },
+     "pairs": 17,
+     "medianMs": -14.7,
+     "spreadMs": 41,
+     "offsetsMs": [
+      25.7,
+      18.3,
+      17.7,
+      18,
+      18.3,
+      17.7,
+      -15,
+      -15.3,
+      -15,
+      -14.7,
+      -15.3,
+      18,
+      -14.7,
+      -15.3,
+      18,
+      -15.3,
+      -15
+     ],
+     "pairTimesS": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6.033,
+      7.033,
+      8.033,
+      9.033,
+      10.033,
+      11,
+      12.033,
+      13.033,
+      14,
+      15.033,
+      16.033
+     ]
+    },
+    "export": {
+     "file": "pr-webm-2.webm",
+     "bytes": 408199,
+     "motion": 19.828,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.1574074074074074,
+       "blocks": 324,
+       "maxAmplitude": 0.3478754791929307,
+       "medianAmplitude": 1.062739818381419e-06
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 324,
+       "maxAmplitude": 0.018226955925214353,
+       "medianAmplitude": 0.016960864919793824
+      }
+     },
+     "pairs": 17,
+     "medianMs": -14.5,
+     "spreadMs": 41,
+     "offsetsMs": [
+      26.5,
+      18.5,
+      18.5,
+      18.5,
+      18.5,
+      18.5,
+      -14.5,
+      -14.5,
+      -14.5,
+      -14.5,
+      -14.5,
+      18.5,
+      -14.5,
+      -14.5,
+      18.5,
+      -14.5,
+      -14.5
+     ],
+     "pairTimesS": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6.033,
+      7.033,
+      8.033,
+      9.033,
+      10.033,
+      11,
+      12.033,
+      13.033,
+      14,
+      15.033,
+      16.033
+     ]
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 1.0
+    },
+    "fraction": 0.5556,
+    "kept": "/home/patrick/work/s1364b/r/frames/pr-webm-2.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     960,
+     540
+    ],
+    "sha256": "8982ed118689964c3fb53704b092ac179655984bc1034066a50713eaeb9cbe1a",
+    "size": [
+     960,
+     540
+    ]
+   }
+  },
+  {
+   "build": "nightly",
+   "round": 3,
+   "format": "mp4",
+   "started": "2026-11-10T05:55:30Z",
+   "acquisition": "x11",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc",
+    "openh264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": null,
+    "audioEncoder": "avenc_aac",
+    "recordingMicrophone": null,
+    "microphoneLost": null
+   },
+   "recordedS": 16.043,
+   "microphoneLostAtStop": null,
+   "load": 2.068359375,
+   "durationUs": 16233333,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "83a5cda6-d002-4327-a108-adf14b1b601b.mkv",
+     "bytes": 216421,
+     "motion": 7.283,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.1476923076923077,
+       "blocks": 325,
+       "maxAmplitude": 0.3453176471167608,
+       "medianAmplitude": 8.948445910278307e-07
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 325,
+       "maxAmplitude": 0.018003493316140484,
+       "medianAmplitude": 0.01695103723517897
+      }
+     },
+     "pairs": 16,
+     "medianMs": -11,
+     "spreadMs": 34.7,
+     "offsetsMs": [
+      23,
+      23.3,
+      22.7,
+      23,
+      23.3,
+      -11.3,
+      -11,
+      -11.3,
+      -11,
+      -10.7,
+      -11.3,
+      -11,
+      -10.7,
+      -11.3,
+      -11,
+      -11.3
+     ],
+     "pairTimesS": [
+      0.633,
+      1.633,
+      2.633,
+      3.633,
+      4.633,
+      5.667,
+      6.667,
+      7.667,
+      8.667,
+      9.667,
+      10.667,
+      11.667,
+      12.667,
+      13.667,
+      14.667,
+      15.667
+     ]
+    },
+    "export": {
+     "file": "nightly-mp4-3.mp4",
+     "bytes": 208092,
+     "motion": 7.261,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.14814814814814814,
+       "blocks": 324,
+       "maxAmplitude": 0.345317628860589,
+       "medianAmplitude": 9.117910862808436e-07
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 324,
+       "maxAmplitude": 0.01800349529182058,
+       "medianAmplitude": 0.016951049391784396
+      }
+     },
+     "pairs": 16,
+     "medianMs": -10.7,
+     "spreadMs": 33.3,
+     "offsetsMs": [
+      22.7,
+      22.7,
+      22.7,
+      22.7,
+      22.7,
+      -10.7,
+      -10.7,
+      -10.7,
+      -10.7,
+      -10.7,
+      -10.7,
+      -10.7,
+      -10.7,
+      -10.7,
+      -10.7,
+      -10.7
+     ],
+     "pairTimesS": [
+      0.633,
+      1.633,
+      2.633,
+      3.633,
+      4.633,
+      5.667,
+      6.667,
+      7.667,
+      8.667,
+      9.667,
+      10.667,
+      11.667,
+      12.667,
+      13.667,
+      14.667,
+      15.667
+     ]
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 1.0
+    },
+    "fraction": 0.5556,
+    "kept": "/home/patrick/work/s1364b/r/frames/nightly-mp4-3.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     960,
+     540
+    ],
+    "sha256": "0512067f5207f6f22177c1809919af900b93687f279f3620a3a8308c7a5324e3",
+    "size": [
+     960,
+     540
+    ]
+   }
+  },
+  {
+   "build": "pr",
+   "round": 3,
+   "format": "mp4",
+   "started": "2026-11-10T05:55:59Z",
+   "acquisition": "x11",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc",
+    "openh264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false,
+    "microphoneReason": "default_is_monitor"
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": {
+     "microphone": false,
+     "system": true
+    },
+    "audioEncoder": "avenc_aac",
+    "recordingMicrophone": {
+     "available": false,
+     "effective": false,
+     "requested": false,
+     "unavailable": "The system's default input is the monitor of an output, not a microphone. Plug one in, or choose a device in Settings."
+    },
+    "microphoneLost": null
+   },
+   "recordedS": 16.039,
+   "microphoneLostAtStop": null,
+   "load": 2.64892578125,
+   "durationUs": 16266666,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "130282fd-da2f-4e63-b2bd-124b8078dcc0.mkv",
+     "bytes": 217189,
+     "motion": 8.497,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.1476923076923077,
+       "blocks": 325,
+       "maxAmplitude": 0.3452669957590647,
+       "medianAmplitude": 9.638548376884175e-07
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 325,
+       "maxAmplitude": 0.019972362374498055,
+       "medianAmplitude": 0.016938543923678898
+      }
+     },
+     "pairs": 16,
+     "medianMs": -8,
+     "spreadMs": 0.7,
+     "offsetsMs": [
+      -8.3,
+      -8,
+      -8.3,
+      -8,
+      -7.7,
+      -8.3,
+      -8,
+      -7.7,
+      -8.3,
+      -8,
+      -8.3,
+      -8,
+      -7.7,
+      -8.3,
+      -8,
+      -7.7
+     ],
+     "pairTimesS": [
+      0.8,
+      1.8,
+      2.8,
+      3.8,
+      4.8,
+      5.8,
+      6.8,
+      7.8,
+      8.8,
+      9.8,
+      10.8,
+      11.8,
+      12.8,
+      13.8,
+      14.8,
+      15.8
+     ]
+    },
+    "export": {
+     "file": "pr-mp4-3.mp4",
+     "bytes": 208142,
+     "motion": 8.48,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.1476923076923077,
+       "blocks": 325,
+       "maxAmplitude": 0.3452673503939431,
+       "medianAmplitude": 9.677074064360482e-07
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 325,
+       "maxAmplitude": 0.020000624295497798,
+       "medianAmplitude": 0.01693856303286432
+      }
+     },
+     "pairs": 16,
+     "medianMs": -8,
+     "spreadMs": 0,
+     "offsetsMs": [
+      -8,
+      -8,
+      -8,
+      -8,
+      -8,
+      -8,
+      -8,
+      -8,
+      -8,
+      -8,
+      -8,
+      -8,
+      -8,
+      -8,
+      -8,
+      -8
+     ],
+     "pairTimesS": [
+      0.8,
+      1.8,
+      2.8,
+      3.8,
+      4.8,
+      5.8,
+      6.8,
+      7.8,
+      8.8,
+      9.8,
+      10.8,
+      11.8,
+      12.8,
+      13.8,
+      14.8,
+      15.8
+     ]
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 1.0
+    },
+    "fraction": 0.5556,
+    "kept": "/home/patrick/work/s1364b/r/frames/pr-mp4-3.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     960,
+     540
+    ],
+    "sha256": "34d85355958c5909530eb2c72f22a2bb82746de1de43c530e050d9ab1a9a8b32",
+    "size": [
+     960,
+     540
+    ]
+   }
+  },
+  {
+   "build": "nightly",
+   "round": 3,
+   "format": "webm",
+   "started": "2026-11-10T05:56:28Z",
+   "acquisition": "x11",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc",
+    "openh264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": null,
+    "audioEncoder": "avenc_aac",
+    "recordingMicrophone": null,
+    "microphoneLost": null
+   },
+   "recordedS": 16.039,
+   "microphoneLostAtStop": null,
+   "load": 1.978515625,
+   "durationUs": 16233333,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "42d644d3-15ea-4cd7-9d87-1f6e0cf9784a.mkv",
+     "bytes": 217569,
+     "motion": 18.614,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.10493827160493827,
+       "blocks": 324,
+       "maxAmplitude": 0.3453200223967725,
+       "medianAmplitude": 1.1817005368037596e-06
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 324,
+       "maxAmplitude": 0.017517050759841567,
+       "medianAmplitude": 0.01694900474884049
+      }
+     },
+     "pairs": 17,
+     "medianMs": 16.7,
+     "spreadMs": 34.7,
+     "offsetsMs": [
+      17.3,
+      16.7,
+      17,
+      16.7,
+      -17,
+      -16.7,
+      -17.3,
+      17,
+      -16.7,
+      -17.3,
+      17,
+      -17.3,
+      -17,
+      -16.7,
+      16.7,
+      17,
+      17.3
+     ],
+     "pairTimesS": [
+      0.033,
+      1.033,
+      2.033,
+      3.033,
+      4.067,
+      5.067,
+      6.067,
+      7.033,
+      8.067,
+      9.067,
+      10.033,
+      11.067,
+      12.067,
+      13.067,
+      14.033,
+      15.033,
+      16.033
+     ]
+    },
+    "export": {
+     "file": "nightly-webm-3.webm",
+     "bytes": 411028,
+     "motion": 21.056,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.10493827160493827,
+       "blocks": 324,
+       "maxAmplitude": 0.35009783224681873,
+       "medianAmplitude": 1.2302837897826526e-06
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 324,
+       "maxAmplitude": 0.017613491088573786,
+       "medianAmplitude": 0.016959273693732808
+      }
+     },
+     "pairs": 17,
+     "medianMs": 17.5,
+     "spreadMs": 34,
+     "offsetsMs": [
+      17.5,
+      17.5,
+      17.5,
+      17.5,
+      -16.5,
+      -16.5,
+      -16.5,
+      17.5,
+      -16.5,
+      -16.5,
+      17.5,
+      -16.5,
+      -16.5,
+      -16.5,
+      17.5,
+      17.5,
+      17.5
+     ],
+     "pairTimesS": [
+      0.033,
+      1.033,
+      2.033,
+      3.033,
+      4.067,
+      5.067,
+      6.067,
+      7.033,
+      8.067,
+      9.067,
+      10.033,
+      11.067,
+      12.067,
+      13.067,
+      14.033,
+      15.033,
+      16.033
+     ]
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 1.0
+    },
+    "fraction": 0.5556,
+    "kept": "/home/patrick/work/s1364b/r/frames/nightly-webm-3.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     960,
+     540
+    ],
+    "sha256": "70964b1b010d7183bda08585321c1cae020f20100d61c96da8c626fea3de37fd",
+    "size": [
+     960,
+     540
+    ]
+   }
+  },
+  {
+   "build": "pr",
+   "round": 3,
+   "format": "webm",
+   "started": "2026-11-10T05:56:56Z",
+   "acquisition": "x11",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc",
+    "openh264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false,
+    "microphoneReason": "default_is_monitor"
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": {
+     "microphone": false,
+     "system": true
+    },
+    "audioEncoder": "avenc_aac",
+    "recordingMicrophone": {
+     "available": false,
+     "effective": false,
+     "requested": false,
+     "unavailable": "The system's default input is the monitor of an output, not a microphone. Plug one in, or choose a device in Settings."
+    },
+    "microphoneLost": null
+   },
+   "recordedS": 16.039,
+   "microphoneLostAtStop": null,
+   "load": 2.60791015625,
+   "durationUs": 16199999,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "0d5bf120-8709-4d94-a91e-b5417f3fb657.mkv",
+     "bytes": 216181,
+     "motion": 8.497,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.14860681114551083,
+       "blocks": 323,
+       "maxAmplitude": 0.3452407677782757,
+       "medianAmplitude": 8.605837724866108e-07
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 323,
+       "maxAmplitude": 0.018087377257967784,
+       "medianAmplitude": 0.01694880458905999
+      }
+     },
+     "pairs": 16,
+     "medianMs": 1,
+     "spreadMs": 34,
+     "offsetsMs": [
+      1.3,
+      34.7,
+      1,
+      0.7,
+      1,
+      1.3,
+      0.7,
+      1,
+      1.3,
+      0.7,
+      1,
+      0.7,
+      1,
+      1.3,
+      0.7,
+      1
+     ],
+     "pairTimesS": [
+      0.367,
+      1.333,
+      2.367,
+      3.367,
+      4.367,
+      5.367,
+      6.367,
+      7.367,
+      8.367,
+      9.367,
+      10.367,
+      11.367,
+      12.367,
+      13.367,
+      14.367,
+      15.367
+     ]
+    },
+    "export": {
+     "file": "pr-webm-3.webm",
+     "bytes": 407506,
+     "motion": 8.5,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.14860681114551083,
+       "blocks": 323,
+       "maxAmplitude": 0.34638774973647973,
+       "medianAmplitude": 9.580146395280236e-07
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 323,
+       "maxAmplitude": 0.018092287429217774,
+       "medianAmplitude": 0.016947563009268633
+      }
+     },
+     "pairs": 16,
+     "medianMs": 1.5,
+     "spreadMs": 34,
+     "offsetsMs": [
+      1.5,
+      35.5,
+      1.5,
+      1.5,
+      1.5,
+      1.5,
+      1.5,
+      1.5,
+      1.5,
+      1.5,
+      1.5,
+      1.5,
+      1.5,
+      1.5,
+      1.5,
+      1.5
+     ],
+     "pairTimesS": [
+      0.367,
+      1.333,
+      2.367,
+      3.367,
+      4.367,
+      5.367,
+      6.367,
+      7.367,
+      8.367,
+      9.367,
+      10.367,
+      11.367,
+      12.367,
+      13.367,
+      14.367,
+      15.367
+     ]
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 1.0
+    },
+    "fraction": 0.5556,
+    "kept": "/home/patrick/work/s1364b/r/frames/pr-webm-3.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     960,
+     540
+    ],
+    "sha256": "dd3c478ebaeec12e8e5723f30a9912b5b28b52a698e8c5a58522d8ee1feed6e3",
+    "size": [
+     960,
+     540
+    ]
+   }
+  }
+ ],
+ "microphone": {
+  "name": "putgd_lab_4121064",
+  "modules": {
+   "system": 536870913
+  },
+  "defaultSource": "alsa_output.pci-0000_00_1f.3.analog-stereo.monitor",
+  "defaultSink": "alsa_output.pci-0000_00_1f.3.analog-stereo",
+  "systemSink": "putgd_lab_4121064_system"
+ },
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "HDMI-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "check": "precheck",
+   "fraction": 1.0,
+   "framebuffer": [
+    1920,
+    1080
+   ],
+   "minFraction": 0.98,
+   "ok": true,
+   "output": [
+    "HDMI-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ]
+  },
+  "video": "marker"
+ },
+ "microphoneRemoved": {
+  "removed": true,
+  "left": [],
+  "defaultSource": "alsa_output.pci-0000_00_1f.3.analog-stereo.monitor",
+  "defaultSink": "alsa_output.pci-0000_00_1f.3.analog-stereo"
+ },
+ "gpuHangs": []
+}
