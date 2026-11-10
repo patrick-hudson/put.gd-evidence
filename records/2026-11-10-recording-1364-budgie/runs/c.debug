@@ -1,0 +1,94 @@
+2026-11-10T07:49:09.877 command prepare
+2026-11-10T07:49:09.977 microphone: putgd_lab_5556_mic
+2026-11-10T07:49:10.027 result prepare ok
+2026-11-10T07:49:10.030 qt1: Failed to register with host portal QDBusError("org.freedesktop.portal.Error.Failed", "Could not register app ID: App info not found for 'putgd-record'")
+2026-11-10T07:49:10.055 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x55ded1955a30 but 0x0 is focused
+2026-11-10T07:49:10.055 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x55ded1955a30 but 0x0 is focused
+2026-11-10T07:49:16.103 command start
+2026-11-10T07:49:16.145 pipeline: appsrc name=src is-live=true format=time do-timestamp=false leaky-type=downstream max-buffers=2 caps="video/x-raw,format=RGBx,width=1280,height=800,framerate=0/1" ! videoscale ! video/x-raw,width=1280,height=800,pixel-aspect-ratio=1/1 ! queue name=cq leaky=downstream max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! videocrop left=0 top=0 right=320 bottom=260 ! videoconvert n-threads=2 ! videorate ! video/x-raw,format=I420,framerate=30/1 ! queue name=eq max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! x264enc speed-preset=veryfast bitrate=1555 key-int-max=60 bframes=0 threads=2 sliced-threads=false rc-lookahead=10 sync-lookahead=0 name=venc ! h264parse ! queue name=vq max-size-buffers=0 max-size-bytes=0 max-size-time=2000000000 ! matroskamux name=mux ! filesink name=sink location="/home/lab/b1364/r/c/data/putgd/recording/b0c7c5be-6eb4-4434-beac-72af1e192796/working.mkv" pulsesrc name=asrc device="@DEFAULT_MONITOR@" ! audioconvert ! audioresample ! audio/x-raw,rate=48000,channels=2 ! voaacenc bitrate=128000 name=aenc ! aacparse ! queue name=aq max-size-buffers=0 max-size-bytes=0 max-size-time=2000000000 ! mux.
+2026-11-10T07:49:17.657 started with x264enc + voaacenc (system audio) on GstSystemClock
+2026-11-10T07:49:17.657 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x55ded1955a30 but 0x0 is focused
+2026-11-10T07:49:17.657 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x55ded1955a30 but 0x0 is focused
+2026-11-10T07:49:17.657 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x55ded1955a30 but 0x0 is focused
+2026-11-10T07:49:17.658 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x55ded1955a30 but 0x0 is focused
+2026-11-10T07:49:17.658 result start ok
+2026-11-10T07:49:18.716 rate window: 30 fps, 36 delivered and 4 leaked in 1006 ms, machine 53% busy, recorder 0.54 cores, against: encoder
+2026-11-10T07:49:19.766 rate window: 30 fps, 36 delivered and 0 leaked in 1049 ms, machine 38% busy, recorder 0.22 cores
+2026-11-10T07:49:20.815 rate window: 30 fps, 37 delivered and 0 leaked in 1049 ms, machine 43% busy, recorder 0.24 cores
+2026-11-10T07:49:21.816 rate window: 30 fps, 35 delivered and 0 leaked in 1000 ms, machine 40% busy, recorder 0.23 cores
+2026-11-10T07:49:22.865 rate window: 30 fps, 37 delivered and 0 leaked in 1049 ms, machine 40% busy, recorder 0.22 cores
+2026-11-10T07:49:23.915 rate window: 30 fps, 36 delivered and 0 leaked in 1049 ms, machine 39% busy, recorder 0.23 cores
+2026-11-10T07:49:24.966 rate window: 30 fps, 37 delivered and 0 leaked in 1050 ms, machine 29% busy, recorder 0.22 cores
+2026-11-10T07:49:26.015 rate window: 30 fps, 36 delivered and 0 leaked in 1049 ms, machine 35% busy, recorder 0.24 cores
+2026-11-10T07:49:27.065 rate window: 30 fps, 38 delivered and 0 leaked in 1049 ms, machine 30% busy, recorder 0.22 cores
+2026-11-10T07:49:28.115 rate window: 30 fps, 36 delivered and 0 leaked in 1049 ms, machine 26% busy, recorder 0.22 cores
+2026-11-10T07:49:29.166 rate window: 30 fps, 36 delivered and 0 leaked in 1050 ms, machine 26% busy, recorder 0.22 cores
+2026-11-10T07:49:29.722 command stop
+2026-11-10T07:49:29.723 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x55ded1955a30 but 0x0 is focused
+2026-11-10T07:49:29.772 timestamps: clock GstSystemClock, video lateness 1.0/128.0/1548.3 ms (n=408), audio lateness -5.1/40.3/80.6 ms (n=1346), frame age 1.3/1.9/14.1 ms (n=418), arrival-stamped frames 0, audio re-anchored 0 times
+2026-11-10T07:49:29.772 frames: 408 reached the video encoder, 4 leaked at the capture queue; source arrivals 423 (interval 4.7/28.6/49.3 ms (n=422)), 0 with a repeated compositor time, contents 407 new / 5 same dropped, cadence lock 59 early dropped / 4 resyncs / 0 changes slotted after a repeat
+2026-11-10T07:49:29.786 review: open
+2026-11-10T07:49:29.810 review: shown
+2026-11-10T07:49:29.810 result stop ok
+2026-11-10T07:49:29.891 review: frame at 0
+2026-11-10T07:49:29.903 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:29.904 seek ok: first key pts 0 target 0
+2026-11-10T07:49:29.915 review: frame 960x540
+2026-11-10T07:49:29.926 command export
+2026-11-10T07:49:29.937 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:29.938 export mp4 wantAudio=1 audioIndex=1 streams=2
+2026-11-10T07:49:29.951 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x55ded1ee9420 but 0x0 is focused
+2026-11-10T07:49:29.951 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x55ded1ee9420 but 0x0 is focused
+2026-11-10T07:49:29.961 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:29.962 seek ok: first key pts 0 target 0
+2026-11-10T07:49:32.077 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:32.078 export audio lead 50000 us of silence
+2026-11-10T07:49:33.274 export audio samples=647520
+2026-11-10T07:49:33.281 result export ok
+2026-11-10T07:49:33.471 command savedCopy
+2026-11-10T07:49:33.474 result savedCopy ok
+2026-11-10T07:49:33.500 command cancel
+2026-11-10T07:49:33.500 result cancel ok
+2026-11-10T07:49:33.500 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x55ded1ee9420 but 0x0 is focused
+2026-11-10T07:49:33.501 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x55ded1ee9420 but 0x0 is focused
+2026-11-10T07:49:33.501 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x55ded1ee9420 but 0x0 is focused
+2026-11-10T07:49:33.501 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x55ded1ee9420 but 0x0 is focused
+2026-11-10T07:49:33.501 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x55ded1ee9420 but 0x0 is focused
+2026-11-10T07:49:33.501 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x55ded1ee9420 but 0x0 is focused
+2026-11-10T07:49:33.501 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x55ded1ee9420 but 0x0 is focused
+2026-11-10T07:49:34.241 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:34.247 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:34.248 seek ok: first key pts 0 target 850
+2026-11-10T07:49:34.290 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:34.290 seek ok: first key pts 2367 target 2550
+2026-11-10T07:49:34.305 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:34.305 seek ok: first key pts 3400 target 4250
+2026-11-10T07:49:34.331 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:34.332 seek ok: first key pts 5367 target 5950
+2026-11-10T07:49:34.353 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:34.354 seek ok: first key pts 7400 target 7650
+2026-11-10T07:49:34.368 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:34.369 seek ok: first key pts 8400 target 9350
+2026-11-10T07:49:34.396 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:34.397 seek ok: first key pts 10333 target 11050
+2026-11-10T07:49:34.421 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:34.421 seek ok: first key pts 12400 target 12750
+2026-11-10T07:49:35.311 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:35.321 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:35.321 seek ok: first key pts 0 target 13056
+2026-11-10T07:49:35.348 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:35.348 seek ok: first key pts 36352 target 39168
+2026-11-10T07:49:35.363 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:35.363 seek ok: first key pts 52224 target 65280
+2026-11-10T07:49:35.390 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:35.390 seek ok: first key pts 78848 target 91392
+2026-11-10T07:49:35.415 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:35.416 seek ok: first key pts 113664 target 117504
+2026-11-10T07:49:35.431 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:35.431 seek ok: first key pts 129024 target 143616
+2026-11-10T07:49:35.458 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:35.458 seek ok: first key pts 158720 target 169728
+2026-11-10T07:49:35.482 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:35.482 seek ok: first key pts 190464 target 195840
+2026-11-10T07:49:35.974 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:49:35.975 seek ok: first key pts 98304 target 104448

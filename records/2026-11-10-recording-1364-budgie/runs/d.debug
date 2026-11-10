@@ -1,0 +1,102 @@
+2026-11-10T07:49:55.346 command prepare
+2026-11-10T07:49:55.452 microphone: putgd_lab_6636_mic
+2026-11-10T07:49:55.507 microphone: meter opened on putgd_lab_6636_mic
+2026-11-10T07:49:55.507 result prepare ok
+2026-11-10T07:49:55.520 qt1: Failed to register with host portal QDBusError("org.freedesktop.portal.Error.Failed", "Could not register app ID: App info not found for 'putgd-record'")
+2026-11-10T07:49:55.561 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x562e51bb0c30 but 0x0 is focused
+2026-11-10T07:49:55.561 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x562e51bb0c30 but 0x0 is focused
+2026-11-10T07:50:01.602 command start
+2026-11-10T07:50:01.605 microphone: meter closed on putgd_lab_6636_mic
+2026-11-10T07:50:01.652 pipeline: appsrc name=src is-live=true format=time do-timestamp=false leaky-type=downstream max-buffers=2 caps="video/x-raw,format=RGBx,width=1280,height=800,framerate=0/1" ! videoscale ! video/x-raw,width=1280,height=800,pixel-aspect-ratio=1/1 ! queue name=cq leaky=downstream max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! videocrop left=0 top=0 right=320 bottom=260 ! videoconvert n-threads=2 ! videorate ! video/x-raw,format=I420,framerate=30/1 ! queue name=eq max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! x264enc speed-preset=veryfast bitrate=1555 key-int-max=60 bframes=0 threads=2 sliced-threads=false rc-lookahead=10 sync-lookahead=0 name=venc ! h264parse ! queue name=vq max-size-buffers=0 max-size-bytes=0 max-size-time=2000000000 ! matroskamux name=mux ! filesink name=sink location="/home/lab/b1364/r/d/data/putgd/recording/aca0f973-6fbc-4643-8bad-8303de5d3f76/working.mkv" pulsesrc name=msrc device="putgd_lab_6636_mic" provide-clock=false stream-properties="props,node.dont-reconnect=(string)true" ! audioconvert ! audioresample ! audio/x-raw,format=F32LE,layout=interleaved,rate=48000,channels=2 ! identity name=mtap silent=true ! audioconvert ! audio/x-raw,rate=48000,channels=2 ! voaacenc bitrate=128000 name=aenc ! aacparse ! queue name=aq max-size-buffers=0 max-size-bytes=0 max-size-time=2000000000 ! mux.
+2026-11-10T07:50:03.162 started with x264enc + voaacenc (microphone) on GstSystemClock
+2026-11-10T07:50:03.163 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x562e51bb0c30 but 0x0 is focused
+2026-11-10T07:50:03.165 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x562e51bb0c30 but 0x0 is focused
+2026-11-10T07:50:03.165 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x562e51bb0c30 but 0x0 is focused
+2026-11-10T07:50:03.165 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x562e51bb0c30 but 0x0 is focused
+2026-11-10T07:50:03.166 result start ok
+2026-11-10T07:50:04.216 rate window: 30 fps, 46 delivered and 1 leaked in 1000 ms, machine 41% busy, recorder 0.45 cores
+2026-11-10T07:50:05.265 rate window: 30 fps, 50 delivered and 0 leaked in 1049 ms, machine 28% busy, recorder 0.25 cores
+2026-11-10T07:50:06.265 rate window: 30 fps, 46 delivered and 0 leaked in 1000 ms, machine 29% busy, recorder 0.25 cores
+2026-11-10T07:50:07.316 rate window: 30 fps, 50 delivered and 0 leaked in 1050 ms, machine 29% busy, recorder 0.24 cores
+2026-11-10T07:50:08.366 rate window: 30 fps, 49 delivered and 0 leaked in 1049 ms, machine 28% busy, recorder 0.25 cores
+2026-11-10T07:50:09.365 microphone: source error: Disconnected: Entity killed
+2026-11-10T07:50:09.365 microphone: lost during the recording (The microphone was disconnected; the rest of the recording has no microphone audio.); the clip goes on without it
+2026-11-10T07:50:09.366 microphone: source error: Internal data stream error.
+2026-11-10T07:50:09.366 rate window: 30 fps, 48 delivered and 0 leaked in 1000 ms, machine 36% busy, recorder 0.24 cores
+2026-11-10T07:50:10.415 rate window: 30 fps, 38 delivered and 0 leaked in 1049 ms, machine 25% busy, recorder 0.20 cores
+2026-11-10T07:50:11.466 rate window: 30 fps, 38 delivered and 0 leaked in 1049 ms, machine 25% busy, recorder 0.21 cores
+2026-11-10T07:50:12.515 rate window: 30 fps, 36 delivered and 0 leaked in 1049 ms, machine 24% busy, recorder 0.21 cores
+2026-11-10T07:50:13.515 rate window: 30 fps, 35 delivered and 0 leaked in 1000 ms, machine 24% busy, recorder 0.19 cores
+2026-11-10T07:50:14.565 rate window: 30 fps, 37 delivered and 0 leaked in 1049 ms, machine 24% busy, recorder 0.22 cores
+2026-11-10T07:50:15.566 rate window: 30 fps, 32 delivered and 0 leaked in 1000 ms, machine 24% busy, recorder 0.19 cores
+2026-11-10T07:50:16.615 rate window: 30 fps, 36 delivered and 0 leaked in 1049 ms, machine 24% busy, recorder 0.20 cores
+2026-11-10T07:50:17.372 command stop
+2026-11-10T07:50:17.373 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x562e51bb0c30 but 0x0 is focused
+2026-11-10T07:50:17.421 timestamps: clock GstSystemClock, video lateness 10.0/116.0/1585.4 ms (n=472), audio lateness -6.9/28.9/48.0 ms (n=757), frame age 1.3/1.7/8.9 ms (n=517), arrival-stamped frames 0, audio re-anchored 0 times
+2026-11-10T07:50:17.421 frames: 472 reached the video encoder, 1 leaked at the capture queue; source arrivals 570 (interval 3.7/25.0/57.9 ms (n=569)), 0 with a repeated compositor time, contents 504 new / 53 same dropped, cadence lock 96 early dropped / 7 resyncs / 1 changes slotted after a repeat
+2026-11-10T07:50:17.421 audio tap microphone (buffer:ms from contiguous@ms): 0:0.0@40 1:0.0@50 2:0.0@60 3:0.0@70 4:0.0@80 5:0.0@90 6:0.0@100 7:0.0@110 8:0.0@120 9:0.0@130 10:0.0@140 11:0.0@150 25:0.0@290 50:0.0@540 75:0.0@790 100:0.0@1040 125:0.0@1290 150:0.0@1540 175:0.0@1790 200:0.0@2040 225:0.0@2290 250:0.0@2540 275:0.0@2790 300:0.0@3040 325:0.0@3290 350:0.0@3540 375:0.0@3790
+2026-11-10T07:50:17.721 review: open
+2026-11-10T07:50:17.745 review: shown
+2026-11-10T07:50:17.745 result stop ok
+2026-11-10T07:50:17.821 review: frame at 0
+2026-11-10T07:50:17.835 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:17.836 seek ok: first key pts 0 target 0
+2026-11-10T07:50:17.843 review: frame 960x540
+2026-11-10T07:50:17.855 command export
+2026-11-10T07:50:17.870 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:17.871 export mp4 wantAudio=1 audioIndex=1 streams=2
+2026-11-10T07:50:17.892 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x562e521497f0 but 0x0 is focused
+2026-11-10T07:50:17.892 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x562e521497f0 but 0x0 is focused
+2026-11-10T07:50:17.914 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:17.915 seek ok: first key pts 0 target 0
+2026-11-10T07:50:20.376 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:20.380 export audio lead 40000 us of silence
+2026-11-10T07:50:20.585 export audio samples=364416
+2026-11-10T07:50:20.590 result export ok
+2026-11-10T07:50:20.605 command savedCopy
+2026-11-10T07:50:20.608 result savedCopy ok
+2026-11-10T07:50:20.855 command cancel
+2026-11-10T07:50:20.856 result cancel ok
+2026-11-10T07:50:20.856 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x562e521497f0 but 0x0 is focused
+2026-11-10T07:50:20.856 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x562e521497f0 but 0x0 is focused
+2026-11-10T07:50:20.856 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x562e521497f0 but 0x0 is focused
+2026-11-10T07:50:20.857 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x562e521497f0 but 0x0 is focused
+2026-11-10T07:50:20.857 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x562e521497f0 but 0x0 is focused
+2026-11-10T07:50:20.857 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x562e521497f0 but 0x0 is focused
+2026-11-10T07:50:20.857 qt1: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x562e521497f0 but 0x0 is focused
+2026-11-10T07:50:21.577 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:21.587 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:21.587 seek ok: first key pts 0 target 983
+2026-11-10T07:50:21.622 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:21.622 seek ok: first key pts 2267 target 2950
+2026-11-10T07:50:21.645 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:21.645 seek ok: first key pts 4100 target 4917
+2026-11-10T07:50:21.681 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:21.682 seek ok: first key pts 6100 target 6883
+2026-11-10T07:50:21.716 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:21.717 seek ok: first key pts 8100 target 8850
+2026-11-10T07:50:21.755 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:21.755 seek ok: first key pts 10000 target 10817
+2026-11-10T07:50:21.790 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:21.791 seek ok: first key pts 12100 target 12783
+2026-11-10T07:50:21.825 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:21.826 seek ok: first key pts 14100 target 14750
+2026-11-10T07:50:22.481 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:22.488 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:22.488 seek ok: first key pts 0 target 15104
+2026-11-10T07:50:22.526 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:22.526 seek ok: first key pts 34816 target 45312
+2026-11-10T07:50:22.545 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:22.546 seek ok: first key pts 62976 target 75520
+2026-11-10T07:50:22.567 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:22.568 seek ok: first key pts 93696 target 105728
+2026-11-10T07:50:22.602 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:22.603 seek ok: first key pts 124416 target 135936
+2026-11-10T07:50:22.635 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:22.635 seek ok: first key pts 153600 target 166144
+2026-11-10T07:50:22.675 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:22.675 seek ok: first key pts 185856 target 196352
+2026-11-10T07:50:22.707 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:22.709 seek ok: first key pts 216576 target 226560
+2026-11-10T07:50:23.335 decoder: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10) threads auto
+2026-11-10T07:50:23.336 seek ok: first key pts 110080 target 120832

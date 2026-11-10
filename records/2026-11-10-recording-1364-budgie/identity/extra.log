@@ -1,0 +1,15 @@
+ok   no binds before a recording count 0
+ok   window recording with click highlights refused {"code": "recording_unsupported", "details": {"field": "clickHighlights", "reason": "click_target_unsupported"}, "message": "A window recording on labwc has no pointer position: the compositor's window capture source has no cursor source, and labwc reports no 
+ok   no binds while ready count 0
+ok   binds while recording count 2
+ok   binds back after the bridge's rewrite counts in the 1.5 s after the setting changed: 002222222222222222222222222222
+ok   binds back after the second rewrite count 2
+ok   recording still running, no click error None
+ok   no binds after Stop count 0
+ok   one owned recording helper [16060]
+ok   no binds after helper killed count 0
+ok   no binds after cancel during recording count 0
+FAIL rc.xml is byte for byte what it was ---  | +++  | @@ -254,0 +255,9 @@ | +		</keybind> | +		<keybind bridge="customputgddesktop" key="C-S-3"> | +			<action name="Execute" command="dbus-send --session --type=method_call --dest=org.putgd.App.Budgie /org/putgd/App org.putgd.App.Budgie.Trigger string:desktop" /> | +		</keybind> | +		<keybind bridge="customputgdregion" key="C-S-1"> || after 3 s more: still different
+left running: 13000 putgd-clipboard-keeper
+15816 /home/lab/b1364/putgd-26.1110.4538-dev+g1d19e1e8ac50-x86_64.AppImage --background
+15845 /tmp/.mount_putgd-GhnPpD/usr/bin/putgd --background

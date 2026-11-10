@@ -1,0 +1,205 @@
+{
+ "host": "fedora",
+ "kernel": "7.2.11-300.fc45.x86_64",
+ "desktop": "budgie-panel",
+ "session": "wayland",
+ "target": "region",
+ "rect": [
+  0,
+  0,
+  960,
+  540
+ ],
+ "formats": [
+  "mp4"
+ ],
+ "video": "marker",
+ "timing": {
+  "lead": 6.0,
+  "pauseAt": 10.0,
+  "pauseFor": 0.0,
+  "after": 2.0
+ },
+ "builds": {
+  "pr": {
+   "kind": "appimage",
+   "file": "putgd-26.1110.4538-dev+g1d19e1e8ac50-x86_64.AppImage",
+   "sha256": "54c1a92618d23e651d8469577b0699252cd65b36e32df388aadf83593181c1d1"
+  }
+ },
+ "analyzer": "/home/lab/b1364/an/squashfs-root",
+ "rounds": [
+  {
+   "build": "pr",
+   "round": 1,
+   "format": "mp4",
+   "started": "2026-11-10T07:49:08Z",
+   "acquisition": "wlr-capture",
+   "liveEncoders": [
+    "x264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": true,
+    "microphoneDevice": {
+     "id": "putgd_lab_5556_mic",
+     "label": "putgd_lab_5556-microphone"
+    }
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": {
+     "microphone": false,
+     "system": true
+    },
+    "audioEncoder": "voaacenc",
+    "recordingMicrophone": {
+     "available": true,
+     "device": "putgd_lab_5556-microphone",
+     "effective": false,
+     "requested": false
+    },
+    "microphoneLost": null
+   },
+   "recordedS": 12.02,
+   "microphoneLostAtStop": null,
+   "load": 1.14111328125,
+   "durationUs": 13599999,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "b0c7c5be-6eb4-4434-beac-72af1e192796.mkv",
+     "bytes": 253098,
+     "motion": 33.099,
+     "tones": {
+      "1000": {
+       "activeFraction": 0,
+       "blocks": 268,
+       "maxAmplitude": 0.00037306822046862307,
+       "medianAmplitude": 6.983177498786736e-07
+      },
+      "440": {
+       "activeFraction": 0.996268656716418,
+       "blocks": 268,
+       "maxAmplitude": 0.017033501763775202,
+       "medianAmplitude": 0.016959018488611012
+      }
+     },
+     "pairs": 1,
+     "medianMs": -330.7,
+     "spreadMs": 0,
+     "offsetsMs": [
+      -330.7
+     ],
+     "pairTimesS": [
+      9.333
+     ]
+    },
+    "export": {
+     "file": "pr-mp4-1.mp4",
+     "bytes": 156266,
+     "motion": 33.095,
+     "tones": {
+      "1000": {
+       "activeFraction": 0,
+       "blocks": 269,
+       "maxAmplitude": 0.0003739534505914457,
+       "medianAmplitude": 1.0406368113318625e-06
+      },
+      "440": {
+       "activeFraction": 0.9925650557620818,
+       "blocks": 269,
+       "maxAmplitude": 0.01703729581055279,
+       "medianAmplitude": 0.01692964334002859
+      }
+     },
+     "pairs": 1,
+     "medianMs": -331.3,
+     "spreadMs": 0,
+     "offsetsMs": [
+      -331.3
+     ],
+     "pairTimesS": [
+      9.333
+     ]
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 1.0
+    },
+    "fraction": 0.6049,
+    "kept": "/home/lab/b1364/r/c/frames/pr-mp4-1.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     960,
+     540
+    ],
+    "sha256": "6aee83d3a1601ce841c00534f8e5df8e07d20b0974d6191bb899819547a862f5",
+    "size": [
+     960,
+     540
+    ]
+   }
+  }
+ ],
+ "microphone": {
+  "name": "putgd_lab_5556",
+  "modules": {
+   "sink": 536870916,
+   "holdSink": 536870920,
+   "source": 536870917,
+   "hold": 536870918,
+   "system": 536870919
+  },
+  "defaultSource": "@DEFAULT_SOURCE@",
+  "defaultSink": "auto_null",
+  "sink": "putgd_lab_5556_sink",
+  "source": "putgd_lab_5556_mic",
+  "plugged": true,
+  "attempts": 1,
+  "heardPeak": 6545,
+  "systemSink": "putgd_lab_5556_system"
+ },
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "Virtual-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1280,
+    800
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "skipped": "no loopback VNC tile (disposable guest)"
+  },
+  "video": "marker"
+ },
+ "microphoneRemoved": {
+  "removed": true,
+  "left": [],
+  "defaultSource": "@DEFAULT_SOURCE@",
+  "defaultSink": "auto_null"
+ },
+ "gpuHangs": []
+}

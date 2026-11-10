@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/home/lab/b1364/hidden.py", line 13, in <module>
+    exec(compile((Path(__file__).parent/'rewrite_run.py').read_text(),str(Path(__file__).parent/'rewrite_run.py'),'exec'))
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lab/b1364/rewrite_run.py", line 25, in <module>
+    record_run.main()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/lab/b1364/lab/record_run.py", line 1242, in main
+    return Driver(parser.parse_args(argv)).main()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/lab/b1364/lab/record_run.py", line 1152, in main
+    self.start_resident(build)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/lab/b1364/lab/record_run.py", line 706, in start_resident
+    caps = self.cli(build, 'recording.capabilities', timeout=40)
+  File "/home/lab/b1364/hidden.py", line 8, in cli
+    r=old(self,build,method,params,timeout)
+TypeError: Driver.press_clicks() takes 3 positional arguments but 5 were given
