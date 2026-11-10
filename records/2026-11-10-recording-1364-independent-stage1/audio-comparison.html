@@ -1,0 +1,39 @@
+<!doctype html>
+<html><head><meta charset="utf-8"></head><body>
+<style>
+#timing1364 { color:var(--foreground); font-family:var(--font-sans); }
+#timing1364 .series { display:flex; gap:18px; flex-wrap:wrap; margin:8px 0 14px; }
+#timing1364 .row { margin:12px 0; }
+#timing1364 .plot { height:22px; position:relative; margin:4px 8px; background:var(--secondary); }
+#timing1364 .band { position:absolute; left:29.19%; width:41.62%; height:100%; background:var(--success); opacity:.14; }
+#timing1364 .zero { position:absolute; left:50%; height:100%; border-left:1px solid var(--border); }
+#timing1364 .dot { position:absolute; width:9px; height:9px; border-radius:50%; background:var(--chart-1); transform:translateX(-50%); top:2px; }
+#timing1364 .square { border-radius:0; background:var(--chart-2); top:12px; }
+#timing1364 .axis {display:flex; justify-content:space-between; margin:0 8px; color:var(--muted-foreground); }
+#timing1364 .key {display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--chart-1);margin-right:5px;}
+#timing1364 .key.webm {border-radius:0;background:var(--chart-2);}
+</style>
+<div id="timing1364" role="img" aria-label="Budgie audio minus video alignment. Nightly and PR system-audio measurements overlap, and both exceed the shaded plus or minus 33.3 millisecond bound. Each dot or square is one recording median.">
+<h3>Budgie: audio minus picture</h3>
+<div class="series"><span><i class="key"></i>MP4</span><span><i class="key webm"></i>WebM</span><span>Shaded: ±33.3 ms</span></div>
+<div id="timing-rows"></div>
+<div class="axis"><span>−80 ms</span><span>0</span><span>+80 ms</span></div>
+</div>
+<script>
+const timingRows1364 = [
+ ['Nightly · system', [19.3,10.7,54],[40.5,36.5,36.5]],
+ ['PR · system',[40,38,38],[37.5,32.5,43.5]],
+ ['PR · microphone',[6.7,50,50],[70.5,11.5,65.5]],
+ ['PR · mixed',[19.3,36.7,29.3],[11.5,54.5,11.5]]
+];
+const root1364=document.getElementById('timing-rows');
+for(const [label,mp4,webm] of timingRows1364){
+ const row=document.createElement('div');row.className='row';
+ const text=document.createElement('div');text.textContent=label;row.append(text);
+ const plot=document.createElement('div');plot.className='plot';plot.innerHTML='<div class="band"></div><div class="zero"></div>';
+ for(const [values,cls] of [[mp4,'dot'],[webm,'dot square']])for(const v of values){const mark=document.createElement('span');mark.className=cls;mark.style.left=((v+80)/160*100)+'%';plot.append(mark);}
+ row.append(plot);root1364.append(row);
+}
+</script>
+
+</body></html>
