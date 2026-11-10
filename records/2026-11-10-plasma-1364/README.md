@@ -27,7 +27,7 @@ Audio safety: original real analog input was never opened. A private campaign nu
 
 Dependency setup: standard `gstreamer1-plugins-good-gtk` installed under authorized `sudo -n rpm-ostree usroverlay` and DNF with updates-archive disabled; DNF also updated its matching good-plugin packages. Setup log retained. No replacement toolchain or compilation.
 
-Evidence and three annotated pictures: publication links will be added below. Pictures show this exact build; the bar includes off/on/meter/no-device states, the clip crop calls out the ring, and support details boxes the full window-recording note. Alignment chart also included. All 366 exported files verified against remote SHA-256 manifest before scratch retirement. Cleanup/release receipt will be added below.
+Evidence and three annotated pictures: see the linked packet and pictures below (the packet uses relative image links). Pictures show this exact build; the bar includes off/on/meter/no-device states, the clip crop calls out the ring, and support details boxes the full window-recording note. Alignment chart also included. All 366 exported files verified against remote SHA-256 manifest before scratch retirement. Cleanup completed: 20,741 owned scratch files retired after export verification, scratch root absent; no owned processes/modules or temporary KWin entries remain, audio defaults and effect state restored. The two-step desktop release passed its cleanup check and released at **08:05:00 UTC**, well before 10:15. The original wall VNC/tunnel remains intact. Release and scratch-retirement receipts are included.
 
 ![Microphone bar](bar-plasma.png)
 
