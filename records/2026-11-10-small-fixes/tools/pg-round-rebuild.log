@@ -1,0 +1,33 @@
+[1/28] cd /home/patrick/work/pg-small/build/dev && /usr/bin/cmake -DSOURCE_DIR=/home/patrick/work/pg-small -DOUTPUT_DIR=/home/patrick/work/pg-small/build/dev/build-identity -DRELEASE_TAG= -DSUPPLIED_COMMIT= -DSUPPLIED_TREE= -DSUPPLIED_COUNT= -DSUPPLIED_TIME= -P /home/patrick/work/pg-small/cmake/GenerateBuildInfo.cmake
+[2/26] Automatic MOC and UIC for target putgd_ui_control
+[3/25] Automatic MOC and UIC for target putgd_visual
+[4/24] Building CXX object CMakeFiles/putgd_ui_control.dir/src/ipc/UiControl.cpp.o
+[5/24] Building CXX object CMakeFiles/putgd_visual.dir/src/ui/IconArt.cpp.o
+[6/24] Linking CXX static library libputgd_ui_control.a
+[7/24] Automatic MOC and UIC for target putgd_core
+[8/23] Linking CXX static library libputgd_visual.a
+[9/23] Automatic MOC and UIC for target putgd_editor
+[10/23] Building CXX object CMakeFiles/putgd_editor.dir/putgd_editor_autogen/mocs_compilation.cpp.o
+[11/23] Building CXX object CMakeFiles/putgd_core.dir/src/core/EditorJob.cpp.o
+[12/23] Linking CXX static library libputgd_core.a
+[13/23] Linking CXX executable putgd-b2-worker
+[14/23] Building CXX object CMakeFiles/putgd_editor.dir/src/editor/EditDocument.cpp.o
+[15/23] Building CXX object CMakeFiles/putgd_editor.dir/src/editor/EditorCommands.cpp.o
+[16/23] Building CXX object CMakeFiles/putgd_editor.dir/src/editor/EditorCanvas.cpp.o
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp:48:8: warning: ‘QPoint putgd::editor::{anonymous}::inside(const QPoint&, const QRect&)’ defined but not used [-Wunused-function]
+   48 | QPoint inside(const QPoint& p,const QRect& bounds){
+      |        ^~~~~~
+[17/23] Linking CXX static library libputgd_editor.a
+[18/23] Automatic MOC and UIC for target putgd_editor_window
+[19/23] Building CXX object CMakeFiles/putgd_editor_window.dir/putgd_editor_window_autogen/mocs_compilation.cpp.o
+[20/23] Building CXX object CMakeFiles/putgd_editor_window.dir/src/ui/EditorWindow.cpp.o
+/home/patrick/work/pg-small/src/ui/EditorWindow.cpp: In function ‘bool putgd::{anonymous}::integerIn(const QJsonValue&, double, double, int&)’:
+/home/patrick/work/pg-small/src/ui/EditorWindow.cpp:93:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   93 |  if(!value.isDouble())return false;const double number=value.toDouble();
+      |  ^~
+/home/patrick/work/pg-small/src/ui/EditorWindow.cpp:93:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   93 |  if(!value.isDouble())return false;const double number=value.toDouble();
+      |                                    ^~~~~
+[21/23] Linking CXX static library libputgd_editor_window.a
+[22/23] Building CXX object CMakeFiles/pg_round_picture.dir/tmp/pg-pictures-round.cpp.o
+[23/23] Linking CXX executable pg_round_picture
