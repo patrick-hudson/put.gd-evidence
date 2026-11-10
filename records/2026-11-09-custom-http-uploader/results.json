@@ -1,0 +1,55 @@
+{
+ "build": {
+  "host": "m74 (Linux Mint 22.3, Cinnamon, X11, Qt 6.4.2)",
+  "source": "put.gd-desktop feat/custom-http-uploader at 8f69043ee (PR #1371 head), dev build of that tree; a build without git metadata, so the window shows 0.0.0-dev.unknown"
+ },
+ "ctest": {
+  "http_uploader_rules": {
+   "passed": 158,
+   "failed": 0
+  },
+  "http_uploader_integration": {
+   "passed": 41,
+   "failed": 0
+  }
+ },
+ "realReceivers": {
+  "how": "tools/lab/http_receivers/check_uploads.py --allow-insecure-http against a headless private resident; receivers on aurora-amd, lab network only",
+  "zipline 4.8.3": {
+   "passed": true,
+   "testConnection": "completed",
+   "upload": "uploaded",
+   "linkStatus": 200,
+   "deletion": "not offered: the reply carries no deletion URL (unsupported_capability with the reason)"
+  },
+  "chibisafe 6.7.0": {
+   "passed": true,
+   "testConnection": "completed",
+   "upload": "uploaded",
+   "linkStatus": 200,
+   "deletion": "not offered: the reply carries no deletion URL (unsupported_capability with the reason)"
+  },
+  "xbackbone 3.8.2": {
+   "passed": true,
+   "testConnection": "completed",
+   "upload": "uploaded",
+   "linkStatus": 200,
+   "deletion": "removed; the link then answers 404"
+  },
+  "filesHoldingAToken": [],
+  "diagnosticsPackageScanned": true,
+  "cleanupError": null,
+  "withoutTheFlag": "every import refused with http_insecure_url; nothing stored"
+ },
+ "desktopRun": {
+  "uploadStatus": "uploaded",
+  "lostReplyThenRetry": {
+   "firstAttempt": "unknown",
+   "copiesOnTheReceiverAfterRetry": 2
+  },
+  "timeoutsAfterScrollingOverThem": {
+   "connectTimeoutMs": 10000,
+   "requestTimeoutMs": 600000
+  }
+ }
+}
