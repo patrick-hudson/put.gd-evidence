@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-09-custom-http-uploader](2026-11-09-custom-http-uploader/README.md) | #1361 | Custom HTTP uploader with ShareX .sxcu import (#1361): pictures and checks at the PR head |
 | [2026-11-09-s3-presigned-1365](2026-11-09-s3-presigned-1365/README.md) | #1365 | S3 expiring links and History renewal — issue #1365 |
 | [2026-11-09-editor-tools-1362](2026-11-09-editor-tools-1362/README.md) | #1362 | Editor tools (#1362): step numbers, pen, ellipse, line, pixelate, Copy image |
 | [2026-11-09-issue-835-history-menu-key](2026-11-09-issue-835-history-menu-key/README.md) | — | Issue 835: History row menu and the Menu key |
