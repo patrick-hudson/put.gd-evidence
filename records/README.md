@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-10-recording-1364-budgie-final-visible](2026-11-10-recording-1364-budgie-final-visible/README.md) | — | Final cell — visible control bar, build 4548 |
 | [2026-11-10-recording-1364-final-assembly](2026-11-10-recording-1364-final-assembly/README.md) | — | Final recording acceptance assembly — Budgie pending last cell |
 | [2026-11-10-recording-1364-hyprland-4548](2026-11-10-recording-1364-hyprland-4548/README.md) | #4548 | Hyprland build 4548 cursor-frame follow-up |
 | [2026-11-10-recording-1364-budgie-4548](2026-11-10-recording-1364-budgie-4548/README.md) | #4548 | Budgie new-build report — 4548 / 30eab18a8 |
