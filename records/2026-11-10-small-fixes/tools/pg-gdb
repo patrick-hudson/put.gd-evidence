@@ -1,0 +1,9 @@
+set pagination off
+set breakpoint pending on
+break QDBusConnection::connectToBus(QString const&, QString const&)
+commands
+silent
+bt 25
+continue
+end
+run

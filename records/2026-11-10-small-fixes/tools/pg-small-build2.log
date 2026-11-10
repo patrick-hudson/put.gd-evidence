@@ -1,0 +1,617 @@
+[1/205] cd /home/patrick/work/pg-small/build/dev && /usr/bin/cmake -DSOURCE_DIR=/home/patrick/work/pg-small -DOUTPUT_DIR=/home/patrick/work/pg-small/build/dev/build-identity -DRELEASE_TAG= -DSUPPLIED_COMMIT= -DSUPPLIED_TREE= -DSUPPLIED_COUNT= -DSUPPLIED_TIME= -P /home/patrick/work/pg-small/cmake/GenerateBuildInfo.cmake
+[2/205] Automatic MOC and UIC for target putgd_log
+[3/205] Building CXX object CMakeFiles/putgd_build_identity.dir/build-identity/BuildInfo.cpp.o
+[4/205] Building CXX object CMakeFiles/putgd_log.dir/putgd_log_autogen/mocs_compilation.cpp.o
+[5/205] Automatic MOC and UIC for target putgd_ui_control
+[6/205] Building CXX object CMakeFiles/putgd_log.dir/src/core/RunMarker.cpp.o
+[7/205] Building CXX object CMakeFiles/putgd_log.dir/src/core/Log.cpp.o
+[8/205] Building CXX object CMakeFiles/putgd_log.dir/src/core/CrashRecord.cpp.o
+[9/205] Building CXX object CMakeFiles/putgd_ui_control.dir/putgd_ui_control_autogen/mocs_compilation.cpp.o
+[10/205] Building CXX object CMakeFiles/putgd_ui_control.dir/src/ipc/StdioDevice.cpp.o
+[11/205] Linking CXX static library libputgd_build_identity.a
+[12/205] Linking CXX static library libputgd_log.a
+[13/205] Automatic MOC and UIC for target putgd_crash
+[14/205] Building CXX object CMakeFiles/putgd_ui_control.dir/src/ipc/UiControl.cpp.o
+[15/205] Linking CXX static library libputgd_ui_control.a
+[16/205] Automatic MOC and UIC for target putgd_core
+[17/205] Automatic MOC and UIC for target putgd_visual
+[18/205] Building CXX object CMakeFiles/putgd_core.dir/putgd_core_autogen/mocs_compilation.cpp.o
+[19/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/Settings.cpp.o
+[20/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/ImagePages.cpp.o
+[21/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/SettingsService.cpp.o
+[22/205] Building CXX object CMakeFiles/putgd_core.dir/src/platform/Geometry.cpp.o
+[23/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/ClipboardPayload.cpp.o
+[24/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/ArtifactStore.cpp.o
+[25/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/ImageJob.cpp.o
+[26/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/PosterJob.cpp.o
+[27/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/LocalArchive.cpp.o
+[28/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/StorageReceipt.cpp.o
+[29/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/UploadNaming.cpp.o
+[30/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/StorageProvider.cpp.o
+[31/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/Operation.cpp.o
+[32/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/HistoryStore.cpp.o
+/home/patrick/work/pg-small/src/core/HistoryStore.cpp: In member function ‘putgd::Error putgd::HistoryStore::recordCopiedLink(const QString&, QString&)’:
+/home/patrick/work/pg-small/src/core/HistoryStore.cpp:197:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  197 |  if(!lookup.exec())return sqlError();if(!lookup.next())return {};
+      |  ^~
+/home/patrick/work/pg-small/src/core/HistoryStore.cpp:197:38: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  197 |  if(!lookup.exec())return sqlError();if(!lookup.next())return {};
+      |                                      ^~
+/home/patrick/work/pg-small/src/core/HistoryStore.cpp:203:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  203 |  if(update.numRowsAffected())operationId=id;return {};
+      |  ^~
+/home/patrick/work/pg-small/src/core/HistoryStore.cpp:203:45: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  203 |  if(update.numRowsAffected())operationId=id;return {};
+      |                                             ^~~~~~
+[33/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/SanitizedPng.cpp.o
+[34/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/RecordingModel.cpp.o
+[35/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/EditorJob.cpp.o
+[36/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/ReleaseLink.cpp.o
+[37/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/Update.cpp.o
+[38/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/Distribution.cpp.o
+[39/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/SystemUpdates.cpp.o
+[40/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/ZipWriter.cpp.o
+[41/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/FolderZip.cpp.o
+[42/205] Building CXX object CMakeFiles/putgd_crash.dir/putgd_crash_autogen/mocs_compilation.cpp.o
+[43/205] Building CXX object CMakeFiles/putgd_crash.dir/src/core/CrashHandler.cpp.o
+[44/205] Automatic MOC and UIC for target putgd_keyboard_map
+[45/205] Automatic MOC and UIC for target putgd_session_protocol
+[46/205] Building CXX object CMakeFiles/putgd_core.dir/src/core/HostEnvironment.cpp.o
+[47/205] Linking CXX static library libputgd_core.a
+[48/205] Automatic MOC and UIC for target putgd_credentials
+[49/205] Building CXX object CMakeFiles/putgd_credentials.dir/putgd_credentials_autogen/mocs_compilation.cpp.o
+[50/205] Building CXX object CMakeFiles/putgd_visual.dir/putgd_visual_autogen/mocs_compilation.cpp.o
+[51/205] Building CXX object CMakeFiles/putgd_credentials.dir/src/secrets/CredentialStore.cpp.o
+[52/205] Linking CXX static library libputgd_credentials.a
+[53/205] Building CXX object CMakeFiles/putgd_visual.dir/src/ui/IconArt.cpp.o
+[54/205] Building CXX object CMakeFiles/putgd_visual.dir/src/ui/Theme.cpp.o
+[55/205] Building CXX object CMakeFiles/putgd_visual.dir/src/ui/Ui.cpp.o
+/home/patrick/work/pg-small/src/ui/Ui.cpp: In member function ‘virtual QPixmap putgd::Ui::{anonymous}::ThemedIcon::scaledPixmap(const QSize&, QIcon::Mode, QIcon::State, qreal)’:
+/home/patrick/work/pg-small/src/ui/Ui.cpp:3144:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 3144 |   if(cache.size()>512)cache.clear();cache.insert(key,pixmap);return pixmap;
+      |   ^~
+/home/patrick/work/pg-small/src/ui/Ui.cpp:3144:37: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+ 3144 |   if(cache.size()>512)cache.clear();cache.insert(key,pixmap);return pixmap;
+      |                                     ^~~~~
+[56/205] Automatic MOC and UIC for target putgd_app
+[57/205] Automatic MOC and UIC for target putgd-b2-worker
+[58/205] Building CXX object CMakeFiles/putgd_visual.dir/src/ui/WindowButtons.cpp.o
+[59/205] Building CXX object CMakeFiles/putgd_app.dir/putgd_app_autogen/mocs_compilation.cpp.o
+[60/205] Building CXX object CMakeFiles/putgd_app.dir/src/app/OperationClipboard.cpp.o
+/home/patrick/work/pg-small/src/app/OperationClipboard.cpp: In lambda function:
+/home/patrick/work/pg-small/src/app/OperationClipboard.cpp:134:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  134 |   if(!guard.isEmpty())state->suppression=guard;return guard.isEmpty();
+      |   ^~
+/home/patrick/work/pg-small/src/app/OperationClipboard.cpp:134:48: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  134 |   if(!guard.isEmpty())state->suppression=guard;return guard.isEmpty();
+      |                                                ^~~~~~
+/home/patrick/work/pg-small/src/app/OperationClipboard.cpp: In lambda function:
+/home/patrick/work/pg-small/src/app/OperationClipboard.cpp:195:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  195 |   if(!guard.isEmpty())group->suppression=guard;return guard.isEmpty();
+      |   ^~
+/home/patrick/work/pg-small/src/app/OperationClipboard.cpp:195:48: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  195 |   if(!guard.isEmpty())group->suppression=guard;return guard.isEmpty();
+      |                                                ^~~~~~
+[61/205] Building CXX object CMakeFiles/putgd_app.dir/src/app/OperationService.cpp.o
+[62/205] Building CXX object CMakeFiles/putgd_app.dir/src/app/UploadSlots.cpp.o
+[63/205] Building CXX object CMakeFiles/putgd_app.dir/src/app/RecordingService.cpp.o
+[64/205] Building CXX object CMakeFiles/putgd_app.dir/src/app/RecordingHelperBackend.cpp.o
+[65/205] Building CXX object CMakeFiles/putgd_app.dir/src/app/SetupService.cpp.o
+[66/205] Building CXX object CMakeFiles/putgd_app.dir/src/app/HistoryService.cpp.o
+[67/205] Building CXX object CMakeFiles/putgd_app.dir/src/app/LocalServer.cpp.o
+[68/205] Building CXX object CMakeFiles/putgd_app.dir/src/app/LocalIpc.cpp.o
+[69/205] Building CXX object CMakeFiles/putgd_app.dir/src/app/LoginStartup.cpp.o
+[70/205] Building CXX object CMakeFiles/putgd_app.dir/src/app/ResidentSession.cpp.o
+[71/205] Building CXX object CMakeFiles/putgd_app.dir/src/app/StorageLocations.cpp.o
+[72/205] Building CXX object CMakeFiles/putgd_app.dir/src/app/LogService.cpp.o
+[73/205] Building CXX object CMakeFiles/putgd_app.dir/src/app/UpdateService.cpp.o
+[74/205] Building CXX object CMakeFiles/putgd_app.dir/src/app/DiagnosticsBundle.cpp.o
+[75/205] Building CXX object CMakeFiles/putgd_app.dir/src/app/AppImageInstall.cpp.o
+[76/205] Building CXX object CMakeFiles/putgd_app.dir/src/app/FileUploads.cpp.o
+[77/205] Linking CXX static library libputgd_visual.a
+[78/205] Building CXX object CMakeFiles/putgd_keyboard_map.dir/putgd_keyboard_map_autogen/mocs_compilation.cpp.o
+[79/205] Building CXX object CMakeFiles/putgd_keyboard_map.dir/src/platform/wayland/KeyboardMap.cpp.o
+[80/205] Building CXX object CMakeFiles/putgd_session_protocol.dir/putgd_session_protocol_autogen/mocs_compilation.cpp.o
+[81/205] Building CXX object CMakeFiles/putgd_app.dir/src/app/FileManagerIntegration.cpp.o
+[82/205] Building CXX object CMakeFiles/putgd-b2-worker.dir/putgd-b2-worker_autogen/mocs_compilation.cpp.o
+[83/205] Building CXX object CMakeFiles/putgd_session_protocol.dir/src/client/SessionProtocol.cpp.o
+[84/205] Building CXX object CMakeFiles/putgd-b2-worker.dir/src/storage/b2/B2Common.cpp.o
+[85/205] Linking CXX static library libputgd_app.a
+[86/205] Linking CXX static library libputgd_keyboard_map.a
+[87/205] Linking CXX static library libputgd_session_protocol.a
+[88/205] Automatic MOC and UIC for target putgd_fonts
+[89/205] Automatic MOC and UIC for target putgd_s3_wire
+[90/205] Building CXX object CMakeFiles/putgd-b2-worker.dir/src/storage/b2/B2WorkerMain.cpp.o
+[91/205] Automatic MOC and UIC for target putgd_x11_listeners
+[92/205] Linking CXX executable putgd-b2-worker
+[93/205] Automatic MOC and UIC for target putgd_client
+[94/205] Automatic MOC and UIC for target putgd_ui_state
+[95/205] Automatic MOC and UIC for target putgd_host_open
+[96/205] Automatic MOC and UIC for target putgd_appearance
+[97/205] Automatic MOC and UIC for target putgd_file_dialog
+[98/205] Automatic MOC and UIC for target putgd_shortcut_keyboard
+[99/205] Automatic MOC and UIC for target putgd_preview_reader
+[100/205] Automatic MOC and UIC for target putgd_b2
+[101/205] Automatic MOC and UIC for target putgd_proton
+[102/205] Building CXX object CMakeFiles/putgd_s3_wire.dir/putgd_s3_wire_autogen/mocs_compilation.cpp.o
+[103/205] Automatic RCC for src/ui/fonts.qrc
+[104/205] Building CXX object CMakeFiles/putgd_s3_wire.dir/src/storage/s3/IpAddress.cpp.o
+[105/205] Building CXX object CMakeFiles/putgd_s3_wire.dir/src/storage/s3/S3WorkerProtocol.cpp.o
+[106/205] Building CXX object CMakeFiles/putgd_fonts.dir/putgd_fonts_autogen/mocs_compilation.cpp.o
+[107/205] Building CXX object CMakeFiles/putgd_s3_wire.dir/src/storage/s3/PublicUrl.cpp.o
+[108/205] Building CXX object CMakeFiles/putgd_fonts.dir/putgd_fonts_autogen/YPKJ5OE7LN/qrc_fonts.cpp.o
+[109/205] Building CXX object CMakeFiles/putgd_fonts.dir/src/ui/Fonts.cpp.o
+[110/205] Building CXX object CMakeFiles/putgd_x11_listeners.dir/putgd_x11_listeners_autogen/mocs_compilation.cpp.o
+[111/205] Building CXX object CMakeFiles/putgd_x11_listeners.dir/src/platform/x11/X11Shortcuts.cpp.o
+[112/205] Building CXX object CMakeFiles/putgd_x11_listeners.dir/src/platform/x11/X11Clipboard.cpp.o
+[113/205] Building CXX object CMakeFiles/putgd_x11_listeners.dir/src/platform/x11/X11SessionLock.cpp.o
+[114/205] Building CXX object CMakeFiles/putgd_client.dir/putgd_client_autogen/mocs_compilation.cpp.o
+[115/205] Building CXX object CMakeFiles/putgd_ui_state.dir/putgd_ui_state_autogen/mocs_compilation.cpp.o
+[116/205] Building CXX object CMakeFiles/putgd_client.dir/src/client/SessionClient.cpp.o
+[117/205] Building CXX object CMakeFiles/putgd_host_open.dir/putgd_host_open_autogen/mocs_compilation.cpp.o
+[118/205] Building CXX object CMakeFiles/putgd_ui_state.dir/src/ui/ViewState.cpp.o
+[119/205] Building CXX object CMakeFiles/putgd_appearance.dir/putgd_appearance_autogen/mocs_compilation.cpp.o
+[120/205] Building CXX object CMakeFiles/putgd_host_open.dir/src/platform/HostOpen.cpp.o
+[121/205] Building CXX object CMakeFiles/putgd_appearance.dir/src/ui/PortalSettings.cpp.o
+[122/205] Building CXX object CMakeFiles/putgd_appearance.dir/src/ui/Appearance.cpp.o
+[123/205] Building CXX object CMakeFiles/putgd_file_dialog.dir/putgd_file_dialog_autogen/mocs_compilation.cpp.o
+[124/205] Building CXX object CMakeFiles/putgd_shortcut_keyboard.dir/putgd_shortcut_keyboard_autogen/mocs_compilation.cpp.o
+[125/205] Building CXX object CMakeFiles/putgd_file_dialog.dir/src/ui/FileDialog.cpp.o
+[126/205] Building CXX object CMakeFiles/putgd_shortcut_keyboard.dir/src/ui/ShortcutKeyboard.cpp.o
+[127/205] Building CXX object CMakeFiles/putgd_preview_reader.dir/putgd_preview_reader_autogen/mocs_compilation.cpp.o
+[128/205] Building CXX object CMakeFiles/putgd_b2.dir/putgd_b2_autogen/mocs_compilation.cpp.o
+[129/205] Building CXX object CMakeFiles/putgd_b2.dir/src/storage/b2/B2Common.cpp.o
+[130/205] Building CXX object CMakeFiles/putgd_preview_reader.dir/src/ui/PreviewReader.cpp.o
+[131/205] Building CXX object CMakeFiles/putgd_proton.dir/putgd_proton_autogen/mocs_compilation.cpp.o
+[132/205] Building CXX object CMakeFiles/putgd_b2.dir/src/storage/b2/B2Provider.cpp.o
+[133/205] Linking CXX static library libputgd_s3_wire.a
+[134/205] Linking CXX static library libputgd_x11_listeners.a
+[135/205] Linking CXX static library libputgd_client.a
+[136/205] Building CXX object CMakeFiles/putgd_proton.dir/src/storage/proton/ProtonProvider.cpp.o
+[137/205] Linking CXX static library libputgd_ui_state.a
+[138/205] Linking CXX static library libputgd_host_open.a
+[139/205] Linking CXX static library libputgd_appearance.a
+[140/205] Linking CXX static library libputgd_file_dialog.a
+[141/205] Linking CXX static library libputgd_shortcut_keyboard.a
+[142/205] Linking CXX static library libputgd_preview_reader.a
+[143/205] Linking CXX static library libputgd_fonts.a
+[144/205] Linking CXX static library libputgd_proton.a
+[145/205] Linking CXX static library libputgd_b2.a
+[146/205] Automatic MOC and UIC for target putgd_capture_control
+[147/205] Automatic MOC and UIC for target putgd_x11_native_snapshot
+[148/205] Automatic MOC and UIC for target putgd_x11
+[149/205] Automatic MOC and UIC for target putgd_ui
+[150/205] Automatic MOC and UIC for target putgd_editor
+[151/205] Building CXX object CMakeFiles/putgd_x11.dir/src/platform/x11/X11Capture.cpp.o
+[152/205] Building CXX object CMakeFiles/putgd_x11.dir/putgd_x11_autogen/mocs_compilation.cpp.o
+[153/205] Building CXX object CMakeFiles/putgd_x11.dir/src/platform/x11/X11CompositorSettle.cpp.o
+[154/205] Building CXX object CMakeFiles/putgd_x11.dir/src/platform/x11/CinnamonRegionCapture.cpp.o
+[155/205] Building CXX object CMakeFiles/putgd_x11.dir/src/platform/x11/X11SourceAdapter.cpp.o
+[156/205] Building CXX object CMakeFiles/putgd_x11.dir/src/platform/x11/NativeRegionOverlay.cpp.o
+[157/205] Building CXX object CMakeFiles/putgd_capture_control.dir/putgd_capture_control_autogen/mocs_compilation.cpp.o
+[158/205] Building CXX object CMakeFiles/putgd_x11.dir/src/ui/RegionOverlay.cpp.o
+In file included from /home/patrick/work/pg-small/src/ui/RegionOverlay.cpp:4:
+/home/patrick/work/pg-small/src/ui/RegionOverlay.h: In constructor ‘putgd::RegionOverlay::RegionOverlay(QList<putgd::CaptureFrame>, QObject*, QString, bool)’:
+/home/patrick/work/pg-small/src/ui/RegionOverlay.h:27:10: warning: ‘putgd::RegionOverlay::outcome_’ will be initialized after [-Wreorder]
+   27 |  QString outcome_;
+      |          ^~~~~~~~
+/home/patrick/work/pg-small/src/ui/RegionOverlay.h:24:7: warning:   ‘bool putgd::RegionOverlay::frozen_’ [-Wreorder]
+   24 |  bool frozen_=false;
+      |       ^~~~~~~
+/home/patrick/work/pg-small/src/ui/RegionOverlay.cpp:86:1: warning:   when initialized here [-Wreorder]
+   86 | RegionOverlay::RegionOverlay(QList<CaptureFrame> frames,QObject* parent,QString outcome,bool frozen):RegionSelector(parent),frames_(std::move(frames)),outcome_(std::move(outcome)),frozen_(frozen){}
+      | ^~~~~~~~~~~~~
+[159/205] Building CXX object CMakeFiles/putgd_x11_native_snapshot.dir/putgd_x11_native_snapshot_autogen/mocs_compilation.cpp.o
+[160/205] Building CXX object CMakeFiles/putgd_capture_control.dir/src/ipc/CaptureControl.cpp.o
+[161/205] Building CXX object CMakeFiles/putgd_x11_native_snapshot.dir/src/platform/x11/X11NativeSnapshot.cpp.o
+[162/205] Building CXX object CMakeFiles/putgd_ui.dir/putgd_ui_autogen/mocs_compilation.cpp.o
+In file included from /home/patrick/work/pg-small/build/dev/putgd_ui_autogen/YPKJ5OE7LN/moc_SettingsWindow.cpp:9,
+                 from /home/patrick/work/pg-small/build/dev/putgd_ui_autogen/mocs_compilation.cpp:5:
+/home/patrick/work/pg-small/build/dev/putgd_ui_autogen/YPKJ5OE7LN/../../../../src/ui/SettingsWindow.h:18:7: warning: defining ‘putgd::SettingsWindow’, which previously failed to be complete in a SFINAE context [-Wsfinae-incomplete=]
+   18 | class SettingsWindow final:public RetainedWindow {
+      |       ^~~~~~~~~~~~~~
+In file included from /usr/include/qt6/QtCore/qcborcommon.h:9,
+                 from /usr/include/qt6/QtCore/qcborvalue.h:9,
+                 from /usr/include/qt6/QtCore/qjsonvalue.h:8,
+                 from /usr/include/qt6/QtCore/qjsonobject.h:8,
+                 from /usr/include/qt6/QtCore/QJsonObject:1,
+                 from /home/patrick/work/pg-small/src/core/Error.h:2,
+                 from /home/patrick/work/pg-small/src/client/SessionProtocol.h:2,
+                 from /home/patrick/work/pg-small/src/client/SessionClient.h:2,
+                 from /home/patrick/work/pg-small/build/dev/putgd_ui_autogen/YPKJ5OE7LN/../../../../src/ui/UiSession.h:2,
+                 from /home/patrick/work/pg-small/build/dev/putgd_ui_autogen/YPKJ5OE7LN/../../../../src/ui/HistoryModel.h:2,
+                 from /home/patrick/work/pg-small/build/dev/putgd_ui_autogen/YPKJ5OE7LN/moc_HistoryModel.cpp:9,
+                 from /home/patrick/work/pg-small/build/dev/putgd_ui_autogen/mocs_compilation.cpp:2:
+/usr/include/qt6/QtCore/qmetatype.h:344:64: note: here.  Use ‘-Wsfinae-incomplete=2’ for a diagnostic at that point
+  344 |         static auto check(U *) -> std::integral_constant<bool, sizeof(U) != 0>;
+      |                                                                ^~~~~~~~~
+[163/205] Building CXX object CMakeFiles/putgd_ui.dir/src/ui/UiWindow.cpp.o
+[164/205] Building CXX object CMakeFiles/putgd_ui.dir/src/ui/MainWindow.cpp.o
+/home/patrick/work/pg-small/src/ui/MainWindow.cpp: In lambda function:
+/home/patrick/work/pg-small/src/ui/MainWindow.cpp:280:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  280 |   if(gaps==sourceGaps_)return;sourceGaps_=gaps;for(const auto& refresh:captureButtonUpdates_)refresh();updateDestination();});
+      |   ^~
+/home/patrick/work/pg-small/src/ui/MainWindow.cpp:280:31: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  280 |   if(gaps==sourceGaps_)return;sourceGaps_=gaps;for(const auto& refresh:captureButtonUpdates_)refresh();updateDestination();});
+      |                               ^~~~~~~~~~~
+/home/patrick/work/pg-small/src/ui/MainWindow.cpp: In member function ‘void putgd::MainWindow::updateOutputSummary()’:
+/home/patrick/work/pg-small/src/ui/MainWindow.cpp:303:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  303 |  if(!destination_)return;destination_->setText(destination_->property("fullOutputSummary").toString().replace('&',QStringLiteral("&&")));
+      |  ^~
+/home/patrick/work/pg-small/src/ui/MainWindow.cpp:303:26: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  303 |  if(!destination_)return;destination_->setText(destination_->property("fullOutputSummary").toString().replace('&',QStringLiteral("&&")));
+      |                          ^~~~~~~~~~~~
+/home/patrick/work/pg-small/src/ui/MainWindow.cpp: In member function ‘void putgd::MainWindow::fitBand()’:
+/home/patrick/work/pg-small/src/ui/MainWindow.cpp:332:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  332 |  if(!band_||fittingBand_)return;fittingBand_=true;
+      |  ^~
+/home/patrick/work/pg-small/src/ui/MainWindow.cpp:332:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  332 |  if(!band_||fittingBand_)return;fittingBand_=true;
+      |                                 ^~~~~~~~~~~~
+/home/patrick/work/pg-small/src/ui/MainWindow.cpp:341:2: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  341 |  for(auto* button:actionButtons_)button->setMinimumWidth(button->sizeHint().width());bandStage_=stage;fittingBand_=false;
+      |  ^~~
+/home/patrick/work/pg-small/src/ui/MainWindow.cpp:341:86: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  341 |  for(auto* button:actionButtons_)button->setMinimumWidth(button->sizeHint().width());bandStage_=stage;fittingBand_=false;
+      |                                                                                      ^~~~~~~~~~
+/home/patrick/work/pg-small/src/ui/MainWindow.cpp: In destructor ‘virtual putgd::MainWindow::~MainWindow()’:
+/home/patrick/work/pg-small/src/ui/MainWindow.cpp:357:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  357 |  if(settings_)disconnect(settings_,nullptr,this,nullptr);disconnect(history_,nullptr,this,nullptr);disconnect(tabs_,nullptr,this,nullptr);disconnect(&session_,nullptr,this,nullptr);
+      |  ^~
+/home/patrick/work/pg-small/src/ui/MainWindow.cpp:357:58: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  357 |  if(settings_)disconnect(settings_,nullptr,this,nullptr);disconnect(history_,nullptr,this,nullptr);disconnect(tabs_,nullptr,this,nullptr);disconnect(&session_,nullptr,this,nullptr);
+      |                                                          ^~~~~~~~~~
+[165/205] Building CXX object CMakeFiles/putgd_ui.dir/src/ui/WindowActivation.cpp.o
+[166/205] Building CXX object CMakeFiles/putgd_ui.dir/src/ui/UiSession.cpp.o
+[167/205] Building CXX object CMakeFiles/putgd_ui.dir/src/ui/ShortcutEditor.cpp.o
+[168/205] Building CXX object CMakeFiles/putgd_ui.dir/src/ui/SettingsWindow.cpp.o
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp: In function ‘void putgd::{anonymous}::boxPreferenceRows(QFormLayout*)’:
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:236:4: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  236 |    for(auto* full:fullRows)column->addWidget(full);for(auto* error:errors)column->addWidget(error);label->show();value->show();if(check)new PreferenceCheckRow(check,field);
+      |    ^~~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:236:52: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  236 |    for(auto* full:fullRows)column->addWidget(full);for(auto* error:errors)column->addWidget(error);label->show();value->show();if(check)new PreferenceCheckRow(check,field);
+      |                                                    ^~~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:240:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  240 |   if(field->property("preferenceRowInset").toBool())continue;if(field->findChild<QFormLayout*>())continue;
+      |   ^~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:240:62: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  240 |   if(field->property("preferenceRowInset").toBool())continue;if(field->findChild<QFormLayout*>())continue;
+      |                                                              ^~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp: In member function ‘void putgd::{anonymous}::PreferenceChoiceRow::apply()’:
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:285:2: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  285 |  for(auto* text:value_->findChildren<QLabel*>())if(text->property("preferenceReadoutText").toBool())text->setAlignment((stacked?Qt::AlignLeft:Qt::AlignRight)|Qt::AlignVCenter);line_->setSpacing(space(stacked?Space::s:Space::l));line_->setAlignment(value_,compact_?Qt::AlignRight|Qt::AlignTop:Qt::AlignTop);
+      |  ^~~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:285:177: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  285 |  for(auto* text:value_->findChildren<QLabel*>())if(text->property("preferenceReadoutText").toBool())text->setAlignment((stacked?Qt::AlignLeft:Qt::AlignRight)|Qt::AlignVCenter);line_->setSpacing(space(stacked?Space::s:Space::l));line_->setAlignment(value_,compact_?Qt::AlignRight|Qt::AlignTop:Qt::AlignTop);
+      |                                                                                                                                                                                 ^~~~~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp: In member function ‘void putgd::{anonymous}::DiagnosticsPackageDialog::chooserFinished(const putgd::FileDialog::Result&)’:
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:560:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  560 |   if(result.chosen())setFolder(result.path,true);fit();
+      |   ^~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:560:50: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  560 |   if(result.chosen())setFolder(result.path,true);fit();
+      |                                                  ^~~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp: In lambda function:
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:836:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  836 |   if(!qobject_cast<QCheckBox*>(control))control->setAccessibleName(label);if(qobject_cast<QLineEdit*>(control)||qobject_cast<QComboBox*>(control)||qobject_cast<QAbstractSpinBox*>(control))control->setMinimumHeight(Ui::scaled(Ui::Metric::control));if(qobject_cast<QLineEdit*>(control))control->setMaximumWidth(Ui::scaled(480));if(qobject_cast<QAbstractSpinBox*>(control))control->setMaximumWidth(qMax(Ui::scaled(120),control->minimumSizeHint().width()));bind(control,path);const bool separateHints=form->property("separateFieldHints").toBool();QLabel* fieldHint=nullptr;auto* wrapper=new FormRow;wrapper->setProperty("preferenceCaption",label);wrapper->setProperty("visualRole","settingRow");auto* column=new QVBoxLayout(wrapper);column->setSizeConstraint(QLayout::SetMinimumSize);column->setContentsMargins(0,0,0,separateHints?space(Space::s):0);column->setSpacing(space(Space::xs));auto* row=new QHBoxLayout;row->setContentsMargins(0,0,0,0);row->setSpacing(space(Space::s));if(unit.isEmpty()){row->addWidget(control,1);if(qobject_cast<QLineEdit*>(control))row->setAlignment(control,Qt::AlignLeft|Qt::AlignVCenter);}
+      |   ^~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:836:75: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  836 |   if(!qobject_cast<QCheckBox*>(control))control->setAccessibleName(label);if(qobject_cast<QLineEdit*>(control)||qobject_cast<QComboBox*>(control)||qobject_cast<QAbstractSpinBox*>(control))control->setMinimumHeight(Ui::scaled(Ui::Metric::control));if(qobject_cast<QLineEdit*>(control))control->setMaximumWidth(Ui::scaled(480));if(qobject_cast<QAbstractSpinBox*>(control))control->setMaximumWidth(qMax(Ui::scaled(120),control->minimumSizeHint().width()));bind(control,path);const bool separateHints=form->property("separateFieldHints").toBool();QLabel* fieldHint=nullptr;auto* wrapper=new FormRow;wrapper->setProperty("preferenceCaption",label);wrapper->setProperty("visualRole","settingRow");auto* column=new QVBoxLayout(wrapper);column->setSizeConstraint(QLayout::SetMinimumSize);column->setContentsMargins(0,0,0,separateHints?space(Space::s):0);column->setSpacing(space(Space::xs));auto* row=new QHBoxLayout;row->setContentsMargins(0,0,0,0);row->setSpacing(space(Space::s));if(unit.isEmpty()){row->addWidget(control,1);if(qobject_cast<QLineEdit*>(control))row->setAlignment(control,Qt::AlignLeft|Qt::AlignVCenter);}
+      |                                                                           ^~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp: In lambda function:
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:914:4: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  914 |    if(!g)return;g->restartUpdate_->setEnabled(true);
+      |    ^~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:914:17: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  914 |    if(!g)return;g->restartUpdate_->setEnabled(true);
+      |                 ^
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp: In lambda function:
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:1027:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 1027 |   if(editor!=edit&&key!="historyRetentionDays"&&key!="failedArtifactDays")editor->setProperty("formWidth",120);const bool retention=defaults["retention"].toObject().contains(key);auto* wrap=setting(form,name,editor,QString(retention?"/retention/":"/limits/")+key,{},key=="failedArtifactDays"?QString{}:unit);if(editor!=edit){errors_[edit]=errors_[editor];edit->setAccessibleName(editor->accessibleName());edit->setAccessibleDescription(editor->accessibleDescription());edit->setProperty("settingDescription",editor->property("settingDescription"));bind(edit,QString(retention?"/retention/":"/limits/")+key);}if(key.endsWith("Bytes")){const auto description=editor->accessibleDescription()+" Size labels use 1024 math: 1 MB = 1,048,576 bytes; 1 GB = 1,073,741,824 bytes.";editor->setAccessibleDescription(description);edit->setAccessibleDescription(description);editor->setProperty("settingDescription",description);edit->setProperty("settingDescription",description);}const QJsonValue value=retention?defaults["retention"].toObject()[key]:defaults["limits"].toObject()[key];const qint64 factor=displayUnit(key);const auto text=value.isNull()?QString{}:value.isString()?QStringLiteral("Auto"):ByteSize::exact(value.toInteger(),factor);edit->setProperty("defaultText",text);if(!retention)connect(edit,&QLineEdit::textChanged,this,[this]{updateResourceLimits();});if(!unit.isEmpty()){for(auto* suffix:wrap->findChildren<QLabel*>())if(suffix->property("visualRole")=="unitSuffix"){suffix->setObjectName(key+"Unit");auto updateUnit=[edit,editor,suffix]{const auto value=edit->text().trimmed();bool numeric=false;value.toDouble(&numeric);const bool showUnit=numeric&&edit->objectName()!="failedArtifactDays";suffix->setVisible(showUnit);editor->setProperty("hasUnit",showUnit);editor->update();};connect(edit,&QLineEdit::textChanged,this,updateUnit);updateUnit();}}auto* reset=new QPushButton("Reset");reset->setAccessibleName("Reset "+name+" to default");reset->setToolTip("Default: "+(text.isEmpty()?QString(key=="historyRetentionDays"?"Forever":"No limit"):text+(unit.isEmpty()||text=="Auto"?QString{}:" "+unit)));auto* row=qobject_cast<QHBoxLayout*>(wrap->layout()->itemAt(0)->layout());
+      |   ^~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:1027:112: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+ 1027 |   if(editor!=edit&&key!="historyRetentionDays"&&key!="failedArtifactDays")editor->setProperty("formWidth",120);const bool retention=defaults["retention"].toObject().contains(key);auto* wrap=setting(form,name,editor,QString(retention?"/retention/":"/limits/")+key,{},key=="failedArtifactDays"?QString{}:unit);if(editor!=edit){errors_[edit]=errors_[editor];edit->setAccessibleName(editor->accessibleName());edit->setAccessibleDescription(editor->accessibleDescription());edit->setProperty("settingDescription",editor->property("settingDescription"));bind(edit,QString(retention?"/retention/":"/limits/")+key);}if(key.endsWith("Bytes")){const auto description=editor->accessibleDescription()+" Size labels use 1024 math: 1 MB = 1,048,576 bytes; 1 GB = 1,073,741,824 bytes.";editor->setAccessibleDescription(description);edit->setAccessibleDescription(description);editor->setProperty("settingDescription",description);edit->setProperty("settingDescription",description);}const QJsonValue value=retention?defaults["retention"].toObject()[key]:defaults["limits"].toObject()[key];const qint64 factor=displayUnit(key);const auto text=value.isNull()?QString{}:value.isString()?QStringLiteral("Auto"):ByteSize::exact(value.toInteger(),factor);edit->setProperty("defaultText",text);if(!retention)connect(edit,&QLineEdit::textChanged,this,[this]{updateResourceLimits();});if(!unit.isEmpty()){for(auto* suffix:wrap->findChildren<QLabel*>())if(suffix->property("visualRole")=="unitSuffix"){suffix->setObjectName(key+"Unit");auto updateUnit=[edit,editor,suffix]{const auto value=edit->text().trimmed();bool numeric=false;value.toDouble(&numeric);const bool showUnit=numeric&&edit->objectName()!="failedArtifactDays";suffix->setVisible(showUnit);editor->setProperty("hasUnit",showUnit);editor->update();};connect(edit,&QLineEdit::textChanged,this,updateUnit);updateUnit();}}auto* reset=new QPushButton("Reset");reset->setAccessibleName("Reset "+name+" to default");reset->setToolTip("Default: "+(text.isEmpty()?QString(key=="historyRetentionDays"?"Forever":"No limit"):text+(unit.isEmpty()||text=="Auto"?QString{}:" "+unit)));auto* row=qobject_cast<QHBoxLayout*>(wrap->layout()->itemAt(0)->layout());
+      |                                                                                                                ^~~~~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:1030:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 1030 |   if(!qobject_cast<QComboBox*>(editor))editor->setFixedWidth(Ui::scaled(120));for(int i=0;i<row->count();++i)row->setStretch(i,0);
+      |   ^~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:1030:79: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+ 1030 |   if(!qobject_cast<QComboBox*>(editor))editor->setFixedWidth(Ui::scaled(120));for(int i=0;i<row->count();++i)row->setStretch(i,0);
+      |                                                                               ^~~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp: In constructor ‘putgd::SettingsWindow::SettingsWindow(putgd::UiSession&, QWidget*)’:
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:1181:2: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+ 1181 |  for(auto* form:preferenceForms)PreferenceRows::box(form);PreferenceRows::alignChoices(tabs_);
+      |  ^~~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:1181:59: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+ 1181 |  for(auto* form:preferenceForms)PreferenceRows::box(form);PreferenceRows::alignChoices(tabs_);
+      |                                                           ^~~~~~~~~~~~~~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp: In member function ‘void putgd::SettingsWindow::updateResourceLimits()’:
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:1292:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 1292 |  if(!resourceLimitsToggle_||loading_)return;for(auto it=numbers_.begin();it!=numbers_.end();++it)if(!Settings::defaults()["retention"].toObject().contains(it.key())&&it.value()->property("invalid").toBool()){resourceLimitsToggle_->setChecked(true);break;}
+      |  ^~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:1292:45: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+ 1292 |  if(!resourceLimitsToggle_||loading_)return;for(auto it=numbers_.begin();it!=numbers_.end();++it)if(!Settings::defaults()["retention"].toObject().contains(it.key())&&it.value()->property("invalid").toBool()){resourceLimitsToggle_->setChecked(true);break;}
+      |                                             ^~~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp: In member function ‘void putgd::SettingsWindow::diagnosticsCommand(const QJsonObject&, std::function<void(putgd::Error, QJsonObject)>)’:
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:1728:4: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 1728 |    if(!std::exchange(*answered,true))reply({},diagnosticsState());return;
+      |    ^~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:1728:67: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+ 1728 |    if(!std::exchange(*answered,true))reply({},diagnosticsState());return;
+      |                                                                   ^~~~~~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp: In member function ‘void putgd::SettingsWindow::autosaveFailure(const putgd::Error&)’:
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:1948:2: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+ 1948 |  for(auto* button:retryAutosave_)button->setVisible(!conflict_);showConflictActions();
+      |  ^~~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:1948:65: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+ 1948 |  for(auto* button:retryAutosave_)button->setVisible(!conflict_);showConflictActions();
+      |                                                                 ^~~~~~~~~~~~~~~~~~~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp: In member function ‘void putgd::SettingsWindow::refreshDestinationList(const QJsonObject&)’:
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:1984:2: warning: this ‘while’ clause does not guard... [-Wmisleading-indentation]
+ 1984 |  while(destinationList_->count()>profiles.size())delete destinationList_->takeItem(destinationList_->count()-1);int row=0;const auto actions=doc["actions"].toObject();bool selectedDefault=false;
+      |  ^~~~~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:1984:113: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘while’
+ 1984 |  while(destinationList_->count()>profiles.size())delete destinationList_->takeItem(destinationList_->count()-1);int row=0;const auto actions=doc["actions"].toObject();bool selectedDefault=false;
+      |                                                                                                                 ^~~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp: In member function ‘void putgd::SettingsWindow::placeConflictBanners()’:
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:2340:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 2340 |   if(conflict_)conflictBanners_[i]->setText(reported?label->text():conflictMessage());reloadConflict_[i]->setVisible(conflict_);conflictBanners_[i]->setVisible(conflict_);label->parentWidget()->setVisible(!conflict_||!reported);}
+      |   ^~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:2340:87: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+ 2340 |   if(conflict_)conflictBanners_[i]->setText(reported?label->text():conflictMessage());reloadConflict_[i]->setVisible(conflict_);conflictBanners_[i]->setVisible(conflict_);label->parentWidget()->setVisible(!conflict_||!reported);}
+      |                                                                                       ^~~~~~~~~~~~~~~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp: In member function ‘void putgd::SettingsWindow::fitRails()’:
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:2384:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 2384 |  if(settingsRail_)settingsRail_->setFixedWidth(width);if(destinationRail_){int widest=0;const QFontMetrics name(Ui::labelFont(true)),state(Ui::font(Ui::Type::metadata));for(int row=0;row<destinationList_->count();++row){const auto lines=destinationList_->item(row)->text().split('\n');widest=qMax(widest,qMax(name.horizontalAdvance(lines.value(0)),state.horizontalAdvance(lines.value(1))));}const int natural=widest+2*space(Space::l)+28+Ui::scaled(Ui::Metric::icon)+10;destinationRail_->setFixedWidth(qBound(width,natural,width+2*space(Space::xl)));}
+      |  ^~
+/home/patrick/work/pg-small/src/ui/SettingsWindow.cpp:2384:55: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+ 2384 |  if(settingsRail_)settingsRail_->setFixedWidth(width);if(destinationRail_){int widest=0;const QFontMetrics name(Ui::labelFont(true)),state(Ui::font(Ui::Type::metadata));for(int row=0;row<destinationList_->count();++row){const auto lines=destinationList_->item(row)->text().split('\n');widest=qMax(widest,qMax(name.horizontalAdvance(lines.value(0)),state.horizontalAdvance(lines.value(1))));}const int natural=widest+2*space(Space::l)+28+Ui::scaled(Ui::Metric::icon)+10;destinationRail_->setFixedWidth(qBound(width,natural,width+2*space(Space::xl)));}
+      |                                                       ^~
+[169/205] Building CXX object CMakeFiles/putgd_ui.dir/src/ui/HistoryWindow.cpp.o
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp: In constructor ‘putgd::{anonymous}::HistoryDelegate::HistoryDelegate(QListView*)’:
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:383:3: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  383 |   for(auto* button:{primary_,more_})button->installEventFilter(this);QWidget::setTabOrder(view_,primary_);QWidget::setTabOrder(primary_,more_);
+      |   ^~~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:383:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  383 |   for(auto* button:{primary_,more_})button->installEventFilter(this);QWidget::setTabOrder(view_,primary_);QWidget::setTabOrder(primary_,more_);
+      |                                                                      ^~~~~~~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp: In member function ‘void putgd::{anonymous}::HistoryDelegate::updateMore()’:
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:407:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  407 |   if(!visible)return;const auto name="More actions for "+i.data(HistoryModel::RecordRole).toJsonObject()["name"].toString();more_->setAccessibleName(name);more_->setToolTip(name);more_->setGeometry(bounds);raiseActions();
+      |   ^~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:407:22: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  407 |   if(!visible)return;const auto name="More actions for "+i.data(HistoryModel::RecordRole).toJsonObject()["name"].toString();more_->setAccessibleName(name);more_->setToolTip(name);more_->setGeometry(bounds);raiseActions();
+      |                      ^~~~~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp: In member function ‘bool putgd::{anonymous}::HistoryDelegate::compactFailureActionsBelow(const QRect&, const QModelIndex&) const’:
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:576:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  576 |   if(!compactRow(r,i)||!i.data(HistoryModel::FailedRole).toBool())return false;const auto rest=failureDetail(i.data(HistoryModel::RecordRole).toJsonObject()).split(" · ",Qt::SkipEmptyParts).mid(compactStatusFacts(r,i)).join(" · ");
+      |   ^~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:576:80: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  576 |   if(!compactRow(r,i)||!i.data(HistoryModel::FailedRole).toBool())return false;const auto rest=failureDetail(i.data(HistoryModel::RecordRole).toJsonObject()).split(" · ",Qt::SkipEmptyParts).mid(compactStatusFacts(r,i)).join(" · ");
+      |                                                                                ^~~~~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp: In member function ‘virtual QSize putgd::{anonymous}::HistoryDelegate::sizeHint(const QStyleOptionViewItem&, const QModelIndex&) const’:
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:616:60: warning: variable ‘body’ set but not used [-Wunused-but-set-variable=]
+  616 |   if(i.data(HistoryModel::FailedRole).toBool()){const auto body=rowBody(outer,false,heading(i));const auto metadata=metadataFor(i,inlineTextWidth(outer,i),false);height=qMax(rowContentHeight(),rowTextInset()+QFontMetrics(historyTitleFont()).height()+6+int(std::ceil(metadata->size().height()))+rowTextInset()+4)+heading(i);}
+      |                                                            ^~~~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp: In member function ‘void putgd::HistoryWindow::setDetailsOpen(bool)’:
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:891:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  891 |  if(!open)detailsFromGallery_=false;updateInspectorLayout();
+      |  ^~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:891:37: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  891 |  if(!open)detailsFromGallery_=false;updateInspectorLayout();
+      |                                     ^~~~~~~~~~~~~~~~~~~~~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp: In member function ‘void putgd::HistoryWindow::updateFooterLayout()’:
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:912:2: warning: this ‘while’ clause does not guard... [-Wmisleading-indentation]
+  912 |  while(auto* item=tools->takeAt(0))delete item;for(int i=0;i<6;++i)tools->setColumnStretch(i,0);
+      |  ^~~~~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:912:48: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘while’
+  912 |  while(auto* item=tools->takeAt(0))delete item;for(int i=0;i<6;++i)tools->setColumnStretch(i,0);
+      |                                                ^~~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp: In member function ‘void putgd::HistoryWindow::confirmCancelAll()’:
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:948:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  948 |  if(!cancelAllConfirmation_||!cancelAllConfirmation_->isVisible()||cancelAllIds_.isEmpty())return;const auto ids=cancelAllIds_;cancelAllConfirmation_->accept();
+      |  ^~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:948:99: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  948 |  if(!cancelAllConfirmation_||!cancelAllConfirmation_->isVisible()||cancelAllIds_.isEmpty())return;const auto ids=cancelAllIds_;cancelAllConfirmation_->accept();
+      |                                                                                                   ^~~~~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp: In member function ‘void putgd::HistoryWindow::clearFilters(bool)’:
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:991:2: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  991 |  for(auto* cell:findChild<QWidget*>("historyFiltersPanel")->findChildren<QWidget*>())if(cell->property("filterKey").isValid())cell->setProperty("filterRevealed",false);if(fitFilters_)fitFilters_();
+      |  ^~~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:991:169: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  991 |  for(auto* cell:findChild<QWidget*>("historyFiltersPanel")->findChildren<QWidget*>())if(cell->property("filterKey").isValid())cell->setProperty("filterRevealed",false);if(fitFilters_)fitFilters_();
+      |                                                                                                                                                                         ^~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp: In member function ‘QString putgd::HistoryWindow::destinationLabel(const QJsonObject&) const’:
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:1000:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 1000 |  if(destination["providerId"].toString().isEmpty())return "Original destination";return originalDestination({{"destination",destination}},profiles);
+      |  ^~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:1000:82: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+ 1000 |  if(destination["providerId"].toString().isEmpty())return "Original destination";return originalDestination({{"destination",destination}},profiles);
+      |                                                                                  ^~~~~~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp: In lambda function:
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:1019:2: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+ 1019 |  for(auto* b:{g->copy_,g->open_,g->editAgain_})b->setVisible(b->isEnabled());auto observed=data;observed["operation"]=g->model_->record(g->table_->currentIndex().row())["operation"];g->capabilityHint_->setText(missingLocalCopyHint(observed));g->outcome_->setVisible(localAvailable);g->capabilityHint_->setVisible(!localAvailable);g->changeLocalCopies_->setVisible(!localAvailable);g->link_->setVisible(data["linkAvailable"].toBool());g->link_->parentWidget()->setVisible(g->copy_->isEnabled()||data["linkAvailable"].toBool());g->updateSummary();g->inspectSelectedDeletion();g->updateActions();
+      |  ^~~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:1019:78: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+ 1019 |  for(auto* b:{g->copy_,g->open_,g->editAgain_})b->setVisible(b->isEnabled());auto observed=data;observed["operation"]=g->model_->record(g->table_->currentIndex().row())["operation"];g->capabilityHint_->setText(missingLocalCopyHint(observed));g->outcome_->setVisible(localAvailable);g->capabilityHint_->setVisible(!localAvailable);g->changeLocalCopies_->setVisible(!localAvailable);g->link_->setVisible(data["linkAvailable"].toBool());g->link_->parentWidget()->setVisible(g->copy_->isEnabled()||data["linkAvailable"].toBool());g->updateSummary();g->inspectSelectedDeletion();g->updateActions();
+      |                                                                              ^~~~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp: In member function ‘void putgd::HistoryWindow::updateSummary()’:
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:1125:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 1125 |  if(items_->count()>1||(!HistoryModel::localCopyUnavailable(data)&&capabilityHint_->isHidden()&&(!(local["status"]=="saved"&&shownOutcome.contains("Saved locally"))&&!shownOutcome.contains(copy,Qt::CaseInsensitive))))row("Local copy",copy);if(data["uploadStatus"]!="local_only"&&!data["linkAvailable"].toBool()&&(items_->count()>1||(!shownOutcome.contains("Upload failed")&&(HistoryModel::remoteStateText(data).isEmpty()||!shownOutcome.contains(HistoryModel::remoteStateText(data)))&&!shownOutcome.contains(link,Qt::CaseInsensitive))))row("Link",link);const auto remoteState=data["remoteStatus"].toString();if(!QStringList{"present","not_requested"}.contains(remoteState)&&(items_->count()>1||(HistoryModel::remoteStateText(data).isEmpty()||!shownOutcome.contains(HistoryModel::remoteStateText(data)))))row("Remote file",remote.value(remoteState,"Not recorded"));
+      |  ^~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:1125:241: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+ 1125 |  if(items_->count()>1||(!HistoryModel::localCopyUnavailable(data)&&capabilityHint_->isHidden()&&(!(local["status"]=="saved"&&shownOutcome.contains("Saved locally"))&&!shownOutcome.contains(copy,Qt::CaseInsensitive))))row("Local copy",copy);if(data["uploadStatus"]!="local_only"&&!data["linkAvailable"].toBool()&&(items_->count()>1||(!shownOutcome.contains("Upload failed")&&(HistoryModel::remoteStateText(data).isEmpty()||!shownOutcome.contains(HistoryModel::remoteStateText(data)))&&!shownOutcome.contains(link,Qt::CaseInsensitive))))row("Link",link);const auto remoteState=data["remoteStatus"].toString();if(!QStringList{"present","not_requested"}.contains(remoteState)&&(items_->count()>1||(HistoryModel::remoteStateText(data).isEmpty()||!shownOutcome.contains(HistoryModel::remoteStateText(data)))))row("Remote file",remote.value(remoteState,"Not recorded"));
+      |                                                                                                                                                                                                                                                 ^~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp: In member function ‘void putgd::HistoryWindow::previewFailure(const putgd::Error&)’:
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:1137:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 1137 |  if(!unsupported)preview_->setText(missing?"Local original unavailable":error.code=="previews_disabled"?"Previews are turned off":"Couldn't make a preview"+(error.message.isEmpty()?QString{}:". "+error.message));retryPreview_->setVisible(!unsupported&&!missing&&error.code!="previews_disabled");retryPreview_->setEnabled(previewRequestId_.isEmpty());
+      |  ^~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:1137:213: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+ 1137 |  if(!unsupported)preview_->setText(missing?"Local original unavailable":error.code=="previews_disabled"?"Previews are turned off":"Couldn't make a preview"+(error.message.isEmpty()?QString{}:". "+error.message));retryPreview_->setVisible(!unsupported&&!missing&&error.code!="previews_disabled");retryPreview_->setEnabled(previewRequestId_.isEmpty());
+      |                                                                                                                                                                                                                     ^~~~~~~~~~~~~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp: In member function ‘void putgd::HistoryWindow::showSavedCopy()’:
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:1187:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 1187 |  if(savedPath_.isEmpty())return;const auto path=savedPath_;host::showInFolder(path,[g=QPointer<HistoryWindow>(this),path](const QJsonObject& result){if(!g||g->savedPath_!=path)return;g->savedFolderResult_=result;if(!result["opened"].toBool())Ui::feedback(g->status_,"Couldn't open the saved copy's folder. Copy its path to open it manually.",true);emit g->viewStateChanged();});
+      |  ^~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:1187:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+ 1187 |  if(savedPath_.isEmpty())return;const auto path=savedPath_;host::showInFolder(path,[g=QPointer<HistoryWindow>(this),path](const QJsonObject& result){if(!g||g->savedPath_!=path)return;g->savedFolderResult_=result;if(!result["opened"].toBool())Ui::feedback(g->status_,"Couldn't open the saved copy's folder. Copy its path to open it manually.",true);emit g->viewStateChanged();});
+      |                                 ^~~~~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp: In lambda function:
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:1198:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 1198 |   if(!result.chosen())return;const auto destination=result.path;if(QFileInfo(destination).absoluteFilePath()==QFileInfo(path).absoluteFilePath()){Ui::feedback(status_,"This is already the retained local file.");return;}
+      |   ^~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:1198:30: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+ 1198 |   if(!result.chosen())return;const auto destination=result.path;if(QFileInfo(destination).absoluteFilePath()==QFileInfo(path).absoluteFilePath()){Ui::feedback(status_,"This is already the retained local file.");return;}
+      |                              ^~~~~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp: In member function ‘void putgd::HistoryWindow::prepareDelete(const QStringList&, int)’:
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:1253:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 1253 |  if(ids.isEmpty())return;QHash<QString,QString> names;for(int row=0;row<model_->rowCount();++row)for(const auto& v:model_->record(row)["records"].toArray())if(ids.contains(v.toObject()["id"].toString()))names[v.toObject()["id"].toString()]=v.toObject()["name"].toString();
+      |  ^~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:1253:26: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+ 1253 |  if(ids.isEmpty())return;QHash<QString,QString> names;for(int row=0;row<model_->rowCount();++row)for(const auto& v:model_->record(row)["records"].toArray())if(ids.contains(v.toObject()["id"].toString()))names[v.toObject()["id"].toString()]=v.toObject()["name"].toString();
+      |                          ^~~~~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp: In lambda function:
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:1255:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 1255 |   if(!g)return;if(e){const auto name=names.value(e.details["historyId"].toString());Ui::feedback(g->status_,e.code+": "+e.message+(name.isEmpty()?QString{}:" ("+name+")"),true);return;}
+      |   ^~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:1255:16: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+ 1255 |   if(!g)return;if(e){const auto name=names.value(e.details["historyId"].toString());Ui::feedback(g->status_,e.code+": "+e.message+(name.isEmpty()?QString{}:" ("+name+")"),true);return;}
+      |                ^~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp: In function ‘QString putgd::{anonymous}::originalDestination(const QJsonObject&, const QJsonArray&)’:
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:1268:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 1268 |  if(!settings["bucket"].toString().isEmpty())parts<<settings["bucket"].toString();if(!settings["folderName"].toString().isEmpty())parts<<settings["folderName"].toString();
+      |  ^~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:1268:83: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+ 1268 |  if(!settings["bucket"].toString().isEmpty())parts<<settings["bucket"].toString();if(!settings["folderName"].toString().isEmpty())parts<<settings["folderName"].toString();
+      |                                                                                   ^~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp: In static member function ‘static QDialog* putgd::HistoryWindow::deletionConfirmation(QWidget*, const QJsonObject&, const QHash<QString, QString>&, const QJsonArray&, int)’:
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:1294:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 1294 |   if(index)rows->addWidget(Ui::rule(list));auto* grid=new QGridLayout;grid->setHorizontalSpacing(space(Space::m));grid->setVerticalSpacing(space(Space::xs));grid->setColumnStretch(1,1);
+      |   ^~
+/home/patrick/work/pg-small/src/ui/HistoryWindow.cpp:1294:44: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+ 1294 |   if(index)rows->addWidget(Ui::rule(list));auto* grid=new QGridLayout;grid->setHorizontalSpacing(space(Space::m));grid->setVerticalSpacing(space(Space::xs));grid->setColumnStretch(1,1);
+      |                                            ^~~~
+[170/205] Building CXX object CMakeFiles/putgd_ui.dir/src/ui/HistoryModel.cpp.o
+/home/patrick/work/pg-small/src/ui/HistoryModel.cpp: In member function ‘virtual QVariant putgd::HistoryModel::data(const QModelIndex&, int) const’:
+/home/patrick/work/pg-small/src/ui/HistoryModel.cpp:168:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  168 |   if(provider=="proton-drive")return QStringLiteral("Proton Drive");if(provider=="backblaze-b2")return QStringLiteral("Backblaze B2");if(provider=="s3")return QStringLiteral("S3 destination");
+      |   ^~
+/home/patrick/work/pg-small/src/ui/HistoryModel.cpp:168:69: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  168 |   if(provider=="proton-drive")return QStringLiteral("Proton Drive");if(provider=="backblaze-b2")return QStringLiteral("Backblaze B2");if(provider=="s3")return QStringLiteral("S3 destination");
+      |                                                                     ^~
+/home/patrick/work/pg-small/src/ui/HistoryModel.cpp: In member function ‘void putgd::HistoryModel::rebuild()’:
+/home/patrick/work/pg-small/src/ui/HistoryModel.cpp:226:2: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  226 |  for(const auto& path:std::as_const(thumbnailQueue_))thumbnailRequested_.remove(path);thumbnailQueue_.clear();
+      |  ^~~
+/home/patrick/work/pg-small/src/ui/HistoryModel.cpp:226:87: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  226 |  for(const auto& path:std::as_const(thumbnailQueue_))thumbnailRequested_.remove(path);thumbnailQueue_.clear();
+      |                                                                                       ^~~~~~~~~~~~~~~
+[171/205] Building CXX object CMakeFiles/putgd_editor.dir/putgd_editor_autogen/mocs_compilation.cpp.o
+[172/205] Building CXX object CMakeFiles/putgd_editor.dir/src/editor/EditDocument.cpp.o
+[173/205] Building CXX object CMakeFiles/putgd_editor.dir/src/editor/EditorCommands.cpp.o
+[174/205] Building CXX object CMakeFiles/putgd_editor.dir/src/editor/HighlightFilter.cpp.o
+/home/patrick/work/pg-small/src/editor/HighlightFilter.cpp:35:6: warning: ‘QRgb putgd::editor::highlight::{anonymous}::screen(QRgb, QRgb)’ defined but not used [-Wunused-function]
+   35 | QRgb screen(QRgb p,QRgb s){return qRgba(255-(255-qRed(p))*(255-qRed(s))/255,255-(255-qGreen(p))*(255-qGreen(s))/255,255-(255-qBlue(p))*(255-qBlue(s))/255,qAlpha(p));}
+      |      ^~~~~~
+/home/patrick/work/pg-small/src/editor/HighlightFilter.cpp:34:6: warning: ‘QRgb putgd::editor::highlight::{anonymous}::multiply(QRgb, QRgb)’ defined but not used [-Wunused-function]
+   34 | QRgb multiply(QRgb p,QRgb m){return qRgba(qRed(p)*qRed(m)/255,qGreen(p)*qGreen(m)/255,qBlue(p)*qBlue(m)/255,qAlpha(p));}
+      |      ^~~~~~~~
+[175/205] Linking CXX static library libputgd_x11.a
+[176/205] Linking CXX static library libputgd_capture_control.a
+[177/205] Linking CXX static library libputgd_x11_native_snapshot.a
+[178/205] Linking CXX static library libputgd_ui.a
+[179/205] Automatic MOC and UIC for target putgd_capture_cursor
+[180/205] Automatic MOC and UIC for target putgd-capture
+[181/205] Building CXX object CMakeFiles/putgd_capture_cursor.dir/putgd_capture_cursor_autogen/mocs_compilation.cpp.o
+[182/205] Building CXX object CMakeFiles/putgd_editor.dir/src/editor/EditorCanvas.cpp.o
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp: In member function ‘bool putgd::editor::EditorCanvas::nudge(const QPoint&, bool)’:
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp:665:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  665 |   if(side==shape.rect.width())return true;shape.rect.setSize(QSize(side,side));
+      |   ^~
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp:665:43: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  665 |   if(side==shape.rect.width())return true;shape.rect.setSize(QSize(side,side));
+      |                                           ^~~~~
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp:669:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  669 |   if(to==from)return true;shape.points=fitStroke(shape.points,from,to);
+      |   ^~
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp:669:27: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  669 |   if(to==from)return true;shape.points=fitStroke(shape.points,from,to);
+      |                           ^~~~~
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp: In member function ‘bool putgd::editor::EditorCanvas::setSelectionGeometry(const QRect&)’:
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp:737:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  737 |   if(side<minimumStepPixels||side>maximumStepPixels)return false;shape.rect=QRect(r.topLeft(),QSize(side,side));
+      |   ^~
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp:737:66: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  737 |   if(side<minimumStepPixels||side>maximumStepPixels)return false;shape.rect=QRect(r.topLeft(),QSize(side,side));
+      |                                                                  ^~~~~
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp: At global scope:
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp:49:8: warning: ‘QPoint putgd::editor::{anonymous}::inside(const QPoint&, const QRect&)’ defined but not used [-Wunused-function]
+   49 | QPoint inside(const QPoint& p,const QRect& bounds){
+      |        ^~~~~~
+[183/205] Linking CXX static library libputgd_editor.a
+[184/205] Automatic MOC and UIC for target putgd_editor_window
+[185/205] Building CXX object CMakeFiles/putgd_capture_cursor.dir/src/platform/x11/CaptureCursorCache.cpp.o
+[186/205] Building CXX object CMakeFiles/putgd_editor_window.dir/putgd_editor_window_autogen/mocs_compilation.cpp.o
+[187/205] Building CXX object CMakeFiles/putgd-capture.dir/putgd-capture_autogen/mocs_compilation.cpp.o
+[188/205] Building CXX object CMakeFiles/putgd_editor_window.dir/src/ui/EditorWindow.cpp.o
+/home/patrick/work/pg-small/src/ui/EditorWindow.cpp: In function ‘bool putgd::{anonymous}::integerIn(const QJsonValue&, double, double, int&)’:
+/home/patrick/work/pg-small/src/ui/EditorWindow.cpp:94:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   94 |  if(!value.isDouble())return false;const double number=value.toDouble();
+      |  ^~
+/home/patrick/work/pg-small/src/ui/EditorWindow.cpp:94:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   94 |  if(!value.isDouble())return false;const double number=value.toDouble();
+      |                                    ^~~~~
+[189/205] Building CXX object CMakeFiles/putgd-capture.dir/src/capture/main.cpp.o
+[190/205] Linking CXX static library libputgd_capture_cursor.a
+[191/205] Linking CXX static library libputgd_editor_window.a
+[192/205] Automatic MOC and UIC for target test_editor
+[193/205] Automatic MOC and UIC for target test_editor_window
+[194/205] Building CXX object CMakeFiles/test_editor.dir/test_editor_autogen/mocs_compilation.cpp.o
+[195/205] Building CXX object CMakeFiles/putgd-capture.dir/src/platform/x11/X11CaptureResolution.cpp.o
+[196/205] Linking CXX executable putgd-capture
+[197/205] Automatic MOC and UIC for target test_capture_preparation
+[198/205] Building CXX object CMakeFiles/test_editor_window.dir/test_editor_window_autogen/mocs_compilation.cpp.o
+[199/205] Building CXX object CMakeFiles/test_editor.dir/tests/unit/test_editor.cpp.o
+/home/patrick/work/pg-small/tests/unit/test_editor.cpp: In member function ‘void EditorTest::keyboardCropMovesResizesAndApplies()’:
+/home/patrick/work/pg-small/tests/unit/test_editor.cpp:510:3: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  510 |   for(int i=0;i<20;++i)QTest::keyClick(&canvas,Qt::Key_Right,Qt::ControlModifier);QCOMPARE(canvas.cropDraft(),QRect(100,0,300,300));
+      |   ^~~
+In file included from /usr/include/qt6/QtTest/qtest.h:13,
+                 from /usr/include/qt6/QtTest/QTest:1,
+                 from /home/patrick/work/pg-small/tests/unit/test_editor.cpp:14:
+/home/patrick/work/pg-small/tests/unit/test_editor.cpp:510:83: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  510 |   for(int i=0;i<20;++i)QTest::keyClick(&canvas,Qt::Key_Right,Qt::ControlModifier);QCOMPARE(canvas.cropDraft(),QRect(100,0,300,300));
+      |                                                                                   ^~~~~~~~
+/home/patrick/work/pg-small/tests/unit/test_editor.cpp: In member function ‘void EditorTest::snapIsRejectedOnShapesThatAreNotHighlights()’:
+/home/patrick/work/pg-small/tests/unit/test_editor.cpp:759:25: warning: loop variable ‘shape’ creates a copy from type ‘const QJsonObject’ [-Wrange-loop-construct]
+  759 |   for(const QJsonObject shape:{QJsonObject{{"kind","arrow"},{"from",QJsonArray{10,10}},{"to",QJsonArray{60,60}},{"snap","text"}},QJsonObject{{"kind","rectangle"},{"rect",QJsonArray{10,10,50,20}},{"snap","bogus"}},QJsonObject{{"kind","text"},{"at",QJsonArray{10,10}},{"text","hi"},{"snap","none"}}}){
+      |                         ^~~~~
+/home/patrick/work/pg-small/tests/unit/test_editor.cpp:759:25: note: use reference type to prevent copying
+  759 |   for(const QJsonObject shape:{QJsonObject{{"kind","arrow"},{"from",QJsonArray{10,10}},{"to",QJsonArray{60,60}},{"snap","text"}},QJsonObject{{"kind","rectangle"},{"rect",QJsonArray{10,10,50,20}},{"snap","bogus"}},QJsonObject{{"kind","text"},{"at",QJsonArray{10,10}},{"text","hi"},{"snap","none"}}}){
+      |                         ^~~~~
+      |                         &
+/home/patrick/work/pg-small/tests/unit/test_editor.cpp: At global scope:
+/home/patrick/work/pg-small/tests/unit/test_editor.cpp:54:5: warning: ‘int {anonymous}::inkUnchanged(const QImage&, const QImage&, const QRect&, QRgb, bool&)’ defined but not used [-Wunused-function]
+   54 | int inkUnchanged(const QImage& before,const QImage& after,const QRect& box,QRgb background,bool& allKept){
+      |     ^~~~~~~~~~~~
+[200/205] Building CXX object CMakeFiles/test_capture_preparation.dir/test_capture_preparation_autogen/mocs_compilation.cpp.o
+[201/205] Building CXX object CMakeFiles/test_editor_window.dir/tests/gui/test_editor_window.cpp.o
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp: In member function ‘void EditorWindowTest::toolsFoldFromMeasuredWidthAndKeepPrivacyLabels()’:
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp:166:6: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  166 |      if(!button->isCheckable())continue;++tools;
+      |      ^~
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp:166:41: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  166 |      if(!button->isCheckable())continue;++tools;
+      |                                         ^~
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp: In member function ‘void EditorWindowTest::footerKeepsSharingModeVisibleBesideAnElidedDestination()’:
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp:943:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  943 |   if(pixels==21)QVERIFY(Ui::scaled(100)>=145);window.setDestination("Private upload to "+name);window.resize(760,560);QApplication::processEvents();QVERIFY(window.viewState()["destination"].toObject()["above"].toBool());QVERIFY(mode->isVisible());verifyPair();
+      |   ^~
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp:943:47: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  943 |   if(pixels==21)QVERIFY(Ui::scaled(100)>=145);window.setDestination("Private upload to "+name);window.resize(760,560);QApplication::processEvents();QVERIFY(window.viewState()["destination"].toObject()["above"].toBool());QVERIFY(mode->isVisible());verifyPair();
+      |                                               ^~~~~~
+[202/205] Linking CXX executable test_editor
+[203/205] Linking CXX executable test_editor_window
+[204/205] Building CXX object CMakeFiles/test_capture_preparation.dir/tests/desktop/x11/test_capture_preparation.cpp.o
+[205/205] Linking CXX executable test_capture_preparation

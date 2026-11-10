@@ -1,0 +1,29 @@
+Function "QDBusConnection::connectToBus(QString const&, QString const&)" not defined.
+Breakpoint 1 (QDBusConnection::connectToBus(QString const&, QString const&)) pending.
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <ima:enforcing>
+  <https://debuginfod.fedoraproject.org/>
+  <ima:ignore>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+BEFORE APP
+[New Thread 0x7fffe478a6c0 (LWP 3089954)]
+AFTER APP
+CURSOR CREATED
+#0  0x00007ffff74dfaaa in QDBusConnection::connectToBus(QString const&, QString const&) () from /lib64/libQt6DBus.so.6
+#1  0x00007ffff6fd3b22 in QAtSpiDBusConnection::connectA11yBus(QString const&) () from /lib64/libQt6Gui.so.6
+#2  0x00007ffff6fd419d in QAtSpiDBusConnection::QAtSpiDBusConnection(QObject*) () from /lib64/libQt6Gui.so.6
+#3  0x00007ffff6fe5616 in QSpiAccessibleBridge::QSpiAccessibleBridge() () from /lib64/libQt6Gui.so.6
+#4  0x00007ffff27067f2 in QXcbIntegration::accessibility() const () from /lib64/libQt6XcbQpa.so.6
+#5  0x00007ffff6f95670 in QAccessible::isActive() () from /lib64/libQt6Gui.so.6
+#6  0x00007ffff6b70985 in QWindow::~QWindow() () from /lib64/libQt6Gui.so.6
+#7  0x000000000040064c in main (argc=1, argv=0x7fffffffe918) at /tmp/pg-min.cpp:5
+[New Thread 0x7fffe3f896c0 (LWP 3089959)]
+CURSOR DESTROYED
+[Thread 0x7fffe478a6c0 (LWP 3089954) exited]
+[Thread 0x7fffe3f896c0 (LWP 3089959) exited]
+[Inferior 1 (process 3089926) exited normally]

@@ -1,0 +1,68 @@
+Test project /home/patrick/work/pg-small/build/dev
+    Start 142: capture_preparation_x11
+1/1 Test #142: capture_preparation_x11 ..........***Failed    9.31 sec
+********* Start testing of CapturePreparationTest *********
+Config: Using QtTest library 6.11.2, Qt 6.11.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 16.2.1 20260819 (Red Hat 16.2.1-2)), fedora 44
+PASS   : CapturePreparationTest::initTestCase()
+PASS   : CapturePreparationTest::cursorEnvironmentInvalidatesAndRestoresFrozenLayout(XCURSOR_THEME)
+PASS   : CapturePreparationTest::cursorEnvironmentInvalidatesAndRestoresFrozenLayout(XCURSOR_THEME-set-empty)
+PASS   : CapturePreparationTest::cursorEnvironmentInvalidatesAndRestoresFrozenLayout(XCURSOR_SIZE)
+PASS   : CapturePreparationTest::cursorEnvironmentInvalidatesAndRestoresFrozenLayout(XCURSOR_SIZE-set-empty)
+PASS   : CapturePreparationTest::cursorEnvironmentInvalidatesAndRestoresFrozenLayout(XCURSOR_PATH)
+PASS   : CapturePreparationTest::cursorEnvironmentInvalidatesAndRestoresFrozenLayout(XCURSOR_PATH-set-empty)
+PASS   : CapturePreparationTest::cursorEnvironmentInvalidatesAndRestoresFrozenLayout(XCURSOR_RESIZED)
+PASS   : CapturePreparationTest::cursorEnvironmentInvalidatesAndRestoresFrozenLayout(XCURSOR_RESIZED-set-empty)
+PASS   : CapturePreparationTest::cursorEnvironmentInvalidatesAndRestoresFrozenLayout(XCURSOR_DISCOVER)
+PASS   : CapturePreparationTest::cursorEnvironmentInvalidatesAndRestoresFrozenLayout(XCURSOR_DISCOVER-set-empty)
+PASS   : CapturePreparationTest::cursorEnvironmentInvalidatesAndRestoresFrozenLayout(XCURSOR_CORE)
+PASS   : CapturePreparationTest::cursorEnvironmentInvalidatesAndRestoresFrozenLayout(XCURSOR_CORE-set-empty)
+PASS   : CapturePreparationTest::adapterTeardownSuppressesDeferredSelection()
+PASS   : CapturePreparationTest::earlySelectionWaitsForBegin(select-before-begin-static)
+PASS   : CapturePreparationTest::earlySelectionWaitsForBegin(select-before-begin-animated)
+PASS   : CapturePreparationTest::earlySelectionWaitsForBegin(select-before-begin-oversized)
+PASS   : CapturePreparationTest::earlySelectionWaitsForBegin(select-before-begin-missing)
+PASS   : CapturePreparationTest::earlySelectionWaitsForBegin(begin-before-selection)
+PASS   : CapturePreparationTest::earlySelectionWaitsForBegin(cancel-selected-before-begin)
+PASS   : CapturePreparationTest::earlySelectionWaitsForBegin(buffered-begin-cancel-after-selection)
+PASS   : CapturePreparationTest::earlySelectionWaitsForBegin(eof-selected-before-begin)
+PASS   : CapturePreparationTest::clicksMadeDuringTheHoldReachTheSelector(whole-drag-before-handoff)
+PASS   : CapturePreparationTest::clicksMadeDuringTheHoldReachTheSelector(drag-spans-handoff)
+PASS   : CapturePreparationTest::rightClickDuringTheHoldCancelsTheSelector()
+PASS   : CapturePreparationTest::qtCursorIsReportedForTheNextPress()
+FAIL!  : CapturePreparationTest::accessibilityStartsAfterTheSelectorMaps() Compared values are not the same
+   Actual   (connections): 1
+   Expected (0)          : 0
+   Loc: [/home/patrick/work/pg-small/tests/desktop/x11/test_capture_preparation.cpp(257)]
+PASS   : CapturePreparationTest::previewTermination(escape)
+PASS   : CapturePreparationTest::previewTermination(cancel)
+PASS   : CapturePreparationTest::previewTermination(eof)
+PASS   : CapturePreparationTest::previewTermination(foreign)
+PASS   : CapturePreparationTest::previewTermination(generation)
+PASS   : CapturePreparationTest::previewTermination(duplicate)
+PASS   : CapturePreparationTest::previewTermination(desktop)
+PASS   : CapturePreparationTest::previewTermination(extra-key)
+PASS   : CapturePreparationTest::previewTermination(cursor-mismatch)
+PASS   : CapturePreparationTest::previewTermination(preview-after-begin)
+PASS   : CapturePreparationTest::bootstrapRemainsInvisibleAndDoesNotOwnInput(cancel-before-begin)
+PASS   : CapturePreparationTest::bootstrapRemainsInvisibleAndDoesNotOwnInput(cancel-before-begin-with-cursor-seed)
+PASS   : CapturePreparationTest::bootstrapRemainsInvisibleAndDoesNotOwnInput(animated-cursor-falls-back)
+PASS   : CapturePreparationTest::bootstrapRemainsInvisibleAndDoesNotOwnInput(oversized-cursor-falls-back)
+PASS   : CapturePreparationTest::bootstrapRemainsInvisibleAndDoesNotOwnInput(missing-cursor-falls-back)
+PASS   : CapturePreparationTest::bootstrapRemainsInvisibleAndDoesNotOwnInput(resized-cursor-falls-back)
+PASS   : CapturePreparationTest::bootstrapRemainsInvisibleAndDoesNotOwnInput(resource-resized-cursor-policy)
+PASS   : CapturePreparationTest::bootstrapRemainsInvisibleAndDoesNotOwnInput(reject-foreign-begin)
+PASS   : CapturePreparationTest::cleanupTestCase()
+Totals: 45 passed, 1 failed, 0 skipped, 0 blacklisted, 6172ms
+********* Finished testing of CapturePreparationTest *********
+
+
+0% tests passed, 1 tests failed out of 1
+
+Label Time Summary:
+integration    =   9.31 sec*proc (1 test)
+
+Total Test time (real) =   9.31 sec
+
+The following tests FAILED:
+	142 - capture_preparation_x11 (Failed)                  integration
+Errors while running CTest
