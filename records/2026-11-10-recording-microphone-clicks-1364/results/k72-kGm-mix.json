@@ -1,0 +1,282 @@
+{
+ "host": "kubuntu",
+ "kernel": "7.0.0-38-generic",
+ "desktop": "plasmashell",
+ "session": "wayland",
+ "target": "region",
+ "rect": [
+  0,
+  0,
+  960,
+  540
+ ],
+ "formats": [
+  "mp4"
+ ],
+ "video": "marker",
+ "timing": {
+  "lead": 6.0,
+  "pauseAt": 8.0,
+  "pauseFor": 3.0,
+  "after": 8.0
+ },
+ "builds": {
+  "pr": {
+   "kind": "installed",
+   "dir": "/usr/bin",
+   "version": "putgd-record 26.1110.4437-dev+g289b2f4e4f7f"
+  }
+ },
+ "analyzer": "/",
+ "rounds": [
+  {
+   "build": "pr",
+   "round": 1,
+   "format": "mp4",
+   "started": "2026-11-10T03:30:19Z",
+   "acquisition": "kde-screencast",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc",
+    "openh264enc"
+   ],
+   "audio": {
+    "system": true,
+    "microphone": true,
+    "microphoneDevice": "putgd_lab_2215848_mic"
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false,
+    "microphoneReason": "default_is_monitor"
+   },
+   "microphones": {
+    "available": true,
+    "reason": null,
+    "device": {
+     "id": "putgd_lab_2215848_mic",
+     "label": "putgd_lab_2215848-microphone"
+    },
+    "devices": [
+     "alsa_input.pci-0000_00_1f.3.analog-stereo",
+     "putgd_lab_2215848_mic"
+    ],
+    "defaultIsMonitor": true
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": {
+     "microphone": true,
+     "system": true
+    },
+    "audioEncoder": "avenc_aac",
+    "recordingMicrophone": {
+     "available": true,
+     "device": "putgd_lab_2215848-microphone",
+     "effective": true,
+     "requested": true
+    },
+    "microphoneLost": null
+   },
+   "pauseClipS": 8.056,
+   "recordedS": 16.088,
+   "microphoneLostAtStop": null,
+   "load": 1.86572265625,
+   "durationUs": 16800000,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "09d7b8b2-f9db-4afa-818a-05a818239e60.mkv",
+     "bytes": 226768,
+     "motion": 37.232,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.15178571428571427,
+       "blocks": 336,
+       "maxAmplitude": 0.34535589153012275,
+       "medianAmplitude": 6.736188520806229e-07
+      },
+      "440": {
+       "activeFraction": 0.9940476190476191,
+       "blocks": 336,
+       "maxAmplitude": 0.020069366117368086,
+       "medianAmplitude": 0.016927634070107864
+      }
+     },
+     "pairs": 17,
+     "medianMs": 19.7,
+     "spreadMs": 34,
+     "offsetsMs": [
+      20,
+      -12.7,
+      -13.3,
+      20,
+      -13.3,
+      20,
+      20.3,
+      19.7,
+      -13,
+      20,
+      -13.7,
+      19.7,
+      20,
+      19.7,
+      20,
+      19.3,
+      19.7
+     ],
+     "pairTimesS": [
+      0.5,
+      1.533,
+      2.533,
+      3.5,
+      4.533,
+      5.5,
+      6.5,
+      7.5,
+      8.533,
+      9.467,
+      10.5,
+      11.467,
+      12.467,
+      13.467,
+      14.467,
+      15.467,
+      16.467
+     ]
+    },
+    "export": {
+     "file": "pr-mp4-1.mp4",
+     "bytes": 222608,
+     "motion": 37.135,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.15178571428571427,
+       "blocks": 336,
+       "maxAmplitude": 0.34543271324924374,
+       "medianAmplitude": 8.850867724587919e-07
+      },
+      "440": {
+       "activeFraction": 0.9940476190476191,
+       "blocks": 336,
+       "maxAmplitude": 0.020737701026886938,
+       "medianAmplitude": 0.016918482354599997
+      }
+     },
+     "pairs": 17,
+     "medianMs": 19.3,
+     "spreadMs": 34,
+     "offsetsMs": [
+      20,
+      -13.3,
+      -13.3,
+      20,
+      -13.3,
+      20,
+      20,
+      20,
+      -13.3,
+      19.3,
+      -14,
+      19.3,
+      19.3,
+      19.3,
+      19.3,
+      19.3,
+      19.3
+     ],
+     "pairTimesS": [
+      0.5,
+      1.533,
+      2.533,
+      3.5,
+      4.533,
+      5.5,
+      6.5,
+      7.5,
+      8.533,
+      9.467,
+      10.5,
+      11.467,
+      12.467,
+      13.467,
+      14.467,
+      15.467,
+      16.467
+     ]
+    }
+   },
+   "captureStepMs": 0.0,
+   "rawCaptureStepMs": -33.0,
+   "exportMinusWorkingMs": -0.4
+  }
+ ],
+ "microphone": {
+  "name": "putgd_lab_2215848",
+  "modules": {
+   "sink": 536870916,
+   "holdSink": 536870917,
+   "source": 536870919,
+   "hold": 536870920,
+   "system": 536870918
+  },
+  "defaultSource": "alsa_output.pci-0000_00_1f.3.analog-stereo.monitor",
+  "defaultSink": "alsa_output.pci-0000_00_1f.3.analog-stereo",
+  "attempts": 1,
+  "heardPeak": 6553,
+  "sink": "putgd_lab_2215848_sink",
+  "source": "putgd_lab_2215848_mic",
+  "systemSink": "putgd_lab_2215848_system"
+ },
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "HDMI-A-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "check": "precheck",
+   "fraction": 1.0,
+   "framebuffer": [
+    1920,
+    1080
+   ],
+   "minFraction": 0.98,
+   "ok": true,
+   "output": [
+    "HDMI-A-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ]
+  },
+  "video": "marker"
+ },
+ "microphoneRemoved": {
+  "removed": true,
+  "left": [],
+  "defaultSource": "alsa_output.pci-0000_00_1f.3.analog-stereo.monitor",
+  "defaultSink": "alsa_output.pci-0000_00_1f.3.analog-stereo"
+ },
+ "gpuHangs": []
+}

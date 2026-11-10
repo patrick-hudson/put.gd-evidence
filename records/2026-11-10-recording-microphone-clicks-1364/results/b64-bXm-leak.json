@@ -1,0 +1,220 @@
+{
+ "host": "fedora",
+ "kernel": "7.2.11-300.fc45.x86_64",
+ "desktop": "budgie-panel",
+ "session": "wayland",
+ "target": "region",
+ "rect": [
+  0,
+  0,
+  960,
+  540
+ ],
+ "formats": [
+  "mp4"
+ ],
+ "video": "marker",
+ "timing": {
+  "lead": 6.0,
+  "pauseAt": 12.0,
+  "pauseFor": 0.0,
+  "after": 2.0
+ },
+ "builds": {
+  "pr": {
+   "kind": "appimage",
+   "file": "putgd-26.1110.4437-dev+g289b2f4e4f7f-x86_64.AppImage",
+   "sha256": "0b7f04e647f1093a958db754a388c5e4b37ba39b44781757330917f17fe0012f"
+  }
+ },
+ "analyzer": "/home/lab/runs/bXm-align/appdir-pr/squashfs-root",
+ "rounds": [
+  {
+   "build": "pr",
+   "round": 1,
+   "format": "mp4",
+   "started": "2026-11-10T03:18:40Z",
+   "acquisition": "wlr-capture",
+   "liveEncoders": [
+    "x264enc"
+   ],
+   "audio": {
+    "system": false,
+    "microphone": true,
+    "microphoneDevice": "putgd_lab_24328_mic"
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false,
+    "microphoneReason": "default_is_monitor"
+   },
+   "microphones": {
+    "available": true,
+    "reason": null,
+    "device": {
+     "id": "putgd_lab_24328_mic",
+     "label": "putgd_lab_24328-microphone"
+    },
+    "devices": [
+     "putgd_lab_24328_mic"
+    ],
+    "defaultIsMonitor": true
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": {
+     "microphone": true,
+     "system": false
+    },
+    "audioEncoder": "voaacenc",
+    "recordingMicrophone": {
+     "available": true,
+     "device": "putgd_lab_24328-microphone",
+     "effective": true,
+     "requested": true
+    },
+    "microphoneLost": null
+   },
+   "unpluggedAtS": 6.136,
+   "afterUnplug": {
+    "state": "recording",
+    "microphoneLost": "The microphone was disconnected; the rest of the recording has no microphone audio."
+   },
+   "recordedS": 14.159,
+   "microphoneLostAtStop": "The microphone was disconnected; the rest of the recording has no microphone audio.",
+   "load": 1.6767578125,
+   "durationUs": 15699999,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "4822ba03-12a9-4b76-bd25-c266f806d571.mkv",
+     "bytes": 163846,
+     "motion": 32.02,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.1390728476821192,
+       "blocks": 151,
+       "maxAmplitude": 0.34536886008803935,
+       "medianAmplitude": 6.234948892739576e-07
+      },
+      "440": {
+       "activeFraction": 0,
+       "blocks": 151,
+       "maxAmplitude": 0.004057952444160542,
+       "medianAmplitude": 6.206880439738116e-07
+      }
+     },
+     "pairs": 6,
+     "medianMs": 13,
+     "spreadMs": 34,
+     "offsetsMs": [
+      -20.7,
+      12.7,
+      13,
+      12.7,
+      13,
+      13.3
+     ],
+     "pairTimesS": [
+      1.967,
+      2.933,
+      3.933,
+      4.933,
+      5.933,
+      6.933
+     ]
+    },
+    "export": {
+     "file": "pr-mp4-1.mp4",
+     "bytes": 159024,
+     "motion": 32.011,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.13815789473684212,
+       "blocks": 152,
+       "maxAmplitude": 0.3451015567281296,
+       "medianAmplitude": 7.009640936006792e-07
+      },
+      "440": {
+       "activeFraction": 0,
+       "blocks": 152,
+       "maxAmplitude": 0.0013218670088663458,
+       "medianAmplitude": 6.597637720476331e-07
+      }
+     },
+     "pairs": 6,
+     "medianMs": 12.7,
+     "spreadMs": 33.3,
+     "offsetsMs": [
+      -20.7,
+      12.7,
+      12.7,
+      12.7,
+      12.7,
+      12.7
+     ],
+     "pairTimesS": [
+      1.967,
+      2.933,
+      3.933,
+      4.933,
+      5.933,
+      6.933
+     ]
+    }
+   }
+  }
+ ],
+ "microphone": {
+  "name": "putgd_lab_24328",
+  "modules": {
+   "sink": 536870916,
+   "holdSink": 536870919,
+   "source": 536870920,
+   "hold": 536870917,
+   "system": 536870918
+  },
+  "defaultSource": "@DEFAULT_SOURCE@",
+  "defaultSink": "auto_null",
+  "attempts": 1,
+  "heardPeak": 6561,
+  "sink": "putgd_lab_24328_sink",
+  "source": "putgd_lab_24328_mic",
+  "systemSink": "putgd_lab_24328_system",
+  "madeDefault": true
+ },
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "Virtual-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1280,
+    800
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "skipped": "no loopback VNC tile (disposable guest)"
+  },
+  "video": "marker"
+ },
+ "microphoneRemoved": {
+  "removed": true,
+  "left": [],
+  "defaultSource": "@DEFAULT_SOURCE@",
+  "defaultSink": "auto_null"
+ },
+ "gpuHangs": []
+}

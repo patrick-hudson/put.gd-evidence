@@ -1,0 +1,429 @@
+{
+ "host": "fedora",
+ "kernel": "7.2.11-300.fc45.x86_64",
+ "desktop": "budgie-panel",
+ "session": "wayland",
+ "target": "monitor",
+ "rect": null,
+ "formats": [
+  "mp4"
+ ],
+ "video": "marker",
+ "timing": {
+  "lead": 3.0,
+  "pauseAt": 14.0,
+  "pauseFor": 0.0,
+  "after": 2.0
+ },
+ "builds": {
+  "pr": {
+   "kind": "appimage",
+   "file": "putgd-26.1110.4465-dev+g7005d07be0bf-x86_64.AppImage",
+   "sha256": "e4c6cbee5b5be32cd3eafa0019e49b7229fc44d52bb5190bafa674a30321dfbe"
+  }
+ },
+ "analyzer": "/home/lab/runs/bZ-nohw/appdir-pr/squashfs-root",
+ "rounds": [
+  {
+   "build": "pr",
+   "round": 1,
+   "format": "mp4",
+   "started": "2026-11-10T04:06:42Z",
+   "acquisition": "wlr-capture",
+   "liveEncoders": [
+    "x264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": true,
+    "microphoneDevice": {
+     "id": "putgd_lab_32236_mic",
+     "label": "putgd_lab_32236-microphone"
+    }
+   },
+   "clickHighlights": {
+    "available": true,
+    "drawnBy": "recorder",
+    "route": "labwc-mouse-binds",
+    "targetReasons": {
+     "window": "A window recording on labwc has no pointer position: the compositor's window capture source has no cursor source, and labwc reports no window geometry."
+    },
+    "targets": [
+     "monitor",
+     "desktop",
+     "region"
+    ]
+   },
+   "canvas": [
+    1280,
+    800
+   ],
+   "overlay": {
+    "excluded": false,
+    "placement": "handle"
+   },
+   "progressAtStart": {
+    "audioSources": {
+     "microphone": false,
+     "system": true
+    },
+    "audioEncoder": "voaacenc",
+    "recordingMicrophone": {
+     "available": true,
+     "device": "putgd_lab_32236-microphone",
+     "effective": false,
+     "requested": false
+    },
+    "microphoneLost": null
+   },
+   "clickHighlightsError": "The compositor has reported no pointer position for this recording (labwc reports it only for an output with a hardware cursor), so clicks cannot be highlighted",
+   "recordedS": 16.065,
+   "microphoneLostAtStop": null,
+   "load": 1.0244140625,
+   "durationUs": 17666666,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "3646a8e6-cbc9-4630-ba3b-8450ae9fa12a.mkv",
+     "bytes": 392806,
+     "motion": 4.293,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.14488636363636365,
+       "blocks": 352,
+       "maxAmplitude": 0.34569955223690196,
+       "medianAmplitude": 8.763367216859342e-07
+      },
+      "440": {
+       "activeFraction": 0.9971590909090909,
+       "blocks": 352,
+       "maxAmplitude": 0.017785004074576463,
+       "medianAmplitude": 0.016956436275453256
+      }
+     },
+     "pairs": 16,
+     "medianMs": 43,
+     "spreadMs": 34,
+     "offsetsMs": [
+      43,
+      43.3,
+      42.7,
+      43,
+      9.3,
+      42.7,
+      43,
+      42.7,
+      43,
+      43.3,
+      42.7,
+      43,
+      43.3,
+      42.7,
+      43,
+      42.7
+     ],
+     "pairTimesS": [
+      1.633,
+      2.633,
+      3.633,
+      4.633,
+      5.667,
+      6.633,
+      7.633,
+      8.633,
+      9.633,
+      10.633,
+      11.633,
+      12.633,
+      13.633,
+      14.633,
+      15.633,
+      16.633
+     ],
+     "clickCheck": {
+      "highlights": "on",
+      "startCallMs": 2063,
+      "presses": [
+       {
+        "s": 4.0,
+        "movedS": 1.5,
+        "x": 200,
+        "y": 100,
+        "button": "left"
+       },
+       {
+        "s": 8.0,
+        "movedS": 5.5,
+        "x": 640,
+        "y": 100,
+        "button": "right"
+       },
+       {
+        "s": 12.0,
+        "movedS": 9.5,
+        "x": 1100,
+        "y": 100,
+        "button": "middle"
+       }
+      ],
+      "pointer": [
+       {
+        "seen": true,
+        "firstMs": 3100,
+        "peak": 185
+       },
+       {
+        "seen": true,
+        "firstMs": 7033,
+        "peak": 185
+       },
+       {
+        "seen": true,
+        "firstMs": 11033,
+        "peak": 185
+       }
+      ],
+      "rings": [
+       {
+        "frames": 102,
+        "fromMs": 3500,
+        "seen": false,
+        "toMs": 6900,
+        "x": 200,
+        "y": 100
+       },
+       {
+        "frames": 102,
+        "fromMs": 7433,
+        "seen": false,
+        "toMs": 10833,
+        "x": 640,
+        "y": 100
+       },
+       {
+        "frames": 102,
+        "fromMs": 11433,
+        "seen": false,
+        "toMs": 14833,
+        "x": 1100,
+        "y": 100
+       }
+      ],
+      "seen": 0,
+      "expected": 3,
+      "ok": false,
+      "problems": [
+       "0 of 3 presses have a ring"
+      ]
+     },
+     "destroyed": true
+    },
+    "export": {
+     "file": "pr-mp4-1.mp4",
+     "bytes": 257813,
+     "motion": 4.304,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.14447592067988668,
+       "blocks": 353,
+       "maxAmplitude": 0.34559441410731684,
+       "medianAmplitude": 1.2073313007599193e-06
+      },
+      "440": {
+       "activeFraction": 0.9943342776203966,
+       "blocks": 353,
+       "maxAmplitude": 0.020065405476094388,
+       "medianAmplitude": 0.016918955840173677
+      }
+     },
+     "pairs": 16,
+     "medianMs": 42.7,
+     "spreadMs": 33.3,
+     "offsetsMs": [
+      42.7,
+      42.7,
+      42.7,
+      42.7,
+      9.3,
+      42.7,
+      42.7,
+      42.7,
+      42.7,
+      42.7,
+      42.7,
+      42.7,
+      42.7,
+      42.7,
+      42.7,
+      42.7
+     ],
+     "pairTimesS": [
+      1.633,
+      2.633,
+      3.633,
+      4.633,
+      5.667,
+      6.633,
+      7.633,
+      8.633,
+      9.633,
+      10.633,
+      11.633,
+      12.633,
+      13.633,
+      14.633,
+      15.633,
+      16.633
+     ],
+     "clickCheck": {
+      "highlights": "on",
+      "startCallMs": 2063,
+      "presses": [
+       {
+        "s": 4.0,
+        "movedS": 1.5,
+        "x": 200,
+        "y": 100,
+        "button": "left"
+       },
+       {
+        "s": 8.0,
+        "movedS": 5.5,
+        "x": 640,
+        "y": 100,
+        "button": "right"
+       },
+       {
+        "s": 12.0,
+        "movedS": 9.5,
+        "x": 1100,
+        "y": 100,
+        "button": "middle"
+       }
+      ],
+      "pointer": [
+       {
+        "seen": true,
+        "firstMs": 3100,
+        "peak": 192
+       },
+       {
+        "seen": true,
+        "firstMs": 7033,
+        "peak": 194
+       },
+       {
+        "seen": true,
+        "firstMs": 11033,
+        "peak": 188
+       }
+      ],
+      "rings": [
+       {
+        "frames": 102,
+        "fromMs": 3500,
+        "seen": false,
+        "toMs": 6900,
+        "x": 200,
+        "y": 100
+       },
+       {
+        "frames": 102,
+        "fromMs": 7433,
+        "seen": false,
+        "toMs": 10833,
+        "x": 640,
+        "y": 100
+       },
+       {
+        "frames": 102,
+        "fromMs": 11433,
+        "seen": false,
+        "toMs": 14833,
+        "x": 1100,
+        "y": 100
+       }
+      ],
+      "seen": 0,
+      "expected": 3,
+      "ok": false,
+      "problems": [
+       "0 of 3 presses have a ring"
+      ]
+     },
+     "destroyed": true
+    }
+   },
+   "frame": {
+    "deleted": true,
+    "edges": {
+     "bottom": 0.8915,
+     "left": 1.0,
+     "right": 0.9536,
+     "top": 1.0
+    },
+    "fraction": 0.7654,
+    "minFraction": 0.5,
+    "ok": false,
+    "reason": "uncovered_edge",
+    "rect": [
+     0,
+     0,
+     1280,
+     800
+    ],
+    "size": [
+     1280,
+     800
+    ]
+   }
+  }
+ ],
+ "microphone": {
+  "name": "putgd_lab_32236",
+  "modules": {
+   "sink": 536870916,
+   "holdSink": 536870919,
+   "source": 536870920,
+   "hold": 536870917,
+   "system": 536870918
+  },
+  "defaultSource": "@DEFAULT_SOURCE@",
+  "defaultSink": "auto_null",
+  "attempts": 1,
+  "heardPeak": 6561,
+  "sink": "putgd_lab_32236_sink",
+  "source": "putgd_lab_32236_mic",
+  "systemSink": "putgd_lab_32236_system"
+ },
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "Virtual-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1280,
+    800
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "skipped": "no loopback VNC tile (disposable guest)"
+  },
+  "video": "marker"
+ },
+ "microphoneRemoved": {
+  "removed": true,
+  "left": [],
+  "defaultSource": "@DEFAULT_SOURCE@",
+  "defaultSink": "auto_null"
+ },
+ "gpuHangs": []
+}

@@ -1,0 +1,168 @@
+{
+ "host": "omarchy-lab",
+ "kernel": "7.2.15-1-omarchy",
+ "desktop": "quickshell",
+ "session": "wayland",
+ "target": "region",
+ "rect": [
+  0,
+  0,
+  960,
+  540
+ ],
+ "formats": [
+  "mp4"
+ ],
+ "video": "marker",
+ "timing": {
+  "lead": 6.0,
+  "pauseAt": 10.0,
+  "pauseFor": 0.0,
+  "after": 2.0
+ },
+ "builds": {
+  "pr": {
+   "kind": "installed",
+   "dir": "/usr/bin",
+   "version": "putgd-record 26.1110.4459-dev+g8162da349b0d"
+  }
+ },
+ "analyzer": "/",
+ "rounds": [
+  {
+   "build": "pr",
+   "round": 1,
+   "format": "mp4",
+   "started": "2026-11-10T03:54:34Z",
+   "acquisition": "wlr-capture",
+   "liveEncoders": [
+    "x264enc",
+    "openh264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": true,
+    "microphoneDevice": {
+     "id": "putgd_lab_15970_mic",
+     "label": "putgd_lab_15970-microphone"
+    }
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": {
+     "microphone": false,
+     "system": true
+    },
+    "audioEncoder": "avenc_aac",
+    "recordingMicrophone": {
+     "available": true,
+     "device": "putgd_lab_15970-microphone",
+     "effective": false,
+     "requested": false
+    },
+    "microphoneLost": null
+   },
+   "recordedS": 12.047,
+   "microphoneLostAtStop": null,
+   "load": 3.06494140625,
+   "durationUs": 13666666,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "23047b6e-7458-4450-82bf-a258eb9ca1b7.mkv",
+     "bytes": 141617,
+     "motion": 33.099,
+     "tones": {
+      "1000": {
+       "activeFraction": 0,
+       "blocks": 272,
+       "maxAmplitude": 0.00016867474508388015,
+       "medianAmplitude": 7.724558592661996e-07
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 272,
+       "maxAmplitude": 0.016997318345961375,
+       "medianAmplitude": 0.016925173950259075
+      }
+     },
+     "error": "av_sync_unpaired: No flash has a tone burst within half a period"
+    },
+    "export": {
+     "file": "pr-mp4-1.mp4",
+     "bytes": 147560,
+     "motion": 33.092,
+     "tones": {
+      "1000": {
+       "activeFraction": 0,
+       "blocks": 273,
+       "maxAmplitude": 7.04124628567805e-05,
+       "medianAmplitude": 1.2031799287597183e-06
+      },
+      "440": {
+       "activeFraction": 0.9926739926739927,
+       "blocks": 273,
+       "maxAmplitude": 0.01695523386743678,
+       "medianAmplitude": 0.01689689866656927
+      }
+     },
+     "error": "av_sync_unpaired: No flash has a tone burst within half a period"
+    }
+   }
+  }
+ ],
+ "microphone": {
+  "name": "putgd_lab_15970",
+  "modules": {
+   "sink": 536870916,
+   "holdSink": 536870920,
+   "source": 536870918,
+   "hold": 536870917,
+   "system": 536870919
+  },
+  "defaultSource": "@DEFAULT_SOURCE@",
+  "defaultSink": "auto_null",
+  "attempts": 1,
+  "heardPeak": 6553,
+  "sink": "putgd_lab_15970_sink",
+  "source": "putgd_lab_15970_mic",
+  "systemSink": "putgd_lab_15970_system"
+ },
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "Virtual-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1280,
+    800
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "skipped": "no loopback VNC tile (disposable guest)"
+  },
+  "video": "marker"
+ },
+ "microphoneRemoved": {
+  "removed": true,
+  "left": [],
+  "defaultSource": "@DEFAULT_SOURCE@",
+  "defaultSink": "auto_null"
+ },
+ "gpuHangs": []
+}

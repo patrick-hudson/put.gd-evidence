@@ -1,0 +1,62 @@
+{
+ "host": "fedora",
+ "kernel": "7.2.11-300.fc45.x86_64",
+ "desktop": "budgie-panel",
+ "session": "wayland",
+ "target": "region",
+ "rect": [
+  0,
+  0,
+  960,
+  540
+ ],
+ "formats": [
+  "mp4"
+ ],
+ "video": "marker",
+ "timing": {
+  "lead": 6.0,
+  "pauseAt": 4.0,
+  "pauseFor": 0.0,
+  "after": 1.0
+ },
+ "builds": {
+  "pr": {
+   "kind": "appimage",
+   "file": "putgd-26.1110.4437-dev+g289b2f4e4f7f-x86_64.AppImage",
+   "sha256": "0b7f04e647f1093a958db754a388c5e4b37ba39b44781757330917f17fe0012f"
+  }
+ },
+ "analyzer": "/home/lab/runs/bXm-align/appdir-pr/squashfs-root",
+ "rounds": [
+  {
+   "build": "pr",
+   "round": 1,
+   "format": "mp4",
+   "error": "recording.prepare failed: recording_unsupported No microphone is connected."
+  }
+ ],
+ "microphone": null,
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "Virtual-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1280,
+    800
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "skipped": "no loopback VNC tile (disposable guest)"
+  },
+  "video": "marker"
+ },
+ "microphoneRemoved": null,
+ "gpuHangs": []
+}

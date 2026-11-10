@@ -1,0 +1,432 @@
+{
+ "host": "debian",
+ "kernel": "6.12.107+deb13-amd64",
+ "desktop": "plasmashell",
+ "session": "wayland",
+ "target": "monitor",
+ "rect": null,
+ "formats": [
+  "mp4"
+ ],
+ "video": "marker",
+ "timing": {
+  "lead": 3.0,
+  "pauseAt": 14.0,
+  "pauseFor": 0.0,
+  "after": 2.0
+ },
+ "builds": {
+  "pr": {
+   "kind": "installed",
+   "dir": "/usr/bin",
+   "version": "putgd-record 26.1110.4436-dev+g8e89ac6e2d18"
+  }
+ },
+ "analyzer": "/",
+ "rounds": [
+  {
+   "build": "pr",
+   "round": 1,
+   "format": "mp4",
+   "started": "2026-11-10T02:37:49Z",
+   "acquisition": "kde-screencast",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc",
+    "openh264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false,
+    "microphoneReason": "default_is_monitor"
+   },
+   "clickHighlights": {
+    "available": true,
+    "drawnBy": "compositor",
+    "note": "KWin draws the rings on the screen for the length of the recording; window recordings carry none.",
+    "route": "kwin-mouseclick-effect",
+    "targetReasons": {
+     "window": "KWin draws the click rings on the screen; a window recording's stream carries the window alone, so it has none."
+    },
+    "targets": [
+     "monitor",
+     "desktop",
+     "region"
+    ]
+   },
+   "canvas": [
+    1920,
+    1080
+   ],
+   "overlay": {
+    "excluded": false,
+    "placement": "handle"
+   },
+   "progressAtStart": {
+    "audioSources": {
+     "microphone": false,
+     "system": true
+    },
+    "audioEncoder": "avenc_aac",
+    "recordingMicrophone": {
+     "available": false,
+     "effective": false,
+     "requested": false,
+     "unavailable": "The system's default input is the monitor of an output, not a microphone. Plug one in, or choose a device in Settings."
+    },
+    "microphoneLost": null
+   },
+   "clickHighlightsError": null,
+   "load": 2.3046875,
+   "durationUs": 16266666,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "a5add939-7e72-40ac-a3be-f448aefca0a1.mkv",
+     "bytes": 343873,
+     "motion": 8.94,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.1476923076923077,
+       "blocks": 325,
+       "maxAmplitude": 0.3452936720657399,
+       "medianAmplitude": 8.128801613912591e-07
+      },
+      "440": {
+       "activeFraction": 1,
+       "blocks": 325,
+       "maxAmplitude": 0.018986858358065677,
+       "medianAmplitude": 0.016926001738506537
+      }
+     },
+     "pairs": 16,
+     "medianMs": 6.7,
+     "spreadMs": 66.7,
+     "offsetsMs": [
+      -59.3,
+      -58.7,
+      -59.3,
+      -59,
+      -25.7,
+      -26.3,
+      -26,
+      7.3,
+      -26.3,
+      7.3,
+      6.7,
+      7,
+      7.3,
+      6.7,
+      7,
+      7.3
+     ],
+     "pairTimesS": [
+      0.933,
+      1.933,
+      2.933,
+      3.933,
+      4.9,
+      5.9,
+      6.9,
+      7.867,
+      8.9,
+      9.867,
+      10.867,
+      11.867,
+      12.867,
+      13.867,
+      14.867,
+      15.867
+     ],
+     "clickCheck": {
+      "highlights": "off",
+      "startCallMs": 743,
+      "presses": [
+       {
+        "s": 4.0,
+        "movedS": 1.5,
+        "x": 300,
+        "y": 100,
+        "button": "left"
+       },
+       {
+        "s": 8.0,
+        "movedS": 5.5,
+        "x": 700,
+        "y": 100,
+        "button": "right"
+       },
+       {
+        "s": 12.0,
+        "movedS": 9.5,
+        "x": 1100,
+        "y": 100,
+        "button": "middle"
+       }
+      ],
+      "pointer": [
+       {
+        "seen": true,
+        "firstMs": 1700,
+        "peak": 189
+       },
+       {
+        "seen": true,
+        "firstMs": 5700,
+        "peak": 191
+       },
+       {
+        "seen": true,
+        "firstMs": 9700,
+        "peak": 191
+       }
+      ],
+      "rings": [
+       {
+        "frames": 102,
+        "fromMs": 2100,
+        "seen": false,
+        "toMs": 5500,
+        "x": 300,
+        "y": 100
+       },
+       {
+        "frames": 102,
+        "fromMs": 6100,
+        "seen": false,
+        "toMs": 9500,
+        "x": 700,
+        "y": 100
+       },
+       {
+        "frames": 102,
+        "fromMs": 10100,
+        "seen": false,
+        "toMs": 13500,
+        "x": 1100,
+        "y": 100
+       }
+      ],
+      "seen": 0,
+      "expected": 3,
+      "ok": true
+     }
+    },
+    "export": {
+     "file": "pr-mp4-1.mp4",
+     "bytes": 382510,
+     "motion": 8.974,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.1476923076923077,
+       "blocks": 325,
+       "maxAmplitude": 0.3453458665342587,
+       "medianAmplitude": 1.209892246235074e-06
+      },
+      "440": {
+       "activeFraction": 0.9969230769230769,
+       "blocks": 325,
+       "maxAmplitude": 0.01849657510714088,
+       "medianAmplitude": 0.016903214482690318
+      }
+     },
+     "pairs": 16,
+     "medianMs": 7.3,
+     "spreadMs": 66.7,
+     "offsetsMs": [
+      -59.3,
+      -59.3,
+      -59.3,
+      -59.3,
+      -26,
+      -26,
+      -26,
+      7.3,
+      -26,
+      7.3,
+      7.3,
+      7.3,
+      7.3,
+      7.3,
+      7.3,
+      7.3
+     ],
+     "pairTimesS": [
+      0.933,
+      1.933,
+      2.933,
+      3.933,
+      4.9,
+      5.9,
+      6.9,
+      7.867,
+      8.9,
+      9.867,
+      10.867,
+      11.867,
+      12.867,
+      13.867,
+      14.867,
+      15.867
+     ],
+     "clickCheck": {
+      "highlights": "off",
+      "startCallMs": 743,
+      "presses": [
+       {
+        "s": 4.0,
+        "movedS": 1.5,
+        "x": 300,
+        "y": 100,
+        "button": "left"
+       },
+       {
+        "s": 8.0,
+        "movedS": 5.5,
+        "x": 700,
+        "y": 100,
+        "button": "right"
+       },
+       {
+        "s": 12.0,
+        "movedS": 9.5,
+        "x": 1100,
+        "y": 100,
+        "button": "middle"
+       }
+      ],
+      "pointer": [
+       {
+        "seen": true,
+        "firstMs": 1700,
+        "peak": 219
+       },
+       {
+        "seen": true,
+        "firstMs": 5700,
+        "peak": 219
+       },
+       {
+        "seen": true,
+        "firstMs": 9700,
+        "peak": 219
+       }
+      ],
+      "rings": [
+       {
+        "frames": 102,
+        "fromMs": 2100,
+        "seen": false,
+        "toMs": 5500,
+        "x": 300,
+        "y": 100
+       },
+       {
+        "frames": 102,
+        "fromMs": 6100,
+        "seen": false,
+        "toMs": 9500,
+        "x": 700,
+        "y": 100
+       },
+       {
+        "frames": 102,
+        "fromMs": 10100,
+        "seen": false,
+        "toMs": 13500,
+        "x": 1100,
+        "y": 100
+       }
+      ],
+      "seen": 0,
+      "expected": 3,
+      "ok": true
+     }
+    }
+   },
+   "frame": {
+    "edges": {
+     "bottom": 0.9176,
+     "left": 1.0,
+     "right": 0.963,
+     "top": 1.0
+    },
+    "fraction": 0.5502,
+    "kept": "/home/patrick/work/i1364/runs/kF-noclicks/frames/pr-mp4-1.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     1280,
+     720
+    ],
+    "sha256": "58e412a2a48e3726df27c64e10cd3ffa826caf0c468d9e0e8ba57c23b8d5a17a",
+    "size": [
+     1280,
+     720
+    ]
+   }
+  }
+ ],
+ "microphone": {
+  "name": "putgd_lab_1801811",
+  "modules": {
+   "sink": 536870916,
+   "source": 536870917,
+   "system": 536870918
+  },
+  "defaultSource": "alsa_output.pci-0000_00_1f.3.analog-stereo.monitor",
+  "defaultSink": "alsa_output.pci-0000_00_1f.3.analog-stereo",
+  "sink": "putgd_lab_1801811_sink",
+  "source": "putgd_lab_1801811_mic",
+  "systemSink": "putgd_lab_1801811_system"
+ },
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "HDMI-A-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "check": "precheck",
+   "fraction": 0.9999,
+   "framebuffer": [
+    1920,
+    1080
+   ],
+   "minFraction": 0.98,
+   "ok": true,
+   "output": [
+    "HDMI-A-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ]
+  },
+  "video": "marker"
+ },
+ "microphoneRemoved": {
+  "removed": true,
+  "left": [],
+  "defaultSource": "alsa_output.pci-0000_00_1f.3.analog-stereo.monitor",
+  "defaultSink": "alsa_output.pci-0000_00_1f.3.analog-stereo"
+ },
+ "gpuHangs": []
+}

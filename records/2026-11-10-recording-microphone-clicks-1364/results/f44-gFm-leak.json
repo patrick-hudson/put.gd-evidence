@@ -1,0 +1,235 @@
+{
+ "host": "fedora",
+ "kernel": "7.2.11-200.fc44.x86_64",
+ "desktop": "gnome-shell",
+ "session": "wayland",
+ "target": "region",
+ "rect": [
+  0,
+  0,
+  960,
+  540
+ ],
+ "formats": [
+  "mp4"
+ ],
+ "video": "marker",
+ "timing": {
+  "lead": 6.0,
+  "pauseAt": 12.0,
+  "pauseFor": 0.0,
+  "after": 2.0
+ },
+ "builds": {
+  "pr": {
+   "kind": "installed",
+   "dir": "/usr/bin",
+   "version": "putgd-record 26.1110.4436-dev+g8e89ac6e2d18"
+  }
+ },
+ "analyzer": "/",
+ "rounds": [
+  {
+   "build": "pr",
+   "round": 1,
+   "format": "mp4",
+   "started": "2026-11-10T02:53:26Z",
+   "acquisition": "mutter-screencast",
+   "liveEncoders": [
+    "openh264enc"
+   ],
+   "audio": {
+    "system": false,
+    "microphone": true,
+    "microphoneDevice": "putgd_lab_3116365_mic"
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false,
+    "microphoneReason": "default_is_monitor"
+   },
+   "microphones": {
+    "available": true,
+    "reason": null,
+    "device": {
+     "id": "putgd_lab_3116365_mic",
+     "label": "putgd_lab_3116365-microphone"
+    },
+    "devices": [
+     "alsa_input.pci-0000_00_1f.3.analog-stereo",
+     "putgd_lab_3116365_mic"
+    ],
+    "defaultIsMonitor": true
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": {
+     "microphone": true,
+     "system": false
+    },
+    "audioEncoder": "avenc_aac",
+    "recordingMicrophone": {
+     "available": true,
+     "device": "putgd_lab_3116365-microphone",
+     "effective": true,
+     "requested": true
+    },
+    "microphoneLost": null
+   },
+   "unpluggedAtS": 6.13,
+   "afterUnplug": {
+    "state": "recording",
+    "microphoneLost": "The microphone was disconnected; the rest of the recording has no microphone audio."
+   },
+   "load": 1.033203125,
+   "durationUs": 14833333,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "138b710d-a374-46b0-8090-291bea738fb4.mkv",
+     "bytes": 103764,
+     "motion": 34.811,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.15789473684210525,
+       "blocks": 133,
+       "maxAmplitude": 0.34541729025584184,
+       "medianAmplitude": 0
+      },
+      "440": {
+       "activeFraction": 0.10526315789473684,
+       "blocks": 133,
+       "maxAmplitude": 0.0055038267073030545,
+       "medianAmplitude": 0
+      }
+     },
+     "pairs": 7,
+     "medianMs": 11.7,
+     "spreadMs": 33.7,
+     "offsetsMs": [
+      -21.3,
+      -21,
+      12.3,
+      11.7,
+      12.3,
+      11.7,
+      12
+     ],
+     "pairTimesS": [
+      0.633,
+      1.633,
+      2.6,
+      3.6,
+      4.6,
+      5.6,
+      6.6
+     ]
+    },
+    "export": {
+     "file": "pr-mp4-1.mp4",
+     "bytes": 100653,
+     "motion": 34.805,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.15555555555555556,
+       "blocks": 135,
+       "maxAmplitude": 0.3452702613898447,
+       "medianAmplitude": 0
+      },
+      "440": {
+       "activeFraction": 0,
+       "blocks": 135,
+       "maxAmplitude": 0.004213603779082278,
+       "medianAmplitude": 0
+      }
+     },
+     "pairs": 7,
+     "medianMs": 12,
+     "spreadMs": 33.3,
+     "offsetsMs": [
+      -21.3,
+      -21.3,
+      12,
+      12,
+      12,
+      12,
+      12
+     ],
+     "pairTimesS": [
+      0.633,
+      1.633,
+      2.6,
+      3.6,
+      4.6,
+      5.6,
+      6.6
+     ]
+    }
+   }
+  }
+ ],
+ "microphone": {
+  "name": "putgd_lab_3116365",
+  "modules": {
+   "sink": 536870916,
+   "source": 536870918,
+   "system": 536870917
+  },
+  "defaultSource": "alsa_input.pci-0000_00_1f.3.analog-stereo",
+  "defaultSink": "alsa_output.pci-0000_00_1f.3.analog-stereo",
+  "sink": "putgd_lab_3116365_sink",
+  "source": "putgd_lab_3116365_mic",
+  "systemSink": "putgd_lab_3116365_system",
+  "madeDefault": true
+ },
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "HDMI-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "check": "precheck",
+   "fraction": 1.0,
+   "framebuffer": [
+    1920,
+    1080
+   ],
+   "minFraction": 0.98,
+   "ok": true,
+   "output": [
+    "HDMI-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ]
+  },
+  "video": "marker"
+ },
+ "microphoneRemoved": {
+  "removed": true,
+  "left": [],
+  "defaultSource": "alsa_input.pci-0000_00_1f.3.analog-stereo",
+  "defaultSink": "alsa_output.pci-0000_00_1f.3.analog-stereo"
+ },
+ "gpuHangs": []
+}

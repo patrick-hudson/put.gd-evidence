@@ -1,0 +1,183 @@
+{
+ "host": "kubuntu",
+ "kernel": "7.0.0-38-generic",
+ "desktop": "plasmashell",
+ "session": "wayland",
+ "target": "region",
+ "rect": [
+  0,
+  0,
+  960,
+  540
+ ],
+ "formats": [
+  "mp4"
+ ],
+ "video": "marker",
+ "timing": {
+  "lead": 6.0,
+  "pauseAt": 10.0,
+  "pauseFor": 0.0,
+  "after": 2.0
+ },
+ "builds": {
+  "pr": {
+   "kind": "installed",
+   "dir": "/usr/bin",
+   "version": "putgd-record 26.1110.4437-dev+g289b2f4e4f7f"
+  }
+ },
+ "analyzer": "/",
+ "rounds": [
+  {
+   "build": "pr",
+   "round": 1,
+   "format": "mp4",
+   "started": "2026-11-10T03:31:05Z",
+   "acquisition": "kde-screencast",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc",
+    "openh264enc"
+   ],
+   "audio": {
+    "system": true
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false,
+    "microphoneReason": "default_is_monitor"
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": {
+     "microphone": false,
+     "system": true
+    },
+    "audioEncoder": "avenc_aac",
+    "recordingMicrophone": {
+     "available": false,
+     "effective": false,
+     "requested": false,
+     "unavailable": "The system's default input is the monitor of an output, not a microphone. Plug one in, or choose a device in Settings."
+    },
+    "microphoneLost": null
+   },
+   "recordedS": 12.032,
+   "microphoneLostAtStop": null,
+   "load": 1.79296875,
+   "durationUs": 12766666,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "9dcff70c-79c9-4637-8820-7e6131f9fb17.mkv",
+     "bytes": 149388,
+     "motion": 8.498,
+     "tones": {
+      "1000": {
+       "activeFraction": 0,
+       "blocks": 254,
+       "maxAmplitude": 0.0003360945720967535,
+       "medianAmplitude": 5.317717664789215e-07
+      },
+      "440": {
+       "activeFraction": 0.9960629921259843,
+       "blocks": 254,
+       "maxAmplitude": 0.017005872517451594,
+       "medianAmplitude": 0.016919812025944315
+      }
+     },
+     "error": "av_sync_unpaired: No flash has a tone burst within half a period"
+    },
+    "export": {
+     "file": "pr-mp4-1.mp4",
+     "bytes": 152288,
+     "motion": 8.482,
+     "tones": {
+      "1000": {
+       "activeFraction": 0,
+       "blocks": 255,
+       "maxAmplitude": 0.0003366071736475947,
+       "medianAmplitude": 1.0149272028022533e-06
+      },
+      "440": {
+       "activeFraction": 0.9921568627450981,
+       "blocks": 255,
+       "maxAmplitude": 0.01698995900873692,
+       "medianAmplitude": 0.016912157007550898
+      }
+     },
+     "error": "av_sync_unpaired: No flash has a tone burst within half a period"
+    }
+   }
+  }
+ ],
+ "microphone": {
+  "name": "putgd_lab_2216368",
+  "modules": {
+   "sink": 536870916,
+   "holdSink": 536870918,
+   "source": 536870917,
+   "hold": 536870919,
+   "system": 536870920
+  },
+  "defaultSource": "alsa_output.pci-0000_00_1f.3.analog-stereo.monitor",
+  "defaultSink": "alsa_output.pci-0000_00_1f.3.analog-stereo",
+  "attempts": 1,
+  "heardPeak": 6553,
+  "sink": "putgd_lab_2216368_sink",
+  "source": "putgd_lab_2216368_mic",
+  "systemSink": "putgd_lab_2216368_system"
+ },
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "HDMI-A-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "check": "precheck",
+   "fraction": 1.0,
+   "framebuffer": [
+    1920,
+    1080
+   ],
+   "minFraction": 0.98,
+   "ok": true,
+   "output": [
+    "HDMI-A-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ]
+  },
+  "video": "marker"
+ },
+ "microphoneRemoved": {
+  "removed": true,
+  "left": [],
+  "defaultSource": "alsa_output.pci-0000_00_1f.3.analog-stereo.monitor",
+  "defaultSink": "alsa_output.pci-0000_00_1f.3.analog-stereo"
+ },
+ "gpuHangs": []
+}

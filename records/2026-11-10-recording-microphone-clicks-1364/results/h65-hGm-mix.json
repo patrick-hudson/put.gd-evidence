@@ -1,0 +1,259 @@
+{
+ "host": "omarchy-lab",
+ "kernel": "7.2.15-1-omarchy",
+ "desktop": "quickshell",
+ "session": "wayland",
+ "target": "region",
+ "rect": [
+  0,
+  0,
+  960,
+  540
+ ],
+ "formats": [
+  "mp4"
+ ],
+ "video": "marker",
+ "timing": {
+  "lead": 6.0,
+  "pauseAt": 8.0,
+  "pauseFor": 3.0,
+  "after": 8.0
+ },
+ "builds": {
+  "pr": {
+   "kind": "installed",
+   "dir": "/usr/bin",
+   "version": "putgd-record 26.1110.4459-dev+g8162da349b0d"
+  }
+ },
+ "analyzer": "/",
+ "rounds": [
+  {
+   "build": "pr",
+   "round": 1,
+   "format": "mp4",
+   "started": "2026-11-10T03:53:43Z",
+   "acquisition": "wlr-capture",
+   "liveEncoders": [
+    "x264enc",
+    "openh264enc"
+   ],
+   "audio": {
+    "system": true,
+    "microphone": true,
+    "microphoneDevice": "putgd_lab_15144_mic"
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": true,
+    "microphoneDevice": {
+     "id": "putgd_lab_15144_mic",
+     "label": "putgd_lab_15144-microphone"
+    }
+   },
+   "microphones": {
+    "available": true,
+    "reason": null,
+    "device": {
+     "id": "putgd_lab_15144_mic",
+     "label": "putgd_lab_15144-microphone"
+    },
+    "devices": [
+     "putgd_lab_15144_mic",
+     "putgd_lab_15343_mic"
+    ],
+    "defaultIsMonitor": false
+   },
+   "canvas": [
+    960,
+    540
+   ],
+   "overlay": {
+    "excluded": true,
+    "placement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": {
+     "microphone": true,
+     "system": true
+    },
+    "audioEncoder": "avenc_aac",
+    "recordingMicrophone": {
+     "available": true,
+     "device": "putgd_lab_15144-microphone",
+     "effective": true,
+     "requested": true
+    },
+    "microphoneLost": null
+   },
+   "pauseClipS": 8.102,
+   "recordedS": 16.137,
+   "microphoneLostAtStop": null,
+   "load": 3.0087890625,
+   "durationUs": 17733333,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "525ab475-40f0-46ef-b5bb-124aef9821c6.mkv",
+     "bytes": 203052,
+     "motion": 33.1,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.1440677966101695,
+       "blocks": 354,
+       "maxAmplitude": 0.3453952361691621,
+       "medianAmplitude": 6.307756278019874e-07
+      },
+      "440": {
+       "activeFraction": 0.9774011299435028,
+       "blocks": 354,
+       "maxAmplitude": 0.018230584480327144,
+       "medianAmplitude": 0.01689142320427344
+      }
+     },
+     "pairs": 15,
+     "medianMs": -18,
+     "spreadMs": 133.3,
+     "offsetsMs": [
+      -18.3,
+      -18,
+      -17.7,
+      -51.3,
+      15,
+      -84.7,
+      48.7,
+      -51.3,
+      -18,
+      -51.7,
+      15.7,
+      -18,
+      15.7,
+      -18,
+      -18.7
+     ],
+     "pairTimesS": [
+      3,
+      4,
+      5,
+      6.033,
+      6.967,
+      8.067,
+      8.933,
+      10,
+      10.967,
+      12,
+      12.933,
+      13.967,
+      14.933,
+      15.967,
+      16.967
+     ]
+    },
+    "export": {
+     "file": "pr-mp4-1.mp4",
+     "bytes": 202478,
+     "motion": 33.085,
+     "tones": {
+      "1000": {
+       "activeFraction": 0.1440677966101695,
+       "blocks": 354,
+       "maxAmplitude": 0.3456022963683484,
+       "medianAmplitude": 7.162891759013484e-07
+      },
+      "440": {
+       "activeFraction": 0.9745762711864406,
+       "blocks": 354,
+       "maxAmplitude": 0.01822787005636222,
+       "medianAmplitude": 0.016844745644809367
+      }
+     },
+     "pairs": 15,
+     "medianMs": -18.7,
+     "spreadMs": 133.3,
+     "offsetsMs": [
+      -18,
+      -18,
+      -18,
+      -51.3,
+      15.3,
+      -84.7,
+      48.7,
+      -52,
+      -18.7,
+      -52,
+      14.7,
+      -18.7,
+      14.7,
+      -18.7,
+      -18.7
+     ],
+     "pairTimesS": [
+      3,
+      4,
+      5,
+      6.033,
+      6.967,
+      8.067,
+      8.933,
+      10,
+      10.967,
+      12,
+      12.933,
+      13.967,
+      14.933,
+      15.967,
+      16.967
+     ]
+    }
+   },
+   "captureStepMs": 0.2,
+   "rawCaptureStepMs": 0.1,
+   "exportMinusWorkingMs": -0.7
+  }
+ ],
+ "microphone": {
+  "name": "putgd_lab_15144",
+  "modules": {
+   "sink": 536870916,
+   "holdSink": 536870918,
+   "source": 536870917,
+   "hold": 536870919,
+   "system": 536870920
+  },
+  "defaultSource": "@DEFAULT_SOURCE@",
+  "defaultSink": "auto_null",
+  "attempts": 1,
+  "heardPeak": 6553,
+  "sink": "putgd_lab_15144_sink",
+  "source": "putgd_lab_15144_mic",
+  "systemSink": "putgd_lab_15144_system"
+ },
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "Virtual-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1280,
+    800
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "skipped": "no loopback VNC tile (disposable guest)"
+  },
+  "video": "marker"
+ },
+ "microphoneRemoved": {
+  "removed": true,
+  "left": [],
+  "defaultSource": "@DEFAULT_SOURCE@",
+  "defaultSink": "auto_null"
+ },
+ "gpuHangs": []
+}
