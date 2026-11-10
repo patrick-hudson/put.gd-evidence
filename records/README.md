@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-10-small-fixes](2026-11-10-small-fixes/README.md) | — | Editor preview redaction and Qt 6.11 selector startup fixes |
 | [2026-11-10-editor-tools-1362-acceptance](2026-11-10-editor-tools-1362-acceptance/README.md) | #1362 | Editor tools #1362 — five-desktop CI-package acceptance |
 | [2026-11-10-rolling-screenshot-research](2026-11-10-rolling-screenshot-research/README.md) | — | Rolling screenshot (auto-scroll capture): research and stitcher prototype |
 | [2026-11-09-custom-http-uploader](2026-11-09-custom-http-uploader/README.md) | #1361 | Custom HTTP uploader with ShareX .sxcu import (#1361): pictures and checks at the PR head |
