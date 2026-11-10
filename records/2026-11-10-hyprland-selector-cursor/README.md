@@ -15,3 +15,5 @@ This demonstrates the race and its mitigation on the reported software-rendered 
 Pictures were composed on d69 from actual capture pixels; the corner is enlarged 12x with nearest-neighbor sampling. Labels and arrow were applied by the production editor from the exact native head. Source composition and editor drivers are included. Source pixels are unchanged.
 
 Full raw PNG sets and failed experiments are retained in private checksum-verified archives on workstation and d69, indexed in restore-index.json. Guest overlays were stopped and retired with the guarded cleanup after export; receipts accompany this record.
+
+Current PR head77d9ffb12ea1f93e183eb000f2f5dabf69555bbf changes only the regression test, leaving pictured production code identical. Its CI42759842181 is green after the Ubuntu26 dependency-install timeout retry. Both CodeRabbit bodies and walkthrough read, no outside-diff findings/open threads. See review-follow-up.md and builder-source-audit.json.

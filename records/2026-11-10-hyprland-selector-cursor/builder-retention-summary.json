@@ -1,0 +1,63 @@
+{
+  "builder": "f44",
+  "archives": [
+    {
+      "archive": "/home/patrick/work/pg-small-cd-retained/pg-cd-tested.tar.zst",
+      "sha256": "9a124580337fb190bf85d2777efdd435c9abb5c6ddf6c9128a0a8ebb9b987183",
+      "testedOwnedPathsHead": "4b7e01d2b61c1a982ff1db9a053de53fb1d98154",
+      "sourceRoot": "/home/patrick/work/pg-cd",
+      "members": "/home/patrick/work/pg-small-cd-retained/pg-cd-members.txt",
+      "membersSha256": "9ef4757e87f7407494934be81c4b66ad366e3aae620f99bc104162c989a3ad45",
+      "sdk": "Preserved separately at pg-small/build/sdk and pg-small/build/dependencies; archive does not dereference these links.",
+      "restore": "Verify SHA256 and zstd -t, then tar --zstd -xf archive -C /home/patrick/work on the same builder. Full source/build cache is preserved; local build identity is not claimed as a native CI package.",
+      "notes": "Intermediate snapshot: algorithm and new deadline tests match4b7, but the adapter error text/header comment predate930. The final snapshot and source audit are authoritative."
+    },
+    {
+      "archive": "/home/patrick/work/pg-small-cd-retained/pg-small-tested.tar.zst",
+      "sha256": "a89089cccec750b35cb979d8247aae85f4de82f1e2281f735400841b766a4b62",
+      "testedOwnedPathsHead": "77d9ffb12ea1f93e183eb000f2f5dabf69555bbf",
+      "sourceRoot": "/home/patrick/work/pg-small",
+      "members": "/home/patrick/work/pg-small-cd-retained/pg-small-members.txt",
+      "membersSha256": "1c432638236d6528813ad3828618b0e3cb4004786b1b03b55848725f0db0e4d1",
+      "sdk": "Preserved separately at pg-small/build/sdk and pg-small/build/dependencies; archive does not dereference these links.",
+      "restore": "Verify SHA256 and zstd -t, then tar --zstd -xf archive -C /home/patrick/work on the same builder. Full source/build cache is preserved; local build identity is not claimed as a native CI package."
+    },
+    {
+      "archive": "/home/patrick/work/pg-small-cd-retained/pg-cd-final-tested.tar.zst",
+      "sha256": "8de11c29bfd75ba0e7a222e6047e2ff37c5302ba807d081631439ec2207296df",
+      "testedOwnedPathsHead": "4b7e01d2b61c1a982ff1db9a053de53fb1d98154",
+      "sourceRoot": "/home/patrick/work/pg-cd",
+      "members": "/home/patrick/work/pg-small-cd-retained/pg-cd-final-members.txt",
+      "membersSha256": "76be4ec30aabb7276545aa312c96fcc2bf057b2780efb8cbfbf59520dca74697",
+      "sdk": "Preserved separately at pg-small/build/sdk and pg-small/build/dependencies; archive does not dereference these links.",
+      "restore": "Verify SHA256 and zstd -t, then tar --zstd -xf archive -C /home/patrick/work on the same builder. Full source/build cache is preserved; local build identity is not claimed as a native CI package."
+    },
+    {
+      "archive": "/home/patrick/work/pg-small-cd-retained/pg-cd-caaf-tested.tar.zst",
+      "sha256": "b8a0be53a9e270b0f5f2773dad06d87154d16b82b5296faf8468472a9b798b71",
+      "testedOwnedPathsHead": "caaf7628c1d79f950f9f7b8e7fa1cf25b378d7e7",
+      "sourceRoot": "/home/patrick/work/pg-cd",
+      "members": "/home/patrick/work/pg-small-cd-retained/pg-cd-caaf-members.txt",
+      "membersSha256": "a4ef14a24d2446d577051357decad1890be9b2f6bdad87819a06373ce89d3f1a",
+      "sdk": "Preserved separately at pg-small/build/sdk and pg-small/build/dependencies; archive does not dereference these links.",
+      "restore": "Verify SHA256 and zstd -t, then tar --zstd -xf archive -C /home/patrick/work on the same builder. Full source/build cache is preserved; local build identity is not claimed as a native CI package."
+    }
+  ],
+  "sourceDirectories": "pg-cd removed; pg-small retains only build/sdk and build/dependencies",
+  "retirements": [
+    {
+      "source": "/home/patrick/work/pg-cd",
+      "archive": "/home/patrick/work/pg-small-cd-retained/pg-cd-caaf-tested.tar.zst",
+      "archiveSha256": "b8a0be53a9e270b0f5f2773dad06d87154d16b82b5296faf8468472a9b798b71",
+      "completed": true,
+      "deletedFiles": 2680
+    },
+    {
+      "source": "/home/patrick/work/pg-small",
+      "archive": "/home/patrick/work/pg-small-cd-retained/pg-small-tested.tar.zst",
+      "archiveSha256": "a89089cccec750b35cb979d8247aae85f4de82f1e2281f735400841b766a4b62",
+      "completed": true,
+      "deletedFiles": 3220
+    }
+  ]
+}
