@@ -1,0 +1,780 @@
+linux (26.04)	Install distro dependencies	﻿2026-11-10T03:15:33.5009389Z ##[group]Run apt=(-o Acquire::Retries=3 -o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20)
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:33.5010624Z ^[[36;1mapt=(-o Acquire::Retries=3 -o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20)^[[0m
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:33.5011591Z ^[[36;1meval "$PUTGD_UBUNTU_MIRRORS"^[[0m
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:33.5012032Z ^[[36;1mapt-get update "${apt[@]}"^[[0m
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:33.5015297Z ^[[36;1mDEBIAN_FRONTEND=noninteractive apt-get install -y "${apt[@]}" build-essential ccache git ca-certificates passwd util-linux qemu-utils python3 nodejs npm cmake ninja-build pkg-config qt6-base-dev qt6-svg-dev qt6-base-dev-tools libqt6sql6-sqlite qt6-wayland-dev qtkeychain-qt6-dev libxcb1-dev libxcb-keysyms1-dev libxcb-util-dev libxcb-image0-dev libxcb-randr0-dev libxcb-xfixes0-dev libxcb-damage0-dev libxcb-shape0-dev libxcb-xinput-dev libxcb-xtest0-dev xvfb xauth dbus-daemon libxcursor-dev libxkbcommon-dev libxkbcommon-x11-dev libcurl4-openssl-dev libssl-dev zlib1g-dev libwayland-dev wayland-protocols libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libavcodec-dev libavformat-dev libavfilter-dev libavutil-dev libswscale-dev libswresample-dev gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-pipewire gstreamer1.0-libav^[[0m
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:33.5018449Z ^[[36;1mif [ '26.04' = '26.04' ]; then^[[0m
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:33.5019002Z ^[[36;1m  # faketime pins the UI catalog clock; Pillow and numpy support shared image-diff tests.^[[0m
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:33.5019999Z ^[[36;1m  apt-get install -y "${apt[@]}" liblayershellqtinterface-dev faketime python3-pil python3-numpy^[[0m
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:33.5020739Z ^[[36;1m  # budgie_labwc_integration runs the Budgie adapter against a real headless labwc (#1275).^[[0m
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:33.5021413Z ^[[36;1m  apt-get install -y "${apt[@]}" labwc wl-clipboard wlr-randr^[[0m
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:33.5022090Z ^[[36;1mfi^[[0m
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:33.5022505Z ^[[36;1museradd --create-home --shell /bin/bash putgd-ci^[[0m
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:33.5027173Z shell: bash --noprofile --norc -e -o pipefail {0}
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:33.5027865Z env:
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:33.5031077Z   PUTGD_UBUNTU_MIRRORS: apt_root=${PUTGD_APT_ROOT:-/etc/apt}
+linux (26.04)	Install distro dependencies	sources=$(grep -lE 'http://archive\.ubuntu\.com/ubuntu' "$apt_root"/sources.list "$apt_root"/sources.list.d/* 2>/dev/null || true)
+linux (26.04)	Install distro dependencies	if [ -n "$sources" ]; then
+linux (26.04)	Install distro dependencies	  up=() down=()
+linux (26.04)	Install distro dependencies	  for host in us.archive.ubuntu.com mirrors.edge.kernel.org azure.archive.ubuntu.com archive.ubuntu.com; do
+linux (26.04)	Install distro dependencies	    probe="exec 3<>/dev/tcp/$host/80; printf 'HEAD /ubuntu/dists/noble/InRelease HTTP/1.0\r\nHost: $host\r\n\r\n' >&3; head -n 1 <&3 | grep -q ' 200 '"
+linux (26.04)	Install distro dependencies	    if timeout 8 bash -c "$probe" 2>/dev/null; then up+=("$host"); else down+=("$host"); fi
+linux (26.04)	Install distro dependencies	  done
+linux (26.04)	Install distro dependencies	  priority=0
+linux (26.04)	Install distro dependencies	  : > "$apt_root/putgd-mirrors.txt"
+linux (26.04)	Install distro dependencies	  for host in "${up[@]}" "${down[@]}"; do
+linux (26.04)	Install distro dependencies	    priority=$((priority + 1))
+linux (26.04)	Install distro dependencies	    printf 'http://%s/ubuntu/\tpriority:%d\n' "$host" "$priority" >> "$apt_root/putgd-mirrors.txt"
+linux (26.04)	Install distro dependencies	  done
+linux (26.04)	Install distro dependencies	  sed -i -E "s#http://archive\.ubuntu\.com/ubuntu/?#mirror+file:$apt_root/putgd-mirrors.txt#" $sources
+linux (26.04)	Install distro dependencies	  echo "Ubuntu mirrors reachable: ${up[*]:-none}"
+linux (26.04)	Install distro dependencies	fi
+linux (26.04)	Install distro dependencies	
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:33.5034160Z   LANG: C.UTF-8
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:33.5034536Z   LC_ALL: C.UTF-8
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:33.5034903Z ##[endgroup]
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:34.6043121Z Ubuntu mirrors reachable: us.archive.ubuntu.com mirrors.edge.kernel.org azure.archive.ubuntu.com archive.ubuntu.com
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:34.6267603Z Get:1 file:/etc/apt/putgd-mirrors.txt Mirrorlist [194 B]
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:34.8254737Z Get:5 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:35.2865303Z Get:6 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [820 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:35.6886346Z Get:7 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Packages [658 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:35.7382842Z Get:8 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [266 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:15:35.7870291Z Get:9 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Packages [24.6 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:16:15.2164170Z Ign:2 http://us.archive.ubuntu.com/ubuntu resolute InRelease
+linux (26.04)	Install distro dependencies	2026-11-10T03:16:15.4657607Z Get:3 http://us.archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:16:16.1916299Z Get:4 http://us.archive.ubuntu.com/ubuntu resolute-backports InRelease [137 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:16:38.2953779Z Ign:2 http://us.archive.ubuntu.com/ubuntu resolute InRelease
+linux (26.04)	Install distro dependencies	2026-11-10T03:17:20.5948073Z Ign:10 http://us.archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages
+linux (26.04)	Install distro dependencies	2026-11-10T03:18:02.2464895Z Ign:11 http://us.archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages
+linux (26.04)	Install distro dependencies	2026-11-10T03:18:43.5567147Z Ign:12 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages
+linux (26.04)	Install distro dependencies	2026-11-10T03:19:24.6685164Z Ign:13 http://us.archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Packages
+linux (26.04)	Install distro dependencies	2026-11-10T03:20:06.1325729Z Ign:14 http://us.archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Packages
+linux (26.04)	Install distro dependencies	2026-11-10T03:20:47.4388210Z Ign:2 http://us.archive.ubuntu.com/ubuntu resolute InRelease
+linux (26.04)	Install distro dependencies	2026-11-10T03:21:13.6897196Z Get:10 http://us.archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [26.1 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:21:14.8388471Z Get:11 http://us.archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [480 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:21:17.4857022Z Get:12 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [1070 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:21:20.3480563Z Get:13 http://us.archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Packages [738 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:21:21.1988977Z Get:14 http://us.archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Packages [3308 B]
+linux (26.04)	Install distro dependencies	2026-11-10T03:21:21.7135049Z Get:2 http://us.archive.ubuntu.com/ubuntu resolute InRelease [136 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:21:23.3547079Z Get:15 http://us.archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [20.1 MB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:21:29.4899215Z Get:16 http://us.archive.ubuntu.com/ubuntu resolute/restricted amd64 Packages [189 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:21:29.9777031Z Get:17 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 Packages [1874 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:21:52.0912367Z Ign:18 http://us.archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:13.5822371Z Get:18 http://us.archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [352 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:15.9233701Z Fetched 27.2 MB in 6min 41s (67.7 kB/s)
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:16.6469222Z Reading package lists...
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.3711320Z Reading package lists...
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.5416431Z Building dependency tree...
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.5417713Z Reading state information...
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.5825524Z passwd is already the newest version (1:4.17.4-2ubuntu3).
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.5826670Z util-linux is already the newest version (2.41.3-3ubuntu2.2).
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.6676212Z Solving dependencies...
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7803013Z The following additional packages will be installed:
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7803986Z   adduser adwaita-icon-theme alacritty alsa-topology-conf alsa-ucm-conf
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7804714Z   at-spi2-common at-spi2-core binutils binutils-common
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7805550Z   binutils-x86-64-linux-gnu bubblewrap bzip2 cmake-data comerr-dev cpp cpp-15
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7806400Z   cpp-15-x86-64-linux-gnu cpp-x86-64-linux-gnu dbus dbus-bin
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7807192Z   dbus-session-bus-common dbus-system-bus-common dbus-user-session
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7807965Z   dconf-gsettings-backend dconf-service dirmngr dmsetup dpkg-dev eslint
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7808850Z   fakeroot fontconfig fontconfig-config fonts-dejavu-core fonts-dejavu-mono
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7809821Z   fonts-droid-fallback fonts-noto-mono fonts-urw-base35 g++ g++-15
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7810553Z   g++-15-x86-64-linux-gnu g++-x86-64-linux-gnu gcc gcc-15 gcc-15-base
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7811336Z   gcc-15-x86-64-linux-gnu gcc-x86-64-linux-gnu gcr gcr4 ghostscript
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7812135Z   gir1.2-glib-2.0 gir1.2-glib-2.0-dev gir1.2-gst-plugins-base-1.0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7812942Z   gir1.2-gstreamer-1.0 gir1.2-gudev-1.0 girepository-tools git-man
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7813763Z   glib-networking glib-networking-common glib-networking-services
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7815003Z   glycin-loaders glycin-thumbnailers gnome-keyring gnome-keyring-pkcs11
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7815826Z   gnome-themes-extra-data gnupg gnupg-l10n gnupg-utils gpg gpg-agent
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7816935Z   gpg-wks-client gpgconf gpgsm gsettings-desktop-schemas gstreamer1.0-gl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7817765Z   gstreamer1.0-plugins-base gstreamer1.0-plugins-extra gstreamer1.0-x
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7818616Z   gtk-update-icon-cache gyp handlebars hicolor-icon-theme ibus-gtk3 ibus-gtk4
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7819640Z   ibverbs-providers imagemagick-7-common iso-codes javascript-common
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7822895Z   krb5-locales krb5-multidev less liba52-0.7.4 libaa1 libaacs0 libabsl20260107
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7830969Z   libada-url0-3 libaio1t64 libalgorithm-diff-perl libalgorithm-diff-xs-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7831894Z   libalgorithm-merge-perl libaom3 libapparmor1 libarchive13t64 libasan8
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7832519Z   libasound2-data libasound2t64 libass9 libassuan9 libasyncns0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7833020Z   libatk-bridge2.0-0t64 libatk1.0-0t64 libatomic1 libatspi2.0-0t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7833587Z   libauthen-sasl-perl libavahi-client3 libavahi-common-data libavahi-common3
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7834185Z   libavc1394-0 libavcodec62 libavfilter11 libavformat62 libavtp0 libavutil60
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7834775Z   libb2-1 libbdplus0 libbinutils libblkid-dev libbluray3
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7835435Z   libboost-iostreams1.90.0 libboost-thread1.90.0 libbrotli-dev libbrotli1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7836084Z   libbs2b0 libc-dev-bin libc6-dev libcaca0 libcairo-gobject2
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7836734Z   libcairo-script-interpreter2 libcairo2 libcap2 libcap2-bin libcares2
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7837404Z   libcbor0.10 libcc1-0 libcdio19t64 libcdparanoia0 libchromaprint1 libcjson1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7838555Z   libclone-perl libcodec2-1.2 libcolord2 libcpuinfo0 libcrypt-dev
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7839259Z   libcrypt-urandom-perl libcryptsetup12 libctf-nobfd0 libctf0 libcups2t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7840227Z   libcurl3t64-gnutls libcurl4t64 libdata-dump-perl libdatrie1 libdav1d7
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7840892Z   libdaxctl1 libdbus-1-3 libdc1394-25 libdca0 libdconf1 libde265-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7841510Z   libdecor-0-0 libdecor-0-plugin-1-gtk libdeflate0 libdevmapper1.02.1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7842180Z   libdisplay-info3 libdjvulibre-text libdjvulibre21 libdnnl3.6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7842814Z   libdouble-conversion3 libdpkg-perl libdrm-amdgpu1 libdrm-common libdrm-dev
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7843522Z   libdrm-intel1 libdrm-nouveau2 libdrm-radeon1 libdrm2 libduktape207 libdv4t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7844170Z   libdvdnav4 libdvdread8t64 libedit2 libegl-dev libegl-mesa0 libegl1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7844781Z   libelf1t64 libencode-locale-perl libepoxy0 liberror-perl libevdev2
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7845439Z   libevent-2.1-7t64 libexpat1 libfaad2 libfakeroot libfarmhash0 libffi-dev
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7846232Z   libffi8 libfftw3-double3 libfftw3-single3 libfido2-1 libfile-basedir-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7846921Z   libfile-desktopentry-perl libfile-fcntllock-perl libfile-listing-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7847603Z   libfile-mimeinfo-perl libflac14 libflite1 libfluidsynth3 libfmt10
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7848505Z   libfont-afm-perl libfontconfig1 libfontenc1 libfreeaptx0 libfreetype6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7849614Z   libfribidi0 libfuse3-4 libgbm-dev libgbm1 libgcc-15-dev libgck-1-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7850378Z   libgck-2-2 libgcr-4-4 libgcr-base-3-1 libgcr-ui-3-1 libgdbm-compat4t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7851095Z   libgdbm6t64 libgdk-pixbuf-2.0-0 libgdk-pixbuf2.0-common libgio-2.0-dev
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7851769Z   libgio-2.0-dev-bin libgirepository-2.0-0 libgl-dev libgl1 libgl1-mesa-dri
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7852437Z   libgles-dev libgles1 libgles2 libglib2.0-0t64 libglib2.0-bin libglib2.0-data
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7853155Z   libglib2.0-dev libglib2.0-dev-bin libglvnd0 libglx-dev libglx-mesa0 libglx0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7853791Z   libglycin-2-0 libgme0 libgmp-dev libgmpxx4ldbl libgnutls-dane0t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7854580Z   libgnutls-openssl27t64 libgnutls28-dev libgnutls30t64 libgomp1 libgpm2
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7855272Z   libgprofng0 libgraphene-1.0-0 libgraphite2-3 libgs-common libgs10
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7855888Z   libgs10-common libgsm1 libgssapi-krb5-2 libgssdp-1.6-0 libgssrpc4t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7856527Z   libgstreamer-gl1.0-0 libgstreamer-plugins-bad1.0-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7857150Z   libgstreamer-plugins-base1.0-0 libgstreamer-plugins-extra1.0-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7857788Z   libgstreamer1.0-0 libgtk-3-0t64 libgtk-3-bin libgtk-3-common libgtk-4-1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7858485Z   libgtk-4-bin libgtk-4-common libgudev-1.0-0 libgudev-1.0-dev libgupnp-1.6-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7859209Z   libgupnp-igd-1.6-0 libharfbuzz-subset0 libharfbuzz0b libheif-plugin-aomdec
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7860155Z   libheif-plugin-aomenc libheif1 libhiredis1.1.0 libhogweed6t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7860789Z   libhtml-form-perl libhtml-format-perl libhtml-parser-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7861378Z   libhtml-tagset-perl libhtml-tree-perl libhttp-cookies-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7861973Z   libhttp-daemon-perl libhttp-date-perl libhttp-message-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7862579Z   libhttp-negotiate-perl libhwasan0 libhwy1t64 libibus-1.0-5 libibverbs1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7863285Z   libice6 libicu78 libidn12 libidn2-0 libidn2-dev libiec61883-0 libijs-0.35
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7863930Z   libimath-3-1-29t64 libinput-bin libinput10 libinstpatch-1.0-2
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7864530Z   libio-html-perl libio-socket-ssl-perl libio-stringy-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7865153Z   libipc-system-simple-perl libiscsi7 libisl23 libitm1 libjack-jackd2-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7865797Z   libjansson4 libjbig0 libjbig2dec0 libjpeg-turbo8 libjpeg8 libjs-events
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7866437Z   libjs-inherits libjs-prettify libjs-regenerate libjs-source-map
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7867197Z   libjs-sprintf-js libjs-util libjson-c5 libjson-glib-1.0-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7867805Z   libjson-glib-1.0-common libjsoncpp26 libjxl0.11 libjxr-tools libjxr0t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7868483Z   libk5crypto3 libkadm5clnt-mit12 libkadm5srv-mit12 libkdb5-10t64 libkeyutils1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7869157Z   libkmod2 libkrb5-3 libkrb5-dev libkrb5support0 libksba8 liblc3-1 liblcms2-2
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7870301Z   libldacbt-enc2 libldap-common libldap-dev libldap2 liblerc4 liblilv-0-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7871414Z   libllhttp9.3 libllvm21 liblocale-gettext-perl liblqr-1-0 liblrdf0 liblsan0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7872282Z   libltc11 libltdl7 liblua5.4-0 liblwp-mediatypes-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7873016Z   liblwp-protocol-https-perl liblzo2-2 libmagickcore-7.q16-10
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7873750Z   libmagickcore-7.q16-10-extra libmagickwand-7.q16-10 libmailtools-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7874572Z   libmbedcrypto16 libmd4c0 libmjpegutils-2.2-0 libmodplug1 libmount-dev
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7875344Z   libmp3lame0 libmpc3 libmpcdec6 libmpeg2-4 libmpeg2encpp-2.2-0 libmpfr6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7876214Z   libmpg123-0t64 libmplex2-2.2-0 libmtdev1t64 libmysofa1 libncurses6 libndctl6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7877075Z   libneon27t64 libnet-dbus-perl libnet-http-perl libnet-smtp-ssl-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7878055Z   libnet-ssleay-perl libnettle8t64 libnfs14 libnghttp2-14 libnghttp2-dev
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7878611Z   libnice10 libnl-3-200 libnl-route-3-200 libnode-dev libnode127 libnorm1t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7879149Z   libnotify-bin libnotify4 libnpth0t64 libnspr4 libnss-systemd libnss3
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7879904Z   libnuma1 libogg0 libonnx1t64 libonnxruntime-providers libonnxruntime1.23
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7880484Z   libopenal-data libopenal1 libopenexr-3-1-30 libopengl-dev libopengl0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7880978Z   libopenh264-8 libopenjp2-7 libopenmpt0t64 libopenni2-0 libopus0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7881544Z   liborc-0.4-0t64 liborc-0.4-dev liborc-0.4-dev-bin libp11-kit-dev libp11-kit0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7882115Z   libpam-cap libpam-gnome-keyring libpam-systemd libpango-1.0-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7882640Z   libpangocairo-1.0-0 libpangoft2-1.0-0 libpaper-utils libpaper2
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7883179Z   libpciaccess-dev libpciaccess0 libpcre2-16-0 libpcre2-32-0 libpcre2-8-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7884325Z   libpcre2-dev libpcre2-posix3 libperl5.40 libpgm-5.3-0t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7884882Z   libpipewire-0.3-0t64 libpipewire-0.3-common libpipewire-0.3-modules
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7885426Z   libpixman-1-0 libpkgconf7 libplacebo360 libpmem1 libpmemobj1 libpng16-16t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7886070Z   libpolkit-agent-1-0 libpolkit-gobject-1-0 libprotobuf32t64 libproxy1v5
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7886600Z   libpsl-dev libpsl5t64 libpthreadpool0 libpulse0 libpython3-stdlib
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7887118Z   libpython3.14-minimal libpython3.14-stdlib libqrencode4 libqt6concurrent6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7887684Z   libqt6core6t64 libqt6dbus6 libqt6gui6 libqt6keychain1 libqt6network6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7888196Z   libqt6opengl6 libqt6openglwidgets6 libqt6printsupport6 libqt6qml6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7888719Z   libqt6qmlmeta6 libqt6qmlmodels6 libqt6qmlworkerscript6 libqt6quick6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7889290Z   libqt6sql6 libqt6svg6 libqt6svgwidgets6 libqt6test6 libqt6waylandclient6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7890091Z   libqt6waylandcompositor6 libqt6waylandcompositoriviapplication6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7890697Z   libqt6waylandcompositorpresentationtime6 libqt6waylandcompositorwlshell6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7891283Z   libqt6waylandcompositorxdgshell6 libqt6widgets6 libqt6wlshellintegration6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7891869Z   libqt6xml6 libquadmath0 librabbitmq4 librados2 libraptor2-0 librav1e0.8
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7892421Z   libraw1394-11 libraw23t64 librbd1 librdmacm1t64 libre2-11 libreadline8t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7892977Z   librhash1 librist4 libroc0.4 librsvg2-2 librsvg2-common librtmp-dev librtmp1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7893523Z   librubberband3 libsamplerate0 libsasl2-2 libsasl2-modules
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7894051Z   libsasl2-modules-db libsbc1 libsdl3-0 libsecret-1-0 libsecret-common
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7894715Z   libselinux-dev libsensors-config libsensors5 libsepol-dev libserd-0-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7895258Z   libsframe3 libsharpyuv0 libshine3 libshout3 libsidplay1v5 libsimdjson29
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7895799Z   libsimdutf31 libslang2 libsm6 libsnapd-glib-2-1 libsnappy1v5 libsndfile1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7896366Z   libsodium23 libsord-0-0 libsoundtouch1 libsoup-3.0-0 libsoup-3.0-common
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7896885Z   libsoxr0 libspa-0.2-modules libspandsp2t64 libspeex1 libspeexdsp1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7897398Z   libsqlite3-0 libsratom-0-0 libsrt1.5-gnutls libsrtp2-1 libssh-4
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7897958Z   libssh2-1-dev libssh2-1t64 libstdc++-15-dev libsvtav1enc2 libswresample6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7898538Z   libswscale9 libsysprof-capture-4-dev libsystemd-shared libtag2 libtasn1-6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7899102Z   libtasn1-6-dev libtasn1-doc libtensorflow-lite2.14.1 libtext-iconv-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7899737Z   libthai-data libthai0 libtheora1 libtheoradec2 libtheoraenc2
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7900274Z   libtie-ixhash-perl libtiff6 libtimedate-perl libtry-tiny-perl libts0t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7900826Z   libtsan2 libtwolame0 libubsan1 libudev-dev libudfread3 libunbound8
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7901350Z   libunibreak6 libunistring5 libunwind8 liburi-perl liburing2 libusb-1.0-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7901902Z   libuv1-dev libuv1t64 libv4l-0t64 libv4lconvert0t64 libva-drm2 libva-x11-2
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7902508Z   libva2 libvdpau1 libvidstab1.1 libvisual-0.4-0 libvo-aacenc0 libvo-amrwbenc0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7903074Z   libvorbis0a libvorbisenc2 libvorbisfile3 libvpl2 libvpx12 libvulkan-dev
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7903621Z   libvulkan1 libwacom-common libwacom9 libwavpack1 libwayland-bin
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7904144Z   libwayland-client0 libwayland-cursor0 libwayland-egl1 libwayland-server0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7904674Z   libwebp7 libwebpdemux2 libwebpmux3 libwebrtc-audio-processing-1-3
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7905191Z   libwildmidi2 libwireplumber-0.5-0 libwmflite-0.2-7 libwww-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7905751Z   libwww-robotrules-perl libx11-6 libx11-data libx11-dev libx11-protocol-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7906316Z   libx11-xcb-dev libx11-xcb1 libx264-165 libx265-215 libxau-dev libxau6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7906938Z   libxaw7 libxcb-cursor0 libxcb-damage0 libxcb-dri3-0 libxcb-glx0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7907456Z   libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-present0 libxcb-randr0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7908026Z   libxcb-render-util0 libxcb-render0 libxcb-render0-dev libxcb-shape0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7908547Z   libxcb-shm0 libxcb-shm0-dev libxcb-sync1 libxcb-util1 libxcb-xfixes0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7909076Z   libxcb-xinput0 libxcb-xkb-dev libxcb-xkb1 libxcb-xtest0 libxcb1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7909763Z   libxcomposite1 libxcursor1 libxdamage1 libxdmcp-dev libxdmcp6 libxext6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7910278Z   libxfixes-dev libxfixes3 libxfont2 libxft2 libxi6 libxinerama1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7910875Z   libxkbcommon-x11-0 libxkbcommon0 libxkbfile1 libxml-parser-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7911386Z   libxml-twig-perl libxml-xpathengine-perl libxml2-16 libxmu6 libxmuu1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7911959Z   libxnnpack0.20241108 libxpm4 libxrandr2 libxrender-dev libxrender1 libxres1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7912505Z   libxshmfence1 libxslt1.1 libxss1 libxt6t64 libxtst6 libxv1 libxvidcore4
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7913034Z   libxxf86dga1 libxxf86vm1 libyajl2 libzbar0t64 libzimg2 libzix-0-0 libzmq5
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7913612Z   libzstd-dev libzvbi-common libzvbi0t64 libzxing3 linux-libc-dev
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7914128Z   linux-sysctl-defaults lto-disabled-list luit make manpages manpages-dev
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7914657Z   media-types mesa-libgallium mesa-vulkan-drivers native-architecture
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7915234Z   ncurses-term netbase nettle-dev node-abbrev node-acorn node-agent-base
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7915756Z   node-ajv node-ajv-keywords node-ampproject-remapping node-ansi-escapes
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7916353Z   node-ansi-regex node-ansi-styles node-anymatch node-aproba node-archy
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7916886Z   node-are-we-there-yet node-argparse node-arrify node-assert node-async
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7917533Z   node-async-each node-auto-bind node-babel-helper-define-polyfill-provider
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7918093Z   node-babel-plugin-add-module-exports node-babel-plugin-lodash
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7918639Z   node-babel-plugin-polyfill-corejs2 node-babel-plugin-polyfill-corejs3
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7919281Z   node-babel-plugin-polyfill-regenerator node-babel7 node-babel7-runtime
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7919986Z   node-balanced-match node-base node-base64-js node-binary-extensions
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7920510Z   node-brace-expansion node-braces node-browserslist node-builtins
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7921048Z   node-cacache node-cache-base node-camelcase node-caniuse-lite node-chalk
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7921567Z   node-chokidar node-chownr node-chrome-trace-event node-ci-info
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7922112Z   node-cjs-module-lexer node-cli-boxes node-cli-cursor node-cli-table
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7922597Z   node-cli-truncate node-cliui node-clone node-clone-deep
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7923075Z   node-collection-visit node-color-convert node-color-name node-colors
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7923658Z   node-columnify node-commander node-commondir node-component-emitter
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7924191Z   node-concat-stream node-console-control-strings node-convert-source-map
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7924788Z   node-copy-concurrently node-core-js node-core-js-compat node-core-js-pure
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7925315Z   node-core-util-is node-corepack node-coveralls node-css-loader
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7925767Z   node-css-selector-tokenizer node-data-uri-to-buffer
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7926260Z   node-debbundle-es-to-primitive node-debug node-decamelize
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7926762Z   node-decompress-response node-deep-equal node-deep-is node-defaults
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7927312Z   node-define-properties node-define-property node-defined node-del
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7927896Z   node-delegates node-depd node-diff node-doctrine node-electron-to-chromium
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7928440Z   node-encoding node-enhanced-resolve node-envinfo node-err-code node-errno
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7929017Z   node-error-ex node-es-abstract node-es-module-lexer node-es6-error
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7929861Z   node-escape-string-regexp node-escodegen node-eslint-scope node-eslint-utils
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7930553Z   node-eslint-visitor-keys node-espree node-esprima node-esquery
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7931067Z   node-esrecurse node-estraverse node-esutils node-events node-execa
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7931590Z   node-fancy-log node-fast-deep-equal node-fast-levenshtein node-fetch
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7932182Z   node-file-entry-cache node-fill-range node-find-cache-dir node-find-up
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7932768Z   node-flat-cache node-flatted node-for-in node-for-own node-foreground-child
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7933344Z   node-fs-readdir-recursive node-fs-write-stream-atomic node-function-bind
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7933912Z   node-functional-red-black-tree node-gauge node-get-caller-file
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7934433Z   node-get-stream node-get-value node-glob node-glob-parent node-globals
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7934986Z   node-globby node-got node-graceful-fs node-growl node-gyp node-has-flag
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7935541Z   node-has-unicode node-has-value node-has-values node-hosted-git-info
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7936079Z   node-http-proxy-agent node-https-proxy-agent node-iconv-lite node-icss-utils
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7936717Z   node-ieee754 node-iferr node-ignore node-imurmurhash node-indent-string
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7937265Z   node-inherits node-ini node-interpret node-ip node-ip-regex node-is-arrayish
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7937843Z   node-is-binary-path node-is-buffer node-is-descriptor node-is-extendable
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7938393Z   node-is-extglob node-is-glob node-is-number node-is-path-cwd
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7938907Z   node-is-path-inside node-is-plain-obj node-is-plain-object node-is-primitive
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7939620Z   node-is-stream node-is-windows node-isarray node-isexe node-isobject
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7940265Z   node-istanbul node-jest-debbundle node-jest-worker node-js-tokens
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7940936Z   node-js-yaml node-jsesc node-json-buffer node-json-parse-better-errors
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7941500Z   node-json-schema node-json-schema-traverse node-json-stable-stringify
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7942019Z   node-json5 node-jsonify node-jsonparse node-kind-of node-lcov-parse
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7942567Z   node-levn node-llhttp node-loader-runner node-locate-path node-lodash
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7943092Z   node-lodash-packages node-log-driver node-long node-lowercase-keys
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7943607Z   node-lru-cache node-make-dir node-map-visit node-memfs node-memory-fs
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7944180Z   node-merge-stream node-micromatch node-mime node-mime-types node-mimic-fn
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7944701Z   node-mimic-response node-minimatch node-minimist node-minipass
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7945266Z   node-mixin-deep node-mkdirp node-move-concurrently node-ms node-mute-stream
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7945843Z   node-n3 node-negotiator node-neo-async node-nopt node-normalize-package-data
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7946426Z   node-normalize-path node-npm-bundled node-npm-package-arg node-npm-run-path
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7947005Z   node-npmlog node-object-assign node-object-inspect node-object-visit
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7947513Z   node-once node-opener node-optimist node-optionator node-osenv
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7948066Z   node-p-cancelable node-p-limit node-p-locate node-p-map node-parse-json
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7948614Z   node-pascalcase node-path-dirname node-path-exists node-path-is-absolute
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7949185Z   node-path-is-inside node-path-scurry node-path-type node-picocolors
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7949988Z   node-pify node-pkg-dir node-postcss node-postcss-modules-extract-imports
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7950544Z   node-postcss-modules-values node-postcss-value-parser node-prelude-ls
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7951094Z   node-process-nextick-args node-progress node-promise-inflight
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7951614Z   node-promise-retry node-promzard node-prr node-punycode node-quick-lru
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7952140Z   node-randombytes node-re2 node-read node-read-package-json node-read-pkg
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7952725Z   node-readable-stream node-readdirp node-rechoir node-regenerate
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7953297Z   node-regenerate-unicode-properties node-regenerator-runtime
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7953877Z   node-regenerator-transform node-regexpp node-regexpu-core node-regjsgen
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7954388Z   node-regjsparser node-repeat-string node-require-directory
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7954905Z   node-require-from-string node-resolve node-resolve-cwd node-resolve-from
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7955474Z   node-restore-cursor node-resumer node-retry node-rimraf node-run-queue
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7956004Z   node-safe-buffer node-schema-utils node-semver node-serialize-javascript
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7956606Z   node-set-blocking node-set-immediate-shim node-set-value
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7957123Z   node-shebang-command node-shebang-regex node-shell-quote node-signal-exit
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7957659Z   node-slash node-slice-ansi node-source-list-map node-source-map
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7958197Z   node-source-map-support node-spdx-correct node-spdx-exceptions
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7958734Z   node-spdx-expression-parse node-spdx-license-ids node-sprintf-js node-ssri
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7959302Z   node-stack-utils node-string-decoder node-string-width node-strip-ansi
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7960061Z   node-strip-bom node-strip-eof node-strip-json-comments node-supports-color
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7960628Z   node-tap node-tap-mocha-reporter node-tap-parser node-tapable node-tape
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7961176Z   node-tar node-terser node-text-table node-through node-time-stamp
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7961695Z   node-to-fast-properties node-to-regex-range node-tslib node-type-check
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7962271Z   node-typedarray node-undici node-unicode-canonical-property-names-ecmascript
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7962795Z   node-unicode-match-property-ecmascript
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7963227Z   node-unicode-match-property-value-ecmascript
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7963784Z   node-unicode-property-aliases-ecmascript node-union-value
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7964331Z   node-unique-filename node-unset-value node-util node-util-deprecate
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7964809Z   node-uuid node-v8-compile-cache node-v8flags
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7965313Z   node-validate-npm-package-license node-validate-npm-package-name
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7965850Z   node-watchpack node-wcwidth.js node-webassemblyjs node-webpack-sources
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7966405Z   node-which node-wide-align node-widest-line node-wordwrap node-wrap-ansi
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7966946Z   node-wrappy node-write node-write-file-atomic node-ws node-xtend node-y18n
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7967456Z   node-yallist node-yaml node-yargs node-yargs-parser nodejs-doc
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7968092Z   ocl-icd-libopencl1 openssh-client openssl p11-kit p11-kit-modules patch perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7968643Z   perl-modules-5.40 perl-openssl-defaults pinentry-gnome3 pipewire
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7969181Z   pipewire-bin pipewire-pulse pkgconf pkgconf-bin polkitd poppler-data
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7970005Z   publicsuffix python3-minimal python3-packaging python3.14 python3.14-minimal
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7970509Z   qemu-block-extra qmake6 qmake6-bin qml6-module-qtqml
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7971083Z   qml6-module-qtqml-models qml6-module-qtqml-workerscript qml6-module-qtquick
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7971686Z   qml6-module-qtwayland-client-texturesharing qml6-module-qtwayland-compositor
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7972294Z   qt6-gtk-platformtheme qt6-qpa-plugins qt6-svg-plugins qt6-translations-l10n
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7972912Z   qt6-wayland readline-common rpcsvc-proto rtkit sgml-base shared-mime-info
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7973459Z   systemd systemd-cryptsetup systemd-resolved systemd-sysv systemd-timesyncd
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7974067Z   terser timgm6mb-soundfont tzdata ubuntu-helper-virt-hwe ubuntu-virt
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7974589Z   user-session-migration uuid-dev wabt webpack wireplumber x11-common
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7975104Z   x11-utils x11-xkb-utils x11-xserver-utils x11proto-dev xdg-user-dirs
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7975640Z   xdg-utils xfonts-base xfonts-encodings xfonts-utils xkb-data xml-core
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7976122Z   xorg-sgml-doctools xserver-common xtrans-dev xz-utils
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7976780Z Suggested packages:
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7977205Z   cron quota ecryptfs-utils adwaita-icon-theme-legacy binutils-doc gprofng-gui
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7977751Z   binutils-gold bzip2-doc distcc | icecc cmake-doc cmake-format
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7978264Z   elpa-cmake-mode doc-base cpp-doc gcc-15-locales cpp-15-doc tor
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7978796Z   debian-keyring debian-tag2upload-keyring node-babel-eslint node-esprima-fb
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7979379Z   node-inquirer fonts-noto fonts-freefont-otf | fonts-freefont-ttf
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7980115Z   fonts-texgyre g++-multilib g++-15-multilib gcc-15-doc gcc-multilib autoconf
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7980650Z   automake libtool flex bison gdb gcc-doc gcc-15-multilib gdb-x86-64-linux-gnu
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7981282Z   texlive-binaries gettext-base git-doc git-email git-gui gitk gitweb git-cvs
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7981843Z   git-svn libheif-plugin-x265 | libheif-plugin-kvazaar gpg-wks-server
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7982417Z   parcimonie xloadimage scdaemon tpm2daemon frei0r-plugins gvfs isoquery
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7982952Z   apache2 | lighttpd | httpd krb5-doc lrzip alsa-utils libasound2-plugins
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7983479Z   libdigest-hmac-perl libgssapi-perl libcuda1 libnvcuvid1 libnvidia-encode1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7984070Z   libbluray-bdj libc-devtools glibc-doc libglu1-mesa | libglu1 libglut3.12
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7984602Z   colord cups-common libcurl4-doc libidn-dev bzr libdv-bin oss-compat
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7985195Z   libdvdcss2 libfftw3-bin libfftw3-dev fuse3 gdbm-l10n libglib2.0-doc
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7985728Z   libgdk-pixbuf2.0-bin libxml2-utils low-memory-monitor gmp-doc libgmp10-doc
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7986236Z   libmpfr-dev dns-root-data gnutls-bin gnutls-doc gpm krb5-user
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7986748Z   libvisual-0.4-plugins gstreamer1.0-tools gstreamer1.0-doc
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7987349Z   libheif-plugin-libde265 libheif-plugin-x265 libheif-plugin-ffmpegdec
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7987891Z   libheif-plugin-jpegdec libheif-plugin-jpegenc libheif-plugin-j2kdec
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7988419Z   libheif-plugin-j2kenc libheif-plugin-kvazaar libheif-plugin-rav1e
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7988952Z   libheif-plugin-svtenc libio-compress-brotli-perl jackd2 libjs-angularjs
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7989660Z   liblcms2-utils liblrdf0-dev libcrypt-ssleay-perl inkscape libnghttp2-doc
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7990236Z   notification-daemon libtss2-esys-3.0.2-0t64 libtss2-mu-4.0.1-0t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7990759Z   libtss2-rc0t64 systemd-userdbd libportaudio2 opus-tools liborc-0.4-doc
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7991305Z   p11-kit-doc pciutils libpipewire-0.3-modules-extra pulseaudio
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7991808Z   qt6-qmltooling-plugins raptor2-utils libraw1394-doc librsvg2-bin
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7992332Z   libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7992866Z   libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7993389Z   libayatana-appindicator3-1 | libappindicator3-1 libsndio7.0 lm-sensors serdi
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7994033Z   sidplay-base snapd sordi speex libssl-doc libstdc++-15-doc libbpf1 libdw1t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7994595Z   libpwquality1 libsub-name-perl libbusiness-isbn-perl libmime-base32-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7995132Z   libregexp-ipv6-perl libuv1-doc libwacom-bin libwayland-doc
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7995639Z   libwildmidi-config libauthen-ntlm-perl libx11-doc libxcb-doc
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7996135Z   libunicode-map8-perl libunicode-string-perl xml-twig-tools make-doc
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7996722Z   man-browser node-babel-plugin-polyfill-es-shims node-babel7-debug livescript
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7997300Z   chai node-jest-diff opencl-icd keychain libpam-ssh monkeysphere ssh-askpass
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7997861Z   ed diffutils-doc perl-doc libterm-readline-gnu-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7998380Z   | libterm-readline-perl-perl libtap-harness-archive-perl debhelper
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7998883Z   pinentry-doc libspa-0.2-bluetooth pulseaudio-utils poppler-utils
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.7999595Z   fonts-japanese-mincho | fonts-ipafont-mincho fonts-japanese-gothic
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.8000145Z   | fonts-ipafont-gothic fonts-arphic-ukai fonts-arphic-uming fonts-nanum
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.8000675Z   python3-doc python3-tk python3-venv python3.14-venv python3.14-doc
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.8001241Z   binfmt-support readline-doc sgml-base-doc systemd-container systemd-homed
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.8001777Z   systemd-boot systemd-repart libtss2-tcti-device0 fluid-soundfont-gm
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.8002405Z   libspa-0.2-libcamera wireplumber-doc mesa-utils nickle cairo-5c
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:17.8002813Z   xorg-docs-core
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5953804Z The following NEW packages will be installed:
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5955087Z   adduser adwaita-icon-theme alacritty alsa-topology-conf alsa-ucm-conf
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5955886Z   at-spi2-common at-spi2-core binutils binutils-common
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5956769Z   binutils-x86-64-linux-gnu bubblewrap build-essential bzip2 ca-certificates
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5957714Z   ccache cmake cmake-data comerr-dev cpp cpp-15 cpp-15-x86-64-linux-gnu
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5958589Z   cpp-x86-64-linux-gnu dbus dbus-bin dbus-daemon dbus-session-bus-common
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5959765Z   dbus-system-bus-common dbus-user-session dconf-gsettings-backend
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5962174Z   dconf-service dirmngr dmsetup dpkg-dev eslint fakeroot fontconfig
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5963212Z   fontconfig-config fonts-dejavu-core fonts-dejavu-mono fonts-droid-fallback
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5964176Z   fonts-noto-mono fonts-urw-base35 g++ g++-15 g++-15-x86-64-linux-gnu
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5965039Z   g++-x86-64-linux-gnu gcc gcc-15 gcc-15-base gcc-15-x86-64-linux-gnu
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5965847Z   gcc-x86-64-linux-gnu gcr gcr4 ghostscript gir1.2-glib-2.0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5966573Z   gir1.2-glib-2.0-dev gir1.2-gst-plugins-base-1.0 gir1.2-gstreamer-1.0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5968201Z   gir1.2-gudev-1.0 girepository-tools git git-man glib-networking
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5968985Z   glib-networking-common glib-networking-services glycin-loaders
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5970029Z   glycin-thumbnailers gnome-keyring gnome-keyring-pkcs11
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5970937Z   gnome-themes-extra-data gnupg gnupg-l10n gnupg-utils gpg gpg-agent
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5971784Z   gpg-wks-client gpgconf gpgsm gsettings-desktop-schemas gstreamer1.0-gl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5972644Z   gstreamer1.0-libav gstreamer1.0-pipewire gstreamer1.0-plugins-bad
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5973372Z   gstreamer1.0-plugins-base gstreamer1.0-plugins-extra
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5974220Z   gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-x
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5975137Z   gtk-update-icon-cache gyp handlebars hicolor-icon-theme ibus-gtk3 ibus-gtk4
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5976048Z   ibverbs-providers imagemagick-7-common iso-codes javascript-common
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5976934Z   krb5-locales krb5-multidev less liba52-0.7.4 libaa1 libaacs0 libabsl20260107
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5977841Z   libada-url0-3 libaio1t64 libalgorithm-diff-perl libalgorithm-diff-xs-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5978845Z   libalgorithm-merge-perl libaom3 libapparmor1 libarchive13t64 libasan8
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5979806Z   libasound2-data libasound2t64 libass9 libassuan9 libasyncns0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5980607Z   libatk-bridge2.0-0t64 libatk1.0-0t64 libatomic1 libatspi2.0-0t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5981460Z   libauthen-sasl-perl libavahi-client3 libavahi-common-data libavahi-common3
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5982508Z   libavc1394-0 libavcodec-dev libavcodec62 libavfilter-dev libavfilter11
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5983390Z   libavformat-dev libavformat62 libavtp0 libavutil-dev libavutil60 libb2-1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5984238Z   libbdplus0 libbinutils libblkid-dev libbluray3 libboost-iostreams1.90.0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5985121Z   libboost-thread1.90.0 libbrotli-dev libbrotli1 libbs2b0 libc-dev-bin
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5985915Z   libc6-dev libcaca0 libcairo-gobject2 libcairo-script-interpreter2 libcairo2
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5986754Z   libcap2 libcap2-bin libcares2 libcbor0.10 libcc1-0 libcdio19t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5987546Z   libcdparanoia0 libchromaprint1 libcjson1 libclone-perl libcodec2-1.2
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5988677Z   libcolord2 libcpuinfo0 libcrypt-dev libcrypt-urandom-perl libcryptsetup12
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5989863Z   libctf-nobfd0 libctf0 libcups2t64 libcurl3t64-gnutls libcurl4-openssl-dev
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5990750Z   libcurl4t64 libdata-dump-perl libdatrie1 libdav1d7 libdaxctl1 libdbus-1-3
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5991580Z   libdc1394-25 libdca0 libdconf1 libde265-0 libdecor-0-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5992354Z   libdecor-0-plugin-1-gtk libdeflate0 libdevmapper1.02.1 libdisplay-info3
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5993199Z   libdjvulibre-text libdjvulibre21 libdnnl3.6 libdouble-conversion3
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5994070Z   libdpkg-perl libdrm-amdgpu1 libdrm-common libdrm-dev libdrm-intel1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5994911Z   libdrm-nouveau2 libdrm-radeon1 libdrm2 libduktape207 libdv4t64 libdvdnav4
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5995885Z   libdvdread8t64 libedit2 libegl-dev libegl-mesa0 libegl1 libelf1t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5996776Z   libencode-locale-perl libepoxy0 liberror-perl libevdev2 libevent-2.1-7t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5997668Z   libexpat1 libfaad2 libfakeroot libfarmhash0 libffi-dev libffi8
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5998584Z   libfftw3-double3 libfftw3-single3 libfido2-1 libfile-basedir-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.5999652Z   libfile-desktopentry-perl libfile-fcntllock-perl libfile-listing-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6000602Z   libfile-mimeinfo-perl libflac14 libflite1 libfluidsynth3 libfmt10
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6001537Z   libfont-afm-perl libfontconfig1 libfontenc1 libfreeaptx0 libfreetype6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6002431Z   libfribidi0 libfuse3-4 libgbm-dev libgbm1 libgcc-15-dev libgck-1-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6003334Z   libgck-2-2 libgcr-4-4 libgcr-base-3-1 libgcr-ui-3-1 libgdbm-compat4t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6004183Z   libgdbm6t64 libgdk-pixbuf-2.0-0 libgdk-pixbuf2.0-common libgio-2.0-dev
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6005337Z   libgio-2.0-dev-bin libgirepository-2.0-0 libgl-dev libgl1 libgl1-mesa-dri
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6006335Z   libgles-dev libgles1 libgles2 libglib2.0-0t64 libglib2.0-bin libglib2.0-data
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6007262Z   libglib2.0-dev libglib2.0-dev-bin libglvnd0 libglx-dev libglx-mesa0 libglx0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6008206Z   libglycin-2-0 libgme0 libgmp-dev libgmpxx4ldbl libgnutls-dane0t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6009131Z   libgnutls-openssl27t64 libgnutls28-dev libgnutls30t64 libgomp1 libgpm2
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6010328Z   libgprofng0 libgraphene-1.0-0 libgraphite2-3 libgs-common libgs10
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6011308Z   libgs10-common libgsm1 libgssapi-krb5-2 libgssdp-1.6-0 libgssrpc4t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6012091Z   libgstreamer-gl1.0-0 libgstreamer-plugins-bad1.0-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6012913Z   libgstreamer-plugins-base1.0-0 libgstreamer-plugins-base1.0-dev
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6013813Z   libgstreamer-plugins-extra1.0-0 libgstreamer1.0-0 libgstreamer1.0-dev
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6014618Z   libgtk-3-0t64 libgtk-3-bin libgtk-3-common libgtk-4-1 libgtk-4-bin
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6015379Z   libgtk-4-common libgudev-1.0-0 libgudev-1.0-dev libgupnp-1.6-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6016126Z   libgupnp-igd-1.6-0 libharfbuzz-subset0 libharfbuzz0b libheif-plugin-aomdec
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6017052Z   libheif-plugin-aomenc libheif1 libhiredis1.1.0 libhogweed6t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6017882Z   libhtml-form-perl libhtml-format-perl libhtml-parser-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6018570Z   libhtml-tagset-perl libhtml-tree-perl libhttp-cookies-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6019276Z   libhttp-daemon-perl libhttp-date-perl libhttp-message-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6020133Z   libhttp-negotiate-perl libhwasan0 libhwy1t64 libibus-1.0-5 libibverbs1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6020868Z   libice6 libicu78 libidn12 libidn2-0 libidn2-dev libiec61883-0 libijs-0.35
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6021732Z   libimath-3-1-29t64 libinput-bin libinput10 libinstpatch-1.0-2
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6022566Z   libio-html-perl libio-socket-ssl-perl libio-stringy-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6023474Z   libipc-system-simple-perl libiscsi7 libisl23 libitm1 libjack-jackd2-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6024407Z   libjansson4 libjbig0 libjbig2dec0 libjpeg-turbo8 libjpeg8 libjs-events
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6025474Z   libjs-inherits libjs-prettify libjs-regenerate libjs-source-map
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6026406Z   libjs-sprintf-js libjs-util libjson-c5 libjson-glib-1.0-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6027255Z   libjson-glib-1.0-common libjsoncpp26 libjxl0.11 libjxr-tools libjxr0t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6028236Z   libk5crypto3 libkadm5clnt-mit12 libkadm5srv-mit12 libkdb5-10t64 libkeyutils1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6029243Z   libkmod2 libkrb5-3 libkrb5-dev libkrb5support0 libksba8 liblc3-1 liblcms2-2
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6030442Z   libldacbt-enc2 libldap-common libldap-dev libldap2 liblerc4 liblilv-0-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6031499Z   libllhttp9.3 libllvm21 liblocale-gettext-perl liblqr-1-0 liblrdf0 liblsan0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6032348Z   libltc11 libltdl7 liblua5.4-0 liblwp-mediatypes-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6033151Z   liblwp-protocol-https-perl liblzo2-2 libmagickcore-7.q16-10
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6034048Z   libmagickcore-7.q16-10-extra libmagickwand-7.q16-10 libmailtools-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6034966Z   libmbedcrypto16 libmd4c0 libmjpegutils-2.2-0 libmodplug1 libmount-dev
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6035974Z   libmp3lame0 libmpc3 libmpcdec6 libmpeg2-4 libmpeg2encpp-2.2-0 libmpfr6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6036967Z   libmpg123-0t64 libmplex2-2.2-0 libmtdev1t64 libmysofa1 libncurses6 libndctl6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6037935Z   libneon27t64 libnet-dbus-perl libnet-http-perl libnet-smtp-ssl-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6038873Z   libnet-ssleay-perl libnettle8t64 libnfs14 libnghttp2-14 libnghttp2-dev
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6040009Z   libnice10 libnl-3-200 libnl-route-3-200 libnode-dev libnode127 libnorm1t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6041052Z   libnotify-bin libnotify4 libnpth0t64 libnspr4 libnss-systemd libnss3
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6041993Z   libnuma1 libogg0 libonnx1t64 libonnxruntime-providers libonnxruntime1.23
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6042913Z   libopenal-data libopenal1 libopenexr-3-1-30 libopengl-dev libopengl0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6044048Z   libopenh264-8 libopenjp2-7 libopenmpt0t64 libopenni2-0 libopus0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6045054Z   liborc-0.4-0t64 liborc-0.4-dev liborc-0.4-dev-bin libp11-kit-dev libp11-kit0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6046019Z   libpam-cap libpam-gnome-keyring libpam-systemd libpango-1.0-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6046866Z   libpangocairo-1.0-0 libpangoft2-1.0-0 libpaper-utils libpaper2
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6047745Z   libpciaccess-dev libpciaccess0 libpcre2-16-0 libpcre2-32-0 libpcre2-dev
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6048719Z   libpcre2-posix3 libperl5.40 libpgm-5.3-0t64 libpipewire-0.3-0t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6049791Z   libpipewire-0.3-common libpipewire-0.3-modules libpixman-1-0 libpkgconf7
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6051479Z   libplacebo360 libpmem1 libpmemobj1 libpng16-16t64 libpolkit-agent-1-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6052505Z   libpolkit-gobject-1-0 libprotobuf32t64 libproxy1v5 libpsl-dev libpsl5t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6053415Z   libpthreadpool0 libpulse0 libpython3-stdlib libpython3.14-minimal
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6054362Z   libpython3.14-stdlib libqrencode4 libqt6concurrent6 libqt6core6t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6055273Z   libqt6dbus6 libqt6gui6 libqt6keychain1 libqt6network6 libqt6opengl6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6056191Z   libqt6openglwidgets6 libqt6printsupport6 libqt6qml6 libqt6qmlmeta6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6057096Z   libqt6qmlmodels6 libqt6qmlworkerscript6 libqt6quick6 libqt6sql6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6057934Z   libqt6sql6-sqlite libqt6svg6 libqt6svgwidgets6 libqt6test6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6058700Z   libqt6waylandclient6 libqt6waylandcompositor6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6059578Z   libqt6waylandcompositoriviapplication6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6060422Z   libqt6waylandcompositorpresentationtime6 libqt6waylandcompositorwlshell6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6061479Z   libqt6waylandcompositorxdgshell6 libqt6widgets6 libqt6wlshellintegration6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6062472Z   libqt6xml6 libquadmath0 librabbitmq4 librados2 libraptor2-0 librav1e0.8
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6063443Z   libraw1394-11 libraw23t64 librbd1 librdmacm1t64 libre2-11 libreadline8t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6064492Z   librhash1 librist4 libroc0.4 librsvg2-2 librsvg2-common librtmp-dev librtmp1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6065372Z   librubberband3 libsamplerate0 libsasl2-2 libsasl2-modules
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6066465Z   libsasl2-modules-db libsbc1 libsdl3-0 libsecret-1-0 libsecret-common
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6067442Z   libselinux-dev libsensors-config libsensors5 libsepol-dev libserd-0-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6068415Z   libsframe3 libsharpyuv0 libshine3 libshout3 libsidplay1v5 libsimdjson29
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6069411Z   libsimdutf31 libslang2 libsm6 libsnapd-glib-2-1 libsnappy1v5 libsndfile1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6070554Z   libsodium23 libsord-0-0 libsoundtouch1 libsoup-3.0-0 libsoup-3.0-common
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6071515Z   libsoxr0 libspa-0.2-modules libspandsp2t64 libspeex1 libspeexdsp1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6072374Z   libsqlite3-0 libsratom-0-0 libsrt1.5-gnutls libsrtp2-1 libssh-4
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6073253Z   libssh2-1-dev libssh2-1t64 libssl-dev libstdc++-15-dev libsvtav1enc2
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6074226Z   libswresample-dev libswresample6 libswscale-dev libswscale9
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6075137Z   libsysprof-capture-4-dev libsystemd-shared libtag2 libtasn1-6 libtasn1-6-dev
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6076185Z   libtasn1-doc libtensorflow-lite2.14.1 libtext-iconv-perl libthai-data
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6077155Z   libthai0 libtheora1 libtheoradec2 libtheoraenc2 libtie-ixhash-perl libtiff6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6078165Z   libtimedate-perl libtry-tiny-perl libts0t64 libtsan2 libtwolame0 libubsan1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6079307Z   libudev-dev libudfread3 libunbound8 libunibreak6 libunistring5 libunwind8
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6080396Z   liburi-perl liburing2 libusb-1.0-0 libuv1-dev libuv1t64 libv4l-0t64
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6081237Z   libv4lconvert0t64 libva-drm2 libva-x11-2 libva2 libvdpau1 libvidstab1.1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6082110Z   libvisual-0.4-0 libvo-aacenc0 libvo-amrwbenc0 libvorbis0a libvorbisenc2
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6082892Z   libvorbisfile3 libvpl2 libvpx12 libvulkan-dev libvulkan1 libwacom-common
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6083838Z   libwacom9 libwavpack1 libwayland-bin libwayland-client0 libwayland-cursor0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6084519Z   libwayland-dev libwayland-egl1 libwayland-server0 libwebp7 libwebpdemux2
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6085274Z   libwebpmux3 libwebrtc-audio-processing-1-3 libwildmidi2 libwireplumber-0.5-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6086114Z   libwmflite-0.2-7 libwww-perl libwww-robotrules-perl libx11-6 libx11-data
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6086908Z   libx11-dev libx11-protocol-perl libx11-xcb-dev libx11-xcb1 libx264-165
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6087807Z   libx265-215 libxau-dev libxau6 libxaw7 libxcb-cursor0 libxcb-damage0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6088576Z   libxcb-damage0-dev libxcb-dri3-0 libxcb-glx0 libxcb-icccm4 libxcb-image0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6089261Z   libxcb-image0-dev libxcb-keysyms1 libxcb-keysyms1-dev libxcb-present0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6090030Z   libxcb-randr0 libxcb-randr0-dev libxcb-render-util0 libxcb-render0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6090643Z   libxcb-render0-dev libxcb-shape0 libxcb-shape0-dev libxcb-shm0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6091298Z   libxcb-shm0-dev libxcb-sync1 libxcb-util-dev libxcb-util1 libxcb-xfixes0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6091938Z   libxcb-xfixes0-dev libxcb-xinput-dev libxcb-xinput0 libxcb-xkb-dev
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6092556Z   libxcb-xkb1 libxcb-xtest0 libxcb-xtest0-dev libxcb1 libxcb1-dev
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6093253Z   libxcomposite1 libxcursor-dev libxcursor1 libxdamage1 libxdmcp-dev libxdmcp6
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6093962Z   libxext6 libxfixes-dev libxfixes3 libxfont2 libxft2 libxi6 libxinerama1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6094688Z   libxkbcommon-dev libxkbcommon-x11-0 libxkbcommon-x11-dev libxkbcommon0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6095415Z   libxkbfile1 libxml-parser-perl libxml-twig-perl libxml-xpathengine-perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6096134Z   libxml2-16 libxmu6 libxmuu1 libxnnpack0.20241108 libxpm4 libxrandr2
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6096845Z   libxrender-dev libxrender1 libxres1 libxshmfence1 libxslt1.1 libxss1
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6097582Z   libxt6t64 libxtst6 libxv1 libxvidcore4 libxxf86dga1 libxxf86vm1 libyajl2
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6098327Z   libzbar0t64 libzimg2 libzix-0-0 libzmq5 libzstd-dev libzvbi-common
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6099038Z   libzvbi0t64 libzxing3 linux-libc-dev linux-sysctl-defaults lto-disabled-list
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6100004Z   luit make manpages manpages-dev media-types mesa-libgallium
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6100685Z   mesa-vulkan-drivers native-architecture ncurses-term netbase nettle-dev
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6101562Z   ninja-build node-abbrev node-acorn node-agent-base node-ajv
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6102199Z   node-ajv-keywords node-ampproject-remapping node-ansi-escapes
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6102718Z   node-ansi-regex node-ansi-styles node-anymatch node-aproba node-archy
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6103243Z   node-are-we-there-yet node-argparse node-arrify node-assert node-async
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6103870Z   node-async-each node-auto-bind node-babel-helper-define-polyfill-provider
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6104446Z   node-babel-plugin-add-module-exports node-babel-plugin-lodash
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6105007Z   node-babel-plugin-polyfill-corejs2 node-babel-plugin-polyfill-corejs3
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6105563Z   node-babel-plugin-polyfill-regenerator node-babel7 node-babel7-runtime
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6106090Z   node-balanced-match node-base node-base64-js node-binary-extensions
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6106637Z   node-brace-expansion node-braces node-browserslist node-builtins
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6107192Z   node-cacache node-cache-base node-camelcase node-caniuse-lite node-chalk
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6107773Z   node-chokidar node-chownr node-chrome-trace-event node-ci-info
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6108281Z   node-cjs-module-lexer node-cli-boxes node-cli-cursor node-cli-table
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6108753Z   node-cli-truncate node-cliui node-clone node-clone-deep
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6109646Z   node-collection-visit node-color-convert node-color-name node-colors
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6110254Z   node-columnify node-commander node-commondir node-component-emitter
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6110803Z   node-concat-stream node-console-control-strings node-convert-source-map
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6111532Z   node-copy-concurrently node-core-js node-core-js-compat node-core-js-pure
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6112048Z   node-core-util-is node-corepack node-coveralls node-css-loader
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6112579Z   node-css-selector-tokenizer node-data-uri-to-buffer
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6113044Z   node-debbundle-es-to-primitive node-debug node-decamelize
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6113552Z   node-decompress-response node-deep-equal node-deep-is node-defaults
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6114084Z   node-define-properties node-define-property node-defined node-del
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6114622Z   node-delegates node-depd node-diff node-doctrine node-electron-to-chromium
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6115268Z   node-encoding node-enhanced-resolve node-envinfo node-err-code node-errno
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6115799Z   node-error-ex node-es-abstract node-es-module-lexer node-es6-error
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6116354Z   node-escape-string-regexp node-escodegen node-eslint-scope node-eslint-utils
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6116914Z   node-eslint-visitor-keys node-espree node-esprima node-esquery
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6117409Z   node-esrecurse node-estraverse node-esutils node-events node-execa
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6117958Z   node-fancy-log node-fast-deep-equal node-fast-levenshtein node-fetch
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6118486Z   node-file-entry-cache node-fill-range node-find-cache-dir node-find-up
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6119026Z   node-flat-cache node-flatted node-for-in node-for-own node-foreground-child
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6119774Z   node-fs-readdir-recursive node-fs-write-stream-atomic node-function-bind
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6120321Z   node-functional-red-black-tree node-gauge node-get-caller-file
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6120879Z   node-get-stream node-get-value node-glob node-glob-parent node-globals
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6121403Z   node-globby node-got node-graceful-fs node-growl node-gyp node-has-flag
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6121913Z   node-has-unicode node-has-value node-has-values node-hosted-git-info
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6122685Z   node-http-proxy-agent node-https-proxy-agent node-iconv-lite node-icss-utils
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6123525Z   node-ieee754 node-iferr node-ignore node-imurmurhash node-indent-string
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6124530Z   node-inherits node-ini node-interpret node-ip node-ip-regex node-is-arrayish
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6125379Z   node-is-binary-path node-is-buffer node-is-descriptor node-is-extendable
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6126152Z   node-is-extglob node-is-glob node-is-number node-is-path-cwd
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6127059Z   node-is-path-inside node-is-plain-obj node-is-plain-object node-is-primitive
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6127998Z   node-is-stream node-is-windows node-isarray node-isexe node-isobject
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6128828Z   node-istanbul node-jest-debbundle node-jest-worker node-js-tokens
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6129839Z   node-js-yaml node-jsesc node-json-buffer node-json-parse-better-errors
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6130737Z   node-json-schema node-json-schema-traverse node-json-stable-stringify
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6131681Z   node-json5 node-jsonify node-jsonparse node-kind-of node-lcov-parse
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6132569Z   node-levn node-llhttp node-loader-runner node-locate-path node-lodash
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6133442Z   node-lodash-packages node-log-driver node-long node-lowercase-keys
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6134326Z   node-lru-cache node-make-dir node-map-visit node-memfs node-memory-fs
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6135229Z   node-merge-stream node-micromatch node-mime node-mime-types node-mimic-fn
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6136116Z   node-mimic-response node-minimatch node-minimist node-minipass
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6137021Z   node-mixin-deep node-mkdirp node-move-concurrently node-ms node-mute-stream
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6138028Z   node-n3 node-negotiator node-neo-async node-nopt node-normalize-package-data
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6139004Z   node-normalize-path node-npm-bundled node-npm-package-arg node-npm-run-path
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6140047Z   node-npmlog node-object-assign node-object-inspect node-object-visit
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6141089Z   node-once node-opener node-optimist node-optionator node-osenv
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6141985Z   node-p-cancelable node-p-limit node-p-locate node-p-map node-parse-json
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6142901Z   node-pascalcase node-path-dirname node-path-exists node-path-is-absolute
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6143838Z   node-path-is-inside node-path-scurry node-path-type node-picocolors
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6144742Z   node-pify node-pkg-dir node-postcss node-postcss-modules-extract-imports
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6145746Z   node-postcss-modules-values node-postcss-value-parser node-prelude-ls
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6146668Z   node-process-nextick-args node-progress node-promise-inflight
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6147519Z   node-promise-retry node-promzard node-prr node-punycode node-quick-lru
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6148468Z   node-randombytes node-re2 node-read node-read-package-json node-read-pkg
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6149349Z   node-readable-stream node-readdirp node-rechoir node-regenerate
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6150325Z   node-regenerate-unicode-properties node-regenerator-runtime
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6151258Z   node-regenerator-transform node-regexpp node-regexpu-core node-regjsgen
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6152153Z   node-regjsparser node-repeat-string node-require-directory
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6153058Z   node-require-from-string node-resolve node-resolve-cwd node-resolve-from
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6153970Z   node-restore-cursor node-resumer node-retry node-rimraf node-run-queue
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6154878Z   node-safe-buffer node-schema-utils node-semver node-serialize-javascript
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6155765Z   node-set-blocking node-set-immediate-shim node-set-value
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6156610Z   node-shebang-command node-shebang-regex node-shell-quote node-signal-exit
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6157555Z   node-slash node-slice-ansi node-source-list-map node-source-map
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6158384Z   node-source-map-support node-spdx-correct node-spdx-exceptions
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6159353Z   node-spdx-expression-parse node-spdx-license-ids node-sprintf-js node-ssri
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6160458Z   node-stack-utils node-string-decoder node-string-width node-strip-ansi
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6161414Z   node-strip-bom node-strip-eof node-strip-json-comments node-supports-color
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6162552Z   node-tap node-tap-mocha-reporter node-tap-parser node-tapable node-tape
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6163440Z   node-tar node-terser node-text-table node-through node-time-stamp
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6164308Z   node-to-fast-properties node-to-regex-range node-tslib node-type-check
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6165403Z   node-typedarray node-undici node-unicode-canonical-property-names-ecmascript
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6166298Z   node-unicode-match-property-ecmascript
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6166984Z   node-unicode-match-property-value-ecmascript
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6167751Z   node-unicode-property-aliases-ecmascript node-union-value
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6168614Z   node-unique-filename node-unset-value node-util node-util-deprecate
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6169530Z   node-uuid node-v8-compile-cache node-v8flags
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6170155Z   node-validate-npm-package-license node-validate-npm-package-name
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6170873Z   node-watchpack node-wcwidth.js node-webassemblyjs node-webpack-sources
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6171834Z   node-which node-wide-align node-widest-line node-wordwrap node-wrap-ansi
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6172822Z   node-wrappy node-write node-write-file-atomic node-ws node-xtend node-y18n
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6173806Z   node-yallist node-yaml node-yargs node-yargs-parser nodejs nodejs-doc npm
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6174754Z   ocl-icd-libopencl1 openssh-client openssl p11-kit p11-kit-modules patch perl
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6175687Z   perl-modules-5.40 perl-openssl-defaults pinentry-gnome3 pipewire
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6176671Z   pipewire-bin pipewire-pulse pkg-config pkgconf pkgconf-bin polkitd
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6177570Z   poppler-data publicsuffix python3 python3-minimal python3-packaging
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6178524Z   python3.14 python3.14-minimal qemu-block-extra qemu-utils qmake6 qmake6-bin
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6179829Z   qml6-module-qtqml qml6-module-qtqml-models qml6-module-qtqml-workerscript
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6180840Z   qml6-module-qtquick qml6-module-qtwayland-client-texturesharing
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6181754Z   qml6-module-qtwayland-compositor qt6-base-dev qt6-base-dev-tools
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6182594Z   qt6-gtk-platformtheme qt6-qpa-plugins qt6-svg-dev qt6-svg-plugins
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6183525Z   qt6-translations-l10n qt6-wayland qt6-wayland-dev qtkeychain-qt6-dev
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6184415Z   readline-common rpcsvc-proto rtkit sgml-base shared-mime-info systemd
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6185480Z   systemd-cryptsetup systemd-resolved systemd-sysv systemd-timesyncd terser
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6186387Z   timgm6mb-soundfont tzdata ubuntu-helper-virt-hwe ubuntu-virt
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6187343Z   user-session-migration uuid-dev wabt wayland-protocols webpack wireplumber
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6188328Z   x11-common x11-utils x11-xkb-utils x11-xserver-utils x11proto-dev xauth
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6189243Z   xdg-user-dirs xdg-utils xfonts-base xfonts-encodings xfonts-utils xkb-data
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6190145Z   xml-core xorg-sgml-doctools xserver-common xtrans-dev xvfb xz-utils
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6190745Z   zlib1g-dev
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6191233Z The following packages will be upgraded:
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6191820Z   libpcre2-8-0
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6542097Z 1 upgraded, 1225 newly installed, 0 to remove and 3 not upgraded.
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6542798Z Need to get 529 MB of archives.
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6543244Z After this operation, 2119 MB of additional disk space will be used.
+linux (26.04)	Install distro dependencies	2026-11-10T03:22:21.6543752Z Get:1 file:/etc/apt/putgd-mirrors.txt Mirrorlist [194 B]
+linux (26.04)	Install distro dependencies	2026-11-10T03:23:02.2738407Z Ign:2 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 libexpat1 amd64 2.7.4-1ubuntu0.2
+linux (26.04)	Install distro dependencies	2026-11-10T03:23:02.8770462Z Get:3 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 liblocale-gettext-perl amd64 1.07-8 [15.8 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:23:03.0667650Z Get:4 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpython3.14-minimal amd64 3.14.4-1ubuntu0.2 [916 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:23:10.1673331Z Get:5 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 python3.14-minimal amd64 3.14.4-1ubuntu0.2 [2579 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:23:33.3554126Z Ign:5 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 python3.14-minimal amd64 3.14.4-1ubuntu0.2
+linux (26.04)	Install distro dependencies	2026-11-10T03:24:14.0041030Z Ign:6 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 python3-minimal amd64 3.14.3-0ubuntu2
+linux (26.04)	Install distro dependencies	2026-11-10T03:24:54.9600355Z Ign:7 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 media-types all 14.0.0build1
+linux (26.04)	Install distro dependencies	2026-11-10T03:25:15.2746150Z Get:8 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 netbase all 6.5build1 [13.0 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:25:15.3718800Z Get:9 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 tzdata all 2026e-0ubuntu0.26.04.1 [193 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:25:16.7511217Z Get:10 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 libffi8 amd64 3.5.2-4 [26.3 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:25:16.9844221Z Get:11 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 readline-common all 8.3-4 [61.5 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:25:17.5358613Z Get:12 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 libreadline8t64 amd64 8.3-4 [164 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:25:18.8951232Z Get:2 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 libexpat1 amd64 2.7.4-1ubuntu0.2 [98.8 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:25:19.9201434Z Get:13 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 libsqlite3-0 amd64 3.46.1-9ubuntu0.3 [720 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:25:26.8805775Z Get:14 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpython3.14-stdlib amd64 3.14.4-1ubuntu0.2 [2415 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:26:25.3831748Z Ign:5 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 python3.14-minimal amd64 3.14.4-1ubuntu0.2
+linux (26.04)	Install distro dependencies	2026-11-10T03:26:35.7406346Z Get:6 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 python3-minimal amd64 3.14.3-0ubuntu2 [25.8 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:26:57.8878565Z Ign:7 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 media-types all 14.0.0build1
+linux (26.04)	Install distro dependencies	2026-11-10T03:27:38.2927994Z Ign:15 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 python3.14 amd64 3.14.4-1ubuntu0.2
+linux (26.04)	Install distro dependencies	2026-11-10T03:28:18.4554358Z Ign:16 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 libpython3-stdlib amd64 3.14.3-0ubuntu2
+linux (26.04)	Install distro dependencies	2026-11-10T03:28:19.9065828Z Get:17 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 python3 amd64 3.14.3-0ubuntu2 [22.9 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:28:20.5014853Z Get:18 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 libsystemd-shared amd64 259.9-0ubuntu0.1 [2473 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:28:36.5530768Z Get:19 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 systemd amd64 259.9-0ubuntu0.1 [3137 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:28:50.5593423Z Ign:19 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 systemd amd64 259.9-0ubuntu0.1
+linux (26.04)	Install distro dependencies	2026-11-10T03:29:30.7177248Z Ign:20 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 systemd-sysv amd64 259.9-0ubuntu0.1
+linux (26.04)	Install distro dependencies	2026-11-10T03:30:11.4314155Z Ign:21 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 libgomp1 amd64 16-20260322-1ubuntu1
+linux (26.04)	Install distro dependencies	2026-11-10T03:30:11.7806929Z Get:22 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 libfftw3-double3 amd64 3.3.10-2fakesync1build3 [833 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:30:41.6515048Z Ign:5 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 python3.14-minimal amd64 3.14.4-1ubuntu0.2
+linux (26.04)	Install distro dependencies	2026-11-10T03:31:22.5781415Z Ign:23 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 libbrotli1 amd64 1.2.0-3ubuntu0.1
+linux (26.04)	Install distro dependencies	2026-11-10T03:32:02.6564972Z Ign:7 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 media-types all 14.0.0build1
+linux (26.04)	Install distro dependencies	2026-11-10T03:32:43.1030763Z Ign:15 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 python3.14 amd64 3.14.4-1ubuntu0.2
+linux (26.04)	Install distro dependencies	2026-11-10T03:32:43.5682203Z Get:16 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 libpython3-stdlib amd64 3.14.3-0ubuntu2 [8476 B]
+linux (26.04)	Install distro dependencies	2026-11-10T03:32:43.6978577Z Get:24 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpng16-16t64 amd64 1.6.57-1ubuntu0.1 [195 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:32:44.2326507Z Get:25 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 libfreetype6 amd64 2.14.2+dfsg-1ubuntu0.2 [409 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:32:45.1118093Z Get:19 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 systemd amd64 259.9-0ubuntu0.1 [3137 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:33:13.5855668Z Ign:20 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 systemd-sysv amd64 259.9-0ubuntu0.1
+linux (26.04)	Install distro dependencies	2026-11-10T03:33:14.0385021Z Get:21 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 libgomp1 amd64 16-20260322-1ubuntu1 [162 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:33:14.9576230Z Get:26 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 fonts-dejavu-mono all 2.37-8build1 [502 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:33:15.5659889Z Get:5 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 python3.14-minimal amd64 3.14.4-1ubuntu0.2 [2579 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:33:16.7666661Z Get:23 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 libbrotli1 amd64 1.2.0-3ubuntu0.1 [343 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:33:18.3278758Z Get:7 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 media-types all 14.0.0build1 [31.4 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:33:18.4809813Z Get:15 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 python3.14 amd64 3.14.4-1ubuntu0.2 [830 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:33:19.4956434Z Get:27 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 fonts-dejavu-core all 2.37-8build1 [834 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:33:19.7073047Z Get:28 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 libfontenc1 amd64 1:1.1.8-1build2 [14.1 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:33:19.8384537Z Get:29 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 x11-common all 1:7.7+26ubuntu1 [22.5 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:33:21.5245505Z Get:30 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 xfonts-encodings all 1:1.0.5-0ubuntu3 [576 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:33:26.0864473Z Get:20 http://us.archive.ubuntu.com/ubuntu resolute-updates/main amd64 systemd-sysv amd64 259.9-0ubuntu0.1 [9420 B]
+linux (26.04)	Install distro dependencies	2026-11-10T03:33:26.3712659Z Get:31 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 xfonts-utils amd64 1:7.7+7build1 [97.1 kB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:33:27.4588266Z Get:32 http://us.archive.ubuntu.com/ubuntu resolute/main amd64 fonts-urw-base35 all 20200910-8build1 [10.9 MB]
+linux (26.04)	Install distro dependencies	2026-11-10T03:35:33.4818947Z context canceled
+linux (26.04)	Install distro dependencies	2026-11-10T03:35:33.4913881Z ##[error]The action 'Install distro dependencies' has timed out after 20 minutes.
+CI	Require every selected job	﻿2026-11-10T03:35:38.2535023Z ##[group]Run python3 - <<'PY'
+CI	Require every selected job	2026-11-10T03:35:38.2614197Z ^[[36;1mpython3 - <<'PY'^[[0m
+CI	Require every selected job	2026-11-10T03:35:38.2615114Z ^[[36;1mimport json, os, sys^[[0m
+CI	Require every selected job	2026-11-10T03:35:38.2615782Z ^[[36;1mneeds = json.loads(os.environ['NEEDS'])^[[0m
+CI	Require every selected job	2026-11-10T03:35:38.2616353Z ^[[36;1mselected = needs['changes'].get('outputs', {})^[[0m
+CI	Require every selected job	2026-11-10T03:35:38.2617083Z ^[[36;1mexpected = {'changes': 'success', 'contracts': 'success',^[[0m
+CI	Require every selected job	2026-11-10T03:35:38.2617831Z ^[[36;1m            'linux': 'success' if selected.get('build') == 'true' else 'skipped',^[[0m
+CI	Require every selected job	2026-11-10T03:35:38.2618683Z ^[[36;1m            'packages': 'success' if selected.get('packages') == 'true' else 'skipped',^[[0m
+CI	Require every selected job	2026-11-10T03:35:38.2619944Z ^[[36;1m            'pipewire': 'success' if selected.get('pipewire') == 'true' and selected.get('packages') != 'true' else 'skipped'}^[[0m
+CI	Require every selected job	2026-11-10T03:35:38.2620827Z ^[[36;1mfailed = False^[[0m
+CI	Require every selected job	2026-11-10T03:35:38.2621290Z ^[[36;1mfor job, want in expected.items():^[[0m
+CI	Require every selected job	2026-11-10T03:35:38.2621826Z ^[[36;1m    got = needs[job]['result']^[[0m
+CI	Require every selected job	2026-11-10T03:35:38.2622431Z ^[[36;1m    print(f'{job:10} {got:10} (required: {want})')^[[0m
+CI	Require every selected job	2026-11-10T03:35:38.2622992Z ^[[36;1m    failed |= got != want^[[0m
+CI	Require every selected job	2026-11-10T03:35:38.2623474Z ^[[36;1msys.exit(1 if failed else 0)^[[0m
+CI	Require every selected job	2026-11-10T03:35:38.2623944Z ^[[36;1mPY^[[0m
+CI	Require every selected job	2026-11-10T03:35:38.2820513Z shell: /usr/bin/bash -e {0}
+CI	Require every selected job	2026-11-10T03:35:38.2821401Z env:
+CI	Require every selected job	2026-11-10T03:35:38.2826176Z   PUTGD_UBUNTU_MIRRORS: apt_root=${PUTGD_APT_ROOT:-/etc/apt}
+CI	Require every selected job	sources=$(grep -lE 'http://archive\.ubuntu\.com/ubuntu' "$apt_root"/sources.list "$apt_root"/sources.list.d/* 2>/dev/null || true)
+CI	Require every selected job	if [ -n "$sources" ]; then
+CI	Require every selected job	  up=() down=()
+CI	Require every selected job	  for host in us.archive.ubuntu.com mirrors.edge.kernel.org azure.archive.ubuntu.com archive.ubuntu.com; do
+CI	Require every selected job	    probe="exec 3<>/dev/tcp/$host/80; printf 'HEAD /ubuntu/dists/noble/InRelease HTTP/1.0\r\nHost: $host\r\n\r\n' >&3; head -n 1 <&3 | grep -q ' 200 '"
+CI	Require every selected job	    if timeout 8 bash -c "$probe" 2>/dev/null; then up+=("$host"); else down+=("$host"); fi
+CI	Require every selected job	  done
+CI	Require every selected job	  priority=0
+CI	Require every selected job	  : > "$apt_root/putgd-mirrors.txt"
+CI	Require every selected job	  for host in "${up[@]}" "${down[@]}"; do
+CI	Require every selected job	    priority=$((priority + 1))
+CI	Require every selected job	    printf 'http://%s/ubuntu/\tpriority:%d\n' "$host" "$priority" >> "$apt_root/putgd-mirrors.txt"
+CI	Require every selected job	  done
+CI	Require every selected job	  sed -i -E "s#http://archive\.ubuntu\.com/ubuntu/?#mirror+file:$apt_root/putgd-mirrors.txt#" $sources
+CI	Require every selected job	  echo "Ubuntu mirrors reachable: ${up[*]:-none}"
+CI	Require every selected job	fi
+CI	Require every selected job	
+CI	Require every selected job	2026-11-10T03:35:38.2833208Z   NEEDS: {
+CI	Require every selected job	  "changes": {
+CI	Require every selected job	    "result": "success",
+CI	Require every selected job	    "outputs": {
+CI	Require every selected job	      "sanitizers": "false",
+CI	Require every selected job	      "pipewire": "false",
+CI	Require every selected job	      "build": "true",
+CI	Require every selected job	      "catalog": "true",
+CI	Require every selected job	      "packages": "false"
+CI	Require every selected job	    }
+CI	Require every selected job	  },
+CI	Require every selected job	  "contracts": {
+CI	Require every selected job	    "result": "success",
+CI	Require every selected job	    "outputs": {}
+CI	Require every selected job	  },
+CI	Require every selected job	  "linux": {
+CI	Require every selected job	    "result": "failure",
+CI	Require every selected job	    "outputs": {}
+CI	Require every selected job	  },
+CI	Require every selected job	  "packages": {
+CI	Require every selected job	    "result": "skipped",
+CI	Require every selected job	    "outputs": {}
+CI	Require every selected job	  },
+CI	Require every selected job	  "pipewire": {
+CI	Require every selected job	    "result": "skipped",
+CI	Require every selected job	    "outputs": {}
+CI	Require every selected job	  }
+CI	Require every selected job	}
+CI	Require every selected job	2026-11-10T03:35:38.2835324Z ##[endgroup]
+CI	Require every selected job	2026-11-10T03:35:38.3221825Z changes    success    (required: success)
+CI	Require every selected job	2026-11-10T03:35:38.3223566Z contracts  success    (required: success)
+CI	Require every selected job	2026-11-10T03:35:38.3224336Z linux      failure    (required: success)
+CI	Require every selected job	2026-11-10T03:35:38.3224950Z packages   skipped    (required: skipped)
+CI	Require every selected job	2026-11-10T03:35:38.3225461Z pipewire   skipped    (required: skipped)
+CI	Require every selected job	2026-11-10T03:35:38.3280794Z ##[error]Process completed with exit code 1.

@@ -1,0 +1,9 @@
+# Final cleanup and retention index
+
+No owned app, test, compiler, packaging, VM or tunnel process remains. Aurora and m74 cleanup/lock receipts are in this record; no f44 GUI lease was used during this revision. f44's unrelated current acceptance lease belongs to another lane.
+
+f44 /home/patrick/work/pg-small: isolated dev build cache, official pinned SDK1.11.924, source export and scratch benchmark/picture targets retained. No installed package or desktop autostart. Final A production sources at1194b9e788908d8315a5ff04f03c7618b0c51d4a, class final restored. B capture binary was built from0125ada526addfa868503d26add510f9393bb4c1 separately before the A source export; hashes/tests in f44/. Benchmark and picture driver source in tools/. Sources are reproducible from the PR heads; no secrets.
+
+m74 /home/patrick/work/pg1380: isolated dev build cache and source0125ada526addfa868503d26add510f9393bb4c1 retained; SDK/dependencies symlink to existing i1361 prefixes (not deleted or changed). /tmp/m1380-version holds the hashed executable copies; /tmp/v13/fixed is private0700 native-run artifacts/settings (profiles empty/local output), preserved as the original run. No live app uses either. Functional captures/logs/source are exported here. The earlier /tmp/m13 run remains indexed by the historical followup record; it is retained failure/timing context.
+
+Aurora /tmp/pg-final-picture and /tmp/pgp private roots removed after capture; initial/idle and release receipt retained. f44 /tmp/pg-final-scan scratch copy removed after the published evidence CI passed. Pinned gitleaks tool download retained for reuse under /tmp/pg-keyscan, not running. Builder artifact caches are intentionally retained; none is an installed application or active desktop root. No package run, VM or display tunnel was started for this revision.
