@@ -1,0 +1,16 @@
+[1/17] cd /home/patrick/work/pg-cd/build/dev && /usr/bin/cmake -DSOURCE_DIR=/home/patrick/work/pg-cd -DOUTPUT_DIR=/home/patrick/work/pg-cd/build/dev/build-identity -DRELEASE_TAG= -DSUPPLIED_COMMIT= -DSUPPLIED_TREE= -DSUPPLIED_COUNT= -DSUPPLIED_TIME= -P /home/patrick/work/pg-cd/cmake/GenerateBuildInfo.cmake
+[2/11] Automatic MOC and UIC for target putgd-session-lock-fixture
+[3/10] Automatic MOC and UIC for target putgd_budgie
+[4/9] Building C object CMakeFiles/putgd-session-lock-fixture.dir/tests/fixtures/session_lock.c.o
+FAILED: [code=1] CMakeFiles/putgd-session-lock-fixture.dir/tests/fixtures/session_lock.c.o 
+/usr/lib64/ccache/cc  -I/home/patrick/work/pg-cd/build/dev/putgd-session-lock-fixture_autogen/include -I/home/patrick/work/pg-cd/build/dev/wayland-protocols -g -fPIE -MD -MT CMakeFiles/putgd-session-lock-fixture.dir/tests/fixtures/session_lock.c.o -MF CMakeFiles/putgd-session-lock-fixture.dir/tests/fixtures/session_lock.c.o.d -o CMakeFiles/putgd-session-lock-fixture.dir/tests/fixtures/session_lock.c.o -c /home/patrick/work/pg-cd/tests/fixtures/session_lock.c
+/home/patrick/work/pg-cd/tests/fixtures/session_lock.c: In function ‘configured’:
+/home/patrick/work/pg-cd/tests/fixtures/session_lock.c:30:9: error: implicit declaration of function ‘memfd_create’ [-Wimplicit-function-declaration]
+   30 |  int fd=memfd_create("private-lock",MFD_CLOEXEC);if(fd<0||ftruncate(fd,(off_t)width*height*4)<0){stop=1;return;}
+      |         ^~~~~~~~~~~~
+/home/patrick/work/pg-cd/tests/fixtures/session_lock.c:30:37: error: ‘MFD_CLOEXEC’ undeclared (first use in this function)
+   30 |  int fd=memfd_create("private-lock",MFD_CLOEXEC);if(fd<0||ftruncate(fd,(off_t)width*height*4)<0){stop=1;return;}
+      |                                     ^~~~~~~~~~~
+/home/patrick/work/pg-cd/tests/fixtures/session_lock.c:30:37: note: each undeclared identifier is reported only once for each function it appears in
+[5/9] Building CXX object CMakeFiles/putgd_budgie.dir/src/platform/budgie/BudgieSourceAdapter.cpp.o
+ninja: build stopped: subcommand failed.

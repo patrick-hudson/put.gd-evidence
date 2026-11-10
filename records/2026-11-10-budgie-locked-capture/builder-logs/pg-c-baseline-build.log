@@ -1,0 +1,613 @@
+[1/163] cd /home/patrick/work/pg-cd/build/dev && /usr/bin/cmake -DSOURCE_DIR=/home/patrick/work/pg-cd -DOUTPUT_DIR=/home/patrick/work/pg-cd/build/dev/build-identity -DRELEASE_TAG= -DSUPPLIED_COMMIT= -DSUPPLIED_TREE= -DSUPPLIED_COUNT= -DSUPPLIED_TIME= -P /home/patrick/work/pg-cd/cmake/GenerateBuildInfo.cmake
+[2/163] Automatic MOC and UIC for target putgd_log
+[3/163] Building CXX object CMakeFiles/putgd_build_identity.dir/build-identity/BuildInfo.cpp.o
+[4/163] Building CXX object CMakeFiles/putgd_log.dir/putgd_log_autogen/mocs_compilation.cpp.o
+[5/163] Automatic MOC and UIC for target putgd_capture_control
+[6/163] Automatic MOC and UIC for target putgd_ui_control
+[7/163] Building CXX object CMakeFiles/putgd_log.dir/src/core/RunMarker.cpp.o
+[8/163] Building CXX object CMakeFiles/putgd_log.dir/src/core/CrashRecord.cpp.o
+[9/163] Building CXX object CMakeFiles/putgd_log.dir/src/core/Log.cpp.o
+[10/163] Building CXX object CMakeFiles/putgd_ui_control.dir/putgd_ui_control_autogen/mocs_compilation.cpp.o
+[11/163] Linking CXX static library libputgd_build_identity.a
+[12/163] Linking CXX static library libputgd_log.a
+[13/163] Automatic MOC and UIC for target putgd_visual
+[14/163] Building CXX object CMakeFiles/putgd_ui_control.dir/src/ipc/StdioDevice.cpp.o
+[15/163] Building CXX object CMakeFiles/putgd_ui_control.dir/src/ipc/UiControl.cpp.o
+[16/163] Building CXX object CMakeFiles/putgd_capture_control.dir/putgd_capture_control_autogen/mocs_compilation.cpp.o
+[17/163] Linking CXX static library libputgd_ui_control.a
+[18/163] Automatic MOC and UIC for target putgd_core
+[19/163] Building CXX object CMakeFiles/putgd_capture_control.dir/src/ipc/CaptureControl.cpp.o
+[20/163] Building CXX object CMakeFiles/putgd_visual.dir/putgd_visual_autogen/mocs_compilation.cpp.o
+[21/163] Building CXX object CMakeFiles/putgd_core.dir/putgd_core_autogen/mocs_compilation.cpp.o
+[22/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/ImagePages.cpp.o
+[23/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/Settings.cpp.o
+[24/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/SettingsService.cpp.o
+[25/163] Building CXX object CMakeFiles/putgd_core.dir/src/platform/Geometry.cpp.o
+[26/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/ClipboardPayload.cpp.o
+[27/163] Building CXX object CMakeFiles/putgd_visual.dir/src/ui/Ui.cpp.o
+/home/patrick/work/pg-cd/src/ui/Ui.cpp: In member function ‘virtual QPixmap putgd::Ui::{anonymous}::ThemedIcon::scaledPixmap(const QSize&, QIcon::Mode, QIcon::State, qreal)’:
+/home/patrick/work/pg-cd/src/ui/Ui.cpp:3144:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 3144 |   if(cache.size()>512)cache.clear();cache.insert(key,pixmap);return pixmap;
+      |   ^~
+/home/patrick/work/pg-cd/src/ui/Ui.cpp:3144:37: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+ 3144 |   if(cache.size()>512)cache.clear();cache.insert(key,pixmap);return pixmap;
+      |                                     ^~~~~
+[28/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/ArtifactStore.cpp.o
+[29/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/ImageJob.cpp.o
+[30/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/LocalArchive.cpp.o
+[31/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/PosterJob.cpp.o
+[32/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/StorageReceipt.cpp.o
+[33/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/UploadNaming.cpp.o
+[34/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/StorageProvider.cpp.o
+[35/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/Operation.cpp.o
+[36/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/SanitizedPng.cpp.o
+[37/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/HistoryStore.cpp.o
+/home/patrick/work/pg-cd/src/core/HistoryStore.cpp: In member function ‘putgd::Error putgd::HistoryStore::recordCopiedLink(const QString&, QString&)’:
+/home/patrick/work/pg-cd/src/core/HistoryStore.cpp:216:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  216 |  if(!lookup.exec())return sqlError();if(!lookup.next())return {};
+      |  ^~
+/home/patrick/work/pg-cd/src/core/HistoryStore.cpp:216:38: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  216 |  if(!lookup.exec())return sqlError();if(!lookup.next())return {};
+      |                                      ^~
+/home/patrick/work/pg-cd/src/core/HistoryStore.cpp:222:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  222 |  if(update.numRowsAffected())operationId=id;return {};
+      |  ^~
+/home/patrick/work/pg-cd/src/core/HistoryStore.cpp:222:45: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  222 |  if(update.numRowsAffected())operationId=id;return {};
+      |                                             ^~~~~~
+[38/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/EditorJob.cpp.o
+[39/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/RecordingModel.cpp.o
+[40/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/ReleaseLink.cpp.o
+[41/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/Update.cpp.o
+[42/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/SystemUpdates.cpp.o
+[43/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/Distribution.cpp.o
+[44/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/ZipWriter.cpp.o
+[45/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/FolderZip.cpp.o
+[46/163] Building CXX object CMakeFiles/putgd_core.dir/src/core/HostEnvironment.cpp.o
+[47/163] Building CXX object CMakeFiles/putgd_visual.dir/src/ui/IconArt.cpp.o
+[48/163] Linking CXX static library libputgd_capture_control.a
+[49/163] Linking CXX static library libputgd_core.a
+[50/163] Automatic MOC and UIC for target putgd_keyboard_map
+[51/163] Building CXX object CMakeFiles/putgd_keyboard_map.dir/putgd_keyboard_map_autogen/mocs_compilation.cpp.o
+[52/163] Automatic MOC and UIC for target putgd_credentials
+[53/163] Building CXX object CMakeFiles/putgd_credentials.dir/putgd_credentials_autogen/mocs_compilation.cpp.o
+[54/163] Building CXX object CMakeFiles/putgd_visual.dir/src/ui/Theme.cpp.o
+[55/163] Generating wayland-protocols/ext-data-control-v1-client-protocol.h
+[56/163] Generating wayland-protocols/ext-data-control-v1-protocol.c
+[57/163] Generating wayland-protocols/wlr-data-control-unstable-v1-client-protocol.h
+[58/163] Generating wayland-protocols/wlr-data-control-unstable-v1-protocol.c
+[59/163] Automatic MOC and UIC for target putgd_quick_backend
+[60/163] Automatic MOC and UIC for target putgd_crash
+[61/163] Building CXX object CMakeFiles/putgd_quick_backend.dir/putgd_quick_backend_autogen/mocs_compilation.cpp.o
+[62/163] Building CXX object CMakeFiles/putgd_keyboard_map.dir/src/platform/wayland/KeyboardMap.cpp.o
+[63/163] Linking CXX static library libputgd_keyboard_map.a
+[64/163] Generating wayland-protocols/ext-session-lock-v1-client-protocol.h, wayland-protocols/ext-session-lock-v1-protocol.c
+[65/163] Building CXX object CMakeFiles/putgd_crash.dir/putgd_crash_autogen/mocs_compilation.cpp.o
+[66/163] Building CXX object CMakeFiles/putgd_crash.dir/src/core/CrashHandler.cpp.o
+[67/163] Automatic MOC and UIC for target putgd-labwc-fixture
+[68/163] Automatic MOC and UIC for target putgd-clipboard-keeper
+[69/163] Automatic MOC and UIC for target putgd-session-lock-fixture
+[70/163] Building CXX object CMakeFiles/putgd-clipboard-keeper.dir/putgd-clipboard-keeper_autogen/mocs_compilation.cpp.o
+[71/163] Building C object CMakeFiles/putgd-clipboard-keeper.dir/src/platform/wayland/clipboard_keeper_main.c.o
+[72/163] Building C object CMakeFiles/putgd-clipboard-keeper.dir/wayland-protocols/ext-data-control-v1-protocol.c.o
+[73/163] Building C object CMakeFiles/putgd-clipboard-keeper.dir/wayland-protocols/wlr-data-control-unstable-v1-protocol.c.o
+[74/163] Building CXX object CMakeFiles/putgd-session-lock-fixture.dir/putgd-session-lock-fixture_autogen/mocs_compilation.cpp.o
+[75/163] Building C object CMakeFiles/putgd-session-lock-fixture.dir/tests/fixtures/session_lock.c.o
+[76/163] Building C object CMakeFiles/putgd-session-lock-fixture.dir/wayland-protocols/ext-session-lock-v1-protocol.c.o
+[77/163] Building CXX object CMakeFiles/putgd-labwc-fixture.dir/putgd-labwc-fixture_autogen/mocs_compilation.cpp.o
+[78/163] Building CXX object CMakeFiles/putgd_visual.dir/src/ui/WindowButtons.cpp.o
+[79/163] Linking CXX static library libputgd_visual.a
+[80/163] Generating wayland-protocols/ext-image-copy-capture-v1-client-protocol.h
+[81/163] Generating wayland-protocols/ext-image-copy-capture-v1-protocol.c
+[82/163] Generating wayland-protocols/ext-image-capture-source-v1-client-protocol.h
+[83/163] Generating wayland-protocols/ext-image-capture-source-v1-protocol.c
+[84/163] Generating wayland-protocols/ext-foreign-toplevel-list-v1-client-protocol.h
+[85/163] Generating wayland-protocols/ext-foreign-toplevel-list-v1-protocol.c
+[86/163] Generating wayland-protocols/wlr-foreign-toplevel-management-unstable-v1-client-protocol.h
+[87/163] Generating wayland-protocols/wlr-foreign-toplevel-management-unstable-v1-protocol.c
+[88/163] Generating wayland-protocols/xdg-output-unstable-v1-client-protocol.h
+[89/163] Generating wayland-protocols/xdg-output-unstable-v1-protocol.c
+[90/163] Building CXX object CMakeFiles/putgd_credentials.dir/src/secrets/CredentialStore.cpp.o
+[91/163] Linking C executable putgd-clipboard-keeper
+[92/163] Linking CXX static library libputgd_credentials.a
+[93/163] Linking CXX executable putgd-session-lock-fixture
+[94/163] Building CXX object CMakeFiles/putgd_quick_backend.dir/src/ui/QuickBackend.cpp.o
+[95/163] Linking CXX static library libputgd_quick_backend.a
+[96/163] Automatic MOC and UIC for target putgd_app
+[97/163] Building CXX object CMakeFiles/putgd-labwc-fixture.dir/tests/fixtures/labwc_fixture.cpp.o
+[98/163] Building CXX object CMakeFiles/putgd_app.dir/putgd_app_autogen/mocs_compilation.cpp.o
+[99/163] Building CXX object CMakeFiles/putgd_app.dir/src/app/UploadSlots.cpp.o
+[100/163] Building CXX object CMakeFiles/putgd_app.dir/src/app/OperationClipboard.cpp.o
+/home/patrick/work/pg-cd/src/app/OperationClipboard.cpp: In lambda function:
+/home/patrick/work/pg-cd/src/app/OperationClipboard.cpp:134:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  134 |   if(!guard.isEmpty())state->suppression=guard;return guard.isEmpty();
+      |   ^~
+/home/patrick/work/pg-cd/src/app/OperationClipboard.cpp:134:48: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  134 |   if(!guard.isEmpty())state->suppression=guard;return guard.isEmpty();
+      |                                                ^~~~~~
+/home/patrick/work/pg-cd/src/app/OperationClipboard.cpp: In lambda function:
+/home/patrick/work/pg-cd/src/app/OperationClipboard.cpp:195:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  195 |   if(!guard.isEmpty())group->suppression=guard;return guard.isEmpty();
+      |   ^~
+/home/patrick/work/pg-cd/src/app/OperationClipboard.cpp:195:48: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  195 |   if(!guard.isEmpty())group->suppression=guard;return guard.isEmpty();
+      |                                                ^~~~~~
+[101/163] Building CXX object CMakeFiles/putgd_app.dir/src/app/RecordingHelperBackend.cpp.o
+[102/163] Building CXX object CMakeFiles/putgd_app.dir/src/app/RecordingService.cpp.o
+[103/163] Building CXX object CMakeFiles/putgd_app.dir/src/app/HistoryService.cpp.o
+[104/163] Building CXX object CMakeFiles/putgd_app.dir/src/app/OperationService.cpp.o
+[105/163] Building CXX object CMakeFiles/putgd_app.dir/src/app/SetupService.cpp.o
+[106/163] Building CXX object CMakeFiles/putgd_app.dir/src/app/LocalIpc.cpp.o
+[107/163] Building CXX object CMakeFiles/putgd_app.dir/src/app/ResidentSession.cpp.o
+[108/163] Building CXX object CMakeFiles/putgd_app.dir/src/app/LocalServer.cpp.o
+[109/163] Building CXX object CMakeFiles/putgd_app.dir/src/app/LoginStartup.cpp.o
+[110/163] Building CXX object CMakeFiles/putgd_app.dir/src/app/StorageLocations.cpp.o
+[111/163] Building CXX object CMakeFiles/putgd_app.dir/src/app/LogService.cpp.o
+[112/163] Building CXX object CMakeFiles/putgd_app.dir/src/app/UpdateService.cpp.o
+[113/163] Building CXX object CMakeFiles/putgd_app.dir/src/app/AppImageInstall.cpp.o
+[114/163] Linking CXX executable putgd-labwc-fixture
+[115/163] Building CXX object CMakeFiles/putgd_app.dir/src/app/FileUploads.cpp.o
+[116/163] Building CXX object CMakeFiles/putgd_app.dir/src/app/DiagnosticsBundle.cpp.o
+[117/163] Building CXX object CMakeFiles/putgd_app.dir/src/app/FileManagerIntegration.cpp.o
+[118/163] Linking CXX static library libputgd_app.a
+[119/163] Automatic MOC and UIC for target putgd_wayland_region
+[120/163] Building CXX object CMakeFiles/putgd_wayland_region.dir/putgd_wayland_region_autogen/mocs_compilation.cpp.o
+[121/163] Building CXX object CMakeFiles/putgd_wayland_region.dir/src/platform/wayland/RegionProtocol.cpp.o
+[122/163] Building CXX object CMakeFiles/putgd_wayland_region.dir/src/platform/wayland/RegionProcess.cpp.o
+[123/163] Linking CXX static library libputgd_wayland_region.a
+[124/163] Generating wayland-protocols/wlr-layer-shell-unstable-v1-protocol.c
+[125/163] Generating wayland-protocols/wlr-layer-shell-unstable-v1-client-protocol.h
+[126/163] Generating wayland-protocols/xdg-shell-protocol.c
+[127/163] Automatic MOC and UIC for target putgd_wayland
+[128/163] Building CXX object CMakeFiles/putgd_wayland.dir/src/platform/wayland/AsyncFdReader.cpp.o
+[129/163] Building CXX object CMakeFiles/putgd_wayland.dir/src/platform/wayland/ClipboardKeeper.cpp.o
+[130/163] Building CXX object CMakeFiles/putgd_wayland.dir/putgd_wayland_autogen/mocs_compilation.cpp.o
+[131/163] Building CXX object CMakeFiles/putgd_wayland.dir/src/platform/wayland/DataControlSourceAdapter.cpp.o
+[132/163] Building CXX object CMakeFiles/putgd_wayland.dir/src/platform/wayland/DataControlClipboard.cpp.o
+/home/patrick/work/pg-cd/src/platform/wayland/DataControlClipboard.cpp: In static member function ‘static void putgd::DataControlClipboard::Impl::selected(void*, ext_data_control_device_v1*, ext_data_control_offer_v1*)’:
+/home/patrick/work/pg-cd/src/platform/wayland/DataControlClipboard.cpp:149:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  149 |   if(!assumed||o)++s->revision;if(initial)s->notify();if(prior&&prior!=o){s->offers.remove(prior);ext_data_control_offer_v1_destroy(prior);}
+      |   ^~
+/home/patrick/work/pg-cd/src/platform/wayland/DataControlClipboard.cpp:149:32: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  149 |   if(!assumed||o)++s->revision;if(initial)s->notify();if(prior&&prior!=o){s->offers.remove(prior);ext_data_control_offer_v1_destroy(prior);}
+      |                                ^~
+[133/163] Building CXX object CMakeFiles/putgd_wayland.dir/src/platform/wayland/WaylandOutputs.cpp.o
+[134/163] Building CXX object CMakeFiles/putgd_wayland.dir/src/platform/wayland/LayerShellRegionOverlay.cpp.o
+/home/patrick/work/pg-cd/src/platform/wayland/LayerShellRegionOverlay.cpp: In member function ‘void putgd::LayerShellRegionOverlay::surfacePainted(const void*)’:
+/home/patrick/work/pg-cd/src/platform/wayland/LayerShellRegionOverlay.cpp:140:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  140 |  if(shown_||!deferKeyboard_)return;drawn_.insert(surface);if(drawn_.size()!=surfaces_.size())return;shown_=true;
+      |  ^~
+/home/patrick/work/pg-cd/src/platform/wayland/LayerShellRegionOverlay.cpp:140:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  140 |  if(shown_||!deferKeyboard_)return;drawn_.insert(surface);if(drawn_.size()!=surfaces_.size())return;shown_=true;
+      |                                    ^~~~~~
+[135/163] Building C object CMakeFiles/putgd_wayland.dir/wayland-protocols/ext-image-capture-source-v1-protocol.c.o
+[136/163] Building C object CMakeFiles/putgd_wayland.dir/wayland-protocols/ext-image-copy-capture-v1-protocol.c.o
+[137/163] Building C object CMakeFiles/putgd_wayland.dir/wayland-protocols/ext-foreign-toplevel-list-v1-protocol.c.o
+[138/163] Building C object CMakeFiles/putgd_wayland.dir/wayland-protocols/wlr-foreign-toplevel-management-unstable-v1-protocol.c.o
+[139/163] Building C object CMakeFiles/putgd_wayland.dir/wayland-protocols/ext-data-control-v1-protocol.c.o
+[140/163] Building C object CMakeFiles/putgd_wayland.dir/wayland-protocols/wlr-data-control-unstable-v1-protocol.c.o
+[141/163] Building C object CMakeFiles/putgd_wayland.dir/wayland-protocols/xdg-output-unstable-v1-protocol.c.o
+[142/163] Building C object CMakeFiles/putgd_wayland.dir/wayland-protocols/wlr-layer-shell-unstable-v1-protocol.c.o
+[143/163] Building C object CMakeFiles/putgd_wayland.dir/wayland-protocols/xdg-shell-protocol.c.o
+[144/163] Building CXX object CMakeFiles/putgd_wayland.dir/src/platform/wayland/PortalGlobalShortcuts.cpp.o
+[145/163] Building CXX object CMakeFiles/putgd_wayland.dir/src/platform/wayland/SurfaceVisibility.cpp.o
+FAILED: [code=1] CMakeFiles/putgd_wayland.dir/src/platform/wayland/SurfaceVisibility.cpp.o 
+/usr/lib64/ccache/c++ -DPUTGD_HAVE_LAYER_SHELL=1 -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -I/home/patrick/work/pg-cd/build/dev/putgd_wayland_autogen/include -I/home/patrick/work/pg-cd/build/dev/wayland-protocols -I/home/patrick/work/pg-cd/src -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtSql -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtDBus -g -fPIC -Wall -Wextra -Wpedantic -MD -MT CMakeFiles/putgd_wayland.dir/src/platform/wayland/SurfaceVisibility.cpp.o -MF CMakeFiles/putgd_wayland.dir/src/platform/wayland/SurfaceVisibility.cpp.o.d -o CMakeFiles/putgd_wayland.dir/src/platform/wayland/SurfaceVisibility.cpp.o -c /home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:2:19: error: ‘namespace_’ does not name a type
+    2 | #define namespace namespace_
+      |                   ^~~~~~~~~~
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:2:19: error: ‘namespace_’ does not name a type
+    2 | #define namespace namespace_
+      |                   ^~~~~~~~~~
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:2:19: error: ‘namespace_’ does not name a type
+    2 | #define namespace namespace_
+      |                   ^~~~~~~~~~
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:2:19: error: ‘namespace_’ does not name a type
+    2 | #define namespace namespace_
+      |                   ^~~~~~~~~~
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:2:19: error: ‘namespace_’ does not name a type
+    2 | #define namespace namespace_
+      |                   ^~~~~~~~~~
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:2:19: error: ‘namespace_’ does not name a type
+    2 | #define namespace namespace_
+      |                   ^~~~~~~~~~
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:2:19: error: ‘namespace_’ does not name a type
+    2 | #define namespace namespace_
+      |                   ^~~~~~~~~~
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:2:19: error: ‘namespace_’ does not name a type
+    2 | #define namespace namespace_
+      |                   ^~~~~~~~~~
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:2:19: error: ‘namespace_’ does not name a type
+    2 | #define namespace namespace_
+      |                   ^~~~~~~~~~
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:2:19: error: ‘namespace_’ does not name a type
+    2 | #define namespace namespace_
+      |                   ^~~~~~~~~~
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:2:19: error: ‘namespace_’ does not name a type
+    2 | #define namespace namespace_
+      |                   ^~~~~~~~~~
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:2:19: error: ‘namespace_’ does not name a type
+    2 | #define namespace namespace_
+      |                   ^~~~~~~~~~
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:2:19: error: ‘namespace_’ does not name a type
+    2 | #define namespace namespace_
+      |                   ^~~~~~~~~~
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:2:19: error: ‘namespace_’ does not name a type
+    2 | #define namespace namespace_
+      |                   ^~~~~~~~~~
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:2:19: error: ‘namespace_’ does not name a type
+    2 | #define namespace namespace_
+      |                   ^~~~~~~~~~
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:2:19: error: ‘namespace_’ does not name a type
+    2 | #define namespace namespace_
+      |                   ^~~~~~~~~~
+In file included from /usr/include/wayland-util.h:34,
+                 from /usr/include/wayland-client-core.h:30,
+                 from /usr/include/wayland-client.h:39,
+                 from /home/patrick/work/pg-cd/build/dev/wayland-protocols/wlr-layer-shell-unstable-v1-client-protocol.h:8,
+                 from /home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:3:
+/usr/include/c++/16/math.h:38:12: error: ‘abs’ has not been declared in ‘std’
+   38 | using std::abs;
+      |            ^~~
+/usr/include/c++/16/math.h:39:12: error: ‘acos’ has not been declared in ‘std’
+   39 | using std::acos;
+      |            ^~~~
+/usr/include/c++/16/math.h:40:12: error: ‘asin’ has not been declared in ‘std’
+   40 | using std::asin;
+      |            ^~~~
+/usr/include/c++/16/math.h:41:12: error: ‘atan’ has not been declared in ‘std’
+   41 | using std::atan;
+      |            ^~~~
+/usr/include/c++/16/math.h:42:12: error: ‘atan2’ has not been declared in ‘std’
+   42 | using std::atan2;
+      |            ^~~~~
+/usr/include/c++/16/math.h:43:12: error: ‘cos’ has not been declared in ‘std’
+   43 | using std::cos;
+      |            ^~~
+/usr/include/c++/16/math.h:44:12: error: ‘sin’ has not been declared in ‘std’
+   44 | using std::sin;
+      |            ^~~
+/usr/include/c++/16/math.h:45:12: error: ‘tan’ has not been declared in ‘std’
+   45 | using std::tan;
+      |            ^~~
+/usr/include/c++/16/math.h:46:12: error: ‘cosh’ has not been declared in ‘std’
+   46 | using std::cosh;
+      |            ^~~~
+/usr/include/c++/16/math.h:47:12: error: ‘sinh’ has not been declared in ‘std’
+   47 | using std::sinh;
+      |            ^~~~
+/usr/include/c++/16/math.h:48:12: error: ‘tanh’ has not been declared in ‘std’
+   48 | using std::tanh;
+      |            ^~~~
+/usr/include/c++/16/math.h:49:12: error: ‘exp’ has not been declared in ‘std’
+   49 | using std::exp;
+      |            ^~~
+/usr/include/c++/16/math.h:50:12: error: ‘frexp’ has not been declared in ‘std’
+   50 | using std::frexp;
+      |            ^~~~~
+/usr/include/c++/16/math.h:51:12: error: ‘ldexp’ has not been declared in ‘std’
+   51 | using std::ldexp;
+      |            ^~~~~
+/usr/include/c++/16/math.h:52:12: error: ‘log’ has not been declared in ‘std’
+   52 | using std::log;
+      |            ^~~
+/usr/include/c++/16/math.h:53:12: error: ‘log10’ has not been declared in ‘std’
+   53 | using std::log10;
+      |            ^~~~~
+/usr/include/c++/16/math.h:54:12: error: ‘modf’ has not been declared in ‘std’
+   54 | using std::modf;
+      |            ^~~~
+/usr/include/c++/16/math.h:55:12: error: ‘pow’ has not been declared in ‘std’
+   55 | using std::pow;
+      |            ^~~
+/usr/include/c++/16/math.h:56:12: error: ‘sqrt’ has not been declared in ‘std’
+   56 | using std::sqrt;
+      |            ^~~~
+/usr/include/c++/16/math.h:57:12: error: ‘ceil’ has not been declared in ‘std’
+   57 | using std::ceil;
+      |            ^~~~
+/usr/include/c++/16/math.h:58:12: error: ‘fabs’ has not been declared in ‘std’
+   58 | using std::fabs;
+      |            ^~~~
+/usr/include/c++/16/math.h:59:12: error: ‘floor’ has not been declared in ‘std’
+   59 | using std::floor;
+      |            ^~~~~
+/usr/include/c++/16/math.h:60:12: error: ‘fmod’ has not been declared in ‘std’
+   60 | using std::fmod;
+      |            ^~~~
+/usr/include/c++/16/math.h:63:12: error: ‘fpclassify’ has not been declared in ‘std’
+   63 | using std::fpclassify;
+      |            ^~~~~~~~~~
+/usr/include/c++/16/math.h:64:12: error: ‘isfinite’ has not been declared in ‘std’
+   64 | using std::isfinite;
+      |            ^~~~~~~~
+/usr/include/c++/16/math.h:65:12: error: ‘isinf’ has not been declared in ‘std’
+   65 | using std::isinf;
+      |            ^~~~~
+/usr/include/c++/16/math.h:66:12: error: ‘isnan’ has not been declared in ‘std’
+   66 | using std::isnan;
+      |            ^~~~~
+/usr/include/c++/16/math.h:67:12: error: ‘isnormal’ has not been declared in ‘std’
+   67 | using std::isnormal;
+      |            ^~~~~~~~
+/usr/include/c++/16/math.h:68:12: error: ‘signbit’ has not been declared in ‘std’
+   68 | using std::signbit;
+      |            ^~~~~~~
+/usr/include/c++/16/math.h:69:12: error: ‘isgreater’ has not been declared in ‘std’
+   69 | using std::isgreater;
+      |            ^~~~~~~~~
+/usr/include/c++/16/math.h:70:12: error: ‘isgreaterequal’ has not been declared in ‘std’
+   70 | using std::isgreaterequal;
+      |            ^~~~~~~~~~~~~~
+/usr/include/c++/16/math.h:71:12: error: ‘isless’ has not been declared in ‘std’
+   71 | using std::isless;
+      |            ^~~~~~
+/usr/include/c++/16/math.h:72:12: error: ‘islessequal’ has not been declared in ‘std’
+   72 | using std::islessequal;
+      |            ^~~~~~~~~~~
+/usr/include/c++/16/math.h:73:12: error: ‘islessgreater’ has not been declared in ‘std’
+   73 | using std::islessgreater;
+      |            ^~~~~~~~~~~~~
+/usr/include/c++/16/math.h:74:12: error: ‘isunordered’ has not been declared in ‘std’
+   74 | using std::isunordered;
+      |            ^~~~~~~~~~~
+/usr/include/c++/16/math.h:78:12: error: ‘acosh’ has not been declared in ‘std’
+   78 | using std::acosh;
+      |            ^~~~~
+/usr/include/c++/16/math.h:79:12: error: ‘asinh’ has not been declared in ‘std’
+   79 | using std::asinh;
+      |            ^~~~~
+/usr/include/c++/16/math.h:80:12: error: ‘atanh’ has not been declared in ‘std’
+   80 | using std::atanh;
+      |            ^~~~~
+/usr/include/c++/16/math.h:81:12: error: ‘cbrt’ has not been declared in ‘std’
+   81 | using std::cbrt;
+      |            ^~~~
+/usr/include/c++/16/math.h:82:12: error: ‘copysign’ has not been declared in ‘std’
+   82 | using std::copysign;
+      |            ^~~~~~~~
+/usr/include/c++/16/math.h:83:12: error: ‘erf’ has not been declared in ‘std’
+   83 | using std::erf;
+      |            ^~~
+/usr/include/c++/16/math.h:84:12: error: ‘erfc’ has not been declared in ‘std’
+   84 | using std::erfc;
+      |            ^~~~
+/usr/include/c++/16/math.h:85:12: error: ‘exp2’ has not been declared in ‘std’
+   85 | using std::exp2;
+      |            ^~~~
+/usr/include/c++/16/math.h:86:12: error: ‘expm1’ has not been declared in ‘std’
+   86 | using std::expm1;
+      |            ^~~~~
+/usr/include/c++/16/math.h:87:12: error: ‘fdim’ has not been declared in ‘std’
+   87 | using std::fdim;
+      |            ^~~~
+/usr/include/c++/16/math.h:88:12: error: ‘fma’ has not been declared in ‘std’
+   88 | using std::fma;
+      |            ^~~
+/usr/include/c++/16/math.h:89:12: error: ‘fmax’ has not been declared in ‘std’
+   89 | using std::fmax;
+      |            ^~~~
+/usr/include/c++/16/math.h:90:12: error: ‘fmin’ has not been declared in ‘std’
+   90 | using std::fmin;
+      |            ^~~~
+/usr/include/c++/16/math.h:91:12: error: ‘hypot’ has not been declared in ‘std’
+   91 | using std::hypot;
+      |            ^~~~~
+/usr/include/c++/16/math.h:92:12: error: ‘ilogb’ has not been declared in ‘std’
+   92 | using std::ilogb;
+      |            ^~~~~
+/usr/include/c++/16/math.h:93:12: error: ‘lgamma’ has not been declared in ‘std’
+   93 | using std::lgamma;
+      |            ^~~~~~
+/usr/include/c++/16/math.h:94:12: error: ‘llrint’ has not been declared in ‘std’
+   94 | using std::llrint;
+      |            ^~~~~~
+/usr/include/c++/16/math.h:95:12: error: ‘llround’ has not been declared in ‘std’
+   95 | using std::llround;
+      |            ^~~~~~~
+/usr/include/c++/16/math.h:96:12: error: ‘log1p’ has not been declared in ‘std’
+   96 | using std::log1p;
+      |            ^~~~~
+/usr/include/c++/16/math.h:97:12: error: ‘log2’ has not been declared in ‘std’
+   97 | using std::log2;
+      |            ^~~~
+/usr/include/c++/16/math.h:98:12: error: ‘logb’ has not been declared in ‘std’
+   98 | using std::logb;
+      |            ^~~~
+/usr/include/c++/16/math.h:99:12: error: ‘lrint’ has not been declared in ‘std’
+   99 | using std::lrint;
+      |            ^~~~~
+/usr/include/c++/16/math.h:100:12: error: ‘lround’ has not been declared in ‘std’
+  100 | using std::lround;
+      |            ^~~~~~
+/usr/include/c++/16/math.h:101:12: error: ‘nearbyint’ has not been declared in ‘std’
+  101 | using std::nearbyint;
+      |            ^~~~~~~~~
+/usr/include/c++/16/math.h:102:12: error: ‘nextafter’ has not been declared in ‘std’
+  102 | using std::nextafter;
+      |            ^~~~~~~~~
+/usr/include/c++/16/math.h:103:12: error: ‘nexttoward’ has not been declared in ‘std’
+  103 | using std::nexttoward;
+      |            ^~~~~~~~~~
+/usr/include/c++/16/math.h:104:12: error: ‘remainder’ has not been declared in ‘std’
+  104 | using std::remainder;
+      |            ^~~~~~~~~
+/usr/include/c++/16/math.h:105:12: error: ‘remquo’ has not been declared in ‘std’
+  105 | using std::remquo;
+      |            ^~~~~~
+/usr/include/c++/16/math.h:106:12: error: ‘rint’ has not been declared in ‘std’
+  106 | using std::rint;
+      |            ^~~~
+/usr/include/c++/16/math.h:107:12: error: ‘round’ has not been declared in ‘std’
+  107 | using std::round;
+      |            ^~~~~
+/usr/include/c++/16/math.h:108:12: error: ‘scalbln’ has not been declared in ‘std’
+  108 | using std::scalbln;
+      |            ^~~~~~~
+/usr/include/c++/16/math.h:109:12: error: ‘scalbn’ has not been declared in ‘std’
+  109 | using std::scalbn;
+      |            ^~~~~~
+/usr/include/c++/16/math.h:110:12: error: ‘tgamma’ has not been declared in ‘std’
+  110 | using std::tgamma;
+      |            ^~~~~~
+/usr/include/c++/16/math.h:111:12: error: ‘trunc’ has not been declared in ‘std’
+  111 | using std::trunc;
+      |            ^~~~~
+/usr/include/c++/16/math.h:183:12: error: ‘lerp’ has not been declared in ‘std’
+  183 | using std::lerp;
+      |            ^~~~
+In file included from /usr/include/qt6/QtCore/qglobal.h:34,
+                 from /usr/include/qt6/QtCore/qnamespace.h:13,
+                 from /usr/include/qt6/QtCore/qobjectdefs.h:13,
+                 from /usr/include/qt6/QtCore/qobject.h:11,
+                 from /usr/include/qt6/QtCore/QObject:1,
+                 from /home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:5:
+/usr/include/qt6/QtCore/qnumeric.h: In function ‘constexpr Result QtPrivate::qCheckedFPConversionToInteger(FP)’:
+/usr/include/qt6/QtCore/qnumeric.h:508:9: error: ‘isnan’ is not a member of ‘std’ [-Wtemplate-body]
+  508 |         Q_ASSERT(!std::isnan(value));
+      |         ^~~~~~~~
+In file included from /usr/include/qt6/QtCore/qbytearray.h:18,
+                 from /usr/include/qt6/QtCore/qstringview.h:11,
+                 from /usr/include/qt6/QtCore/qchar.h:730,
+                 from /usr/include/qt6/QtCore/qstring.h:15,
+                 from /usr/include/qt6/QtCore/qobject.h:12:
+/usr/include/c++/16/stdlib.h: At global scope:
+/usr/include/c++/16/stdlib.h:57:12: error: ‘abs’ has not been declared in ‘std’
+   57 | using std::abs;
+      |            ^~~
+In file included from /usr/include/qt6/QtCore/qfloat16.h:12,
+                 from /usr/include/qt6/QtCore/qmetatype.h:16,
+                 from /usr/include/qt6/QtCore/qobject.h:19:
+/usr/include/qt6/QtCore/qmath.h: In function ‘int qCeil(T)’:
+/usr/include/qt6/QtCore/qmath.h:30:16: error: ‘ceil’ has not been declared in ‘std’ [-Wtemplate-body]
+   30 |     using std::ceil;
+      |                ^~~~
+/usr/include/qt6/QtCore/qmath.h: In function ‘int qFloor(T)’:
+/usr/include/qt6/QtCore/qmath.h:36:16: error: ‘floor’ has not been declared in ‘std’ [-Wtemplate-body]
+   36 |     using std::floor;
+      |                ^~~~~
+/usr/include/qt6/QtCore/qmath.h: In function ‘auto qFabs(T)’:
+/usr/include/qt6/QtCore/qmath.h:42:16: error: ‘fabs’ has not been declared in ‘std’ [-Wtemplate-body]
+   42 |     using std::fabs;
+      |                ^~~~
+/usr/include/qt6/QtCore/qmath.h: In function ‘auto qSin(T)’:
+/usr/include/qt6/QtCore/qmath.h:48:16: error: ‘sin’ has not been declared in ‘std’ [-Wtemplate-body]
+   48 |     using std::sin;
+      |                ^~~
+/usr/include/qt6/QtCore/qmath.h: In function ‘auto qCos(T)’:
+/usr/include/qt6/QtCore/qmath.h:54:16: error: ‘cos’ has not been declared in ‘std’ [-Wtemplate-body]
+   54 |     using std::cos;
+      |                ^~~
+/usr/include/qt6/QtCore/qmath.h: In function ‘auto qTan(T)’:
+/usr/include/qt6/QtCore/qmath.h:60:16: error: ‘tan’ has not been declared in ‘std’ [-Wtemplate-body]
+   60 |     using std::tan;
+      |                ^~~
+/usr/include/qt6/QtCore/qmath.h: In function ‘auto qAcos(T)’:
+/usr/include/qt6/QtCore/qmath.h:66:16: error: ‘acos’ has not been declared in ‘std’ [-Wtemplate-body]
+   66 |     using std::acos;
+      |                ^~~~
+/usr/include/qt6/QtCore/qmath.h: In function ‘auto qAsin(T)’:
+/usr/include/qt6/QtCore/qmath.h:72:16: error: ‘asin’ has not been declared in ‘std’ [-Wtemplate-body]
+   72 |     using std::asin;
+      |                ^~~~
+/usr/include/qt6/QtCore/qmath.h: In function ‘auto qAtan(T)’:
+/usr/include/qt6/QtCore/qmath.h:78:16: error: ‘atan’ has not been declared in ‘std’ [-Wtemplate-body]
+   78 |     using std::atan;
+      |                ^~~~
+/usr/include/qt6/QtCore/qmath.h: In function ‘auto qAtan2(T1, T2)’:
+/usr/include/qt6/QtCore/qmath.h:84:16: error: ‘atan2’ has not been declared in ‘std’ [-Wtemplate-body]
+   84 |     using std::atan2;
+      |                ^~~~~
+/usr/include/qt6/QtCore/qmath.h: In function ‘auto qSqrt(T)’:
+/usr/include/qt6/QtCore/qmath.h:90:16: error: ‘sqrt’ has not been declared in ‘std’ [-Wtemplate-body]
+   90 |     using std::sqrt;
+      |                ^~~~
+/usr/include/qt6/QtCore/qmath.h: At global scope:
+/usr/include/qt6/QtCore/qmath.h:96:48: error: ‘hypot’ is not a member of ‘std’; did you mean ‘hypot’? [-Wtemplate-body]
+   96 | struct QHypotType { using type = decltype(std::hypot(R(1), F(1))); };
+      |                                                ^~~~~
+In file included from /usr/include/features.h:540,
+                 from /usr/include/c++/16/x86_64-redhat-linux/bits/os_defines.h:39,
+                 from /usr/include/c++/16/x86_64-redhat-linux/bits/c++config.h:2677,
+                 from /usr/include/c++/16/functional:50,
+                 from /home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.h:2,
+                 from /home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:1:
+/usr/include/bits/mathcalls.h:184:1: note: ‘hypot’ declared here
+  184 | __MATHCALL_VEC (hypot,, (_Mdouble_ __x, _Mdouble_ __y));
+      | ^~~~~~~~~~~~~~
+/usr/include/qt6/QtCore/qmath.h:96:48: error: ‘hypot’ is not a member of ‘std’; did you mean ‘hypot’? [-Wtemplate-body]
+   96 | struct QHypotType { using type = decltype(std::hypot(R(1), F(1))); };
+      |                                                ^~~~~
+/usr/include/bits/mathcalls.h:184:1: note: ‘hypot’ declared here
+  184 | __MATHCALL_VEC (hypot,, (_Mdouble_ __x, _Mdouble_ __y));
+      | ^~~~~~~~~~~~~~
+/usr/include/qt6/QtCore/qmath.h: In function ‘auto qHypot(Tx, Ty)’:
+/usr/include/qt6/QtCore/qmath.h:147:16: error: ‘hypot’ has not been declared in ‘std’ [-Wtemplate-body]
+  147 |     using std::hypot;
+      |                ^~~~~
+/usr/include/qt6/QtCore/qmath.h: In function ‘auto qHypot(Tx, Ty, Tz)’:
+/usr/include/qt6/QtCore/qmath.h:155:16: error: ‘hypot’ has not been declared in ‘std’ [-Wtemplate-body]
+  155 |     using std::hypot;
+      |                ^~~~~
+/usr/include/qt6/QtCore/qmath.h: In function ‘auto qLn(T)’:
+/usr/include/qt6/QtCore/qmath.h:162:16: error: ‘log’ has not been declared in ‘std’ [-Wtemplate-body]
+  162 |     using std::log;
+      |                ^~~
+/usr/include/qt6/QtCore/qmath.h: In function ‘auto qExp(T)’:
+/usr/include/qt6/QtCore/qmath.h:168:16: error: ‘exp’ has not been declared in ‘std’ [-Wtemplate-body]
+  168 |     using std::exp;
+      |                ^~~
+/usr/include/qt6/QtCore/qmath.h: In function ‘auto qPow(T1, T2)’:
+/usr/include/qt6/QtCore/qmath.h:174:16: error: ‘pow’ has not been declared in ‘std’ [-Wtemplate-body]
+  174 |     using std::pow;
+      |                ^~~
+/usr/include/qt6/QtCore/qfloat16.h: In function ‘typename QtPrivate::QHypotType<R, qfloat16>::type qHypot(T, qfloat16)’:
+/usr/include/qt6/QtCore/qfloat16.h:466:35: error: ‘hypot’ is not a member of ‘std’; did you mean ‘hypot’? [-Wtemplate-body]
+  466 |     if constexpr (requires { std::hypot(x, qfloat16::NearestFloat(y)); })
+      |                                   ^~~~~
+/usr/include/bits/mathcalls.h:184:1: note: ‘hypot’ declared here
+  184 | __MATHCALL_VEC (hypot,, (_Mdouble_ __x, _Mdouble_ __y));
+      | ^~~~~~~~~~~~~~
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp: In destructor ‘virtual putgd::{anonymous}::Visibility::~Visibility()’:
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:84:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   84 |   if(callback_)wl_callback_destroy(callback_);if(layer_)zwlr_layer_surface_v1_destroy(layer_);if(surface_)wl_surface_destroy(surface_);
+      |   ^~
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:84:47: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   84 |   if(callback_)wl_callback_destroy(callback_);if(layer_)zwlr_layer_surface_v1_destroy(layer_);if(surface_)wl_surface_destroy(surface_);
+      |                                               ^~
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:85:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   85 |   if(buffer_)wl_buffer_destroy(buffer_);if(shell_)zwlr_layer_shell_v1_destroy(shell_);if(shm_)wl_shm_destroy(shm_);
+      |   ^~
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:85:41: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   85 |   if(buffer_)wl_buffer_destroy(buffer_);if(shell_)zwlr_layer_shell_v1_destroy(shell_);if(shm_)wl_shm_destroy(shm_);
+      |                                         ^~
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:86:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   86 |   if(compositor_)wl_compositor_destroy(compositor_);if(registry_)wl_registry_destroy(registry_);
+      |   ^~
+/home/patrick/work/pg-cd/src/platform/wayland/SurfaceVisibility.cpp:86:53: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   86 |   if(compositor_)wl_compositor_destroy(compositor_);if(registry_)wl_registry_destroy(registry_);
+      |                                                     ^~
+[146/163] Building CXX object CMakeFiles/putgd_wayland.dir/src/platform/wayland/ImageCopyCapture.cpp.o
+In file included from /home/patrick/work/pg-cd/src/platform/wayland/ImageCopyCapture.cpp:2:
+/home/patrick/work/pg-cd/src/platform/wayland/WaylandTransform.h: In function ‘QImage putgd::waylandUpright(const QImage&, uint32_t)’:
+/home/patrick/work/pg-cd/src/platform/wayland/WaylandTransform.h:18:60: warning: ‘QImage QImage::mirrored(bool, bool) const &’ is deprecated: Use flipped(Qt::Orientations) instead [-Wdeprecated-declarations]
+   18 |  if(transform>=WL_OUTPUT_TRANSFORM_FLIPPED)out=out.mirrored(true,false);
+      |                                                ~~~~~~~~~~~~^~~~~~~~~~~~
+In file included from /usr/include/qt6/QtGui/QImage:1,
+                 from /home/patrick/work/pg-cd/src/platform/wayland/ImageCopyCapture.h:5,
+                 from /home/patrick/work/pg-cd/src/platform/wayland/ImageCopyCapture.cpp:1:
+/usr/include/qt6/QtGui/qimage.h:220:26: note: declared here
+  220 |     [[nodiscard]] QImage mirrored(bool horizontally = false, bool vertically = true) const &
+      |                          ^~~~~~~~
+/home/patrick/work/pg-cd/src/platform/wayland/ImageCopyCapture.cpp: In member function ‘void putgd::ImageCopyCapture::Impl::cancelAll(const putgd::Error&)’:
+/home/patrick/work/pg-cd/src/platform/wayland/ImageCopyCapture.cpp:217:3: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  217 |   for(const auto id:turning)turnedAway.insert(id,reason);turning.clear();
+      |   ^~~
+/home/patrick/work/pg-cd/src/platform/wayland/ImageCopyCapture.cpp:217:58: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  217 |   for(const auto id:turning)turnedAway.insert(id,reason);turning.clear();
+      |                                                          ^~~~~~~
+/home/patrick/work/pg-cd/src/platform/wayland/ImageCopyCapture.cpp: In lambda function:
+/home/patrick/work/pg-cd/src/platform/wayland/ImageCopyCapture.cpp:289:152: warning: enumerated and non-enumerated type in conditional expression [-Wextra]
+  289 |    [](void* data,ext_image_copy_capture_frame_v1*,uint32_t transform){static_cast<Request*>(data)->transform=transform<=WL_OUTPUT_TRANSFORM_FLIPPED_270?transform:WL_OUTPUT_TRANSFORM_NORMAL;},
+      |                                                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ninja: build stopped: subcommand failed.
