@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-10-recording-1364-independent-stage1](2026-11-10-recording-1364-independent-stage1/README.md) | #1364 | Independent recording timing diagnostics for #1364, stage 1 |
 | [2026-11-10-custom-http-uploader-acceptance](2026-11-10-custom-http-uploader-acceptance/README.md) | — | Custom HTTP uploader: final package acceptance and PR pictures |
 | [2026-11-10-budgie-locked-capture](2026-11-10-budgie-locked-capture/README.md) | — | Budgie: refuse screenshot reads behind real session-lock surfaces |
 | [2026-11-10-hyprland-selector-cursor](2026-11-10-hyprland-selector-cursor/README.md) | — | Hyprland selector cursor: nightly reproduction and native-package fix |
