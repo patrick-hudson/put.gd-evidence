@@ -1,0 +1,17 @@
+<!doctype html><meta charset="utf-8"><title>put.gd synthetic compositor load</title>
+<style>html,body{margin:0;background:#102030;overflow:hidden}canvas{width:100vw;height:100vh}</style>
+<canvas id="c"></canvas><script>
+const c=document.querySelector('canvas'), x=c.getContext('2d');let frame=0;
+function draw(){
+ c.width=innerWidth;c.height=innerHeight;const t=frame++;
+ x.fillStyle='#102030';x.fillRect(0,0,c.width,c.height);
+ for(let i=0;i<9000;i++){
+  x.fillStyle=`hsl(${(i+t)%360} 70% 50%)`;
+  x.fillRect((i*71+t*3)%c.width,(i*37+t*2)%c.height,12+(i%17),12+(i%13));
+ }
+ x.fillStyle='#102030';x.fillRect(20,20,850,110);x.fillStyle='white';x.font='26px sans-serif';
+ x.fillText('put.gd synthetic browser/compositor load',40,62);
+ x.fillText('Animated canvas — frame '+t,40,104);
+ requestAnimationFrame(draw);
+}draw();
+</script>

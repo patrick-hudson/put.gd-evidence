@@ -1,5 +1,7 @@
 # Budgie: refuse screen reads behind gtklock
 
+Current coordinator follow-up: head2354d9f69 uses a3s frame wait, CI green,10/10 loaded captures and3/3 gtklock refusals. See [three-second demonstration and blanking-policy answer](three-second/README.md). Both PRs remain held for #1368, with three new unverified outside-diff review concerns recorded for the post-merge stage. The earlier caaf acceptance below is historical.
+
 Part of put.gd-desktop #1383; code PR #1385. Confirmed on plain nightly7fc609dc42f8f3c1118d79a63d42ce37ea4a71c9: an agent desktop request made under visible gtklock completes and saves the lock screen. Fresh d69 KVM guests on the wall used Budgie10.10.3, labwc0.20.2 and gtklock4.0.0.
 
 ![Actual nightly capture versus final native-package refusal, annotated by its production editor](final-caaf/accept/c-before-after.png)
