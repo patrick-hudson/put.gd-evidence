@@ -1,0 +1,90 @@
+[1/37] cd /home/patrick/work/scroll-integrate-1376/build/no-record && /usr/bin/cmake -DSOURCE_DIR=/home/patrick/work/scroll-integrate-1376 -DOUTPUT_DIR=/home/patrick/work/scroll-integrate-1376/build/no-record/build-identity -DRELEASE_TAG= -DSUPPLIED_COMMIT= -DSUPPLIED_TREE= -DSUPPLIED_COUNT= -DSUPPLIED_TIME= -P /home/patrick/work/scroll-integrate-1376/cmake/GenerateBuildInfo.cmake
+[2/37] Building CXX object CMakeFiles/putgd_build_identity.dir/build-identity/BuildInfo.cpp.o
+[3/37] Linking CXX static library libputgd_build_identity.a
+[4/37] Linking CXX shared module libputgd-s3.so
+[5/37] Linking CXX executable putgd-b2-worker
+[6/37] Automatic MOC and UIC for target putgd_ui
+[7/36] Linking CXX executable putgd-http-worker
+[8/36] Linking CXX executable putgd-s3-worker
+[9/36] Automatic MOC and UIC for target putgd_app
+[10/36] Building CXX object CMakeFiles/putgd_app.dir/putgd_app_autogen/mocs_compilation.cpp.o
+[11/36] Building CXX object CMakeFiles/putgd_app.dir/src/app/OperationClipboard.cpp.o
+/home/patrick/work/scroll-integrate-1376/src/app/OperationClipboard.cpp: In lambda function:
+/home/patrick/work/scroll-integrate-1376/src/app/OperationClipboard.cpp:134:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  134 |   if(!guard.isEmpty())state->suppression=guard;return guard.isEmpty();
+      |   ^~
+/home/patrick/work/scroll-integrate-1376/src/app/OperationClipboard.cpp:134:48: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  134 |   if(!guard.isEmpty())state->suppression=guard;return guard.isEmpty();
+      |                                                ^~~~~~
+/home/patrick/work/scroll-integrate-1376/src/app/OperationClipboard.cpp: In lambda function:
+/home/patrick/work/scroll-integrate-1376/src/app/OperationClipboard.cpp:195:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  195 |   if(!guard.isEmpty())group->suppression=guard;return guard.isEmpty();
+      |   ^~
+/home/patrick/work/scroll-integrate-1376/src/app/OperationClipboard.cpp:195:48: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  195 |   if(!guard.isEmpty())group->suppression=guard;return guard.isEmpty();
+      |                                                ^~~~~~
+[12/36] Building CXX object CMakeFiles/putgd_ui.dir/src/ui/MainWindow.cpp.o
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp: In lambda function:
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp:305:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  305 |   if(gaps==sourceGaps_)return;sourceGaps_=gaps;for(const auto& refresh:captureButtonUpdates_)refresh();updateDestination();});
+      |   ^~
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp:305:31: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  305 |   if(gaps==sourceGaps_)return;sourceGaps_=gaps;for(const auto& refresh:captureButtonUpdates_)refresh();updateDestination();});
+      |                               ^~~~~~~~~~~
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp: In member function ‘void putgd::MainWindow::updateOutputSummary()’:
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp:328:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  328 |  if(!destination_)return;destination_->setText(destination_->property("fullOutputSummary").toString().replace('&',QStringLiteral("&&")));
+      |  ^~
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp:328:26: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  328 |  if(!destination_)return;destination_->setText(destination_->property("fullOutputSummary").toString().replace('&',QStringLiteral("&&")));
+      |                          ^~~~~~~~~~~~
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp: In member function ‘void putgd::MainWindow::fitBand()’:
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp:357:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  357 |  if(!band_||fittingBand_)return;fittingBand_=true;
+      |  ^~
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp:357:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  357 |  if(!band_||fittingBand_)return;fittingBand_=true;
+      |                                 ^~~~~~~~~~~~
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp:369:2: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  369 |  for(auto* button:actionButtons_)button->setMinimumWidth(button->sizeHint().width());bandStage_=stage;fittingBand_=false;
+      |  ^~~
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp:369:86: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  369 |  for(auto* button:actionButtons_)button->setMinimumWidth(button->sizeHint().width());bandStage_=stage;fittingBand_=false;
+      |                                                                                      ^~~~~~~~~~
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp: In destructor ‘virtual putgd::MainWindow::~MainWindow()’:
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp:385:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  385 |  if(settings_)disconnect(settings_,nullptr,this,nullptr);disconnect(history_,nullptr,this,nullptr);disconnect(tabs_,nullptr,this,nullptr);disconnect(&session_,nullptr,this,nullptr);
+      |  ^~
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp:385:58: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  385 |  if(settings_)disconnect(settings_,nullptr,this,nullptr);disconnect(history_,nullptr,this,nullptr);disconnect(tabs_,nullptr,this,nullptr);disconnect(&session_,nullptr,this,nullptr);
+      |                                                          ^~~~~~~~~~
+[13/36] Building CXX object CMakeFiles/putgd_app.dir/src/app/ScrollCaptureService.cpp.o
+/home/patrick/work/scroll-integrate-1376/src/app/ScrollCaptureService.cpp: In lambda function:
+/home/patrick/work/scroll-integrate-1376/src/app/ScrollCaptureService.cpp:69:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   69 |   if(!g)return;QMetaObject::invokeMethod(g,[g,id,e,r]{if(!g||g->id_!=id)return;
+      |   ^~
+/home/patrick/work/scroll-integrate-1376/src/app/ScrollCaptureService.cpp:69:16: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   69 |   if(!g)return;QMetaObject::invokeMethod(g,[g,id,e,r]{if(!g||g->id_!=id)return;
+      |                ^~~~~~~~~~~
+[14/36] Building CXX object CMakeFiles/putgd_app.dir/src/app/SetupService.cpp.o
+[15/36] Building CXX object CMakeFiles/putgd_app.dir/src/app/HistoryService.cpp.o
+[16/36] Building CXX object CMakeFiles/putgd_app.dir/src/app/OperationService.cpp.o
+[17/36] Building CXX object CMakeFiles/putgd_app.dir/src/app/LocalServer.cpp.o
+[18/36] Building CXX object CMakeFiles/putgd_app.dir/src/app/UpdateService.cpp.o
+[19/36] Linking CXX static library libputgd_ui.a
+[20/36] Building CXX object CMakeFiles/putgd_app.dir/src/app/DiagnosticsBundle.cpp.o
+[21/36] Linking CXX executable putgd-ui
+[22/36] Linking CXX static library libputgd_app.a
+[23/36] Automatic MOC and UIC for target putgd_tray
+[24/36] Automatic MOC and UIC for target putgd_upload_client
+[25/35] Linking CXX executable putgd-region
+[26/35] Building CXX object CMakeFiles/putgd-cli.dir/src/cli/main.cpp.o
+[27/35] Building CXX object CMakeFiles/putgd_tray.dir/putgd_tray_autogen/mocs_compilation.cpp.o
+[28/35] Linking CXX executable putgd-capture
+[29/35] Linking CXX executable putgd-cli
+[30/35] Building CXX object CMakeFiles/putgd_upload_client.dir/src/app/UploadClient.cpp.o
+[31/35] Linking CXX static library libputgd_upload_client.a
+[32/35] Building CXX object CMakeFiles/putgd_tray.dir/src/ui/TrayController.cpp.o
+[33/35] Linking CXX static library libputgd_tray.a
+[34/35] Building CXX object CMakeFiles/putgd.dir/src/main.cpp.o
+[35/35] Linking CXX executable putgd

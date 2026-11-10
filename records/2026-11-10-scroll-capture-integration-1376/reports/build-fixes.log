@@ -1,0 +1,816 @@
+[1/289] cd /home/patrick/work/scroll-integrate-1376/build/dev && /usr/bin/cmake -DSOURCE_DIR=/home/patrick/work/scroll-integrate-1376 -DOUTPUT_DIR=/home/patrick/work/scroll-integrate-1376/build/dev/build-identity -DRELEASE_TAG= -DSUPPLIED_COMMIT= -DSUPPLIED_TREE= -DSUPPLIED_COUNT= -DSUPPLIED_TIME= -P /home/patrick/work/scroll-integrate-1376/cmake/GenerateBuildInfo.cmake
+[2/289] Building CXX object CMakeFiles/putgd_build_identity.dir/build-identity/BuildInfo.cpp.o
+[3/289] Linking CXX static library libputgd_build_identity.a
+[4/289] Linking CXX shared module libputgd-s3.so
+[5/289] Linking CXX executable putgd-http-worker
+[6/289] Linking CXX executable putgd-b2-worker
+[7/289] Automatic MOC and UIC for target putgd_ui
+[8/288] Automatic MOC and UIC for target putgd_app
+[9/288] Linking CXX executable putgd-s3-worker
+[10/288] Linking CXX executable putgd-record
+[11/288] Building CXX object CMakeFiles/putgd_app.dir/putgd_app_autogen/mocs_compilation.cpp.o
+[12/288] Building CXX object CMakeFiles/putgd_ui.dir/src/ui/MainWindow.cpp.o
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp: In lambda function:
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp:305:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  305 |   if(gaps==sourceGaps_)return;sourceGaps_=gaps;for(const auto& refresh:captureButtonUpdates_)refresh();updateDestination();});
+      |   ^~
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp:305:31: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  305 |   if(gaps==sourceGaps_)return;sourceGaps_=gaps;for(const auto& refresh:captureButtonUpdates_)refresh();updateDestination();});
+      |                               ^~~~~~~~~~~
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp: In member function ‘void putgd::MainWindow::updateOutputSummary()’:
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp:328:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  328 |  if(!destination_)return;destination_->setText(destination_->property("fullOutputSummary").toString().replace('&',QStringLiteral("&&")));
+      |  ^~
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp:328:26: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  328 |  if(!destination_)return;destination_->setText(destination_->property("fullOutputSummary").toString().replace('&',QStringLiteral("&&")));
+      |                          ^~~~~~~~~~~~
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp: In member function ‘void putgd::MainWindow::fitBand()’:
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp:357:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  357 |  if(!band_||fittingBand_)return;fittingBand_=true;
+      |  ^~
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp:357:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  357 |  if(!band_||fittingBand_)return;fittingBand_=true;
+      |                                 ^~~~~~~~~~~~
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp:369:2: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  369 |  for(auto* button:actionButtons_)button->setMinimumWidth(button->sizeHint().width());bandStage_=stage;fittingBand_=false;
+      |  ^~~
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp:369:86: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  369 |  for(auto* button:actionButtons_)button->setMinimumWidth(button->sizeHint().width());bandStage_=stage;fittingBand_=false;
+      |                                                                                      ^~~~~~~~~~
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp: In destructor ‘virtual putgd::MainWindow::~MainWindow()’:
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp:385:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  385 |  if(settings_)disconnect(settings_,nullptr,this,nullptr);disconnect(history_,nullptr,this,nullptr);disconnect(tabs_,nullptr,this,nullptr);disconnect(&session_,nullptr,this,nullptr);
+      |  ^~
+/home/patrick/work/scroll-integrate-1376/src/ui/MainWindow.cpp:385:58: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  385 |  if(settings_)disconnect(settings_,nullptr,this,nullptr);disconnect(history_,nullptr,this,nullptr);disconnect(tabs_,nullptr,this,nullptr);disconnect(&session_,nullptr,this,nullptr);
+      |                                                          ^~~~~~~~~~
+[13/288] Building CXX object CMakeFiles/putgd_app.dir/src/app/OperationClipboard.cpp.o
+/home/patrick/work/scroll-integrate-1376/src/app/OperationClipboard.cpp: In lambda function:
+/home/patrick/work/scroll-integrate-1376/src/app/OperationClipboard.cpp:134:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  134 |   if(!guard.isEmpty())state->suppression=guard;return guard.isEmpty();
+      |   ^~
+/home/patrick/work/scroll-integrate-1376/src/app/OperationClipboard.cpp:134:48: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  134 |   if(!guard.isEmpty())state->suppression=guard;return guard.isEmpty();
+      |                                                ^~~~~~
+/home/patrick/work/scroll-integrate-1376/src/app/OperationClipboard.cpp: In lambda function:
+/home/patrick/work/scroll-integrate-1376/src/app/OperationClipboard.cpp:195:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  195 |   if(!guard.isEmpty())group->suppression=guard;return guard.isEmpty();
+      |   ^~
+/home/patrick/work/scroll-integrate-1376/src/app/OperationClipboard.cpp:195:48: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  195 |   if(!guard.isEmpty())group->suppression=guard;return guard.isEmpty();
+      |                                                ^~~~~~
+[14/288] Building CXX object CMakeFiles/putgd_app.dir/src/app/ScrollCaptureService.cpp.o
+/home/patrick/work/scroll-integrate-1376/src/app/ScrollCaptureService.cpp: In lambda function:
+/home/patrick/work/scroll-integrate-1376/src/app/ScrollCaptureService.cpp:69:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   69 |   if(!g)return;QMetaObject::invokeMethod(g,[g,id,e,r]{if(!g||g->id_!=id)return;
+      |   ^~
+/home/patrick/work/scroll-integrate-1376/src/app/ScrollCaptureService.cpp:69:16: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   69 |   if(!g)return;QMetaObject::invokeMethod(g,[g,id,e,r]{if(!g||g->id_!=id)return;
+      |                ^~~~~~~~~~~
+[15/288] Building CXX object CMakeFiles/putgd_app.dir/src/app/SetupService.cpp.o
+[16/288] Building CXX object CMakeFiles/putgd_app.dir/src/app/HistoryService.cpp.o
+[17/288] Building CXX object CMakeFiles/putgd_app.dir/src/app/OperationService.cpp.o
+[18/288] Linking CXX static library libputgd_ui.a
+[19/288] Building CXX object CMakeFiles/putgd_app.dir/src/app/LocalServer.cpp.o
+[20/288] Linking CXX executable test_capture_helper_fixture
+[21/288] Linking CXX executable test_image_job_fixture
+[22/288] Linking CXX executable putgd-ui
+[23/288] Linking CXX executable test_editor_helper_fixture
+[24/288] Linking CXX shared module libtest_s3_incompatible.so
+[25/288] Linking CXX shared module libtest_s3_wrong_build.so
+[26/288] Linking CXX shared module libtest_s3_wrong_transport.so
+[27/288] Linking CXX executable test_record_helper_fixture
+[28/288] Linking CXX executable test_s3_worker_fixture
+[29/288] Linking CXX executable test_recording_pipeline
+[30/288] Linking CXX executable test_portal_streams
+[31/288] Linking CXX executable test_recording_storage
+[32/288] Linking CXX executable test_bar_placement
+[33/288] Building CXX object CMakeFiles/putgd_app.dir/src/app/UpdateService.cpp.o
+[34/288] Linking CXX executable test_review_window_layout
+[35/288] Building CXX object CMakeFiles/putgd_app.dir/src/app/DiagnosticsBundle.cpp.o
+[36/288] Linking CXX executable test_review_window_footer
+[37/288] Linking CXX executable test_review_window_workspace
+[38/288] Linking CXX executable test_image_job
+[39/288] Linking CXX executable test_poster_job
+[40/288] Linking CXX executable test_ui_process
+[41/288] Linking CXX executable test_review_window_actions
+[42/288] Linking CXX executable test_dialog_attachment
+[43/288] Linking CXX executable test_image_pages
+[44/288] Linking CXX executable test_editor
+[45/288] Linking CXX static library libputgd_app.a
+[46/288] Linking CXX executable test_editor_job
+[47/288] Automatic MOC and UIC for target putgd_tray
+[48/288] Linking CXX executable test_gui_version
+[49/288] Automatic MOC and UIC for target putgd_upload_client
+[50/287] Linking CXX executable test_editor_window
+[51/287] Building CXX object CMakeFiles/putgd_tray.dir/putgd_tray_autogen/mocs_compilation.cpp.o
+[52/287] Building CXX object CMakeFiles/putgd-cli.dir/src/cli/main.cpp.o
+[53/287] Linking CXX executable putgd-region
+[54/287] Linking CXX executable putgd-cli
+[55/287] Linking CXX executable putgd-capture
+[56/287] Building CXX object CMakeFiles/putgd_upload_client.dir/src/app/UploadClient.cpp.o
+[57/287] Linking CXX static library libputgd_upload_client.a
+[58/287] Automatic MOC and UIC for target test_ui_split_services
+[59/286] Linking CXX executable test_stale_resident_fixture
+[60/286] Automatic MOC and UIC for target test_edit_operations
+[61/285] Automatic MOC and UIC for target test_ui_endpoints
+[62/284] Automatic MOC and UIC for target test_update_service
+[63/283] Automatic MOC and UIC for target test_ui_native_lifecycle
+[64/282] Automatic MOC and UIC for target test_collision_policy
+[65/281] Automatic MOC and UIC for target test_s3
+[66/280] Building CXX object CMakeFiles/putgd_tray.dir/src/ui/TrayController.cpp.o
+[67/280] Automatic MOC and UIC for target test_gui_application
+[68/279] Automatic MOC and UIC for target test_s3_multipart
+[69/278] Automatic MOC and UIC for target test_history
+[70/277] Linking CXX static library libputgd_tray.a
+[71/277] Automatic MOC and UIC for target test_operations
+[72/276] Automatic MOC and UIC for target test_capture_delay
+[73/275] Automatic MOC and UIC for target test_storage_contract
+[74/274] Automatic MOC and UIC for target test_gui_tray
+[75/273] Automatic MOC and UIC for target test_config_reload
+[76/272] Automatic MOC and UIC for target test_gui_tray_latency
+[77/271] Automatic MOC and UIC for target test_recording_service
+[78/270] Automatic MOC and UIC for target test_recording_helper
+[79/269] Automatic MOC and UIC for target test_scroll_service
+[80/268] Automatic MOC and UIC for target test_logging
+[81/267] Automatic MOC and UIC for target test_diagnostics_upload
+[82/266] Automatic MOC and UIC for target test_diagnostics_bundle
+[83/265] Automatic MOC and UIC for target test_gui_history_view
+[84/264] Automatic MOC and UIC for target test_gui_settings_appearance
+[85/264] Automatic MOC and UIC for target test_gui_settings_general
+[86/264] Automatic MOC and UIC for target test_gui_settings_capture
+[87/264] Automatic MOC and UIC for target test_gui_settings_shortcuts
+[88/264] Automatic MOC and UIC for target test_gui_settings_destinations
+[89/264] Automatic MOC and UIC for target test_gui_settings_credentials
+[90/264] Automatic MOC and UIC for target test_gui_settings_updates
+[91/264] Automatic MOC and UIC for target test_gui_settings_advanced
+[92/264] Automatic MOC and UIC for target test_file_uploads
+[93/263] Automatic MOC and UIC for target test_local_ipc
+[94/262] Automatic MOC and UIC for target test_proton
+[95/261] Automatic MOC and UIC for target test_http_uploader
+[96/260] Building CXX object CMakeFiles/putgd.dir/src/main.cpp.o
+[97/260] Building CXX object CMakeFiles/putgd-bench-theme-switch.dir/tests/performance/bench_theme_switch.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/fixtures/UiSessionFixture.h:2,
+                 from /home/patrick/work/scroll-integrate-1376/tests/performance/bench_theme_switch.cpp:5:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+/home/patrick/work/scroll-integrate-1376/tests/performance/bench_theme_switch.cpp: In function ‘int main(int, char**)’:
+/home/patrick/work/scroll-integrate-1376/tests/performance/bench_theme_switch.cpp:69:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   69 |  if(!waitUntil([&]{return window->isVisible();}))return 2;QTest::qWait(800);
+      |  ^~
+/home/patrick/work/scroll-integrate-1376/tests/performance/bench_theme_switch.cpp:69:59: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   69 |  if(!waitUntil([&]{return window->isVisible();}))return 2;QTest::qWait(800);
+      |                                                           ^~~~~
+[98/260] Building CXX object CMakeFiles/putgd-bench-history-gallery.dir/tests/performance/bench_history_gallery.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/fixtures/UiSessionFixture.h:2,
+                 from /home/patrick/work/scroll-integrate-1376/tests/performance/bench_history_gallery.cpp:5:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[99/260] Linking CXX executable putgd
+[100/260] Automatic MOC and UIC for target test_native_tray
+[101/259] Automatic MOC and UIC for target test_version
+[102/258] Automatic MOC and UIC for target test_cli
+[103/257] Automatic MOC and UIC for target test_storage_locations
+[104/256] Building CXX object CMakeFiles/test_ui_split_services.dir/tests/integration/test_ui_split_services.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/integration/test_ui_split_services.cpp:5:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[105/256] Building CXX object CMakeFiles/putgd-bench-history-scroll.dir/tests/performance/bench_history_scroll.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/fixtures/UiSessionFixture.h:2,
+                 from /home/patrick/work/scroll-integrate-1376/tests/performance/bench_history_scroll.cpp:6:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[106/256] Building CXX object CMakeFiles/putgd-ui-catalog.dir/tests/gui/ui_catalog.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/fixtures/UiSessionFixture.h:2,
+                 from /home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp:2:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+/home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp: In function ‘int main(int, char**)’:
+/home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp:335:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  335 |  if(QGuiApplication::platformName()=="offscreen")Ui::WindowHeader::setCustomFrameOverride(1);app.setWindowIcon(Ui::icon("brand"));Native native;if(qEnvironmentVariable("PUTGD_CATALOG_THEME")=="light")Theme::setScheme(Theme::Scheme::Light);if(app.arguments().size()!=2){qCritical("Usage: putgd-ui-catalog OUTPUT_DIRECTORY");return 2;}const auto output=QFileInfo(app.arguments().at(1)).absoluteFilePath();if(!QDir().mkpath(output)){qCritical("Cannot create catalog output directory");return 2;}
+      |  ^~
+/home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp:335:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  335 |  if(QGuiApplication::platformName()=="offscreen")Ui::WindowHeader::setCustomFrameOverride(1);app.setWindowIcon(Ui::icon("brand"));Native native;if(qEnvironmentVariable("PUTGD_CATALOG_THEME")=="light")Theme::setScheme(Theme::Scheme::Light);if(app.arguments().size()!=2){qCritical("Usage: putgd-ui-catalog OUTPUT_DIRECTORY");return 2;}const auto output=QFileInfo(app.arguments().at(1)).absoluteFilePath();if(!QDir().mkpath(output)){qCritical("Cannot create catalog output directory");return 2;}
+      |                                                                                              ^~~
+/home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp: In lambda function:
+/home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp:386:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  386 |   if(!checkSteppers(window))return false;if(name=="10-history-compact"){QJsonArray commands;auto* band=window.findChild<QWidget*>("commandBand");for(auto* button:band->findChildren<QToolButton*>("captureActionButton"))commands.append(QJsonObject{{"action",button->property("captureAction").toString()},{"label",button->text()},{"labelVisible",button->toolButtonStyle()!=Qt::ToolButtonIconOnly},{"width",button->width()},{"sizeHint",button->sizeHint().width()}});QFile measurements(QDir(output).filePath("command-band-measurements.json"));if(!measurements.open(QIODevice::WriteOnly))return false;measurements.write(QJsonDocument(QJsonObject{{"windowWidth",window.width()},{"bandWidth",band->width()},{"requiredWidth",band->layout()->sizeHint().width()},{"gap",qobject_cast<QGridLayout*>(band->layout())->horizontalSpacing()},{"commands",commands}}).toJson());}const auto image=steadyGrab(window,prepare);const auto path=QDir(output).filePath(name+".png");if(!image.save(path))return false;if(!native.step(window,name)||!writeInventory(output,name,window))return false;captures.append(QJsonObject{{"file",name+".png"},{"controls",name+".controls.json"},{"width",image.width()},{"height",image.height()}});return true;};
+      |   ^~
+/home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp:386:42: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  386 |   if(!checkSteppers(window))return false;if(name=="10-history-compact"){QJsonArray commands;auto* band=window.findChild<QWidget*>("commandBand");for(auto* button:band->findChildren<QToolButton*>("captureActionButton"))commands.append(QJsonObject{{"action",button->property("captureAction").toString()},{"label",button->text()},{"labelVisible",button->toolButtonStyle()!=Qt::ToolButtonIconOnly},{"width",button->width()},{"sizeHint",button->sizeHint().width()}});QFile measurements(QDir(output).filePath("command-band-measurements.json"));if(!measurements.open(QIODevice::WriteOnly))return false;measurements.write(QJsonDocument(QJsonObject{{"windowWidth",window.width()},{"bandWidth",band->width()},{"requiredWidth",band->layout()->sizeHint().width()},{"gap",qobject_cast<QGridLayout*>(band->layout())->horizontalSpacing()},{"commands",commands}}).toJson());}const auto image=steadyGrab(window,prepare);const auto path=QDir(output).filePath(name+".png");if(!image.save(path))return false;if(!native.step(window,name)||!writeInventory(output,name,window))return false;captures.append(QJsonObject{{"file",name+".png"},{"controls",name+".controls.json"},{"width",image.width()},{"height",image.height()}});return true;};
+      |                                          ^~
+/home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp: In function ‘int main(int, char**)’:
+/home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp:429:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  429 |   if(!confirmation->findChild<QPushButton*>("confirmActionButton")||!saveDialog(output,"confirm-history-delete-supported",*confirmation,captures))return 2;delete confirmation.data();
+      |   ^~
+/home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp:429:156: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  429 |   if(!confirmation->findChild<QPushButton*>("confirmActionButton")||!saveDialog(output,"confirm-history-delete-supported",*confirmation,captures))return 2;delete confirmation.data();
+      |                                                                                                                                                            ^~~~~~
+/home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp:571:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  571 |  if(!waitUntil([&]{return window.settings()->saveViewState()["conflict"].toBool();}))return 2;if(!save("52-destinations-conflict"))return 2;putgd::test::settle(100);destinationScroll->ensureWidgetVisible(window.findChild<QWidget*>("credentialActions")->parentWidget(),0,16);if(!save("64-credential-store-conflict"))return 2;
+      |  ^~
+/home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp:571:95: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  571 |  if(!waitUntil([&]{return window.settings()->saveViewState()["conflict"].toBool();}))return 2;if(!save("52-destinations-conflict"))return 2;putgd::test::settle(100);destinationScroll->ensureWidgetVisible(window.findChild<QWidget*>("credentialActions")->parentWidget(),0,16);if(!save("64-credential-store-conflict"))return 2;
+      |                                                                                               ^~
+/home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp:584:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  584 |   if(!waitUntil([&]{return window.settings()->isEnabled();}))return 2;putgd::test::settle(450);window.findChild<QToolButton*>("captureExceptionsToggle")->setChecked(true);override->click();auto* scroll=qobject_cast<QScrollArea*>(tabs->currentWidget());
+      |   ^~
+/home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp:584:71: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  584 |   if(!waitUntil([&]{return window.settings()->isEnabled();}))return 2;putgd::test::settle(450);window.findChild<QToolButton*>("captureExceptionsToggle")->setChecked(true);override->click();auto* scroll=qobject_cast<QScrollArea*>(tabs->currentWidget());
+      |                                                                       ^~~~~
+/home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp:585:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  585 |   if(!waitUntil([&]{return settings.document()["actions"].toObject()["clipboard"].toObject()["destination"]!="default"&&override->isChecked();}))return 2;putgd::test::settle(100);if(scroll)scroll->ensureWidgetVisible(window.findChild<QWidget*>("captureEditorClipboard"),0,40);if(!save("54-capture-exception-override"))return 2;
+      |   ^~
+/home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp:585:155: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  585 |   if(!waitUntil([&]{return settings.document()["actions"].toObject()["clipboard"].toObject()["destination"]!="default"&&override->isChecked();}))return 2;putgd::test::settle(100);if(scroll)scroll->ensureWidgetVisible(window.findChild<QWidget*>("captureEditorClipboard"),0,40);if(!save("54-capture-exception-override"))return 2;
+      |                                                                                                                                                           ^~~~~
+/home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp:587:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  587 |   if(!waitUntil([&]{return settings.snapshot().actions["record"].publicationMode=="private";}))return 2;if(scroll)scroll->ensureWidgetVisible(window.findChild<QWidget*>("captureRowRecord"),0,40);if(!save("66-recording-region-inheritance"))return 2;
+      |   ^~
+/home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp:587:105: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  587 |   if(!waitUntil([&]{return settings.snapshot().actions["record"].publicationMode=="private";}))return 2;if(scroll)scroll->ensureWidgetVisible(window.findChild<QWidget*>("captureRowRecord"),0,40);if(!save("66-recording-region-inheritance"))return 2;
+      |                                                                                                         ^~
+/home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp:589:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  589 |   if(!waitUntil([&]{return settings.snapshot().actions["record"].publicationMode=="share"&&settings.snapshot().actions["record"].profileId=="synthetic-archive";}))return 2;if(scroll)scroll->ensureWidgetVisible(window.findChild<QWidget*>("captureEditorRecord"),0,40);if(!save("67-recording-explicit-output"))return 2;
+      |   ^~
+/home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp:589:173: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  589 |   if(!waitUntil([&]{return settings.snapshot().actions["record"].publicationMode=="share"&&settings.snapshot().actions["record"].profileId=="synthetic-archive";}))return 2;if(scroll)scroll->ensureWidgetVisible(window.findChild<QWidget*>("captureEditorRecord"),0,40);if(!save("67-recording-explicit-output"))return 2;
+      |                                                                                                                                                                             ^~
+/home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp:758:120: warning: ignoring return value of ‘bool putgd::test::waitForWindowActive(Window*, int) [with Window = putgd::record::ReviewWindow]’, declared with attribute ‘nodiscard’ [-Wunused-result]
+  758 |   review.drive({{"action","selectMask"},{"maskId","m-solid"}});review.activateWindow();putgd::test::waitForWindowActive(&review);if(auto* view=review.findChild<record::FrameView*>())view->setFocus(Qt::TabFocusReason);if(!shot(review,"38-review-keyboard-mask")||!inspected(review,"38-review-keyboard-mask"))return 2;
+      |                                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+In file included from /home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp:71:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/Waits.h:82:20: note: declared here
+   82 | [[nodiscard]] bool waitForWindowActive(Window* window, int ms = defaultWaitMs) {
+      |                    ^~~~~~~~~~~~~~~~~~~
+/home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp:854:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  854 |   if(!grabAbout("about"))return 2;auto* details=about.findChild<QToolButton*>("buildDetails");if(!details)return 2;details->click();if(!grabAbout("about-build-details"))return 2;about.findChild<QPushButton*>("copyBuildDetails")->click();if(!grabAbout("about-build-details-copied"))return 2;about.close();
+      |   ^~
+/home/patrick/work/scroll-integrate-1376/tests/gui/ui_catalog.cpp:854:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  854 |   if(!grabAbout("about"))return 2;auto* details=about.findChild<QToolButton*>("buildDetails");if(!details)return 2;details->click();if(!grabAbout("about-build-details"))return 2;about.findChild<QPushButton*>("copyBuildDetails")->click();if(!grabAbout("about-build-details-copied"))return 2;about.close();
+      |                                   ^~~~
+[107/256] Building CXX object CMakeFiles/test_version.dir/tests/integration/test_version.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/integration/test_version.cpp:3:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[108/256] Building CXX object CMakeFiles/test_edit_operations.dir/tests/integration/test_edit_operations.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/integration/test_edit_operations.cpp:1:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[109/256] Building CXX object CMakeFiles/test_ui_endpoints.dir/tests/integration/test_ui_endpoints.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/integration/test_ui_endpoints.cpp:1:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[110/256] Building CXX object CMakeFiles/test_native_tray.dir/tests/integration/test_native_tray.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/integration/test_native_tray.cpp:4:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[111/256] Building CXX object CMakeFiles/test_update_service.dir/tests/unit/test_update_service.cpp.o
+[112/256] Building CXX object CMakeFiles/test_gui_application.dir/tests/gui/test_ui_application.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/fixtures/UiSessionFixture.h:2,
+                 from /home/patrick/work/scroll-integrate-1376/tests/gui/test_ui_application.cpp:13:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[113/256] Building CXX object CMakeFiles/test_gui_tray_latency.dir/tests/gui/test_tray_notification_latency.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/gui/test_tray_notification_latency.cpp:1:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[114/256] Building CXX object CMakeFiles/test_gui_tray.dir/tests/gui/test_tray.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/gui/test_tray.cpp:1:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[115/256] Building CXX object CMakeFiles/test_ui_native_lifecycle.dir/tests/integration/test_ui_native_lifecycle.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/integration/test_ui_native_lifecycle.cpp:6:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[116/256] Building CXX object CMakeFiles/test_collision_policy.dir/tests/integration/test_collision_policy.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/integration/test_collision_policy.cpp:2:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[117/256] Building CXX object CMakeFiles/test_s3.dir/tests/integration/test_s3.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/integration/test_s3.cpp:2:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[118/256] Building CXX object CMakeFiles/test_history.dir/tests/unit/test_history.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/unit/test_history.cpp:2:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[119/256] Building CXX object CMakeFiles/test_s3_multipart.dir/tests/integration/test_s3_multipart.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/integration/test_s3_multipart.cpp:2:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[120/256] Building CXX object CMakeFiles/test_capture_delay.dir/tests/unit/test_capture_delay.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/unit/test_capture_delay.cpp:4:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[121/256] Building CXX object CMakeFiles/test_cli.dir/tests/integration/test_cli.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/integration/test_cli.cpp:1:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[122/256] Building CXX object CMakeFiles/test_storage_contract.dir/tests/integration/test_storage_contract.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/integration/test_storage_contract.cpp:1:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[123/256] Building CXX object CMakeFiles/test_config_reload.dir/tests/integration/test_config_reload.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/integration/test_config_reload.cpp:1:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[124/256] Building CXX object CMakeFiles/test_storage_locations.dir/tests/integration/test_storage_locations.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/integration/test_storage_locations.cpp:1:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[125/256] Building CXX object CMakeFiles/test_operations.dir/tests/unit/test_operations.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/unit/test_operations.cpp:1:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[126/256] Building CXX object CMakeFiles/test_recording_helper.dir/tests/integration/test_recording_helper.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/integration/test_recording_helper.cpp:1:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[127/256] Building CXX object CMakeFiles/test_recording_service.dir/tests/integration/test_recording_service.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/integration/test_recording_service.cpp:1:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[128/256] Building CXX object CMakeFiles/test_scroll_service.dir/tests/integration/test_scroll_service.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/integration/test_scroll_service.cpp:1:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+In file included from /home/patrick/work/scroll-integrate-1376/tests/integration/test_scroll_service.cpp:2:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/FakeScrollBackend.h: In member function ‘virtual void putgd::test::FakeScrollBackend::control(const QString&, const QString&, const QJsonObject&, putgd::ScrollBackend::Reply)’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/FakeScrollBackend.h:18:159: warning: ignoring return value of ‘virtual bool QFile::open(QIODeviceBase::OpenMode)’, declared with attribute ‘nodiscard’ [-Wunused-result]
+   18 |   if(cmd=="stop") {QImage image(64,64,QImage::Format_RGB32);image.fill(Qt::blue);const auto path=directory+"/result.png";image.save(path);QFile f(path);f.open(QIODevice::ReadOnly);auto png=f.readAll();reply({},{{"path",path},{"bytes",png.size()+(corruption=="size"?1:0)},{"sha256",corruption=="hash"?QString("bad"):QString::fromLatin1(QCryptographicHash::hash(png,QCryptographicHash::Sha256).toHex())},{"width",corruption=="ihdr"?65:64},{"height",64},{"endReason",heightCap?"height_cap":"stopped"},{"appliedMaxHeight",30000},{"truncated",true}});return;}
+      |                                                                                                                                                         ~~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/qt6/QtCore/qdir.h:11,
+                 from /usr/include/x86_64-linux-gnu/qt6/QtCore/qtemporarydir.h:9,
+                 from /usr/include/x86_64-linux-gnu/qt6/QtTest/qtestcase.h:15,
+                 from /usr/include/x86_64-linux-gnu/qt6/QtTest/qtest.h:13,
+                 from /usr/include/x86_64-linux-gnu/qt6/QtTest/QTest:1,
+                 from /home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:7:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qfile.h:291:32: note: declared here
+  291 |     QFILE_MAYBE_NODISCARD bool open(OpenMode flags) override;
+      |                                ^~~~
+[129/256] Building CXX object CMakeFiles/test_logging.dir/tests/unit/test_logging.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/unit/test_logging.cpp:5:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+/home/patrick/work/scroll-integrate-1376/tests/unit/test_logging.cpp: In member function ‘virtual putgd::ProviderCapabilities {anonymous}::DeniedProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/unit/test_logging.cpp:39:147: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   39 |  ProviderCapabilities capabilities(const Destination&) const override {return {true,true,true,true,true,true,true,255,"Remove the recorded object"};}
+      |                                                                                                                                                   ^
+/home/patrick/work/scroll-integrate-1376/tests/unit/test_logging.cpp: In member function ‘virtual void {anonymous}::DeniedProvider::checkName(const putgd::Destination&, const QString&, std::function<void(putgd::NameCheck)>, std::shared_ptr<std::atomic<bool> >)’:
+/home/patrick/work/scroll-integrate-1376/tests/unit/test_logging.cpp:42:128: warning: unused parameter ‘cancellation’ [-Wunused-parameter]
+   42 |  void checkName(const Destination&,const QString& name,std::function<void(NameCheck)> reply, std::shared_ptr<std::atomic_bool> cancellation = {}) override {reply({"absent",{{"key",name}},{},{}});}
+      |                                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+[130/256] Building CXX object CMakeFiles/test_diagnostics_upload.dir/tests/unit/test_diagnostics_upload.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/unit/test_diagnostics_upload.cpp:3:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[131/256] Building CXX object CMakeFiles/test_diagnostics_bundle.dir/tests/unit/test_diagnostics_bundle.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/unit/test_diagnostics_bundle.cpp:5:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+/home/patrick/work/scroll-integrate-1376/tests/unit/test_diagnostics_bundle.cpp: In member function ‘virtual putgd::ProviderCapabilities {anonymous}::DeniedProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/unit/test_diagnostics_bundle.cpp:23:147: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   23 |  ProviderCapabilities capabilities(const Destination&) const override {return {true,true,true,true,true,true,true,255,"Remove the recorded object"};}
+      |                                                                                                                                                   ^
+/home/patrick/work/scroll-integrate-1376/tests/unit/test_diagnostics_bundle.cpp: In member function ‘virtual void {anonymous}::DeniedProvider::checkName(const putgd::Destination&, const QString&, std::function<void(putgd::NameCheck)>, std::shared_ptr<std::atomic<bool> >)’:
+/home/patrick/work/scroll-integrate-1376/tests/unit/test_diagnostics_bundle.cpp:26:128: warning: unused parameter ‘cancellation’ [-Wunused-parameter]
+   26 |  void checkName(const Destination&,const QString& name,std::function<void(NameCheck)> reply, std::shared_ptr<std::atomic_bool> cancellation = {}) override {reply({"absent",{{"key","uploads/"+name}},{},{}});}
+      |                                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+[132/256] Building CXX object CMakeFiles/test_gui_settings_appearance.dir/test_gui_settings_appearance_autogen/mocs_compilation.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/fixtures/UiSessionFixture.h:2,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_appearance_autogen/FIV6JECLMT/../../../../tests/gui/SettingsGuiFixture.h:28,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_appearance_autogen/FIV6JECLMT/moc_SettingsGuiFixture.cpp:9,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_appearance_autogen/mocs_compilation.cpp:2:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[133/256] Building CXX object CMakeFiles/test_gui_settings_general.dir/test_gui_settings_general_autogen/mocs_compilation.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/fixtures/UiSessionFixture.h:2,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_general_autogen/FIV6JECLMT/../../../../tests/gui/SettingsGuiFixture.h:28,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_general_autogen/FIV6JECLMT/moc_SettingsGuiFixture.cpp:9,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_general_autogen/mocs_compilation.cpp:2:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[134/256] Building CXX object CMakeFiles/test_gui_settings_appearance.dir/tests/gui/test_settings_appearance.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/fixtures/UiSessionFixture.h:2,
+                 from /home/patrick/work/scroll-integrate-1376/tests/gui/SettingsGuiFixture.h:28,
+                 from /home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_appearance.cpp:1:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_appearance.cpp: In lambda function:
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_appearance.cpp:34:4: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   34 |    if(!putgd::test::waitFor([&]{return done;},5000))qWarning("ui.fileDialog timed out");return {error,result};};
+      |    ^~
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_appearance.cpp:34:89: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   34 |    if(!putgd::test::waitFor([&]{return done;},5000))qWarning("ui.fileDialog timed out");return {error,result};};
+      |                                                                                         ^~~~~~
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_appearance.cpp: In lambda function:
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_appearance.cpp:268:6: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  268 |      if(gutter<0)gutter=current;if(current!=gutter)return false;
+      |      ^~
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_appearance.cpp:268:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  268 |      if(gutter<0)gutter=current;if(current!=gutter)return false;
+      |                                 ^~
+[135/256] Building CXX object CMakeFiles/test_gui_settings_general.dir/tests/gui/test_settings_general.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/fixtures/UiSessionFixture.h:2,
+                 from /home/patrick/work/scroll-integrate-1376/tests/gui/SettingsGuiFixture.h:28,
+                 from /home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_general.cpp:1:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[136/256] Building CXX object CMakeFiles/test_gui_settings_capture.dir/test_gui_settings_capture_autogen/mocs_compilation.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/fixtures/UiSessionFixture.h:2,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_capture_autogen/FIV6JECLMT/../../../../tests/gui/SettingsGuiFixture.h:28,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_capture_autogen/FIV6JECLMT/moc_SettingsGuiFixture.cpp:9,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_capture_autogen/mocs_compilation.cpp:2:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[137/256] Building CXX object CMakeFiles/test_gui_history_view.dir/tests/gui/test_history_view.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/fixtures/UiSessionFixture.h:2,
+                 from /home/patrick/work/scroll-integrate-1376/tests/gui/test_history_view.cpp:18:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_history_view.cpp: In static member function ‘static bool HistoryGui::seedCaptures(QTemporaryDir&, putgd::SettingsService&, putgd::OperationService&, int)’:
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_history_view.cpp:196:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  196 |   if(!QDir().mkpath(d.filePath("data/previews")))return false;HistoryStore ledger(operations.databasePath());for(int n=0;n<rows;++n){
+      |   ^~
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_history_view.cpp:196:63: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  196 |   if(!QDir().mkpath(d.filePath("data/previews")))return false;HistoryStore ledger(operations.databasePath());for(int n=0;n<rows;++n){
+      |                                                               ^~~~~~~~~~~~
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_history_view.cpp: In member function ‘void HistoryGui::compactRowsKeepTitlesClearAndTimesVisible()’:
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_history_view.cpp:316:3: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  316 |   for(int y=0;y<size.height();++y)for(int x=textLeft;x<width;++x)if(first.pixelColor(x,y).rgb()==Theme::current().text.rgb()){titleTop=qMin(titleTop,y);titleBottom=qMax(titleBottom,y+1);}QVERIFY(titleBottom>titleTop);
+      |   ^~~
+In file included from /usr/include/x86_64-linux-gnu/qt6/QtTest/qtest.h:13,
+                 from /usr/include/x86_64-linux-gnu/qt6/QtTest/QTest:1,
+                 from /home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:7:
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_history_view.cpp:316:188: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  316 |   for(int y=0;y<size.height();++y)for(int x=textLeft;x<width;++x)if(first.pixelColor(x,y).rgb()==Theme::current().text.rgb()){titleTop=qMin(titleTop,y);titleBottom=qMax(titleBottom,y+1);}QVERIFY(titleBottom>titleTop);
+      |                                                                                                                                                                                            ^~~~~~~
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_history_view.cpp: In member function ‘void HistoryGui::compactRowsSpendTheirWidthOnTitles()’:
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_history_view.cpp:360:3: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  360 |   for(int row=0;row<3;++row)if(!list->model()->index(row,0).data(HistoryModel::FailedRole).toBool()){uploaded=row;break;}QVERIFY(uploaded>=0);
+      |   ^~~
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_history_view.cpp:360:122: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  360 |   for(int row=0;row<3;++row)if(!list->model()->index(row,0).data(HistoryModel::FailedRole).toBool()){uploaded=row;break;}QVERIFY(uploaded>=0);
+      |                                                                                                                          ^~~~~~~
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_history_view.cpp:385:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  385 |   if(Ui::scaled(100)==100)QVERIFY(besideSeen);QVERIFY(hiddenSeen);
+      |   ^~
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_history_view.cpp:385:47: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  385 |   if(Ui::scaled(100)==100)QVERIFY(besideSeen);QVERIFY(hiddenSeen);
+      |                                               ^~~~~~~
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_history_view.cpp: In member function ‘void HistoryGui::failedInspectorKeepsOneQuietActionRow()’:
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_history_view.cpp:481:3: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  481 |   for(auto* action:more->menu()->actions())QVERIFY(!action->text().contains("diagnostics",Qt::CaseInsensitive));QVERIFY(!save->accessibleName().isEmpty());
+      |   ^~~
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_history_view.cpp:481:113: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  481 |   for(auto* action:more->menu()->actions())QVERIFY(!action->text().contains("diagnostics",Qt::CaseInsensitive));QVERIFY(!save->accessibleName().isEmpty());
+      |                                                                                                                 ^~~~~~~
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_history_view.cpp: In lambda function:
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_history_view.cpp:792:4: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  792 |    for(int y=poster.top();y<=poster.bottom();++y)for(int x=poster.left();x<=poster.right();++x){const int g=qGray(image.pixel(x,y));if(g>70&&g<130)return true;}return false;};
+      |    ^~~
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_history_view.cpp:792:161: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  792 |    for(int y=poster.top();y<=poster.bottom();++y)for(int x=poster.left();x<=poster.right();++x){const int g=qGray(image.pixel(x,y));if(g>70&&g<130)return true;}return false;};
+      |                                                                                                                                                                 ^~~~~~
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_history_view.cpp: In member function ‘void HistoryGui::realMenuKeyOpensOneRowMenuForTheSelectedRow()’:
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_history_view.cpp:1127:21: warning: loop variable ‘id’ creates a copy from type ‘const QString’ [-Wrange-loop-construct]
+ 1127 |   for(const QString id:{QString("key-first"),QString("key-second")}){HistoryStore ledger(operations.databasePath());Operation op;op.id=id;op.created="2020-01-01T00:00:00.000Z";op.state="completed";op.settings=settings.snapshot();OperationItem item;item.artifact.id=id+"-item";item.artifact.name=id+".txt";item.artifact.mime="text/plain";item.artifact.category="text";item.uploadStatus="local_only";item.local.status="saved";item.local.path=kept;op.items.append(item);QVERIFY(!ledger.saveOperation(op));}
+      |                     ^~
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_history_view.cpp:1127:21: note: use reference type to prevent copying
+ 1127 |   for(const QString id:{QString("key-first"),QString("key-second")}){HistoryStore ledger(operations.databasePath());Operation op;op.id=id;op.created="2020-01-01T00:00:00.000Z";op.state="completed";op.settings=settings.snapshot();OperationItem item;item.artifact.id=id+"-item";item.artifact.name=id+".txt";item.artifact.mime="text/plain";item.artifact.category="text";item.uploadStatus="local_only";item.local.status="saved";item.local.path=kept;op.items.append(item);QVERIFY(!ledger.saveOperation(op));}
+      |                     ^~
+      |                     &
+[138/256] Building CXX object CMakeFiles/test_gui_settings_shortcuts.dir/test_gui_settings_shortcuts_autogen/mocs_compilation.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/fixtures/UiSessionFixture.h:2,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_shortcuts_autogen/FIV6JECLMT/../../../../tests/gui/SettingsGuiFixture.h:28,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_shortcuts_autogen/FIV6JECLMT/moc_SettingsGuiFixture.cpp:9,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_shortcuts_autogen/mocs_compilation.cpp:2:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[139/256] Building CXX object CMakeFiles/test_gui_settings_capture.dir/tests/gui/test_settings_capture.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/fixtures/UiSessionFixture.h:2,
+                 from /home/patrick/work/scroll-integrate-1376/tests/gui/SettingsGuiFixture.h:28,
+                 from /home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_capture.cpp:1:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_capture.cpp: In member function ‘void SettingsGui::recordingOutputPreservesInheritanceAndExplicitRoutes()’:
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_capture.cpp:76:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   76 |   if(inherit->isChecked())window.findChild<QCheckBox*>("overrideRecord")->click();QVERIFY(profile->isEnabled());profile->setCurrentIndex(profile->findData("synthetic-third"));sharing->setCurrentIndex(sharing->findData("private"));PUTGD_TRY_COMPARE(service.snapshot().actions["record"].profileId,QString("synthetic-third"));PUTGD_TRY_COMPARE(service.snapshot().actions["record"].publicationMode,QString("private"));QCOMPARE(service.snapshot().actions["record"].shortcut,QString("Ctrl+Shift+9"));
+      |   ^~
+In file included from /usr/include/x86_64-linux-gnu/qt6/QtTest/qtest.h:13,
+                 from /usr/include/x86_64-linux-gnu/qt6/QtTest/QTest:1,
+                 from /home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:7:
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_capture.cpp:76:83: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   76 |   if(inherit->isChecked())window.findChild<QCheckBox*>("overrideRecord")->click();QVERIFY(profile->isEnabled());profile->setCurrentIndex(profile->findData("synthetic-third"));sharing->setCurrentIndex(sharing->findData("private"));PUTGD_TRY_COMPARE(service.snapshot().actions["record"].profileId,QString("synthetic-third"));PUTGD_TRY_COMPARE(service.snapshot().actions["record"].publicationMode,QString("private"));QCOMPARE(service.snapshot().actions["record"].shortcut,QString("Ctrl+Shift+9"));
+      |                                                                                   ^~~~~~~
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_capture.cpp: In member function ‘void SettingsGui::exceptionMenuAddsOnlyOverriddenRowsAndRemoveRestoresInheritance()’:
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_capture.cpp:222:3: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  222 |   for(const auto& action:Settings::presentationOrder())window.findChild<QAction*>("add"+action.left(1).toUpper()+action.mid(1)+"Exception")->trigger();QVERIFY(!add->isEnabled());QCOMPARE(window.findChild<QLabel*>("captureExceptionsSummary")->text(),QString("%1 exceptions").arg(Settings::presentationOrder().size()));window.findChild<QPushButton*>("removeRegionException")->click();QVERIFY(add->isEnabled());QCOMPARE(window.findChild<QLabel*>("captureExceptionsSummary")->text(),QString("%1 exceptions").arg(Settings::presentationOrder().size()-1));
+      |   ^~~
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_capture.cpp:222:152: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  222 |   for(const auto& action:Settings::presentationOrder())window.findChild<QAction*>("add"+action.left(1).toUpper()+action.mid(1)+"Exception")->trigger();QVERIFY(!add->isEnabled());QCOMPARE(window.findChild<QLabel*>("captureExceptionsSummary")->text(),QString("%1 exceptions").arg(Settings::presentationOrder().size()));window.findChild<QPushButton*>("removeRegionException")->click();QVERIFY(add->isEnabled());QCOMPARE(window.findChild<QLabel*>("captureExceptionsSummary")->text(),QString("%1 exceptions").arg(Settings::presentationOrder().size()-1));
+      |                                                                                                                                                        ^~~~~~~
+[140/256] Building CXX object CMakeFiles/test_gui_settings_destinations.dir/test_gui_settings_destinations_autogen/mocs_compilation.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/fixtures/UiSessionFixture.h:2,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_destinations_autogen/FIV6JECLMT/../../../../tests/gui/SettingsGuiFixture.h:28,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_destinations_autogen/FIV6JECLMT/moc_SettingsGuiFixture.cpp:9,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_destinations_autogen/mocs_compilation.cpp:2:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[141/256] Building CXX object CMakeFiles/test_gui_settings_shortcuts.dir/tests/gui/test_settings_shortcuts.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/fixtures/UiSessionFixture.h:2,
+                 from /home/patrick/work/scroll-integrate-1376/tests/gui/SettingsGuiFixture.h:28,
+                 from /home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_shortcuts.cpp:1:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[142/256] Building CXX object CMakeFiles/test_gui_settings_credentials.dir/test_gui_settings_credentials_autogen/mocs_compilation.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/fixtures/UiSessionFixture.h:2,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_credentials_autogen/FIV6JECLMT/../../../../tests/gui/SettingsGuiFixture.h:28,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_credentials_autogen/FIV6JECLMT/moc_SettingsGuiFixture.cpp:9,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_credentials_autogen/mocs_compilation.cpp:2:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[143/256] Building CXX object CMakeFiles/test_gui_settings_updates.dir/test_gui_settings_updates_autogen/mocs_compilation.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/fixtures/UiSessionFixture.h:2,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_updates_autogen/FIV6JECLMT/../../../../tests/gui/SettingsGuiFixture.h:28,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_updates_autogen/FIV6JECLMT/moc_SettingsGuiFixture.cpp:9,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_updates_autogen/mocs_compilation.cpp:2:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[144/256] Building CXX object CMakeFiles/test_gui_settings_destinations.dir/tests/gui/test_settings_destinations.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/fixtures/UiSessionFixture.h:2,
+                 from /home/patrick/work/scroll-integrate-1376/tests/gui/SettingsGuiFixture.h:28,
+                 from /home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_destinations.cpp:1:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_destinations.cpp: In member function ‘void SettingsGui::longDestinationLabelKeepsItsStateLine()’:
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_destinations.cpp:181:3: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  181 |   for(const auto& nameLine:nameLines)QVERIFY(metrics.horizontalAdvance(nameLine)<rect.width()-Ui::scaled(28)-26);const QFontMetrics body(Ui::font(Ui::Type::body,true)),meta(Ui::font(Ui::Type::metadata));const int statusHeight=lines[1].split('\n').size()*meta.height();QVERIFY(rect.height()>=2*body.height()+statusHeight+Ui::space(Ui::Space::xs)+2*Ui::space(Ui::Space::m));
+      |   ^~~
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_destinations.cpp:181:114: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  181 |   for(const auto& nameLine:nameLines)QVERIFY(metrics.horizontalAdvance(nameLine)<rect.width()-Ui::scaled(28)-26);const QFontMetrics body(Ui::font(Ui::Type::body,true)),meta(Ui::font(Ui::Type::metadata));const int statusHeight=lines[1].split('\n').size()*meta.height();QVERIFY(rect.height()>=2*body.height()+statusHeight+Ui::space(Ui::Space::xs)+2*Ui::space(Ui::Space::m));
+      |                                                                                                                  ^~~~~
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_destinations.cpp: In member function ‘void SettingsGui::storageServiceMenuTracksDestinationAndProvider()’:
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_destinations.cpp:367:3: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  367 |   for(auto* action:group->actions())if(action->data()=="backblaze-b2")action->trigger();QCOMPARE(window.findChild<QComboBox*>("storageProvider")->currentData().toString(),QString("backblaze-b2"));QCOMPARE(group->checkedAction()->data().toString(),QString("backblaze-b2"));
+      |   ^~~
+In file included from /usr/include/x86_64-linux-gnu/qt6/QtTest/qtest.h:13,
+                 from /usr/include/x86_64-linux-gnu/qt6/QtTest/QTest:1,
+                 from /home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:7:
+/home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_destinations.cpp:367:89: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  367 |   for(auto* action:group->actions())if(action->data()=="backblaze-b2")action->trigger();QCOMPARE(window.findChild<QComboBox*>("storageProvider")->currentData().toString(),QString("backblaze-b2"));QCOMPARE(group->checkedAction()->data().toString(),QString("backblaze-b2"));
+      |                                                                                         ^~~~~~~~
+[145/256] Building CXX object CMakeFiles/test_gui_settings_credentials.dir/tests/gui/test_settings_credentials.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/fixtures/UiSessionFixture.h:2,
+                 from /home/patrick/work/scroll-integrate-1376/tests/gui/SettingsGuiFixture.h:28,
+                 from /home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_credentials.cpp:1:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[146/256] Building CXX object CMakeFiles/test_gui_settings_advanced.dir/test_gui_settings_advanced_autogen/mocs_compilation.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/fixtures/UiSessionFixture.h:2,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_advanced_autogen/FIV6JECLMT/../../../../tests/gui/SettingsGuiFixture.h:28,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_advanced_autogen/FIV6JECLMT/moc_SettingsGuiFixture.cpp:9,
+                 from /home/patrick/work/scroll-integrate-1376/build/dev/test_gui_settings_advanced_autogen/mocs_compilation.cpp:2:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[147/256] Building CXX object CMakeFiles/test_gui_settings_updates.dir/tests/gui/test_settings_updates.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/fixtures/UiSessionFixture.h:2,
+                 from /home/patrick/work/scroll-integrate-1376/tests/gui/SettingsGuiFixture.h:28,
+                 from /home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_updates.cpp:1:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[148/256] Building CXX object CMakeFiles/test_file_uploads.dir/tests/unit/test_file_uploads.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/unit/test_file_uploads.cpp:8:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+/home/patrick/work/scroll-integrate-1376/tests/unit/test_file_uploads.cpp: In member function ‘QJsonObject FileUploadsContract::finished(const QString&)’:
+/home/patrick/work/scroll-integrate-1376/tests/unit/test_file_uploads.cpp:56:23: warning: ignoring return value of ‘bool putgd::test::waitFor(Predicate&&, int) [with Predicate = FileUploadsContract::finished(const QString&)::<lambda()>]’, declared with attribute ‘nodiscard’ [-Wunused-result]
+   56 |   putgd::test::waitFor([&]{operation=wait([&](JsonReply reply){operations_->inspect(id,std::move(reply));});return !Operation::activeState(operation["state"].toString());},30000);
+      |   ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/patrick/work/scroll-integrate-1376/tests/unit/test_file_uploads.cpp:9:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/Waits.h:58:20: note: declared here
+   58 | [[nodiscard]] bool waitFor(Predicate&& predicate, int ms = defaultWaitMs) {
+      |                    ^~~~~~~
+[149/256] Building CXX object CMakeFiles/test_local_ipc.dir/tests/integration/test_local_ipc.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/integration/test_local_ipc.cpp:1:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[150/256] Building CXX object CMakeFiles/test_gui_settings_advanced.dir/tests/gui/test_settings_advanced.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/fixtures/UiSessionFixture.h:2,
+                 from /home/patrick/work/scroll-integrate-1376/tests/gui/SettingsGuiFixture.h:28,
+                 from /home/patrick/work/scroll-integrate-1376/tests/gui/test_settings_advanced.cpp:1:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[151/256] Linking CXX executable test_wayland_region_control
+[152/256] Linking CXX executable test_capture_process
+[153/256] Linking CXX executable test_x11_core_clipboard
+[154/256] Linking CXX executable test_native_tray
+[155/256] Linking CXX executable test_x11_clipboard_import
+[156/256] Linking CXX executable test_kde_shortcut_normalization
+[157/256] Linking CXX executable test_x11_capture_decode
+[158/256] Building CXX object CMakeFiles/test_proton.dir/tests/integration/test_proton.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/integration/test_proton.cpp:14:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[159/256] Linking CXX executable test_kde_shortcuts
+[160/256] Linking CXX executable test_kwin_windows
+[161/256] Linking CXX executable test_wayland_keyboard_map
+[162/256] Linking CXX executable test_kwin_click_effect
+[163/256] Linking CXX executable test_kde_clipboard_import
+[164/256] Linking CXX executable test_wayland_data_control_source
+[165/256] Linking CXX executable test_kde_ownership
+[166/256] Linking CXX executable test_labwc_bridge
+[167/256] Linking CXX executable test_portal_global_shortcuts
+[168/256] Linking CXX executable test_budgie_labwc
+[169/256] Building CXX object CMakeFiles/test_http_uploader.dir/tests/integration/test_http_uploader.cpp.o
+In file included from /home/patrick/work/scroll-integrate-1376/tests/integration/test_http_uploader.cpp:4:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h: In member function ‘virtual putgd::ProviderCapabilities putgd::test::OpaqueProvider::capabilities(const putgd::Destination&) const’:
+/home/patrick/work/scroll-integrate-1376/tests/fixtures/U2Fixtures.h:43:227: warning: missing initializer for member ‘putgd::ProviderCapabilities::removeUnavailable’ [-Wmissing-field-initializers]
+   43 |  ProviderCapabilities capabilities(const Destination&) const override {if(capabilitiesGate)capabilitiesGate();ProviderCapabilities c{true,true,true,true,true,allowDelete,true,255,"Remove only the recorded opaque file revision"};c.maximumObjectBytes=maximumObjectBytes;return c;}
+      |                                                                                                                                                                                                                                   ^
+[170/256] Linking CXX executable test_hyprland
+[171/256] Linking CXX executable test_edit_operations
+[172/256] Linking CXX executable test_ui_split_services
+[173/256] Linking CXX executable test_ui_endpoints
+[174/256] Linking CXX executable test_version
+[175/256] Linking CXX executable putgd-bench-theme-switch
+[176/256] Linking CXX executable putgd-bench-history-gallery
+[177/256] Linking CXX executable putgd-ui-catalog
+[178/256] Linking CXX executable putgd-bench-history-scroll
+[179/256] Linking CXX executable test_release_link
+[180/256] Linking CXX executable test_update
+[181/256] Linking CXX executable test_update_check
+[182/256] Linking CXX executable test_gui_theme
+[183/256] Linking CXX executable test_appimage_install
+[184/256] Linking CXX executable test_gui_application
+[185/256] Linking CXX executable test_update_install
+[186/256] Linking CXX executable test_host_environment
+[187/256] Linking CXX executable test_gui_tray
+[188/256] Linking CXX executable test_system_updates
+[189/256] Linking CXX executable test_allocator_policy
+[190/256] Linking CXX executable test_geometry
+[191/256] Linking CXX executable test_x11_raw_key_matcher
+[192/256] Linking CXX executable test_update_service
+[193/256] Linking CXX executable test_host_open
+[194/256] Linking CXX executable test_resident_lifecycle
+[195/256] Linking CXX executable test_keychain_backend
+[196/256] Linking CXX executable test_gui_tray_latency
+[197/256] Linking CXX executable test_x11
+[198/256] Linking CXX executable test_keychain
+[199/256] Linking CXX executable test_ui_native_lifecycle
+[200/256] Linking CXX executable test_s3_delete
+[201/256] Linking CXX executable test_s3_module
+[202/256] Linking CXX executable test_s3
+[203/256] Linking CXX executable test_collision_policy
+[204/256] Linking CXX executable test_public_url
+[205/256] Linking CXX executable test_s3_worker_protocol
+[206/256] Linking CXX executable test_payload
+[207/256] Linking CXX executable test_s3_worker
+[208/256] Linking CXX executable test_archive
+[209/256] Linking CXX executable test_s3_multipart
+[210/256] Linking CXX executable test_upload_naming
+[211/256] Linking CXX executable test_history
+[212/256] Linking CXX executable test_recording_model
+[213/256] Linking CXX executable test_operations
+[214/256] Linking CXX executable test_capture_delay
+[215/256] Linking CXX executable test_storage_contract
+[216/256] Linking CXX executable test_cli
+[217/256] Linking CXX executable test_config_reload
+[218/256] Linking CXX executable test_storage_locations
+[219/256] Linking CXX executable test_gnome_image_decode
+[220/256] Linking CXX executable test_kwin_transfer
+[221/256] Linking CXX executable test_gnome_extension_setup
+[222/256] Linking CXX executable test_gnome_bridge
+[223/256] Linking CXX executable test_settings
+[224/256] Linking CXX executable test_recording_service
+[225/256] Linking CXX executable test_recording_helper
+[226/256] Linking CXX executable test_scroll_service
+[227/256] Linking CXX executable test_crash_handler
+[228/256] Linking CXX executable test_diagnostics_upload
+[229/256] Linking CXX executable test_logging
+[230/256] Linking CXX executable test_diagnostics_bundle
+[231/256] Linking CXX executable test_gui_history_view
+[232/256] Linking CXX executable test_gui_settings_general
+[233/256] Linking CXX executable test_gui_settings_appearance
+[234/256] Linking CXX executable test_gui_settings_capture
+[235/256] Linking CXX executable test_gui_settings_shortcuts
+[236/256] Linking CXX executable test_gui_settings_credentials
+[237/256] Linking CXX executable test_gui_settings_updates
+[238/256] Linking CXX executable test_login_startup
+[239/256] Linking CXX executable test_file_manager_integration
+[240/256] Linking CXX executable test_folder_zip
+[241/256] Linking CXX executable test_gui_settings_destinations
+[242/256] Linking CXX executable test_gui_settings_advanced
+[243/256] Linking CXX executable test_file_uploads
+[244/256] Linking CXX executable test_resident_session
+[245/256] Linking CXX executable test_ip_address
+[246/256] Linking CXX executable test_wayland_region_overlay
+[247/256] Linking CXX executable test_local_ipc
+[248/256] Linking CXX executable test_native_region_overlay
+[249/256] Linking CXX executable test_proton_transport
+[250/256] Linking CXX executable test_b2
+[251/256] Linking CXX executable test_capture_preparation
+[252/256] Linking CXX executable test_http_uploader_rules
+[253/256] Linking CXX executable test_proton
+[254/256] Linking CXX executable test_scroll_capture_x11
+[255/256] Linking CXX executable test_http_uploader
+[256/256] Linking CXX executable test_scroll_capture_driver
