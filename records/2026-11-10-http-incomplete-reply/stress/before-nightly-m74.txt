@@ -1,0 +1,80 @@
+nightly e870ba5c4 with one diagnostic line in the worker; m74 (Linux Mint 22.3, Qt 6.4.2, 4 CPUs); 8 busy loops; PUTGD_TEST_TIME_SCALE=3
+case aReplyCutOffAfterItsStatusLineIsUnknown alone, 300 runs, 7 failed (load 8.70 at the end, 471 s)
+
+run 10
+FAIL!  : HttpUploaderTest::aReplyCutOffAfterItsStatusLineIsUnknown(json-reset) Compared values are not the same
+   Actual   (result.error.code)              : "http_response_unreadable"
+   Expected (QString("http_outcome_unknown")): "http_outcome_unknown"
+  what Qt reported for each exchange of that run (status, QNetworkReply::error, declared Content-Length, bytes received, the old worker s verdict):
+    POST /upload/text status=200 qtError=2 declared=117 received=53 te= cut=1 sends=1 reached=1
+    POST /upload/text status=200 qtError=2 declared=53 received=35 te= cut=1 sends=1 reached=1
+    POST /upload/json status=200 qtError=2 declared=307 received=243 te= cut=1 sends=1 reached=1
+    POST /upload/json status=200 qtError=205 declared=243 received=162 te= cut=0 sends=1 reached=1
+    POST /upload/header status=201 qtError=2 declared=64 received=0 te= cut=1 sends=1 reached=1
+
+run 52
+FAIL!  : HttpUploaderTest::aReplyCutOffAfterItsStatusLineIsUnknown(json-reset) Compared values are not the same
+   Actual   (result.error.code)              : "http_response_unreadable"
+   Expected (QString("http_outcome_unknown")): "http_outcome_unknown"
+  what Qt reported for each exchange of that run (status, QNetworkReply::error, declared Content-Length, bytes received, the old worker s verdict):
+    POST /upload/text status=200 qtError=2 declared=117 received=53 te= cut=1 sends=1 reached=1
+    POST /upload/text status=200 qtError=2 declared=53 received=35 te= cut=1 sends=1 reached=1
+    POST /upload/json status=200 qtError=2 declared=307 received=243 te= cut=1 sends=1 reached=1
+    POST /upload/json status=200 qtError=205 declared=243 received=162 te= cut=0 sends=1 reached=1
+    POST /upload/header status=201 qtError=2 declared=64 received=0 te= cut=1 sends=1 reached=1
+
+run 71
+FAIL!  : HttpUploaderTest::aReplyCutOffAfterItsStatusLineIsUnknown(text-reset) 'result.status == "unknown"' returned FALSE. (uploaded http://127.0.0.1:PORT/f/3b5ac70cef )
+PASS   : HttpUploaderTest::aReplyCutOffAfterItsStatusLineIsUnknown(json-length)
+PASS   : HttpUploaderTest::aReplyCutOffAfterItsStatusLineIsUnknown(json-reset)
+  what Qt reported for each exchange of that run (status, QNetworkReply::error, declared Content-Length, bytes received, the old worker s verdict):
+    POST /upload/text status=200 qtError=2 declared=117 received=53 te= cut=1 sends=1 reached=1
+    POST /upload/text status=200 qtError=205 declared=53 received=35 te= cut=0 sends=1 reached=1
+    POST /upload/json status=200 qtError=2 declared=307 received=243 te= cut=1 sends=1 reached=1
+    POST /upload/json status=200 qtError=2 declared=243 received=162 te= cut=1 sends=1 reached=1
+    POST /upload/header status=201 qtError=2 declared=64 received=0 te= cut=1 sends=1 reached=1
+
+run 135
+FAIL!  : HttpUploaderTest::aReplyCutOffAfterItsStatusLineIsUnknown(json-reset) Compared values are not the same
+   Actual   (result.error.code)              : "http_response_unreadable"
+   Expected (QString("http_outcome_unknown")): "http_outcome_unknown"
+  what Qt reported for each exchange of that run (status, QNetworkReply::error, declared Content-Length, bytes received, the old worker s verdict):
+    POST /upload/text status=200 qtError=2 declared=117 received=53 te= cut=1 sends=1 reached=1
+    POST /upload/text status=200 qtError=2 declared=53 received=35 te= cut=1 sends=1 reached=1
+    POST /upload/json status=200 qtError=2 declared=307 received=243 te= cut=1 sends=1 reached=1
+    POST /upload/json status=200 qtError=205 declared=243 received=162 te= cut=0 sends=1 reached=1
+    POST /upload/header status=201 qtError=2 declared=64 received=0 te= cut=1 sends=1 reached=1
+
+run 149
+FAIL!  : HttpUploaderTest::aReplyCutOffAfterItsStatusLineIsUnknown(text-reset) 'result.status == "unknown"' returned FALSE. (uploaded http://127.0.0.1:PORT/f/138acecd40 )
+PASS   : HttpUploaderTest::aReplyCutOffAfterItsStatusLineIsUnknown(json-length)
+PASS   : HttpUploaderTest::aReplyCutOffAfterItsStatusLineIsUnknown(json-reset)
+  what Qt reported for each exchange of that run (status, QNetworkReply::error, declared Content-Length, bytes received, the old worker s verdict):
+    POST /upload/text status=200 qtError=2 declared=117 received=53 te= cut=1 sends=1 reached=1
+    POST /upload/text status=200 qtError=205 declared=53 received=35 te= cut=0 sends=1 reached=1
+    POST /upload/json status=200 qtError=2 declared=307 received=243 te= cut=1 sends=1 reached=1
+    POST /upload/json status=200 qtError=2 declared=243 received=162 te= cut=1 sends=1 reached=1
+    POST /upload/header status=201 qtError=2 declared=64 received=0 te= cut=1 sends=1 reached=1
+
+run 241
+FAIL!  : HttpUploaderTest::aReplyCutOffAfterItsStatusLineIsUnknown(json-reset) Compared values are not the same
+   Actual   (result.error.code)              : "http_response_unreadable"
+   Expected (QString("http_outcome_unknown")): "http_outcome_unknown"
+  what Qt reported for each exchange of that run (status, QNetworkReply::error, declared Content-Length, bytes received, the old worker s verdict):
+    POST /upload/text status=200 qtError=2 declared=117 received=53 te= cut=1 sends=1 reached=1
+    POST /upload/text status=200 qtError=2 declared=53 received=35 te= cut=1 sends=1 reached=1
+    POST /upload/json status=200 qtError=2 declared=307 received=243 te= cut=1 sends=1 reached=1
+    POST /upload/json status=200 qtError=205 declared=243 received=162 te= cut=0 sends=1 reached=1
+    POST /upload/header status=201 qtError=2 declared=64 received=0 te= cut=1 sends=1 reached=1
+
+run 278
+FAIL!  : HttpUploaderTest::aReplyCutOffAfterItsStatusLineIsUnknown(text-reset) 'result.status == "unknown"' returned FALSE. (uploaded http://127.0.0.1:PORT/f/958ef7eb8f )
+PASS   : HttpUploaderTest::aReplyCutOffAfterItsStatusLineIsUnknown(json-length)
+PASS   : HttpUploaderTest::aReplyCutOffAfterItsStatusLineIsUnknown(json-reset)
+  what Qt reported for each exchange of that run (status, QNetworkReply::error, declared Content-Length, bytes received, the old worker s verdict):
+    POST /upload/text status=200 qtError=2 declared=117 received=53 te= cut=1 sends=1 reached=1
+    POST /upload/text status=200 qtError=205 declared=53 received=35 te= cut=0 sends=1 reached=1
+    POST /upload/json status=200 qtError=2 declared=307 received=243 te= cut=1 sends=1 reached=1
+    POST /upload/json status=200 qtError=2 declared=243 received=162 te= cut=1 sends=1 reached=1
+    POST /upload/header status=201 qtError=2 declared=64 received=0 te= cut=1 sends=1 reached=1
+
