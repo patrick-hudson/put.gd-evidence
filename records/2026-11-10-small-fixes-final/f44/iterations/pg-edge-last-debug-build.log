@@ -1,0 +1,18 @@
+[1/8] cd /home/patrick/work/pg-small/build/dev && /usr/bin/cmake -DSOURCE_DIR=/home/patrick/work/pg-small -DOUTPUT_DIR=/home/patrick/work/pg-small/build/dev/build-identity -DRELEASE_TAG= -DSUPPLIED_COMMIT= -DSUPPLIED_TREE= -DSUPPLIED_COUNT= -DSUPPLIED_TIME= -P /home/patrick/work/pg-small/cmake/GenerateBuildInfo.cmake
+[2/5] Automatic MOC and UIC for target test_editor_window
+[3/4] Building CXX object CMakeFiles/test_editor_window.dir/tests/gui/test_editor_window.cpp.o
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp: In member function ‘void EditorWindowTest::toolsFoldFromMeasuredWidthAndKeepPrivacyLabels()’:
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp:207:6: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  207 |      if(!button->isCheckable())continue;++tools;
+      |      ^~
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp:207:41: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  207 |      if(!button->isCheckable())continue;++tools;
+      |                                         ^~
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp: In member function ‘void EditorWindowTest::footerKeepsSharingModeVisibleBesideAnElidedDestination()’:
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp:984:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  984 |   if(pixels==21)QVERIFY(Ui::scaled(100)>=145);window.setDestination("Private upload to "+name);window.resize(760,560);QApplication::processEvents();QVERIFY(window.viewState()["destination"].toObject()["above"].toBool());QVERIFY(mode->isVisible());verifyPair();
+      |   ^~
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp:984:47: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  984 |   if(pixels==21)QVERIFY(Ui::scaled(100)>=145);window.setDestination("Private upload to "+name);window.resize(760,560);QApplication::processEvents();QVERIFY(window.viewState()["destination"].toObject()["above"].toBool());QVERIFY(mode->isVisible());verifyPair();
+      |                                               ^~~~~~
+[4/4] Linking CXX executable test_editor_window

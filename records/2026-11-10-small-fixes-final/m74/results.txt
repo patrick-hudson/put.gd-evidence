@@ -1,0 +1,19 @@
+#1380: Runtime Qt version selects the original or deferred warm-up
+Head 0125ada52: source build, official SDK, distro Qt
+
+QLibraryInfo::version() < 6.11: original stack-window lifetime.
+QLibraryInfo::version() >=6.11: keep alive past bootstrap.
+Reason: Qt6.11 added an accessibility query in QWindow destruction.
+
+f44 Fedora44 Qt6.11.2 capture_preparation_x11: PASS (9.76s)
+m74 Mint22.3 Qt6.4.2 capture_preparation_x11: PASS (7.82s)
+Strict zero-before-map and positive-after-map assertions unchanged.
+
+Physical m74 Cinnamon/X11, current head, private roots:
+Shortcut maps selector: PASS. Drag captures a 400x250 local PNG: PASS.
+Escape cancels without another output file: PASS.
+Older-Qt warm-up already destroyed; no extra top-level window.
+
+The runtime-version branch replaces the previous timing claim.
+No new timing run: Qt6.4.2 and Qt6.10 execute nightly's old path.
+Only Qt6.11+ (including bundled Qt6.12) use the keep-alive.

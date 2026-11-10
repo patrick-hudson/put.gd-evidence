@@ -1,0 +1,105 @@
+[1/82] cd /home/patrick/work/pg-small/build/dev && /usr/bin/cmake -DSOURCE_DIR=/home/patrick/work/pg-small -DOUTPUT_DIR=/home/patrick/work/pg-small/build/dev/build-identity -DRELEASE_TAG= -DSUPPLIED_COMMIT= -DSUPPLIED_TREE= -DSUPPLIED_COUNT= -DSUPPLIED_TIME= -P /home/patrick/work/pg-small/cmake/GenerateBuildInfo.cmake
+[2/80] Automatic MOC and UIC for target putgd_log
+[3/78] Automatic MOC and UIC for target putgd_ui_control
+[4/76] Automatic MOC and UIC for target putgd_crash
+[5/75] Automatic MOC and UIC for target putgd_core
+[6/73] Automatic MOC and UIC for target putgd_keyboard_map
+[7/71] Automatic MOC and UIC for target putgd_credentials
+[8/69] Automatic MOC and UIC for target putgd_session_protocol
+[9/67] Automatic MOC and UIC for target putgd-b2-worker
+[10/65] Automatic MOC and UIC for target putgd_fonts
+[11/63] Automatic MOC and UIC for target putgd_s3_wire
+[12/61] Automatic MOC and UIC for target putgd_client
+[13/59] Automatic MOC and UIC for target putgd_ui_state
+[14/57] Automatic MOC and UIC for target putgd_host_open
+[15/55] Automatic MOC and UIC for target putgd_appearance
+[16/53] Automatic MOC and UIC for target putgd_file_dialog
+[17/51] Automatic MOC and UIC for target putgd_shortcut_keyboard
+[18/49] Automatic MOC and UIC for target putgd_preview_reader
+[19/47] Automatic MOC and UIC for target putgd_b2
+[20/45] Automatic MOC and UIC for target putgd_proton
+[21/43] Automatic MOC and UIC for target putgd_ui
+[22/41] Automatic MOC and UIC for target putgd_editor
+[23/41] Building CXX object CMakeFiles/putgd_editor.dir/putgd_editor_autogen/mocs_compilation.cpp.o
+[24/41] Building CXX object CMakeFiles/putgd_editor.dir/src/editor/EditorCanvas.cpp.o
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp: In member function ‘bool putgd::editor::EditorCanvas::nudge(const QPoint&, bool)’:
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp:667:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  667 |   if(side==shape.rect.width())return true;shape.rect.setSize(QSize(side,side));
+      |   ^~
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp:667:43: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  667 |   if(side==shape.rect.width())return true;shape.rect.setSize(QSize(side,side));
+      |                                           ^~~~~
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp:671:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  671 |   if(to==from)return true;shape.points=fitStroke(shape.points,from,to);
+      |   ^~
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp:671:27: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  671 |   if(to==from)return true;shape.points=fitStroke(shape.points,from,to);
+      |                           ^~~~~
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp: In member function ‘bool putgd::editor::EditorCanvas::setSelectionGeometry(const QRect&)’:
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp:739:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  739 |   if(side<minimumStepPixels||side>maximumStepPixels)return false;shape.rect=QRect(r.topLeft(),QSize(side,side));
+      |   ^~
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp:739:66: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  739 |   if(side<minimumStepPixels||side>maximumStepPixels)return false;shape.rect=QRect(r.topLeft(),QSize(side,side));
+      |                                                                  ^~~~~
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp: At global scope:
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp:49:8: warning: ‘QPoint putgd::editor::{anonymous}::inside(const QPoint&, const QRect&)’ defined but not used [-Wunused-function]
+   49 | QPoint inside(const QPoint& p,const QRect& bounds){
+      |        ^~~~~~
+[25/41] Linking CXX static library libputgd_editor.a
+[26/41] Automatic MOC and UIC for target test_editor
+[27/40] Automatic MOC and UIC for target putgd_editor_window
+[28/40] Building CXX object CMakeFiles/putgd_editor_window.dir/putgd_editor_window_autogen/mocs_compilation.cpp.o
+[29/40] Building CXX object CMakeFiles/test_editor.dir/tests/unit/test_editor.cpp.o
+/home/patrick/work/pg-small/tests/unit/test_editor.cpp: In member function ‘void EditorTest::keyboardCropMovesResizesAndApplies()’:
+/home/patrick/work/pg-small/tests/unit/test_editor.cpp:510:3: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  510 |   for(int i=0;i<20;++i)QTest::keyClick(&canvas,Qt::Key_Right,Qt::ControlModifier);QCOMPARE(canvas.cropDraft(),QRect(100,0,300,300));
+      |   ^~~
+In file included from /usr/include/qt6/QtTest/qtest.h:13,
+                 from /usr/include/qt6/QtTest/QTest:1,
+                 from /home/patrick/work/pg-small/tests/unit/test_editor.cpp:14:
+/home/patrick/work/pg-small/tests/unit/test_editor.cpp:510:83: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  510 |   for(int i=0;i<20;++i)QTest::keyClick(&canvas,Qt::Key_Right,Qt::ControlModifier);QCOMPARE(canvas.cropDraft(),QRect(100,0,300,300));
+      |                                                                                   ^~~~~~~~
+/home/patrick/work/pg-small/tests/unit/test_editor.cpp: In member function ‘void EditorTest::snapIsRejectedOnShapesThatAreNotHighlights()’:
+/home/patrick/work/pg-small/tests/unit/test_editor.cpp:759:25: warning: loop variable ‘shape’ creates a copy from type ‘const QJsonObject’ [-Wrange-loop-construct]
+  759 |   for(const QJsonObject shape:{QJsonObject{{"kind","arrow"},{"from",QJsonArray{10,10}},{"to",QJsonArray{60,60}},{"snap","text"}},QJsonObject{{"kind","rectangle"},{"rect",QJsonArray{10,10,50,20}},{"snap","bogus"}},QJsonObject{{"kind","text"},{"at",QJsonArray{10,10}},{"text","hi"},{"snap","none"}}}){
+      |                         ^~~~~
+/home/patrick/work/pg-small/tests/unit/test_editor.cpp:759:25: note: use reference type to prevent copying
+  759 |   for(const QJsonObject shape:{QJsonObject{{"kind","arrow"},{"from",QJsonArray{10,10}},{"to",QJsonArray{60,60}},{"snap","text"}},QJsonObject{{"kind","rectangle"},{"rect",QJsonArray{10,10,50,20}},{"snap","bogus"}},QJsonObject{{"kind","text"},{"at",QJsonArray{10,10}},{"text","hi"},{"snap","none"}}}){
+      |                         ^~~~~
+      |                         &
+/home/patrick/work/pg-small/tests/unit/test_editor.cpp: At global scope:
+/home/patrick/work/pg-small/tests/unit/test_editor.cpp:54:5: warning: ‘int {anonymous}::inkUnchanged(const QImage&, const QImage&, const QRect&, QRgb, bool&)’ defined but not used [-Wunused-function]
+   54 | int inkUnchanged(const QImage& before,const QImage& after,const QRect& box,QRgb background,bool& allKept){
+      |     ^~~~~~~~~~~~
+[30/40] Building CXX object CMakeFiles/putgd_editor_window.dir/src/ui/EditorWindow.cpp.o
+/home/patrick/work/pg-small/src/ui/EditorWindow.cpp: In function ‘bool putgd::{anonymous}::integerIn(const QJsonValue&, double, double, int&)’:
+/home/patrick/work/pg-small/src/ui/EditorWindow.cpp:94:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   94 |  if(!value.isDouble())return false;const double number=value.toDouble();
+      |  ^~
+/home/patrick/work/pg-small/src/ui/EditorWindow.cpp:94:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   94 |  if(!value.isDouble())return false;const double number=value.toDouble();
+      |                                    ^~~~~
+[31/40] Linking CXX static library libputgd_editor_window.a
+[32/40] Linking CXX executable test_editor
+[33/40] Automatic MOC and UIC for target test_editor_window
+[34/39] Automatic MOC and UIC for target pg_head_picture
+[35/38] Building CXX object CMakeFiles/test_editor_window.dir/tests/gui/test_editor_window.cpp.o
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp: In member function ‘void EditorWindowTest::toolsFoldFromMeasuredWidthAndKeepPrivacyLabels()’:
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp:206:6: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  206 |      if(!button->isCheckable())continue;++tools;
+      |      ^~
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp:206:41: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  206 |      if(!button->isCheckable())continue;++tools;
+      |                                         ^~
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp: In member function ‘void EditorWindowTest::footerKeepsSharingModeVisibleBesideAnElidedDestination()’:
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp:983:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  983 |   if(pixels==21)QVERIFY(Ui::scaled(100)>=145);window.setDestination("Private upload to "+name);window.resize(760,560);QApplication::processEvents();QVERIFY(window.viewState()["destination"].toObject()["above"].toBool());QVERIFY(mode->isVisible());verifyPair();
+      |   ^~
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp:983:47: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  983 |   if(pixels==21)QVERIFY(Ui::scaled(100)>=145);window.setDestination("Private upload to "+name);window.resize(760,560);QApplication::processEvents();QVERIFY(window.viewState()["destination"].toObject()["above"].toBool());QVERIFY(mode->isVisible());verifyPair();
+      |                                               ^~~~~~
+[36/38] Linking CXX executable test_editor_window
+[37/38] Building CXX object CMakeFiles/pg_head_picture.dir/tmp/pg-pictures-round.cpp.o
+[38/38] Linking CXX executable pg_head_picture

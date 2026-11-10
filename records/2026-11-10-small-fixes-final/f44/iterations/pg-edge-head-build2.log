@@ -1,0 +1,47 @@
+[1/14] cd /home/patrick/work/pg-small/build/dev && /usr/bin/cmake -DSOURCE_DIR=/home/patrick/work/pg-small -DOUTPUT_DIR=/home/patrick/work/pg-small/build/dev/build-identity -DRELEASE_TAG= -DSUPPLIED_COMMIT= -DSUPPLIED_TREE= -DSUPPLIED_COUNT= -DSUPPLIED_TIME= -P /home/patrick/work/pg-small/cmake/GenerateBuildInfo.cmake
+[2/11] Automatic MOC and UIC for target putgd_editor
+[3/10] Building CXX object CMakeFiles/putgd_editor.dir/src/editor/EditorCanvas.cpp.o
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp: In member function ‘bool putgd::editor::EditorCanvas::nudge(const QPoint&, bool)’:
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp:667:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  667 |   if(side==shape.rect.width())return true;shape.rect.setSize(QSize(side,side));
+      |   ^~
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp:667:43: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  667 |   if(side==shape.rect.width())return true;shape.rect.setSize(QSize(side,side));
+      |                                           ^~~~~
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp:671:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  671 |   if(to==from)return true;shape.points=fitStroke(shape.points,from,to);
+      |   ^~
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp:671:27: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  671 |   if(to==from)return true;shape.points=fitStroke(shape.points,from,to);
+      |                           ^~~~~
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp: In member function ‘bool putgd::editor::EditorCanvas::setSelectionGeometry(const QRect&)’:
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp:739:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  739 |   if(side<minimumStepPixels||side>maximumStepPixels)return false;shape.rect=QRect(r.topLeft(),QSize(side,side));
+      |   ^~
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp:739:66: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  739 |   if(side<minimumStepPixels||side>maximumStepPixels)return false;shape.rect=QRect(r.topLeft(),QSize(side,side));
+      |                                                                  ^~~~~
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp: At global scope:
+/home/patrick/work/pg-small/src/editor/EditorCanvas.cpp:49:8: warning: ‘QPoint putgd::editor::{anonymous}::inside(const QPoint&, const QRect&)’ defined but not used [-Wunused-function]
+   49 | QPoint inside(const QPoint& p,const QRect& bounds){
+      |        ^~~~~~
+[4/10] Linking CXX static library libputgd_editor.a
+[5/10] Automatic MOC and UIC for target test_editor_window
+[6/9] Linking CXX executable test_editor
+[7/9] Linking CXX executable pg_head_picture
+[8/9] Building CXX object CMakeFiles/test_editor_window.dir/tests/gui/test_editor_window.cpp.o
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp: In member function ‘void EditorWindowTest::toolsFoldFromMeasuredWidthAndKeepPrivacyLabels()’:
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp:208:6: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  208 |      if(!button->isCheckable())continue;++tools;
+      |      ^~
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp:208:41: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  208 |      if(!button->isCheckable())continue;++tools;
+      |                                         ^~
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp: In member function ‘void EditorWindowTest::footerKeepsSharingModeVisibleBesideAnElidedDestination()’:
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp:985:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  985 |   if(pixels==21)QVERIFY(Ui::scaled(100)>=145);window.setDestination("Private upload to "+name);window.resize(760,560);QApplication::processEvents();QVERIFY(window.viewState()["destination"].toObject()["above"].toBool());QVERIFY(mode->isVisible());verifyPair();
+      |   ^~
+/home/patrick/work/pg-small/tests/gui/test_editor_window.cpp:985:47: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  985 |   if(pixels==21)QVERIFY(Ui::scaled(100)>=145);window.setDestination("Private upload to "+name);window.resize(760,560);QApplication::processEvents();QVERIFY(window.viewState()["destination"].toObject()["above"].toBool());QVERIFY(mode->isVisible());verifyPair();
+      |                                               ^~~~~~
+[9/9] Linking CXX executable test_editor_window
