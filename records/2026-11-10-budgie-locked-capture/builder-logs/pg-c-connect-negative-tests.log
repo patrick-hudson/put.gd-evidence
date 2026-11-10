@@ -1,0 +1,87 @@
+Test project /home/patrick/work/pg-cd/build/dev
+    Start 35: budgie_labwc_integration
+1/1 Test #35: budgie_labwc_integration .........***Failed   20.63 sec
+********* Start testing of BudgieLabwcTest *********
+Config: Using QtTest library 6.11.2, Qt 6.11.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 16.2.1 20260819 (Red Hat 16.2.1-2)), fedora 44
+dbus-daemon[3167228]: [session uid=1000 pid=3167228 pidfd=4] Activating service name='org.freedesktop.portal.Desktop' requested by ':1.0' (uid=1000 pid=3167236 comm="/home/patrick/work/pg-cd/build/dev/putgd-labwc-fix" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[3167228]: [session uid=1000 pid=3167228 pidfd=4] Activating service name='org.freedesktop.impl.portal.PermissionStore' requested by ':1.1' (uid=1000 pid=3167239 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[3167228]: [session uid=1000 pid=3167228 pidfd=4] Successfully activated service 'org.freedesktop.impl.portal.PermissionStore'
+dbus-daemon[3167228]: [session uid=1000 pid=3167228 pidfd=4] Activating service name='org.freedesktop.portal.Documents' requested by ':1.1' (uid=1000 pid=3167239 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[3167228]: [session uid=1000 pid=3167228 pidfd=4] Successfully activated service 'org.freedesktop.portal.Documents'
+
+(/usr/libexec/xdg-desktop-portal:3167239): xdg-desktop-portal-WARNING **: 23:27:56.600: Choosing gtk.portal for org.freedesktop.impl.portal.Access as a last-resort fallback
+dbus-daemon[3167228]: [session uid=1000 pid=3167228 pidfd=4] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.1' (uid=1000 pid=3167239 comm="/usr/libexec/xdg-desktop-portal" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[3167228]: [session uid=1000 pid=3167228 pidfd=4] Activating service name='org.a11y.Bus' requested by ':1.5' (uid=1000 pid=3167263 comm="/usr/libexec/xdg-desktop-portal-gtk" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[3167228]: [session uid=1000 pid=3167228 pidfd=4] Activated service 'org.a11y.Bus' failed: Failed to execute program org.a11y.Bus: Permission denied
+
+(xdg-desktop-portal-gtk:3167263): dbind-WARNING **: 23:27:56.644: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.Spawn.ExecFailed: Failed to execute program org.a11y.Bus: Permission denied
+dbus-daemon[3167228]: [session uid=1000 pid=3167228 pidfd=4] Activating service name='org.gtk.vfs.Daemon' requested by ':1.4' (uid=1000 pid=3167263 comm="/usr/libexec/xdg-desktop-portal-gtk" label="unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023")
+dbus-daemon[3167228]: [session uid=1000 pid=3167228 pidfd=4] Successfully activated service 'org.gtk.vfs.Daemon'
+fusermount3: failed to access mountpoint /run/user/1000/gvfs: Permission denied
+dbus-daemon[3167228]: [session uid=1000 pid=3167228 pidfd=4] Successfully activated service 'org.freedesktop.impl.portal.desktop.gtk'
+QINFO  : BudgieLabwcTest::initTestCase() labwc "labwc 0.9.6 (+xwayland +nls +rsvg +libsfdo)" outputs 2
+PASS   : BudgieLabwcTest::initTestCase()
+
+(/usr/libexec/xdg-desktop-portal:3167239): xdg-desktop-portal-WARNING **: 23:27:56.713: Choosing gtk.portal for org.freedesktop.impl.portal.Settings as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3167239): xdg-desktop-portal-WARNING **: 23:27:56.714: Choosing gtk.portal for org.freedesktop.impl.portal.FileChooser as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3167239): xdg-desktop-portal-WARNING **: 23:27:56.716: Choosing gtk.portal for org.freedesktop.impl.portal.AppChooser as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3167239): xdg-desktop-portal-WARNING **: 23:27:56.717: Choosing gtk.portal for org.freedesktop.impl.portal.Print as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3167239): xdg-desktop-portal-WARNING **: 23:27:56.719: Choosing gtk.portal for org.freedesktop.impl.portal.Notification as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3167239): xdg-desktop-portal-WARNING **: 23:27:56.720: Choosing gtk.portal for org.freedesktop.impl.portal.Inhibit as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3167239): xdg-desktop-portal-WARNING **: 23:27:56.725: Choosing gtk.portal for org.freedesktop.impl.portal.Account as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3167239): xdg-desktop-portal-WARNING **: 23:27:56.729: Choosing gtk.portal for org.freedesktop.impl.portal.Email as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:3167239): xdg-desktop-portal-WARNING **: 23:27:56.730: Choosing gtk.portal for org.freedesktop.impl.portal.DynamicLauncher as a last-resort fallback
+dbus-daemon[3167228]: [session uid=1000 pid=3167228 pidfd=4] Successfully activated service 'org.freedesktop.portal.Desktop'
+FAIL!  : BudgieLabwcTest::visibilityRefusesFullConnectionBacklogWithoutBlocking() 'elapsed.elapsed()<1000' returned FALSE. (Connecting must not block the event-loop thread)
+   Loc: [/home/patrick/work/pg-cd/tests/integration/test_budgie_labwc.cpp(101)]
+PASS   : BudgieLabwcTest::visibilityAllowsSlowCompositorSetup()
+PASS   : BudgieLabwcTest::lockedDesktopCaptureIsRefused()
+PASS   : BudgieLabwcTest::protocolsAdvertised()
+PASS   : BudgieLabwcTest::outputPixelsExact()
+PASS   : BudgieLabwcTest::toplevelsListedAndActive()
+PASS   : BudgieLabwcTest::windowCaptureOrReason()
+PASS   : BudgieLabwcTest::desktopComposite()
+PASS   : BudgieLabwcTest::clipboardBothWays()
+PASS   : BudgieLabwcTest::clipboardOutlivesTheResident()
+PASS   : BudgieLabwcTest::aCopyStillInFlightOutlivesTheResident()
+PASS   : BudgieLabwcTest::anImageOutlivesTheResident()
+PASS   : BudgieLabwcTest::nothingIsKeptWhenAnotherAppOwnsTheClipboard()
+PASS   : BudgieLabwcTest::aClipboardManagerIsLeftToIt()
+PASS   : BudgieLabwcTest::anOversizedResultIsNotKept()
+PASS   : BudgieLabwcTest::rotatedAndFractionalOutputs(90)
+PASS   : BudgieLabwcTest::rotatedAndFractionalOutputs(180)
+PASS   : BudgieLabwcTest::rotatedAndFractionalOutputs(270)
+PASS   : BudgieLabwcTest::rotatedAndFractionalOutputs(flipped)
+PASS   : BudgieLabwcTest::rotatedAndFractionalOutputs(flipped-90)
+PASS   : BudgieLabwcTest::recordingFramesAreUpright(90)
+PASS   : BudgieLabwcTest::recordingFramesAreUpright(flipped-90)
+PASS   : BudgieLabwcTest::displayChangeInvalidates()
+PASS   : BudgieLabwcTest::regionDragExactPixels(live)
+PASS   : BudgieLabwcTest::regionDragExactPixels(screenshot-first)
+PASS   : BudgieLabwcTest::ownWindowsRefused()
+PASS   : BudgieLabwcTest::bridgeKeyNormalization()
+PASS   : BudgieLabwcTest::bridgeReadsRcXml()
+PASS   : BudgieLabwcTest::cleanupTestCase()
+Totals: 29 passed, 1 failed, 0 skipped, 0 blacklisted, 20572ms
+********* Finished testing of BudgieLabwcTest *********
+A connection to the bus can't be made
+
+
+0% tests passed, 1 tests failed out of 1
+
+Label Time Summary:
+integration    =  20.63 sec*proc (1 test)
+
+Total Test time (real) =  20.64 sec
+
+The following tests FAILED:
+	 35 - budgie_labwc_integration (Failed)                 integration
+Errors while running CTest

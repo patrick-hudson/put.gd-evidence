@@ -1,0 +1,7 @@
+# Nonblocking connection review follow-up
+
+Headcaaf7628c1d79f950f9f7b8e7fa1cf25b378d7e7 makes the private probe connection nonblocking. The former wl_display_connect(nullptr) could block before the Qt setup timer ran if the compositor stopped accepting clients and its Unix listen backlog filled. A fresh AF_UNIX SOCK_NONBLOCK stream now fails closed immediately on a full Linux backlog, then successful fds are adopted by libwayland.
+
+The fixture --backlog mode fills a private listen(0) backlog and releases after2.5s even with regressed code. New visibilityRefusesFullConnectionBacklogWithoutBlocking requires the constructor to return in<1s, then a false visibility result. The original blocking call fails that assertion; the fixed and restored complete integration suite passes18.12s on f44. Earlier initial fixed run18.57s also passed. The private socket path's UTF-8 length is checked before launch. The fixture uses no physical desktop or shared compositor.
+
+Review thread4521422157 answered/resolved. CodeRabbit independently checked caaf and confirmed the addressed code/test in its reply; it did not run the integration suite. No Outside diff range comments were present in the two substantive review bodies. Native head4b7 results in final/ are retained as an intermediate stage. The exact newest packagec200/caaf passes cold-first capture,3/3 real locked refusals with no files, and post-unlock capture; final-caaf/ includes actual successful PNGs and a retaken editor-annotated picture.
