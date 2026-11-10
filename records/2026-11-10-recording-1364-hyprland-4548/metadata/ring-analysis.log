@@ -1,0 +1,12 @@
+{"category":"putgd.ui","fields":{"generation":1,"helper":"putgd-ui","itemId":null,"operationId":null,"pid":6365},"level":"info","message":"Helper started","pid":6349,"process":"putgd","time":"2026-11-10T09:08:54.193Z","v":1}
+{"category":"putgd.recording","fields":{"generation":"1","helper":"putgd-record","itemId":null,"pid":6445},"level":"info","message":"Helper started","operationId":"4532c365-b781-4231-ade4-8d7238f0abd9","pid":6349,"process":"putgd","time":"2026-11-10T09:08:55.932Z","v":1}
+Traceback (most recent call last):
+  File "/home/lab/measure_rings.py", line 47, in <module>
+    flashes=decoded(clip,90-a[0],300-a[1],24)
+  File "/home/lab/measure_rings.py", line 10, in decoded
+    raw=subprocess.run(cmd,capture_output=True,check=True).stdout
+        ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['ffmpeg', '-v', 'error', '-i', '/home/lab/n/m-still/out/pr-mp4-1.mp4', '-vf', 'crop=48:48:66:276', '-vsync', '0', '-pix_fmt', 'rgb24', '-f', 'rawvideo', '-']' returned non-zero exit status 8.
