@@ -9,6 +9,8 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-10-plasma-1363-ap6](2026-11-10-plasma-1363-ap6/README.md) | — | PR 1368 Plasma Wayland acceptance — ap6 |
+| [2026-11-10-hyprland-1363-ah6](2026-11-10-hyprland-1363-ah6/README.md) | — | PR 1368 Hyprland acceptance: ah6 on f44 |
 | [2026-11-10-capture-1363-acceptance](2026-11-10-capture-1363-acceptance/README.md) | — | Capture monitor, delay and repeat — acceptance worker, 2026-11-10 |
 | [2026-11-10-1363-budgie-ab9](2026-11-10-1363-budgie-ab9/README.md) | — | PR 1368 Budgie acceptance, 2026-11-10 |
 | [2026-11-10-recording-1364-independent-stage1b](2026-11-10-recording-1364-independent-stage1b/README.md) | #1364 | Recording #1364 independent timing diagnosis — stage 1b |
