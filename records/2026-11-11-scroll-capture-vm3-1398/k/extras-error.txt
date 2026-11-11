@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/svm1398/v3host.py", line 41, in go
+    pid=spawn('SC_Y=100 python3 /home/lab/v3ruler.py --rows 600 --start '+str(start),name);time.sleep(3);shot(name+'-ready');case(name,'100,100,960,600');cmd('kill '+str(pid));time.sleep(1)
+                                                                                                                                                          ~~~^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/svm1398/v3host.py", line 8, in cmd
+    def cmd(c,timeout=300):return lab.guest_session(r,c,timeout=timeout)
+                                  ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/svm1398/repo/tools/lab/lab.py", line 648, in guest_session
+    return ssh(run, script, timeout=timeout)
+  File "/home/patrick/work/svm1398/repo/tools/lab/lab.py", line 532, in ssh
+    result = command(ssh_args(run, bootstrap) + ['sh', '-s'], timeout=timeout, input=script, check=not refusals)
+  File "/home/patrick/work/svm1398/repo/tools/lab/lab.py", line 88, in command
+    raise LabError(f'{Path(str(args[0])).name} failed (exit {result.returncode})')
+lab.LabError: ssh failed (exit 1)

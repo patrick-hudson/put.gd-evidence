@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/svm1398/v3host.py", line 31, in go
+    for i in range(1,21 if k in 'nk' else 6):case('plain%02d'%i)
+                                             ~~~~^^^^^^^^^^^^^^^
+  File "/home/patrick/work/svm1398/v3host.py", line 12, in case
+    print(k,n,'START',flush=True);(o/(n+'.console')).write_text(cmd('python3 /home/lab/v3guest.py case '+n+' '+rect));shot(n+'-end');print(k,n,'END',flush=True)
+                                                                ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/svm1398/v3host.py", line 8, in cmd
+    def cmd(c,timeout=300):return lab.guest_session(r,c,timeout=timeout)
+                                  ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/svm1398/repo/tools/lab/lab.py", line 648, in guest_session
+    return ssh(run, script, timeout=timeout)
+  File "/home/patrick/work/svm1398/repo/tools/lab/lab.py", line 532, in ssh
+    result = command(ssh_args(run, bootstrap) + ['sh', '-s'], timeout=timeout, input=script, check=not refusals)
+  File "/home/patrick/work/svm1398/repo/tools/lab/lab.py", line 88, in command
+    raise LabError(f'{Path(str(args[0])).name} failed (exit {result.returncode})')
+lab.LabError: ssh failed (exit 1)

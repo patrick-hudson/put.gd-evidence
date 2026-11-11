@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/svm1398/v3host.py", line 16, in go
+    (o/'dependencies.log').write_text(lab.ssh(r,'sudo -n '+deps,timeout=500))
+                                      ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/svm1398/repo/tools/lab/lab.py", line 532, in ssh
+    result = command(ssh_args(run, bootstrap) + ['sh', '-s'], timeout=timeout, input=script, check=not refusals)
+  File "/home/patrick/work/svm1398/repo/tools/lab/lab.py", line 88, in command
+    raise LabError(f'{Path(str(args[0])).name} failed (exit {result.returncode})')
+lab.LabError: ssh failed (exit 255)
