@@ -1,0 +1,26 @@
+2026-11-10T20:19:41.924 scroll command prepare
+2026-11-10T20:19:41.925 scroll: prepare frames image-copy injector wlr-virtual-pointer maxHeight 30000 fromTop 1 autoStart 0
+2026-11-10T20:19:41.943 scroll result prepare ok
+2026-11-10T20:19:41.968 scroll command start
+2026-11-10T20:19:41.994 scroll tap: appsrc name=src is-live=true format=time do-timestamp=false leaky-type=downstream max-buffers=2 caps="video/x-raw,format=BGRx,width=1280,height=800,framerate=0/1" ! queue name=cq leaky=downstream max-size-buffers=2 max-size-bytes=0 max-size-time=0 ! videocrop left=100 top=100 right=220 bottom=100 ! videoconvert ! video/x-raw,format=BGRx ! appsink name=tap max-buffers=2 drop=true sync=false emit-signals=true enable-last-sample=false
+2026-11-10T20:19:42.004 scroll: capturing 100,100 960x600 with wlr-virtual-pointer
+2026-11-10T20:19:42.007 scroll result start ok
+2026-11-10T20:19:42.065 scroll tap buffer: t=842404 sum=92307
+2026-11-10T20:19:42.065 scroll: frames 960x600 for 960x600, cap 30000 rows, away -16,200
+2026-11-10T20:19:42.151 scroll tap buffer: t=842491 sum=92307
+2026-11-10T20:19:42.151 scroll frame: t=842491 changed
+2026-11-10T20:19:42.238 scroll inject: t=842578 pointer 480,200 sent
+2026-11-10T20:19:42.289 scroll tap buffer: t=842629 sum=92307
+2026-11-10T20:19:42.299 scroll inject: t=842639 pointer 480,200 sent
+2026-11-10T20:19:42.340 scroll inject: t=842679 wheel -10 sent
+2026-11-10T20:19:42.340 scroll tap buffer: t=842680 sum=92307
+2026-11-10T20:19:42.340 scroll frame: t=842680 same
+2026-11-10T20:19:42.841 scroll inject: t=843180 pointer 480,200 sent
+2026-11-10T20:19:42.863 scroll tap buffer: t=843203 sum=92307
+2026-11-10T20:19:42.864 scroll inject: t=843204 wheel -10 sent
+2026-11-10T20:19:42.864 scroll frame: t=843203 same
+2026-11-10T20:19:42.940 scroll command cancel
+2026-11-10T20:19:42.968 scroll tap: stopped after 4 frames
+2026-11-10T20:19:42.970 scroll: ended Stopped, 0 rows, 0 steps, 0 px per notch, 900 ms
+2026-11-10T20:19:42.972 scroll: source fresh 0, quiet 0, unproven 0, slowest response 0 ms, retries 0, scroll-backs 0
+2026-11-10T20:19:42.972 scroll result cancel ok

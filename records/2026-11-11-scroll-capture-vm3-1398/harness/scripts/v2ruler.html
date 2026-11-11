@@ -1,0 +1,4 @@
+<!doctype html><meta charset=utf-8><style>*{margin:0}html{scrollbar-width:none;scroll-behavior:auto}canvas{display:block}</style><canvas id=c></canvas><script>function paint(){
+let q=new URLSearchParams(location.search),rows=+(q.get('rows')||60);c.width=innerWidth;c.height=rows*40;let g=c.getContext('2d'),cw=Math.floor((c.width-76)/16);g.fillStyle='#fafafa';g.fillRect(0,0,c.width,c.height);for(let y=0;y<c.height;y++){let row=Math.floor(y/40),line=y%40,b;if(line<2)b=65535;else if(line<30)b=row;else{let x=(Math.imul(row,2654435761)+Math.imul(line,40503)+0x9e3779b9)>>>0;x^=x>>>15;x=Math.imul(x,0x2c1b3c6d);x^=x>>>12;x=Math.imul(x,0x297a2d39);x^=x>>>15;b=x&65535;if(b==0||b==65535)b=0x5a5a^line}for(let k=0;k<16;k++){g.fillStyle=(b>>(15-k))&1?'#101010':'#fafafa';g.fillRect(64+k*cw,y,cw,1)}if(line==20){g.fillStyle='#000';g.fillText(row,5,y)}}
+}
+addEventListener("resize",()=>setTimeout(paint,300));setTimeout(paint,1500);</script>

@@ -1,0 +1,23 @@
+2026-11-11T02:31:15.914 scroll command prepare
+2026-11-11T02:31:15.916 scroll: prepare frames image-copy injector wlr-virtual-pointer maxHeight 30000 fromTop 1 autoStart 0
+2026-11-11T02:31:15.929 scroll result prepare ok
+2026-11-11T02:31:16.358 scroll command start
+2026-11-11T02:31:16.360 scroll tap: appsrc name=src is-live=true format=time do-timestamp=false leaky-type=downstream max-buffers=2 caps="video/x-raw,format=RGBx,width=1280,height=800,framerate=0/1" ! queue name=cq leaky=downstream max-size-buffers=2 max-size-bytes=0 max-size-time=0 ! videocrop left=100 top=100 right=220 bottom=100 ! videoconvert ! video/x-raw,format=BGRx ! appsink name=tap max-buffers=2 drop=true sync=false emit-signals=true enable-last-sample=false
+2026-11-11T02:31:16.371 scroll: capturing 100,100 960x600 with wlr-virtual-pointer
+2026-11-11T02:31:16.371 scroll result start ok
+2026-11-11T02:31:16.391 scroll tap buffer: t=805214 sum=31280
+2026-11-11T02:31:16.392 scroll: frames 960x600 for 960x600, cap 30000 rows, away -16,200
+2026-11-11T02:31:16.403 scroll tap buffer: t=805225 sum=31280
+2026-11-11T02:31:16.403 scroll frame: t=805225 changed
+2026-11-11T02:31:16.513 scroll inject: t=805335 pointer 480,200 sent
+2026-11-11T02:31:16.574 scroll inject: t=805396 pointer 480,200 sent
+2026-11-11T02:31:16.574 scroll inject: t=805396 wheel -10 sent
+2026-11-11T02:31:17.074 scroll inject: t=805896 pointer 480,200 sent
+2026-11-11T02:31:17.074 scroll inject: t=805897 wheel -10 sent
+2026-11-11T02:31:17.290 scroll command cancel
+2026-11-11T02:31:17.295 scroll tap buffer: t=806117 sum=31280
+2026-11-11T02:31:17.295 scroll frame: t=806117 same
+2026-11-11T02:31:17.299 scroll tap: stopped after 3 frames
+2026-11-11T02:31:17.300 scroll: ended Stopped, 0 rows, 0 steps, 0 px per notch, 905 ms
+2026-11-11T02:31:17.301 scroll: source fresh 0, quiet 0, unproven 0, slowest response 0 ms, retries 0, scroll-backs 0
+2026-11-11T02:31:17.301 scroll result cancel ok
