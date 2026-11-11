@@ -1,0 +1,57 @@
+2026-11-10T17:40:00.997 scroll command prepare
+2026-11-10T17:40:00.999 scroll: prepare frames image-copy injector wlr-virtual-pointer maxHeight 2000 fromTop 1 autoStart 0
+2026-11-10T17:40:01.017 scroll result prepare ok
+2026-11-10T17:40:01.434 scroll command start
+2026-11-10T17:40:01.437 scroll tap: appsrc name=src is-live=true format=time do-timestamp=false leaky-type=downstream max-buffers=2 caps="video/x-raw,format=BGRx,width=1280,height=800,framerate=0/1" ! queue name=cq leaky=downstream max-size-buffers=2 max-size-bytes=0 max-size-time=0 ! videocrop left=0 top=0 right=0 bottom=0 ! videoconvert ! video/x-raw,format=BGRx ! appsink name=tap max-buffers=2 drop=true sync=false emit-signals=true enable-last-sample=false
+2026-11-10T17:40:01.453 scroll: capturing 0,0 1280x800 with wlr-virtual-pointer
+2026-11-10T17:40:01.458 scroll result start ok
+2026-11-10T17:40:01.562 scroll tap buffer: t=398920 sum=3760
+2026-11-10T17:40:01.562 scroll: frames 1280x800 for 1280x800, cap 2000 rows, away none
+2026-11-10T17:40:01.683 scroll inject: t=399042 pointer 640,266 sent
+2026-11-10T17:40:01.765 scroll tap buffer: t=399123 sum=3760
+2026-11-10T17:40:01.815 scroll inject: t=399173 pointer 640,266 sent
+2026-11-10T17:40:01.818 scroll inject: t=399176 wheel -10 sent
+2026-11-10T17:40:01.818 scroll frame: t=399123 changed
+2026-11-10T17:40:01.922 scroll tap buffer: t=399280 sum=3760
+2026-11-10T17:40:01.922 scroll frame: t=399280 same
+2026-11-10T17:40:02.318 scroll inject: t=399676 pointer 640,266 sent
+2026-11-10T17:40:02.392 scroll tap buffer: t=399750 sum=3760
+2026-11-10T17:40:02.393 scroll inject: t=399751 wheel -10 sent
+2026-11-10T17:40:02.393 scroll frame: t=399750 same
+2026-11-10T17:40:03.005 scroll tap buffer: t=400361 sum=3760
+2026-11-10T17:40:03.005 scroll fresh frame: t=400361
+2026-11-10T17:40:03.145 scroll inject: t=400504 pointer 640,266 sent
+2026-11-10T17:40:03.332 scroll inject: t=400691 wheel 1 sent
+2026-11-10T17:40:03.333 scroll tap buffer: t=400692 sum=3760
+2026-11-10T17:40:03.334 scroll frame: t=400692 same
+2026-11-10T17:40:03.509 scroll tap buffer: t=400867 sum=94672
+2026-11-10T17:40:03.511 scroll frame: t=400867 changed
+2026-11-10T17:40:03.657 scroll step: Appended offset 1 hint -1 notches 1 score 0.98 evidence 749 appended 1 fixed 1/0
+2026-11-10T17:40:03.670 scroll tap buffer: t=401028 sum=97649
+2026-11-10T17:40:03.678 scroll inject: t=401036 pointer 640,266 sent
+2026-11-10T17:40:03.818 scroll tap buffer: t=401177 sum=97649
+2026-11-10T17:40:03.893 scroll inject: t=401251 wheel 64 sent
+2026-11-10T17:40:03.893 scroll frame: t=401177 changed
+2026-11-10T17:40:04.077 scroll tap buffer: t=401435 sum=86049
+2026-11-10T17:40:04.077 scroll frame: t=401435 changed
+2026-11-10T17:40:04.214 scroll step: NoMatch offset 0 hint 64 notches 64 score 0.00 evidence 0 appended 0 fixed 1/0
+2026-11-10T17:40:04.331 scroll tap buffer: t=401690 sum=68710
+2026-11-10T17:40:04.334 scroll frame: t=401690 changed
+2026-11-10T17:40:04.459 scroll step: Ambiguous offset -772 hint 64 notches 64 score 1.00 evidence 1 appended 0 fixed 1/0
+2026-11-10T17:40:04.468 scroll inject: t=401826 pointer 640,266 sent
+2026-11-10T17:40:04.470 scroll tap buffer: t=401828 sum=21463
+2026-11-10T17:40:04.542 scroll inject: t=401900 wheel -64 sent
+2026-11-10T17:40:04.542 scroll frame: t=401828 changed
+2026-11-10T17:40:04.676 scroll tap buffer: t=402035 sum=21463
+2026-11-10T17:40:04.679 scroll frame: t=402035 same
+2026-11-10T17:40:04.803 scroll tap buffer: t=402161 sum=68157
+2026-11-10T17:40:04.809 scroll frame: t=402161 changed
+2026-11-10T17:40:04.912 scroll tap buffer: t=402271 sum=84119
+2026-11-10T17:40:04.913 scroll frame: t=402271 changed
+2026-11-10T17:40:05.042 scroll step: NoMatch offset 0 hint 0 notches -64 score 0.00 evidence 0 appended 0 fixed 1/0
+2026-11-10T17:40:05.226 scroll tap buffer: t=402579 sum=86049
+2026-11-10T17:40:05.226 scroll fresh frame: t=402579
+2026-11-10T17:40:05.243 scroll step: NoMatch offset 0 hint 0 notches -64 score 0.00 evidence 0 appended 0 fixed 1/0
+2026-11-10T17:40:05.434 scroll tap: stopped after 15 frames
+2026-11-10T17:40:05.438 scroll: ended LostTrack, 801 rows, 2 steps, 1 px per notch, 3681 ms (after scrolling back the last stitched frame was not found (NoMatch))
+2026-11-10T17:40:05.438 scroll: source fresh 2, quiet 1, unproven 0, slowest response 176 ms, retries 1, scroll-backs 1

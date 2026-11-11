@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/svm1398/v2native-o.py", line 10, in <module>
+    print(cmd('python3 /home/lab/v2nativeguest.py init'),flush=True)
+          ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/svm1398/v2native-o.py", line 5, in cmd
+    def cmd(c):return lab.guest_session(r,c,timeout=300)
+                      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/svm1398/repo/tools/lab/lab.py", line 648, in guest_session
+    return ssh(run, script, timeout=timeout)
+  File "/home/patrick/work/svm1398/repo/tools/lab/lab.py", line 532, in ssh
+    result = command(ssh_args(run, bootstrap) + ['sh', '-s'], timeout=timeout, input=script, check=not refusals)
+  File "/home/patrick/work/svm1398/repo/tools/lab/lab.py", line 88, in command
+    raise LabError(f'{Path(str(args[0])).name} failed (exit {result.returncode})')
+lab.LabError: ssh failed (exit 1)
