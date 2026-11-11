@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-10-scroll-capture-vm2-1398](2026-11-10-scroll-capture-vm2-1398/README.md) | #1398 | Scroll-capture VM acceptance, second pass — PR #1398 |
 | [2026-11-10-proton-upload-speed-acceptance](2026-11-10-proton-upload-speed-acceptance/README.md) | #1400 | Proton uploads on four desktops after the helper speed-up (#1400) |
 | [2026-11-10-scroll-physical-pass2-1398](2026-11-10-scroll-physical-pass2-1398/README.md) | #1398 | Scroll capture: second physical acceptance pass, PR #1398 |
 | [2026-11-10-scroll-physical-1398](2026-11-10-scroll-physical-1398/README.md) | #1398 | Scroll-capture physical acceptance — PR #1398 |
