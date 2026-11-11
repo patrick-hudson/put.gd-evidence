@@ -1,0 +1,45 @@
+-- Found AWS SDK for C++, Version: 1.11.924, Install Root:/home/patrick/work/tk1110/build/sdk, Platform Prefix:, Platform Dependent Libraries: pthread;curl
+-- Components specified for AWSSDK: s3, application will be depending on libs: aws-cpp-sdk-s3;aws-cpp-sdk-core
+-- Try finding aws-cpp-sdk-core
+-- LibCrypto Include Dir: /usr/include
+-- LibCrypto Shared Lib:  /usr/lib64/libcrypto.so
+-- LibCrypto Static Lib:  crypto_STATIC_LIBRARY-NOTFOUND
+-- Found OpenSSL: /usr/lib64/libcrypto.so (found version "3.5.9")
+-- Found aws-cpp-sdk-core
+-- Try finding aws-cpp-sdk-s3
+-- Found aws-cpp-sdk-s3
+-- Found OpenSSL: /usr/lib64/libcrypto.so (found suitable version "3.5.9", minimum required is "1.1.1") found components: Crypto
+-- Configuring done (1.3s)
+-- Generating done (1.7s)
+-- Build files have been written to: /home/patrick/work/tk1110/build/dev
+[1/22] cd /home/patrick/work/tk1110/build/dev && /usr/bin/cmake -DSOURCE_DIR=/home/patrick/work/tk1110 -DOUTPUT_DIR=/home/patrick/work/tk1110/build/dev/build-identity -DRELEASE_TAG= -DSUPPLIED_COMMIT=f70b048180302e8a0dc172ddb4157746fda30975 -DSUPPLIED_TREE=7127e0306d3cf9b78682dd461115d81cd0ad9395 -DSUPPLIED_COUNT=4634 -DSUPPLIED_TIME=1794366558 -P /home/patrick/work/tk1110/cmake/GenerateBuildInfo.cmake
+[2/22] Building CXX object CMakeFiles/putgd_build_identity.dir/build-identity/BuildInfo.cpp.o
+[3/22] Linking CXX static library libputgd_build_identity.a
+[4/22] Automatic MOC and UIC for target putgd_host_open
+[5/20] Linking CXX shared module libputgd-s3.so
+[6/20] Linking CXX executable putgd-b2-worker
+[7/20] Linking CXX executable putgd-s3-worker
+[8/20] Automatic MOC and UIC for target putgd_upload_client
+[9/18] Linking CXX executable putgd-http-worker
+[10/18] Linking CXX executable putgd-cli
+[11/18] Linking CXX executable putgd-ui
+[12/18] Automatic MOC and UIC for target test_gui_theme
+[13/17] Linking CXX executable putgd
+[14/17] Automatic MOC and UIC for target test_native_tray
+[15/16] Linking CXX executable test_gui_theme
+[16/16] Linking CXX executable test_native_tray
+{"schemaVersion": 1, "passed": true, "limitBytesExcludingNul": 107, "paths": [{"path": "/tmp/tk.YdUaPF/r/putgd/session.sock", "utf8Bytes": 35, "passed": true}, {"path": "/tmp/tk.YdUaPF/putgd/session.sock", "utf8Bytes": 33, "passed": true}]}
+Test project /home/patrick/work/tk1110/build/dev
+    Start 20: native_tray_integration
+1/3 Test #20: native_tray_integration ..........   Passed   17.08 sec
+    Start 61: gui_tray_art
+2/3 Test #61: gui_tray_art .....................   Passed    0.07 sec
+    Start 62: gui_theme
+3/3 Test #62: gui_theme ........................   Passed    0.83 sec
+
+100% tests passed, 0 tests failed out of 3
+
+Label Time Summary:
+integration    =  17.98 sec*proc (3 tests)
+
+Total Test time (real) =  17.99 sec
