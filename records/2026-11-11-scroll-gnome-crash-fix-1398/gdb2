@@ -1,0 +1,8 @@
+set pagination off
+frame 0
+info registers rip rdi rsi rbx
+frame 1
+info registers rip rbx rbp r12 r13 r14 r15
+x/40i meta_window_wayland_update_main_monitor
+frame 3
+info registers rip rbx rbp r12 r13 r14 r15

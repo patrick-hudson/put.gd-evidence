@@ -1,0 +1,22 @@
+set pagination off
+set debuginfod enabled on
+set print pretty on
+bt 8
+frame 0
+info registers rip rdi rsi rax rdx
+x/6i $pc-12
+p window
+frame 1
+info locals
+p *window
+frame 3
+info locals
+p window->unmanaging
+p window->monitor
+p window->title
+p window->rect
+p window->client_type
+p window->surface
+p flags
+p gravity
+p frame_rect
