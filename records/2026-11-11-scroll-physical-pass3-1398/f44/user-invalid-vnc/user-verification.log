@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/p31398/user_verify.py", line 8, in <module>
+    result['verification']=scroll_run.verify(out/'capture.png',a)
+                           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/p31398/scroll_run.py", line 36, in verify
+    im=Image.open(path).convert('RGB');w,h=im.size;s=a.scale
+       ~~~~~~~~~~^^^^^^
+  File "/usr/lib64/python3.14/site-packages/PIL/Image.py", line 3639, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/home/patrick/work/p31398/user/capture.png'
