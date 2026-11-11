@@ -1,0 +1,112 @@
+{
+  "component": "GNOME Shell / Mutter window placement through GJS",
+  "timeUtc": "2026-11-11T07:39:35Z",
+  "signal": "SIGSEGV",
+  "corePid": 3594190,
+  "topFrame": "meta_window_update_monitor",
+  "nextFrames": [
+    "meta_window_wayland_update_main_monitor",
+    "meta_window_move_resize_internal",
+    "GJS Function::invoke"
+  ],
+  "trigger": "Additional cleanup scroll.prepare -> immediate scroll.cancel -> ui.quit",
+  "operationId": "b92e251a-c789-406c-a9e3-79101ecc66f2",
+  "captureStarted": false,
+  "pngProduced": false,
+  "sourceFreshLine": null,
+  "sourceFreshLineExplanation": "No scroll.start or frame loop for this cleanup operation; no source summary was emitted.",
+  "attribution": "Mutter is the crashing component; regression status and the responsible window-placement caller remain unproven. Overall desktop acceptance is blocked.",
+  "rpc": [
+    {
+      "time": 1794382773.9779978,
+      "method": "scroll.prepare",
+      "params": {
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ]
+      },
+      "reply": {
+        "error": {
+          "code": "",
+          "details": {},
+          "message": ""
+        },
+        "ok": true,
+        "requestId": "75a63d9c-6deb-4743-852d-401723b8fd8d",
+        "result": {
+          "height": 0,
+          "id": "b92e251a-c789-406c-a9e3-79101ecc66f2",
+          "operationId": "b92e251a-c789-406c-a9e3-79101ecc66f2",
+          "pixelsPerNotch": 0,
+          "rect": [
+            100,
+            200,
+            960,
+            600
+          ],
+          "state": "ready",
+          "steps": 0
+        },
+        "schemaVersion": 1
+      }
+    },
+    {
+      "time": 1794382774.0290856,
+      "method": "scroll.cancel",
+      "params": {
+        "id": "b92e251a-c789-406c-a9e3-79101ecc66f2"
+      },
+      "reply": {
+        "error": {
+          "code": "",
+          "details": {},
+          "message": ""
+        },
+        "ok": true,
+        "requestId": "7c166e3f-0130-47c3-8859-ee9cd3d293e0",
+        "result": {
+          "error": {
+            "code": "",
+            "details": {},
+            "message": ""
+          },
+          "height": 0,
+          "id": "b92e251a-c789-406c-a9e3-79101ecc66f2",
+          "operationId": "b92e251a-c789-406c-a9e3-79101ecc66f2",
+          "pixelsPerNotch": 0,
+          "rect": [
+            100,
+            200,
+            960,
+            600
+          ],
+          "state": "cancelled",
+          "steps": 0
+        },
+        "schemaVersion": 1
+      }
+    },
+    {
+      "time": 1794382774.158212,
+      "method": "ui.quit",
+      "params": {},
+      "reply": {
+        "error": {
+          "code": "",
+          "details": {},
+          "message": ""
+        },
+        "ok": true,
+        "requestId": "28654ee1-b28d-453c-802a-6f857a8229e9",
+        "result": {
+          "quitting": true
+        },
+        "schemaVersion": 1
+      }
+    }
+  ],
+  "restored": true
+}

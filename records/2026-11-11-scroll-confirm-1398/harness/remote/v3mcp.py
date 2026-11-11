@@ -1,0 +1,25 @@
+import asyncio,json,sys,os,time
+from pathlib import Path
+from mcp import ClientSession,StdioServerParameters
+from mcp.client.stdio import stdio_client
+async def main():
+ r=sys.argv[1];env=dict(os.environ,VM_RUN=r);out=Path('/home/patrick/work/scn')/('v3-'+r+'-mcp.json');events=[]
+ params=StdioServerParameters(command='/home/patrick/work/sf4/mcpvenv/bin/python',args=['/home/patrick/work/scn/mcp-entry.py','--cli','/home/patrick/work/scn/v3-mcp-cli.py'],env=env)
+ async with stdio_client(params) as (read,write):
+  async with ClientSession(read,write) as session:
+   await session.initialize()
+   async def call(name,args):
+    v=await session.call_tool(name,args);obj=json.loads(v.content[0].text);events.append({'tool':name,'arguments':args,'reply':obj});out.write_text(json.dumps(events,indent=2));return obj['result']
+   rect=[100,100,960,600]
+   a=await call('prepare_scroll_capture',{'rect':rect});i=a['id']
+   for _ in range(800):
+    a=await call('get_scroll_capture',{'id':i})
+    if a['state']=='ready':break
+    await asyncio.sleep(.2)
+   await call('control_scroll_capture',{'id':i,'command':'start'})
+   for _ in range(800):
+    a=await call('get_scroll_capture',{'id':i})
+    if a['state'] in ['done','failed','cancelled']:break
+    await asyncio.sleep(.3)
+   if a['state'] not in ['done','failed','cancelled']:await call('control_scroll_capture',{'id':i,'command':'cancel'})
+asyncio.run(main())
