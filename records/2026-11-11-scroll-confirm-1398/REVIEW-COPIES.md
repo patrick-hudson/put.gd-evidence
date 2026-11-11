@@ -1,0 +1,3 @@
+# Review-copy receipt metadata
+
+The initial evidence scan flagged 2,842 occurrences of synthetic HTTP receipt UUIDs under concurrencyToken as generic API keys. HttpWorkerMain.cpp assigns this field from objectReference.nonce; these isolated loopback publication nonces are not authentication material. Public review copies replace that redundant field with a marker. PNGs, capture result fields, SHA-256 values, operation IDs, helper logs and all acceptance decisions are unchanged. Original host exports and their hash manifests remain private and unchanged; those original-file hashes describe the raw export, while SHA256SUMS.json describes the public review copies. No scanner rule or allowlist was changed.
