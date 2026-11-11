@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/sfinal/prep.py", line 10, in <module>
+    print(lab.ssh(r,"nohup sh -c "+repr("sudo -n "+deps+" > /tmp/deps.log 2>&1; echo $? > /tmp/deps.done")+" > /dev/null 2>&1 < /dev/null & echo started",timeout=60))
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/svm1398/repo/tools/lab/lab.py", line 532, in ssh
+    result = command(ssh_args(run, bootstrap) + ['sh', '-s'], timeout=timeout, input=script, check=not refusals)
+  File "/home/patrick/work/svm1398/repo/tools/lab/lab.py", line 88, in command
+    raise LabError(f'{Path(str(args[0])).name} failed (exit {result.returncode})')
+lab.LabError: ssh failed (exit 255)

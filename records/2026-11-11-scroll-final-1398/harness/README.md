@@ -1,0 +1,3 @@
+# Final acceptance harness
+
+The resident and helper are unmodified CI packages. The drivers reuse the third-pass scripts from /home/patrick/work/p31398 and /home/patrick/work/svm1398 on the builders. These additions run the requested counts, verify whole barcode cells and right margins, decode edge-inclusive text bands, compare the failed text output against a complete same-font run, and record cancellation and upload invariants. No product build was performed. Scripts run graphical and pixel-verification work on builders; the workstation controls SSH, checks exported hashes, and writes the report. Native MCP controls go through the official SDK stdio helper forwarding to the installed production CLI.
