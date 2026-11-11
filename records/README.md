@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-11-scroll-confirm-1398](2026-11-11-scroll-confirm-1398/README.md) | #1398 | Scroll-capture confirmation — PR #1398 |
 | [2026-11-11-scroll-final-1398](2026-11-11-scroll-final-1398/README.md) | #1398 | Final scroll-capture acceptance — PR #1398 |
 | [2026-11-11-turkey-tray](2026-11-11-turkey-tray/README.md) | — | Rounded turkey tray artwork |
 | [2026-11-11-scroll-capture-vm3-1398](2026-11-11-scroll-capture-vm3-1398/README.md) | #1398 | Scroll-capture VM acceptance, third pass — PR #1398 |
