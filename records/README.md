@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-10-scroll-physical-pass2-1398](2026-11-10-scroll-physical-pass2-1398/README.md) | #1398 | Scroll capture: second physical acceptance pass, PR #1398 |
 | [2026-11-10-scroll-physical-1398](2026-11-10-scroll-physical-1398/README.md) | #1398 | Scroll-capture physical acceptance — PR #1398 |
 | [2026-11-10-scroll-capture-vm-1398](2026-11-10-scroll-capture-vm-1398/README.md) | #1398 | Scroll capture VM acceptance — PR #1398 |
 | [2026-11-10-history-page-acceptance-2](2026-11-10-history-page-acceptance-2/README.md) | #2 | Refined History page — desktop acceptance part 2, 2026-11-10 |
