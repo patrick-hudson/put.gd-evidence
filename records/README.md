@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-11-scroll-capture-vm3-1398](2026-11-11-scroll-capture-vm3-1398/README.md) | #1398 | Scroll-capture VM acceptance, third pass — PR #1398 |
 | [2026-11-11-scroll-physical-pass3-1398](2026-11-11-scroll-physical-pass3-1398/README.md) | #1398 | Scroll capture: third physical acceptance pass, PR #1398 |
 | [2026-11-10-history-gallery-caption](2026-11-10-history-gallery-caption/README.md) | — | History gallery caption: no stub of the kind |
 | [2026-11-10-scroll-capture-vm2-1398](2026-11-10-scroll-capture-vm2-1398/README.md) | #1398 | Scroll-capture VM acceptance, second pass — PR #1398 |
