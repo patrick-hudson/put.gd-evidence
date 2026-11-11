@@ -166,7 +166,7 @@ Shell (pid 3680602) for everything below, 08:29:39 to 08:46 UTC.
 | recording: prepare, kill the helper (`f-rpk`) | 28 | 0 | same |
 | recording: ready, start, cancel (`f-rsc`) | 21 | 0 | 0, 0.05, 0.1 s x7 each |
 
-259 iterations, 0 Shell crashes. `coredumpctl list --since 02:29:39`: nothing, of any program.
+261 iterations (156 scroll, 105 recording), 0 Shell crashes. `coredumpctl list --since 02:29:39`: nothing, of any program.
 The Shell's journal for the window (`journal-fixed-shell.txt`, 65 lines): no `JS ERROR`, no line
 from the extension; 57 x "D-Bus client with active sessions vanished" (Mutter, a helper that ended
 with its screencast session open) and 8 x "Can't update stage views actor". Every reply was the
