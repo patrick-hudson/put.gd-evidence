@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-11-capture-delay-settings-shortcuts](2026-11-11-capture-delay-settings-shortcuts/README.md) | — | Capture delay section in Settings → Capture |
 | [2026-11-12-scroll-fix6-1398](2026-11-12-scroll-fix6-1398/README.md) | #1376, #1398 | Scroll capture fix round 6 — PR #1398 (issue #1376) |
 | [2026-11-11-scroll-review-accept-1398](2026-11-11-scroll-review-accept-1398/README.md) | #1398 | Scroll capture review acceptance — PR #1398 |
 | [2026-11-11-scroll-gnome-crash-fix-1398](2026-11-11-scroll-gnome-crash-fix-1398/README.md) | #1398 | FIX-5: the GNOME Shell crash after prepare, cancel, quit (PR #1398) |
