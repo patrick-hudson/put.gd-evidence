@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-12-proton-k72-revoke-reliability](2026-11-12-proton-k72-revoke-reliability/README.md) | #1414 | k72 Proton revoke reliability for PR #1414 |
 | [2026-11-12-proton-chosen-connection-acceptance-round4](2026-11-12-proton-chosen-connection-acceptance-round4/README.md) | #1414 | Proton chosen-connection desktop acceptance round 4 (#1414) |
 | [2026-11-12-proton-chosen-connection-acceptance-round3](2026-11-12-proton-chosen-connection-acceptance-round3/README.md) | #1414 | Proton chosen-connection desktop acceptance round 3 (#1414) |
 | [2026-11-12-proton-chosen-connection-acceptance-round2](2026-11-12-proton-chosen-connection-acceptance-round2/README.md) | #1414 | Proton chosen-connection desktop acceptance round 2 (#1414) |
