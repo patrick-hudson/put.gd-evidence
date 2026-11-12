@@ -1,0 +1,19 @@
+qt.qpa.xcb: could not connect to display 
+qt.qpa.plugin: From 6.5.0, xcb-cursor0 or libxcb-cursor0 is needed to load the Qt xcb platform plugin.
+qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Available platform plugins are: vnc, xcb, offscreen, wayland-brcm, wayland-egl, wayland, linuxfb, minimalegl, vkkhrdisplay, eglfs, minimal.
+
+bash: line 1: 3410724 Aborted                    (core dumped) plasmashell --version
+k72 remote exit 0
+Traceback (most recent call last):
+  File "/tmp/kr19/drive.py", line 33, in <module>
+    with (out/'never-driver.log').open('w') as f:remote('cd ~/work/kr19 && python3 -u never.py',stdout=f,stderr=s.STDOUT)
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/kr19/drive.py", line 7, in remote
+    def remote(c,**kw):return s.run(ssh+[c],check=True,**kw)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['ssh', '-i', '/home/patrick/.ssh/awskey_110724', '-o', 'IdentitiesOnly=yes', '-o', 'StrictHostKeyChecking=yes', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=15', '-o', 'UserKnownHostsFile=/home/patrick/work/put.gd/work/remote-builders/k72/known_hosts', 'patrick@192.168.68.72', 'cd ~/work/kr19 && python3 -u never.py']' returned non-zero exit status 1.
