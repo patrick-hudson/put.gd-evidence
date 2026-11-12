@@ -1,0 +1,14 @@
+d69 (Debian 13 Plasma Wayland): d69 is already locked
+  claude (scroll-fix7-1398), acquired 2026-11-12T06:59:10Z
+  purpose: PR 1398 fix 7 final: live web pages (Firefox, Chromium) and fixture controls, CI deb 7860e389
+  expires in 36 min, heartbeat 3 min ago
+  Don't poll the holder or wait idle: tell your coordinator, do other work, and try again later
+Traceback (most recent call last):
+  File "/tmp/p4a/drive4.py", line 12, in <module>
+    lease('acquire',extra=['--owner','proton-round4','--purpose','PR1414 exact-head acceptance; notes /tmp/p4a','--minutes','45'])
+  File "/tmp/p4a/drive4.py", line 10, in lease
+    def lease(action,res='desktop',**kw):return s.run(lock+[action,host,'--resource',res,'--session',session]+kw.get('extra',[]),check=True)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/usr/bin/python3', '/tmp/p4a/desktop_lock.py', 'acquire', 'd69', '--resource', 'desktop', '--session', 'p1414-r4-d69', '--owner', 'proton-round4', '--purpose', 'PR1414 exact-head acceptance; notes /tmp/p4a', '--minutes', '45']' returned non-zero exit status 1.

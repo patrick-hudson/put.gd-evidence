@@ -1,0 +1,3377 @@
+[
+  {
+    "pair": 1,
+    "orderKiB": [
+      512,
+      64
+    ],
+    "name": "back-to-back",
+    "passed": true,
+    "note": "second upload invoked while the first was running",
+    "state": "completed",
+    "seconds": 7.15,
+    "items": [
+      {
+        "bytes": 524288,
+        "mime": "application/octet-stream",
+        "uploadStatus": "uploaded",
+        "shareStatus": "shared",
+        "link": true,
+        "error": "",
+        "historyId": "b1470437-ed64-4be3-a15f-08538c17a436"
+      },
+      {
+        "bytes": 65536,
+        "mime": "application/octet-stream",
+        "uploadStatus": "uploaded",
+        "shareStatus": "shared",
+        "link": true,
+        "error": "",
+        "historyId": "27d22468-83c3-4734-81e6-29b81f58a491"
+      }
+    ],
+    "firstSeconds": 5.02,
+    "secondSeconds": 7.15,
+    "helperGoneAfter": 0.01,
+    "helperProcessesObserved": [
+      {
+        "pid": 3937051,
+        "startTicks": "91876061"
+      }
+    ],
+    "helperProcessCount": 1,
+    "operationIds": [
+      "b674219b-19e2-4dd4-b979-bc6ea99acc01",
+      "74df9ea0-a2d8-4971-bb21-50a323b84c7f"
+    ],
+    "acceptTimes": [
+      "2026-11-12T07:15:43.621Z",
+      "2026-11-12T07:15:43.676Z"
+    ],
+    "completionTimes": [
+      "2026-11-12T07:15:48.571Z",
+      "2026-11-12T07:15:50.747Z"
+    ],
+    "finishedFirst": 1,
+    "operationEvents": [
+      [
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "itemId": null,
+            "items": 1,
+            "output": "upload",
+            "profileId": "proton-lab",
+            "provider": "proton-drive",
+            "zipFolders": true
+          },
+          "level": "info",
+          "message": "Operation accepted",
+          "operationId": "b674219b-19e2-4dd4-b979-bc6ea99acc01",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:15:43.621Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "byteCount": 524288,
+            "itemId": null,
+            "items": 1,
+            "mimeTypes": [
+              "application/octet-stream"
+            ]
+          },
+          "level": "info",
+          "message": "Artifacts acquired",
+          "operationId": "b674219b-19e2-4dd4-b979-bc6ea99acc01",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:15:43.698Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "collisionPolicy": "rename",
+            "itemId": null,
+            "names": [
+              {
+                "itemId": "b1470437-ed64-4be3-a15f-08538c17a436",
+                "name": "acc-b2b-1.bin",
+                "status": "pending"
+              }
+            ],
+            "namingMode": "original"
+          },
+          "level": "info",
+          "message": "Upload names chosen",
+          "operationId": "b674219b-19e2-4dd4-b979-bc6ea99acc01",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:15:43.714Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "byteCount": 524288,
+            "mime": "application/octet-stream",
+            "name": "acc-b2b-1-3ceff5b6-6d43-4de2-8f3e-190f8d7802c8.bin",
+            "provider": "proton-drive"
+          },
+          "itemId": "b1470437-ed64-4be3-a15f-08538c17a436",
+          "level": "info",
+          "message": "Upload attempt",
+          "operationId": "b674219b-19e2-4dd4-b979-bc6ea99acc01",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:15:45.246Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "elapsedMs": 2142,
+            "provider": "proton-drive",
+            "status": "uploaded",
+            "uncertain": false
+          },
+          "itemId": "b1470437-ed64-4be3-a15f-08538c17a436",
+          "level": "info",
+          "message": "Upload finished",
+          "operationId": "b674219b-19e2-4dd4-b979-bc6ea99acc01",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:15:47.388Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "action": "create",
+            "provider": "proton-drive",
+            "status": "shared"
+          },
+          "itemId": "b1470437-ed64-4be3-a15f-08538c17a436",
+          "level": "info",
+          "message": "Sharing finished",
+          "operationId": "b674219b-19e2-4dd4-b979-bc6ea99acc01",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:15:48.489Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "byteCount": 524288,
+            "durationMs": 4966,
+            "itemId": null,
+            "items": 1,
+            "provider": "proton-drive",
+            "state": "completed",
+            "uploadStatus": {
+              "uploaded": 1
+            }
+          },
+          "level": "info",
+          "message": "Operation finished",
+          "operationId": "b674219b-19e2-4dd4-b979-bc6ea99acc01",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:15:48.571Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.clipboard",
+          "fields": {
+            "action": "files",
+            "automatic": true,
+            "behavior": "each_link",
+            "cancelled": false,
+            "copyStatus": "failed",
+            "error": {
+              "code": "clipboard_unavailable",
+              "details": {},
+              "message": "GNOME helper cannot own CLIPBOARD"
+            },
+            "itemId": null,
+            "links": 1
+          },
+          "level": "warning",
+          "message": "Automatic copy finished",
+          "operationId": "b674219b-19e2-4dd4-b979-bc6ea99acc01",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:15:48.571Z",
+          "v": 1
+        }
+      ],
+      [
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "itemId": null,
+            "items": 1,
+            "output": "upload",
+            "profileId": "proton-lab",
+            "provider": "proton-drive",
+            "zipFolders": true
+          },
+          "level": "info",
+          "message": "Operation accepted",
+          "operationId": "74df9ea0-a2d8-4971-bb21-50a323b84c7f",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:15:43.676Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "byteCount": 65536,
+            "itemId": null,
+            "items": 1,
+            "mimeTypes": [
+              "application/octet-stream"
+            ]
+          },
+          "level": "info",
+          "message": "Artifacts acquired",
+          "operationId": "74df9ea0-a2d8-4971-bb21-50a323b84c7f",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:15:43.812Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "collisionPolicy": "rename",
+            "itemId": null,
+            "names": [
+              {
+                "itemId": "27d22468-83c3-4734-81e6-29b81f58a491",
+                "name": "acc-b2b-2.bin",
+                "status": "pending"
+              }
+            ],
+            "namingMode": "original"
+          },
+          "level": "info",
+          "message": "Upload names chosen",
+          "operationId": "74df9ea0-a2d8-4971-bb21-50a323b84c7f",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:15:43.833Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "byteCount": 65536,
+            "mime": "application/octet-stream",
+            "name": "acc-b2b-2-5e15a21e-6428-41b0-8bce-5fc4d7149e1e.bin",
+            "provider": "proton-drive"
+          },
+          "itemId": "27d22468-83c3-4734-81e6-29b81f58a491",
+          "level": "info",
+          "message": "Upload attempt",
+          "operationId": "74df9ea0-a2d8-4971-bb21-50a323b84c7f",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:15:49.010Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "elapsedMs": 622,
+            "provider": "proton-drive",
+            "status": "uploaded",
+            "uncertain": false
+          },
+          "itemId": "27d22468-83c3-4734-81e6-29b81f58a491",
+          "level": "info",
+          "message": "Upload finished",
+          "operationId": "74df9ea0-a2d8-4971-bb21-50a323b84c7f",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:15:49.633Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "action": "create",
+            "provider": "proton-drive",
+            "status": "shared"
+          },
+          "itemId": "27d22468-83c3-4734-81e6-29b81f58a491",
+          "level": "info",
+          "message": "Sharing finished",
+          "operationId": "74df9ea0-a2d8-4971-bb21-50a323b84c7f",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:15:50.684Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "byteCount": 65536,
+            "durationMs": 7096,
+            "itemId": null,
+            "items": 1,
+            "provider": "proton-drive",
+            "state": "completed",
+            "uploadStatus": {
+              "uploaded": 1
+            }
+          },
+          "level": "info",
+          "message": "Operation finished",
+          "operationId": "74df9ea0-a2d8-4971-bb21-50a323b84c7f",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:15:50.747Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.clipboard",
+          "fields": {
+            "action": "files",
+            "automatic": true,
+            "behavior": "each_link",
+            "cancelled": false,
+            "copyStatus": "failed",
+            "error": {
+              "code": "clipboard_unavailable",
+              "details": {},
+              "message": "GNOME helper cannot own CLIPBOARD"
+            },
+            "itemId": null,
+            "links": 1
+          },
+          "level": "warning",
+          "message": "Automatic copy finished",
+          "operationId": "74df9ea0-a2d8-4971-bb21-50a323b84c7f",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:15:50.747Z",
+          "v": 1
+        }
+      ]
+    ]
+  },
+  {
+    "pair": 2,
+    "orderKiB": [
+      512,
+      64
+    ],
+    "name": "back-to-back-2",
+    "passed": true,
+    "note": "second upload invoked while the first was running",
+    "state": "completed",
+    "seconds": 7.46,
+    "items": [
+      {
+        "bytes": 524288,
+        "mime": "application/octet-stream",
+        "uploadStatus": "uploaded",
+        "shareStatus": "shared",
+        "link": true,
+        "error": "",
+        "historyId": "ef45a4ba-7085-4366-8c27-538c2019c03e"
+      },
+      {
+        "bytes": 65536,
+        "mime": "application/octet-stream",
+        "uploadStatus": "uploaded",
+        "shareStatus": "shared",
+        "link": true,
+        "error": "",
+        "historyId": "ecdbb7c6-1001-4076-abf8-8bc8a001248a"
+      }
+    ],
+    "firstSeconds": 4.99,
+    "secondSeconds": 7.46,
+    "helperGoneAfter": 0.01,
+    "helperProcessesObserved": [
+      {
+        "pid": 3937789,
+        "startTicks": "91878226"
+      }
+    ],
+    "helperProcessCount": 1,
+    "operationIds": [
+      "082e6a98-767c-4fec-bec5-d4567cf6189b",
+      "75b46753-18c3-4431-ae45-c13be97c096c"
+    ],
+    "acceptTimes": [
+      "2026-11-12T07:16:05.267Z",
+      "2026-11-12T07:16:05.312Z"
+    ],
+    "completionTimes": [
+      "2026-11-12T07:16:10.191Z",
+      "2026-11-12T07:16:12.694Z"
+    ],
+    "finishedFirst": 1,
+    "operationEvents": [
+      [
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "itemId": null,
+            "items": 1,
+            "output": "upload",
+            "profileId": "proton-lab",
+            "provider": "proton-drive",
+            "zipFolders": true
+          },
+          "level": "info",
+          "message": "Operation accepted",
+          "operationId": "082e6a98-767c-4fec-bec5-d4567cf6189b",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:05.267Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "byteCount": 524288,
+            "itemId": null,
+            "items": 1,
+            "mimeTypes": [
+              "application/octet-stream"
+            ]
+          },
+          "level": "info",
+          "message": "Artifacts acquired",
+          "operationId": "082e6a98-767c-4fec-bec5-d4567cf6189b",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:05.379Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "collisionPolicy": "rename",
+            "itemId": null,
+            "names": [
+              {
+                "itemId": "ef45a4ba-7085-4366-8c27-538c2019c03e",
+                "name": "acc-b2b-1.bin",
+                "status": "pending"
+              }
+            ],
+            "namingMode": "original"
+          },
+          "level": "info",
+          "message": "Upload names chosen",
+          "operationId": "082e6a98-767c-4fec-bec5-d4567cf6189b",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:05.397Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "byteCount": 524288,
+            "mime": "application/octet-stream",
+            "name": "acc-b2b-1-cd8b8bc9-0ad0-44af-a19e-85fff3c896c3.bin",
+            "provider": "proton-drive"
+          },
+          "itemId": "ef45a4ba-7085-4366-8c27-538c2019c03e",
+          "level": "info",
+          "message": "Upload attempt",
+          "operationId": "082e6a98-767c-4fec-bec5-d4567cf6189b",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:06.871Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "elapsedMs": 2159,
+            "provider": "proton-drive",
+            "status": "uploaded",
+            "uncertain": false
+          },
+          "itemId": "ef45a4ba-7085-4366-8c27-538c2019c03e",
+          "level": "info",
+          "message": "Upload finished",
+          "operationId": "082e6a98-767c-4fec-bec5-d4567cf6189b",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:09.031Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "action": "create",
+            "provider": "proton-drive",
+            "status": "shared"
+          },
+          "itemId": "ef45a4ba-7085-4366-8c27-538c2019c03e",
+          "level": "info",
+          "message": "Sharing finished",
+          "operationId": "082e6a98-767c-4fec-bec5-d4567cf6189b",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:10.126Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "byteCount": 524288,
+            "durationMs": 4938,
+            "itemId": null,
+            "items": 1,
+            "provider": "proton-drive",
+            "state": "completed",
+            "uploadStatus": {
+              "uploaded": 1
+            }
+          },
+          "level": "info",
+          "message": "Operation finished",
+          "operationId": "082e6a98-767c-4fec-bec5-d4567cf6189b",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:10.191Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.clipboard",
+          "fields": {
+            "action": "files",
+            "automatic": true,
+            "behavior": "each_link",
+            "cancelled": false,
+            "copyStatus": "failed",
+            "error": {
+              "code": "clipboard_unavailable",
+              "details": {},
+              "message": "GNOME helper cannot own CLIPBOARD"
+            },
+            "itemId": null,
+            "links": 1
+          },
+          "level": "warning",
+          "message": "Automatic copy finished",
+          "operationId": "082e6a98-767c-4fec-bec5-d4567cf6189b",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:10.197Z",
+          "v": 1
+        }
+      ],
+      [
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "itemId": null,
+            "items": 1,
+            "output": "upload",
+            "profileId": "proton-lab",
+            "provider": "proton-drive",
+            "zipFolders": true
+          },
+          "level": "info",
+          "message": "Operation accepted",
+          "operationId": "75b46753-18c3-4431-ae45-c13be97c096c",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:05.312Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "byteCount": 65536,
+            "itemId": null,
+            "items": 1,
+            "mimeTypes": [
+              "application/octet-stream"
+            ]
+          },
+          "level": "info",
+          "message": "Artifacts acquired",
+          "operationId": "75b46753-18c3-4431-ae45-c13be97c096c",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:05.462Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "collisionPolicy": "rename",
+            "itemId": null,
+            "names": [
+              {
+                "itemId": "ecdbb7c6-1001-4076-abf8-8bc8a001248a",
+                "name": "acc-b2b-2.bin",
+                "status": "pending"
+              }
+            ],
+            "namingMode": "original"
+          },
+          "level": "info",
+          "message": "Upload names chosen",
+          "operationId": "75b46753-18c3-4431-ae45-c13be97c096c",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:05.477Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "byteCount": 65536,
+            "mime": "application/octet-stream",
+            "name": "acc-b2b-2-5abf4319-a241-462a-802c-0a71ae3aa5ed.bin",
+            "provider": "proton-drive"
+          },
+          "itemId": "ecdbb7c6-1001-4076-abf8-8bc8a001248a",
+          "level": "info",
+          "message": "Upload attempt",
+          "operationId": "75b46753-18c3-4431-ae45-c13be97c096c",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:10.730Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "elapsedMs": 677,
+            "provider": "proton-drive",
+            "status": "uploaded",
+            "uncertain": false
+          },
+          "itemId": "ecdbb7c6-1001-4076-abf8-8bc8a001248a",
+          "level": "info",
+          "message": "Upload finished",
+          "operationId": "75b46753-18c3-4431-ae45-c13be97c096c",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:11.407Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "action": "create",
+            "provider": "proton-drive",
+            "status": "shared"
+          },
+          "itemId": "ecdbb7c6-1001-4076-abf8-8bc8a001248a",
+          "level": "info",
+          "message": "Sharing finished",
+          "operationId": "75b46753-18c3-4431-ae45-c13be97c096c",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:12.633Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "byteCount": 65536,
+            "durationMs": 7406,
+            "itemId": null,
+            "items": 1,
+            "provider": "proton-drive",
+            "state": "completed",
+            "uploadStatus": {
+              "uploaded": 1
+            }
+          },
+          "level": "info",
+          "message": "Operation finished",
+          "operationId": "75b46753-18c3-4431-ae45-c13be97c096c",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:12.694Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.clipboard",
+          "fields": {
+            "action": "files",
+            "automatic": true,
+            "behavior": "each_link",
+            "cancelled": false,
+            "copyStatus": "failed",
+            "error": {
+              "code": "clipboard_unavailable",
+              "details": {},
+              "message": "GNOME helper cannot own CLIPBOARD"
+            },
+            "itemId": null,
+            "links": 1
+          },
+          "level": "warning",
+          "message": "Automatic copy finished",
+          "operationId": "75b46753-18c3-4431-ae45-c13be97c096c",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:12.694Z",
+          "v": 1
+        }
+      ]
+    ]
+  },
+  {
+    "pair": 3,
+    "orderKiB": [
+      512,
+      64
+    ],
+    "name": "back-to-back-3",
+    "passed": true,
+    "note": "second upload invoked while the first was running",
+    "state": "completed",
+    "seconds": 7.55,
+    "items": [
+      {
+        "bytes": 524288,
+        "mime": "application/octet-stream",
+        "uploadStatus": "uploaded",
+        "shareStatus": "shared",
+        "link": true,
+        "error": "",
+        "historyId": "e329b5f4-d0a9-4472-82db-f5d56b40ff85"
+      },
+      {
+        "bytes": 65536,
+        "mime": "application/octet-stream",
+        "uploadStatus": "uploaded",
+        "shareStatus": "shared",
+        "link": true,
+        "error": "",
+        "historyId": "1c41d3bd-35f5-4a15-8111-9e4c6c0a3e03"
+      }
+    ],
+    "firstSeconds": 7.52,
+    "secondSeconds": 7.55,
+    "helperGoneAfter": 0.01,
+    "helperProcessesObserved": [
+      {
+        "pid": 3938078,
+        "startTicks": "91878975"
+      }
+    ],
+    "helperProcessCount": 1,
+    "operationIds": [
+      "578c21cb-3340-4a24-8af1-3b1a33e6de42",
+      "56f90541-8a93-469c-9f4e-d121d4516fac"
+    ],
+    "acceptTimes": [
+      "2026-11-12T07:16:12.770Z",
+      "2026-11-12T07:16:12.821Z"
+    ],
+    "completionTimes": [
+      "2026-11-12T07:16:20.178Z",
+      "2026-11-12T07:16:16.346Z"
+    ],
+    "finishedFirst": 2,
+    "operationEvents": [
+      [
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "itemId": null,
+            "items": 1,
+            "output": "upload",
+            "profileId": "proton-lab",
+            "provider": "proton-drive",
+            "zipFolders": true
+          },
+          "level": "info",
+          "message": "Operation accepted",
+          "operationId": "578c21cb-3340-4a24-8af1-3b1a33e6de42",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:12.770Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "byteCount": 524288,
+            "itemId": null,
+            "items": 1,
+            "mimeTypes": [
+              "application/octet-stream"
+            ]
+          },
+          "level": "info",
+          "message": "Artifacts acquired",
+          "operationId": "578c21cb-3340-4a24-8af1-3b1a33e6de42",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:12.975Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "collisionPolicy": "rename",
+            "itemId": null,
+            "names": [
+              {
+                "itemId": "e329b5f4-d0a9-4472-82db-f5d56b40ff85",
+                "name": "acc-b2b-1.bin",
+                "status": "pending"
+              }
+            ],
+            "namingMode": "original"
+          },
+          "level": "info",
+          "message": "Upload names chosen",
+          "operationId": "578c21cb-3340-4a24-8af1-3b1a33e6de42",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:12.997Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "byteCount": 524288,
+            "mime": "application/octet-stream",
+            "name": "acc-b2b-1-9fe39578-282a-4e51-819d-b74f607d5fc9.bin",
+            "provider": "proton-drive"
+          },
+          "itemId": "e329b5f4-d0a9-4472-82db-f5d56b40ff85",
+          "level": "info",
+          "message": "Upload attempt",
+          "operationId": "578c21cb-3340-4a24-8af1-3b1a33e6de42",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:16.841Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "elapsedMs": 2225,
+            "provider": "proton-drive",
+            "status": "uploaded",
+            "uncertain": false
+          },
+          "itemId": "e329b5f4-d0a9-4472-82db-f5d56b40ff85",
+          "level": "info",
+          "message": "Upload finished",
+          "operationId": "578c21cb-3340-4a24-8af1-3b1a33e6de42",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:19.067Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "action": "create",
+            "provider": "proton-drive",
+            "status": "shared"
+          },
+          "itemId": "e329b5f4-d0a9-4472-82db-f5d56b40ff85",
+          "level": "info",
+          "message": "Sharing finished",
+          "operationId": "578c21cb-3340-4a24-8af1-3b1a33e6de42",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:20.111Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "byteCount": 524288,
+            "durationMs": 7436,
+            "itemId": null,
+            "items": 1,
+            "provider": "proton-drive",
+            "state": "completed",
+            "uploadStatus": {
+              "uploaded": 1
+            }
+          },
+          "level": "info",
+          "message": "Operation finished",
+          "operationId": "578c21cb-3340-4a24-8af1-3b1a33e6de42",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:20.178Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.clipboard",
+          "fields": {
+            "action": "files",
+            "automatic": true,
+            "behavior": "each_link",
+            "cancelled": false,
+            "copyStatus": "failed",
+            "error": {
+              "code": "clipboard_unavailable",
+              "details": {},
+              "message": "GNOME helper cannot own CLIPBOARD"
+            },
+            "itemId": null,
+            "links": 1
+          },
+          "level": "warning",
+          "message": "Automatic copy finished",
+          "operationId": "578c21cb-3340-4a24-8af1-3b1a33e6de42",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:20.185Z",
+          "v": 1
+        }
+      ],
+      [
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "itemId": null,
+            "items": 1,
+            "output": "upload",
+            "profileId": "proton-lab",
+            "provider": "proton-drive",
+            "zipFolders": true
+          },
+          "level": "info",
+          "message": "Operation accepted",
+          "operationId": "56f90541-8a93-469c-9f4e-d121d4516fac",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:12.821Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "byteCount": 65536,
+            "itemId": null,
+            "items": 1,
+            "mimeTypes": [
+              "application/octet-stream"
+            ]
+          },
+          "level": "info",
+          "message": "Artifacts acquired",
+          "operationId": "56f90541-8a93-469c-9f4e-d121d4516fac",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:12.893Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "collisionPolicy": "rename",
+            "itemId": null,
+            "names": [
+              {
+                "itemId": "1c41d3bd-35f5-4a15-8111-9e4c6c0a3e03",
+                "name": "acc-b2b-2.bin",
+                "status": "pending"
+              }
+            ],
+            "namingMode": "original"
+          },
+          "level": "info",
+          "message": "Upload names chosen",
+          "operationId": "56f90541-8a93-469c-9f4e-d121d4516fac",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:12.910Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "byteCount": 65536,
+            "mime": "application/octet-stream",
+            "name": "acc-b2b-2-bd8d57e2-3c93-491e-acfd-0a924ceb2ece.bin",
+            "provider": "proton-drive"
+          },
+          "itemId": "1c41d3bd-35f5-4a15-8111-9e4c6c0a3e03",
+          "level": "info",
+          "message": "Upload attempt",
+          "operationId": "56f90541-8a93-469c-9f4e-d121d4516fac",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:14.434Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "elapsedMs": 603,
+            "provider": "proton-drive",
+            "status": "uploaded",
+            "uncertain": false
+          },
+          "itemId": "1c41d3bd-35f5-4a15-8111-9e4c6c0a3e03",
+          "level": "info",
+          "message": "Upload finished",
+          "operationId": "56f90541-8a93-469c-9f4e-d121d4516fac",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:15.038Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "action": "create",
+            "provider": "proton-drive",
+            "status": "shared"
+          },
+          "itemId": "1c41d3bd-35f5-4a15-8111-9e4c6c0a3e03",
+          "level": "info",
+          "message": "Sharing finished",
+          "operationId": "56f90541-8a93-469c-9f4e-d121d4516fac",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:16.251Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "byteCount": 65536,
+            "durationMs": 3554,
+            "itemId": null,
+            "items": 1,
+            "provider": "proton-drive",
+            "state": "completed",
+            "uploadStatus": {
+              "uploaded": 1
+            }
+          },
+          "level": "info",
+          "message": "Operation finished",
+          "operationId": "56f90541-8a93-469c-9f4e-d121d4516fac",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:16.346Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.clipboard",
+          "fields": {
+            "action": "files",
+            "automatic": true,
+            "behavior": "each_link",
+            "cancelled": false,
+            "copyStatus": "failed",
+            "error": {
+              "code": "clipboard_unavailable",
+              "details": {},
+              "message": "GNOME helper cannot own CLIPBOARD"
+            },
+            "itemId": null,
+            "links": 1
+          },
+          "level": "warning",
+          "message": "Automatic copy finished",
+          "operationId": "56f90541-8a93-469c-9f4e-d121d4516fac",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:16.360Z",
+          "v": 1
+        }
+      ]
+    ]
+  },
+  {
+    "pair": 4,
+    "orderKiB": [
+      512,
+      64
+    ],
+    "name": "back-to-back-4",
+    "passed": true,
+    "note": "second upload invoked while the first was running",
+    "state": "completed",
+    "seconds": 7.35,
+    "items": [
+      {
+        "bytes": 524288,
+        "mime": "application/octet-stream",
+        "uploadStatus": "uploaded",
+        "shareStatus": "shared",
+        "link": true,
+        "error": "",
+        "historyId": "550563df-0c31-45c5-9292-4ff2b7e3a798"
+      },
+      {
+        "bytes": 65536,
+        "mime": "application/octet-stream",
+        "uploadStatus": "uploaded",
+        "shareStatus": "shared",
+        "link": true,
+        "error": "",
+        "historyId": "fc15d78f-5735-4454-be94-42498677eddb"
+      }
+    ],
+    "firstSeconds": 5.15,
+    "secondSeconds": 7.35,
+    "helperGoneAfter": 0.01,
+    "helperProcessesObserved": [
+      {
+        "pid": 3938376,
+        "startTicks": "91879734"
+      }
+    ],
+    "helperProcessCount": 1,
+    "operationIds": [
+      "ed56d4f0-b770-494d-abf2-b2e519ca0680",
+      "76f7382d-4e0d-4f01-8bb5-e0823b856eff"
+    ],
+    "acceptTimes": [
+      "2026-11-12T07:16:20.352Z",
+      "2026-11-12T07:16:20.472Z"
+    ],
+    "completionTimes": [
+      "2026-11-12T07:16:25.441Z",
+      "2026-11-12T07:16:27.645Z"
+    ],
+    "finishedFirst": 1,
+    "operationEvents": [
+      [
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "itemId": null,
+            "items": 1,
+            "output": "upload",
+            "profileId": "proton-lab",
+            "provider": "proton-drive",
+            "zipFolders": true
+          },
+          "level": "info",
+          "message": "Operation accepted",
+          "operationId": "ed56d4f0-b770-494d-abf2-b2e519ca0680",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:20.352Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "byteCount": 524288,
+            "itemId": null,
+            "items": 1,
+            "mimeTypes": [
+              "application/octet-stream"
+            ]
+          },
+          "level": "info",
+          "message": "Artifacts acquired",
+          "operationId": "ed56d4f0-b770-494d-abf2-b2e519ca0680",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:20.402Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "collisionPolicy": "rename",
+            "itemId": null,
+            "names": [
+              {
+                "itemId": "550563df-0c31-45c5-9292-4ff2b7e3a798",
+                "name": "acc-b2b-1.bin",
+                "status": "pending"
+              }
+            ],
+            "namingMode": "original"
+          },
+          "level": "info",
+          "message": "Upload names chosen",
+          "operationId": "ed56d4f0-b770-494d-abf2-b2e519ca0680",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:20.423Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "byteCount": 524288,
+            "mime": "application/octet-stream",
+            "name": "acc-b2b-1-8fbc3a30-411a-44b5-a51b-7380eb157d4c.bin",
+            "provider": "proton-drive"
+          },
+          "itemId": "550563df-0c31-45c5-9292-4ff2b7e3a798",
+          "level": "info",
+          "message": "Upload attempt",
+          "operationId": "ed56d4f0-b770-494d-abf2-b2e519ca0680",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:22.062Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "elapsedMs": 2193,
+            "provider": "proton-drive",
+            "status": "uploaded",
+            "uncertain": false
+          },
+          "itemId": "550563df-0c31-45c5-9292-4ff2b7e3a798",
+          "level": "info",
+          "message": "Upload finished",
+          "operationId": "ed56d4f0-b770-494d-abf2-b2e519ca0680",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:24.256Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "action": "create",
+            "provider": "proton-drive",
+            "status": "shared"
+          },
+          "itemId": "550563df-0c31-45c5-9292-4ff2b7e3a798",
+          "level": "info",
+          "message": "Sharing finished",
+          "operationId": "ed56d4f0-b770-494d-abf2-b2e519ca0680",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:25.362Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "byteCount": 524288,
+            "durationMs": 5114,
+            "itemId": null,
+            "items": 1,
+            "provider": "proton-drive",
+            "state": "completed",
+            "uploadStatus": {
+              "uploaded": 1
+            }
+          },
+          "level": "info",
+          "message": "Operation finished",
+          "operationId": "ed56d4f0-b770-494d-abf2-b2e519ca0680",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:25.441Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.clipboard",
+          "fields": {
+            "action": "files",
+            "automatic": true,
+            "behavior": "each_link",
+            "cancelled": false,
+            "copyStatus": "failed",
+            "error": {
+              "code": "clipboard_unavailable",
+              "details": {},
+              "message": "GNOME helper cannot own CLIPBOARD"
+            },
+            "itemId": null,
+            "links": 1
+          },
+          "level": "warning",
+          "message": "Automatic copy finished",
+          "operationId": "ed56d4f0-b770-494d-abf2-b2e519ca0680",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:25.441Z",
+          "v": 1
+        }
+      ],
+      [
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "itemId": null,
+            "items": 1,
+            "output": "upload",
+            "profileId": "proton-lab",
+            "provider": "proton-drive",
+            "zipFolders": true
+          },
+          "level": "info",
+          "message": "Operation accepted",
+          "operationId": "76f7382d-4e0d-4f01-8bb5-e0823b856eff",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:20.472Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "byteCount": 65536,
+            "itemId": null,
+            "items": 1,
+            "mimeTypes": [
+              "application/octet-stream"
+            ]
+          },
+          "level": "info",
+          "message": "Artifacts acquired",
+          "operationId": "76f7382d-4e0d-4f01-8bb5-e0823b856eff",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:20.524Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "collisionPolicy": "rename",
+            "itemId": null,
+            "names": [
+              {
+                "itemId": "fc15d78f-5735-4454-be94-42498677eddb",
+                "name": "acc-b2b-2.bin",
+                "status": "pending"
+              }
+            ],
+            "namingMode": "original"
+          },
+          "level": "info",
+          "message": "Upload names chosen",
+          "operationId": "76f7382d-4e0d-4f01-8bb5-e0823b856eff",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:20.544Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "byteCount": 65536,
+            "mime": "application/octet-stream",
+            "name": "acc-b2b-2-2fe628f1-2d80-483b-94e8-3d1889c97208.bin",
+            "provider": "proton-drive"
+          },
+          "itemId": "fc15d78f-5735-4454-be94-42498677eddb",
+          "level": "info",
+          "message": "Upload attempt",
+          "operationId": "76f7382d-4e0d-4f01-8bb5-e0823b856eff",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:25.958Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "elapsedMs": 566,
+            "provider": "proton-drive",
+            "status": "uploaded",
+            "uncertain": false
+          },
+          "itemId": "fc15d78f-5735-4454-be94-42498677eddb",
+          "level": "info",
+          "message": "Upload finished",
+          "operationId": "76f7382d-4e0d-4f01-8bb5-e0823b856eff",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:26.524Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "action": "create",
+            "provider": "proton-drive",
+            "status": "shared"
+          },
+          "itemId": "fc15d78f-5735-4454-be94-42498677eddb",
+          "level": "info",
+          "message": "Sharing finished",
+          "operationId": "76f7382d-4e0d-4f01-8bb5-e0823b856eff",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:27.560Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "byteCount": 65536,
+            "durationMs": 7233,
+            "itemId": null,
+            "items": 1,
+            "provider": "proton-drive",
+            "state": "completed",
+            "uploadStatus": {
+              "uploaded": 1
+            }
+          },
+          "level": "info",
+          "message": "Operation finished",
+          "operationId": "76f7382d-4e0d-4f01-8bb5-e0823b856eff",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:27.645Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.clipboard",
+          "fields": {
+            "action": "files",
+            "automatic": true,
+            "behavior": "each_link",
+            "cancelled": false,
+            "copyStatus": "failed",
+            "error": {
+              "code": "clipboard_unavailable",
+              "details": {},
+              "message": "GNOME helper cannot own CLIPBOARD"
+            },
+            "itemId": null,
+            "links": 1
+          },
+          "level": "warning",
+          "message": "Automatic copy finished",
+          "operationId": "76f7382d-4e0d-4f01-8bb5-e0823b856eff",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:27.656Z",
+          "v": 1
+        }
+      ]
+    ]
+  },
+  {
+    "pair": 5,
+    "orderKiB": [
+      512,
+      64
+    ],
+    "name": "back-to-back-5",
+    "passed": true,
+    "note": "second upload invoked while the first was running",
+    "state": "completed",
+    "seconds": 7.28,
+    "items": [
+      {
+        "bytes": 524288,
+        "mime": "application/octet-stream",
+        "uploadStatus": "uploaded",
+        "shareStatus": "shared",
+        "link": true,
+        "error": "",
+        "historyId": "d7ba8100-b7b7-4d0e-9a92-b856bfa6bd50"
+      },
+      {
+        "bytes": 65536,
+        "mime": "application/octet-stream",
+        "uploadStatus": "uploaded",
+        "shareStatus": "shared",
+        "link": true,
+        "error": "",
+        "historyId": "857d2c1f-7103-4f82-9b89-c901c5114480"
+      }
+    ],
+    "firstSeconds": 5.07,
+    "secondSeconds": 7.28,
+    "helperGoneAfter": 0.01,
+    "helperProcessesObserved": [
+      {
+        "pid": 3938662,
+        "startTicks": "91880470"
+      }
+    ],
+    "helperProcessCount": 1,
+    "operationIds": [
+      "33bb8405-97da-4a1f-b1b8-0d33b8c709b9",
+      "d6ede1b1-e1f0-4ae3-a8f5-6b68025c442e"
+    ],
+    "acceptTimes": [
+      "2026-11-12T07:16:27.721Z",
+      "2026-11-12T07:16:27.764Z"
+    ],
+    "completionTimes": [
+      "2026-11-12T07:16:32.785Z",
+      "2026-11-12T07:16:34.967Z"
+    ],
+    "finishedFirst": 1,
+    "operationEvents": [
+      [
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "itemId": null,
+            "items": 1,
+            "output": "upload",
+            "profileId": "proton-lab",
+            "provider": "proton-drive",
+            "zipFolders": true
+          },
+          "level": "info",
+          "message": "Operation accepted",
+          "operationId": "33bb8405-97da-4a1f-b1b8-0d33b8c709b9",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:27.721Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "byteCount": 524288,
+            "itemId": null,
+            "items": 1,
+            "mimeTypes": [
+              "application/octet-stream"
+            ]
+          },
+          "level": "info",
+          "message": "Artifacts acquired",
+          "operationId": "33bb8405-97da-4a1f-b1b8-0d33b8c709b9",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:27.787Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "collisionPolicy": "rename",
+            "itemId": null,
+            "names": [
+              {
+                "itemId": "d7ba8100-b7b7-4d0e-9a92-b856bfa6bd50",
+                "name": "acc-b2b-1.bin",
+                "status": "pending"
+              }
+            ],
+            "namingMode": "original"
+          },
+          "level": "info",
+          "message": "Upload names chosen",
+          "operationId": "33bb8405-97da-4a1f-b1b8-0d33b8c709b9",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:27.805Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "byteCount": 524288,
+            "mime": "application/octet-stream",
+            "name": "acc-b2b-1-2185159f-52e7-4a0b-a1dd-c1ae21653a47.bin",
+            "provider": "proton-drive"
+          },
+          "itemId": "d7ba8100-b7b7-4d0e-9a92-b856bfa6bd50",
+          "level": "info",
+          "message": "Upload attempt",
+          "operationId": "33bb8405-97da-4a1f-b1b8-0d33b8c709b9",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:29.303Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "elapsedMs": 2236,
+            "provider": "proton-drive",
+            "status": "uploaded",
+            "uncertain": false
+          },
+          "itemId": "d7ba8100-b7b7-4d0e-9a92-b856bfa6bd50",
+          "level": "info",
+          "message": "Upload finished",
+          "operationId": "33bb8405-97da-4a1f-b1b8-0d33b8c709b9",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:31.539Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "action": "create",
+            "provider": "proton-drive",
+            "status": "shared"
+          },
+          "itemId": "d7ba8100-b7b7-4d0e-9a92-b856bfa6bd50",
+          "level": "info",
+          "message": "Sharing finished",
+          "operationId": "33bb8405-97da-4a1f-b1b8-0d33b8c709b9",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:32.637Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "byteCount": 524288,
+            "durationMs": 5091,
+            "itemId": null,
+            "items": 1,
+            "provider": "proton-drive",
+            "state": "completed",
+            "uploadStatus": {
+              "uploaded": 1
+            }
+          },
+          "level": "info",
+          "message": "Operation finished",
+          "operationId": "33bb8405-97da-4a1f-b1b8-0d33b8c709b9",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:32.785Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.clipboard",
+          "fields": {
+            "action": "files",
+            "automatic": true,
+            "behavior": "each_link",
+            "cancelled": false,
+            "copyStatus": "failed",
+            "error": {
+              "code": "clipboard_unavailable",
+              "details": {},
+              "message": "GNOME helper cannot own CLIPBOARD"
+            },
+            "itemId": null,
+            "links": 1
+          },
+          "level": "warning",
+          "message": "Automatic copy finished",
+          "operationId": "33bb8405-97da-4a1f-b1b8-0d33b8c709b9",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:32.785Z",
+          "v": 1
+        }
+      ],
+      [
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "itemId": null,
+            "items": 1,
+            "output": "upload",
+            "profileId": "proton-lab",
+            "provider": "proton-drive",
+            "zipFolders": true
+          },
+          "level": "info",
+          "message": "Operation accepted",
+          "operationId": "d6ede1b1-e1f0-4ae3-a8f5-6b68025c442e",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:27.764Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "byteCount": 65536,
+            "itemId": null,
+            "items": 1,
+            "mimeTypes": [
+              "application/octet-stream"
+            ]
+          },
+          "level": "info",
+          "message": "Artifacts acquired",
+          "operationId": "d6ede1b1-e1f0-4ae3-a8f5-6b68025c442e",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:27.921Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "collisionPolicy": "rename",
+            "itemId": null,
+            "names": [
+              {
+                "itemId": "857d2c1f-7103-4f82-9b89-c901c5114480",
+                "name": "acc-b2b-2.bin",
+                "status": "pending"
+              }
+            ],
+            "namingMode": "original"
+          },
+          "level": "info",
+          "message": "Upload names chosen",
+          "operationId": "d6ede1b1-e1f0-4ae3-a8f5-6b68025c442e",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:27.936Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "byteCount": 65536,
+            "mime": "application/octet-stream",
+            "name": "acc-b2b-2-519c2eb5-a973-4249-874f-5525b3d75796.bin",
+            "provider": "proton-drive"
+          },
+          "itemId": "857d2c1f-7103-4f82-9b89-c901c5114480",
+          "level": "info",
+          "message": "Upload attempt",
+          "operationId": "d6ede1b1-e1f0-4ae3-a8f5-6b68025c442e",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:33.267Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "elapsedMs": 571,
+            "provider": "proton-drive",
+            "status": "uploaded",
+            "uncertain": false
+          },
+          "itemId": "857d2c1f-7103-4f82-9b89-c901c5114480",
+          "level": "info",
+          "message": "Upload finished",
+          "operationId": "d6ede1b1-e1f0-4ae3-a8f5-6b68025c442e",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:33.838Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "action": "create",
+            "provider": "proton-drive",
+            "status": "shared"
+          },
+          "itemId": "857d2c1f-7103-4f82-9b89-c901c5114480",
+          "level": "info",
+          "message": "Sharing finished",
+          "operationId": "d6ede1b1-e1f0-4ae3-a8f5-6b68025c442e",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:34.879Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "byteCount": 65536,
+            "durationMs": 7226,
+            "itemId": null,
+            "items": 1,
+            "provider": "proton-drive",
+            "state": "completed",
+            "uploadStatus": {
+              "uploaded": 1
+            }
+          },
+          "level": "info",
+          "message": "Operation finished",
+          "operationId": "d6ede1b1-e1f0-4ae3-a8f5-6b68025c442e",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:34.967Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.clipboard",
+          "fields": {
+            "action": "files",
+            "automatic": true,
+            "behavior": "each_link",
+            "cancelled": false,
+            "copyStatus": "failed",
+            "error": {
+              "code": "clipboard_unavailable",
+              "details": {},
+              "message": "GNOME helper cannot own CLIPBOARD"
+            },
+            "itemId": null,
+            "links": 1
+          },
+          "level": "warning",
+          "message": "Automatic copy finished",
+          "operationId": "d6ede1b1-e1f0-4ae3-a8f5-6b68025c442e",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:34.967Z",
+          "v": 1
+        }
+      ]
+    ]
+  },
+  {
+    "pair": 6,
+    "orderKiB": [
+      64,
+      512
+    ],
+    "name": "back-to-back-6",
+    "passed": true,
+    "note": "second upload invoked while the first was running",
+    "state": "completed",
+    "seconds": 7.88,
+    "items": [
+      {
+        "bytes": 65536,
+        "mime": "application/octet-stream",
+        "uploadStatus": "uploaded",
+        "shareStatus": "shared",
+        "link": true,
+        "error": "",
+        "historyId": "cad8d9da-51f1-4d68-8ca4-d3b415f09fc8"
+      },
+      {
+        "bytes": 524288,
+        "mime": "application/octet-stream",
+        "uploadStatus": "uploaded",
+        "shareStatus": "shared",
+        "link": true,
+        "error": "",
+        "historyId": "ff8a0bf3-ab3c-4695-98ab-567cfa1c2c74"
+      }
+    ],
+    "firstSeconds": 4.12,
+    "secondSeconds": 7.88,
+    "helperGoneAfter": 0.01,
+    "helperProcessesObserved": [
+      {
+        "pid": 3938934,
+        "startTicks": "91881199"
+      }
+    ],
+    "helperProcessCount": 1,
+    "operationIds": [
+      "8b3ffc20-21be-49d3-85b2-48c2c7aa70aa",
+      "fefea162-f77e-47a0-a41c-6968cd4513ad"
+    ],
+    "acceptTimes": [
+      "2026-11-12T07:16:35.013Z",
+      "2026-11-12T07:16:35.078Z"
+    ],
+    "completionTimes": [
+      "2026-11-12T07:16:39.052Z",
+      "2026-11-12T07:16:42.859Z"
+    ],
+    "finishedFirst": 1,
+    "operationEvents": [
+      [
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "itemId": null,
+            "items": 1,
+            "output": "upload",
+            "profileId": "proton-lab",
+            "provider": "proton-drive",
+            "zipFolders": true
+          },
+          "level": "info",
+          "message": "Operation accepted",
+          "operationId": "8b3ffc20-21be-49d3-85b2-48c2c7aa70aa",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:35.013Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "byteCount": 65536,
+            "itemId": null,
+            "items": 1,
+            "mimeTypes": [
+              "application/octet-stream"
+            ]
+          },
+          "level": "info",
+          "message": "Artifacts acquired",
+          "operationId": "8b3ffc20-21be-49d3-85b2-48c2c7aa70aa",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:35.085Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "collisionPolicy": "rename",
+            "itemId": null,
+            "names": [
+              {
+                "itemId": "cad8d9da-51f1-4d68-8ca4-d3b415f09fc8",
+                "name": "acc-b2b-1.bin",
+                "status": "pending"
+              }
+            ],
+            "namingMode": "original"
+          },
+          "level": "info",
+          "message": "Upload names chosen",
+          "operationId": "8b3ffc20-21be-49d3-85b2-48c2c7aa70aa",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:35.128Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "byteCount": 65536,
+            "mime": "application/octet-stream",
+            "name": "acc-b2b-1-6a3eb214-39a9-40c4-bb0e-2d0d67a0cda0.bin",
+            "provider": "proton-drive"
+          },
+          "itemId": "cad8d9da-51f1-4d68-8ca4-d3b415f09fc8",
+          "level": "info",
+          "message": "Upload attempt",
+          "operationId": "8b3ffc20-21be-49d3-85b2-48c2c7aa70aa",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:37.155Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "elapsedMs": 741,
+            "provider": "proton-drive",
+            "status": "uploaded",
+            "uncertain": false
+          },
+          "itemId": "cad8d9da-51f1-4d68-8ca4-d3b415f09fc8",
+          "level": "info",
+          "message": "Upload finished",
+          "operationId": "8b3ffc20-21be-49d3-85b2-48c2c7aa70aa",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:37.897Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "action": "create",
+            "provider": "proton-drive",
+            "status": "shared"
+          },
+          "itemId": "cad8d9da-51f1-4d68-8ca4-d3b415f09fc8",
+          "level": "info",
+          "message": "Sharing finished",
+          "operationId": "8b3ffc20-21be-49d3-85b2-48c2c7aa70aa",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:38.987Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "byteCount": 65536,
+            "durationMs": 4071,
+            "itemId": null,
+            "items": 1,
+            "provider": "proton-drive",
+            "state": "completed",
+            "uploadStatus": {
+              "uploaded": 1
+            }
+          },
+          "level": "info",
+          "message": "Operation finished",
+          "operationId": "8b3ffc20-21be-49d3-85b2-48c2c7aa70aa",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:39.052Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.clipboard",
+          "fields": {
+            "action": "files",
+            "automatic": true,
+            "behavior": "each_link",
+            "cancelled": false,
+            "copyStatus": "failed",
+            "error": {
+              "code": "clipboard_unavailable",
+              "details": {},
+              "message": "GNOME helper cannot own CLIPBOARD"
+            },
+            "itemId": null,
+            "links": 1
+          },
+          "level": "warning",
+          "message": "Automatic copy finished",
+          "operationId": "8b3ffc20-21be-49d3-85b2-48c2c7aa70aa",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:39.060Z",
+          "v": 1
+        }
+      ],
+      [
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "itemId": null,
+            "items": 1,
+            "output": "upload",
+            "profileId": "proton-lab",
+            "provider": "proton-drive",
+            "zipFolders": true
+          },
+          "level": "info",
+          "message": "Operation accepted",
+          "operationId": "fefea162-f77e-47a0-a41c-6968cd4513ad",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:35.078Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "byteCount": 524288,
+            "itemId": null,
+            "items": 1,
+            "mimeTypes": [
+              "application/octet-stream"
+            ]
+          },
+          "level": "info",
+          "message": "Artifacts acquired",
+          "operationId": "fefea162-f77e-47a0-a41c-6968cd4513ad",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:35.241Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "collisionPolicy": "rename",
+            "itemId": null,
+            "names": [
+              {
+                "itemId": "ff8a0bf3-ab3c-4695-98ab-567cfa1c2c74",
+                "name": "acc-b2b-2.bin",
+                "status": "pending"
+              }
+            ],
+            "namingMode": "original"
+          },
+          "level": "info",
+          "message": "Upload names chosen",
+          "operationId": "fefea162-f77e-47a0-a41c-6968cd4513ad",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:35.278Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "byteCount": 524288,
+            "mime": "application/octet-stream",
+            "name": "acc-b2b-2-8f7da001-6a0f-48ce-896a-71d9314f784b.bin",
+            "provider": "proton-drive"
+          },
+          "itemId": "ff8a0bf3-ab3c-4695-98ab-567cfa1c2c74",
+          "level": "info",
+          "message": "Upload attempt",
+          "operationId": "fefea162-f77e-47a0-a41c-6968cd4513ad",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:39.572Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "elapsedMs": 2115,
+            "provider": "proton-drive",
+            "status": "uploaded",
+            "uncertain": false
+          },
+          "itemId": "ff8a0bf3-ab3c-4695-98ab-567cfa1c2c74",
+          "level": "info",
+          "message": "Upload finished",
+          "operationId": "fefea162-f77e-47a0-a41c-6968cd4513ad",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:41.688Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "action": "create",
+            "provider": "proton-drive",
+            "status": "shared"
+          },
+          "itemId": "ff8a0bf3-ab3c-4695-98ab-567cfa1c2c74",
+          "level": "info",
+          "message": "Sharing finished",
+          "operationId": "fefea162-f77e-47a0-a41c-6968cd4513ad",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:42.784Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "byteCount": 524288,
+            "durationMs": 7820,
+            "itemId": null,
+            "items": 1,
+            "provider": "proton-drive",
+            "state": "completed",
+            "uploadStatus": {
+              "uploaded": 1
+            }
+          },
+          "level": "info",
+          "message": "Operation finished",
+          "operationId": "fefea162-f77e-47a0-a41c-6968cd4513ad",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:42.859Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.clipboard",
+          "fields": {
+            "action": "files",
+            "automatic": true,
+            "behavior": "each_link",
+            "cancelled": false,
+            "copyStatus": "failed",
+            "error": {
+              "code": "clipboard_unavailable",
+              "details": {},
+              "message": "GNOME helper cannot own CLIPBOARD"
+            },
+            "itemId": null,
+            "links": 1
+          },
+          "level": "warning",
+          "message": "Automatic copy finished",
+          "operationId": "fefea162-f77e-47a0-a41c-6968cd4513ad",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:42.870Z",
+          "v": 1
+        }
+      ]
+    ]
+  },
+  {
+    "pair": 7,
+    "orderKiB": [
+      64,
+      512
+    ],
+    "name": "back-to-back-7",
+    "passed": true,
+    "note": "second upload invoked while the first was running",
+    "state": "completed",
+    "seconds": 7.26,
+    "items": [
+      {
+        "bytes": 65536,
+        "mime": "application/octet-stream",
+        "uploadStatus": "uploaded",
+        "shareStatus": "shared",
+        "link": true,
+        "error": "",
+        "historyId": "9ed85830-598b-4b76-ac82-336251fe01a9"
+      },
+      {
+        "bytes": 524288,
+        "mime": "application/octet-stream",
+        "uploadStatus": "uploaded",
+        "shareStatus": "shared",
+        "link": true,
+        "error": "",
+        "historyId": "483e7a99-18cd-4794-8314-a42c1cd586fe"
+      }
+    ],
+    "firstSeconds": 3.56,
+    "secondSeconds": 7.26,
+    "helperGoneAfter": 0.02,
+    "helperProcessesObserved": [
+      {
+        "pid": 3939243,
+        "startTicks": "91881988"
+      }
+    ],
+    "helperProcessCount": 1,
+    "operationIds": [
+      "e50a62e6-8313-4040-99e2-2922350c77c5",
+      "4c3b4f8d-4ebf-45f1-ab33-c7cc19161fe2"
+    ],
+    "acceptTimes": [
+      "2026-11-12T07:16:42.914Z",
+      "2026-11-12T07:16:42.964Z"
+    ],
+    "completionTimes": [
+      "2026-11-12T07:16:46.363Z",
+      "2026-11-12T07:16:50.070Z"
+    ],
+    "finishedFirst": 1,
+    "operationEvents": [
+      [
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "itemId": null,
+            "items": 1,
+            "output": "upload",
+            "profileId": "proton-lab",
+            "provider": "proton-drive",
+            "zipFolders": true
+          },
+          "level": "info",
+          "message": "Operation accepted",
+          "operationId": "e50a62e6-8313-4040-99e2-2922350c77c5",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:42.914Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "byteCount": 65536,
+            "itemId": null,
+            "items": 1,
+            "mimeTypes": [
+              "application/octet-stream"
+            ]
+          },
+          "level": "info",
+          "message": "Artifacts acquired",
+          "operationId": "e50a62e6-8313-4040-99e2-2922350c77c5",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:43.028Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "collisionPolicy": "rename",
+            "itemId": null,
+            "names": [
+              {
+                "itemId": "9ed85830-598b-4b76-ac82-336251fe01a9",
+                "name": "acc-b2b-1.bin",
+                "status": "pending"
+              }
+            ],
+            "namingMode": "original"
+          },
+          "level": "info",
+          "message": "Upload names chosen",
+          "operationId": "e50a62e6-8313-4040-99e2-2922350c77c5",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:43.057Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "byteCount": 65536,
+            "mime": "application/octet-stream",
+            "name": "acc-b2b-1-62e99486-6d0f-44f5-b742-d7d7436d379b.bin",
+            "provider": "proton-drive"
+          },
+          "itemId": "9ed85830-598b-4b76-ac82-336251fe01a9",
+          "level": "info",
+          "message": "Upload attempt",
+          "operationId": "e50a62e6-8313-4040-99e2-2922350c77c5",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:44.528Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "elapsedMs": 615,
+            "provider": "proton-drive",
+            "status": "uploaded",
+            "uncertain": false
+          },
+          "itemId": "9ed85830-598b-4b76-ac82-336251fe01a9",
+          "level": "info",
+          "message": "Upload finished",
+          "operationId": "e50a62e6-8313-4040-99e2-2922350c77c5",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:45.143Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "action": "create",
+            "provider": "proton-drive",
+            "status": "shared"
+          },
+          "itemId": "9ed85830-598b-4b76-ac82-336251fe01a9",
+          "level": "info",
+          "message": "Sharing finished",
+          "operationId": "e50a62e6-8313-4040-99e2-2922350c77c5",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:46.263Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "byteCount": 65536,
+            "durationMs": 3492,
+            "itemId": null,
+            "items": 1,
+            "provider": "proton-drive",
+            "state": "completed",
+            "uploadStatus": {
+              "uploaded": 1
+            }
+          },
+          "level": "info",
+          "message": "Operation finished",
+          "operationId": "e50a62e6-8313-4040-99e2-2922350c77c5",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:46.363Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.clipboard",
+          "fields": {
+            "action": "files",
+            "automatic": true,
+            "behavior": "each_link",
+            "cancelled": false,
+            "copyStatus": "failed",
+            "error": {
+              "code": "clipboard_unavailable",
+              "details": {},
+              "message": "GNOME helper cannot own CLIPBOARD"
+            },
+            "itemId": null,
+            "links": 1
+          },
+          "level": "warning",
+          "message": "Automatic copy finished",
+          "operationId": "e50a62e6-8313-4040-99e2-2922350c77c5",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:46.363Z",
+          "v": 1
+        }
+      ],
+      [
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "itemId": null,
+            "items": 1,
+            "output": "upload",
+            "profileId": "proton-lab",
+            "provider": "proton-drive",
+            "zipFolders": true
+          },
+          "level": "info",
+          "message": "Operation accepted",
+          "operationId": "4c3b4f8d-4ebf-45f1-ab33-c7cc19161fe2",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:42.964Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "byteCount": 524288,
+            "itemId": null,
+            "items": 1,
+            "mimeTypes": [
+              "application/octet-stream"
+            ]
+          },
+          "level": "info",
+          "message": "Artifacts acquired",
+          "operationId": "4c3b4f8d-4ebf-45f1-ab33-c7cc19161fe2",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:43.121Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "collisionPolicy": "rename",
+            "itemId": null,
+            "names": [
+              {
+                "itemId": "483e7a99-18cd-4794-8314-a42c1cd586fe",
+                "name": "acc-b2b-2.bin",
+                "status": "pending"
+              }
+            ],
+            "namingMode": "original"
+          },
+          "level": "info",
+          "message": "Upload names chosen",
+          "operationId": "4c3b4f8d-4ebf-45f1-ab33-c7cc19161fe2",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:43.138Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "byteCount": 524288,
+            "mime": "application/octet-stream",
+            "name": "acc-b2b-2-ed7a3dd0-dbe4-4bff-877a-055a53f9667a.bin",
+            "provider": "proton-drive"
+          },
+          "itemId": "483e7a99-18cd-4794-8314-a42c1cd586fe",
+          "level": "info",
+          "message": "Upload attempt",
+          "operationId": "4c3b4f8d-4ebf-45f1-ab33-c7cc19161fe2",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:46.820Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "elapsedMs": 2148,
+            "provider": "proton-drive",
+            "status": "uploaded",
+            "uncertain": false
+          },
+          "itemId": "483e7a99-18cd-4794-8314-a42c1cd586fe",
+          "level": "info",
+          "message": "Upload finished",
+          "operationId": "4c3b4f8d-4ebf-45f1-ab33-c7cc19161fe2",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:48.968Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "action": "create",
+            "provider": "proton-drive",
+            "status": "shared"
+          },
+          "itemId": "483e7a99-18cd-4794-8314-a42c1cd586fe",
+          "level": "info",
+          "message": "Sharing finished",
+          "operationId": "4c3b4f8d-4ebf-45f1-ab33-c7cc19161fe2",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:50.007Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "byteCount": 524288,
+            "durationMs": 7130,
+            "itemId": null,
+            "items": 1,
+            "provider": "proton-drive",
+            "state": "completed",
+            "uploadStatus": {
+              "uploaded": 1
+            }
+          },
+          "level": "info",
+          "message": "Operation finished",
+          "operationId": "4c3b4f8d-4ebf-45f1-ab33-c7cc19161fe2",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:50.070Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.clipboard",
+          "fields": {
+            "action": "files",
+            "automatic": true,
+            "behavior": "each_link",
+            "cancelled": false,
+            "copyStatus": "failed",
+            "error": {
+              "code": "clipboard_unavailable",
+              "details": {},
+              "message": "GNOME helper cannot own CLIPBOARD"
+            },
+            "itemId": null,
+            "links": 1
+          },
+          "level": "warning",
+          "message": "Automatic copy finished",
+          "operationId": "4c3b4f8d-4ebf-45f1-ab33-c7cc19161fe2",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:50.072Z",
+          "v": 1
+        }
+      ]
+    ]
+  },
+  {
+    "pair": 8,
+    "orderKiB": [
+      64,
+      512
+    ],
+    "name": "back-to-back-8",
+    "passed": true,
+    "note": "second upload invoked while the first was running",
+    "state": "completed",
+    "seconds": 7.19,
+    "items": [
+      {
+        "bytes": 65536,
+        "mime": "application/octet-stream",
+        "uploadStatus": "uploaded",
+        "shareStatus": "shared",
+        "link": true,
+        "error": "",
+        "historyId": "95f11e2e-8534-4b17-837d-4c22e9b5b6b5"
+      },
+      {
+        "bytes": 524288,
+        "mime": "application/octet-stream",
+        "uploadStatus": "uploaded",
+        "shareStatus": "shared",
+        "link": true,
+        "error": "",
+        "historyId": "dbf175dd-3765-48f7-9557-f5e4368c13f9"
+      }
+    ],
+    "firstSeconds": 3.47,
+    "secondSeconds": 7.19,
+    "helperGoneAfter": 0.02,
+    "helperProcessesObserved": [
+      {
+        "pid": 3939566,
+        "startTicks": "91882718"
+      }
+    ],
+    "helperProcessCount": 1,
+    "operationIds": [
+      "a98eb696-7116-407d-957c-b9bcf41fc90a",
+      "82c14116-97a0-4d00-b4f3-ba043abfbbf1"
+    ],
+    "acceptTimes": [
+      "2026-11-12T07:16:50.198Z",
+      "2026-11-12T07:16:50.241Z"
+    ],
+    "completionTimes": [
+      "2026-11-12T07:16:53.587Z",
+      "2026-11-12T07:16:57.274Z"
+    ],
+    "finishedFirst": 1,
+    "operationEvents": [
+      [
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "itemId": null,
+            "items": 1,
+            "output": "upload",
+            "profileId": "proton-lab",
+            "provider": "proton-drive",
+            "zipFolders": true
+          },
+          "level": "info",
+          "message": "Operation accepted",
+          "operationId": "a98eb696-7116-407d-957c-b9bcf41fc90a",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:50.198Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "byteCount": 65536,
+            "itemId": null,
+            "items": 1,
+            "mimeTypes": [
+              "application/octet-stream"
+            ]
+          },
+          "level": "info",
+          "message": "Artifacts acquired",
+          "operationId": "a98eb696-7116-407d-957c-b9bcf41fc90a",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:50.258Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "collisionPolicy": "rename",
+            "itemId": null,
+            "names": [
+              {
+                "itemId": "95f11e2e-8534-4b17-837d-4c22e9b5b6b5",
+                "name": "acc-b2b-1.bin",
+                "status": "pending"
+              }
+            ],
+            "namingMode": "original"
+          },
+          "level": "info",
+          "message": "Upload names chosen",
+          "operationId": "a98eb696-7116-407d-957c-b9bcf41fc90a",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:50.276Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "byteCount": 65536,
+            "mime": "application/octet-stream",
+            "name": "acc-b2b-1-a9262d24-88c1-4a96-b49d-c78edb1a99b1.bin",
+            "provider": "proton-drive"
+          },
+          "itemId": "95f11e2e-8534-4b17-837d-4c22e9b5b6b5",
+          "level": "info",
+          "message": "Upload attempt",
+          "operationId": "a98eb696-7116-407d-957c-b9bcf41fc90a",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:51.832Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "elapsedMs": 616,
+            "provider": "proton-drive",
+            "status": "uploaded",
+            "uncertain": false
+          },
+          "itemId": "95f11e2e-8534-4b17-837d-4c22e9b5b6b5",
+          "level": "info",
+          "message": "Upload finished",
+          "operationId": "a98eb696-7116-407d-957c-b9bcf41fc90a",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:52.448Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "action": "create",
+            "provider": "proton-drive",
+            "status": "shared"
+          },
+          "itemId": "95f11e2e-8534-4b17-837d-4c22e9b5b6b5",
+          "level": "info",
+          "message": "Sharing finished",
+          "operationId": "a98eb696-7116-407d-957c-b9bcf41fc90a",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:53.509Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "byteCount": 65536,
+            "durationMs": 3415,
+            "itemId": null,
+            "items": 1,
+            "provider": "proton-drive",
+            "state": "completed",
+            "uploadStatus": {
+              "uploaded": 1
+            }
+          },
+          "level": "info",
+          "message": "Operation finished",
+          "operationId": "a98eb696-7116-407d-957c-b9bcf41fc90a",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:53.587Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.clipboard",
+          "fields": {
+            "action": "files",
+            "automatic": true,
+            "behavior": "each_link",
+            "cancelled": false,
+            "copyStatus": "failed",
+            "error": {
+              "code": "clipboard_unavailable",
+              "details": {},
+              "message": "GNOME helper cannot own CLIPBOARD"
+            },
+            "itemId": null,
+            "links": 1
+          },
+          "level": "warning",
+          "message": "Automatic copy finished",
+          "operationId": "a98eb696-7116-407d-957c-b9bcf41fc90a",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:53.601Z",
+          "v": 1
+        }
+      ],
+      [
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "itemId": null,
+            "items": 1,
+            "output": "upload",
+            "profileId": "proton-lab",
+            "provider": "proton-drive",
+            "zipFolders": true
+          },
+          "level": "info",
+          "message": "Operation accepted",
+          "operationId": "82c14116-97a0-4d00-b4f3-ba043abfbbf1",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:50.241Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "byteCount": 524288,
+            "itemId": null,
+            "items": 1,
+            "mimeTypes": [
+              "application/octet-stream"
+            ]
+          },
+          "level": "info",
+          "message": "Artifacts acquired",
+          "operationId": "82c14116-97a0-4d00-b4f3-ba043abfbbf1",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:50.407Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "collisionPolicy": "rename",
+            "itemId": null,
+            "names": [
+              {
+                "itemId": "dbf175dd-3765-48f7-9557-f5e4368c13f9",
+                "name": "acc-b2b-2.bin",
+                "status": "pending"
+              }
+            ],
+            "namingMode": "original"
+          },
+          "level": "info",
+          "message": "Upload names chosen",
+          "operationId": "82c14116-97a0-4d00-b4f3-ba043abfbbf1",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:50.424Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "byteCount": 524288,
+            "mime": "application/octet-stream",
+            "name": "acc-b2b-2-94ba8320-dcb1-40cd-af15-838b47c09f1a.bin",
+            "provider": "proton-drive"
+          },
+          "itemId": "dbf175dd-3765-48f7-9557-f5e4368c13f9",
+          "level": "info",
+          "message": "Upload attempt",
+          "operationId": "82c14116-97a0-4d00-b4f3-ba043abfbbf1",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:54.074Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "elapsedMs": 2097,
+            "provider": "proton-drive",
+            "status": "uploaded",
+            "uncertain": false
+          },
+          "itemId": "dbf175dd-3765-48f7-9557-f5e4368c13f9",
+          "level": "info",
+          "message": "Upload finished",
+          "operationId": "82c14116-97a0-4d00-b4f3-ba043abfbbf1",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:56.172Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "action": "create",
+            "provider": "proton-drive",
+            "status": "shared"
+          },
+          "itemId": "dbf175dd-3765-48f7-9557-f5e4368c13f9",
+          "level": "info",
+          "message": "Sharing finished",
+          "operationId": "82c14116-97a0-4d00-b4f3-ba043abfbbf1",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:57.211Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "byteCount": 524288,
+            "durationMs": 7053,
+            "itemId": null,
+            "items": 1,
+            "provider": "proton-drive",
+            "state": "completed",
+            "uploadStatus": {
+              "uploaded": 1
+            }
+          },
+          "level": "info",
+          "message": "Operation finished",
+          "operationId": "82c14116-97a0-4d00-b4f3-ba043abfbbf1",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:57.274Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.clipboard",
+          "fields": {
+            "action": "files",
+            "automatic": true,
+            "behavior": "each_link",
+            "cancelled": false,
+            "copyStatus": "failed",
+            "error": {
+              "code": "clipboard_unavailable",
+              "details": {},
+              "message": "GNOME helper cannot own CLIPBOARD"
+            },
+            "itemId": null,
+            "links": 1
+          },
+          "level": "warning",
+          "message": "Automatic copy finished",
+          "operationId": "82c14116-97a0-4d00-b4f3-ba043abfbbf1",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:57.275Z",
+          "v": 1
+        }
+      ]
+    ]
+  },
+  {
+    "pair": 9,
+    "orderKiB": [
+      64,
+      512
+    ],
+    "name": "back-to-back-9",
+    "passed": true,
+    "note": "second upload invoked while the first was running",
+    "state": "completed",
+    "seconds": 7.35,
+    "items": [
+      {
+        "bytes": 65536,
+        "mime": "application/octet-stream",
+        "uploadStatus": "uploaded",
+        "shareStatus": "shared",
+        "link": true,
+        "error": "",
+        "historyId": "70e364c8-12ea-4bda-b4f2-7e1e2864a9f8"
+      },
+      {
+        "bytes": 524288,
+        "mime": "application/octet-stream",
+        "uploadStatus": "uploaded",
+        "shareStatus": "shared",
+        "link": true,
+        "error": "",
+        "historyId": "7534bc44-72ff-4d0c-954b-21ba67fee580"
+      }
+    ],
+    "firstSeconds": 7.33,
+    "secondSeconds": 7.35,
+    "helperGoneAfter": 0.01,
+    "helperProcessesObserved": [
+      {
+        "pid": 3939850,
+        "startTicks": "91883439"
+      }
+    ],
+    "helperProcessCount": 1,
+    "operationIds": [
+      "3edcb806-0290-4db2-8766-69ba1d7db43b",
+      "a440fb1c-344c-4c2e-b0c9-eafe872fa82d"
+    ],
+    "acceptTimes": [
+      "2026-11-12T07:16:57.407Z",
+      "2026-11-12T07:16:57.454Z"
+    ],
+    "completionTimes": [
+      "2026-11-12T07:17:04.683Z",
+      "2026-11-12T07:17:02.464Z"
+    ],
+    "finishedFirst": 2,
+    "operationEvents": [
+      [
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "itemId": null,
+            "items": 1,
+            "output": "upload",
+            "profileId": "proton-lab",
+            "provider": "proton-drive",
+            "zipFolders": true
+          },
+          "level": "info",
+          "message": "Operation accepted",
+          "operationId": "3edcb806-0290-4db2-8766-69ba1d7db43b",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:57.407Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "byteCount": 65536,
+            "itemId": null,
+            "items": 1,
+            "mimeTypes": [
+              "application/octet-stream"
+            ]
+          },
+          "level": "info",
+          "message": "Artifacts acquired",
+          "operationId": "3edcb806-0290-4db2-8766-69ba1d7db43b",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:57.500Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "collisionPolicy": "rename",
+            "itemId": null,
+            "names": [
+              {
+                "itemId": "70e364c8-12ea-4bda-b4f2-7e1e2864a9f8",
+                "name": "acc-b2b-1.bin",
+                "status": "pending"
+              }
+            ],
+            "namingMode": "original"
+          },
+          "level": "info",
+          "message": "Upload names chosen",
+          "operationId": "3edcb806-0290-4db2-8766-69ba1d7db43b",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:57.595Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "byteCount": 65536,
+            "mime": "application/octet-stream",
+            "name": "acc-b2b-1-0dffe078-970a-417b-b3ed-f4c0c4a28932.bin",
+            "provider": "proton-drive"
+          },
+          "itemId": "70e364c8-12ea-4bda-b4f2-7e1e2864a9f8",
+          "level": "info",
+          "message": "Upload attempt",
+          "operationId": "3edcb806-0290-4db2-8766-69ba1d7db43b",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:17:02.926Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "elapsedMs": 574,
+            "provider": "proton-drive",
+            "status": "uploaded",
+            "uncertain": false
+          },
+          "itemId": "70e364c8-12ea-4bda-b4f2-7e1e2864a9f8",
+          "level": "info",
+          "message": "Upload finished",
+          "operationId": "3edcb806-0290-4db2-8766-69ba1d7db43b",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:17:03.501Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "action": "create",
+            "provider": "proton-drive",
+            "status": "shared"
+          },
+          "itemId": "70e364c8-12ea-4bda-b4f2-7e1e2864a9f8",
+          "level": "info",
+          "message": "Sharing finished",
+          "operationId": "3edcb806-0290-4db2-8766-69ba1d7db43b",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:17:04.620Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "byteCount": 65536,
+            "durationMs": 7300,
+            "itemId": null,
+            "items": 1,
+            "provider": "proton-drive",
+            "state": "completed",
+            "uploadStatus": {
+              "uploaded": 1
+            }
+          },
+          "level": "info",
+          "message": "Operation finished",
+          "operationId": "3edcb806-0290-4db2-8766-69ba1d7db43b",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:17:04.683Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.clipboard",
+          "fields": {
+            "action": "files",
+            "automatic": true,
+            "behavior": "each_link",
+            "cancelled": false,
+            "copyStatus": "failed",
+            "error": {
+              "code": "clipboard_unavailable",
+              "details": {},
+              "message": "GNOME helper cannot own CLIPBOARD"
+            },
+            "itemId": null,
+            "links": 1
+          },
+          "level": "warning",
+          "message": "Automatic copy finished",
+          "operationId": "3edcb806-0290-4db2-8766-69ba1d7db43b",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:17:04.690Z",
+          "v": 1
+        }
+      ],
+      [
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "itemId": null,
+            "items": 1,
+            "output": "upload",
+            "profileId": "proton-lab",
+            "provider": "proton-drive",
+            "zipFolders": true
+          },
+          "level": "info",
+          "message": "Operation accepted",
+          "operationId": "a440fb1c-344c-4c2e-b0c9-eafe872fa82d",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:57.454Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "byteCount": 524288,
+            "itemId": null,
+            "items": 1,
+            "mimeTypes": [
+              "application/octet-stream"
+            ]
+          },
+          "level": "info",
+          "message": "Artifacts acquired",
+          "operationId": "a440fb1c-344c-4c2e-b0c9-eafe872fa82d",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:57.513Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "collisionPolicy": "rename",
+            "itemId": null,
+            "names": [
+              {
+                "itemId": "7534bc44-72ff-4d0c-954b-21ba67fee580",
+                "name": "acc-b2b-2.bin",
+                "status": "pending"
+              }
+            ],
+            "namingMode": "original"
+          },
+          "level": "info",
+          "message": "Upload names chosen",
+          "operationId": "a440fb1c-344c-4c2e-b0c9-eafe872fa82d",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:57.529Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "byteCount": 524288,
+            "mime": "application/octet-stream",
+            "name": "acc-b2b-2-c3b346d0-ac1b-4101-8f41-f49523f2c07c.bin",
+            "provider": "proton-drive"
+          },
+          "itemId": "7534bc44-72ff-4d0c-954b-21ba67fee580",
+          "level": "info",
+          "message": "Upload attempt",
+          "operationId": "a440fb1c-344c-4c2e-b0c9-eafe872fa82d",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:16:59.009Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "attempt": 1,
+            "elapsedMs": 2232,
+            "provider": "proton-drive",
+            "status": "uploaded",
+            "uncertain": false
+          },
+          "itemId": "7534bc44-72ff-4d0c-954b-21ba67fee580",
+          "level": "info",
+          "message": "Upload finished",
+          "operationId": "a440fb1c-344c-4c2e-b0c9-eafe872fa82d",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:17:01.241Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.proton",
+          "fields": {
+            "action": "create",
+            "provider": "proton-drive",
+            "status": "shared"
+          },
+          "itemId": "7534bc44-72ff-4d0c-954b-21ba67fee580",
+          "level": "info",
+          "message": "Sharing finished",
+          "operationId": "a440fb1c-344c-4c2e-b0c9-eafe872fa82d",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:17:02.371Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.operation",
+          "fields": {
+            "action": "files",
+            "byteCount": 524288,
+            "durationMs": 5033,
+            "itemId": null,
+            "items": 1,
+            "provider": "proton-drive",
+            "state": "completed",
+            "uploadStatus": {
+              "uploaded": 1
+            }
+          },
+          "level": "info",
+          "message": "Operation finished",
+          "operationId": "a440fb1c-344c-4c2e-b0c9-eafe872fa82d",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:17:02.464Z",
+          "v": 1
+        },
+        {
+          "category": "putgd.clipboard",
+          "fields": {
+            "action": "files",
+            "automatic": true,
+            "behavior": "each_link",
+            "cancelled": false,
+            "copyStatus": "failed",
+            "error": {
+              "code": "clipboard_unavailable",
+              "details": {},
+              "message": "GNOME helper cannot own CLIPBOARD"
+            },
+            "itemId": null,
+            "links": 1
+          },
+          "level": "warning",
+          "message": "Automatic copy finished",
+          "operationId": "a440fb1c-344c-4c2e-b0c9-eafe872fa82d",
+          "pid": 3935739,
+          "process": "putgd",
+          "time": "2026-11-12T07:17:02.483Z",
+          "v": 1
+        }
+      ]
+    ]
+  }
+]
