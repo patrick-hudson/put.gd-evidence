@@ -1,0 +1,90 @@
+{
+ "capture": [
+  1920,
+  36501
+ ],
+ "reference": [
+  1920,
+  36502
+ ],
+ "comparedColumns": 1912,
+ "bands": 571,
+ "exactBands": 567,
+ "shiftedBands": 1,
+ "badBands": 3,
+ "bad": [
+  {
+   "y": [
+    1856,
+    1920
+   ],
+   "pixels": 800,
+   "shift": 0,
+   "votes": 0,
+   "x": [
+    536,
+    1088
+   ],
+   "rows": [
+    1856,
+    1920
+   ]
+  },
+  {
+   "y": [
+    1920,
+    1984
+   ],
+   "pixels": 3712,
+   "shift": 0,
+   "votes": 0,
+   "x": [
+    496,
+    1172
+   ],
+   "rows": [
+    1920,
+    1984
+   ]
+  },
+  {
+   "y": [
+    2048,
+    2112
+   ],
+   "pixels": 2304,
+   "shift": 0,
+   "votes": 22,
+   "x": [
+    580,
+    1176
+   ],
+   "rows": [
+    2068,
+    2080
+   ]
+  }
+ ],
+ "shiftChanges": [
+  [
+   1984,
+   1
+  ],
+  [
+   2112,
+   0
+  ]
+ ],
+ "rowsEqualBitForBit": 775,
+ "excluded": [
+  {
+   "x": [
+    1912,
+    1920
+   ],
+   "why": "Firefox's overlay scrollbar at the right edge: on the screen while the page scrolls, not in the browser's picture"
+  }
+ ],
+ "comparisonReference": "reference.png",
+ "rule": "a band of 64 rows passes when at most 0.2% of its compared pixels lie in 4x4 blocks whose grey mean differs by more than 32, at the place in the reference that its bit-equal rows name (or the band before it had)"
+}

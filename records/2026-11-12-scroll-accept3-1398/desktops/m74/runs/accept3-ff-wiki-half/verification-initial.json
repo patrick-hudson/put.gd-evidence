@@ -1,0 +1,78 @@
+{
+ "capture": [
+  1920,
+  2163
+ ],
+ "reference": [
+  1920,
+  3663
+ ],
+ "comparedColumns": 1380,
+ "bands": 34,
+ "exactBands": 32,
+ "shiftedBands": 0,
+ "badBands": 2,
+ "bad": [
+  {
+   "y": [
+    2048,
+    2112
+   ],
+   "pixels": 35264,
+   "shift": 0,
+   "votes": 0,
+   "x": [
+    64,
+    1856
+   ],
+   "rows": [
+    2048,
+    2112
+   ]
+  },
+  {
+   "y": [
+    2112,
+    2163
+   ],
+   "pixels": 23888,
+   "shift": 0,
+   "votes": 0,
+   "x": [
+    64,
+    1832
+   ],
+   "rows": [
+    2112,
+    2160
+   ]
+  }
+ ],
+ "shiftChanges": [],
+ "rowsEqualBitForBit": 77,
+ "excluded": [
+  {
+   "x": [
+    196,
+    468
+   ],
+   "why": "a side bar the page keeps in place (sticky, DIV.vector-sticky-pinned-container): the capture shows it beside every row as the screen did, the browser's picture shows it once"
+  },
+  {
+   "x": [
+    1452,
+    1712
+   ],
+   "why": "a side bar the page keeps in place (sticky, DIV.vector-sticky-pinned-container): the capture shows it beside every row as the screen did, the browser's picture shows it once"
+  },
+  {
+   "x": [
+    1912,
+    1920
+   ],
+   "why": "Firefox's overlay scrollbar at the right edge: on the screen while the page scrolls, not in the browser's picture"
+  }
+ ],
+ "comparisonReference": "reference-initial.png",
+ "rule": "a band of 64 rows passes when at most 0.2% of its compared pixels lie in 4x4 blocks whose grey mean differs by more than 32, at the place in the reference that its bit-equal rows name (or the band before it had)"
+}

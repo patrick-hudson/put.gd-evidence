@@ -1,0 +1,31 @@
+2026-11-12T07:34:48.411 scroll command prepare
+2026-11-12T07:34:48.411 scroll: prepare frames ximagesrc injector xtest maxHeight 30000 fromTop 1 autoStart 0
+2026-11-12T07:34:48.520 scroll result prepare ok
+2026-11-12T07:34:48.554 scroll command start
+2026-11-12T07:34:48.554 scroll tap: ximagesrc name=src use-damage=false show-pointer=false startx=100 starty=200 endx=1059 endy=799 ! video/x-raw,framerate=30/1 ! queue name=cq leaky=downstream max-size-buffers=2 max-size-bytes=0 max-size-time=0 ! videoconvert ! video/x-raw,format=BGRx ! appsink name=tap max-buffers=2 drop=true sync=false emit-signals=true enable-last-sample=false
+2026-11-12T07:34:48.566 scroll: capturing 100,200 960x600 with xtest
+2026-11-12T07:34:48.568 scroll result start ok
+2026-11-12T07:34:48.592 scroll tap buffer: t=396833 sum=31255
+2026-11-12T07:34:48.592 scroll: frames 960x600 for 960x600, cap 30000 rows, away -16,200
+2026-11-12T07:34:48.609 scroll tap buffer: t=396851 sum=31255
+2026-11-12T07:34:48.610 scroll frame: t=396851 changed
+2026-11-12T07:34:48.634 scroll tap buffer: t=396875 sum=31255
+2026-11-12T07:34:48.634 scroll frame: t=396875 same
+2026-11-12T07:34:48.668 scroll tap buffer: t=396909 sum=31255
+2026-11-12T07:34:48.668 scroll frame: t=396909 same
+2026-11-12T07:34:48.702 scroll tap buffer: t=396943 sum=31255
+2026-11-12T07:34:48.703 scroll frame: t=396943 same
+2026-11-12T07:34:48.732 scroll inject: t=396973 pointer 48,200 sent
+2026-11-12T07:34:48.735 scroll tap buffer: t=396976 sum=31255
+2026-11-12T07:34:48.780 scroll tap buffer: t=397020 sum=31255
+2026-11-12T07:34:48.796 scroll inject: t=397037 pointer 48,200 sent
+2026-11-12T07:34:48.805 scroll inject: t=397046 wheel -10 sent
+2026-11-12T07:34:48.820 scroll tap buffer: t=397061 sum=31255
+2026-11-12T07:34:48.826 scroll command cancel
+2026-11-12T07:34:48.841 scroll inject: t=397082 pointer -16,200 sent
+2026-11-12T07:34:48.842 scroll: way to the top 1 steps, 248 ms, top not proved
+2026-11-12T07:34:48.842 scroll tap buffer: t=397084 sum=31255
+2026-11-12T07:34:48.844 scroll tap: stopped after 5 frames
+2026-11-12T07:34:48.857 scroll: ended Stopped, 0 rows, 0 steps, 0 px per notch, 250 ms
+2026-11-12T07:34:48.857 scroll: source fresh 0, quiet 0, unproven 0, slowest response 0 ms, retries 0, scroll-backs 0
+2026-11-12T07:34:48.857 scroll result cancel ok

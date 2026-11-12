@@ -1,0 +1,2602 @@
+[
+  {
+    "tool": "inspect",
+    "args": {},
+    "reply": {
+      "schemaVersion": 1,
+      "requestId": "6591106c-4764-4757-9be1-078b09f5b0f7",
+      "ok": true,
+      "result": {
+        "capabilities": {
+          "error": {
+            "code": "",
+            "details": {},
+            "message": ""
+          },
+          "ok": true,
+          "requestId": "9b31e8bc-c8bb-4ea1-8e60-d2bc79ccf589",
+          "result": {
+            "editor": {
+              "admissionPixels": 24000000,
+              "available": true,
+              "blurStyles": [
+                "blur",
+                "pixelate"
+              ],
+              "commands": [
+                "inspect",
+                "apply",
+                "preview",
+                "saveCopy",
+                "copy",
+                "fileDialog",
+                "view",
+                "submit",
+                "cancel",
+                "raise"
+              ],
+              "fileFormats": [
+                "png",
+                "jpeg"
+              ],
+              "open": false,
+              "output": "png",
+              "shapes": [
+                "redact",
+                "blur",
+                "arrow",
+                "rectangle",
+                "text",
+                "highlight",
+                "step",
+                "pen",
+                "ellipse",
+                "line"
+              ],
+              "sources": [
+                "region",
+                "window",
+                "desktop",
+                "clipboard",
+                "file",
+                "scroll"
+              ]
+            },
+            "providers": {
+              "backblaze-b2": {
+                "conditionalCreate": true,
+                "conditionalDelete": false,
+                "conditionalReplace": false,
+                "delete": true,
+                "deletionEffect": "Deletes exactly the uploaded B2 file version by its ID. put.gd never uploads over a visible file, so the name then shows nothing, or an older version that was hidden before the upload. Authorized links stop working when they expire.",
+                "maximumNameBytes": 1023,
+                "maximumObjectBytes": 10000000000000,
+                "privateUploads": false,
+                "referenceDelete": false,
+                "serverNamesObjects": false,
+                "sharing": false,
+                "stat": true,
+                "urls": true,
+                "versionAddressing": true
+              },
+              "custom-http": {
+                "conditionalCreate": false,
+                "conditionalDelete": false,
+                "conditionalReplace": false,
+                "delete": false,
+                "deletionEffect": "Asks the server to delete this upload through the deletion URL it returned with the link. What the server removes, and how soon the link stops working, is up to the server.",
+                "maximumNameBytes": 255,
+                "maximumObjectBytes": null,
+                "privateUploads": false,
+                "referenceDelete": true,
+                "serverNamesObjects": true,
+                "sharing": false,
+                "stat": false,
+                "urls": true,
+                "versionAddressing": false
+              },
+              "proton-drive": {
+                "conditionalCreate": true,
+                "conditionalDelete": false,
+                "conditionalReplace": false,
+                "delete": false,
+                "deletionEffect": "Safe remote deletion is unavailable: Proton does not expose an atomic revision-guarded file deletion. Revoke share links separately.",
+                "maximumNameBytes": 255,
+                "maximumObjectBytes": null,
+                "privateUploads": true,
+                "referenceDelete": false,
+                "serverNamesObjects": false,
+                "sharing": true,
+                "stat": true,
+                "urls": true,
+                "versionAddressing": false
+              },
+              "s3": {
+                "conditionalCreate": true,
+                "conditionalDelete": true,
+                "conditionalReplace": true,
+                "delete": true,
+                "deletionEffect": "Guarded origin removal; selected versions only; browser/CDN caches may retain bytes",
+                "maximumNameBytes": 1024,
+                "maximumObjectBytes": 5497558138880,
+                "privateUploads": false,
+                "referenceDelete": false,
+                "serverNamesObjects": false,
+                "sharing": false,
+                "stat": true,
+                "urls": true,
+                "versionAddressing": true
+              }
+            },
+            "recording": {
+              "acquisition": "x11",
+              "active": null,
+              "audio": {
+                "microphone": true,
+                "system": true
+              },
+              "available": true,
+              "clickHighlights": {
+                "available": true,
+                "drawnBy": "recorder",
+                "route": "x11-xinput2",
+                "targets": [
+                  "monitor",
+                  "desktop",
+                  "region",
+                  "window"
+                ]
+              },
+              "codecs": {
+                "mp4": [
+                  "h264",
+                  "h265"
+                ],
+                "webm": [
+                  "vp9"
+                ]
+              },
+              "commands": [
+                "windows",
+                "microphones",
+                "prepare",
+                "start",
+                "pause",
+                "resume",
+                "stop",
+                "cancel",
+                "inspect",
+                "select",
+                "raise",
+                "overlay",
+                "audio",
+                "edit",
+                "preview",
+                "review",
+                "saveCopy",
+                "upload"
+              ],
+              "editCommands": [
+                "setTrim",
+                "resetTrim",
+                "addMask",
+                "updateMask",
+                "removeMask"
+              ],
+              "exportEncoders": {
+                "h264": [
+                  "h264_vaapi",
+                  "libx264"
+                ],
+                "h265": [
+                  "libx265"
+                ],
+                "vp9": [
+                  "libvpx-vp9"
+                ]
+              },
+              "ffmpeg": {
+                "avcodec": "60.31.102",
+                "avfilter": "9.12.100",
+                "avformat": "60.16.100",
+                "avutil": "58.29.100",
+                "encoderFailures": {
+                  "h264_nvenc": "libcuda.so.1 is not installed",
+                  "hevc_nvenc": "libcuda.so.1 is not installed",
+                  "hevc_vaapi": "Function not implemented"
+                },
+                "encoders": {
+                  "aac": true,
+                  "gif": true,
+                  "h264_nvenc": true,
+                  "h264_vaapi": true,
+                  "hevc_nvenc": true,
+                  "hevc_vaapi": true,
+                  "libopenh264": false,
+                  "libopus": true,
+                  "libvorbis": true,
+                  "libvpx-vp9": true,
+                  "libwebp_anim": true,
+                  "libx264": true,
+                  "libx265": true,
+                  "vp9_vaapi": true
+                },
+                "filters": {
+                  "asetpts": true,
+                  "atrim": true,
+                  "avgblur": true,
+                  "crop": true,
+                  "drawbox": true,
+                  "format": true,
+                  "fps": true,
+                  "palettegen": true,
+                  "paletteuse": true,
+                  "scale": true,
+                  "setpts": true,
+                  "trim": true
+                },
+                "h264Decoder": {
+                  "failure": null,
+                  "name": "h264",
+                  "usable": true
+                },
+                "muxers": {
+                  "gif": true,
+                  "matroska": true,
+                  "mp4": true,
+                  "webm": true,
+                  "webp": true
+                }
+              },
+              "formats": [
+                "mp4",
+                "webm",
+                "gif",
+                "webp"
+              ],
+              "gstreamer": {
+                "audioSources": [
+                  "pulsesrc",
+                  "pipewiresrc"
+                ],
+                "available": true,
+                "elements": {
+                  "aacparse": "1.24.2",
+                  "appsink": "1.24.2",
+                  "appsrc": "1.24.2",
+                  "audioconvert": "1.24.2",
+                  "audiomixer": "1.24.2",
+                  "audioresample": "1.24.2",
+                  "avenc_aac": "1.24.1",
+                  "compositor": "1.24.2",
+                  "fdkaacenc": null,
+                  "h264parse": "1.24.2",
+                  "identity": "1.24.2",
+                  "matroskamux": "1.24.2",
+                  "mp4mux": "1.24.2",
+                  "openh264enc": "1.24.2",
+                  "pipewiresrc": "1.0.5",
+                  "pulsesrc": "1.24.2",
+                  "vaapih264enc": "1.24.2",
+                  "vah264enc": null,
+                  "vah264lpenc": "1.24.2",
+                  "videoconvert": "1.24.2",
+                  "videocrop": "1.24.2",
+                  "videorate": "1.24.2",
+                  "videoscale": "1.24.2",
+                  "voaacenc": "1.24.2",
+                  "vp9enc": "1.24.2",
+                  "webmmux": "1.24.2",
+                  "webpenc": "1.24.2",
+                  "x264enc": "1.24.1",
+                  "x265enc": "1.24.2",
+                  "ximagesrc": "1.24.2"
+                },
+                "encoderFailures": {},
+                "liveAacEncoders": [
+                  "avenc_aac",
+                  "voaacenc"
+                ],
+                "liveH264Encoders": [
+                  "vah264lpenc",
+                  "vaapih264enc",
+                  "x264enc",
+                  "openh264enc"
+                ],
+                "liveSources": [
+                  "ximagesrc",
+                  "pipewiresrc"
+                ],
+                "pluginDirectories": [
+                  "/usr/lib/x86_64-linux-gnu/gstreamer-1.0"
+                ],
+                "usableH264Encoders": [
+                  "vah264lpenc",
+                  "vaapih264enc",
+                  "x264enc",
+                  "openh264enc"
+                ],
+                "version": "GStreamer 1.24.2",
+                "webpAnimated": true
+              },
+              "limits": {
+                "animationMaxEdge": 1280,
+                "animationMaxUs": 60000000,
+                "maxFileBytes": 1099511627776,
+                "maxMasks": 64
+              },
+              "liveCapture": {
+                "audio": true,
+                "encoder": true,
+                "source": true
+              },
+              "maskKinds": [
+                "blur",
+                "solid"
+              ],
+              "overlayExclusion": {},
+              "reason": null,
+              "schemaVersion": 1,
+              "session": "x11",
+              "states": [
+                "preparing",
+                "ready",
+                "starting",
+                "recording",
+                "paused",
+                "stopping",
+                "reviewing",
+                "exporting",
+                "submitted",
+                "cancelled",
+                "failed"
+              ],
+              "targets": [
+                "monitor",
+                "desktop",
+                "region",
+                "window"
+              ],
+              "timeUnit": "microseconds",
+              "windowAcquisition": "x11",
+              "windowList": false
+            },
+            "scroll": {
+              "available": true,
+              "frames": "ximagesrc",
+              "injector": "xtest",
+              "maxHeight": 30000,
+              "reason": null,
+              "selection": "helper"
+            },
+            "source": {
+              "adapter": "cinnamon-core-x11",
+              "capture": {
+                "desktop": {
+                  "available": true,
+                  "consent": "none",
+                  "helper": {
+                    "active": false,
+                    "build": {
+                      "baseVersion": "26.1112.4716",
+                      "commitCount": 4716,
+                      "dirty": false,
+                      "gitCommit": "0311647141ff59a02edfb61518fa31080aad4b6d",
+                      "gitTree": "605a7a5dd874857d48a5ef4bbb6b2faf12cded23",
+                      "packageVersion": "26.1112.4716~dev+g0311647141ff",
+                      "schemaVersion": 1,
+                      "sourceProvenance": "git",
+                      "version": "26.1112.4716-dev+g0311647141ff"
+                    },
+                    "lastExit": {},
+                    "processId": 0
+                  },
+                  "mode": "visible-pixels"
+                },
+                "monitor": {
+                  "available": true,
+                  "consent": "none",
+                  "helper": {
+                    "active": false,
+                    "build": {
+                      "baseVersion": "26.1112.4716",
+                      "commitCount": 4716,
+                      "dirty": false,
+                      "gitCommit": "0311647141ff59a02edfb61518fa31080aad4b6d",
+                      "gitTree": "605a7a5dd874857d48a5ef4bbb6b2faf12cded23",
+                      "packageVersion": "26.1112.4716~dev+g0311647141ff",
+                      "schemaVersion": 1,
+                      "sourceProvenance": "git",
+                      "version": "26.1112.4716-dev+g0311647141ff"
+                    },
+                    "lastExit": {},
+                    "processId": 0
+                  },
+                  "mode": "visible-pixels"
+                },
+                "region": {
+                  "available": true,
+                  "consent": "none",
+                  "helper": {
+                    "active": false,
+                    "build": {
+                      "baseVersion": "26.1112.4716",
+                      "commitCount": 4716,
+                      "dirty": false,
+                      "gitCommit": "0311647141ff59a02edfb61518fa31080aad4b6d",
+                      "gitTree": "605a7a5dd874857d48a5ef4bbb6b2faf12cded23",
+                      "packageVersion": "26.1112.4716~dev+g0311647141ff",
+                      "schemaVersion": 1,
+                      "sourceProvenance": "git",
+                      "version": "26.1112.4716-dev+g0311647141ff"
+                    },
+                    "lastExit": {},
+                    "processId": 0
+                  },
+                  "mode": "visible-pixels"
+                },
+                "repeat": {
+                  "available": true,
+                  "consent": "none",
+                  "helper": {
+                    "active": false,
+                    "build": {
+                      "baseVersion": "26.1112.4716",
+                      "commitCount": 4716,
+                      "dirty": false,
+                      "gitCommit": "0311647141ff59a02edfb61518fa31080aad4b6d",
+                      "gitTree": "605a7a5dd874857d48a5ef4bbb6b2faf12cded23",
+                      "packageVersion": "26.1112.4716~dev+g0311647141ff",
+                      "schemaVersion": 1,
+                      "sourceProvenance": "git",
+                      "version": "26.1112.4716-dev+g0311647141ff"
+                    },
+                    "lastExit": {},
+                    "processId": 0
+                  },
+                  "mode": "visible-pixels",
+                  "remembered": false
+                },
+                "window": {
+                  "available": true,
+                  "consent": "none",
+                  "helper": {
+                    "active": false,
+                    "build": {
+                      "baseVersion": "26.1112.4716",
+                      "commitCount": 4716,
+                      "dirty": false,
+                      "gitCommit": "0311647141ff59a02edfb61518fa31080aad4b6d",
+                      "gitTree": "605a7a5dd874857d48a5ef4bbb6b2faf12cded23",
+                      "packageVersion": "26.1112.4716~dev+g0311647141ff",
+                      "schemaVersion": 1,
+                      "sourceProvenance": "git",
+                      "version": "26.1112.4716-dev+g0311647141ff"
+                    },
+                    "lastExit": {},
+                    "processId": 0
+                  },
+                  "mode": "visible-pixels"
+                }
+              },
+              "clipboard": {
+                "available": true,
+                "import": "asynchronous-x11-selection",
+                "result": "native-x11-ownership",
+                "types": [
+                  "files",
+                  "image",
+                  "text"
+                ]
+              },
+              "delay": {
+                "available": true,
+                "indicator": "helper-window",
+                "seconds": [
+                  3,
+                  5,
+                  10
+                ]
+              },
+              "scroll": {
+                "available": true,
+                "frames": "ximagesrc",
+                "injector": "xtest",
+                "maxHeight": 30000,
+                "reason": null,
+                "selection": "helper"
+              },
+              "shortcuts": {
+                "available": true,
+                "bindings": {
+                  "clipboard": {
+                    "bound": false,
+                    "error": "disabled",
+                    "requested": ""
+                  },
+                  "desktop": {
+                    "bound": false,
+                    "error": "disabled",
+                    "requested": ""
+                  },
+                  "edit": {
+                    "bound": false,
+                    "error": "disabled",
+                    "requested": ""
+                  },
+                  "monitor": {
+                    "bound": false,
+                    "error": "disabled",
+                    "requested": ""
+                  },
+                  "record": {
+                    "bound": false,
+                    "error": "disabled",
+                    "requested": ""
+                  },
+                  "region": {
+                    "bound": false,
+                    "error": "disabled",
+                    "requested": ""
+                  },
+                  "repeat": {
+                    "bound": false,
+                    "error": "disabled",
+                    "requested": ""
+                  },
+                  "scroll": {
+                    "actual": "Ctrl+Shift+F8",
+                    "bound": true,
+                    "requested": "Ctrl+Shift+F8"
+                  },
+                  "window": {
+                    "bound": false,
+                    "error": "disabled",
+                    "requested": ""
+                  }
+                },
+                "keyPaths": {
+                  "lastActivation": {
+                    "action": "scroll",
+                    "path": "passive",
+                    "sequence": 1,
+                    "serverTime": 1888167704
+                  },
+                  "passive": true,
+                  "raw": {
+                    "available": true,
+                    "xinput": "2.2"
+                  }
+                }
+              }
+            }
+          },
+          "schemaVersion": 1
+        },
+        "diagnostics": {
+          "error": {
+            "code": "",
+            "details": {},
+            "message": ""
+          },
+          "ok": true,
+          "requestId": "58727425-a1a8-4d54-817f-afd2be6973af",
+          "result": {
+            "activeOperations": 0,
+            "artifactCleanup": {
+              "automatic": false,
+              "incompleteUploadNotice": null,
+              "intervalMs": 3600000,
+              "last": {
+                "abortedUploads": 0,
+                "elapsedMs": 1,
+                "finished": "2026-11-12T13:27:24.759Z",
+                "incompleteUploads": [],
+                "removedOperations": 0,
+                "trigger": "automatic"
+              },
+              "running": false
+            },
+            "backend": "Qt",
+            "build": {
+              "baseVersion": "26.1112.4716",
+              "commitCount": 4716,
+              "dirty": false,
+              "gitCommit": "0311647141ff59a02edfb61518fa31080aad4b6d",
+              "gitTree": "605a7a5dd874857d48a5ef4bbb6b2faf12cded23",
+              "packageVersion": "26.1112.4716~dev+g0311647141ff",
+              "schemaVersion": 1,
+              "sourceProvenance": "git",
+              "version": "26.1112.4716-dev+g0311647141ff"
+            },
+            "capabilities": {
+              "editor": {
+                "admissionPixels": 24000000,
+                "available": true,
+                "blurStyles": [
+                  "blur",
+                  "pixelate"
+                ],
+                "commands": [
+                  "inspect",
+                  "apply",
+                  "preview",
+                  "saveCopy",
+                  "copy",
+                  "fileDialog",
+                  "view",
+                  "submit",
+                  "cancel",
+                  "raise"
+                ],
+                "fileFormats": [
+                  "png",
+                  "jpeg"
+                ],
+                "open": false,
+                "output": "png",
+                "shapes": [
+                  "redact",
+                  "blur",
+                  "arrow",
+                  "rectangle",
+                  "text",
+                  "highlight",
+                  "step",
+                  "pen",
+                  "ellipse",
+                  "line"
+                ],
+                "sources": [
+                  "region",
+                  "window",
+                  "desktop",
+                  "clipboard",
+                  "file",
+                  "scroll"
+                ]
+              },
+              "providers": {
+                "backblaze-b2": {
+                  "conditionalCreate": true,
+                  "conditionalDelete": false,
+                  "conditionalReplace": false,
+                  "delete": true,
+                  "deletionEffect": "Deletes exactly the uploaded B2 file version by its ID. put.gd never uploads over a visible file, so the name then shows nothing, or an older version that was hidden before the upload. Authorized links stop working when they expire.",
+                  "maximumNameBytes": 1023,
+                  "maximumObjectBytes": 10000000000000,
+                  "privateUploads": false,
+                  "referenceDelete": false,
+                  "serverNamesObjects": false,
+                  "sharing": false,
+                  "stat": true,
+                  "urls": true,
+                  "versionAddressing": true
+                },
+                "custom-http": {
+                  "conditionalCreate": false,
+                  "conditionalDelete": false,
+                  "conditionalReplace": false,
+                  "delete": false,
+                  "deletionEffect": "Asks the server to delete this upload through the deletion URL it returned with the link. What the server removes, and how soon the link stops working, is up to the server.",
+                  "maximumNameBytes": 255,
+                  "maximumObjectBytes": null,
+                  "privateUploads": false,
+                  "referenceDelete": true,
+                  "serverNamesObjects": true,
+                  "sharing": false,
+                  "stat": false,
+                  "urls": true,
+                  "versionAddressing": false
+                },
+                "proton-drive": {
+                  "conditionalCreate": true,
+                  "conditionalDelete": false,
+                  "conditionalReplace": false,
+                  "delete": false,
+                  "deletionEffect": "Safe remote deletion is unavailable: Proton does not expose an atomic revision-guarded file deletion. Revoke share links separately.",
+                  "maximumNameBytes": 255,
+                  "maximumObjectBytes": null,
+                  "privateUploads": true,
+                  "referenceDelete": false,
+                  "serverNamesObjects": false,
+                  "sharing": true,
+                  "stat": true,
+                  "urls": true,
+                  "versionAddressing": false
+                },
+                "s3": {
+                  "conditionalCreate": true,
+                  "conditionalDelete": true,
+                  "conditionalReplace": true,
+                  "delete": true,
+                  "deletionEffect": "Guarded origin removal; selected versions only; browser/CDN caches may retain bytes",
+                  "maximumNameBytes": 1024,
+                  "maximumObjectBytes": 5497558138880,
+                  "privateUploads": false,
+                  "referenceDelete": false,
+                  "serverNamesObjects": false,
+                  "sharing": false,
+                  "stat": true,
+                  "urls": true,
+                  "versionAddressing": true
+                }
+              },
+              "recording": {
+                "acquisition": "x11",
+                "active": null,
+                "audio": {
+                  "microphone": true,
+                  "system": true
+                },
+                "available": true,
+                "clickHighlights": {
+                  "available": true,
+                  "drawnBy": "recorder",
+                  "route": "x11-xinput2",
+                  "targets": [
+                    "monitor",
+                    "desktop",
+                    "region",
+                    "window"
+                  ]
+                },
+                "codecs": {
+                  "mp4": [
+                    "h264",
+                    "h265"
+                  ],
+                  "webm": [
+                    "vp9"
+                  ]
+                },
+                "commands": [
+                  "windows",
+                  "microphones",
+                  "prepare",
+                  "start",
+                  "pause",
+                  "resume",
+                  "stop",
+                  "cancel",
+                  "inspect",
+                  "select",
+                  "raise",
+                  "overlay",
+                  "audio",
+                  "edit",
+                  "preview",
+                  "review",
+                  "saveCopy",
+                  "upload"
+                ],
+                "editCommands": [
+                  "setTrim",
+                  "resetTrim",
+                  "addMask",
+                  "updateMask",
+                  "removeMask"
+                ],
+                "exportEncoders": {
+                  "h264": [
+                    "h264_vaapi",
+                    "libx264"
+                  ],
+                  "h265": [
+                    "libx265"
+                  ],
+                  "vp9": [
+                    "libvpx-vp9"
+                  ]
+                },
+                "ffmpeg": {
+                  "avcodec": "60.31.102",
+                  "avfilter": "9.12.100",
+                  "avformat": "60.16.100",
+                  "avutil": "58.29.100",
+                  "encoderFailures": {
+                    "h264_nvenc": "libcuda.so.1 is not installed",
+                    "hevc_nvenc": "libcuda.so.1 is not installed",
+                    "hevc_vaapi": "Function not implemented"
+                  },
+                  "encoders": {
+                    "aac": true,
+                    "gif": true,
+                    "h264_nvenc": true,
+                    "h264_vaapi": true,
+                    "hevc_nvenc": true,
+                    "hevc_vaapi": true,
+                    "libopenh264": false,
+                    "libopus": true,
+                    "libvorbis": true,
+                    "libvpx-vp9": true,
+                    "libwebp_anim": true,
+                    "libx264": true,
+                    "libx265": true,
+                    "vp9_vaapi": true
+                  },
+                  "filters": {
+                    "asetpts": true,
+                    "atrim": true,
+                    "avgblur": true,
+                    "crop": true,
+                    "drawbox": true,
+                    "format": true,
+                    "fps": true,
+                    "palettegen": true,
+                    "paletteuse": true,
+                    "scale": true,
+                    "setpts": true,
+                    "trim": true
+                  },
+                  "h264Decoder": {
+                    "failure": null,
+                    "name": "h264",
+                    "usable": true
+                  },
+                  "muxers": {
+                    "gif": true,
+                    "matroska": true,
+                    "mp4": true,
+                    "webm": true,
+                    "webp": true
+                  }
+                },
+                "formats": [
+                  "mp4",
+                  "webm",
+                  "gif",
+                  "webp"
+                ],
+                "gstreamer": {
+                  "audioSources": [
+                    "pulsesrc",
+                    "pipewiresrc"
+                  ],
+                  "available": true,
+                  "elements": {
+                    "aacparse": "1.24.2",
+                    "appsink": "1.24.2",
+                    "appsrc": "1.24.2",
+                    "audioconvert": "1.24.2",
+                    "audiomixer": "1.24.2",
+                    "audioresample": "1.24.2",
+                    "avenc_aac": "1.24.1",
+                    "compositor": "1.24.2",
+                    "fdkaacenc": null,
+                    "h264parse": "1.24.2",
+                    "identity": "1.24.2",
+                    "matroskamux": "1.24.2",
+                    "mp4mux": "1.24.2",
+                    "openh264enc": "1.24.2",
+                    "pipewiresrc": "1.0.5",
+                    "pulsesrc": "1.24.2",
+                    "vaapih264enc": "1.24.2",
+                    "vah264enc": null,
+                    "vah264lpenc": "1.24.2",
+                    "videoconvert": "1.24.2",
+                    "videocrop": "1.24.2",
+                    "videorate": "1.24.2",
+                    "videoscale": "1.24.2",
+                    "voaacenc": "1.24.2",
+                    "vp9enc": "1.24.2",
+                    "webmmux": "1.24.2",
+                    "webpenc": "1.24.2",
+                    "x264enc": "1.24.1",
+                    "x265enc": "1.24.2",
+                    "ximagesrc": "1.24.2"
+                  },
+                  "encoderFailures": {},
+                  "liveAacEncoders": [
+                    "avenc_aac",
+                    "voaacenc"
+                  ],
+                  "liveH264Encoders": [
+                    "vah264lpenc",
+                    "vaapih264enc",
+                    "x264enc",
+                    "openh264enc"
+                  ],
+                  "liveSources": [
+                    "ximagesrc",
+                    "pipewiresrc"
+                  ],
+                  "pluginDirectories": [
+                    "/usr/lib/x86_64-linux-gnu/gstreamer-1.0"
+                  ],
+                  "usableH264Encoders": [
+                    "vah264lpenc",
+                    "vaapih264enc",
+                    "x264enc",
+                    "openh264enc"
+                  ],
+                  "version": "GStreamer 1.24.2",
+                  "webpAnimated": true
+                },
+                "limits": {
+                  "animationMaxEdge": 1280,
+                  "animationMaxUs": 60000000,
+                  "maxFileBytes": 1099511627776,
+                  "maxMasks": 64
+                },
+                "liveCapture": {
+                  "audio": true,
+                  "encoder": true,
+                  "source": true
+                },
+                "maskKinds": [
+                  "blur",
+                  "solid"
+                ],
+                "overlayExclusion": {},
+                "reason": null,
+                "schemaVersion": 1,
+                "session": "x11",
+                "states": [
+                  "preparing",
+                  "ready",
+                  "starting",
+                  "recording",
+                  "paused",
+                  "stopping",
+                  "reviewing",
+                  "exporting",
+                  "submitted",
+                  "cancelled",
+                  "failed"
+                ],
+                "targets": [
+                  "monitor",
+                  "desktop",
+                  "region",
+                  "window"
+                ],
+                "timeUnit": "microseconds",
+                "windowAcquisition": "x11",
+                "windowList": false
+              },
+              "scroll": {
+                "available": true,
+                "frames": "ximagesrc",
+                "injector": "xtest",
+                "maxHeight": 30000,
+                "reason": null,
+                "selection": "helper"
+              },
+              "source": {
+                "adapter": "cinnamon-core-x11",
+                "capture": {
+                  "desktop": {
+                    "available": true,
+                    "consent": "none",
+                    "helper": {
+                      "active": false,
+                      "build": {
+                        "baseVersion": "26.1112.4716",
+                        "commitCount": 4716,
+                        "dirty": false,
+                        "gitCommit": "0311647141ff59a02edfb61518fa31080aad4b6d",
+                        "gitTree": "605a7a5dd874857d48a5ef4bbb6b2faf12cded23",
+                        "packageVersion": "26.1112.4716~dev+g0311647141ff",
+                        "schemaVersion": 1,
+                        "sourceProvenance": "git",
+                        "version": "26.1112.4716-dev+g0311647141ff"
+                      },
+                      "lastExit": {},
+                      "processId": 0
+                    },
+                    "mode": "visible-pixels"
+                  },
+                  "monitor": {
+                    "available": true,
+                    "consent": "none",
+                    "helper": {
+                      "active": false,
+                      "build": {
+                        "baseVersion": "26.1112.4716",
+                        "commitCount": 4716,
+                        "dirty": false,
+                        "gitCommit": "0311647141ff59a02edfb61518fa31080aad4b6d",
+                        "gitTree": "605a7a5dd874857d48a5ef4bbb6b2faf12cded23",
+                        "packageVersion": "26.1112.4716~dev+g0311647141ff",
+                        "schemaVersion": 1,
+                        "sourceProvenance": "git",
+                        "version": "26.1112.4716-dev+g0311647141ff"
+                      },
+                      "lastExit": {},
+                      "processId": 0
+                    },
+                    "mode": "visible-pixels"
+                  },
+                  "region": {
+                    "available": true,
+                    "consent": "none",
+                    "helper": {
+                      "active": false,
+                      "build": {
+                        "baseVersion": "26.1112.4716",
+                        "commitCount": 4716,
+                        "dirty": false,
+                        "gitCommit": "0311647141ff59a02edfb61518fa31080aad4b6d",
+                        "gitTree": "605a7a5dd874857d48a5ef4bbb6b2faf12cded23",
+                        "packageVersion": "26.1112.4716~dev+g0311647141ff",
+                        "schemaVersion": 1,
+                        "sourceProvenance": "git",
+                        "version": "26.1112.4716-dev+g0311647141ff"
+                      },
+                      "lastExit": {},
+                      "processId": 0
+                    },
+                    "mode": "visible-pixels"
+                  },
+                  "repeat": {
+                    "available": true,
+                    "consent": "none",
+                    "helper": {
+                      "active": false,
+                      "build": {
+                        "baseVersion": "26.1112.4716",
+                        "commitCount": 4716,
+                        "dirty": false,
+                        "gitCommit": "0311647141ff59a02edfb61518fa31080aad4b6d",
+                        "gitTree": "605a7a5dd874857d48a5ef4bbb6b2faf12cded23",
+                        "packageVersion": "26.1112.4716~dev+g0311647141ff",
+                        "schemaVersion": 1,
+                        "sourceProvenance": "git",
+                        "version": "26.1112.4716-dev+g0311647141ff"
+                      },
+                      "lastExit": {},
+                      "processId": 0
+                    },
+                    "mode": "visible-pixels",
+                    "remembered": false
+                  },
+                  "window": {
+                    "available": true,
+                    "consent": "none",
+                    "helper": {
+                      "active": false,
+                      "build": {
+                        "baseVersion": "26.1112.4716",
+                        "commitCount": 4716,
+                        "dirty": false,
+                        "gitCommit": "0311647141ff59a02edfb61518fa31080aad4b6d",
+                        "gitTree": "605a7a5dd874857d48a5ef4bbb6b2faf12cded23",
+                        "packageVersion": "26.1112.4716~dev+g0311647141ff",
+                        "schemaVersion": 1,
+                        "sourceProvenance": "git",
+                        "version": "26.1112.4716-dev+g0311647141ff"
+                      },
+                      "lastExit": {},
+                      "processId": 0
+                    },
+                    "mode": "visible-pixels"
+                  }
+                },
+                "clipboard": {
+                  "available": true,
+                  "import": "asynchronous-x11-selection",
+                  "result": "native-x11-ownership",
+                  "types": [
+                    "files",
+                    "image",
+                    "text"
+                  ]
+                },
+                "delay": {
+                  "available": true,
+                  "indicator": "helper-window",
+                  "seconds": [
+                    3,
+                    5,
+                    10
+                  ]
+                },
+                "scroll": {
+                  "available": true,
+                  "frames": "ximagesrc",
+                  "injector": "xtest",
+                  "maxHeight": 30000,
+                  "reason": null,
+                  "selection": "helper"
+                },
+                "shortcuts": {
+                  "available": true,
+                  "bindings": {
+                    "clipboard": {
+                      "bound": false,
+                      "error": "disabled",
+                      "requested": ""
+                    },
+                    "desktop": {
+                      "bound": false,
+                      "error": "disabled",
+                      "requested": ""
+                    },
+                    "edit": {
+                      "bound": false,
+                      "error": "disabled",
+                      "requested": ""
+                    },
+                    "monitor": {
+                      "bound": false,
+                      "error": "disabled",
+                      "requested": ""
+                    },
+                    "record": {
+                      "bound": false,
+                      "error": "disabled",
+                      "requested": ""
+                    },
+                    "region": {
+                      "bound": false,
+                      "error": "disabled",
+                      "requested": ""
+                    },
+                    "repeat": {
+                      "bound": false,
+                      "error": "disabled",
+                      "requested": ""
+                    },
+                    "scroll": {
+                      "actual": "Ctrl+Shift+F8",
+                      "bound": true,
+                      "requested": "Ctrl+Shift+F8"
+                    },
+                    "window": {
+                      "bound": false,
+                      "error": "disabled",
+                      "requested": ""
+                    }
+                  },
+                  "keyPaths": {
+                    "lastActivation": {
+                      "action": "scroll",
+                      "path": "passive",
+                      "sequence": 1,
+                      "serverTime": 1888167704
+                    },
+                    "passive": true,
+                    "raw": {
+                      "available": true,
+                      "xinput": "2.2"
+                    }
+                  }
+                }
+              }
+            },
+            "journalReady": true,
+            "locations": {
+              "config": {
+                "path": "/home/patrick/work/s3a/c/putgd",
+                "state": "current"
+              },
+              "data": {
+                "path": "/home/patrick/work/s3a/d/putgd",
+                "state": "current"
+              },
+              "schemaVersion": 1
+            },
+            "logging": {
+              "available": true,
+              "bytes": 156690,
+              "debugLogging": false,
+              "debugLoggingExpiresAt": null,
+              "degraded": false,
+              "degradedReason": null,
+              "directory": "/home/patrick/work/s3a/s/putgd/logs",
+              "droppedRecords": 0,
+              "files": 1,
+              "oldestRecord": "2026-11-12T13:26:24.901Z",
+              "retention": {
+                "bytes": 52428800,
+                "days": 14
+              },
+              "rotationBytes": 5242880
+            },
+            "loggingDegraded": false,
+            "memory": {
+              "allocatorReclamationCount": 64,
+              "allocatorReclamationPending": false,
+              "allocatorReclamationSupported": true,
+              "imagePageReleaseCount": 2,
+              "imagePageReleasePending": true,
+              "lastAllocatorReclamationUsec": 1282,
+              "lastImagePageReleaseBytes": 16953344,
+              "lastImagePageReleaseUsec": 2402
+            },
+            "previews": {
+              "queued": 0,
+              "running": false
+            },
+            "qtVersion": "6.4.2",
+            "release": {
+              "kind": "none",
+              "url": "",
+              "version": "26.1112.4716-dev+g0311647141ff"
+            },
+            "schemaVersion": 1,
+            "storage": {
+              "backblaze-b2": {
+                "activeHelpers": 0,
+                "protocolVersion": 1
+              },
+              "custom-http": {
+                "activeHelpers": 0,
+                "protocolVersion": 1
+              },
+              "proton-drive": {
+                "activeHelpers": 0,
+                "protocolVersion": 1
+              },
+              "s3": {
+                "lanes": 1,
+                "moduleLiveDrivers": 0,
+                "queuedRequests": 0,
+                "retainedDrivers": 0,
+                "workerStarted": false
+              }
+            },
+            "uncleanExit": {
+              "detected": false,
+              "last": null,
+              "recent": []
+            },
+            "uploadSlots": {
+              "active": 0,
+              "capacity": 3,
+              "lent": 0,
+              "operations": 0,
+              "waiting": 0
+            }
+          },
+          "schemaVersion": 1
+        },
+        "configuration": {
+          "error": {
+            "code": "",
+            "details": {},
+            "message": ""
+          },
+          "ok": true,
+          "requestId": "6591106c-4764-4757-9be1-078b09f5b0f7",
+          "result": {
+            "document": {
+              "actions": {
+                "clipboard": {
+                  "destination": "upload",
+                  "profileId": null,
+                  "shortcut": ""
+                },
+                "desktop": {
+                  "destination": "upload",
+                  "profileId": null,
+                  "shortcut": ""
+                },
+                "edit": {
+                  "destination": "upload",
+                  "profileId": null,
+                  "shortcut": ""
+                },
+                "monitor": {
+                  "destination": "upload",
+                  "profileId": null,
+                  "shortcut": ""
+                },
+                "record": {
+                  "shortcut": ""
+                },
+                "region": {
+                  "destination": "upload",
+                  "profileId": null,
+                  "shortcut": ""
+                },
+                "repeat": {
+                  "shortcut": ""
+                },
+                "scroll": {
+                  "destination": "upload",
+                  "profileId": "scroll-local",
+                  "shortcut": "Ctrl+Shift+F8"
+                },
+                "window": {
+                  "destination": "upload",
+                  "profileId": null,
+                  "shortcut": ""
+                }
+              },
+              "archive": {
+                "folders": {
+                  "images": null,
+                  "other": null,
+                  "text": null,
+                  "videos": null
+                },
+                "keepUploads": true,
+                "root": "/home/patrick/work/s3a/archive"
+              },
+              "limits": {
+                "clipboardTextBytes": 16777216,
+                "concurrentUploads": 3,
+                "imageBytes": 536870912,
+                "imagePixels": 100000000,
+                "maxBatchBytes": "auto",
+                "maxFileBytes": "auto",
+                "maxFiles": 100,
+                "pendingArtifactBytes": "auto",
+                "pendingImageBytes": 67108864,
+                "pendingOperations": 8,
+                "recordingAnimationEdge": 1280,
+                "recordingAnimationSeconds": 60
+              },
+              "naming": {
+                "captureTemplate": "Screen-Capture-{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}.{ext}",
+                "collisionPolicy": "rename",
+                "fileTemplate": "{name}.{ext}",
+                "imageTemplate": "Image-{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}.{ext}",
+                "mode": "original",
+                "recordingTemplate": "Screen-Recording-{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}.{ext}",
+                "textTemplate": "Text-{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}.{ext}"
+              },
+              "preferences": {
+                "launchAtLogin": false,
+                "notifications": false,
+                "scrollCaptureFromTop": true,
+                "scrollCaptureMaxHeight": 30000,
+                "uploadClipboardBehavior": "each_link"
+              },
+              "profiles": [
+                {
+                  "credentials": {
+                    "mode": "session",
+                    "reference": null
+                  },
+                  "id": "scroll-local",
+                  "label": "Synthetic local scroll acceptance",
+                  "provider": "custom-http",
+                  "settings": {
+                    "accepts": [
+                      "image"
+                    ],
+                    "allowInsecureHttp": true,
+                    "arguments": [],
+                    "body": "multipart",
+                    "connectTimeoutMs": 10000,
+                    "data": "",
+                    "dataSecret": false,
+                    "deletionUrl": "",
+                    "errorMessage": "",
+                    "fileFormName": "file",
+                    "headers": [],
+                    "parameters": [],
+                    "requestMethod": "POST",
+                    "requestTimeoutMs": 600000,
+                    "requestUrl": "http://127.0.0.1:19399/upload",
+                    "responseUrl": "{json:url}",
+                    "secrets": [],
+                    "thumbnailUrl": ""
+                  }
+                }
+              ],
+              "retention": {
+                "failedArtifactDays": 7,
+                "historyRetentionDays": null,
+                "previewCacheBytes": 268435456,
+                "recentActivityLimit": 100
+              },
+              "schemaVersion": 1
+            },
+            "effectiveLimits": {
+              "disk": {
+                "availableBytes": 114731651072,
+                "freeBytes": 119026618368,
+                "reserveBytes": 4294967296,
+                "reservedBytes": 0,
+                "totalBytes": 250375106560
+              },
+              "maxBatchBytes": null,
+              "maxFileBytes": null,
+              "pendingArtifactBytes": null
+            },
+            "metadata": {
+              "acceptedRevision": "9901b61bd6e28435f437045d3829dfe5ea3078f3758c0445925f62ada65d8102",
+              "fallbackRescanMs": 2000,
+              "observedRevision": "9901b61bd6e28435f437045d3829dfe5ea3078f3758c0445925f62ada65d8102",
+              "path": "/home/patrick/work/s3a/c/putgd/config.json",
+              "schemaVersion": 1,
+              "validation": {
+                "error": {
+                  "code": "",
+                  "details": {},
+                  "message": ""
+                },
+                "ok": true
+              },
+              "watching": true
+            }
+          },
+          "schemaVersion": 1
+        }
+      },
+      "error": {
+        "code": "",
+        "message": "",
+        "details": {}
+      }
+    }
+  },
+  {
+    "tool": "prepare_scroll_capture",
+    "args": {
+      "rect": [
+        100,
+        200,
+        960,
+        600
+      ],
+      "max_height": 30000
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "a1e45890-9fc0-46d9-8e51-fce62b019ee4",
+      "result": {
+        "height": 0,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 0,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "ready",
+        "steps": 0
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "control_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+      "command": "start"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "5bc688af-0b61-45ff-b123-70d5ca03cf8c",
+      "result": {
+        "height": 0,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 0,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 0
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "93b3a913-f25d-41ae-8c61-1a71e92ac465",
+      "result": {
+        "height": 0,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 0,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 0
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "7f65b014-8b32-40b9-b830-0dc5c8cafc0b",
+      "result": {
+        "height": 0,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 0,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 0
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "3c9e866b-d7c9-4f0a-8ce3-9c043274f597",
+      "result": {
+        "height": 0,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 0,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 0
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "ee7468ec-9b26-4ca8-98b5-47b4f1c7d691",
+      "result": {
+        "height": 0,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 0,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 0
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "c9d597b2-0119-4a7d-8876-3dc023258f8e",
+      "result": {
+        "height": 0,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 0,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 0
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "632aa644-a5ef-436d-868a-10f1a94d465a",
+      "result": {
+        "height": 0,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 0,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 0
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "843bba5f-35b9-4d93-bf7f-321ad8c15a0b",
+      "result": {
+        "height": 0,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 0,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 0
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "2cfcbd2f-f600-49a4-b17c-e1d089b7923f",
+      "result": {
+        "height": 660,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 1
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "69bcf209-8300-4169-9250-07cbde0ad479",
+      "result": {
+        "height": 1740,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 4
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "913b7cc6-c5b4-4c88-ac6f-d5f1e56788bb",
+      "result": {
+        "height": 2820,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 7
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "1c21d22d-83ac-488e-b4de-1b897831dbee",
+      "result": {
+        "height": 3540,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 9
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "db4ebddf-38af-4c10-94c7-1d6ee6288351",
+      "result": {
+        "height": 4620,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 12
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "92373379-254b-4c90-b5d9-63a990aca3d7",
+      "result": {
+        "height": 5700,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 15
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "fe73530b-e53d-433d-91f2-6752019b68c0",
+      "result": {
+        "height": 6420,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 17
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "9a3cf971-a6c8-48c6-b0c2-f288818aaab5",
+      "result": {
+        "height": 7500,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 20
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "3d0a472a-2afc-4730-9e7f-5e8bdb39beb1",
+      "result": {
+        "height": 8580,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 23
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "83a8fd93-bd40-458e-8f97-ac418d81d124",
+      "result": {
+        "height": 9300,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 25
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "9d2fa1c9-da31-420d-b205-51163faa38f8",
+      "result": {
+        "height": 10380,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 28
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "7b643059-3da4-451e-9339-19020b178d1c",
+      "result": {
+        "height": 11460,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 31
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "954cb322-6112-44ee-8b2f-d2c42272fca1",
+      "result": {
+        "height": 12180,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 33
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "ac0e13b4-7dce-4f7a-a822-e6316c8e8a31",
+      "result": {
+        "height": 13260,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 36
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "7b8f9877-8355-441f-9165-1dfe48e69c3f",
+      "result": {
+        "height": 14340,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 39
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "b2f4488b-8d20-4ec9-85ab-cac5f49f5d66",
+      "result": {
+        "height": 15060,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 41
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "88ebac54-5f51-4d62-8678-c74599ab1ba9",
+      "result": {
+        "height": 16140,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 44
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "5f71e8ee-530e-4978-8d79-f2f5ff82b66e",
+      "result": {
+        "height": 17220,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 47
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "f17474c4-9a31-4645-9c59-7dae24429496",
+      "result": {
+        "height": 17940,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 49
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "2a7c38b8-f887-421d-b74e-8397896e0d5b",
+      "result": {
+        "height": 19020,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 52
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "cba6e2cd-f7b7-4a42-86f2-bf4b9383ab0d",
+      "result": {
+        "height": 20100,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 55
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "f03743a0-89a5-4df3-9295-596851596257",
+      "result": {
+        "height": 20820,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 57
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "cece7f0e-6fa6-48e3-9ce5-bb3a1470a773",
+      "result": {
+        "height": 21900,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 60
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "c2f2623f-5436-4f6e-8abc-373093374680",
+      "result": {
+        "height": 22980,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 63
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "98404747-e96e-4d3f-a5fc-4832d41d28d1",
+      "result": {
+        "height": 23700,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 60,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 65
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "8fe61e2d-e5dd-4246-95fb-60ed51497ce1",
+      "result": {
+        "height": 24000,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 50,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 67
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "3dba2cba-9b2e-4335-a7e5-17db7e3a2703",
+      "result": {
+        "height": 24000,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 50,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 67
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "fb07f769-5eff-42b7-8e69-9fe86ed5a9e6",
+      "result": {
+        "height": 24000,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 50,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "state": "capturing",
+        "steps": 67
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "tool": "get_scroll_capture",
+    "args": {
+      "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a"
+    },
+    "reply": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "d9af43f5-3dac-4321-8fa4-fd480164e9ad",
+      "result": {
+        "bytes": 570432,
+        "elapsedMs": 24046,
+        "endReason": "end_of_content",
+        "height": 24000,
+        "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "lowConfidenceSteps": 0,
+        "operationId": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+        "pixelsPerNotch": 50,
+        "rect": [
+          100,
+          200,
+          960,
+          600
+        ],
+        "result": {
+          "appliedMaxHeight": 30000,
+          "bytes": 570432,
+          "endReason": "end_of_content",
+          "height": 24000,
+          "id": "c930ba25-e0c6-4469-a547-b8f93cc6073a",
+          "sha256": "332066047b76e0d9a6a3a4fc7da9b853df1bb155ba3e01ece897240b875ff4d8",
+          "stats": {
+            "elapsedMs": 24046,
+            "lowConfidenceSteps": 0,
+            "pixelsPerNotch": 50,
+            "steps": 68
+          },
+          "truncated": false,
+          "width": 960
+        },
+        "state": "done",
+        "stats": {
+          "elapsedMs": 24046,
+          "lowConfidenceSteps": 0,
+          "pixelsPerNotch": 50,
+          "steps": 68
+        },
+        "steps": 68,
+        "truncated": false
+      },
+      "schemaVersion": 1
+    }
+  }
+]

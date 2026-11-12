@@ -1,0 +1,43 @@
+{
+ "capture": [
+  1920,
+  16101
+ ],
+ "reference": [
+  1920,
+  17601
+ ],
+ "comparedColumns": 1280,
+ "bands": 252,
+ "exactBands": 252,
+ "shiftedBands": 0,
+ "badBands": 0,
+ "bad": [],
+ "shiftChanges": [],
+ "rowsEqualBitForBit": 242,
+ "excluded": [
+  {
+   "x": [
+    1370,
+    1686
+   ],
+   "why": "a side bar the page keeps in place (sticky, ASIDE.layout__right-sidebar reference-layout__toc): the capture shows it beside every row as the screen did, the browser's picture shows it once"
+  },
+  {
+   "x": [
+    234,
+    550
+   ],
+   "why": "a side bar the page keeps in place (sticky, ASIDE.layout__left-sidebar): the capture shows it beside every row as the screen did, the browser's picture shows it once"
+  },
+  {
+   "x": [
+    1912,
+    1920
+   ],
+   "why": "Firefox's overlay scrollbar at the right edge: on the screen while the page scrolls, not in the browser's picture"
+  }
+ ],
+ "comparisonReference": "reference-initial.png",
+ "rule": "a band of 64 rows passes when at most 0.2% of its compared pixels lie in 4x4 blocks whose grey mean differs by more than 32, at the place in the reference that its bit-equal rows name (or the band before it had)"
+}
