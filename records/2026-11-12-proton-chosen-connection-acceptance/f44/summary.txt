@@ -1,1 +1,17 @@
-f44: NOT RUN: exact-head CI contracts job failed. 0/15 executed; pass count unavailable. No helper or app launched.
+fedora gnome-shell wayland build 26.1112.4652-dev+g73458e4cbeea
+PASS  file-64k               completed       4.92 s  bytes=65536   
+PASS  file-1m                completed        5.5 s  bytes=1048576   
+PASS  file-8m                completed      12.03 s  bytes=8388608   
+PASS  batch-3                completed       8.41 s  bytes=98304,98304,98304   
+PASS  text-small             completed       3.18 s  bytes=660   clipboard_unavailable
+PASS  back-to-back           completed       8.96 s  bytes=524288,65536  second upload invoked while the first was running 
+FAIL  desktop-now            failed          0.13 s  bytes=   gnome_extension_missing
+FAIL  desktop-delay3         failed          0.16 s  bytes=   gnome_extension_missing
+FAIL  desktop-delay3-again   failed          0.14 s  bytes=   gnome_extension_missing
+FAIL  monitor-delay3         failed          0.12 s  bytes=   gnome_extension_missing
+FAIL  cancel-countdown       failed          0.21 s  bytes=  cancelled during the countdown; the helper must end by itself gnome_extension_missing
+PASS  after-cancel           completed       3.27 s  bytes=65536   
+FAIL  history-picture        failed          0.14 s  bytes=   gnome_extension_missing
+PASS  link-answers           200             0.47 s  bytes=  HTTP status of the share page; the address is not recorded 
+PASS  revoke-all             10 revoked     24.78 s  bytes=  one helper per History action 
+9/15 passed; helpers left: []

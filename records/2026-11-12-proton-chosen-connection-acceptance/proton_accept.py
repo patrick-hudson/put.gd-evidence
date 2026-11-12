@@ -273,7 +273,8 @@ def run(app, tests, only):
         return outcome
 
     payloads = app.work / 'payloads'
-    payloads.mkdir(exist_ok=True)
+    if not payloads.exists():
+        payloads.mkdir()
 
     def payload(name, size):
         path = payloads / name
@@ -387,7 +388,7 @@ def run(app, tests, only):
                revoked > 0 and not failed and gone is not None, 'one helper per History action')
     if not only and app.desktop != 'gnome-shell':
         for index in range(1, 4):
-            capture(f'sequential-desktop-{index}', 'desktop')
+            outcome = capture(f'sequential-desktop-{index}', 'desktop')
         for result in run(app, None, {'revoke-all'}):
             result['name'] = 'revoke-additions'
             results.append(result)
