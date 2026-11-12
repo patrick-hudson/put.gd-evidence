@@ -1,0 +1,80 @@
+{
+  "name": "firefox-probe-shrink-1",
+  "rows": 60,
+  "scale": 1,
+  "maxHeight": 40000,
+  "packageSha256": "52cf201b8368a75743c016eec002796a529d56c146462a868551212fc545ab93",
+  "id": "5a6d3d9e-b186-4479-b1dc-030a9bdfa3f6",
+  "capture": {
+    "bytes": 325677,
+    "elapsedMs": 7676,
+    "endReason": "lost_track",
+    "height": 1080,
+    "id": "5a6d3d9e-b186-4479-b1dc-030a9bdfa3f6",
+    "lowConfidenceSteps": 0,
+    "operationId": "5a6d3d9e-b186-4479-b1dc-030a9bdfa3f6",
+    "pixelsPerNotch": 0,
+    "rect": [
+      0,
+      0,
+      960,
+      1080
+    ],
+    "result": {
+      "appliedMaxHeight": 40000,
+      "bytes": 325677,
+      "endReason": "lost_track",
+      "height": 1080,
+      "id": "5a6d3d9e-b186-4479-b1dc-030a9bdfa3f6",
+      "note": "a single notch scrolls further than the overlap allows; enlarge the region",
+      "sha256": "d0e8bbd42fc23a6de08bdff3718ef854e26512f140e7576db83160063c0c2ef2",
+      "stats": {
+        "elapsedMs": 7676,
+        "lowConfidenceSteps": 0,
+        "pixelsPerNotch": 0,
+        "steps": 6
+      },
+      "truncated": true,
+      "width": 960
+    },
+    "state": "done",
+    "stats": {
+      "elapsedMs": 7676,
+      "lowConfidenceSteps": 0,
+      "pixelsPerNotch": 0,
+      "steps": 6
+    },
+    "steps": 6,
+    "truncated": true
+  },
+  "verification": {
+    "pass": false,
+    "size": [
+      960,
+      1080
+    ],
+    "expectedHeight": 2400,
+    "errors": [
+      "height 1080 expected 2400",
+      "pixel (77,0) row 0 line 0 got (0, 0, 0) expected 16",
+      "pixel (77,1) row 0 line 1 got (0, 0, 0) expected 16",
+      "pixel (77,2) row 0 line 2 got (0, 0, 0) expected 250",
+      "pixel (77,3) row 0 line 3 got (0, 0, 0) expected 250",
+      "pixel (77,4) row 0 line 4 got (0, 0, 0) expected 250",
+      "pixel (77,5) row 0 line 5 got (0, 0, 0) expected 250",
+      "pixel (77,6) row 0 line 6 got (0, 0, 0) expected 250",
+      "pixel (77,7) row 0 line 7 got (0, 0, 0) expected 250",
+      "pixel (77,8) row 0 line 8 got (0, 0, 0) expected 250",
+      "pixel (77,9) row 0 line 9 got (0, 0, 0) expected 250",
+      "pixel (77,10) row 0 line 10 got (0, 0, 0) expected 250",
+      "451597 unexpected pixels in barcode interiors (cursor/overlay or wrong content)"
+    ],
+    "unexpectedPixels": 451597,
+    "coverage": "every scanline; full barcode cell interiors excluding labels, cell edges and scrollbar; visual check still required outside barcode"
+  },
+  "falseEnd": false,
+  "pass": false,
+  "sourceLines": [
+    "scroll: source fresh 6, quiet 0, unproven 0, slowest response 0 ms, retries 2, scroll-backs 2"
+  ]
+}

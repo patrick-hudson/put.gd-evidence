@@ -1,0 +1,4 @@
+import pass2 as p,json,subprocess,time
+P=p.P;e=json.loads((P/'env.json').read_text());d=P/'old-extension';d.mkdir();off=(P/'helper.log').stat().st_size;before=p.rpc('history.list',{'limit':200});caps=p.rpc('scroll.capabilities');r=subprocess.run(['putgd-cli','--socket',str(P/'r/putgd/session.sock'),'scroll.prepare',json.dumps({'rect':[100,200,960,600]})],env=e,capture_output=True,text=True,timeout=70);reply=json.loads(r.stdout)
+if reply.get('ok'):p.rpc('scroll.cancel',{'id':reply['result']['id']})
+after=p.rpc('history.list',{'limit':200});(d/'result.json').write_text(json.dumps({'capabilities':caps,'prepare':reply,'historyUnchanged':before==after,'before':before,'after':after},indent=2));(d/'helper.log').write_bytes((P/'helper.log').read_bytes()[off:]);print(json.dumps({'capabilities':caps,'prepare':reply,'historyUnchanged':before==after},indent=2));p.rpc('ui.quit')

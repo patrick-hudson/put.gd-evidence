@@ -1,0 +1,18 @@
+started
+
+Traceback (most recent call last):
+  File "/home/patrick/work/sc2/drivers/finish-cap-k.py", line 43, in <module>
+    time.sleep(1);Image.open(lab.screenshot(run,'cap-warning-after-clean-prepare')['path']).save(out/'warning.png');lab.ssh(run,'touch /tmp/cp3/release-upload')
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/PIL/Image.py", line 2556, in save
+    self._ensure_mutable()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3/dist-packages/PIL/Image.py", line 654, in _ensure_mutable
+    self._copy()
+    ~~~~~~~~~~^^
+  File "/usr/lib/python3/dist-packages/PIL/Image.py", line 648, in _copy
+    self.load()
+    ~~~~~~~~~^^
+  File "/usr/lib/python3/dist-packages/PIL/ImageFile.py", line 297, in load
+    raise OSError(msg)
+OSError: image file is truncated (0 bytes not processed)

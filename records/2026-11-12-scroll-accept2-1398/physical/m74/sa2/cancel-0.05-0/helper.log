@@ -1,0 +1,39 @@
+2026-11-11T18:22:29.398 scroll command prepare
+2026-11-11T18:22:29.399 scroll: prepare frames ximagesrc injector xtest maxHeight 30000 fromTop 1 autoStart 0
+2026-11-11T18:22:29.479 scroll result prepare ok
+2026-11-11T18:22:29.518 scroll command start
+2026-11-11T18:22:29.519 scroll tap: ximagesrc name=src use-damage=false show-pointer=false startx=100 starty=200 endx=1059 endy=799 ! video/x-raw,framerate=30/1 ! queue name=cq leaky=downstream max-size-buffers=2 max-size-bytes=0 max-size-time=0 ! videoconvert ! video/x-raw,format=BGRx ! appsink name=tap max-buffers=2 drop=true sync=false emit-signals=true enable-last-sample=false
+2026-11-11T18:22:29.529 scroll: capturing 100,200 960x600 with xtest
+2026-11-11T18:22:29.541 scroll result start ok
+2026-11-11T18:22:29.548 scroll tap buffer: t=857789 sum=31255
+2026-11-11T18:22:29.548 scroll: frames 960x600 for 960x600, cap 30000 rows, away -16,200
+2026-11-11T18:22:29.575 scroll tap buffer: t=857816 sum=31255
+2026-11-11T18:22:29.575 scroll frame: t=857816 changed
+2026-11-11T18:22:29.602 scroll tap buffer: t=857843 sum=31255
+2026-11-11T18:22:29.602 scroll frame: t=857843 same
+2026-11-11T18:22:29.630 scroll tap buffer: t=857872 sum=31255
+2026-11-11T18:22:29.631 scroll frame: t=857872 same
+2026-11-11T18:22:29.664 scroll tap buffer: t=857905 sum=31255
+2026-11-11T18:22:29.665 scroll frame: t=857905 same
+2026-11-11T18:22:29.698 scroll tap buffer: t=857939 sum=31255
+2026-11-11T18:22:29.699 scroll frame: t=857939 same
+2026-11-11T18:22:29.723 scroll inject: t=857964 pointer 480,200 sent
+2026-11-11T18:22:29.731 scroll tap buffer: t=857972 sum=31255
+2026-11-11T18:22:29.770 scroll tap buffer: t=858011 sum=31255
+2026-11-11T18:22:29.783 scroll inject: t=858025 pointer 480,200 sent
+2026-11-11T18:22:29.792 scroll inject: t=858033 wheel -10 sent
+2026-11-11T18:22:29.793 scroll frame: t=858011 same
+2026-11-11T18:22:29.802 scroll command stop
+2026-11-11T18:22:29.809 scroll tap buffer: t=858049 sum=31255
+2026-11-11T18:22:29.811 scroll frame: t=858049 same
+2026-11-11T18:22:29.839 scroll tap buffer: t=858079 sum=31255
+2026-11-11T18:22:29.839 scroll frame: t=858079 same
+2026-11-11T18:22:29.855 scroll command cancel
+2026-11-11T18:22:29.875 scroll tap buffer: t=858116 sum=31255
+2026-11-11T18:22:29.875 scroll frame: t=858116 same
+2026-11-11T18:22:29.880 scroll: way to the top 1 steps, 271 ms, top not proved
+2026-11-11T18:22:29.886 scroll tap: stopped after 10 frames
+2026-11-11T18:22:29.901 scroll: ended Stopped, 0 rows, 0 steps, 0 px per notch, 332 ms
+2026-11-11T18:22:29.901 scroll: source fresh 0, quiet 0, unproven 0, slowest response 0 ms, retries 0, scroll-backs 0
+2026-11-11T18:22:29.901 scroll result stop error cancelled Scroll capture canceled
+2026-11-11T18:22:29.901 scroll result cancel ok

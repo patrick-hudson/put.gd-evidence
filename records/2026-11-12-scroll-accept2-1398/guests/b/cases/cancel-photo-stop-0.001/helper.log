@@ -1,0 +1,25 @@
+2026-11-12T01:10:42.268 scroll command prepare
+2026-11-12T01:10:42.269 scroll: prepare frames image-copy injector wlr-virtual-pointer maxHeight 30000 fromTop 1 autoStart 0
+2026-11-12T01:10:42.282 scroll result prepare ok
+2026-11-12T01:10:42.312 scroll command start
+2026-11-12T01:10:42.319 scroll tap: appsrc name=src is-live=true format=time do-timestamp=false leaky-type=downstream max-buffers=2 caps="video/x-raw,format=RGBx,width=1280,height=800,framerate=0/1" ! queue name=cq leaky=downstream max-size-buffers=2 max-size-bytes=0 max-size-time=0 ! videocrop left=100 top=200 right=220 bottom=0 ! videoconvert ! video/x-raw,format=BGRx ! appsink name=tap max-buffers=2 drop=true sync=false emit-signals=true enable-last-sample=false
+2026-11-12T01:10:42.328 scroll: capturing 100,200 960x600 with wlr-virtual-pointer
+2026-11-12T01:10:42.328 scroll result start ok
+2026-11-12T01:10:42.349 scroll tap buffer: t=71490 sum=31280
+2026-11-12T01:10:42.349 scroll: frames 960x600 for 960x600, cap 30000 rows, away -16,200
+2026-11-12T01:10:42.362 scroll tap buffer: t=71503 sum=31280
+2026-11-12T01:10:42.362 scroll frame: t=71503 changed
+2026-11-12T01:10:42.472 scroll inject: t=71613 pointer 480,200 sent
+2026-11-12T01:10:42.532 scroll inject: t=71673 pointer 480,200 sent
+2026-11-12T01:10:42.533 scroll inject: t=71674 wheel -10 sent
+2026-11-12T01:10:42.533 scroll inject: t=71674 pointer -16,200 sent
+2026-11-12T01:10:42.550 scroll command stop
+2026-11-12T01:10:42.554 scroll command cancel
+2026-11-12T01:10:42.556 scroll tap buffer: t=71697 sum=31280
+2026-11-12T01:10:42.556 scroll frame: t=71697 same
+2026-11-12T01:10:42.557 scroll: way to the top 1 steps, 208 ms, top not proved
+2026-11-12T01:10:42.559 scroll tap: stopped after 3 frames
+2026-11-12T01:10:42.561 scroll: ended Stopped, 0 rows, 0 steps, 0 px per notch, 208 ms
+2026-11-12T01:10:42.561 scroll: source fresh 0, quiet 0, unproven 0, slowest response 0 ms, retries 0, scroll-backs 0
+2026-11-12T01:10:42.561 scroll result stop error cancelled Scroll capture canceled
+2026-11-12T01:10:42.561 scroll result cancel ok

@@ -1,0 +1,21 @@
+2026-11-11T18:36:13.914 scroll command prepare
+2026-11-11T18:36:13.915 scroll: prepare frames image-copy injector wlr-virtual-pointer maxHeight 30000 fromTop 1 autoStart 0
+2026-11-11T18:36:13.955 scroll result prepare ok
+2026-11-11T18:36:13.993 scroll command start
+2026-11-11T18:36:14.068 scroll tap: appsrc name=src is-live=true format=time do-timestamp=false leaky-type=downstream max-buffers=2 caps="video/x-raw,format=BGRx,width=1280,height=800,framerate=0/1" ! queue name=cq leaky=downstream max-size-buffers=2 max-size-bytes=0 max-size-time=0 ! videocrop left=100 top=200 right=220 bottom=0 ! videoconvert ! video/x-raw,format=BGRx ! appsink name=tap max-buffers=2 drop=true sync=false emit-signals=true enable-last-sample=false
+2026-11-11T18:36:14.080 scroll: capturing 100,200 960x600 with wlr-virtual-pointer
+2026-11-11T18:36:14.080 scroll result start ok
+2026-11-11T18:36:14.175 scroll tap buffer: t=28531 sum=30764
+2026-11-11T18:36:14.177 scroll: frames 960x600 for 960x600, cap 30000 rows, away -16,200
+2026-11-11T18:36:14.284 scroll tap buffer: t=28640 sum=30764
+2026-11-11T18:36:14.284 scroll frame: t=28640 changed
+2026-11-11T18:36:14.303 scroll command stop
+2026-11-11T18:36:14.363 scroll command cancel
+2026-11-11T18:36:14.383 scroll tap buffer: t=28740 sum=30764
+2026-11-11T18:36:14.384 scroll frame: t=28740 same
+2026-11-11T18:36:14.385 scroll: way to the top 0 steps, 207 ms, top not proved
+2026-11-11T18:36:14.387 scroll tap: stopped after 3 frames
+2026-11-11T18:36:14.388 scroll: ended Stopped, 0 rows, 0 steps, 0 px per notch, 207 ms
+2026-11-11T18:36:14.388 scroll: source fresh 0, quiet 0, unproven 0, slowest response 0 ms, retries 0, scroll-backs 0
+2026-11-11T18:36:14.388 scroll result stop error cancelled Scroll capture canceled
+2026-11-11T18:36:14.388 scroll result cancel ok
