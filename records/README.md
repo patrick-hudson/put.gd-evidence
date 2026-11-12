@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-12-scroll-accept3-1398](2026-11-12-scroll-accept3-1398/README.md) | #1398 | Independent scroll-capture acceptance, round 3 |
 | [2026-11-12-scroll-fix7-1398](2026-11-12-scroll-fix7-1398/README.md) | #1376, #1398 | Scroll capture fix round 7 — PR #1398 (issue #1376): live web pages |
 | [2026-11-12-proton-keychain-retry-check](2026-11-12-proton-keychain-retry-check/README.md) | #1419 | Proton keychain retry reliability check, PR #1419 |
 | [2026-11-12-proton-k72-revoke-reliability](2026-11-12-proton-k72-revoke-reliability/README.md) | #1414 | k72 Proton revoke reliability for PR #1414 |
