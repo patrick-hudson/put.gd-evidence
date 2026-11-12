@@ -1,0 +1,88 @@
+{
+  "name": "mid-shorter-0",
+  "id": "a0567ed5-034f-4533-bf2e-1b3d6f5ad451",
+  "capture": {
+    "bytes": 140772,
+    "elapsedMs": 8839,
+    "endReason": "lost_track",
+    "height": 6810,
+    "id": "a0567ed5-034f-4533-bf2e-1b3d6f5ad451",
+    "lowConfidenceSteps": 0,
+    "operationId": "a0567ed5-034f-4533-bf2e-1b3d6f5ad451",
+    "pixelsPerNotch": 90,
+    "rect": [
+      100,
+      200,
+      960,
+      600
+    ],
+    "result": {
+      "appliedMaxHeight": 40000,
+      "bytes": 140772,
+      "endReason": "lost_track",
+      "height": 6810,
+      "id": "a0567ed5-034f-4533-bf2e-1b3d6f5ad451",
+      "note": "a single notch scrolls further than the overlap allows; enlarge the region",
+      "sha256": "d08c8927488c8884245bee5ab74360f5a38b3545102779034d29846ae8fc8992",
+      "stats": {
+        "elapsedMs": 8839,
+        "lowConfidenceSteps": 0,
+        "pixelsPerNotch": 90,
+        "steps": 22
+      },
+      "truncated": true,
+      "width": 960
+    },
+    "state": "done",
+    "stats": {
+      "elapsedMs": 8839,
+      "lowConfidenceSteps": 0,
+      "pixelsPerNotch": 90,
+      "steps": 22
+    },
+    "steps": 22,
+    "truncated": true
+  },
+  "endLines": [
+    "scroll: way to the top 15 steps, 3505 ms, top proved",
+    "scroll: ended LostTrack, 6810 rows, 22 steps, 90 px per notch, 8839 ms (a single notch scrolls further than the overlap allows; enlarge the region)",
+    "scroll: source fresh 1, quiet 0, unproven 0, slowest response 77 ms, retries 4, scroll-backs 4"
+  ],
+  "steps": [
+    "NoMatch offset 0 hint 90 notches 1 score 0.00 evidence 0 appended 0 fixed 0/0",
+    "NoMatch offset 0 hint 90 notches 1 score 0.00 evidence 0 appended 0 fixed 0/0",
+    "NoMovement offset 0 hint 0 notches -1 score 1.00 evidence 0 appended 0 fixed 0/0",
+    "NoMatch offset 0 hint 90 notches 1 score 0.00 evidence 0 appended 0 fixed 0/0",
+    "NoMatch offset 0 hint 90 notches 1 score 0.00 evidence 0 appended 0 fixed 0/0",
+    "NoMovement offset 0 hint 0 notches -1 score 1.00 evidence 0 appended 0 fixed 0/0"
+  ],
+  "fixtureChange": [
+    "changed shorter at 6030 2226268.081"
+  ],
+  "verification": {
+    "pass": false,
+    "size": [
+      960,
+      6810
+    ],
+    "expectedHeight": 6810,
+    "errors": [
+      "pixel (77,6710) row 167 line 30 got (102, 102, 102) expected 250",
+      "pixel (77,6711) row 167 line 31 got (102, 102, 102) expected 250",
+      "pixel (77,6712) row 167 line 32 got (102, 102, 102) expected 250",
+      "pixel (77,6713) row 167 line 33 got (102, 102, 102) expected 250",
+      "pixel (77,6714) row 167 line 34 got (102, 102, 102) expected 16",
+      "pixel (77,6715) row 167 line 35 got (102, 102, 102) expected 250",
+      "pixel (77,6716) row 167 line 36 got (102, 102, 102) expected 16",
+      "pixel (77,6717) row 167 line 37 got (102, 102, 102) expected 250",
+      "pixel (77,6718) row 167 line 38 got (102, 102, 102) expected 16",
+      "pixel (77,6719) row 167 line 39 got (102, 102, 102) expected 16",
+      "pixel (77,6720) row 168 line 0 got (102, 102, 102) expected 16",
+      "pixel (77,6721) row 168 line 1 got (102, 102, 102) expected 16",
+      "67200 unexpected pixels in barcode interiors (cursor/overlay or wrong content)"
+    ],
+    "unexpectedPixels": 67200,
+    "coverage": "every scanline; full barcode cell interiors excluding labels, cell edges and scrollbar; visual check still required outside barcode"
+  },
+  "verdict": "WRONG"
+}

@@ -1,0 +1,238 @@
+
+[stitcher] exact reconstruction
+  recon hint v=300 small15% (3 seeds)          PASS  3/3 exact, 170 frames, 5 low-confidence
+  recon hint v=300 step60% (3 seeds)           PASS  3/3 exact, 46 frames, 7 low-confidence
+  recon hint v=300 step90% (3 seeds)           PASS  3/3 exact, 33 frames, 27 low-confidence
+  recon hint v=300 random10-85% (3 seeds)      PASS  3/3 exact, 54 frames, 8 low-confidence
+  recon hint v=800 small15% (3 seeds)          PASS  3/3 exact, 86 frames, 0 low-confidence
+  recon hint v=800 step60% (3 seeds)           PASS  3/3 exact, 25 frames, 5 low-confidence
+  recon hint v=800 step90% (3 seeds)           PASS  3/3 exact, 18 frames, 15 low-confidence
+  recon hint v=800 random10-85% (3 seeds)      PASS  3/3 exact, 31 frames, 4 low-confidence
+  recon no-hint text-only v=300 step15%        PASS  2/2 exact, 0 ambiguous/nomatch
+  recon no-hint text-only v=300 step60%        PASS  2/2 exact, 0 ambiguous/nomatch
+  recon no-hint text-only v=800 step15%        PASS  2/2 exact, 0 ambiguous/nomatch
+  recon no-hint text-only v=800 step60%        PASS  2/2 exact, 0 ambiguous/nomatch
+
+[stitcher] sticky header / footer
+  sticky header only v=300                     PASS  3/3 exact, fixed bands found
+  sticky footer only v=300                     PASS  3/3 exact, fixed bands found
+  sticky header+footer v=300                   PASS  3/3 exact, fixed bands found
+  sticky header only v=800                     PASS  3/3 exact, fixed bands found
+  sticky footer only v=800                     PASS  3/3 exact, fixed bands found
+  sticky header+footer v=800                   PASS  3/3 exact, fixed bands found
+  header over-estimated at frame 2             PASS  step1 top=90 (true 40), final top=40, mismatches=0
+  footer over-estimated at frame 2             PASS  step1 bottom=71 (true 30), final bottom=30, mismatches=0
+
+[stitcher] hover + caret + animated block + scrollbar
+  noise all-on v=300 step60%                   PASS  3/3 exact outside noise pixels (42822 noisy px in output)
+  noise all-on v=300 random                    PASS  3/3 exact outside noise pixels (86242 noisy px in output)
+  noise all-on v=800 step60%                   PASS  3/3 exact outside noise pixels (32803 noisy px in output)
+  noise all-on v=800 random                    PASS  3/3 exact outside noise pixels (35875 noisy px in output)
+
+[stitcher] periodic / blank / flat overlap, no overlap
+  periodic table, exact hint                   PASS  Appended offset=100 lowConf=1
+  periodic table, hint off by 3px              PASS  Appended offset=100
+  periodic table, no hint                      PASS  Ambiguous, output 300->300 rows
+  periodic table, hint midway between periods  PASS  Ambiguous (hint 112, period 24)
+  blank overlap, hint                          PASS  Appended offset=90 lowConf=1 evidence=11
+  blank overlap, no hint                       PASS  Ambiguous, output untouched=1
+  flat block overlap, hint                     PASS  Appended offset=200 lowConf=1
+  flat block overlap, no hint                  PASS  Ambiguous
+  no overlap (step 320 > band 300)             PASS  24/24 NoMatch, output untouched
+
+[stitcher] numbered lines (near-periodic text)
+  numbered lines, no hint: the exact offset    PASS  15/15 verified at the true offset
+  numbered lines, hint one line off            PASS  Appended offset=38 lowConf=0
+  numbered lines, no movement                  PASS  NoMovement
+  numbered lines beside a vertical rule, no hint PASS  4/4 verified at the true offset
+  identical lines, no hint                     PASS  Ambiguous, output untouched=1
+  identical lines, exact hint                  PASS  Appended offset=38 lowConf=1
+  session numbered lines, 37.5 px a step       PASS  EndOfContent, rows 5408 of 5408, steps 15, wrong offsets 0, first bad -1
+  session numbered lines, 72 to 90 px a step   PASS  EndOfContent, rows 5408 of 5408, steps 15, wrong offsets 0, first bad -1
+
+[stitcher] wide selection, short lines: the margins decide
+  line numbers in the side margin, no hint: the exact offset PASS  18/18 verified at the true offset
+  line numbers in the side margin, a step of whole lines PASS  Appended offset=72 lowConf=0
+  line numbers in the side margin, whole lines back PASS  Reversed offset=-72
+  line numbers in the side margin, hint one line off PASS  Appended offset=38 lowConf=0
+  line numbers in the side margin, no movement PASS  NoMovement
+  all the ink inside the side margin, no hint  PASS  4/4 verified at the true offset
+  a number cut by the margin's edge, no hint: the exact offset PASS  18/18 verified at the true offset
+  a number cut by the margin's edge, three lines back PASS  Reversed offset=-51
+  a number cut by the margin's edge, the whole file PASS  EndOfContent, rows 25508 of 25508, steps 73, low-confidence 0, first bad -1
+  identical lines in a wide window, no hint    PASS  Ambiguous, output untouched=1
+  a fixed side bar in the margin proves nothing PASS  Ambiguous offset=2
+  a long scrollbar thumb in the margin proves nothing PASS  Ambiguous offset=2
+  a short scrollbar thumb in the margin proves nothing PASS  Ambiguous offset=2
+  session wide window of numbered lines, 37.5 px a step PASS  EndOfContent, rows 5408 of 5408, steps 15, wrong offsets 0, first bad -1
+  session wide window of numbered lines, 72 to 90 px a step PASS  EndOfContent, rows 5408 of 5408, steps 15, wrong offsets 0, first bad -1
+
+[stitcher] an offset is appended only when the pixels prove it
+  short lines scrolled under a painted pointer: not a change in place PASS  9/9 appended at the true offset
+  short lines, only the pointer appeared: no movement PASS  NoMovement
+  guest replay: a jump past the viewport is not matched on a sliver PASS  steps 0:First/0 35:Appended/35 1600:NoMatch/0 0:Reversed/-35 625:Appended/625 1600:Ambiguous/775; image 1425 rows, first bad -1
+  ruler: no pair further apart than the viewport is ever matched PASS  0 of 644 pairs accepted
+  ruler: planned distances are verified        PASS  24/24
+  desktop replay: popups over numbered lines, the true offset PASS  6/6
+  desktop replay: popups over identical lines, no hint PASS  Ambiguous offset=0
+  desktop replay: popups over identical lines, uncertain hint PASS  Ambiguous offset=0
+  desktop replay: popups over identical lines, exact hint PASS  Appended offset=637 lowConf=1
+
+[stitcher] end, bounce, negative offsets, limits, in-place changes
+  end of document (same frame, caret+anim)     PASS  NoMovement changedRows=0
+  bounce back by 30 then continue              PASS  Reversed offset=-30, next appended 120 (150-30 already emitted), exact=1
+  negative offset mid-document                 PASS  Reversed offset=-80
+  maxOutputRows=1000                           PASS  LimitReached=1, height=1000, prefix+footer exact=1
+  footer larger than output cap                PASS  height=20, exact prefix=1
+  small in-place change (10 rows)              PASS  NoMovement changedRows=10
+  large in-place change (140 rows)             KNOWN-LIMIT  NoMatch (never appends; session cannot recover this, see notes)
+  blank taller than viewport, scrollbar + hint PASS  all steps appended at the hint (6 low-confidence)
+  blank taller than viewport, no scrollbar     KNOWN-LIMIT  NoMovement: identical frames are indistinguishable from the end
+  short lines only (ink in <= 2 bands)         PASS  Appended offset=120 changedRows=0
+
+[stitcher] memory
+  signature bytes 1280x800                     PASS  132800 bytes = 166 B/row (frame itself 4096000 bytes)
+
+[session] fake app
+  session smooth v=300 px=40                   PASS  EndOfContent, exact (rows 2578/2578), steps 18, notches 68, px/notch 40.0-40.0, retries 0, back 0, falseEnd 0, fake 6.7s, wall 61ms wrong steps v/p/b 0/0/0 of 0 blind
+  session smooth v=300 px=53                   PASS  EndOfContent, exact (rows 2801/2801), steps 22, notches 55, px/notch 53.0-53.0, retries 0, back 0, falseEnd 0, fake 8.0s, wall 74ms wrong steps v/p/b 0/0/0 of 1 blind
+  session smooth v=300 px=100                  PASS  EndOfContent, exact (rows 2457/2457), steps 16, notches 27, px/notch 100.0-100.0, retries 0, back 0, falseEnd 0, fake 5.9s, wall 57ms wrong steps v/p/b 0/0/0 of 0 blind
+  session smooth v=300 px=120                  PASS  EndOfContent, exact (rows 2529/2529), steps 21, notches 21, px/notch 120.0-120.0, retries 0, back 0, falseEnd 0, fake 7.6s, wall 75ms wrong steps v/p/b 0/0/0 of 1 blind
+  session smooth v=800 px=40                   PASS  EndOfContent, exact (rows 4183/4183), steps 12, notches 115, px/notch 40.0-40.0, retries 0, back 0, falseEnd 0, fake 4.6s, wall 139ms wrong steps v/p/b 0/0/0 of 0 blind
+  session smooth v=800 px=53                   PASS  EndOfContent, exact (rows 4212/4212), steps 12, notches 93, px/notch 37.6-53.0, retries 0, back 0, falseEnd 0, fake 4.6s, wall 141ms wrong steps v/p/b 0/0/0 of 0 blind
+  session smooth v=800 px=100                  PASS  EndOfContent, exact (rows 4288/4288), steps 11, notches 47, px/notch 100.0-100.0, retries 0, back 0, falseEnd 0, fake 4.2s, wall 140ms wrong steps v/p/b 0/0/0 of 0 blind
+  session smooth v=800 px=120                  PASS  EndOfContent, exact (rows 4212/4212), steps 11, notches 38, px/notch 120.0-120.0, retries 0, back 0, falseEnd 0, fake 4.2s, wall 136ms wrong steps v/p/b 0/0/0 of 0 blind
+  session header+footer+noise v=800 px=53      PASS  EndOfContent, exact (rows 4116/4116), steps 14, notches 84, px/notch 53.0-53.0, retries 0, back 0, falseEnd 0, fake 5.2s, wall 168ms wrong steps v/p/b 0/0/0 of 0 blind
+  session noise v=300 px=40                    PASS  EndOfContent, exact (rows 2865/2865), steps 24, notches 73, px/notch 40.0-40.0, retries 0, back 0, falseEnd 0, fake 8.5s, wall 95ms wrong steps v/p/b 0/0/0 of 1 blind
+  session dropped event (3rd injection)        PASS  EndOfContent, exact (rows 4040/4040), steps 13, notches 47, px/notch 100.0-100.0, retries 0, back 0, falseEnd 1, fake 5.1s, wall 159ms falseEnds>=1=1 wrong steps v/p/b 0/0/0 of 0 blind
+  session dropped first injection              PASS  EndOfContent, exact (rows 4040/4040), steps 13, notches 47, px/notch 100.0-100.0, retries 0, back 0, falseEnd 1, fake 5.1s, wall 158ms wrong steps v/p/b 0/0/0 of 0 blind
+  session lazy load at 60% (250ms after end)   PASS  EndOfContent, exact (rows 4114/4114), steps 12, notches 54, px/notch 73.6-100.0, retries 0, back 0, falseEnd 1, fake 4.8s, wall 160ms falseEnds>=1=1 wrong steps v/p/b 0/0/0 of 0 blind
+  session lazy load slower than confirm delay  KNOWN-LIMIT  EndOfContent, exact (rows 2602/2602), steps 9, notches 33, px/notch 100.0-100.0, retries 0, back 0, falseEnd 0, fake 3.5s, wall 127ms wrong steps v/p/b 0/0/0 of 0 blind
+  session elastic bounce at end                PASS  EndOfContent, exact (rows 4040/4040), steps 12, notches 46, px/notch 100.0-100.0, retries 0, back 0, falseEnd 0, fake 4.8s, wall 151ms overscrollFramesSeen=1 wrong steps v/p/b 0/0/0 of 0 blind
+  session damage-only frame stream             PASS  EndOfContent, exact (rows 4040/4040), steps 11, notches 38, px/notch 120.0-120.0, retries 0, back 0, falseEnd 0, fake 4.2s, wall 90ms wrong steps v/p/b 0/0/0 of 0 blind
+  session slow animation 400-700ms             PASS  EndOfContent, exact (rows 4040/4040), steps 12, notches 86, px/notch 53.0-53.0, retries 0, back 0, falseEnd 0, fake 7.5s, wall 218ms wrong steps v/p/b 0/0/0 of 0 blind
+  session accelerating app (x2.5 for >=3 notches) PASS  EndOfContent, exact (rows 4040/4040), steps 15, notches 61, px/notch 40.0-100.0, retries 1, back 1, falseEnd 0, fake 6.0s, wall 187ms scrollBacks>=1=1 wrong steps v/p/b 0/0/0 of 0 blind
+  session accelerating app, scroll-back disabled PASS  LostTrack, exact (rows 840/840), steps 2, notches 6, px/notch 40.0-40.0, retries 1, back 0, falseEnd 0, fake 1.0s, wall 33ms wrong steps v/p/b 0/0/0 of 0 blind [step could not be matched; scrolling further down cannot reconnect to the last stitched frame without scrolling back]
+  session one notch larger than overlap        PASS  LostTrack, exact (rows 300/300), steps 2, notches 4, px/notch 0.0-0.0, retries 2, back 2, falseEnd 0, fake 1.8s, wall 20ms wrong steps v/p/b 0/0/0 of 0 blind [a single notch scrolls further than the overlap allows; enlarge the region]
+  session cancel after 5 injections            PASS  Stopped, exact (rows 2100/2100), steps 6, notches 18, px/notch 100.0-100.0, retries 0, back 0, falseEnd 0, fake 1.9s, wall 62ms wrong steps v/p/b 0/0/0 of 0 blind
+  session total time limit 3s                  PASS  TimeLimit, exact (rows 3600/3600), steps 9, notches 31, px/notch 100.0-100.0, retries 0, back 0, falseEnd 0, fake 3.0s, wall 100ms wrong steps v/p/b 0/0/0 of 0 blind
+  session injector failure at 4th injection    PASS  InjectorFailed, exact (rows 1100/1100), steps 3, notches 8, px/notch 100.0-100.0, retries 0, back 0, falseEnd 0, fake 1.1s, wall 35ms wrong steps v/p/b 0/0/0 of 0 blind [injector refused the scroll event]
+  session maxOutputRows=2500                   PASS  LimitReached, exact (rows 2500/2500), steps 7, notches 19, px/notch 100.0-100.0, retries 0, back 0, falseEnd 0, fake 2.6s, wall 85ms height==2500=1 wrong steps v/p/b 0/0/0 of 0 blind
+  session blank taller than viewport, scrollbar PASS  EndOfContent, exact (rows 3255/3255), steps 22, notches 58, px/notch 60.0-60.0, retries 0, back 0, falseEnd 0, fake 7.8s, wall 90ms wrong steps v/p/b 0/0/0 of 3 blind
+  session blank taller than viewport, no scrollbar KNOWN-LIMIT  EndOfContent, exact (rows 2520/2520), steps 18, notches 47, px/notch 60.0-60.0, retries 1, back 1, falseEnd 0, fake 6.7s, wall 72ms wrong steps v/p/b 0/0/1 of 1 blind
+  session sweep, constant px/notch (16 runs)   PASS  16/16 exact + EndOfContent, wrong steps verified/partial/blind 0/0/0
+  session sweep, px/notch jitter +-10% (8 runs) KNOWN-LIMIT  5/8 exact; 3 inexact only through blind steps; 0 stopped early with an exact prefix; wrong steps verified/partial/blind 0/0/5
+  session document shorter than viewport       PASS  EndOfContent, rows 300, steps 2
+
+[session] pointer rules and scroll to top
+  session pointer parked, hover under it kept out PASS  EndOfContent, exact (rows 3485/3485), steps 15, notches 72, px/notch 53.0-53.0, retries 0, back 0, falseEnd 0, fake 5.6s, wall 119ms awayFirst,parkBeforeEveryWheel=1 wrong steps v/p/b 0/0/0 of 0 blind
+  session first notch moves nothing at the centre, right edge scrolls PASS  EndOfContent, exact (rows 3485/3485), steps 17, notches 74, px/notch 53.0-53.0, retries 0, back 0, falseEnd 0, fake 6.7s, wall 139ms parkPosition==1=1 wrong steps v/p/b 0/0/0 of 0 blind
+  session only the lower half scrolls          PASS  EndOfContent, exact (rows 3485/3485), steps 29, notches 67, px/notch 53.0-53.0, retries 0, back 0, falseEnd 0, fake 11.2s, wall 225ms parkPosition==2=1 wrong steps v/p/b 0/0/0 of 0 blind
+  session nothing scrolls at any park position PASS  NoMovement, exact (rows 600/600), steps 6, notches 6, px/notch 0.0-0.0, retries 0, back 0, falseEnd 0, fake 3.6s, wall 61ms sixSingleNotches=1 wrong steps v/p/b 0/0/0 of 0 blind [nothing under the selection scrolled at any park position]
+  session scroll to top first, page opened halfway down PASS  EndOfContent, exact (rows 3485/3485), steps 15, notches 252, px/notch 53.0-53.0, retries 0, back 0, falseEnd 0, fake 8.5s, wall 172ms reachedTop,wheelUpBy10=1 wrong steps v/p/b 0/0/0 of 0 blind
+  session scroll to top first, already at the top PASS  EndOfContent, exact (rows 3485/3485), steps 15, notches 92, px/notch 53.0-53.0, retries 0, back 0, falseEnd 0, fake 7.0s, wall 141ms twoStepsUp=1 wrong steps v/p/b 0/0/0 of 0 blind
+  session first wheel step lost, plain         PASS  EndOfContent, exact (rows 3485/3485), steps 16, notches 73, px/notch 53.0-53.0, retries 0, back 0, falseEnd 0, fake 6.1s, wall 119ms parkPosition==0=1 wrong steps v/p/b 0/0/0 of 0 blind
+  session first wheel step lost, scroll to top first PASS  EndOfContent, exact (rows 3485/3485), steps 15, notches 232, px/notch 53.0-53.0, retries 0, back 0, falseEnd 0, fake 8.9s, wall 161ms reachedTop=1 wrong steps v/p/b 0/0/0 of 0 blind
+  session from-top off, starts at the row on screen PASS  EndOfContent, rows 1985 of 1985, first bad -1
+  session stream goes quiet at the first step  PASS  EndOfContent, exact (rows 3485/3485), steps 15, notches 72, px/notch 53.0-53.0, retries 0, back 0, falseEnd 0, fake 5.8s, wall 107ms quietStreamSeen=1 wrong steps v/p/b 0/0/0 of 0 blind
+  session stream goes quiet at the sixth step  PASS  EndOfContent, exact (rows 3485/3485), steps 15, notches 72, px/notch 53.0-53.0, retries 0, back 0, falseEnd 0, fake 5.7s, wall 111ms quietStreamSeen=1 wrong steps v/p/b 0/0/0 of 0 blind
+  session quiet stream, no fresh frame: never end of content PASS  LostTrack, exact (rows 918/918), steps 7, notches 20, px/notch 53.0-53.0, retries 0, back 0, falseEnd 0, fake 2.9s, wall 37ms notEndOfContent,unproven=1 wrong steps v/p/b 0/0/0 of 0 blind [the frame source gave no fresh frame after the last scroll steps, so the end of the content is not proven]
+  session quiet stream from the second step, no fresh frame PASS  LostTrack, exact (rows 653/653), steps 3, notches 5, px/notch 53.0-53.0, retries 0, back 0, falseEnd 0, fake 1.5s, wall 10ms notEndOfContent,unproven=1 wrong steps v/p/b 0/0/0 of 0 blind [the frame source gave no fresh frame after the last scroll steps, so the end of the content is not proven]
+  session quiet stream from the first step, no fresh frame PASS  NoMovement, exact (rows 600/600), steps 6, notches 6, px/notch 0.0-0.0, retries 0, back 0, falseEnd 0, fake 3.3s, wall 4ms notEndOfContent,unproven=1 wrong steps v/p/b 0/0/0 of 0 blind [nothing under the selection scrolled at any park position]
+  session quiet stream, no fresh frame, no pointer rules PASS  LostTrack, exact (rows 1600/1600), steps 6, notches 18, px/notch 100.0-100.0, retries 0, back 0, falseEnd 0, fake 2.6s, wall 49ms wrong steps v/p/b 0/0/0 of 0 blind [the frame source gave no fresh frame after the last scroll steps, so the end of the content is not proven]
+  session application answers after 150 ms     PASS  EndOfContent, exact (rows 3485/3485), steps 15, notches 72, px/notch 53.0-53.0, retries 0, back 0, falseEnd 0, fake 7.6s, wall 160ms wrong steps v/p/b 0/0/0 of 0 blind
+  session answers after 150 ms, scroll to top first PASS  EndOfContent, exact (rows 3485/3485), steps 15, notches 152, px/notch 53.0-53.0, retries 0, back 0, falseEnd 0, fake 10.4s, wall 207ms wrong steps v/p/b 0/0/0 of 0 blind
+  session application answers after 300 ms     PASS  EndOfContent, exact (rows 3485/3485), steps 15, notches 72, px/notch 53.0-53.0, retries 0, back 0, falseEnd 0, fake 10.5s, wall 210ms wrong steps v/p/b 0/0/0 of 0 blind
+  session answers after 300 ms, scroll to top first PASS  EndOfContent, exact (rows 3485/3485), steps 15, notches 252, px/notch 53.0-53.0, retries 0, back 0, falseEnd 0, fake 13.6s, wall 270ms wrong steps v/p/b 0/0/0 of 0 blind
+  session application answers after 900 ms     PASS  EndOfContent, exact (rows 3485/3485), steps 25, notches 67, px/notch 53.0-106.0, retries 0, back 0, falseEnd 0, fake 17.1s, wall 362ms wrong steps v/p/b 0/0/0 of 0 blind
+  session answers after 900 ms, scroll to top first PASS  EndOfContent, exact (rows 3485/3485), steps 15, notches 392, px/notch 53.0-53.0, retries 0, back 0, falseEnd 0, fake 27.6s, wall 527ms wrong steps v/p/b 0/0/0 of 0 blind
+  session overscrolled view, page at its top   PASS  EndOfContent, exact (rows 3485/3485), steps 18, notches 124, px/notch 37.5-38.0, retries 0, back 0, falseEnd 0, fake 8.3s, wall 155ms parkPosition==0=1 wrong steps v/p/b 0/0/0 of 0 blind
+  session overscrolled view, page opened halfway down PASS  EndOfContent, exact (rows 3485/3485), steps 18, notches 284, px/notch 37.5-38.0, retries 0, back 0, falseEnd 0, fake 9.9s, wall 194ms parkPosition==0=1 wrong steps v/p/b 0/0/0 of 0 blind
+  session page scrolls up and then not down    PASS  LostTrack, exact (rows 600/600), steps 8, notches 188, px/notch 0.0-0.0, retries 0, back 0, falseEnd 0, fake 7.6s, wall 128ms oneViewport=1 wrong steps v/p/b 0/0/0 of 0 blind [the page scrolled up to its top and then did not scroll down]
+  session stop during scroll to top keeps the viewport PASS  Stopped, rows 600, page at 1540, wheel events 2, first bad -1
+  session stop during scroll to top, painted pointer: the viewport without it PASS  Stopped, rows 600, page at 1805, wheel events 2, events 8, first bad -1
+  session stop during scroll to top, painted pointer, rule off: the pointer's band is in the image PASS  Stopped, rows 600, mismatching pixels 7446, first bad 191
+  session stop while the pointer enters, painted pointer: no wheel step, the pointer leaves PASS  Stopped, rows 600, page at 2070, wheel events 1, last event m -12, first bad -1
+  session stop during scroll to top, quiet stream: the viewport on the screen PASS  Stopped, rows 600, page at 1540, wheel events 2, fresh frames 2, first bad -1
+  session stop during scroll to top, quiet stream without a fresh frame: unproven PASS  Stopped, rows 600, proven 0
+  session overscrolled view, wheel rest after the way up PASS  EndOfContent, exact (rows 3485/3485), steps 16, notches 281, px/notch 37.5-38.0, retries 0, back 0, falseEnd 0, fake 9.3s, wall 190ms oneRestBetweenUpAndDown,noStillSteps=1 wrong steps v/p/b 0/0/0 of 0 blind
+  session slow stream, 170 ms a frame          PASS  EndOfContent, exact (rows 4040/4040), steps 14, notches 396, px/notch 53.0-53.0, retries 0, back 0, falseEnd 0, fake 25.3s, wall 208ms pxPerNotchSteady=1 wrong steps v/p/b 0/0/0 of 0 blind
+  session slow stream, 170 ms a frame, bursts scroll further PASS  EndOfContent, exact (rows 4040/4040), steps 20, notches 202, px/notch 53.0-116.5, retries 2, back 2, falseEnd 0, fake 33.2s, wall 262ms pxPerNotchSteady=1 wrong steps v/p/b 0/0/0 of 0 blind
+  session way to the top longer than the old 15 s, every step checked PASS  EndOfContent, exact (rows 3485/3485), steps 18, notches 1656, px/notch 4.0-4.0, retries 0, back 0, falseEnd 0, fake 33.4s, wall 584ms reachedTop,longerThan15s=1 wrong steps v/p/b 0/0/0 of 0 blind
+  session way to the top, steps grow while the page moves PASS  EndOfContent, exact (rows 3485/3485), steps 18, notches 1726, px/notch 4.0-4.0, retries 0, back 0, falseEnd 0, fake 12.1s, wall 227ms reachedTop,sooner,provedWithPlainSteps=1 wrong steps v/p/b 0/0/0 of 0 blind
+  session top not reached in its time: never end of content PASS  TopNotReached, rows 2440 from row 1045 of 3485, first bad -1, way up 3500 ms [the page was still scrolling up when the time for the way to the top was over]
+  session top not reached, then the height cap: the cap's result, the top still not proved PASS  LimitReached, rows 1500 from row 1045, first bad -1, way up 3500 ms [the page was still scrolling up when the time for the way to the top was over]
+  session page never at rest: the way to the top gives up and says so PASS  LostTrack, rows 600, way up 18510 ms in 40 steps [the page never came to rest on the way to the top, so its top cannot be told]
+  session stop: no injection after the flag    PASS  Stopped, exact (rows 865/865), steps 5, notches 6, px/notch 53.0-53.0, retries 0, back 0, falseEnd 0, fake 1.6s, wall 29ms fiveWheelEvents=1 wrong steps v/p/b 0/0/0 of 0 blind
+  from top resolves right-edge target before stitching PASS  EndOfContent, rows=3485, exact=1
+  resized stream fails with LayoutChanged      PASS  LayoutChanged, reads after resize=1
+  retry stillness needs fresh proof            PASS  LostTrack
+
+[stitcher] the page's viewport changes inside a frame of constant size
+  viewport narrower and shorter after 4 steps, step 40 PASS  780 rows (780 before the change), first foreign row -1, 0 frames accepted after it, said 1; 0:First/0+0 60:Appended/60+60 100:Appended/40+40 140:Appended/40+40 180:Appended/40+40 220:NoMatch/40+0 260:LayoutChanged/80+0 300:LayoutChanged/0+0 340:LayoutChanged/0+0 380:LayoutChanged/0+0 420:LayoutChanged/0+0 460:LayoutChanged/0+0 500:LayoutChanged/0+0 540:LayoutChanged/0+0 580:LayoutChanged/0+0 620:LayoutChanged/0+0 660:LayoutChanged/0+0 700:LayoutChanged/0+0 740:LayoutChanged/0+0 780:Layo
+  viewport narrower and shorter after 4 steps, step 60 PASS  840 rows (840 before the change), first foreign row -1, 0 frames accepted after it, said 1; 0:First/0+0 60:Appended/60+60 120:Appended/60+60 180:Appended/60+60 240:Appended/60+60 300:Ambiguous/60+0 360:LayoutChanged/120+0 420:LayoutChanged/0+0 480:LayoutChanged/0+0 540:LayoutChanged/0+0 600:LayoutChanged/0+0 660:LayoutChanged/0+0 720:LayoutChanged/0+0 780:LayoutChanged/0+0 840:LayoutChanged/0+0 900:LayoutChanged/0+0 960:LayoutChanged/0+0 1020:LayoutChanged/0+0 1080:LayoutChanged/0+0 114
+  viewport narrower and shorter after 4 steps, step 240 PASS  1380 rows (1380 before the change), first foreign row -1, 0 frames accepted after it, said 1; 0:First/0+0 60:Appended/60+60 300:Appended/240+240 540:Appended/240+240 780:Appended/240+240 1020:LayoutChanged/240+0 1260:LayoutChanged/0+0 1500:LayoutChanged/0+0 1740:LayoutChanged/0+0 1980:LayoutChanged/0+0 2220:LayoutChanged/0+0
+  viewport narrower and shorter after 4 steps, step 360 PASS  1740 rows (1740 before the change), first foreign row -1, 0 frames accepted after it, said 1; 0:First/0+0 60:Appended/60+60 420:Appended/360+360 780:Appended/360+360 1140:Appended/360+360 1500:LayoutChanged/360+0 1860:LayoutChanged/0+0 2220:LayoutChanged/0+0
+  viewport narrower after 4 steps, step 40     PASS  780 rows (780 before the change), first foreign row -1, 0 frames accepted after it, said 1; 0:First/0+0 60:Appended/60+60 100:Appended/40+40 140:Appended/40+40 180:Appended/40+40 220:LayoutChanged/40+0 260:LayoutChanged/0+0 300:LayoutChanged/0+0 340:LayoutChanged/0+0 380:LayoutChanged/0+0 420:LayoutChanged/0+0 460:LayoutChanged/0+0 500:LayoutChanged/0+0 540:LayoutChanged/0+0 580:LayoutChanged/0+0 620:LayoutChanged/0+0 660:LayoutChanged/0+0 700:LayoutChanged/0+0 740:LayoutChanged/0+0 780
+  viewport narrower after 4 steps, step 60     PASS  840 rows (840 before the change), first foreign row -1, 0 frames accepted after it, said 1; 0:First/0+0 60:Appended/60+60 120:Appended/60+60 180:Appended/60+60 240:Appended/60+60 300:LayoutChanged/60+0 360:LayoutChanged/0+0 420:LayoutChanged/0+0 480:LayoutChanged/0+0 540:LayoutChanged/0+0 600:LayoutChanged/0+0 660:LayoutChanged/0+0 720:LayoutChanged/0+0 780:LayoutChanged/0+0 840:LayoutChanged/0+0 900:LayoutChanged/0+0 960:LayoutChanged/0+0 1020:LayoutChanged/0+0 1080:LayoutChanged/0+0 1
+  viewport narrower after 4 steps, step 240    PASS  1380 rows (1380 before the change), first foreign row -1, 0 frames accepted after it, said 1; 0:First/0+0 60:Appended/60+60 300:Appended/240+240 540:Appended/240+240 780:Appended/240+240 1020:LayoutChanged/240+0 1260:LayoutChanged/0+0 1500:LayoutChanged/0+0 1740:LayoutChanged/0+0 1980:LayoutChanged/0+0 2220:LayoutChanged/0+0
+  viewport narrower after 4 steps, step 360    PASS  1740 rows (1740 before the change), first foreign row -1, 0 frames accepted after it, said 1; 0:First/0+0 60:Appended/60+60 420:Appended/360+360 780:Appended/360+360 1140:Appended/360+360 1500:LayoutChanged/360+0 1860:LayoutChanged/0+0 2220:LayoutChanged/0+0
+  viewport shorter after 4 steps, step 40      PASS  780 rows (780 before the change), first foreign row -1, 1 frames accepted after it, said 1; 0:First/0+0 60:Appended/60+60 100:Appended/40+40 140:Appended/40+40 180:Appended/40+40 220:NoMatch/40+0 260:Appended/80+80 300:LayoutChanged/40+0 340:LayoutChanged/0+0 380:LayoutChanged/0+0 420:LayoutChanged/0+0 460:LayoutChanged/0+0 500:LayoutChanged/0+0 540:LayoutChanged/0+0 580:LayoutChanged/0+0 620:LayoutChanged/0+0 660:LayoutChanged/0+0 700:LayoutChanged/0+0 740:LayoutChanged/0+0 780:LayoutC
+  viewport shorter after 4 steps, step 60      PASS  840 rows (840 before the change), first foreign row -1, 1 frames accepted after it, said 1; 0:First/0+0 60:Appended/60+60 120:Appended/60+60 180:Appended/60+60 240:Appended/60+60 300:Appended/60+60 360:LayoutChanged/60+0 420:LayoutChanged/0+0 480:LayoutChanged/0+0 540:LayoutChanged/0+0 600:LayoutChanged/0+0 660:LayoutChanged/0+0 720:LayoutChanged/0+0 780:LayoutChanged/0+0 840:LayoutChanged/0+0 900:LayoutChanged/0+0 960:LayoutChanged/0+0 1020:LayoutChanged/0+0 1080:LayoutChanged/0+0 1140
+  viewport shorter after 4 steps, step 240     PASS  1380 rows (1380 before the change), first foreign row -1, 1 frames accepted after it, said 1; 0:First/0+0 60:Appended/60+60 300:Appended/240+240 540:Appended/240+240 780:Appended/240+240 1020:Appended/240+240 1260:LayoutChanged/240+0 1500:LayoutChanged/0+0 1740:LayoutChanged/0+0 1980:LayoutChanged/0+0 2220:LayoutChanged/0+0
+  viewport shorter after 4 steps, step 360     PASS  1740 rows (1740 before the change), first foreign row -1, 1 frames accepted after it, said 1; 0:First/0+0 60:Appended/60+60 420:Appended/360+360 780:Appended/360+360 1140:Appended/360+360 1500:Appended/360+360 1860:LayoutChanged/360+0 2220:LayoutChanged/0+0
+  viewport narrower by less than a band after 4 steps, step 40 PASS  780 rows (780 before the change), first foreign row -1, 0 frames accepted after it, said 1; 0:First/0+0 60:Appended/60+60 100:Appended/40+40 140:Appended/40+40 180:Appended/40+40 220:LayoutChanged/40+0 260:LayoutChanged/0+0 300:LayoutChanged/0+0 340:LayoutChanged/0+0 380:LayoutChanged/0+0 420:LayoutChanged/0+0 460:LayoutChanged/0+0 500:LayoutChanged/0+0 540:LayoutChanged/0+0 580:LayoutChanged/0+0 620:LayoutChanged/0+0 660:LayoutChanged/0+0 700:LayoutChanged/0+0 740:LayoutChanged/0+0 780
+  viewport narrower by less than a band after 4 steps, step 60 PASS  840 rows (840 before the change), first foreign row -1, 0 frames accepted after it, said 1; 0:First/0+0 60:Appended/60+60 120:Appended/60+60 180:Appended/60+60 240:Appended/60+60 300:LayoutChanged/60+0 360:LayoutChanged/0+0 420:LayoutChanged/0+0 480:LayoutChanged/0+0 540:LayoutChanged/0+0 600:LayoutChanged/0+0 660:LayoutChanged/0+0 720:LayoutChanged/0+0 780:LayoutChanged/0+0 840:LayoutChanged/0+0 900:LayoutChanged/0+0 960:LayoutChanged/0+0 1020:LayoutChanged/0+0 1080:LayoutChanged/0+0 1
+  viewport narrower by less than a band after 4 steps, step 240 PASS  1380 rows (1380 before the change), first foreign row -1, 0 frames accepted after it, said 1; 0:First/0+0 60:Appended/60+60 300:Appended/240+240 540:Appended/240+240 780:Appended/240+240 1020:LayoutChanged/240+0 1260:LayoutChanged/0+0 1500:LayoutChanged/0+0 1740:LayoutChanged/0+0 1980:LayoutChanged/0+0 2220:LayoutChanged/0+0
+  viewport narrower by less than a band after 4 steps, step 360 PASS  1740 rows (1740 before the change), first foreign row -1, 0 frames accepted after it, said 1; 0:First/0+0 60:Appended/60+60 420:Appended/360+360 780:Appended/360+360 1140:Appended/360+360 1500:LayoutChanged/360+0 1860:LayoutChanged/0+0 2220:LayoutChanged/0+0
+  viewport shorter from the top after 4 steps, step 40 PASS  2880 rows (780 before the change), first foreign row -1, 55 frames accepted after it, said 0; 0:First/0+0 60:Appended/60+60 100:Appended/40+40 140:Appended/40+40 180:Appended/40+40 220:Reversed/-60+0 260:Appended/40+0 300:Appended/40+20 340:Appended/40+40 380:Appended/40+40 420:Appended/40+40 460:Appended/40+40 500:Appended/40+40 540:Appended/40+40 580:Appended/40+40 620:Appended/40+40 660:Appended/40+40 700:Appended/40+40 740:Appended/40+40 780:Appended/40+40 820:Appended/40+40 860:Appen
+  viewport shorter from the top after 4 steps, step 60 PASS  1220 rows (840 before the change), first foreign row -1, 8 frames accepted after it, said 0; 0:First/0+0 60:Appended/60+60 120:Appended/60+60 180:Appended/60+60 240:Appended/60+60 300:Reversed/-40+0 360:Appended/60+20 420:Appended/60+60 480:Appended/60+60 540:Appended/60+60 600:Appended/60+60 660:Appended/60+60 720:Appended/60+60 780:NoMatch/0+0 840:NoMatch/0+0 900:NoMatch/0+0 960:NoMatch/0+0 1020:NoMatch/0+0 1080:NoMatch/0+0 1140:NoMatch/0+0 1200:NoMatch/0+0 1260:NoMatch/0+0 1320:NoMatc
+  viewport shorter from the top after 4 steps, step 240 PASS  1760 rows (1380 before the change), first foreign row -1, 2 frames accepted after it, said 0; 0:First/0+0 60:Appended/60+60 300:Appended/240+240 540:Appended/240+240 780:Appended/240+240 1020:Appended/140+140 1260:Appended/240+240 1500:NoMatch/0+0 1740:NoMatch/0+0 1980:NoMatch/0+0 2220:NoMatch/0+0
+  viewport shorter from the top after 4 steps, step 360 PASS  1740 rows (1740 before the change), first foreign row -1, 0 frames accepted after it, said 0; 0:First/0+0 60:Appended/60+60 420:Appended/360+360 780:Appended/360+360 1140:Appended/360+360 1500:NoMatch/0+0 1860:NoMatch/0+0 2220:NoMatch/0+0
+  viewport narrower and shorter where the page stands: not the reference PASS  in place LayoutChanged, next LayoutChanged/0, 1020 rows (1020 before), first foreign row -1
+  viewport narrower where the page stands: not the reference PASS  in place LayoutChanged, next LayoutChanged/0, 1020 rows (1020 before), first foreign row -1
+  viewport shorter where the page stands: not the reference PASS  in place NoMovement, next LayoutChanged/360, 660 rows (1020 before), first foreign row -1
+  viewport narrower by less than a band where the page stands: not the reference PASS  in place LayoutChanged, next LayoutChanged/0, 1020 rows (1020 before), first foreign row -1
+  viewport shorter from the top where the page stands: not the reference PASS  in place Reversed, next NoMatch/0, 1020 rows (1020 before), first foreign row -1
+
+[session] the page's viewport changes during the capture
+  session viewport narrower and shorter at wheel event 3, px=40 PASS  LostTrack, 1000 rows of 4800, first foreign row -1, steps 3 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport narrower and shorter at wheel event 9, px=40 PASS  LostTrack, 3160 rows of 4800, first foreign row -1, steps 9 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport narrower and shorter at wheel event 3, px=60 PASS  LostTrack, 1020 rows of 4800, first foreign row -1, steps 3 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport narrower and shorter at wheel event 9, px=60 PASS  LostTrack, 3180 rows of 4800, first foreign row -1, steps 9 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport narrower and shorter at wheel event 3, px=100 PASS  LostTrack, 1100 rows of 4800, first foreign row -1, steps 3 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport narrower and shorter at wheel event 9, px=100 PASS  LostTrack, 3500 rows of 4800, first foreign row -1, steps 9 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport narrower at wheel event 3, px=40 PASS  LostTrack, 1000 rows of 4800, first foreign row -1, steps 3 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport narrower at wheel event 9, px=40 PASS  LostTrack, 3160 rows of 4800, first foreign row -1, steps 9 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport narrower at wheel event 3, px=60 PASS  LostTrack, 1020 rows of 4800, first foreign row -1, steps 3 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport narrower at wheel event 9, px=60 PASS  LostTrack, 3180 rows of 4800, first foreign row -1, steps 9 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport narrower at wheel event 3, px=100 PASS  LostTrack, 1100 rows of 4800, first foreign row -1, steps 3 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport narrower at wheel event 9, px=100 PASS  LostTrack, 3500 rows of 4800, first foreign row -1, steps 9 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport shorter at wheel event 3, px=40 PASS  LostTrack, 1000 rows of 4800, first foreign row -1, steps 4 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport shorter at wheel event 9, px=40 PASS  LostTrack, 3160 rows of 4800, first foreign row -1, steps 10 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport shorter at wheel event 3, px=60 PASS  LostTrack, 1020 rows of 4800, first foreign row -1, steps 4 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport shorter at wheel event 9, px=60 PASS  LostTrack, 3180 rows of 4800, first foreign row -1, steps 10 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport shorter at wheel event 3, px=100 PASS  LostTrack, 1100 rows of 4800, first foreign row -1, steps 4 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport shorter at wheel event 9, px=100 PASS  LostTrack, 3500 rows of 4800, first foreign row -1, steps 10 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport narrower by less than a band at wheel event 3, px=40 PASS  LostTrack, 1000 rows of 4800, first foreign row -1, steps 3 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport narrower by less than a band at wheel event 9, px=40 PASS  LostTrack, 3160 rows of 4800, first foreign row -1, steps 9 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport narrower by less than a band at wheel event 3, px=60 PASS  LostTrack, 1020 rows of 4800, first foreign row -1, steps 3 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport narrower by less than a band at wheel event 9, px=60 PASS  LostTrack, 3180 rows of 4800, first foreign row -1, steps 9 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport narrower by less than a band at wheel event 3, px=100 PASS  LostTrack, 1100 rows of 4800, first foreign row -1, steps 3 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport narrower by less than a band at wheel event 9, px=100 PASS  LostTrack, 3500 rows of 4800, first foreign row -1, steps 9 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session viewport shorter from the top at wheel event 3, px=40 PASS  EndOfContent, 4800 rows of 4800, first foreign row -1, steps 110 []
+  session viewport shorter from the top at wheel event 9, px=40 PASS  EndOfContent, 4800 rows of 4800, first foreign row -1, steps 74 []
+  session viewport shorter from the top at wheel event 3, px=60 PASS  LostTrack, 1200 rows of 4800, first foreign row -1, steps 10 [a single notch scrolls further than the overlap allows; enlarge the region]
+  session viewport shorter from the top at wheel event 9, px=60 PASS  LostTrack, 3180 rows of 4800, first foreign row -1, steps 15 [a single notch scrolls further than the overlap allows; enlarge the region]
+  session viewport shorter from the top at wheel event 3, px=100 PASS  LostTrack, 1200 rows of 4800, first foreign row -1, steps 7 [a single notch scrolls further than the overlap allows; enlarge the region]
+  session viewport shorter from the top at wheel event 9, px=100 PASS  LostTrack, 3500 rows of 4800, first foreign row -1, steps 12 [a single notch scrolls further than the overlap allows; enlarge the region]
+
+[session] what is not a change of layout
+  session margins and a band that were always there PASS  EndOfContent, 4800 rows, first wrong row -1, steps 17 []
+  session viewport resized on the way to the top: the layout the capture saw PASS  EndOfContent, 4800 rows, first wrong row -1, steps 17 []
+  session a bar pinned from the first scroll on PASS  EndOfContent, 4800 rows of 4800, first foreign row -1, steps 15 []
+  session a bar pinned after rows were taken from under it PASS  LostTrack, 660 rows of 4800, first foreign row -1, steps 3 [the layout inside the selection changed during the capture; the image ends with the rows from before the change]
+  session a scrollbar that fades and a cursor that blinks PASS  EndOfContent, 4800 rows of 4800, steps 15 []
+
+==================== summary ====================
+202 passed, 0 failed, 5 known limitations (reported, not counted)
