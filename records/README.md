@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-12-proton-chosen-connection-acceptance](2026-11-12-proton-chosen-connection-acceptance/README.md) | — | Proton chosen-connection acceptance: blocked by exact-head CI |
 | [2026-11-12-scroll-accept2-1398](2026-11-12-scroll-accept2-1398/README.md) | #1398 | Independent scroll capture acceptance — PR 1398 |
 | [2026-11-11-hotkeys-rename](2026-11-11-hotkeys-rename/README.md) | — | Settings wording: Shortcuts renamed Hotkeys |
 | [2026-11-11-capture-delay-settings-shortcuts](2026-11-11-capture-delay-settings-shortcuts/README.md) | — | Capture delay section in Settings → Capture |
