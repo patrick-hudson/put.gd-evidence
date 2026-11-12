@@ -1,0 +1,36 @@
+2026-11-12T03:24:55.1530917Z $ python3 tests/ci/test_flake_tools.py
+2026-11-12T03:24:55.1531250Z ...................F
+2026-11-12T03:24:55.1531493Z ======================================================================
+2026-11-12T03:24:55.1532136Z FAIL: test_repository_tests_use_the_scaled_helpers (__main__.WaitLint.test_repository_tests_use_the_scaled_helpers)
+2026-11-12T03:24:55.1532701Z ----------------------------------------------------------------------
+2026-11-12T03:24:55.1533024Z Traceback (most recent call last):
+2026-11-12T03:24:55.1533727Z   File "/home/runner/work/put.gd-desktop/put.gd-desktop/tests/ci/test_flake_tools.py", line 131, in test_repository_tests_use_the_scaled_helpers
+2026-11-12T03:24:55.1534307Z     self.assertEqual(problems, [], '\n'.join(problems))
+2026-11-12T03:24:55.1534747Z AssertionError: Lists differ: ['tests/integration/test_proton_transport.[117 chars]ome'] != []
+2026-11-12T03:24:55.1535072Z 
+2026-11-12T03:24:55.1535171Z First list contains 1 additional elements.
+2026-11-12T03:24:55.1535417Z First extra element 0:
+2026-11-12T03:24:55.1540679Z 'tests/integration/test_proton_transport.cpp: 1 qwait at line 312: use putgd::test::settle(ms) for fixed time, or a PUTGD_TRY/STEADY macro to wait for an outcome'
+2026-11-12T03:24:55.1541159Z 
+2026-11-12T03:24:55.1541230Z + []
+2026-11-12T03:24:55.1541497Z - ['tests/integration/test_proton_transport.cpp: 1 qwait at line 312: use '
+2026-11-12T03:24:55.1541936Z -  'putgd::test::settle(ms) for fixed time, or a PUTGD_TRY/STEADY macro to wait '
+2026-11-12T03:24:55.1542639Z -  'for an outcome'] : tests/integration/test_proton_transport.cpp: 1 qwait at line 312: use putgd::test::settle(ms) for fixed time, or a PUTGD_TRY/STEADY macro to wait for an outcome
+2026-11-12T03:24:55.1543153Z 
+2026-11-12T03:24:55.1543279Z ----------------------------------------------------------------------
+2026-11-12T03:24:55.1543982Z Ran 20 tests in 1.584s
+2026-11-12T03:24:55.1544099Z 
+2026-11-12T03:24:55.1544175Z FAILED (failures=1)
+2026-11-12T03:24:55.1544368Z flake_ledger: recorded gui_flaky in u
+2026-11-12T03:24:55.1544602Z flake_ledger: reopened u
+2026-11-12T03:24:55.1544831Z flake_ledger: recorded gui_flaky in u
+2026-11-12T03:24:55.1560551Z ##[warning]No GITHUB_TOKEN/GITHUB_REPOSITORY; the flaky tests are listed in the job summary only.
+2026-11-12T03:24:55.1568105Z flake_ledger: opened https://github.invalid/issues/99
+2026-11-12T03:24:55.1568516Z flake_ledger: recorded gui_flaky in https://github.invalid/issues/99
+2026-11-12T03:24:55.1568909Z flake_ledger: opened https://github.invalid/issues/99
+2026-11-12T03:24:55.1569276Z flake_ledger: recorded broken in https://github.invalid/issues/99
+2026-11-12T03:24:55.1569610Z flake_ledger: reopened u
+2026-11-12T03:24:55.1569846Z flake_ledger: recorded gui_flaky in u
+2026-11-12T03:24:55.1570019Z 
+2026-11-12T03:24:55.1570129Z Failed: tests/ci/test_flake_tools.py
+2026-11-12T03:24:55.1598723Z ##[error]Process completed with exit code 1.
