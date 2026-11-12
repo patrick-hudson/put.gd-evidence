@@ -123,7 +123,7 @@ Fedora failed screenshot operations, straight from the app log:
 {"category": "putgd.operation", "fields": {"action": "desktop", "byteCount": 0, "durationMs": 55, "error": {"code": "gnome_extension_missing", "details": {"shellVersion": "50.6"}, "message": "put.gd's GNOME extension is not installed. Reinstall the put.gd package."}, "itemId": null, "items": 0, "provider": "proton-drive", "state": "failed", "uploadStatus": {}}, "level": "warning", "message": "Operation finished", "operationId": "233c7cfc-1ab5-49b3-a0b7-4bbaaa907ef5", "pid": 3935739, "process": "putgd", "time": "2026-11-12T07:16:03.670Z", "v": 1}
 ```
 
-* Fedora returned `clipboard_unavailable` on 11 completed upload operations (batch-3, text-small, after-cancel and eight individual paired operations). Every uploaded item still ended shared. The unchanged harness pass criterion checks upload/share completion, not clipboard ownership. All 24 warning lines are retained below and in warnings.md.
+* Fedora logged `clipboard_unavailable` on all 24 completed upload operations. The CLI terminal snapshots carried that error for 11 operations; the full app log contains 24 clipboard failure events. These are different observation points. Asterisks in the time table mark only the CLI snapshots with that error. Every uploaded item still ended shared. The unchanged harness pass criterion checks upload/share completion, not clipboard ownership. All 24 warning lines are retained below and in warnings.md.
 
 ```jsonl
 {"category": "putgd.clipboard", "fields": {"action": "files", "automatic": true, "behavior": "each_link", "cancelled": false, "copyStatus": "failed", "error": {"code": "clipboard_unavailable", "details": {}, "message": "GNOME helper cannot own CLIPBOARD"}, "itemId": null, "links": 1}, "level": "warning", "message": "Automatic copy finished", "operationId": "7caad894-6b3d-4710-bb7d-28a618e4052a", "pid": 3935739, "process": "putgd", "time": "2026-11-12T07:15:17.066Z", "v": 1}
@@ -153,3 +153,5 @@ Fedora failed screenshot operations, straight from the app log:
 ```
 
 Kubuntu’s runtime binary matched round 3 byte for byte: SHA-256 `42e1decb6d718e2640f0a419b3d135a3755f65a27e66682126ed16a2f6581065`.
+
+Publication correction: the first evidence commit described 11 clipboard errors from terminal CLI snapshots. Full-log counting showed 24 distinct completed operations with a clipboard warning. This README was amended to state both counts; all original result JSON and app logs are unchanged.
