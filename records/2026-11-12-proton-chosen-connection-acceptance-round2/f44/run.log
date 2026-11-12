@@ -1,0 +1,34 @@
+ 23:33:44 up 10 days, 13:30,  7 users,  load average: 0.21, 0.13, 0.46
+Socket preflight: /run/user/1000/putgd/session.sock = 33 UTF-8 bytes
+PASS file-64k: completed in 4.83 s 
+PASS file-1m: completed in 6.06 s 
+PASS file-8m: completed in 8.37 s 
+PASS batch-3: completed in 8.27 s 
+PASS text-small: completed in 3.16 s 
+PASS back-to-back: completed in 10.49 s second upload invoked while the first was running
+FAIL desktop-now: failed in 0.15 s 
+FAIL desktop-delay3: failed in 0.13 s 
+FAIL desktop-delay3-again: failed in 0.12 s 
+FAIL monitor-delay3: failed in 0.13 s 
+FAIL cancel-countdown: failed in 0.15 s cancelled during the countdown; the helper must end by itself
+PASS after-cancel: completed in 3.82 s 
+FAIL history-picture: failed in 0.13 s 
+PASS link-answers: 200 in 0.49 s HTTP status of the share page; the address is not recorded
+PASS revoke-all: 10 revoked in 25.61 s one helper per History action
+fedora gnome-shell wayland build 26.1112.4655-dev+g201f0693f175
+PASS  file-64k               completed       4.83 s  bytes=65536   clipboard_unavailable
+PASS  file-1m                completed       6.06 s  bytes=1048576   
+PASS  file-8m                completed       8.37 s  bytes=8388608   
+PASS  batch-3                completed       8.27 s  bytes=98304,98304,98304   
+PASS  text-small             completed       3.16 s  bytes=660   
+PASS  back-to-back           completed      10.49 s  bytes=524288,65536  second upload invoked while the first was running 
+FAIL  desktop-now            failed          0.15 s  bytes=   gnome_extension_missing
+FAIL  desktop-delay3         failed          0.13 s  bytes=   gnome_extension_missing
+FAIL  desktop-delay3-again   failed          0.12 s  bytes=   gnome_extension_missing
+FAIL  monitor-delay3         failed          0.13 s  bytes=   gnome_extension_missing
+FAIL  cancel-countdown       failed          0.15 s  bytes=  cancelled during the countdown; the helper must end by itself gnome_extension_missing
+PASS  after-cancel           completed       3.82 s  bytes=65536   
+FAIL  history-picture        failed          0.13 s  bytes=   gnome_extension_missing
+PASS  link-answers           200             0.49 s  bytes=  HTTP status of the share page; the address is not recorded 
+PASS  revoke-all             10 revoked     25.61 s  bytes=  one helper per History action 
+9/15 passed; helpers left: []

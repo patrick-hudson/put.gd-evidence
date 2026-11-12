@@ -1,0 +1,584 @@
+{
+ "host": "debian",
+ "desktop": "plasmashell",
+ "sessionType": "wayland",
+ "started": "2026-11-12T05:00:31Z",
+ "build": {
+  "schemaVersion": 1,
+  "version": "26.1112.4655-dev+g201f0693f175",
+  "baseVersion": "26.1112.4655",
+  "packageVersion": "26.1112.4655~dev+g201f0693f175",
+  "gitCommit": "201f0693f175e4948fc40a91616d812dd29f9f0c",
+  "gitTree": "b501de1adbc14876ee189c03366871586a4aa053",
+  "commitCount": 4655,
+  "dirty": false,
+  "sourceProvenance": "git"
+ },
+ "folder": "putgd-lab-d69-check-2026-10-23T213912Z",
+ "desktopSetup": "not_applicable",
+ "results": [
+  {
+   "name": "file-64k",
+   "passed": true,
+   "state": "completed",
+   "seconds": 3.9,
+   "note": "PASS and total preserved in interrupted run.log; detailed CLI record lost"
+  },
+  {
+   "name": "file-1m",
+   "passed": true,
+   "state": "completed",
+   "seconds": 5.53,
+   "note": "PASS and total preserved in interrupted run.log; detailed CLI record lost"
+  },
+  {
+   "name": "file-8m",
+   "passed": false,
+   "state": "completed",
+   "note": "App log completion only; CLI timing and harness verdict lost to adapter interruption",
+   "seconds": 8.152,
+   "timingSource": "app Operation accepted to Operation finished, not CLI invocation"
+  },
+  {
+   "name": "batch-3",
+   "passed": true,
+   "note": "",
+   "operationId": "9fb6240a-51b9-47b2-88bc-2420350530d7",
+   "state": "completed",
+   "seconds": 8.1,
+   "phasesFirstSeenAt": {
+    "stored": 0.07,
+    "saving_local": 0.07,
+    "preflight": 0.15,
+    "uploading": 2.31,
+    "preparing": 3.16,
+    "uploaded": 3.16,
+    "sharing": 4.55,
+    "shared": 5.48,
+    "completed": 8.1
+   },
+   "error": "",
+   "items": [
+    {
+     "bytes": 98304,
+     "mime": "application/octet-stream",
+     "uploadStatus": "uploaded",
+     "shareStatus": "shared",
+     "link": true,
+     "error": "",
+     "historyId": "abf4ed90-587f-4b05-972d-238775006cbb"
+    },
+    {
+     "bytes": 98304,
+     "mime": "application/octet-stream",
+     "uploadStatus": "uploaded",
+     "shareStatus": "shared",
+     "link": true,
+     "error": "",
+     "historyId": "c2e80b63-c3a1-4d24-ad9e-fd747e1292e9"
+    },
+    {
+     "bytes": 98304,
+     "mime": "application/octet-stream",
+     "uploadStatus": "uploaded",
+     "shareStatus": "shared",
+     "link": true,
+     "error": "",
+     "historyId": "1f9eaaec-4a80-461c-868f-c337ba59b74d"
+    }
+   ],
+   "helperGoneAfter": 0.01
+  },
+  {
+   "name": "text-small",
+   "passed": true,
+   "note": "",
+   "operationId": "70acaf41-38eb-4d88-a3d4-5e0c54f2c0cf",
+   "state": "completed",
+   "seconds": 2.71,
+   "phasesFirstSeenAt": {
+    "preflight": 0.1,
+    "uploading": 1.49,
+    "sharing": 1.82,
+    "shared": 2.71,
+    "completed": 2.71
+   },
+   "error": "",
+   "items": [
+    {
+     "bytes": 660,
+     "mime": "text/plain",
+     "uploadStatus": "uploaded",
+     "shareStatus": "shared",
+     "link": true,
+     "error": "",
+     "historyId": "94554cd9-899f-4c2d-a4bc-94f85e63e316"
+    }
+   ],
+   "helperGoneAfter": 0.01
+  },
+  {
+   "name": "back-to-back",
+   "passed": true,
+   "note": "second upload invoked while the first was running",
+   "state": "completed",
+   "seconds": 6.97,
+   "items": [
+    {
+     "bytes": 524288,
+     "mime": "application/octet-stream",
+     "uploadStatus": "uploaded",
+     "shareStatus": "shared",
+     "link": true,
+     "error": "",
+     "historyId": "2202a6a5-fb0a-4eda-a482-0312dd0eefe6"
+    },
+    {
+     "bytes": 65536,
+     "mime": "application/octet-stream",
+     "uploadStatus": "uploaded",
+     "shareStatus": "shared",
+     "link": true,
+     "error": "",
+     "historyId": "a05b944b-1f27-4bbe-9232-9fd93c46b456"
+    }
+   ],
+   "firstSeconds": 4.96,
+   "secondSeconds": 6.97,
+   "helperGoneAfter": 0.01,
+   "helperProcessesObserved": [
+    {
+     "pid": 3914211,
+     "startTicks": "224549185"
+    }
+   ],
+   "helperProcessCount": 1
+  },
+  {
+   "name": "desktop-now",
+   "passed": true,
+   "note": "",
+   "operationId": "70a0b83c-8860-46a5-b307-56c4dcb5e774",
+   "state": "completed",
+   "seconds": 4.44,
+   "phasesFirstSeenAt": {
+    "acquiring": 0.22,
+    "preparing": 0.3,
+    "preflight": 0.71,
+    "uploading": 1.52,
+    "sharing": 3.47,
+    "shared": 4.36,
+    "completed": 4.44
+   },
+   "error": "",
+   "items": [
+    {
+     "bytes": 487786,
+     "mime": "image/png",
+     "uploadStatus": "uploaded",
+     "shareStatus": "shared",
+     "link": true,
+     "error": "",
+     "historyId": "a85d8a14-c110-4d5e-8196-f99a32f3a3bb"
+    }
+   ],
+   "helperSeenDuringCountdownAt": null,
+   "secondsAfterCountdown": 4.44,
+   "helperGoneAfter": 0.01
+  },
+  {
+   "name": "desktop-delay3",
+   "passed": true,
+   "note": "",
+   "operationId": "6d216e87-be13-4a1d-b85a-b9a90c011517",
+   "state": "completed",
+   "seconds": 6.95,
+   "phasesFirstSeenAt": {
+    "acquiring": 0.13,
+    "queued": 3.21,
+    "preparing": 3.29,
+    "preflight": 3.63,
+    "uploading": 3.87,
+    "sharing": 5.97,
+    "shared": 6.95,
+    "completed": 6.95
+   },
+   "error": "",
+   "items": [
+    {
+     "bytes": 511939,
+     "mime": "image/png",
+     "uploadStatus": "uploaded",
+     "shareStatus": "shared",
+     "link": true,
+     "error": "",
+     "historyId": "5749df53-d9ba-4565-8d15-e80cc1e74e5c"
+    }
+   ],
+   "helperSeenDuringCountdownAt": 0.04,
+   "secondsAfterCountdown": 3.95,
+   "helperGoneAfter": 0.01
+  },
+  {
+   "name": "desktop-delay3-again",
+   "passed": true,
+   "note": "",
+   "operationId": "b58d3caa-cb10-4c3e-8409-b0624e8efe28",
+   "state": "completed",
+   "seconds": 6.92,
+   "phasesFirstSeenAt": {
+    "acquiring": 0.13,
+    "preparing": 3.24,
+    "preflight": 3.63,
+    "uploading": 3.87,
+    "sharing": 5.96,
+    "shared": 6.92,
+    "completed": 6.92
+   },
+   "error": "",
+   "items": [
+    {
+     "bytes": 498456,
+     "mime": "image/png",
+     "uploadStatus": "uploaded",
+     "shareStatus": "shared",
+     "link": true,
+     "error": "",
+     "historyId": "5e887653-8abc-4065-b502-a87a48048fb2"
+    }
+   ],
+   "helperSeenDuringCountdownAt": 0.04,
+   "secondsAfterCountdown": 3.92,
+   "helperGoneAfter": 0.01
+  },
+  {
+   "name": "monitor-delay3",
+   "passed": true,
+   "note": "",
+   "operationId": "9f2107be-afb2-45b5-a4e6-b5adf788bbf3",
+   "state": "completed",
+   "seconds": 6.96,
+   "phasesFirstSeenAt": {
+    "acquiring": 0.13,
+    "preparing": 3.26,
+    "preflight": 3.66,
+    "uploading": 3.91,
+    "sharing": 5.99,
+    "shared": 6.96,
+    "completed": 6.96
+   },
+   "error": "",
+   "items": [
+    {
+     "bytes": 498456,
+     "mime": "image/png",
+     "uploadStatus": "uploaded",
+     "shareStatus": "shared",
+     "link": true,
+     "error": "",
+     "historyId": "547cd9c4-e544-4a13-aa91-3790b2a75237"
+    }
+   ],
+   "helperSeenDuringCountdownAt": 0.04,
+   "secondsAfterCountdown": 3.96,
+   "helperGoneAfter": 0.01
+  },
+  {
+   "name": "cancel-countdown",
+   "passed": true,
+   "note": "cancelled during the countdown; the helper must end by itself",
+   "operationId": "a2b0cce3-4427-4e98-9f3d-418bd3684e6c",
+   "state": "cancelled",
+   "seconds": 1.62,
+   "phasesFirstSeenAt": {
+    "acquiring": 0.14,
+    "cancelled": 1.62
+   },
+   "error": "cancelled",
+   "items": [],
+   "helperSeenDuringCountdownAt": 0.05,
+   "secondsAfterCountdown": -3.38,
+   "helperGoneAfter": 0.01
+  },
+  {
+   "name": "after-cancel",
+   "passed": true,
+   "note": "",
+   "operationId": "6c2b7f30-b75d-440c-93b2-3453958e9087",
+   "state": "completed",
+   "seconds": 3.1,
+   "phasesFirstSeenAt": {
+    "stored": 0.08,
+    "queued": 0.08,
+    "preflight": 0.17,
+    "preparing": 1.57,
+    "uploading": 1.65,
+    "sharing": 2.21,
+    "shared": 3.1,
+    "completed": 3.1
+   },
+   "error": "",
+   "items": [
+    {
+     "bytes": 65536,
+     "mime": "application/octet-stream",
+     "uploadStatus": "uploaded",
+     "shareStatus": "shared",
+     "link": true,
+     "error": "",
+     "historyId": "58d5dc38-1715-475c-86a3-a294f5bfb66b"
+    }
+   ],
+   "helperGoneAfter": 0.01
+  },
+  {
+   "name": "history-picture",
+   "passed": true,
+   "note": "",
+   "operationId": "700fb52b-63f9-45fc-93fa-defdf52872aa",
+   "state": "completed",
+   "seconds": 4.51,
+   "phasesFirstSeenAt": {
+    "acquiring": 0.08,
+    "preparing": 0.2,
+    "preflight": 0.45,
+    "uploading": 1.35,
+    "sharing": 3.53,
+    "shared": 4.51,
+    "completed": 4.51
+   },
+   "error": "",
+   "items": [
+    {
+     "bytes": 359789,
+     "mime": "image/png",
+     "uploadStatus": "uploaded",
+     "shareStatus": "shared",
+     "link": true,
+     "error": "",
+     "historyId": "49ede51e-6fff-45bb-ac3c-64aef1adac9e"
+    }
+   ],
+   "helperSeenDuringCountdownAt": null,
+   "secondsAfterCountdown": 4.51,
+   "helperGoneAfter": 0.01
+  },
+  {
+   "name": "link-answers",
+   "passed": false,
+   "state": "not_run",
+   "note": "not reached before instrumentation error; links revoked in continuation"
+  },
+  {
+   "name": "revoke-all",
+   "passed": true,
+   "note": "one helper per History action",
+   "state": "15 revoked",
+   "seconds": 35.06,
+   "eachSeconds": [
+    2.43,
+    2.27,
+    2.28,
+    2.79,
+    2.22,
+    2.34,
+    2.72,
+    2.2,
+    2.23,
+    2.22,
+    2.21,
+    2.22,
+    2.22,
+    2.35,
+    2.34
+   ],
+   "failures": [],
+   "rows": 15,
+   "rowKeys": [
+    "bytes",
+    "candidate",
+    "category",
+    "concurrencyToken",
+    "condition",
+    "created",
+    "error",
+    "id",
+    "itemId",
+    "linkAvailable",
+    "linkRefreshable",
+    "local",
+    "mime",
+    "name",
+    "namingPrepared",
+    "objectReference",
+    "operationId",
+    "originalFile",
+    "phase",
+    "previewPath",
+    "profileId",
+    "publicationId",
+    "receipt",
+    "remoteStatus",
+    "sha256",
+    "shareIntent",
+    "shareIntentOptions",
+    "shareOperationId",
+    "shareProgress",
+    "shareStatus",
+    "uploadJournal",
+    "uploadProgress",
+    "uploadStatus"
+   ],
+   "helperGoneAfter": 0.01
+  },
+  {
+   "name": "sequential-desktop-1",
+   "passed": true,
+   "note": "",
+   "operationId": "3d059191-47ee-4849-8885-467ac1e81b0e",
+   "state": "completed",
+   "seconds": 4.34,
+   "phasesFirstSeenAt": {
+    "acquiring": 0.07,
+    "preparing": 0.16,
+    "preflight": 0.41,
+    "uploading": 1.29,
+    "sharing": 3.4,
+    "shared": 4.34,
+    "completed": 4.34
+   },
+   "error": "",
+   "items": [
+    {
+     "bytes": 537691,
+     "mime": "image/png",
+     "uploadStatus": "uploaded",
+     "shareStatus": "shared",
+     "link": true,
+     "error": "",
+     "historyId": "a651ab20-d0f1-43ef-a892-5837d0a52773"
+    }
+   ],
+   "helperSeenDuringCountdownAt": null,
+   "secondsAfterCountdown": 4.34,
+   "helperGoneAfter": 0.01
+  },
+  {
+   "name": "sequential-desktop-2",
+   "passed": true,
+   "note": "",
+   "operationId": "36342011-f0d2-4963-98a0-ae8068aaffc0",
+   "state": "completed",
+   "seconds": 4.4,
+   "phasesFirstSeenAt": {
+    "acquiring": 0.07,
+    "preparing": 0.19,
+    "preflight": 0.44,
+    "queued": 1.33,
+    "uploading": 1.41,
+    "sharing": 3.35,
+    "shared": 4.4,
+    "completed": 4.4
+   },
+   "error": "",
+   "items": [
+    {
+     "bytes": 371245,
+     "mime": "image/png",
+     "uploadStatus": "uploaded",
+     "shareStatus": "shared",
+     "link": true,
+     "error": "",
+     "historyId": "f04606d2-5281-42e2-b9b1-e2cc6d4328a7"
+    }
+   ],
+   "helperSeenDuringCountdownAt": null,
+   "secondsAfterCountdown": 4.4,
+   "helperGoneAfter": 0.01
+  },
+  {
+   "name": "sequential-desktop-3",
+   "passed": true,
+   "note": "",
+   "operationId": "312caace-8434-499e-8874-85af76cb76c7",
+   "state": "completed",
+   "seconds": 4.33,
+   "phasesFirstSeenAt": {
+    "acquiring": 0.11,
+    "preparing": 0.2,
+    "preflight": 0.47,
+    "uploading": 1.37,
+    "sharing": 3.41,
+    "shared": 4.33,
+    "completed": 4.33
+   },
+   "error": "",
+   "items": [
+    {
+     "bytes": 382350,
+     "mime": "image/png",
+     "uploadStatus": "uploaded",
+     "shareStatus": "shared",
+     "link": true,
+     "error": "",
+     "historyId": "78bdc9dc-5455-4c40-9acf-be410288c5b0"
+    }
+   ],
+   "helperSeenDuringCountdownAt": null,
+   "secondsAfterCountdown": 4.33,
+   "helperGoneAfter": 0.01
+  },
+  {
+   "name": "revoke-additions",
+   "passed": true,
+   "note": "one helper per History action",
+   "state": "3 revoked",
+   "seconds": 7.92,
+   "eachSeconds": [
+    2.83,
+    2.82,
+    2.27
+   ],
+   "failures": [],
+   "rows": 18,
+   "rowKeys": [
+    "bytes",
+    "candidate",
+    "category",
+    "concurrencyToken",
+    "condition",
+    "created",
+    "error",
+    "id",
+    "itemId",
+    "linkAvailable",
+    "linkRefreshable",
+    "local",
+    "mime",
+    "name",
+    "namingPrepared",
+    "objectReference",
+    "operationId",
+    "originalFile",
+    "phase",
+    "previewPath",
+    "profileId",
+    "publicationId",
+    "receipt",
+    "remoteStatus",
+    "sha256",
+    "shareIntent",
+    "shareIntentOptions",
+    "shareOperationId",
+    "shareProgress",
+    "shareStatus",
+    "uploadJournal",
+    "uploadProgress",
+    "uploadStatus"
+   ],
+   "helperGoneAfter": 0.01
+  }
+ ],
+ "providerDiagnostics": null,
+ "helpersLeft": []
+}

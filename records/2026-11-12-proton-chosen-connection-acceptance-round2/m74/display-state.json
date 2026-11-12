@@ -1,0 +1,208 @@
+[
+  {
+    "at": "2026-11-12T05:07:25Z",
+    "reason": "before first capture",
+    "observations": [
+      {
+        "command": [
+          "loginctl",
+          "list-sessions",
+          "--no-legend"
+        ],
+        "exit": 0,
+        "stdout": " 1915 1000 patrick -     -    closing no -\n27404 1000 patrick -     -    active  no -\n27405 1000 patrick -     -    active  no -\n27406 1000 patrick -     -    active  no -\n43565 1000 patrick -     -    active  no -\n43610 1000 patrick -     -    active  no -\n   c1 1000 patrick seat0 tty7 closing no -\n  c11 1000 patrick seat0 tty7 closing no -\n  c12 1000 patrick seat0 tty7 closing no -\n  c14 1000 patrick seat0 tty7 closing no -\n  c16 1000 patrick seat0 tty7 closing no -\n  c18 1000 patrick seat0 tty7 closing no -\n  c20 1000 patrick seat0 tty7 closing no -\n  c22 1000 patrick seat0 tty7 closing no -\n  c24 1000 patrick seat0 tty7 closing no -\n  c26 1000 patrick seat0 tty7 closing no -\n  c28 1000 patrick seat0 tty7 closing no -\n   c3 1000 patrick seat0 tty7 closing no -\n  c30 1000 patrick seat0 tty7 closing no -\n  c32 1000 patrick seat0 tty7 closing no -\n  c34 1000 patrick seat0 tty7 closing no -\n  c36 1000 patrick seat0 tty7 closing no -\n  c38 1000 patrick seat0 tty7 closing no -\n  c40 1000 patrick seat0 tty7 closing no -\n  c42 1000 patrick seat0 tty7 closing no -\n  c44 1000 patrick seat0 tty7 closing no -\n  c46 1000 patrick seat0 tty7 closing no -\n  c48 1000 patrick seat0 tty7 closing no -\n   c5 1000 patrick seat0 tty7 closing no -\n  c50 1000 patrick seat0 tty7 closing no -\n  c52 1000 patrick seat0 tty7 closing no -\n  c55 1000 patrick seat0 tty7 closing no -\n  c57 1000 patrick seat0 tty7 closing no -\n  c59 1000 patrick seat0 tty7 closing no -\n  c61 1000 patrick seat0 tty7 closing no -\n  c63 1000 patrick seat0 tty7 closing no -\n  c65 1000 patrick seat0 tty7 closing no -\n  c67 1000 patrick seat0 tty7 closing no -\n  c69 1000 patrick seat0 tty7 closing no -\n   c7 1000 patrick seat0 tty7 closing no -\n  c71 1000 patrick seat0 tty7 closing no -\n  c73 1000 patrick seat0 tty7 closing no -\n  c75 1000 patrick seat0 tty7 closing no -\n  c77 1000 patrick seat0 tty7 closing no -\n  c79 1000 patrick seat0 tty7 closing no -\n  c81 1000 patrick seat0 tty7 closing no -\n  c83 1000 patrick seat0 tty7 closing no -\n  c85 1000 patrick seat0 tty7 closing no -\n  c87 1000 patrick seat0 tty7 closing no -\n  c89 1000 patrick seat0 tty7 active  no -\n   c9 1000 patrick seat0 tty7 closing no -\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "loginctl",
+          "show-seat",
+          "seat0",
+          "-p",
+          "ActiveSession"
+        ],
+        "exit": 0,
+        "stdout": "ActiveSession=c89\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "cat",
+          "/sys/class/tty/tty0/active"
+        ],
+        "exit": 0,
+        "stdout": "tty7\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "loginctl",
+          "show-session",
+          "auto",
+          "-p",
+          "LockedHint",
+          "-p",
+          "Active",
+          "-p",
+          "State",
+          "-p",
+          "Type",
+          "-p",
+          "VTNr"
+        ],
+        "exit": 0,
+        "stdout": "VTNr=0\nType=tty\nActive=yes\nState=active\nLockedHint=no\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xset",
+          "-q"
+        ],
+        "exit": 0,
+        "stdout": "Keyboard Control:\n  auto repeat:  on    key click percent:  0    LED mask:  00000002\n  XKB indicators:\n    00: Caps Lock:   off    01: Num Lock:    on     02: Scroll Lock: off\n    03: Compose:     off    04: Kana:        off    05: Sleep:       off\n    06: Suspend:     off    07: Mute:        off    08: Misc:        off\n    09: Mail:        off    10: Charging:    off    11: Shift Lock:  off\n    12: Group 2:     off    13: Mouse Keys:  off\n  auto repeat delay:  500    repeat rate:  33\n  auto repeating keys:  00ffffffdffffbbf\n                        fadfffefffedffff\n                        9fffffffffffffff\n                        fff7ffffffffffff\n  bell percent:  50    bell pitch:  400    bell duration:  100\nPointer Control:\n  acceleration:  2/1    threshold:  4\nScreen Saver:\n  prefer blanking:  yes    allow exposures:  yes\n  timeout:  0    cycle:  0\nColors:\n  default colormap:  0x20    BlackPixel:  0x0    WhitePixel:  0xffffff\nFont Path:\n  /usr/share/fonts/X11/misc,/usr/share/fonts/X11/Type1,built-ins\nDPMS (Display Power Management Signaling):\n  Standby: 0    Suspend: 0    Off: 0\n  DPMS is Disabled\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xprop",
+          "-root",
+          "_NET_ACTIVE_WINDOW",
+          "_NET_CLIENT_LIST_STACKING"
+        ],
+        "exit": 0,
+        "stdout": "_NET_ACTIVE_WINDOW(WINDOW): window id # 0x300181a\n_NET_CLIENT_LIST_STACKING(WINDOW): window id # 0x300181a\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "gdbus",
+          "call",
+          "--session",
+          "--dest",
+          "org.freedesktop.ScreenSaver",
+          "--object-path",
+          "/ScreenSaver",
+          "--method",
+          "org.freedesktop.ScreenSaver.GetActive"
+        ],
+        "exit": 1,
+        "stdout": "",
+        "stderr": "Error: GDBus.Error:org.freedesktop.DBus.Error.NotSupported: This method is not implemented\n"
+      },
+      {
+        "command": [
+          "wmctrl",
+          "-lp"
+        ],
+        "exit": 0,
+        "stdout": "0x0300181a 0 625799 mint-builder Desktop",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "ps",
+          "-u",
+          "1000",
+          "-o",
+          "pid=,comm="
+        ],
+        "exit": 0,
+        "stdout": "    939 systemd\n    959 (sd-pam)\n    989 pipewire\n    990 pipewire\n    992 tigervncserver\n    993 wireplumber\n    994 pipewire-pulse\n    997 dbus-daemon\n   1030 Xtigervnc\n   1037 dbus-run-sessio\n   1038 dbus-daemon\n   1039 xfce4-session\n   1052 at-spi-bus-laun\n   1059 dbus-daemon\n   1071 at-spi2-registr\n   1078 ssh-agent\n   1091 gpg-agent\n   1096 xfwm4\n   1101 gvfsd\n   1107 gvfsd-fuse\n   1220 xfsettingsd\n   1233 gvfsd\n   1272 xfce4-panel\n   1285 Thunar\n   1333 xfdesktop\n   1386 dconf-service\n   1397 gvfs-udisks2-vo\n   1420 gvfs-gphoto2-vo\n   1454 gvfs-goa-volume\n   1459 goa-daemon\n   1460 blueman-applet\n   1472 panel-6-systray\n   1474 goa-identity-se\n   1475 panel-8-pulseau\n   1480 panel-10-notifi\n   1488 gvfs-afc-volume\n   1495 applet.py\n   1496 mintwelcome-lau\n   1513 touchegg\n   1514 polkit-gnome-au\n   1517 dconf-service\n   1520 xiccd\n   1533 xfce4-notifyd\n   1556 nm-applet\n   1558 mintreport-tray\n   1565 evolution-alarm\n   1566 sh\n   1567 mintwelcome\n   1568 mintwelcome.py\n   1569 agent\n   1614 gvfs-mtp-volume\n   1617 panel-14-action\n   1693 evolution-sourc\n   1709 goa-daemon\n   1722 goa-identity-se\n   1744 obexd\n   1747 evolution-calen\n   1774 evolution-addre\n   1857 gvfs-udisks2-vo\n   1868 gvfs-gphoto2-vo\n   1874 gvfs-goa-volume\n   1880 gvfs-afc-volume\n   1887 gvfs-mtp-volume\n   1920 gvfsd-trash\n   1940 gvfsd-metadata\n   1967 agent\n   1997 evolution-sourc\n   2086 evolution-calen\n   2100 obexd\n   2120 evolution-addre\n   2234 gvfsd-trash\n   2708 xdg-desktop-por\n   2713 xdg-permission-\n   2718 xdg-document-po\n   4549 gvfsd-network\n   4558 gvfsd-dnssd\n  10789 gvfsd-http\n  13214 xdg-desktop-por\n  13967 agent\n  21566 gvfsd-metadata\n  34056 agent\n  36770 agent\n 244732 agent\n 261182 agent\n 313646 bash\n 313651 guest-lock-watc\n 428247 cinnamon-launch\n 428252 cinnamon\n 435781 systemd-inhibit\n 435783 X0tigervnc\n 437526 agent\n 475173 agent\n 492613 agent\n 493467 agent\n 494511 agent\n 495466 agent\n 496428 agent\n 497277 agent\n 498891 sshd\n 503672 sleep\n 503780 sshd\n 503781 python3\n 505352 AppRun\n 505381 putgd\n 506027 ps\n 531878 agent\n 536390 agent\n 537728 agent\n 538855 agent\n 539988 agent\n 541256 agent\n 542561 agent\n 543692 agent\n 544875 agent\n 546128 agent\n 548460 agent\n 549632 agent\n 550734 agent\n 560704 agent\n 560915 gnome-keyring-d\n 582352 agent\n 590790 agent\n 592550 agent\n 594451 agent\n 596296 agent\n 601776 agent\n 603609 agent\n 605652 agent\n 608457 agent\n 611873 agent\n 613791 agent\n 615866 agent\n 617846 agent\n 619913 agent\n 621866 agent\n 623893 agent\n 625287 cinnamon-sessio\n 625388 ibus-daemon\n 625398 ibus-dconf\n 625400 ibus-ui-gtk3\n 625401 ibus-extension-\n 625406 ibus-x11\n 625409 ibus-portal\n 625425 csd-settings-re\n 625426 csd-clipboard\n 625431 csd-a11y-settin\n 625433 csd-automount\n 625435 csd-housekeepin\n 625441 csd-xsettings\n 625445 csd-media-keys\n 625448 csd-wacom\n 625450 csd-print-notif\n 625453 at-spi-bus-laun\n 625457 csd-color\n 625459 csd-keyboard\n 625461 csd-power\n 625463 csd-screensaver\n 625467 csd-background\n 625488 dbus-daemon\n 625505 csd-printer\n 625545 at-spi2-registr\n 625669 ibus-engine-sim\n 625790 xiccd\n 625794 blueman-applet\n 625796 evolution-alarm\n 625799 nemo-desktop\n 625806 agent\n 625811 cinnamon-killer\n 626228 mintUpdate\n 626319 mintreport-tray\n1809620 sshd\n1809621 sshd\n1809628 sshd\n1809629 python3\n3903709 xapp-sn-watcher\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "loginctl",
+          "show-session",
+          "c89",
+          "-p",
+          "LockedHint",
+          "-p",
+          "Active",
+          "-p",
+          "State",
+          "-p",
+          "Type",
+          "-p",
+          "VTNr"
+        ],
+        "exit": 0,
+        "stdout": "VTNr=7\nType=x11\nActive=yes\nState=active\nLockedHint=no\n",
+        "stderr": ""
+      },
+      {
+        "file": "/sys/class/drm/card1-DP-1/dpms",
+        "value": "Off"
+      },
+      {
+        "file": "/sys/class/drm/card1-DP-1/enabled",
+        "value": "disabled"
+      },
+      {
+        "file": "/sys/class/drm/card1-DP-1/status",
+        "value": "disconnected"
+      },
+      {
+        "file": "/sys/class/drm/card1-DP-2/dpms",
+        "value": "Off"
+      },
+      {
+        "file": "/sys/class/drm/card1-DP-2/enabled",
+        "value": "disabled"
+      },
+      {
+        "file": "/sys/class/drm/card1-DP-2/status",
+        "value": "disconnected"
+      },
+      {
+        "file": "/sys/class/drm/card1-DP-3/dpms",
+        "value": "Off"
+      },
+      {
+        "file": "/sys/class/drm/card1-DP-3/enabled",
+        "value": "disabled"
+      },
+      {
+        "file": "/sys/class/drm/card1-DP-3/status",
+        "value": "disconnected"
+      },
+      {
+        "file": "/sys/class/drm/card1-HDMI-A-1/dpms",
+        "value": "On"
+      },
+      {
+        "file": "/sys/class/drm/card1-HDMI-A-1/enabled",
+        "value": "enabled"
+      },
+      {
+        "file": "/sys/class/drm/card1-HDMI-A-1/status",
+        "value": "connected"
+      },
+      {
+        "file": "/sys/class/drm/card1-HDMI-A-2/dpms",
+        "value": "Off"
+      },
+      {
+        "file": "/sys/class/drm/card1-HDMI-A-2/enabled",
+        "value": "disabled"
+      },
+      {
+        "file": "/sys/class/drm/card1-HDMI-A-2/status",
+        "value": "disconnected"
+      },
+      {
+        "file": "/sys/class/drm/card1-HDMI-A-3/dpms",
+        "value": "Off"
+      },
+      {
+        "file": "/sys/class/drm/card1-HDMI-A-3/enabled",
+        "value": "disabled"
+      },
+      {
+        "file": "/sys/class/drm/card1-HDMI-A-3/status",
+        "value": "disconnected"
+      }
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+ 22:58:44 up 25 days, 23:42,  8 users,  load average: 1.44, 1.18, 0.80
+Socket preflight: /run/user/1000/putgd/session.sock = 33 UTF-8 bytes
+PASS file-64k: completed in 3.9 s 
+PASS file-1m: completed in 5.53 s 
+Traceback (most recent call last):
+  File "/home/patrick/work/pecr2/round2.py", line 95, in <module>
+    sys.exit(p.main())
+             ~~~~~~^^
+  File "/home/patrick/work/pecr2/proton_accept.py", line 421, in main
+    report['results'] = run(app, None, set(args.only))
+                        ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/pecr2/round2.py", line 88, in run
+    results=orig_run(app,tests,only)
+  File "/home/patrick/work/pecr2/proton_accept.py", line 293, in run
+    upload_files('file-8m', [payload('acc-8m.bin', 8 * 1024 * 1024)])
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/pecr2/proton_accept.py", line 246, in upload_files
+    outcome['helperGoneAfter'] = helpers_gone(15)
+                                 ~~~~~~~~~~~~^^^^
+  File "/home/patrick/work/pecr2/round2.py", line 74, in gone
+    active.authorize_capture(); active.start()
+                                ~~~~~~~~~~~~^^
+  File "/home/patrick/work/pecr2/round2.py", line 36, in start
+    orig_start(app); active=app
+    ~~~~~~~~~~^^^^^
+  File "/home/patrick/work/pecr2/proton_accept.py", line 150, in start
+    log = open(self.work / 'resident.log', 'x')
+FileExistsError: [Errno 17] File exists: '/home/patrick/work/pecr2/pr/resident.log'

@@ -1,0 +1,35 @@
+d69 (Debian 13 Plasma Wayland): locked
+  proton-round2 (p1414-ec6-d69), acquired 2026-11-12T04:58:34Z
+  purpose: PR1414 exact-head acceptance; notes /tmp/pr1414r2
+  already on the host (not yours; leave them and tell your coordinator):
+    process 2008860: gpg-agent --homedir /home/patrick/.local/share/putgd-signer/gnupg --use-standard-socket --daemon
+    process 3909750: /home/patrick/work/s1376/src/build/dev/putgd-record
+d69 Proton session (Debian 13 Plasma Wayland): locked
+  proton-round2 (p1414-ec6-d69), acquired 2026-11-12T04:58:35Z
+  purpose: PR1414 round2 control
+d69 (Debian 13 Plasma Wayland): heartbeat recorded
+  proton-round2 (p1414-ec6-d69), acquired 2026-11-12T04:58:34Z
+  purpose: PR1414 exact-head acceptance; notes /tmp/pr1414r2
+  expires in 44 min, heartbeat 0 min ago
+d69 Proton session (Debian 13 Plasma Wayland): heartbeat recorded
+  proton-round2 (p1414-ec6-d69), acquired 2026-11-12T04:58:35Z
+  purpose: PR1414 round2 control
+  expires in 44 min, heartbeat 0 min ago
+3913285 bash
+d69 Proton session (Debian 13 Plasma Wayland): released
+  proton-round2 (p1414-ec6-d69), acquired 2026-11-12T04:58:35Z
+  purpose: PR1414 round2 control
+  receipt on the host: /home/patrick/putgd-lab/locks/history/2026-11-12T04-59-49Z-proton-release.json
+  Tell the next session in the queue and your coordinator
+d69 (Debian 13 Plasma Wayland): Nothing new is left on the host. Finish the manual steps (workstation forwards, re-login after an extension copy), then rerun with --verified-clean
+  already there when the lock was taken:
+    process 2008860: gpg-agent --homedir /home/patrick/.local/share/putgd-signer/gnupg --use-standard-socket --daemon
+Traceback (most recent call last):
+  File "/tmp/pr1414r2/drive.py", line 43, in <module>
+    lease('release')
+  File "/tmp/pr1414r2/drive.py", line 10, in lease
+    def lease(action,res='desktop',**kw):return s.run(lock+[action,host,'--resource',res,'--session',session]+kw.get('extra',[]),check=True)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/usr/bin/python3', '/tmp/pr1414r2/desktop_lock.py', 'release', 'd69', '--resource', 'desktop', '--session', 'p1414-ec6-d69']' returned non-zero exit status 1.

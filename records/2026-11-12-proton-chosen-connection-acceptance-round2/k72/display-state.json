@@ -1,0 +1,217 @@
+[
+  {
+    "at": "2026-11-12T05:04:05Z",
+    "reason": "before first capture",
+    "observations": [
+      {
+        "command": [
+          "loginctl",
+          "list-sessions",
+          "--no-legend"
+        ],
+        "exit": 0,
+        "stdout": "    1 1000 patrick -     1255    manager -    no -\n21257 1000 patrick -     3306890 user    -    no -\n  509 1000 patrick seat0 3440604 user    tty3 no -\n 7198 1000 patrick -     738310  user    -    no -\n 7199 1000 patrick -     738311  user    -    no -\n 7200 1000 patrick -     738314  user    -    no -\n 8025 1000 patrick -     1918878 user    -    no -\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "loginctl",
+          "show-seat",
+          "seat0",
+          "-p",
+          "ActiveSession"
+        ],
+        "exit": 0,
+        "stdout": "ActiveSession=509\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "cat",
+          "/sys/class/tty/tty0/active"
+        ],
+        "exit": 0,
+        "stdout": "tty3\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "loginctl",
+          "show-session",
+          "auto",
+          "-p",
+          "LockedHint",
+          "-p",
+          "Active",
+          "-p",
+          "State",
+          "-p",
+          "Type",
+          "-p",
+          "VTNr"
+        ],
+        "exit": 0,
+        "stdout": "VTNr=0\nType=tty\nActive=yes\nState=active\nLockedHint=no\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xset",
+          "-q"
+        ],
+        "exit": 0,
+        "stdout": "Keyboard Control:\n  auto repeat:  on    key click percent:  0    LED mask:  00000000\n  XKB indicators:\n    00: Caps Lock:   off    01: Num Lock:    off    02: Scroll Lock: off\n    03: Compose:     off    04: Kana:        off    05: Sleep:       off\n    06: Suspend:     off    07: Mute:        off    08: Misc:        off\n    09: Mail:        off    10: Charging:    off    11: Shift Lock:  off\n    12: Group 2:     off    13: Mouse Keys:  off\n  auto repeat delay:  600    repeat rate:  25\n  auto repeating keys:  00ffffffdffffbbf\n                        fadfffefffedffff\n                        9fffffffffffffff\n                        fff7ffffffffffff\n  bell percent:  50    bell pitch:  400    bell duration:  100\nPointer Control:\n  acceleration:  2/1    threshold:  4\nScreen Saver:\n  prefer blanking:  yes    allow exposures:  yes\n  timeout:  0    cycle:  0\nColors:\n  default colormap:  0x22    BlackPixel:  0x0    WhitePixel:  0xffffff\nFont Path:\n  /usr/share/fonts/X11/misc,/usr/share/fonts/X11/Type1,built-ins\nDPMS (Display Power Management Signaling):\n  Server does not have the DPMS Extension\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xprop",
+          "-root",
+          "_NET_ACTIVE_WINDOW",
+          "_NET_CLIENT_LIST_STACKING"
+        ],
+        "exit": 0,
+        "stdout": "_NET_ACTIVE_WINDOW(WINDOW): window id # 0x200000\n_NET_CLIENT_LIST_STACKING(WINDOW): window id # \n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "gdbus",
+          "call",
+          "--session",
+          "--dest",
+          "org.freedesktop.ScreenSaver",
+          "--object-path",
+          "/ScreenSaver",
+          "--method",
+          "org.freedesktop.ScreenSaver.GetActive"
+        ],
+        "exit": 0,
+        "stdout": "(false,)\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wmctrl",
+          "-lp"
+        ],
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "ps",
+          "-u",
+          "1000",
+          "-o",
+          "pid=,comm="
+        ],
+        "exit": 0,
+        "stdout": "   1255 systemd\n   1274 (sd-pam)\n   1332 dbus-daemon\n   1336 pipewire\n   1386 mpris-proxy\n   1388 wireplumber\n   1389 pipewire\n   1390 pipewire-pulse\n   1676 ssh-agent\n   1810 dconf-service\n   2031 obexd\n   8735 catatonit\n 135680 python3\n 201251 python3\n 407599 kwalletd6\n 411685 kiod6\n 501183 gvfsd\n 501189 gvfsd-fuse\n 559780 snap\n 738496 sshd-session\n 738503 python3\n 738504 sshd-session\n 738505 sshd-session\n1918915 bash\n2014694 krunner\n2014802 konsole\n2014817 btop\n2167051 drkonqi-coredum\n2167115 drkonqi-coredum\n2167206 drkonqi-coredum\n2167361 drkonqi-coredum\n2167568 drkonqi-coredum\n2167734 drkonqi-coredum\n2168065 drkonqi-coredum\n2219095 drkonqi-coredum\n2298732 drkonqi-coredum\n2303486 drkonqi-coredum\n2317213 drkonqi-coredum\n2550301 drkonqi-coredum\n2550338 drkonqi-coredum\n2575547 drkonqi-coredum\n2585428 drkonqi-coredum\n2585889 drkonqi-coredum\n3297139 python3\n3297140 python3\n3297142 python3\n3297143 ctest\n3306926 sshd-session\n3306927 python3\n3308157 putgd\n3308680 sleep\n3308876 ps\n3440622 startplasma-way\n3440754 kwin_wayland_wr\n3440762 systemd-inhibit\n3440763 python3\n3440764 kwin_wayland\n3440771 w0vncserver\n3440815 Xwayland\n3440838 at-spi-bus-laun\n3440852 dbus-daemon\n3440858 ksmserver\n3440860 kded6\n3440893 plasmashell\n3440895 at-spi2-registr\n3440940 kactivitymanage\n3440942 gmenudbusmenupr\n3440943 kaccess\n3440945 polkit-kde-auth\n3440946 org_kde_powerde\n3440947 xembedsniproxy\n3441015 xsettingsd\n3441060 kdeconnectd\n3441069 kunifiedpush-di\n3441072 xdg-desktop-por\n3441074 agent\n3441081 DiscoverNotifie\n3441096 xdg-permission-\n3441130 xdg-desktop-por\n3441146 knighttimed\n3441200 xdg-desktop-por\n3441217 ksecretd\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "loginctl",
+          "show-session",
+          "509",
+          "-p",
+          "LockedHint",
+          "-p",
+          "Active",
+          "-p",
+          "State",
+          "-p",
+          "Type",
+          "-p",
+          "VTNr"
+        ],
+        "exit": 0,
+        "stdout": "VTNr=3\nType=wayland\nActive=yes\nState=active\nLockedHint=no\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "kscreen-doctor",
+          "-o"
+        ],
+        "exit": 0,
+        "stdout": "\u001b[01;32mOutput: \u001b[0;0m1 HDMI-A-1 8f92ccb3-007f-4369-82ef-cff009e96e25\n\t\u001b[01;32menabled\u001b[0;0m\n\t\u001b[01;32mconnected\u001b[0;0m\n\t\u001b[01;32mpriority 1\u001b[0;0m\n\t\u001b[01;33mHDMI\u001b[0;0m\n\t\u001b[01;33mreplication source:\u001b[0;0m0\n\t\u001b[01;34mModes: \u001b[0;0m 1:\u001b[01;32m1920x1080@60.00*\u001b[0;0m!  10:640x480@59.94  2:1920x1080@60.00  3:1920x1080@59.94  4:1600x900@60.00  5:1280x1024@60.02  6:1152x864@59.97  7:1024x768@60.00  8:800x600@60.32  9:640x480@60.00 \n\u001b[01;33m\tCustom modes:\u001b[0;0m None\n\u001b[01;33m\tGeometry: \u001b[0;0m0,0 1920x1080\n\u001b[01;33m\tScale: \u001b[0;0m1\n\u001b[01;33m\tRotation: \u001b[0;0m1\n\u001b[01;33m\tOverscan: \u001b[0;0m0\n\u001b[01;33m\tVrr: \u001b[0;0mincapable\n\u001b[01;33m\tRgbRange: \u001b[0;0mAutomatic\n\u001b[01;33m\tHDR: \u001b[0;0mincapable\n\u001b[01;33m\tWide Color Gamut: \u001b[0;0mdisabled\n\u001b[01;33m\tICC profile: \u001b[0;0mnone\n\u001b[01;33m\tColor profile source: \u001b[0;0msRGB\n\u001b[01;33m\tColor power preference: \u001b[0;0mprefer efficiency and performance\n\u001b[01;33m\tBrightness control: \u001b[0;0msupported, set to 100% and dimming to 100%\n\u001b[01;33m\tColor resolution: \u001b[0;0mautomatic (10), range: [8; 12] bits per color\n\u001b[01;33m\tAllow EDR: \u001b[0;0munsupported\n\u001b[01;33m\tSharpness control: \u001b[0;0munsupported\n\u001b[01;33m\tAutomatic brightness: \u001b[0;0munsupported\n",
+        "stderr": ""
+      },
+      {
+        "file": "/sys/class/drm/card1-DP-1/dpms",
+        "value": "Off"
+      },
+      {
+        "file": "/sys/class/drm/card1-DP-1/enabled",
+        "value": "disabled"
+      },
+      {
+        "file": "/sys/class/drm/card1-DP-1/status",
+        "value": "disconnected"
+      },
+      {
+        "file": "/sys/class/drm/card1-DP-2/dpms",
+        "value": "Off"
+      },
+      {
+        "file": "/sys/class/drm/card1-DP-2/enabled",
+        "value": "disabled"
+      },
+      {
+        "file": "/sys/class/drm/card1-DP-2/status",
+        "value": "disconnected"
+      },
+      {
+        "file": "/sys/class/drm/card1-DP-3/dpms",
+        "value": "Off"
+      },
+      {
+        "file": "/sys/class/drm/card1-DP-3/enabled",
+        "value": "disabled"
+      },
+      {
+        "file": "/sys/class/drm/card1-DP-3/status",
+        "value": "disconnected"
+      },
+      {
+        "file": "/sys/class/drm/card1-HDMI-A-1/dpms",
+        "value": "On"
+      },
+      {
+        "file": "/sys/class/drm/card1-HDMI-A-1/enabled",
+        "value": "enabled"
+      },
+      {
+        "file": "/sys/class/drm/card1-HDMI-A-1/status",
+        "value": "connected"
+      },
+      {
+        "file": "/sys/class/drm/card1-HDMI-A-2/dpms",
+        "value": "Off"
+      },
+      {
+        "file": "/sys/class/drm/card1-HDMI-A-2/enabled",
+        "value": "disabled"
+      },
+      {
+        "file": "/sys/class/drm/card1-HDMI-A-2/status",
+        "value": "disconnected"
+      },
+      {
+        "file": "/sys/class/drm/card1-HDMI-A-3/dpms",
+        "value": "Off"
+      },
+      {
+        "file": "/sys/class/drm/card1-HDMI-A-3/enabled",
+        "value": "disabled"
+      },
+      {
+        "file": "/sys/class/drm/card1-HDMI-A-3/status",
+        "value": "disconnected"
+      }
+    ]
+  }
+]
