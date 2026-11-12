@@ -1,0 +1,77 @@
+{
+ "capture": [
+  1920,
+  24755
+ ],
+ "reference": [
+  1920,
+  24756
+ ],
+ "comparedColumns": 1380,
+ "bands": 387,
+ "exactBands": 385,
+ "shiftedBands": 0,
+ "badBands": 2,
+ "bad": [
+  {
+   "y": [
+    24640,
+    24704
+   ],
+   "pixels": 23232,
+   "shift": 0,
+   "votes": 0,
+   "x": [
+    64,
+    1856
+   ],
+   "rows": [
+    24652,
+    24704
+   ]
+  },
+  {
+   "y": [
+    24704,
+    24755
+   ],
+   "pixels": 12656,
+   "shift": 0,
+   "votes": 0,
+   "x": [
+    64,
+    1832
+   ],
+   "rows": [
+    24704,
+    24740
+   ]
+  }
+ ],
+ "shiftChanges": [],
+ "rowsEqualBitForBit": 1222,
+ "excluded": [
+  {
+   "x": [
+    196,
+    468
+   ],
+   "why": "a side bar the page keeps in place (sticky, DIV.vector-sticky-pinned-container): the capture shows it beside every row as the screen did, the browser's picture shows it once"
+  },
+  {
+   "x": [
+    1452,
+    1712
+   ],
+   "why": "a side bar the page keeps in place (sticky, DIV.vector-sticky-pinned-container): the capture shows it beside every row as the screen did, the browser's picture shows it once"
+  },
+  {
+   "x": [
+    1912,
+    1920
+   ],
+   "why": "Firefox's overlay scrollbar at the right edge: on the screen while the page scrolls, not in the browser's picture"
+  }
+ ],
+ "rule": "a band of 64 rows passes when at most 0.2% of its compared pixels lie in 4x4 blocks whose grey mean differs by more than 32, at the place in the reference that its bit-equal rows name (or the band before it had)"
+}
