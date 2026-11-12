@@ -1,0 +1,204 @@
+[
+  {
+    "at": "2026-11-12T06:30:39Z",
+    "reason": "before first capture",
+    "observations": [
+      {
+        "command": [
+          "loginctl",
+          "list-sessions",
+          "--no-legend"
+        ],
+        "exit": 0,
+        "stdout": "12895 1000 patrick -     3906838 user    -    no -\n12909 1000 patrick seat0 3914622 user    tty2 no -\n12938 1000 patrick -     3922445 user    -    no -\n    2 1000 patrick -     1051    manager -    no -\n 4347 1000 patrick -     679488  user    -    no -\n 4348 1000 patrick -     679489  user    -    no -\n 4349 1000 patrick -     679492  user    -    no -\n 4402 1000 patrick -     693177  user    -    no -\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "loginctl",
+          "show-seat",
+          "seat0",
+          "-p",
+          "ActiveSession"
+        ],
+        "exit": 0,
+        "stdout": "ActiveSession=12909\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "cat",
+          "/sys/class/tty/tty0/active"
+        ],
+        "exit": 0,
+        "stdout": "tty2\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "loginctl",
+          "show-session",
+          "auto",
+          "-p",
+          "LockedHint",
+          "-p",
+          "Active",
+          "-p",
+          "State",
+          "-p",
+          "Type",
+          "-p",
+          "VTNr"
+        ],
+        "exit": 0,
+        "stdout": "VTNr=0\nType=tty\nActive=yes\nState=active\nLockedHint=no\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xset",
+          "-q"
+        ],
+        "error": "FileNotFoundError"
+      },
+      {
+        "command": [
+          "xprop",
+          "-root",
+          "_NET_ACTIVE_WINDOW",
+          "_NET_CLIENT_LIST_STACKING"
+        ],
+        "exit": 1,
+        "stdout": "",
+        "stderr": "xprop:  unable to open display ''\n"
+      },
+      {
+        "command": [
+          "gdbus",
+          "call",
+          "--session",
+          "--dest",
+          "org.freedesktop.ScreenSaver",
+          "--object-path",
+          "/ScreenSaver",
+          "--method",
+          "org.freedesktop.ScreenSaver.GetActive"
+        ],
+        "exit": 1,
+        "stdout": "",
+        "stderr": "Error: GDBus.Error:org.freedesktop.DBus.Error.NotSupported: This method is not part of the idle inhibition specification: https://specifications.freedesktop.org/idle-inhibit-spec/latest/\n"
+      },
+      {
+        "command": [
+          "wmctrl",
+          "-lp"
+        ],
+        "error": "FileNotFoundError"
+      },
+      {
+        "command": [
+          "ps",
+          "-u",
+          "1000",
+          "-o",
+          "pid=,comm="
+        ],
+        "exit": 0,
+        "stdout": "   1051 systemd\n   1053 (sd-pam)\n  47675 catatonit\n 679502 sshd-session\n 679503 sshd-session\n 679504 sshd-session\n 679505 python3\n 693181 bash\n3906841 sshd-session\n3914631 gnome-keyring-d\n3914636 gdm-wayland-ses\n3914639 dbus-broker-lau\n3914640 dbus-broker\n3914642 gnome-session-i\n3914677 gnome-session-c\n3914678 uresourced\n3914685 gnome-session-s\n3914686 gvfsd\n3914698 gvfsd-fuse\n3914701 gnome-shell\n3914712 pipewire\n3914713 wireplumber\n3914791 at-spi-bus-laun\n3914798 dbus-broker-lau\n3914799 dbus-broker\n3914802 at-spi2-registr\n3914822 gnome-shell-cal\n3914823 xdg-permission-\n3914842 evolution-sourc\n3914845 gjs\n3914853 ibus-daemon\n3914857 gsd-a11y-settin\n3914858 gsd-color\n3914861 gsd-datetime\n3914867 gsd-housekeepin\n3914870 gsd-keyboard\n3914873 gsd-media-keys\n3914877 gsd-power\n3914881 gsd-print-notif\n3914885 gsd-rfkill\n3914886 gsd-screensaver\n3914893 gsd-sharing\n3914897 gsd-smartcard\n3914898 gsd-sound\n3914909 gsd-usb-protect\n3914911 gsd-wwan\n3914940 gsd-disk-utilit\n3914982 ibus-dconf\n3914984 ibus-extension-\n3915110 ibus-portal\n3915111 goa-daemon\n3915114 gjs\n3915116 gvfs-udisks2-vo\n3915117 localsearch-3\n3915121 evolution-alarm\n3915122 gnome-software\n3915124 pipewire-pulse\n3915149 xdg-desktop-por\n3915160 evolution-calen\n3915167 gvfs-afc-volume\n3915183 xdg-document-po\n3915206 gvfs-gphoto2-vo\n3915217 xdg-desktop-por\n3915229 gvfs-mtp-volume\n3915234 goa-identity-se\n3915242 gvfs-goa-volume\n3915288 evolution-addre\n3915297 gsd-printer\n3915344 gvfsd-metadata\n3915348 ibus-engine-sim\n3915458 dconf-service\n3915615 xdg-desktop-por\n3915623 gnome-keyring-d\n3915792 w0vncserver\n3915995 ibus-engine-tb\n3922448 sshd-session\n3922449 python3\n3924541 AppRun\n3924571 putgd\n3924706 putgd-ui\n3924728 gsettings\n3925168 sleep\n3925380 localsearch-ext\n3925419 ps\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "loginctl",
+          "show-session",
+          "12909",
+          "-p",
+          "LockedHint",
+          "-p",
+          "Active",
+          "-p",
+          "State",
+          "-p",
+          "Type",
+          "-p",
+          "VTNr"
+        ],
+        "exit": 0,
+        "stdout": "VTNr=2\nType=wayland\nActive=yes\nState=active\nLockedHint=no\n",
+        "stderr": ""
+      },
+      {
+        "file": "/sys/class/drm/card0-DP-1/dpms",
+        "value": "Off"
+      },
+      {
+        "file": "/sys/class/drm/card0-DP-1/enabled",
+        "value": "disabled"
+      },
+      {
+        "file": "/sys/class/drm/card0-DP-1/status",
+        "value": "disconnected"
+      },
+      {
+        "file": "/sys/class/drm/card0-DP-2/dpms",
+        "value": "Off"
+      },
+      {
+        "file": "/sys/class/drm/card0-DP-2/enabled",
+        "value": "disabled"
+      },
+      {
+        "file": "/sys/class/drm/card0-DP-2/status",
+        "value": "disconnected"
+      },
+      {
+        "file": "/sys/class/drm/card0-DP-3/dpms",
+        "value": "Off"
+      },
+      {
+        "file": "/sys/class/drm/card0-DP-3/enabled",
+        "value": "disabled"
+      },
+      {
+        "file": "/sys/class/drm/card0-DP-3/status",
+        "value": "disconnected"
+      },
+      {
+        "file": "/sys/class/drm/card0-HDMI-A-1/dpms",
+        "value": "On"
+      },
+      {
+        "file": "/sys/class/drm/card0-HDMI-A-1/enabled",
+        "value": "enabled"
+      },
+      {
+        "file": "/sys/class/drm/card0-HDMI-A-1/status",
+        "value": "connected"
+      },
+      {
+        "file": "/sys/class/drm/card0-HDMI-A-2/dpms",
+        "value": "Off"
+      },
+      {
+        "file": "/sys/class/drm/card0-HDMI-A-2/enabled",
+        "value": "disabled"
+      },
+      {
+        "file": "/sys/class/drm/card0-HDMI-A-2/status",
+        "value": "disconnected"
+      },
+      {
+        "file": "/sys/class/drm/card0-HDMI-A-3/dpms",
+        "value": "Off"
+      },
+      {
+        "file": "/sys/class/drm/card0-HDMI-A-3/enabled",
+        "value": "disabled"
+      },
+      {
+        "file": "/sys/class/drm/card0-HDMI-A-3/status",
+        "value": "disconnected"
+      }
+    ]
+  }
+]

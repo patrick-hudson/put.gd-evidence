@@ -1,0 +1,17 @@
+fedora gnome-shell wayland build 26.1112.4656-dev+g1be97a258351
+PASS  file-64k               completed       4.88 s  bytes=65536   
+PASS  file-1m                completed       5.51 s  bytes=1048576   
+PASS  file-8m                completed        9.9 s  bytes=8388608   clipboard_unavailable
+PASS  batch-3                completed       8.97 s  bytes=98304,98304,98304   clipboard_unavailable
+PASS  text-small             completed       3.07 s  bytes=660   
+PASS  back-to-back           completed       7.71 s  bytes=524288,65536  second upload invoked while the first was running 
+FAIL  desktop-now            failed           0.2 s  bytes=   gnome_extension_missing
+FAIL  desktop-delay3         failed          0.11 s  bytes=   gnome_extension_missing
+FAIL  desktop-delay3-again   failed          0.13 s  bytes=   gnome_extension_missing
+FAIL  monitor-delay3         failed          0.12 s  bytes=   gnome_extension_missing
+FAIL  cancel-countdown       failed          0.12 s  bytes=  cancelled during the countdown; the helper must end by itself gnome_extension_missing
+PASS  after-cancel           completed        3.5 s  bytes=65536   
+FAIL  history-picture        failed          0.09 s  bytes=   gnome_extension_missing
+PASS  link-answers           200             0.56 s  bytes=  HTTP status of the share page; the address is not recorded 
+PASS  revoke-all             10 revoked     24.92 s  bytes=  one helper per History action 
+9/15 passed; helpers left: []
