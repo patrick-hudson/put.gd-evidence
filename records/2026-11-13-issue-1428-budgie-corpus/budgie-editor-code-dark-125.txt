@@ -1,0 +1,34 @@
+#include <algorithm>
+#include <iostream>
+#include <numeric>
+#include <string>
+#include <vector>
+
+struct Sample { std::string label; int width; int height; };
+int main() {
+    const std::vector<Sample> samples = {
+        {"garden", 640, 480}, {"river", 800, 600}, {"valley", 1024, 768}
+    };
+    std::vector<int> areas;
+    // Read each synthetic sample and preserve its original label for the report.
+    for (const auto& sample : samples) {
+        const int area = sample.width * sample.height;
+        const bool visible = sample.width > 0 && sample.height > 0;
+        if (!visible) { continue; } // Empty rows do not belong in the result.
+        areas.push_back(area);
+        std::cout << sample.label << " width " << sample.width << " height " << sample.height;
+        std::cout << " area " << area << '\n';
+    }
+    // Sort the values before choosing the middle entry and printing the total.
+    std::sort(areas.begin(), areas.end());
+    const auto total = std::accumulate(areas.begin(), areas.end(), 0);
+    const auto middle = areas.empty() ? 0 : areas[areas.size() / 2];
+    std::cout << "total " << total << " middle " << middle << '\n';
+    // A copy keeps the source vector intact while the display order is reversed.
+    auto reversed = areas;
+    std::reverse(reversed.begin(), reversed.end());
+    for (const int value : reversed) { std::cout << value << ' '; }
+    std::cout << '\n';
+    // Every number and label on this page is disposable synthetic lab content.
+    return total > 0 ? 0 : 1;
+}
