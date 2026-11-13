@@ -50,7 +50,7 @@ The historical five installer Proton audits are extraction/integrity/runtime/adv
 
 On nightly `0ee0574b1ac1ce6d8520a929bba009115b5e8faf`, release (57 suites), Proton (2), lab (24), observer (18 tests) and saved numeric evidence replay passed. Surface suite: 430 pass, six fail. All six reproduce on tracked-clean nightly (51 pass in the affected files); [baseline diff](contracts/baseline-diff.txt) is empty. Four fail in `tests/desktop/test_surface_critical.py:110` during the input-release deadline sweep; two fail the lost-session expectations at `tests/desktop/test_surface_nightly_desktops.py:450` and `:465`. No unrelated test/product fix was made. Logs and structured reports are in [contracts](contracts/).
 
-No tests were added or changed. The proof-runner changes verify/stage the current source overlay and derive executed helper/stdio/session counts from successful output instead of retaining historical hard-coded counts. A local full application build/CTest was not run because the task explicitly required published packages and prohibited building the app on builders. CI for tools/proton changes selects every job.
+No tests were added or changed. The proof-runner changes verify/stage the current source overlay and derive executed helper/stdio/session counts from successful output instead of retaining historical hard-coded counts. A local full application build/CTest was not run because the task explicitly required published packages and prohibited building the app on builders. The PR selects Linux and all package jobs plus the downstream PipeWire check. The current path selector skips sanitizers for this tools/proton-only change; that is not a sanitizer pass.
 
 ## Cleanup and scratch
 
