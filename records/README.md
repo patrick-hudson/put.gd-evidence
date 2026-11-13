@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-13-issue-1428-followup-8a3294c3c](2026-11-13-issue-1428-followup-8a3294c3c/README.md) | — | Issue 1428 desktop follow-up at 8a3294c3c |
 | [2026-11-13-issue-1428-quick-redact-recall](2026-11-13-issue-1428-quick-redact-recall/README.md) | — | Issue 1428 Quick redact recall: per-page results through the real editor and helper |
 | [2026-11-13-issue-1428-measurement-closure](2026-11-13-issue-1428-measurement-closure/README.md) | — | Issue 1428 measurement closure |
 | [2026-11-13-issue-1428-final-desktops-fe838a950](2026-11-13-issue-1428-final-desktops-fe838a950/README.md) | — | Issue 1428 final desktop acceptance |
