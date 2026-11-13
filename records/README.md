@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-13-issue-1428-final-desktops-fe838a950](2026-11-13-issue-1428-final-desktops-fe838a950/README.md) | — | Issue 1428 final desktop acceptance |
 | [2026-11-13-issue-1428-candidate-fe838a950-measurement](2026-11-13-issue-1428-candidate-fe838a950-measurement/README.md) | — | Issue1428 candidate fe838a950 measurement |
 | [2026-11-13-issue-1428-candidate-transcript-audit](2026-11-13-issue-1428-candidate-transcript-audit/README.md) | — | Candidate transcript audit |
 | [2026-11-13-issue-1428-m74-corpus](2026-11-13-issue-1428-m74-corpus/README.md) | — | Issue 1428 Mint real-target corpus |
