@@ -1,0 +1,33 @@
+FIXTURE-READY /tmp/tp-0ul2sglf
+{"trigger": "hotkey", "clipboardBefore": "sentinel-hotkey-1794588053", "operationId": "c9346070-c8ec-4414-9bc6-14ea5ce0ee53", "record": {"state": "completed", "source": "region", "characterCount": 58, "codeCount": 0, "copyStatus": "copied", "timings": {"copyMs": 0, "engineStartMs": 98, "recognizeMs": 57, "spawnMs": 30, "totalMs": 190}, "error": null, "truncated": false, "banded": false, "languagesUsed": ["eng"], "languagesSkipped": []}, "paste": "ALPHA BRAVO CHARLIE\nSYNTHETIC TEXT 1428\nhello@example.test", "helperProcessesAfter": [], "helperAbsentAfter": true, "pasteMatches": true, "passed": true}
+{"firstLight": {"helper": "not answered: [Errno 2] No such file or directory: '/home/lab/b1428/final/putgd-ocr'", "residentPid": 3008, "residentBefore": {"RssKb": 9960, "PssKb": 6651, "Pss_AnonKb": 4032, "Pss_FileKb": 2619, "Private_DirtyKb": 4032}, "residentRightAfter": {"RssKb": 23964, "PssKb": 16228, "Pss_AnonKb": 4416, "Pss_FileKb": 11812, "Private_DirtyKb": 4416}, "secondsAfter": 1, "residentAfter": {"RssKb": 23692, "PssKb": 15956, "Pss_AnonKb": 4144, "Pss_FileKb": 11812, "Private_DirtyKb": 4144}, "forbiddenMapped": [], "libgompMapped": [], "helperRuns": [{"pid": 3477, "parent": 3008, "parentName": "putgd", "peakRssKb": 47920, "samples": 251, "maxThreads": 2, "exitCode": 0, "exitSignal": 0, "livedMs": 187.0}], "helperProcessesNow": [], "helperRunsOfThisResident": 1, "ownHelpersAlive": [], "exitCheckScope": "Exact resident parent; global helper PIDs retained as context for shared SSH workers."}}
+EDITOR-READY /tmp/tp-0ul2sglf
+QUICK-READY /tmp/tp-0ul2sglf {"exactlyOneEmailMark": true, "emailRowOnly": true, "oneHelperExit0": true}
+FINAL-RESULT /tmp/tp-0ul2sglf {"passed": true, "error": null}
+Traceback (most recent call last):
+  File "/home/lab/b1428/final/scenario/text_proof.py", line 503, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/lab/b1428/final/scenario/text_proof.py", line 499, in main
+    return Run(parser.parse_args()).run()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/lab/b1428/final/scenario/text_proof.py", line 467, in run
+    self.appimage_user_data.rename(retained)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib64/python3.14/pathlib/__init__.py", line 1076, in rename
+    os.rename(self, target)
+    ~~~~~~~~~^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lab/.local/share/putgd' -> '/home/lab/work/b1428/data-tp-0ul2sglf-retained'
+Traceback (most recent call last):
+  File "/tmp/b1428/guest_remote.py", line 12, in <module>
+    else:guest(*args)
+         ^^^^^^^^^^^^
+  File "/tmp/b1428/guest_remote.py", line 5, in guest
+    def guest(*a):host(' '.join(shlex.quote(x) for x in ['python3',base+'/guest.py',name,*a]))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/b1428/guest_remote.py", line 4, in host
+    def host(*a):subprocess.run(['python3',str(r/'remote.py'),'f44',*a],check=True)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python3', '/tmp/b1428/remote.py', 'f44', "python3 /home/patrick/work/b1428/guest.py fbk --drive 'B1428_INPUT_SOCKET=/home/lab/b1428-input.sock B1428_VNC_PORT=5997 python3 /home/lab/b1428/final/final_run.py ai budgie'"]' returned non-zero exit status 1.
