@@ -1,0 +1,21 @@
+{
+  "guest": "fhk",
+  "preProductSetupAttempts": [
+    {
+      "step": "overlay admin helper",
+      "outcome": "failed before candidate install; LUKS root not recognized",
+      "cleanup": "nbd0 disconnected and private mount removed"
+    },
+    {
+      "step": "generic resume",
+      "outcome": "BIOS boot stalled; helper omitted recorded UEFI firmware",
+      "cleanup": "owned guest stopped through lab reset"
+    },
+    {
+      "step": "premature candidate preparation",
+      "outcome": "SSH banner timeout before final directory creation; no package change",
+      "correction": "waited for SSH and verified final directory absent before retry"
+    }
+  ],
+  "recovery": "Resumed same disposable overlay with state-recorded UEFI, used documented disposable-guest default only in memory/stdin for guest-only sudo policy, verified sudo 0, prepared exact AppImage and real Hyprland session. No golden modified, no password retained or exposed."
+}
