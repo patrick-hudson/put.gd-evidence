@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+import json,pathlib,subprocess,sys,time
+import record_acceptance as setup
+r=setup.r
+
+def flow(self):
+ b=r.Build(*self.args.build[0].split('=',1),self.run); rows=[]; active=None
+ def row(name,**v): rows.append({'row':name,**v}); (self.run/'bars.json').write_text(json.dumps(rows,indent=2))
+ def cli(method,p=None): return self.cli(b,method,p)
+ def click(point): subprocess.run(['xdotool','mousemove',str(point[0]),str(point[1]),'click','1'],env=self.env,check=True)
+ def prepare():
+  nonlocal active
+  active=cli('recording.prepare',{'target':{'kind':'region','rect':[0,0,1500,1000]},'format':'mp4','audio':{'system':False}})['recordingId']
+  self.wait_state(b,active,('ready',),60); return active
+ def finish(name):
+  state=self.wait_state(b,active,('reviewing',),60); self.desktop_frame(self.run/'frames'/(name+'-review.png'))
+  path=self.run/'out'/(name+'.mp4'); cli('recording.saveCopy',{'id':active,'path':str(path)}); self.wait_state(b,active,('reviewing',),120)
+  motion=self.motion(path); cli('recording.cancel',{'id':active}); return state,motion
+ try:
+  self.start_resident(b); time.sleep(3); self.stop_resident(b); self.open_cover(); self.start_resident(b)
+  prepare(); self.desktop_frame(self.run/'frames/ready.png'); (self.run/'ready.json').write_text(json.dumps({'id':active,'socket':str(self.socket)}))
+  for _ in range(1200):
+   if (self.run/'coords.json').is_file(): break
+   time.sleep(.1)
+  points=json.loads((self.run/'coords.json').read_text())
+  click(points['record']); state=self.wait_state(b,active,('recording',),20); self.desktop_frame(self.run/'frames/A2-recording.png'); time.sleep(3)
+  click(points['pause']); paused=self.wait_state(b,active,('paused',),20); self.desktop_frame(self.run/'frames/A2-paused.png'); time.sleep(1)
+  click(points['resume']); resumed=self.wait_state(b,active,('recording',),20); self.desktop_frame(self.run/'frames/A2-resumed.png'); time.sleep(3)
+  click(points['stop']); review,motion=finish('A2'); row('A2',passed=motion>0,recording=state,paused=paused,resumed=resumed,review=review,motion=motion); active=None
+  prepare(); click(points['record']); self.wait_state(b,active,('recording',),20); time.sleep(3)
+  click(points['stop']); click(points['stop']); review,motion=finish('A4'); row('A4',passed=review['state']=='reviewing' and motion>0,review=review,motion=motion); active=None
+  prepare()
+  request=subprocess.Popen([b.cli,'--socket',str(self.socket),'recording.start',json.dumps({'id':active})],env=self.env,stdin=subprocess.DEVNULL,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True)
+  click(points['record']); out,err=request.communicate(timeout=30)
+  state=self.wait_state(b,active,('recording',),20); self.desktop_frame(self.run/'frames/A5-recording.png'); time.sleep(3)
+  cli('recording.stop',{'id':active}); review,motion=finish('A5'); row('A5',passed=state['state']=='recording' and motion>0,reply=json.loads(out),state=state,motion=motion); active=None
+ except Exception as e: row('driver-error',passed=False,error=str(e))
+ finally:
+  if active:
+   try: cli('recording.cancel',{'id':active})
+   except Exception: pass
+  self.stop_resident(b); self.close_cover()
+ return 0
+r.Driver.main=flow
+sys.exit(r.main())

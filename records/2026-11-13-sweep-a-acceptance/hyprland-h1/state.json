@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "id": "3f78ac57-8e65-487a-b0c6-e6dfc09eb86e",
+  "profile": "omarchy-hyprland",
+  "guest_user": "lab",
+  "ssh_port": 22534,
+  "vnc_display": 97,
+  "acceleration": "kvm",
+  "golden": "/home/patrick/work/put.gd/work/lab-images/omarchy-hyprland-20261108/image.qcow2",
+  "golden_sha256": "bd74b7832c4a43f15a06f5a5b448e670a77d33ae75516b5bc5856773b69f3256",
+  "bootstrap_key": "/home/patrick/work/put.gd/work/lab-bootstrap-omarchy/identity",
+  "known_hosts": "/home/patrick/work/sa1113/work/lab-runs/h1/known_hosts",
+  "overlay": "/home/patrick/work/sa1113/work/lab-runs/h1/disk.qcow2",
+  "firmware": {
+    "type": "uefi",
+    "code": "/usr/share/edk2/ovmf/OVMF_CODE_4M.qcow2",
+    "vars_template": "/usr/share/edk2/ovmf/OVMF_VARS_4M.qcow2",
+    "format": "qcow2",
+    "vars": "/home/patrick/work/sa1113/work/lab-runs/h1/vars.qcow2",
+    "code_sha256": "f26686d30b90173cd1b1bd902dde83b165628cd825617beded009c9d969da059",
+    "vars_template_sha256": "035317bb2923a13c1dc57373d608521cc3a486f1e3119016727d54baccc6e8bb"
+  },
+  "heads": [
+    {
+      "head": 0,
+      "port": 5997,
+      "display": "127.0.0.1:5997"
+    },
+    {
+      "head": 1,
+      "port": 5998,
+      "display": "127.0.0.1:5998"
+    }
+  ],
+  "head_layout": "1280x800+0+0,1024x768+1280+0",
+  "pid": 48603,
+  "head_requests": [
+    {
+      "port": 5997,
+      "width": 1280,
+      "height": 800,
+      "status": 4
+    },
+    {
+      "port": 5998,
+      "width": 1024,
+      "height": 768,
+      "status": 4
+    }
+  ]
+}

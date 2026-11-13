@@ -1,0 +1,718 @@
+[
+  {
+    "section": "A",
+    "row": "1. Session Prepare / Record / Pause / Resume / Stop",
+    "desktop": "m74 X11; k72 Wayland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "m74",
+        "m74/sam3"
+      ],
+      [
+        "k72",
+        "k72/sakm2"
+      ]
+    ]
+  },
+  {
+    "section": "A",
+    "row": "2. Bar buttons, inspected after each step",
+    "desktop": "m74 X11; k72 Wayland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "m74",
+        "m74/sarbar1"
+      ],
+      [
+        "k72",
+        "k72/sakbar1"
+      ]
+    ]
+  },
+  {
+    "section": "A",
+    "row": "3. Cancel: selecting, ready, recording, paused, stopping, reviewing, exporting",
+    "desktop": "m74 X11; k72 Wayland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "m74",
+        "m74/sax1/extra.json"
+      ],
+      [
+        "k72",
+        "k72/sakx1/extra.json"
+      ]
+    ]
+  },
+  {
+    "section": "A",
+    "row": "4. Double Stop: one review",
+    "desktop": "m74 X11; k72 Wayland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "m74",
+        "m74/sarbar1/bars.json"
+      ],
+      [
+        "k72",
+        "k72/sakbar1/bars.json"
+      ]
+    ]
+  },
+  {
+    "section": "A",
+    "row": "5. Bar Record plus simultaneous recording.start",
+    "desktop": "m74 X11; k72 Wayland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "m74",
+        "m74/sarbar1/bars.json"
+      ],
+      [
+        "k72",
+        "k72/sakrace1"
+      ]
+    ]
+  },
+  {
+    "section": "A",
+    "row": "6. Helper pause timeout, late paused state, Stop and motion",
+    "desktop": "m74 X11; k72 Wayland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "m74",
+        "m74/sax1/extra.json"
+      ],
+      [
+        "k72",
+        "k72/sakx1/extra.json"
+      ]
+    ]
+  },
+  {
+    "section": "A",
+    "row": "7. Own scroll window to end_of_content",
+    "desktop": "m74 X11; k72 Wayland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "m74",
+        "m74/sas1/scroll.json"
+      ],
+      [
+        "k72",
+        "k72/saks1/scroll.json"
+      ]
+    ]
+  },
+  {
+    "section": "A",
+    "row": "8. Review Upload: all five states and History",
+    "desktop": "m74 X11; k72 Wayland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "m74",
+        "m74/sau2/upload.json"
+      ],
+      [
+        "k72",
+        "k72/saku1/upload.json"
+      ]
+    ]
+  },
+  {
+    "section": "B",
+    "row": "1. Live B2 Test destination, including cleanup and large-file cancellation",
+    "desktop": "k72 Wayland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "receipt",
+        "k72/sakb5/b2.json"
+      ]
+    ]
+  },
+  {
+    "section": "B",
+    "row": "2. Live B2 upload, bounded progress, SHA-256 readback",
+    "desktop": "k72 Wayland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "receipt",
+        "k72/sakb5/b2.json"
+      ]
+    ]
+  },
+  {
+    "section": "B",
+    "row": "3. History exact-version delete; unrelated control unchanged",
+    "desktop": "k72 Wayland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "receipt",
+        "k72/sakb5/b2.json"
+      ]
+    ]
+  },
+  {
+    "section": "B",
+    "row": "4. Offline custom HTTP upload and delete",
+    "desktop": "k72 Wayland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "receipt",
+        "k72/sakoff1/offline.json"
+      ],
+      [
+        "History frame",
+        "k72/sakoff1/frames/B7-confirmed.png"
+      ]
+    ]
+  },
+  {
+    "section": "B",
+    "row": "5. Inactive cancel refused; active cancelled; failed item retried",
+    "desktop": "k72 Wayland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "receipt",
+        "k72/sakoff1/offline.json"
+      ],
+      [
+        "History frame",
+        "k72/sakoff1/frames/B7-confirmed.png"
+      ]
+    ]
+  },
+  {
+    "section": "B",
+    "row": "6. Tray: initial, advancing progress, green completion, idle, attention",
+    "desktop": "k72 Wayland; m74 X11",
+    "result": "Pass",
+    "evidence": [
+      [
+        "k72",
+        "k72/sakt2"
+      ],
+      [
+        "m74",
+        "m74/sat3"
+      ]
+    ]
+  },
+  {
+    "section": "B",
+    "row": "7. History Cancel all race: only two still-active uploads counted",
+    "desktop": "k72 Wayland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "receipt",
+        "k72/sakoff1/offline.json"
+      ],
+      [
+        "History frame",
+        "k72/sakoff1/frames/B7-confirmed.png"
+      ]
+    ]
+  },
+  {
+    "section": "C",
+    "row": "1. Region: mark, independent image paste, save, upload, History; second capture cancelled",
+    "desktop": "m74 X11; k72 Wayland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "m74",
+        "m74/sac3/flow.json"
+      ],
+      [
+        "k72",
+        "k72/sakc2/flow.json"
+      ]
+    ]
+  },
+  {
+    "section": "C",
+    "row": "2. File: Copy text tool, recognize, Copy all text, independent paste, upload",
+    "desktop": "m74 X11; k72 Wayland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "m74",
+        "m74/sac3/flow.json"
+      ],
+      [
+        "k72",
+        "k72/sakc2/flow.json"
+      ]
+    ]
+  },
+  {
+    "section": "D",
+    "row": "Hotkey drag",
+    "desktop": "m74 X11",
+    "result": "Pass",
+    "evidence": [
+      [
+        "receipt",
+        "m74/sad1/picker.json"
+      ],
+      [
+        "input frame",
+        "m74/sad1/frames/drag-1-terminal.png"
+      ]
+    ]
+  },
+  {
+    "section": "D",
+    "row": "Drag begun during crosshair hold",
+    "desktop": "m74 X11",
+    "result": "Pass",
+    "evidence": [
+      [
+        "receipt",
+        "m74/sad1/picker.json"
+      ],
+      [
+        "input frame",
+        "m74/sad1/frames/early-drag-1-terminal.png"
+      ]
+    ]
+  },
+  {
+    "section": "D",
+    "row": "Arrow-moved keyboard region, Enter",
+    "desktop": "m74 X11",
+    "result": "Pass",
+    "evidence": [
+      [
+        "receipt",
+        "m74/sad1/picker.json"
+      ],
+      [
+        "input frame",
+        "m74/sad1/frames/keyboard-enter-1-terminal.png"
+      ]
+    ]
+  },
+  {
+    "section": "D",
+    "row": "Esc",
+    "desktop": "m74 X11",
+    "result": "Pass",
+    "evidence": [
+      [
+        "receipt",
+        "m74/sad1/picker.json"
+      ],
+      [
+        "input frame",
+        "m74/sad1/frames/escape-1-terminal.png"
+      ]
+    ]
+  },
+  {
+    "section": "D",
+    "row": "Right-click",
+    "desktop": "m74 X11",
+    "result": "Pass",
+    "evidence": [
+      [
+        "receipt",
+        "m74/sad1/picker.json"
+      ],
+      [
+        "input frame",
+        "m74/sad1/frames/right-click-1-terminal.png"
+      ]
+    ]
+  },
+  {
+    "section": "D",
+    "row": "Zero-size click",
+    "desktop": "m74 X11",
+    "result": "Pass",
+    "evidence": [
+      [
+        "receipt",
+        "m74/sad1/picker.json"
+      ],
+      [
+        "input frame",
+        "m74/sad1/frames/zero-size-1-terminal.png"
+      ]
+    ]
+  },
+  {
+    "section": "D",
+    "row": "Esc during hold",
+    "desktop": "m74 X11",
+    "result": "Pass",
+    "evidence": [
+      [
+        "receipt",
+        "m74/sad1/picker.json"
+      ],
+      [
+        "input frame",
+        "m74/sad1/frames/early-escape-1-terminal.png"
+      ]
+    ]
+  },
+  {
+    "section": "D",
+    "row": "Tray Capture region drag",
+    "desktop": "m74 X11",
+    "result": "Pass",
+    "evidence": [
+      [
+        "receipt",
+        "m74/sad1/picker.json"
+      ],
+      [
+        "input frame",
+        "m74/sad1/frames/tray-drag-1-terminal.png"
+      ]
+    ]
+  },
+  {
+    "section": "D",
+    "row": "Screenshot-first with open menu, then menu closed",
+    "desktop": "m74 X11",
+    "result": "Pass",
+    "evidence": [
+      [
+        "receipt",
+        "m74/sad3/picker.json"
+      ],
+      [
+        "input frame",
+        "m74/sad3/frames/screenshot-first-menu-1-terminal.png"
+      ]
+    ]
+  },
+  {
+    "section": "D",
+    "row": "Twenty rapid hotkey / Esc cycles",
+    "desktop": "m74 X11",
+    "result": "Pass",
+    "evidence": [
+      [
+        "receipt",
+        "m74/sad1/picker.json"
+      ],
+      [
+        "input frame",
+        "m74/sad1/frames/twenty-cycles-terminal.png"
+      ]
+    ]
+  },
+  {
+    "section": "E",
+    "row": "Region inside one monitor",
+    "desktop": "Two-head Kubuntu Wayland guest p1",
+    "result": "Pass",
+    "evidence": [
+      [
+        "pixels",
+        "kde-p1/acceptance/rows.jsonl"
+      ]
+    ]
+  },
+  {
+    "section": "E",
+    "row": "Region across both monitors",
+    "desktop": "Two-head Kubuntu Wayland guest p1",
+    "result": "Pass",
+    "evidence": [
+      [
+        "pixels",
+        "kde-p1/acceptance/rows.jsonl"
+      ]
+    ]
+  },
+  {
+    "section": "E",
+    "row": "Desktop",
+    "desktop": "Two-head Kubuntu Wayland guest p1",
+    "result": "Pass",
+    "evidence": [
+      [
+        "pixels",
+        "kde-p1/acceptance/rows.jsonl"
+      ]
+    ]
+  },
+  {
+    "section": "E",
+    "row": "Monitor under pointer",
+    "desktop": "Two-head Kubuntu Wayland guest p1",
+    "result": "Pass",
+    "evidence": [
+      [
+        "pixels",
+        "kde-p1/acceptance/rows.jsonl"
+      ]
+    ]
+  },
+  {
+    "section": "E",
+    "row": "Repeat last region",
+    "desktop": "Two-head Kubuntu Wayland guest p1",
+    "result": "Pass",
+    "evidence": [
+      [
+        "pixels",
+        "kde-p1/acceptance/rows.jsonl"
+      ]
+    ]
+  },
+  {
+    "section": "E",
+    "row": "Live region with 3 s delay",
+    "desktop": "Two-head Kubuntu Wayland guest p1",
+    "result": "Pass",
+    "evidence": [
+      [
+        "pixels",
+        "kde-p1/acceptance/rows.jsonl"
+      ]
+    ]
+  },
+  {
+    "section": "E",
+    "row": "Window capture",
+    "desktop": "Two-head Kubuntu Wayland guest p2",
+    "result": "Pass",
+    "evidence": [
+      [
+        "pixel comparison",
+        "kde-p2/acceptance/rows.jsonl"
+      ],
+      [
+        "reference",
+        "kde-p2/acceptance/window-full-reference.png"
+      ],
+      [
+        "result",
+        "kde-p2/acceptance/window-result.png"
+      ]
+    ]
+  },
+  {
+    "section": "F",
+    "row": "Desktop",
+    "desktop": "Two-head Budgie labwc; two-head Hyprland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "Budgie",
+        "budgie-b2/acceptance/rows.jsonl"
+      ],
+      [
+        "Hyprland",
+        "hyprland-h1/acceptance/rows.jsonl"
+      ]
+    ]
+  },
+  {
+    "section": "F",
+    "row": "Live region",
+    "desktop": "Two-head Budgie labwc; two-head Hyprland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "Budgie",
+        "budgie-b2/acceptance/rows.jsonl"
+      ],
+      [
+        "Hyprland",
+        "hyprland-h1/acceptance/rows.jsonl"
+      ]
+    ]
+  },
+  {
+    "section": "F",
+    "row": "Screenshot-first region",
+    "desktop": "Two-head Budgie labwc; two-head Hyprland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "Budgie",
+        "budgie-b2/acceptance/rows.jsonl"
+      ],
+      [
+        "Hyprland",
+        "hyprland-h1/acceptance/rows.jsonl"
+      ]
+    ]
+  },
+  {
+    "section": "F",
+    "row": "Window",
+    "desktop": "Two-head Budgie labwc; two-head Hyprland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "Budgie",
+        "budgie-b2/acceptance/rows.jsonl"
+      ],
+      [
+        "Hyprland",
+        "hyprland-h1/acceptance/rows.jsonl"
+      ]
+    ]
+  },
+  {
+    "section": "F",
+    "row": "Monitor",
+    "desktop": "Two-head Budgie labwc; two-head Hyprland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "Budgie",
+        "budgie-b2/acceptance/rows.jsonl"
+      ],
+      [
+        "Hyprland",
+        "hyprland-h1/acceptance/rows.jsonl"
+      ]
+    ]
+  },
+  {
+    "section": "F",
+    "row": "Repeat",
+    "desktop": "Two-head Budgie labwc; two-head Hyprland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "Budgie",
+        "budgie-b2/acceptance/rows.jsonl"
+      ],
+      [
+        "Hyprland",
+        "hyprland-h1/acceptance/rows.jsonl"
+      ]
+    ]
+  },
+  {
+    "section": "F",
+    "row": "Delay 3 s",
+    "desktop": "Two-head Budgie labwc; two-head Hyprland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "Budgie",
+        "budgie-b2/acceptance/rows.jsonl"
+      ],
+      [
+        "Hyprland",
+        "hyprland-h1/acceptance/rows.jsonl"
+      ]
+    ]
+  },
+  {
+    "section": "F",
+    "row": "Esc during selection",
+    "desktop": "Two-head Budgie labwc; two-head Hyprland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "Budgie",
+        "budgie-b2/acceptance/rows.jsonl"
+      ],
+      [
+        "Hyprland",
+        "hyprland-h1/acceptance/rows.jsonl"
+      ]
+    ]
+  },
+  {
+    "section": "F",
+    "row": "Layout change: display_changed",
+    "desktop": "Two-head Budgie labwc; two-head Hyprland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "Budgie",
+        "budgie-b2/acceptance/rows.jsonl"
+      ],
+      [
+        "Hyprland",
+        "hyprland-h1/acceptance/rows.jsonl"
+      ]
+    ]
+  },
+  {
+    "section": "F",
+    "row": "Copy result image and paste into GTK",
+    "desktop": "Two-head Budgie labwc; two-head Hyprland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "Budgie",
+        "budgie-b2/acceptance/rows.jsonl"
+      ],
+      [
+        "Hyprland",
+        "hyprland-h1/acceptance/rows.jsonl"
+      ]
+    ]
+  },
+  {
+    "section": "F",
+    "row": "Copy put.gd text and paste into GTK",
+    "desktop": "Two-head Budgie labwc; two-head Hyprland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "Budgie",
+        "budgie-b2/acceptance/rows.jsonl"
+      ],
+      [
+        "Hyprland",
+        "hyprland-h1/acceptance/rows.jsonl"
+      ]
+    ]
+  },
+  {
+    "section": "F",
+    "row": "Immediate hotkey then drag",
+    "desktop": "Two-head Hyprland",
+    "result": "Fail",
+    "evidence": [
+      [
+        "candidate twice",
+        "hyprland-h1/acceptance/rows.jsonl"
+      ],
+      [
+        "nightly twice",
+        "hyprland-nightly-hn1/acceptance/rows.jsonl"
+      ]
+    ]
+  },
+  {
+    "section": "F",
+    "row": "Immediate hotkey then Esc",
+    "desktop": "Two-head Hyprland",
+    "result": "Pass",
+    "evidence": [
+      [
+        "candidate",
+        "hyprland-h1/acceptance/rows.jsonl"
+      ]
+    ]
+  }
+]

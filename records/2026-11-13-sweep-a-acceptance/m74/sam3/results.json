@@ -1,0 +1,153 @@
+{
+ "host": "mint-builder",
+ "kernel": "6.14.0-37-generic",
+ "desktop": "cinnamon",
+ "session": "x11",
+ "target": "region",
+ "rect": [
+  0,
+  0,
+  1500,
+  1000
+ ],
+ "formats": [
+  "mp4"
+ ],
+ "video": "pattern",
+ "timing": {
+  "lead": 1.0,
+  "pauseAt": 4.0,
+  "pauseFor": 1.0,
+  "after": 4.0
+ },
+ "builds": {
+  "candidate": {
+   "kind": "appimage",
+   "file": "putgd-26.1113.4899-dev+g036a9225e188-x86_64.AppImage",
+   "sha256": "b9909360dc9dd35aa59dec3ac917679984467d1d6fd0535b506560e1c4f8cd4e"
+  }
+ },
+ "analyzer": "/home/patrick/work/sa1113/analyzer/squashfs-root",
+ "rounds": [
+  {
+   "build": "candidate",
+   "round": 1,
+   "format": "mp4",
+   "started": "2026-11-13T22:06:39Z",
+   "acquisition": "x11",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc"
+   ],
+   "audio": {
+    "system": false
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false,
+    "microphoneReason": "sound_server_unavailable"
+   },
+   "canvas": [
+    1500,
+    1000
+   ],
+   "overlay": {
+    "overlayExcluded": true,
+    "overlayPlacement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": {
+     "microphone": false,
+     "system": false
+    },
+    "audioEncoder": "",
+    "recordingMicrophone": {
+     "available": false,
+     "effective": false,
+     "requested": false,
+     "unavailable": "The sound server did not answer, so no microphone can be opened."
+    },
+    "microphoneLost": null
+   },
+   "pauseClipS": 4.485,
+   "recordedS": 9.032,
+   "microphoneLostAtStop": null,
+   "load": 2.6826171875,
+   "durationUs": 9266666,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "561b71d8-035a-44f6-90f8-8d40b161c3b2.mkv",
+     "bytes": 189716,
+     "motion": 5.388
+    },
+    "export": {
+     "file": "candidate-mp4-1.mp4",
+     "bytes": 187426,
+     "motion": 4.985
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 0.9529
+    },
+    "fraction": 0.7539,
+    "kept": "/tmp/sam3/frames/candidate-mp4-1.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     1280,
+     854
+    ],
+    "sha256": "c03a6ae2a6c4e7925b061d2aa311ce0f559aaaf737b791d204e3ffbe62ae6edb",
+    "size": [
+     1280,
+     854
+    ]
+   }
+  }
+ ],
+ "microphone": null,
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "HDMI-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "check": "precheck",
+   "fraction": 0.9808,
+   "framebuffer": [
+    1920,
+    1080
+   ],
+   "minFraction": 0.98,
+   "ok": true,
+   "output": [
+    "HDMI-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ]
+  },
+  "video": "pattern"
+ },
+ "microphoneRemoved": null,
+ "gpuHangs": []
+}

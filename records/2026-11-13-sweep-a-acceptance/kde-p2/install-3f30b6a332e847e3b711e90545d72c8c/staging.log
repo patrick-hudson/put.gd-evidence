@@ -1,0 +1,8 @@
+/usr/local/lib/putgd-lab/package_install.py.new: OK
+/usr/local/lib/putgd-lab/package_scope.py.new: OK
+/etc/sudoers.d/putgd-lab-install: parsed OK
+Reading package lists...
+W: Unable to read /etc/apt/-/ - DirectoryExists (2: No such file or directory)
+W: Unable to read /dev/null - RealFileExists (2: No such file or directory)
+E: Problem executing scripts APT::Update::Pre-Invoke 'set -eu; install -d -m 755 /usr/local/lib/putgd-lab; install -o root -g root -m 755 "/home/lab/putgd-lab/install-3f30b6a332e847e3b711e90545d72c8c/package_install.py" /usr/local/lib/putgd-lab/package_install.py.new; echo "a69d3356a7a690b5dbd63dd4a1fbe166e1b9adda464878a2e804961329bb979f  /usr/local/lib/putgd-lab/package_install.py.new" | sha256sum -c -; mv -f /usr/local/lib/putgd-lab/package_install.py.new /usr/local/lib/putgd-lab/package_install.py; install -o root -g root -m 755 "/home/lab/putgd-lab/install-3f30b6a332e847e3b711e90545d72c8c/package_scope.py" /usr/local/lib/putgd-lab/package_scope.py.new; echo "0980dab78118b6136dfeb734d854c7e0e82e0c40fc615247d4262a874609a5d8  /usr/local/lib/putgd-lab/package_scope.py.new" | sha256sum -c -; mv -f /usr/local/lib/putgd-lab/package_scope.py.new /usr/local/lib/putgd-lab/package_scope.py; printf "lab ALL=(root) NOPASSWD: /usr/local/lib/putgd-lab/package_install.py, /usr/local/lib/putgd-lab/package_scope.py\n" > /etc/sudoers.d/putgd-lab-install; chmod 440 /etc/sudoers.d/putgd-lab-install; visudo -cf /etc/sudoers.d/putgd-lab-install; exit 1'
+E: Sub-process returned an error code

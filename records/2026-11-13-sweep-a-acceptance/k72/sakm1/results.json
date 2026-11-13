@@ -1,0 +1,154 @@
+{
+ "host": "kubuntu",
+ "kernel": "7.0.0-38-generic",
+ "desktop": "plasmashell",
+ "session": "wayland",
+ "target": "region",
+ "rect": [
+  0,
+  0,
+  1500,
+  1000
+ ],
+ "formats": [
+  "mp4"
+ ],
+ "video": "still",
+ "timing": {
+  "lead": 1.0,
+  "pauseAt": 4.0,
+  "pauseFor": 1.0,
+  "after": 4.0
+ },
+ "builds": {
+  "candidate": {
+   "kind": "installed",
+   "dir": "/usr/bin",
+   "version": "putgd-record 26.1113.4899-dev+g036a9225e188"
+  }
+ },
+ "analyzer": "/home/patrick/work/sa1113/analyzer/squashfs-root",
+ "rounds": [
+  {
+   "build": "candidate",
+   "round": 1,
+   "format": "mp4",
+   "started": "2026-11-13T22:31:06Z",
+   "acquisition": "kde-screencast",
+   "liveEncoders": [
+    "vah264lpenc",
+    "vaapih264enc",
+    "x264enc",
+    "openh264enc"
+   ],
+   "audio": {
+    "system": false
+   },
+   "capabilityAudio": {
+    "system": true,
+    "microphone": false,
+    "microphoneReason": "sound_server_unavailable"
+   },
+   "canvas": [
+    1500,
+    1000
+   ],
+   "overlay": {
+    "overlayExcluded": true,
+    "overlayPlacement": "outside"
+   },
+   "progressAtStart": {
+    "audioSources": {
+     "microphone": false,
+     "system": false
+    },
+    "audioEncoder": "",
+    "recordingMicrophone": {
+     "available": false,
+     "effective": false,
+     "requested": false,
+     "unavailable": "The sound server did not answer, so no microphone can be opened."
+    },
+    "microphoneLost": null
+   },
+   "pauseClipS": 4.531,
+   "recordedS": 9.043,
+   "microphoneLostAtStop": null,
+   "load": 0.49560546875,
+   "durationUs": 10633333,
+   "export": "saved",
+   "clips": {
+    "working": {
+     "file": "386382a2-7ed3-4551-b643-73da63653b8c.mkv",
+     "bytes": 22093,
+     "motion": 0.0
+    },
+    "export": {
+     "file": "candidate-mp4-1.mp4",
+     "bytes": 21548,
+     "motion": 0.0
+    }
+   },
+   "frame": {
+    "edges": {
+     "left": 1.0,
+     "top": 1.0
+    },
+    "fraction": 1.0,
+    "kept": "/tmp/sakm1/frames/candidate-mp4-1.png",
+    "minFraction": 0.5,
+    "ok": true,
+    "rect": [
+     0,
+     0,
+     1280,
+     854
+    ],
+    "sha256": "a01db49fcb04bf28ba42d54433980a681c00318b87c120ebe8b3984d2abcfdef",
+    "size": [
+     1280,
+     854
+    ]
+   }
+  }
+ ],
+ "microphone": null,
+ "cover": {
+  "placed": {
+   "monitorIndex": 0,
+   "ok": true,
+   "output": [
+    "HDMI-A-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ],
+   "state": "covered"
+  },
+  "precheck": {
+   "check": "precheck",
+   "fraction": 1.0,
+   "framebuffer": [
+    1920,
+    1080
+   ],
+   "minFraction": 0.98,
+   "ok": true,
+   "output": [
+    "HDMI-A-1"
+   ],
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ]
+  },
+  "video": "still"
+ },
+ "microphoneRemoved": null,
+ "gpuHangs": []
+}
