@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/ocr-final-1428/h1428-run.py", line 55, in <module>
+    p=subprocess.run(['python3',str(r/'h1428-witness.py'),str(pid),str(prefix/'bin/putgd-capture'),str(w/'witness'),json.dumps(cfg)],env=env,capture_output=True,text=True,timeout=600);(w/'witness.log').write_text(p.stdout+p.stderr);assert p.returncode==0,p.stderr
+                                                                                                                                                                                                                                               ^^^^^^^^^^^^^^^
+AssertionError: Traceback (most recent call last):
+  File "/home/patrick/work/ocr-final-1428/h1428-witness.py", line 42, in <module>
+    assert pixel(root,102,151)==[100,90,80],'synthetic canvas not visible after owned-window activation' 
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: synthetic canvas not visible after owned-window activation
+

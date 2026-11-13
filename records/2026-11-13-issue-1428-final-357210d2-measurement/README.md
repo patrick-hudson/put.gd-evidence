@@ -45,3 +45,7 @@ The corpus manifest is178captures; German is separately12captures. Transcript au
 The code matrix ran once. All183rows survive in its original incomplete receipt because the subsequent busy block hit a missing working-copy truth filename. Its separately recorded assessment is164ordinary/intended-binary matches,18hostile binary-length-only results,oneaccepted MicroQR limit. Busy placements were reconstructed from the original generator and byte-verified against unchanged source crops; the framedpage has its own one-job receipt.
 
 Frozen hotkey source/binary were not modified. It asks for white at the selector's black outeredge; every measured inner-ring witness found blackouter/whiteinner pixels. Firstbaseline canvas admission failed without samples; retry activates the exact owned canvas before timing. Actual baseline binary commit466449a4 is the last nightly code head; current79732195 changes onlyAGENTS andthree non-package docs. Full comparison and separate launch-correction note retained. All reported A/B timing loops are identical; no unchanged-time pass is inferred.
+
+## Larger interleaved hotkey follow-up
+
+[180 warm and30after-quiet observations per native build, bootstrap intervals, faults and mappings](hotkey-tail/README.md) supersede the precision of the earlier30-sample comparison. Both p95-difference intervals include zero; the native warm+15.82ms estimate was not reproduced. This is not an equivalence claim. Other rows stand unchanged.
