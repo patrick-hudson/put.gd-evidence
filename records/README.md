@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-13-issue-1428-budgie-corpus](2026-11-13-issue-1428-budgie-corpus/README.md) | — | Issue 1428 Budgie real-target corpus |
 | [2026-11-13-issue-1428-kubuntu-corpus](2026-11-13-issue-1428-kubuntu-corpus/README.md) | — | Issue 1428 Kubuntu real-target corpus |
 | [2026-11-13-issue-1428-copy-text-surfaces](2026-11-13-issue-1428-copy-text-surfaces/README.md) | — | Issue 1428: Copy text in the command band, the tray and Settings |
 | [2026-11-13-issue-1428-fedora-corpus](2026-11-13-issue-1428-fedora-corpus/README.md) | — | Issue 1428 Fedora GNOME real-target corpus |
