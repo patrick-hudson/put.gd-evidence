@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-13-proton-relink-1399](2026-11-13-proton-relink-1399/README.md) | #1399 | Proton helper native relink and installed-package acceptance (#1399) |
 | [2026-11-13-issue-1428-quick-redact-final-candidate](2026-11-13-issue-1428-quick-redact-final-candidate/README.md) | — | Issue 1428 Quick redact on the final candidate (357210d2f): the 14 px GitHub fixture |
 | [2026-11-13-issue-1428-final-desktops-357210d2f](2026-11-13-issue-1428-final-desktops-357210d2f/README.md) | — | Final desktop smoke acceptance for issue1428 |
 | [2026-11-13-issue-1428-final-357210d2-measurement](2026-11-13-issue-1428-final-357210d2-measurement/README.md) | — | Issue 1428 final candidate measurements |
