@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-13-issue-1428-helper-fedora44](2026-11-13-issue-1428-helper-fedora44/README.md) | — | Issue 1428 current helper quality on Fedora44 |
 | [2026-11-13-issue-1428-hyprland-corpus](2026-11-13-issue-1428-hyprland-corpus/README.md) | — | Issue 1428 Hyprland real-target corpus |
 | [2026-11-13-issue-1428-corpus-index](2026-11-13-issue-1428-corpus-index/README.md) | — | Issue 1428 corpus index |
 | [2026-11-13-issue-1428-budgie-corpus](2026-11-13-issue-1428-budgie-corpus/README.md) | — | Issue 1428 Budgie real-target corpus |
