@@ -1,0 +1,13 @@
+# Issue 1428 Debian real-target corpus
+
+28 original Capture region PNGs from the published nightly 26.1112.4660 Debian 13 DEB on physical d69, Plasma Wayland. Exact build, package SHA-256, compositor and OS identities are adjacent. No put.gd build was compiled for collection. All captures used a private resident with local-only outputs; no destination credentials or user objects were used.
+
+Seven classes, each in light/dark at 100%/125%: xterm with a known source; Firefox on known local HTML; live GitHub PR 1430 and Wikipedia QR code article; KWrite showing code; a Zenity synthetic chat-like list with 10px interface text (12.5px at 125%); and the complete physical monitor. That monitor exposes only 1920x1080, so these monitor captures do not close the plan's 4K gate. Capture region's Enter-to-select-entire-display path produced the monitor images.
+
+Transcripts were cut from local source, and live-page transcripts were written from and visually checked against only the selected visible region, not select-all. Wikipedia selection ends at “capacity in”, before the following full-width line and the adjacent QR code. GitHub selection contains the intro and first two paragraphs of this PR description. Source URLs are in the manifest. Wikipedia text is attributable to that linked article and its contributors under its published license; no generated page substitutes for either live target.
+
+Pixel sizes are recorded for each class: terminal/editor/local browser 16/20px, chat-like list 10/12.5px, Wikipedia body 16/20px and references 12.8/16px, GitHub body 14/17.5px and inline code 11.9/14.875px. Browser values were read from computed style and devicePixelRatio; font-reading images witness those readings. The KWrite source modeline fixes its 12pt font.
+
+Each PNG has its operation ID and UTC creation receipt. manifest.json names its transcript and its font/scale/theme. sha256.json verifies the exported files. Offline baselines and their engine/data identities are added as separate receipts; their elapsed whole-process times are not the four-phase feature latency measurement. Manual memory/latency tools stop as blocked on this published build without the feature. No feature or desktop acceptance is claimed.
+
+Desktop scaling was restored to 100%. Exact owned applications/resident were stopped and the installed test package removed before lease release; cleanup receipt is published alongside the follow-up. Failed or clipped attempts and the oversubscribed OpenMP experiments remain privately under ~/work/ocr-corpus-1428 and /tmp/t1428d on d69. The current single-thread baseline matches OMP_THREAD_LIMIT=1 in the helper contract; missing or timed-out recognitions have no class score.
