@@ -1,0 +1,19 @@
+Products Developers Business Resources Pricing
+Search / Sign in Sign up
+patrick-hudson / put.gd-desktop
+Code Issues 23 Pull requests 4 Actions Projects Security and quality Insights
+test(text): recognition corpus and performance harness (#1428) #1430
+Merged
+patrick-hudson merged 9 commits into feat/text-recognition from feat/text-corpus 15 minutes ago
+Conversation 1 Commits 9 Checks 11 Files changed 9 +719
+patrick-hudson commented 3 hours ago · edited
+Owner
+Implements the corpus and performance tools for #1428, against feat/text-recognition.
+
+The scorer compares captured text after Unicode NFC normalization and whitespace collapsing, with case preserved. It reports exact character edit distance for each image, median character error rate for each target class, and occurrence-counted exact matches for URLs and email addresses at eleven pixels and above. Distribution Tesseract can be measured immediately, without building put.gd. The same scorer accepts helper JSON later. Receipts identify the images, transcripts, engine version, language data hash, segmentation mode, and scaling method.
+Reviewers
+No reviews
+Assignees
+No one assigned
+Labels
+None yet

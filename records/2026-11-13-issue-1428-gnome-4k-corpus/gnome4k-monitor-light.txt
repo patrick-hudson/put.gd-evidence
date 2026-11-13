@@ -1,0 +1,176 @@
+Nov 13 06:08
+
+Corpus terminal
+Line 01: A careful reader checks each sample beside the river today.
+Line 02: A careful reader reads each sample beside the river today.
+Line 03: A careful reader compares each sample beside the river today.
+Line 04: A careful reader reviews each sample beside the river today.
+Line 05: A careful reader counts each sample beside the river today.
+Line 06: A careful reader measures each sample beside the river today.
+Line 07: A careful reader observes each sample beside the river today.
+Line 08: A careful reader records each sample beside the river today.
+Line 09: A careful reader opens each sample beside the river today.
+Line 10: A careful reader closes each sample beside the river today.
+Line 11: A careful reader shows each sample beside the river today.
+Line 12: A careful reader checks each sample beside the river today.
+Line 13: A careful reader reads each sample beside the river today.
+Line 14: A careful reader compares each sample beside the river today.
+Line 15: A careful reader reviews each sample beside the river today.
+Line 16: A careful reader counts each sample beside the river today.
+Line 17: A careful reader measures each sample beside the river today.
+Line 18: A careful reader observes each sample beside the river today.
+Line 19: A careful reader records each sample beside the river today.
+Line 20: A careful reader opens each sample beside the river today.
+Line 21: A careful reader closes each sample beside the river today.
+Line 22: A careful reader shows each sample beside the river today.
+
+Corpus code
+#include <algorithm>
+#include <iostream>
+#include <numeric>
+#include <string>
+#include <vector>
+
+struct Sample { std::string label; int width; int height; };
+int main() {
+    const std::vector<Sample> samples = {
+        {"garden", 640, 480}, {"river", 800, 600}, {"valley", 1024, 768}
+    };
+    std::vector<int> areas;
+    // Read each synthetic sample and preserve its original label for the report.
+    for (const auto& sample : samples) {
+        const int area = sample.width * sample.height;
+        const bool visible = sample.width > 0 && sample.height > 0;
+        if (!visible) { continue; } // Empty rows do not belong in the result.
+        areas.push_back(area);
+        std::cout << sample.label << " width " << sample.width << " height " << sample.height;
+        std::cout << " area " << area << '\n';
+    }
+    // Sort the values before choosing the middle entry and printing the total.
+    std::sort(areas.begin(), areas.end());
+    const auto total = std::accumulate(areas.begin(), areas.end(), 0);
+    const auto middle = areas.empty() ? 0 : areas[areas.size() / 2];
+    std::cout << "total " << total << " middle " << middle << '\n';
+    // A copy keeps the source vector intact while the display order is reversed.
+    auto reversed = areas;
+    std::reverse(reversed.begin(), reversed.end());
+    for (const int value : reversed) { std::cout << value << ' '; }
+    std::cout << '\n';
+    // Every number and label on this page is disposable synthetic lab content.
+    return total > 0 ? 0 : 1;
+
+Line 01: A careful reader checks each sample beside the river today.
+Line 02: A careful reader reads each sample beside the river today.
+Line 03: A careful reader compares each sample beside the river today.
+Line 04: A careful reader reviews each sample beside the river today.
+Line 05: A careful reader counts each sample beside the river today.
+Line 06: A careful reader measures each sample beside the river today.
+Line 07: A careful reader observes each sample beside the river today.
+Line 08: A careful reader records each sample beside the river today.
+Line 09: A careful reader opens each sample beside the river today.
+Line 10: A careful reader closes each sample beside the river today.
+Line 11: A careful reader shows each sample beside the river today.
+Line 12: A careful reader checks each sample beside the river today.
+Line 13: A careful reader reads each sample beside the river today.
+Line 14: A careful reader compares each sample beside the river today.
+Line 15: A careful reader reviews each sample beside the river today.
+Line 16: A careful reader counts each sample beside the river today.
+Line 17: A careful reader measures each sample beside the river today.
+Line 18: A careful reader observes each sample beside the river today.
+Line 19: A careful reader records each sample beside the river today.
+Line 20: A careful reader opens each sample beside the river today.
+Line 21: A careful reader closes each sample beside the river today.
+Line 22: A careful reader shows each sample beside the river today.
+
+https://example.invalid/corpus
+corpus@example.invalid
+
+Products Developers Business Resources Pricing
+Search / Sign in Sign up
+patrick-hudson / put.gd-desktop
+Code Issues 23 Pull requests 4 Actions Projects Security and quality Insights
+test(text): recognition corpus and performance harness (#1428) #1430
+Merged
+patrick-hudson merged 9 commits into feat/text-recognition from feat/text-corpus 15 minutes ago
+Conversation 1 Commits 9 Checks 11 Files changed 9 +719
+patrick-hudson commented 3 hours ago · edited
+Owner
+Implements the corpus and performance tools for #1428, against feat/text-recognition.
+
+The scorer compares captured text after Unicode NFC normalization and whitespace collapsing, with case preserved. It reports exact character edit distance for each image, median character error rate for each target class, and occurrence-counted exact matches for URLs and email addresses at eleven pixels and above. Distribution Tesseract can be measured immediately, without building put.gd. The same scorer accepts helper JSON later. Receipts identify the images, transcripts, engine version, language data hash, segmentation mode, and scaling method.
+Reviewers
+No reviews
+Assignees
+No one assigned
+Labels
+None yet
+
+WIKIPEDIA 25
+25 years of the free encyclopedia
+Search Wikipedia
+Search
+Donate Create account Log in
+QR code
+81 languages
+Article Talk
+Read View source View history
+From Wikipedia, the free encyclopedia
+Contents hide
+(Top)
+History
+Adoption
+Uses
+Risks
+Design
+Standards
+Variants
+License
+Other 2-D barcodes
+See also
+References
+Bibliography
+A QR code, short for quick-response code,[1] is a type of two-dimensional matrix barcode invented in 1994 by Masahiro Hara of the Japanese company Denso Wave for labelling automobile parts.[2][3] It features white ("0") and black ("1") squares in a square grid featuring fiducial markers on the corners, readable by imaging devices like cameras, and processed using Reed–Solomon error correction until the image can be appropriately interpreted. The required data is then extracted from patterns that are present in both the horizontal and the vertical components of the QR image.[4]
+
+Whereas a barcode is a machine-readable optical image that contains information specific to the labeled item, the QR code contains the data for a locator, an identifier, and web tracking. To store data efficiently, QR codes use four standardized modes of encoding: numeric, alphanumeric, byte or binary, and kanji.[5] Compared to standard UPC barcodes, the QR labeling system was applied beyond the automobile industry because of faster reading of the optical image and greater data-storage capacity in applications such as product tracking, item identification, time tracking, document management, and general marketing.[4]
+A QR code for the URL of the English Wikipedia main page
+Appearance hide
+Text
+Small
+Standard
+Large
+Width
+Standard
+Wide
+Color
+Automatic
+Light
+Dark
+
+Corpus synthetic chat
+Synthetic conversation
+Message 01: Please compare this synthetic sample with the previous display before continuing.
+Message 02: Please compare this synthetic sample with the previous display before continuing.
+Message 03: Please compare this synthetic sample with the previous display before continuing.
+Message 04: Please compare this synthetic sample with the previous display before continuing.
+Message 05: Please compare this synthetic sample with the previous display before continuing.
+Message 06: Please compare this synthetic sample with the previous display before continuing.
+Message 07: Please compare this synthetic sample with the previous display before continuing.
+Message 08: Please compare this synthetic sample with the previous display before continuing.
+Message 09: Please compare this synthetic sample with the previous display before continuing.
+Message 10: Please compare this synthetic sample with the previous display before continuing.
+Message 11: Please compare this synthetic sample with the previous display before continuing.
+Message 12: Please compare this synthetic sample with the previous display before continuing.
+Message 13: Please compare this synthetic sample with the previous display before continuing.
+Message 14: Please compare this synthetic sample with the previous display before continuing.
+Message 15: Please compare this synthetic sample with the previous display before continuing.
+Message 16: Please compare this synthetic sample with the previous display before continuing.
+Message 17: Please compare this synthetic sample with the previous display before continuing.
+Message 18: Please compare this synthetic sample with the previous display before continuing.
+Message 19: Please compare this synthetic sample with the previous display before continuing.
+Message 20: Please compare this synthetic sample with the previous display before continuing.
+Message 21: Please compare this synthetic sample with the previous display before continuing.
+Message 22: Please compare this synthetic sample with the previous display before continuing.
+Message 23: Please compare this synthetic sample with the previous display before continuing.
+Message 24: Please compare this synthetic sample with the previous display before continuing.
+Cancel
+OK
