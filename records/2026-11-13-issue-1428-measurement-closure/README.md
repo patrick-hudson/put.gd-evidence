@@ -1,0 +1,3 @@
+# Issue 1428 measurement closure
+
+Issue1428 measurement closure, exact candidatefe838a950, CI43394391197. This receipt explicitly lists unrun gates and external prerequisites; it does not turn an execution failure or absent witness into a pass. Full numerical observations are pinned at put.gd-evidence commit9b86520081652b5881cf6a8ab1913b03580d1ca9 in record2026-11-13-issue-1428-candidate-fe838a950-measurement. Final Acceptance and Performance tables are posted on issue1428. Working-copy verification:385files, zero checksum mismatches on d69.\n
