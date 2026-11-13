@@ -1,0 +1,93 @@
+{
+  "candidate": "357210d2f1cb7b65f77166e34eb535d42e497fd0",
+  "rows": [
+    {
+      "case": "privacy-source-admitted",
+      "status": "met",
+      "state": "completed",
+      "canaryRecognized": true,
+      "characterCount": 58
+    },
+    {
+      "case": "privacy-notifications",
+      "status": "met",
+      "notificationCalls": 1,
+      "canaryInNotifications": false,
+      "monitorExit": -15
+    },
+    {
+      "case": "privacy-system-journal",
+      "status": "met",
+      "queryExit": 0,
+      "canaryFound": false
+    },
+    {
+      "case": "privacy-canary-files",
+      "status": "met",
+      "operationId": "bb235edf-2f75-43c8-a3be-6a4c32a2529c",
+      "recognized": true,
+      "debugLogging": true,
+      "filesChecked": 11,
+      "canaryFiles": [],
+      "pngSignatures": [],
+      "skipped": [],
+      "diagnosticHits": [],
+      "journalCanary": false,
+      "historyContainsOperation": false,
+      "recentContainsOperation": false,
+      "notificationContent": "separate privacy-notifications row, raw D-Bus traffic inspected only in memory"
+    },
+    {
+      "case": "editor-redact-added",
+      "status": "met",
+      "oldResultCode": "edit_stale",
+      "oldCopyCode": "edit_stale",
+      "currentCopy": {
+        "characters": 72,
+        "copyStatus": "copied",
+        "operationId": "bdef7096-11a6-4afb-ba5b-ff5ae2ae94f8"
+      },
+      "wordCount": 11
+    },
+    {
+      "case": "editor-redact-moved",
+      "status": "met",
+      "oldResultCode": "edit_stale",
+      "oldCopyCode": "edit_stale",
+      "currentCopy": {
+        "characters": 72,
+        "copyStatus": "copied",
+        "operationId": "bdef7096-11a6-4afb-ba5b-ff5ae2ae94f8"
+      },
+      "wordCount": 11
+    },
+    {
+      "case": "editor-redact-redo",
+      "status": "met",
+      "oldResultCode": "edit_stale",
+      "oldCopyCode": "edit_stale",
+      "currentCopy": {
+        "characters": 72,
+        "copyStatus": "copied",
+        "operationId": "bdef7096-11a6-4afb-ba5b-ff5ae2ae94f8"
+      },
+      "wordCount": 11
+    },
+    {
+      "case": "paste-after-editor-closes",
+      "status": "met"
+    },
+    {
+      "case": "editor-forced-late-delivery",
+      "status": "not_run",
+      "reason": "editor.recognize is asynchronous and returns immediately; no external switch exists to force an obsolete result to arrive after the revision changes. Live word/revision exclusion measured separately; no late-packet pass inferred from cancellation."
+    },
+    {
+      "case": "paste-after-resident-quits",
+      "status": "met",
+      "nonemptyBytes": 82,
+      "independentPasteBefore": true,
+      "independentPasteAfter": true
+    }
+  ]
+}
