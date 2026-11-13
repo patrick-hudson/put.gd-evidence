@@ -1,0 +1,53 @@
+{
+  "createExit": 0,
+  "containerId": "02ee0f1b4ae222dc712319033a5e25507c97e6ecae93ab1340c25eccf7d78a9f",
+  "languageInstallExit": 0,
+  "languageData": [
+    {
+      "name": "eng",
+      "bytes": 23466654,
+      "sha256": "daa0c97d651c19fba3b25e81317cd697e9908c8208090c94c3905381c23fc047"
+    },
+    {
+      "name": "deu",
+      "bytes": 15437534,
+      "sha256": "896b3b4956503ab9daa10285db330881b2d74b70d889b79262cc534b9ec699a4"
+    },
+    {
+      "name": "fra",
+      "bytes": 14213351,
+      "sha256": "eac01c1d72540d6090facb7b2f42dd0a2ee8fc57c5be1b20548ae668e2761913"
+    }
+  ],
+  "dataTotal": 53117539,
+  "budgetBytes": 163868613,
+  "imageSha256": "d7536fe72c061b0001fb154fc82415b849d5d31b4938aa747e468605f48a9826",
+  "helperSha256": "d475804ac0cfa0f4e791acfb72dc17960582e209a6f06f91dc9ed5f6be182456",
+  "command": [
+    "podman",
+    "exec",
+    "i81428-arch-three-complete",
+    "/case/test_ocr_run",
+    "--helper",
+    "/case/arch-candidate/usr/bin/putgd-ocr",
+    "--data",
+    "/usr/share/tessdata",
+    "--lang",
+    "eng",
+    "--lang",
+    "deu",
+    "--lang",
+    "fra",
+    "--required",
+    "/case/synthetic-final/limit-24mp.png"
+  ],
+  "driverExit": 127,
+  "stderrBytes": 132,
+  "stdoutBytes": 0,
+  "status": "not_run",
+  "reason": "list index out of range",
+  "retired": true,
+  "elapsedSeconds": 20.660779946949333,
+  "candidate": "fe838a9502167672f3512e27c32c74cfcf6c84d1",
+  "scope": "Arch-only dense24MP three-language supplement; real exact-CI helper, disposable container, conservative fresh-parent child peak, not desktop latency."
+}
