@@ -1,0 +1,794 @@
+[
+  {
+    "engine": "mint",
+    "languages": [
+      "eng"
+    ],
+    "command": [
+      "/home/patrick/work/ocr-final-1428/test_ocr_run",
+      "--helper",
+      "/home/patrick/work/ocr-final-1428/ubuntu24-candidate/usr/bin/putgd-ocr",
+      "--data",
+      "/usr/share/tesseract-ocr/5/tessdata",
+      "--lang",
+      "eng",
+      "--words",
+      "--candidates",
+      "--required",
+      "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png"
+    ],
+    "exit": 0,
+    "result": {
+      "banded": false,
+      "chars": 75648,
+      "codes": 0,
+      "engineStartMs": 122,
+      "error": "",
+      "greyMs": 174,
+      "height": 4000,
+      "image": "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png",
+      "peakRssKiB": 145132,
+      "recognizeMs": 15310,
+      "spawnMs": 21,
+      "totalMs": 15956,
+      "truncated": true,
+      "width": 6000
+    },
+    "kernelExits": [
+      {
+        "startTicks": "198297076",
+        "pid": 772860,
+        "parent": 772857,
+        "parentName": "test_ocr_run",
+        "peakRssKb": 105272,
+        "samples": 23761,
+        "maxThreads": 3,
+        "event": "exit",
+        "exitCode": 0,
+        "exitSignal": 0,
+        "livedMs": 15851.7
+      }
+    ],
+    "load": [
+      0.88671875,
+      1.52197265625,
+      1.45166015625
+    ]
+  },
+  {
+    "engine": "mint",
+    "languages": [
+      "eng",
+      "deu",
+      "fra"
+    ],
+    "command": [
+      "/home/patrick/work/ocr-final-1428/test_ocr_run",
+      "--helper",
+      "/home/patrick/work/ocr-final-1428/ubuntu24-candidate/usr/bin/putgd-ocr",
+      "--data",
+      "/usr/share/tesseract-ocr/5/tessdata",
+      "--lang",
+      "eng",
+      "--lang",
+      "deu",
+      "--lang",
+      "fra",
+      "--words",
+      "--candidates",
+      "--required",
+      "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png"
+    ],
+    "exit": 0,
+    "result": {
+      "banded": false,
+      "chars": 16921,
+      "codes": 0,
+      "engineStartMs": 322,
+      "error": "",
+      "greyMs": 171,
+      "height": 4000,
+      "image": "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png",
+      "peakRssKiB": 145120,
+      "recognizeMs": 14871,
+      "spawnMs": 21,
+      "totalMs": 15536,
+      "truncated": true,
+      "width": 6000
+    },
+    "kernelExits": [
+      {
+        "startTicks": "198298735",
+        "pid": 772879,
+        "parent": 772878,
+        "parentName": "test_ocr_run",
+        "peakRssKb": 102836,
+        "samples": 23222,
+        "maxThreads": 1,
+        "event": "exit",
+        "exitCode": 0,
+        "exitSignal": 0,
+        "livedMs": 15507.3
+      }
+    ],
+    "load": [
+      0.91259765625,
+      1.49560546875,
+      1.4443359375
+    ]
+  },
+  {
+    "engine": "ubuntu26",
+    "languages": [
+      "eng"
+    ],
+    "command": [
+      "podman",
+      "run",
+      "--rm",
+      "--name",
+      "f1428-ubuntu26",
+      "-v",
+      "/home/patrick/work/ocr-final-1428:/home/patrick/work/ocr-final-1428:rw",
+      "-v",
+      "/home/patrick/work/ocr-corpus-1428:/home/patrick/work/ocr-corpus-1428:ro",
+      "localhost/final1428-ubuntu26:latest",
+      "/home/patrick/work/ocr-final-1428/test_ocr_run",
+      "--helper",
+      "/home/patrick/work/ocr-final-1428/ubuntu26-candidate/usr/bin/putgd-ocr",
+      "--data",
+      "/usr/share/tesseract-ocr/5/tessdata",
+      "--lang",
+      "eng",
+      "--words",
+      "--candidates",
+      "--required",
+      "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png"
+    ],
+    "exit": 0,
+    "result": {
+      "banded": false,
+      "chars": 77608,
+      "codes": 0,
+      "engineStartMs": 112,
+      "error": "",
+      "greyMs": 204,
+      "height": 4000,
+      "image": "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png",
+      "peakRssKiB": 126920,
+      "recognizeMs": 15567,
+      "spawnMs": 30,
+      "totalMs": 16171,
+      "truncated": true,
+      "width": 6000
+    },
+    "kernelExits": [
+      {
+        "startTicks": "198300370",
+        "pid": 772908,
+        "parent": 772906,
+        "parentName": "test_ocr_run",
+        "peakRssKb": 108108,
+        "samples": 24940,
+        "maxThreads": 3,
+        "event": "exit",
+        "exitCode": 0,
+        "exitSignal": 0,
+        "livedMs": 16056.2
+      }
+    ],
+    "load": [
+      1.37548828125,
+      1.5703125,
+      1.47021484375
+    ]
+  },
+  {
+    "engine": "ubuntu26",
+    "languages": [
+      "eng",
+      "deu",
+      "fra"
+    ],
+    "command": [
+      "podman",
+      "run",
+      "--rm",
+      "--name",
+      "f1428-ubuntu26",
+      "-v",
+      "/home/patrick/work/ocr-final-1428:/home/patrick/work/ocr-final-1428:rw",
+      "-v",
+      "/home/patrick/work/ocr-corpus-1428:/home/patrick/work/ocr-corpus-1428:ro",
+      "localhost/final1428-ubuntu26:latest",
+      "/home/patrick/work/ocr-final-1428/test_ocr_run",
+      "--helper",
+      "/home/patrick/work/ocr-final-1428/ubuntu26-candidate/usr/bin/putgd-ocr",
+      "--data",
+      "/usr/share/tesseract-ocr/5/tessdata",
+      "--lang",
+      "eng",
+      "--lang",
+      "deu",
+      "--lang",
+      "fra",
+      "--words",
+      "--candidates",
+      "--required",
+      "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png"
+    ],
+    "exit": 0,
+    "result": {
+      "banded": false,
+      "chars": 16921,
+      "codes": 0,
+      "engineStartMs": 307,
+      "error": "",
+      "greyMs": 203,
+      "height": 4000,
+      "image": "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png",
+      "peakRssKiB": 126920,
+      "recognizeMs": 14373,
+      "spawnMs": 29,
+      "totalMs": 15002,
+      "truncated": true,
+      "width": 6000
+    },
+    "kernelExits": [
+      {
+        "startTicks": "198302084",
+        "pid": 772957,
+        "parent": 772955,
+        "parentName": "test_ocr_run",
+        "peakRssKb": 105180,
+        "samples": 22408,
+        "maxThreads": 1,
+        "event": "exit",
+        "exitCode": 0,
+        "exitSignal": 0,
+        "livedMs": 14964.3
+      }
+    ],
+    "load": [
+      1.29150390625,
+      1.54150390625,
+      1.46142578125
+    ]
+  },
+  {
+    "engine": "debian",
+    "languages": [
+      "eng"
+    ],
+    "command": [
+      "podman",
+      "run",
+      "--rm",
+      "--name",
+      "f1428-debian",
+      "-v",
+      "/home/patrick/work/ocr-final-1428:/home/patrick/work/ocr-final-1428:rw",
+      "-v",
+      "/home/patrick/work/ocr-corpus-1428:/home/patrick/work/ocr-corpus-1428:ro",
+      "localhost/final1428-debian:latest",
+      "/home/patrick/work/ocr-final-1428/test_ocr_run",
+      "--helper",
+      "/home/patrick/work/ocr-final-1428/debian13-candidate/usr/bin/putgd-ocr",
+      "--data",
+      "/usr/share/tesseract-ocr/5/tessdata",
+      "--lang",
+      "eng",
+      "--words",
+      "--candidates",
+      "--required",
+      "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png"
+    ],
+    "exit": 0,
+    "result": {
+      "banded": false,
+      "chars": 73648,
+      "codes": 0,
+      "engineStartMs": 113,
+      "error": "",
+      "greyMs": 229,
+      "height": 4000,
+      "image": "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png",
+      "peakRssKiB": 127236,
+      "recognizeMs": 15403,
+      "spawnMs": 35,
+      "totalMs": 16047,
+      "truncated": true,
+      "width": 6000
+    },
+    "kernelExits": [
+      {
+        "startTicks": "198303686",
+        "pid": 772997,
+        "parent": 772995,
+        "parentName": "test_ocr_run",
+        "peakRssKb": 106824,
+        "samples": 24608,
+        "maxThreads": 3,
+        "event": "exit",
+        "exitCode": 0,
+        "exitSignal": 0,
+        "livedMs": 15940.9
+      }
+    ],
+    "load": [
+      1.65283203125,
+      1.60498046875,
+      1.4833984375
+    ]
+  },
+  {
+    "engine": "debian",
+    "languages": [
+      "eng",
+      "deu",
+      "fra"
+    ],
+    "command": [
+      "podman",
+      "run",
+      "--rm",
+      "--name",
+      "f1428-debian",
+      "-v",
+      "/home/patrick/work/ocr-final-1428:/home/patrick/work/ocr-final-1428:rw",
+      "-v",
+      "/home/patrick/work/ocr-corpus-1428:/home/patrick/work/ocr-corpus-1428:ro",
+      "localhost/final1428-debian:latest",
+      "/home/patrick/work/ocr-final-1428/test_ocr_run",
+      "--helper",
+      "/home/patrick/work/ocr-final-1428/debian13-candidate/usr/bin/putgd-ocr",
+      "--data",
+      "/usr/share/tesseract-ocr/5/tessdata",
+      "--lang",
+      "eng",
+      "--lang",
+      "deu",
+      "--lang",
+      "fra",
+      "--words",
+      "--candidates",
+      "--required",
+      "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png"
+    ],
+    "exit": 0,
+    "result": {
+      "banded": false,
+      "chars": 16921,
+      "codes": 0,
+      "engineStartMs": 313,
+      "error": "",
+      "greyMs": 226,
+      "height": 4000,
+      "image": "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png",
+      "peakRssKiB": 127236,
+      "recognizeMs": 15023,
+      "spawnMs": 35,
+      "totalMs": 15707,
+      "truncated": true,
+      "width": 6000
+    },
+    "kernelExits": [
+      {
+        "startTicks": "198305385",
+        "pid": 773039,
+        "parent": 773037,
+        "parentName": "test_ocr_run",
+        "peakRssKb": 104644,
+        "samples": 23468,
+        "maxThreads": 1,
+        "event": "exit",
+        "exitCode": 0,
+        "exitSignal": 0,
+        "livedMs": 15670.3
+      }
+    ],
+    "load": [
+      1.50732421875,
+      1.57470703125,
+      1.474609375
+    ]
+  },
+  {
+    "engine": "fedora44",
+    "languages": [
+      "eng"
+    ],
+    "command": [
+      "podman",
+      "run",
+      "--rm",
+      "--name",
+      "f1428-fedora44",
+      "-v",
+      "/home/patrick/work/ocr-final-1428:/home/patrick/work/ocr-final-1428:rw",
+      "-v",
+      "/home/patrick/work/ocr-corpus-1428:/home/patrick/work/ocr-corpus-1428:ro",
+      "localhost/final1428-fedora44:latest",
+      "/home/patrick/work/ocr-final-1428/test_ocr_run",
+      "--helper",
+      "/home/patrick/work/ocr-final-1428/fedora44-candidate/usr/bin/putgd-ocr",
+      "--data",
+      "/usr/share/tesseract/tessdata",
+      "--lang",
+      "eng",
+      "--words",
+      "--candidates",
+      "--required",
+      "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png"
+    ],
+    "exit": 0,
+    "result": {
+      "banded": false,
+      "chars": 64687,
+      "codes": 0,
+      "engineStartMs": 101,
+      "error": "",
+      "greyMs": 242,
+      "height": 4000,
+      "image": "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png",
+      "peakRssKiB": 127428,
+      "recognizeMs": 15281,
+      "spawnMs": 32,
+      "totalMs": 15832,
+      "truncated": true,
+      "width": 6000
+    },
+    "kernelExits": [
+      {
+        "startTicks": "198307040",
+        "pid": 773089,
+        "parent": 773086,
+        "parentName": "test_ocr_run",
+        "peakRssKb": 91148,
+        "samples": 23552,
+        "maxThreads": 2,
+        "event": "exit",
+        "exitCode": 0,
+        "exitSignal": 0,
+        "livedMs": 15735.5
+      }
+    ],
+    "load": [
+      1.6171875,
+      1.59619140625,
+      1.4833984375
+    ]
+  },
+  {
+    "engine": "fedora44",
+    "languages": [
+      "eng",
+      "deu",
+      "fra"
+    ],
+    "command": [
+      "podman",
+      "run",
+      "--rm",
+      "--name",
+      "f1428-fedora44",
+      "-v",
+      "/home/patrick/work/ocr-final-1428:/home/patrick/work/ocr-final-1428:rw",
+      "-v",
+      "/home/patrick/work/ocr-corpus-1428:/home/patrick/work/ocr-corpus-1428:ro",
+      "localhost/final1428-fedora44:latest",
+      "/home/patrick/work/ocr-final-1428/test_ocr_run",
+      "--helper",
+      "/home/patrick/work/ocr-final-1428/fedora44-candidate/usr/bin/putgd-ocr",
+      "--data",
+      "/usr/share/tesseract/tessdata",
+      "--lang",
+      "eng",
+      "--lang",
+      "deu",
+      "--lang",
+      "fra",
+      "--words",
+      "--candidates",
+      "--required",
+      "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png"
+    ],
+    "exit": 0,
+    "result": {
+      "banded": false,
+      "chars": 20881,
+      "codes": 0,
+      "engineStartMs": 269,
+      "error": "",
+      "greyMs": 254,
+      "height": 4000,
+      "image": "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png",
+      "peakRssKiB": 127496,
+      "recognizeMs": 14641,
+      "spawnMs": 32,
+      "totalMs": 15238,
+      "truncated": true,
+      "width": 6000
+    },
+    "kernelExits": [
+      {
+        "startTicks": "198308717",
+        "pid": 773131,
+        "parent": 773128,
+        "parentName": "test_ocr_run",
+        "peakRssKb": 105008,
+        "samples": 22771,
+        "maxThreads": 1,
+        "event": "exit",
+        "exitCode": 0,
+        "exitSignal": 0,
+        "livedMs": 15196.1
+      }
+    ],
+    "load": [
+      1.50390625,
+      1.57275390625,
+      1.4775390625
+    ]
+  },
+  {
+    "engine": "arch",
+    "languages": [
+      "eng"
+    ],
+    "command": [
+      "podman",
+      "run",
+      "--rm",
+      "--name",
+      "f1428-arch",
+      "-v",
+      "/home/patrick/work/ocr-final-1428:/home/patrick/work/ocr-final-1428:rw",
+      "-v",
+      "/home/patrick/work/ocr-corpus-1428:/home/patrick/work/ocr-corpus-1428:ro",
+      "localhost/final1428-arch:latest",
+      "/home/patrick/work/ocr-final-1428/test_ocr_run",
+      "--helper",
+      "/home/patrick/work/ocr-final-1428/arch-candidate/usr/bin/putgd-ocr",
+      "--data",
+      "/usr/share/tessdata",
+      "--lang",
+      "eng",
+      "--words",
+      "--candidates",
+      "--required",
+      "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png"
+    ],
+    "exit": 0,
+    "result": {
+      "banded": false,
+      "chars": 36841,
+      "codes": 0,
+      "engineStartMs": 155,
+      "error": "",
+      "greyMs": 224,
+      "height": 4000,
+      "image": "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png",
+      "peakRssKiB": 127472,
+      "recognizeMs": 15511,
+      "spawnMs": 33,
+      "totalMs": 16041,
+      "truncated": true,
+      "width": 6000
+    },
+    "kernelExits": [
+      {
+        "startTicks": "198310341",
+        "pid": 773171,
+        "parent": 773169,
+        "parentName": "test_ocr_run",
+        "peakRssKb": 101640,
+        "samples": 23916,
+        "maxThreads": 2,
+        "event": "exit",
+        "exitCode": 0,
+        "exitSignal": 0,
+        "livedMs": 15979.2
+      }
+    ],
+    "load": [
+      1.6142578125,
+      1.5947265625,
+      1.486328125
+    ]
+  },
+  {
+    "engine": "arch",
+    "languages": [
+      "eng",
+      "deu",
+      "fra"
+    ],
+    "command": [
+      "podman",
+      "run",
+      "--rm",
+      "--name",
+      "f1428-arch",
+      "-v",
+      "/home/patrick/work/ocr-final-1428:/home/patrick/work/ocr-final-1428:rw",
+      "-v",
+      "/home/patrick/work/ocr-corpus-1428:/home/patrick/work/ocr-corpus-1428:ro",
+      "localhost/final1428-arch:latest",
+      "/home/patrick/work/ocr-final-1428/test_ocr_run",
+      "--helper",
+      "/home/patrick/work/ocr-final-1428/arch-candidate/usr/bin/putgd-ocr",
+      "--data",
+      "/usr/share/tessdata",
+      "--lang",
+      "eng",
+      "--lang",
+      "deu",
+      "--lang",
+      "fra",
+      "--words",
+      "--candidates",
+      "--required",
+      "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png"
+    ],
+    "exit": 0,
+    "result": {
+      "banded": false,
+      "chars": 13919,
+      "codes": 0,
+      "engineStartMs": 401,
+      "error": "",
+      "greyMs": 231,
+      "height": 4000,
+      "image": "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png",
+      "peakRssKiB": 127476,
+      "recognizeMs": 14297,
+      "spawnMs": 33,
+      "totalMs": 15010,
+      "truncated": true,
+      "width": 6000
+    },
+    "kernelExits": [
+      {
+        "startTicks": "198312041",
+        "pid": 773224,
+        "parent": 773222,
+        "parentName": "test_ocr_run",
+        "peakRssKb": 111600,
+        "samples": 22442,
+        "maxThreads": 1,
+        "event": "exit",
+        "exitCode": 0,
+        "exitSignal": 0,
+        "livedMs": 14976.1
+      }
+    ],
+    "load": [
+      1.5458984375,
+      1.5810546875,
+      1.4833984375
+    ]
+  },
+  {
+    "engine": "appimage",
+    "languages": [
+      "eng"
+    ],
+    "command": [
+      "/home/patrick/work/ocr-final-1428/test_ocr_run",
+      "--helper",
+      "/home/patrick/work/ocr-final-1428/candidate-appimage-extracted/squashfs-root/usr/bin/putgd-ocr",
+      "--data",
+      "/home/patrick/work/ocr-final-1428/candidate-appimage-extracted/squashfs-root/usr/share/putgd/tessdata",
+      "--data",
+      "/usr/share/tesseract-ocr/5/tessdata",
+      "--lang",
+      "eng",
+      "--words",
+      "--candidates",
+      "--required",
+      "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png"
+    ],
+    "exit": 0,
+    "result": {
+      "banded": false,
+      "chars": 103489,
+      "codes": 0,
+      "engineStartMs": 42,
+      "error": "",
+      "greyMs": 181,
+      "height": 4000,
+      "image": "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png",
+      "peakRssKiB": 145228,
+      "recognizeMs": 15022,
+      "spawnMs": 15,
+      "totalMs": 15620,
+      "truncated": false,
+      "width": 6000
+    },
+    "kernelExits": [
+      {
+        "startTicks": "198313618",
+        "pid": 773246,
+        "parent": 773245,
+        "parentName": "test_ocr_run",
+        "peakRssKb": 95988,
+        "samples": 23370,
+        "maxThreads": 3,
+        "event": "exit",
+        "exitCode": 0,
+        "exitSignal": 0,
+        "livedMs": 15479.1
+      }
+    ],
+    "load": [
+      1.7470703125,
+      1.62451171875,
+      1.49951171875
+    ]
+  },
+  {
+    "engine": "appimage",
+    "languages": [
+      "eng",
+      "deu",
+      "fra"
+    ],
+    "command": [
+      "/home/patrick/work/ocr-final-1428/test_ocr_run",
+      "--helper",
+      "/home/patrick/work/ocr-final-1428/candidate-appimage-extracted/squashfs-root/usr/bin/putgd-ocr",
+      "--data",
+      "/home/patrick/work/ocr-final-1428/candidate-appimage-extracted/squashfs-root/usr/share/putgd/tessdata",
+      "--data",
+      "/usr/share/tesseract-ocr/5/tessdata",
+      "--lang",
+      "eng",
+      "--lang",
+      "deu",
+      "--lang",
+      "fra",
+      "--words",
+      "--candidates",
+      "--required",
+      "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png"
+    ],
+    "exit": 0,
+    "result": {
+      "banded": false,
+      "chars": 80729,
+      "codes": 0,
+      "engineStartMs": 68,
+      "error": "",
+      "greyMs": 174,
+      "height": 4000,
+      "image": "/home/patrick/work/ocr-final-1428/synthetic-final/limit-24mp.png",
+      "peakRssKiB": 145124,
+      "recognizeMs": 15767,
+      "spawnMs": 14,
+      "totalMs": 16321,
+      "truncated": true,
+      "width": 6000
+    },
+    "kernelExits": [
+      {
+        "startTicks": "198315245",
+        "pid": 773265,
+        "parent": 773264,
+        "parentName": "test_ocr_run",
+        "peakRssKb": 112228,
+        "samples": 24272,
+        "maxThreads": 3,
+        "event": "exit",
+        "exitCode": 0,
+        "exitSignal": 0,
+        "livedMs": 16209.7
+      }
+    ],
+    "load": [
+      2.02490234375,
+      1.6923828125,
+      1.5244140625
+    ]
+  }
+]
