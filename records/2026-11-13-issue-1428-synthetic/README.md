@@ -7,3 +7,5 @@ Includes 24 redact pages in four fonts at 11/14/20 px, light/dark; explicit conf
 Text truth uses Unicode code-point arrays (decode with chr); code payloads use hex. This represents intentionally fake token shapes without triggering GitHub push protection on plain-text Slack fixtures. The original rejected publish is preserved privately. Image bytes are unchanged by that representation.
 
 These are generated inputs, not feature acceptance or a substitute for real-target captures. Per-item/line boxes and font file hashes are in truth JSON. Limit truth is separate from prose scoring. A plain-payload smoke test for each of the four formats was decoded byte-exactly with Debian ZXingReader; exhaustive decode and independent zbar verification remain outstanding. Redaction coverage, result sanitation, and limits/bands await the feature.
+
+Source-only follow-up: construct the synthetic PEM marker in pieces so scanners do not mistake the source literal for a private key. Generated payloads and pixels are unchanged. The earlier source revision remains in evidence history as a synthetic-fixture false positive.

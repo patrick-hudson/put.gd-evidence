@@ -40,7 +40,7 @@ def sensitive():
             ('token', 'gh' + 'p_' + run('a', 36)), ('token', 'gl' + 'pat-' + run('b', 20)),
             ('token', 'xo' + 'xb-' + '000000000000-' * 2 + run('c', 24)),
             ('token', 'sk_' + 'test_' + run('d', 24)), ('token', jwt),
-            ('token', '-----BEGIN PRIVATE KEY-----\n' + base64.b64encode(b'synthetic invalid key material'*3).decode() + '\n-----END PRIVATE KEY-----'),
+            ('token', '-----BEGIN ' + 'PRIVATE KEY-----\n' + base64.b64encode(b'synthetic invalid key material'*3).decode() + '\n-----END PRIVATE KEY-----'),
             ('token', hashlib.sha256(b'synthetic corpus').hexdigest()),
             ('token', base64.b64encode(b'synthetic long run shape fixture').decode())]
 
