@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-13-issue-1428-debian-corpus](2026-11-13-issue-1428-debian-corpus/README.md) | — | Issue 1428 Debian real-target corpus |
 | [2026-11-13-issue-1428-synthetic](2026-11-13-issue-1428-synthetic/README.md) | — | Issue 1428 synthetic fixtures |
 | [2026-11-13-issue-1428-text-corpus](2026-11-13-issue-1428-text-corpus/README.md) | — | Issue 1428 corpus first light |
 | [2026-11-12-scroll-opus-1398](2026-11-12-scroll-opus-1398/README.md) | #1376, #1398 | Scroll capture, a fresh pass — PR #1398 (issue #1376) |
