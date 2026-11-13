@@ -53,3 +53,5 @@ Each block records quiet-host load/idle samples. Native is the scope of this fol
 [Structured analysis](analysis.json), [raw per-block data](data), [as-run driver](h1428-run.py), [witness](h1428-witness.py), [analysis program](h1428-analyse.py), [cleanup](cleanup.json).
 
 Quiet-host checks: CPU idle 73.43–100.00%; one-minute load 0.00–2.70,four CPUs. Smallest quiet RSS drop 22784KiB.
+
+The73.43% reading above was a rejected initial quiet-check attempt, not the admitted timing condition. Every block waited until CPU idle exceeded90%; last admitted readings range 90.43–100.00%. All attempt readings are retained.
