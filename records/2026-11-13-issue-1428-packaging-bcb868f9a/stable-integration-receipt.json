@@ -1,0 +1,167 @@
+{
+  "run": 43380438975,
+  "commit": "bcb868f9ac5b50967976656ed306858f5d8ae72f",
+  "host": "d69",
+  "utc": "2026-11-13T07:12:04.206976+00:00",
+  "scanCommand": "GRYPE_DB_CACHE_DIR=\"$PWD/db-cache\" python3 integration-source/tools/releases/sbom.py scan --sboms integration-sboms --grype \"$PWD/scan-tools/grype\" --output stable-policy-bcb --database integration-current-db.json --release-tag v26.1113.4805 --summary stable-integration-summary.md",
+  "observedCommandExit": 0,
+  "channel": "stable",
+  "mode": "STABLE policy rehearsal only; no release tag created or publication performed",
+  "database": {
+    "name": "vulnerability-db_v6.1.10_2026-11-12T00:22:10Z_1794464458.tar.zst",
+    "url": "https://grype.anchore.io/databases/v6/vulnerability-db_v6.1.10_2026-11-12T00:22:10Z_1794464458.tar.zst",
+    "sha256": "c98bd6bd207590fa04c8e2fea3db1859f7f952b57400fc62e19f517f1b562f5e",
+    "built": "2026-11-12T06:20:58Z",
+    "schemaVersion": "v6.1.10"
+  },
+  "policySha256": "f759c346c86830bf44db9f93923525058a7fc7f33584b1f7df7c253a09b7ffc3",
+  "policyAcceptancesAdded": [],
+  "findings": 163,
+  "flagged": 0,
+  "newOcrQrComponentFindings": [],
+  "statusCounts": {
+    "reported": 157,
+    "accepted until 2027-01-21": 2,
+    "accepted until 2027-02-03": 3,
+    "accepted until 2027-01-29": 1
+  },
+  "severityCounts": {
+    "High": 9,
+    "Low": 16,
+    "Medium": 138
+  },
+  "grypeVersion": {
+    "application": "grype",
+    "buildDate": "2026-11-05T21:17:09Z",
+    "compiler": "gc",
+    "gitCommit": "82d7a0ea911946b99343c672056867d372f9b319",
+    "gitDescription": "v0.121.2",
+    "goVersion": "go1.27.3",
+    "platform": "linux/amd64",
+    "supportedDbSchema": 6,
+    "syftVersion": "v1.57.0",
+    "version": "0.121.2"
+  },
+  "toolBinarySha256": {
+    "grype": "e668ae615893f6b1525f6ee43473fa0111a082fa128409c0982809fd75f63e86",
+    "syft": "103469021520fc36c94fe5d2139bb45506f520a8043c61b8dcb161053933ba9e"
+  },
+  "packageBindings": {
+    "appimage": {
+      "file": "putgd-26.1113.4805-dev+gbcb868f9ac5b-x86_64.AppImage",
+      "bytes": 164518392,
+      "sha256": "bbf92855d0264ae60de22a9f8a2c7f68197c86079f5706666f9440d240f152d5",
+      "sbom": "putgd-26.1113.4805-dev+gbcb868f9ac5b-appimage.cdx.json",
+      "sbomSha256": "8da6e8d1020f5e1adcaf60b872cef085d36d1a712779909c9f542c394f1ae65f",
+      "components": 176,
+      "identity": {
+        "schemaVersion": 1,
+        "version": "26.1113.4805-dev+gbcb868f9ac5b",
+        "baseVersion": "26.1113.4805",
+        "packageVersion": "26.1113.4805~dev+gbcb868f9ac5b",
+        "gitCommit": "bcb868f9ac5b50967976656ed306858f5d8ae72f",
+        "gitTree": "4495eec58fce3a73e7b825d376a9aea9e68b1b57",
+        "commitCount": 4805,
+        "dirty": false,
+        "sourceProvenance": "git"
+      }
+    },
+    "archlinux": {
+      "file": "putgd-26.1113.4805dev.gbcb868f9ac5b-1-x86_64.pkg.tar.zst",
+      "bytes": 133154255,
+      "sha256": "8ec04c9b87b6cdc8dff33f715eca3b0c6bf4e7d4e5682bfc2d13921849248c25",
+      "sbom": "putgd-26.1113.4805-dev+gbcb868f9ac5b-archlinux.cdx.json",
+      "sbomSha256": "51e293bccba5a801ec56a6444af0e7e5dbdcfda0e58f88a9ef8c1f8610729c20",
+      "components": 25,
+      "identity": {
+        "schemaVersion": 1,
+        "version": "26.1113.4805-dev+gbcb868f9ac5b",
+        "baseVersion": "26.1113.4805",
+        "packageVersion": "26.1113.4805~dev+gbcb868f9ac5b",
+        "gitCommit": "bcb868f9ac5b50967976656ed306858f5d8ae72f",
+        "gitTree": "4495eec58fce3a73e7b825d376a9aea9e68b1b57",
+        "commitCount": 4805,
+        "dirty": false,
+        "sourceProvenance": "git"
+      }
+    },
+    "fedora44": {
+      "file": "putgd-26.1113.4805~dev+gbcb868f9ac5b-1.fc44.x86_64.rpm",
+      "bytes": 113498070,
+      "sha256": "17298cb17e1241e0585ecf060cebd497ce8f3c023666c26b21e9e5bb659f9868",
+      "sbom": "putgd-26.1113.4805-dev+gbcb868f9ac5b-fedora44.cdx.json",
+      "sbomSha256": "d95262579ba9abeec8531ec00cc3f21eda43d126a1a65327f63a58aea1ca7189",
+      "components": 25,
+      "identity": {
+        "schemaVersion": 1,
+        "version": "26.1113.4805-dev+gbcb868f9ac5b",
+        "baseVersion": "26.1113.4805",
+        "packageVersion": "26.1113.4805~dev+gbcb868f9ac5b",
+        "gitCommit": "bcb868f9ac5b50967976656ed306858f5d8ae72f",
+        "gitTree": "4495eec58fce3a73e7b825d376a9aea9e68b1b57",
+        "commitCount": 4805,
+        "dirty": false,
+        "sourceProvenance": "git"
+      }
+    },
+    "debian13": {
+      "file": "putgd_26.1113.4805~dev+gbcb868f9ac5b_amd64.deb",
+      "bytes": 137083496,
+      "sha256": "4fc78e45e62ab807e9111d00d120341a4d1e003ed0a2657c19d315aafb4b23fc",
+      "sbom": "putgd-26.1113.4805-dev+gbcb868f9ac5b-debian13.cdx.json",
+      "sbomSha256": "f2891f21a85ef29eb9aaef617c727f8368371a849f177cb68e8d8b3c97a36e5e",
+      "components": 25,
+      "identity": {
+        "schemaVersion": 1,
+        "version": "26.1113.4805-dev+gbcb868f9ac5b",
+        "baseVersion": "26.1113.4805",
+        "packageVersion": "26.1113.4805~dev+gbcb868f9ac5b",
+        "gitCommit": "bcb868f9ac5b50967976656ed306858f5d8ae72f",
+        "gitTree": "4495eec58fce3a73e7b825d376a9aea9e68b1b57",
+        "commitCount": 4805,
+        "dirty": false,
+        "sourceProvenance": "git"
+      }
+    },
+    "ubuntu24.04": {
+      "file": "putgd_26.1113.4805~dev+gbcb868f9ac5b_amd64.deb",
+      "bytes": 137265276,
+      "sha256": "e3e13cd475e76d80a1233257be8430f31ee185da2f1db0c4d03f26045559ddf7",
+      "sbom": "putgd-26.1113.4805-dev+gbcb868f9ac5b-ubuntu24.04.cdx.json",
+      "sbomSha256": "23bbde0e6e5f53bcdcf875740b06bbd007023245e89b47e8a4bb27746dfdf967",
+      "components": 25,
+      "identity": {
+        "schemaVersion": 1,
+        "version": "26.1113.4805-dev+gbcb868f9ac5b",
+        "baseVersion": "26.1113.4805",
+        "packageVersion": "26.1113.4805~dev+gbcb868f9ac5b",
+        "gitCommit": "bcb868f9ac5b50967976656ed306858f5d8ae72f",
+        "gitTree": "4495eec58fce3a73e7b825d376a9aea9e68b1b57",
+        "commitCount": 4805,
+        "dirty": false,
+        "sourceProvenance": "git"
+      }
+    },
+    "ubuntu26.04": {
+      "file": "putgd_26.1113.4805~dev+gbcb868f9ac5b_amd64.deb",
+      "bytes": 137857616,
+      "sha256": "39060de1ecb8d69d3536b48c7d0c76adf4b1ab6b1735eaf897866e6e592b36f0",
+      "sbom": "putgd-26.1113.4805-dev+gbcb868f9ac5b-ubuntu26.04.cdx.json",
+      "sbomSha256": "6405da37ae7f8b369117bd8f0669a10d9c0810fd32e2b19b4f9c19fdd247c08d",
+      "components": 25,
+      "identity": {
+        "schemaVersion": 1,
+        "version": "26.1113.4805-dev+gbcb868f9ac5b",
+        "baseVersion": "26.1113.4805",
+        "packageVersion": "26.1113.4805~dev+gbcb868f9ac5b",
+        "gitCommit": "bcb868f9ac5b50967976656ed306858f5d8ae72f",
+        "gitTree": "4495eec58fce3a73e7b825d376a9aea9e68b1b57",
+        "commitCount": 4805,
+        "dirty": false,
+        "sourceProvenance": "git"
+      }
+    }
+  },
+  "reportSha256": "e6c9417efd9ea8a4eaf5266d49ea6c2aeeb9560c54f64d99bedb72da3569e23b",
+  "scope": "All six package SBOMs, each independently bound to the exact integration CI installer SHA-256; native distro libraries remain distribution managed and are not bundled-code components"
+}

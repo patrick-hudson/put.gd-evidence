@@ -1,0 +1,785 @@
+{
+ "bomFormat": "CycloneDX",
+ "specVersion": "1.7",
+ "serialNumber": "urn:uuid:452ffbf8-5403-5a77-8ba0-d0bf37fb6cba",
+ "version": 1,
+ "metadata": {
+  "timestamp": "2026-11-13T06:38:40Z",
+  "tools": {
+   "components": [
+    {
+     "type": "application",
+     "author": "anchore",
+     "name": "syft",
+     "version": "1.57.0"
+    },
+    {
+     "type": "application",
+     "name": "putgd sbom.py",
+     "version": "1"
+    }
+   ]
+  },
+  "component": {
+   "type": "application",
+   "bom-ref": "putgd-package",
+   "name": "putgd_26.1113.4805~dev+gbcb868f9ac5b_amd64.deb",
+   "version": "26.1113.4805-dev+gbcb868f9ac5b",
+   "hashes": [
+    {
+     "alg": "SHA-256",
+     "content": "e3e13cd475e76d80a1233257be8430f31ee185da2f1db0c4d03f26045559ddf7"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:label",
+     "value": "ubuntu24.04"
+    },
+    {
+     "name": "putgd:distro",
+     "value": "ubuntu:24.04"
+    }
+   ]
+  }
+ },
+ "components": [
+  {
+   "type": "library",
+   "bom-ref": "pkg:generic/aws-sdk-cpp@1.11.924",
+   "name": "aws-sdk-cpp",
+   "version": "1.11.924",
+   "purl": "pkg:generic/aws-sdk-cpp@1.11.924",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/aws/aws-sdk-cpp#e8c12a9fd0cbbc4e1ff36b90e35ede7cd20e7bc8"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:commit",
+     "value": "e8c12a9fd0cbbc4e1ff36b90e35ede7cd20e7bc8"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:github/awslabs/aws-crt-cpp@58bca57cbc8b242468414972a6a35f92676b164d",
+   "name": "aws-crt-cpp",
+   "version": "58bca57cbc8b242468414972a6a35f92676b164d",
+   "purl": "pkg:github/awslabs/aws-crt-cpp@58bca57cbc8b242468414972a6a35f92676b164d",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/awslabs/aws-crt-cpp#58bca57cbc8b242468414972a6a35f92676b164d"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "aws-sdk-cpp"
+    },
+    {
+     "name": "putgd:commit",
+     "value": "58bca57cbc8b242468414972a6a35f92676b164d"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:github/awslabs/aws-c-auth@055e822f021d1cab11d608b94ac34de250986134",
+   "name": "aws-c-auth",
+   "version": "055e822f021d1cab11d608b94ac34de250986134",
+   "purl": "pkg:github/awslabs/aws-c-auth@055e822f021d1cab11d608b94ac34de250986134",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/awslabs/aws-c-auth#055e822f021d1cab11d608b94ac34de250986134"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "aws-sdk-cpp"
+    },
+    {
+     "name": "putgd:commit",
+     "value": "055e822f021d1cab11d608b94ac34de250986134"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:github/awslabs/aws-c-cal@2441187f3bdbe0f0fe7fa5dd1736be98227ad556",
+   "name": "aws-c-cal",
+   "version": "2441187f3bdbe0f0fe7fa5dd1736be98227ad556",
+   "purl": "pkg:github/awslabs/aws-c-cal@2441187f3bdbe0f0fe7fa5dd1736be98227ad556",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/awslabs/aws-c-cal#2441187f3bdbe0f0fe7fa5dd1736be98227ad556"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "aws-sdk-cpp"
+    },
+    {
+     "name": "putgd:commit",
+     "value": "2441187f3bdbe0f0fe7fa5dd1736be98227ad556"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:github/awslabs/aws-c-common@2a29f7ea85397ff15e41ae086fb3662484fd305d",
+   "name": "aws-c-common",
+   "version": "2a29f7ea85397ff15e41ae086fb3662484fd305d",
+   "purl": "pkg:github/awslabs/aws-c-common@2a29f7ea85397ff15e41ae086fb3662484fd305d",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/awslabs/aws-c-common#2a29f7ea85397ff15e41ae086fb3662484fd305d"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "aws-sdk-cpp"
+    },
+    {
+     "name": "putgd:commit",
+     "value": "2a29f7ea85397ff15e41ae086fb3662484fd305d"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:github/awslabs/aws-c-compression@891312c058e69a4d55f569f79dde1ee221982532",
+   "name": "aws-c-compression",
+   "version": "891312c058e69a4d55f569f79dde1ee221982532",
+   "purl": "pkg:github/awslabs/aws-c-compression@891312c058e69a4d55f569f79dde1ee221982532",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/awslabs/aws-c-compression#891312c058e69a4d55f569f79dde1ee221982532"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "aws-sdk-cpp"
+    },
+    {
+     "name": "putgd:commit",
+     "value": "891312c058e69a4d55f569f79dde1ee221982532"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:github/awslabs/aws-c-event-stream@d32600bfecc6616cab0c478f96ea5a779f03e05e",
+   "name": "aws-c-event-stream",
+   "version": "d32600bfecc6616cab0c478f96ea5a779f03e05e",
+   "purl": "pkg:github/awslabs/aws-c-event-stream@d32600bfecc6616cab0c478f96ea5a779f03e05e",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/awslabs/aws-c-event-stream#d32600bfecc6616cab0c478f96ea5a779f03e05e"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "aws-sdk-cpp"
+    },
+    {
+     "name": "putgd:commit",
+     "value": "d32600bfecc6616cab0c478f96ea5a779f03e05e"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:github/awslabs/aws-c-http@afe6411dd17b2368d5262724c25a3b85670b4e06",
+   "name": "aws-c-http",
+   "version": "afe6411dd17b2368d5262724c25a3b85670b4e06",
+   "purl": "pkg:github/awslabs/aws-c-http@afe6411dd17b2368d5262724c25a3b85670b4e06",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/awslabs/aws-c-http#afe6411dd17b2368d5262724c25a3b85670b4e06"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "aws-sdk-cpp"
+    },
+    {
+     "name": "putgd:commit",
+     "value": "afe6411dd17b2368d5262724c25a3b85670b4e06"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:github/awslabs/aws-c-io@1831a1943e4c4a034d42f954e8f154cf6b9b492f",
+   "name": "aws-c-io",
+   "version": "1831a1943e4c4a034d42f954e8f154cf6b9b492f",
+   "purl": "pkg:github/awslabs/aws-c-io@1831a1943e4c4a034d42f954e8f154cf6b9b492f",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/awslabs/aws-c-io#1831a1943e4c4a034d42f954e8f154cf6b9b492f"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "aws-sdk-cpp"
+    },
+    {
+     "name": "putgd:commit",
+     "value": "1831a1943e4c4a034d42f954e8f154cf6b9b492f"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:github/awslabs/aws-c-mqtt@96af751fa58d4d6704881463a4d6895b107268ed",
+   "name": "aws-c-mqtt",
+   "version": "96af751fa58d4d6704881463a4d6895b107268ed",
+   "purl": "pkg:github/awslabs/aws-c-mqtt@96af751fa58d4d6704881463a4d6895b107268ed",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/awslabs/aws-c-mqtt#96af751fa58d4d6704881463a4d6895b107268ed"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "aws-sdk-cpp"
+    },
+    {
+     "name": "putgd:commit",
+     "value": "96af751fa58d4d6704881463a4d6895b107268ed"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:github/awslabs/aws-c-s3@eeb85f3e4ed89497a93952964bd8228d1f435e6e",
+   "name": "aws-c-s3",
+   "version": "eeb85f3e4ed89497a93952964bd8228d1f435e6e",
+   "purl": "pkg:github/awslabs/aws-c-s3@eeb85f3e4ed89497a93952964bd8228d1f435e6e",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/awslabs/aws-c-s3#eeb85f3e4ed89497a93952964bd8228d1f435e6e"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "aws-sdk-cpp"
+    },
+    {
+     "name": "putgd:commit",
+     "value": "eeb85f3e4ed89497a93952964bd8228d1f435e6e"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:github/awslabs/aws-c-sdkutils@de0fbe807a409158c3fa285bafb88120c8989609",
+   "name": "aws-c-sdkutils",
+   "version": "de0fbe807a409158c3fa285bafb88120c8989609",
+   "purl": "pkg:github/awslabs/aws-c-sdkutils@de0fbe807a409158c3fa285bafb88120c8989609",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/awslabs/aws-c-sdkutils#de0fbe807a409158c3fa285bafb88120c8989609"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "aws-sdk-cpp"
+    },
+    {
+     "name": "putgd:commit",
+     "value": "de0fbe807a409158c3fa285bafb88120c8989609"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:github/awslabs/aws-checksums@12cd22e81543b8547132762023076ab6afa25559",
+   "name": "aws-checksums",
+   "version": "12cd22e81543b8547132762023076ab6afa25559",
+   "purl": "pkg:github/awslabs/aws-checksums@12cd22e81543b8547132762023076ab6afa25559",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/awslabs/aws-checksums#12cd22e81543b8547132762023076ab6afa25559"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "aws-sdk-cpp"
+    },
+    {
+     "name": "putgd:commit",
+     "value": "12cd22e81543b8547132762023076ab6afa25559"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:github/aws/s2n-tls@b170000016fb44fa4dfdd86ed0b75bd28241e707",
+   "name": "s2n",
+   "version": "b170000016fb44fa4dfdd86ed0b75bd28241e707",
+   "purl": "pkg:github/aws/s2n-tls@b170000016fb44fa4dfdd86ed0b75bd28241e707",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/aws/s2n-tls#b170000016fb44fa4dfdd86ed0b75bd28241e707"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "aws-sdk-cpp"
+    },
+    {
+     "name": "putgd:commit",
+     "value": "b170000016fb44fa4dfdd86ed0b75bd28241e707"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:github/nayuki/QR-Code-generator@1.8.0",
+   "name": "qrcodegen",
+   "version": "1.8.0",
+   "purl": "pkg:github/nayuki/QR-Code-generator@1.8.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "externalReferences": [
+    {
+     "type": "vcs",
+     "url": "https://github.com/nayuki/QR-Code-generator#720f62bddb7226106071d4728c292cb1df519ceb"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:commit",
+     "value": "720f62bddb7226106071d4728c292cb1df519ceb"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:npm/%40noble/hashes@2.4.0",
+   "name": "@noble/hashes",
+   "version": "2.4.0",
+   "purl": "pkg:npm/%40noble/hashes@2.4.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "proton-helper"
+    },
+    {
+     "name": "putgd:protonClassification",
+     "value": "bundled-js"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:npm/%40openpgp/web-stream-tools@0.3.1",
+   "name": "@openpgp/web-stream-tools",
+   "version": "0.3.1",
+   "purl": "pkg:npm/%40openpgp/web-stream-tools@0.3.1",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "proton-helper"
+    },
+    {
+     "name": "putgd:protonClassification",
+     "value": "bundled-js"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:npm/bun@1.4.4",
+   "name": "bun",
+   "version": "1.4.4",
+   "purl": "pkg:npm/bun@1.4.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "proton-helper"
+    },
+    {
+     "name": "putgd:protonClassification",
+     "value": "embedded-runtime"
+    },
+    {
+     "name": "putgd:npmPackage",
+     "value": "@oven/bun-linux-x64"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:npm/%40protontech/crypto@2.2.0",
+   "name": "@protontech/crypto",
+   "version": "2.2.0",
+   "purl": "pkg:npm/%40protontech/crypto@2.2.0",
+   "licenses": [
+    {
+     "expression": "GPL-3.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "proton-helper"
+    },
+    {
+     "name": "putgd:protonClassification",
+     "value": "bundled-js"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:npm/%40protontech/drive-sdk@0.23.0",
+   "name": "@protontech/drive-sdk",
+   "version": "0.23.0",
+   "purl": "pkg:npm/%40protontech/drive-sdk@0.23.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "proton-helper"
+    },
+    {
+     "name": "putgd:protonClassification",
+     "value": "bundled-js"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:npm/%40noble/hashes@1.8.0",
+   "name": "@noble/hashes",
+   "version": "1.8.0",
+   "purl": "pkg:npm/%40noble/hashes@1.8.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "proton-helper"
+    },
+    {
+     "name": "putgd:protonClassification",
+     "value": "bundled-js"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:npm/bcryptjs@3.0.3",
+   "name": "bcryptjs",
+   "version": "3.0.3",
+   "purl": "pkg:npm/bcryptjs@3.0.3",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "proton-helper"
+    },
+    {
+     "name": "putgd:protonClassification",
+     "value": "bundled-js"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:npm/ky@1.14.3",
+   "name": "ky",
+   "version": "1.14.3",
+   "purl": "pkg:npm/ky@1.14.3",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "proton-helper"
+    },
+    {
+     "name": "putgd:protonClassification",
+     "value": "bundled-js"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:npm/%40protontech/openpgp@6.3.1",
+   "name": "@protontech/openpgp",
+   "version": "6.3.1",
+   "purl": "pkg:npm/%40protontech/openpgp@6.3.1",
+   "cpe": "cpe:2.3:a:openpgpjs:openpgpjs:6.3.1:*:*:*:*:*:*:*",
+   "licenses": [
+    {
+     "expression": "LGPL-3.0+"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "proton-helper"
+    },
+    {
+     "name": "putgd:protonClassification",
+     "value": "bundled-js"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "bom-ref": "pkg:npm/ttag@1.8.12",
+   "name": "ttag",
+   "version": "1.8.12",
+   "purl": "pkg:npm/ttag@1.8.12",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "putgd:origin",
+     "value": "bundled"
+    },
+    {
+     "name": "putgd:embeddedIn",
+     "value": "proton-helper"
+    },
+    {
+     "name": "putgd:protonClassification",
+     "value": "bundled-js"
+    }
+   ]
+  }
+ ]
+}

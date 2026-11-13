@@ -1,0 +1,130 @@
+{
+  "run": 43380438975,
+  "commit": "bcb868f9ac5b50967976656ed306858f5d8ae72f",
+  "archive": {
+    "bytes": 24463898,
+    "file": "putgd-26.1113.4805-dev+gbcb868f9ac5b-source.tar.gz",
+    "sha256": "af137bf6eed102f6094b5e7083b34867d72cdeb7edbc25e90f261978ed722c4c"
+  },
+  "allArchiveMembersVerified": 687,
+  "requiredPackagingAndVendoredInputs": {
+    "cmake/Ocr.cmake": "b323dc9d0bc8f4158805a979d886db12fcbf1d7da32ae8b16af3e2dba2713c4b",
+    "cmake/dependency-lock.json": "27e05a5b3bc43c3c23492282a494e36d0e58f347ea69d5788969be64aeb641ad",
+    "docs/release/build.md": "3d11b6a502ea271011d9e649f81131ce611868910c60060b830e5d61c37fe86e",
+    "packaging/appimage/BSD-3-Clause.txt": "9acc4bc871a4742550158e3696dcb381953172ef808d04ca248184f9f6322712",
+    "packaging/appimage/components.json": "03cfa9d51d7b9f13124cfdbb6cf5d889d72d64c9ae5fda68b7ee749f79da3026",
+    "packaging/appimage/tools.lock.json": "15c8744558e254a5a9194586394ae638569ccafc51d83f27d6520b079755f207",
+    "packaging/linux/qrcodegen-LICENSE": "ed2519cc763fe69c5cedceff0b69ea74f3d3a0b4cfa98e845ba1688469d0f433",
+    "src/core/qrcodegen/qrcodegen.cpp": "1f3b3fcdac6954c32cf583ccd02ec9b5901f756a38c461acedc70be4a77d3757",
+    "src/core/qrcodegen/qrcodegen.hpp": "b779c3b156cf7a57ce789d6fee4fc991ccc2913774d26c909d22bb8f26b2a793",
+    "tools/maintenance/refresh_pins.py": "9539ec7e1d2d1b4d5d8ae4c21e28be744fdebfd7e282ea673a36876cb6865b95",
+    "tools/releases/appimage_complete_sources.py": "d155498b9f5bbb42df6e0a0ae29f8b436dbfea2e398c3d49d3172738c5e18734",
+    "tools/releases/appimage_notices.py": "a26a2ef593f46fb912233834d67c7a7b29315eae70f604a463ae8c8cc8620257",
+    "tools/releases/build-appimage.sh": "7564347b1254c22f4a78243fbc35f1d75952c6df9a4b8763d3c44f8a2d8e63b3",
+    "tools/releases/portable_appimage.py": "b6d635c34a2ea41b2ff8c4e990c0277cf21074a292e72900c20ae15dbda608ea",
+    "tools/releases/provision-appimage.py": "b15e32af49c863ee4d0e17a17be8548815483ee443d283cf0765e02f76d21164",
+    "tools/releases/provision-sdk.sh": "f76d391d2d0fcce68403aaa8672e17ffe1c0443f9602484286741980aaa95e2b",
+    "tools/verify_dependencies.py": "6d58e03781c94756d3ea0602d956d0ee4f5e1cefca1166072e419a88536b5102"
+  },
+  "actualProductionRebuild": {
+    "schemaVersion": 1,
+    "passed": true,
+    "archive": {
+      "bytes": 24463898,
+      "file": "putgd-26.1113.4805-dev+gbcb868f9ac5b-source.tar.gz",
+      "sha256": "af137bf6eed102f6094b5e7083b34867d72cdeb7edbc25e90f261978ed722c4c"
+    },
+    "commands": [
+      [
+        "/usr/bin/python3",
+        "tools/proton/provision_runtime.py",
+        "--source",
+        "/__w/put.gd-desktop/put.gd-desktop/build/dependencies/proton-runtime/sdk-source",
+        "--crypto-source",
+        "/__w/put.gd-desktop/put.gd-desktop/build/dependencies/proton-runtime/crypto-source",
+        "--offline"
+      ],
+      [
+        "cmake",
+        "--preset",
+        "release",
+        "-DPUTGD_OCR=ON",
+        "-DBUILD_TESTING=OFF",
+        "-DPUTGD_LAB_FIXTURE=OFF",
+        "-DPUTGD_PHYSICAL_BENCHMARKS=OFF",
+        "-DCMAKE_PREFIX_PATH=/__w/put.gd-desktop/put.gd-desktop/build/sdk",
+        "-DPUTGD_AWS_SOURCE_DIR=/__w/put.gd-desktop/put.gd-desktop/build/dependencies/aws-sdk-cpp",
+        "-DPUTGD_AWS_RUNTIME_DIR=/__w/put.gd-desktop/put.gd-desktop/build/sdk/lib",
+        "-DPUTGD_SOURCE_COMMIT=bcb868f9ac5b50967976656ed306858f5d8ae72f",
+        "-DPUTGD_SOURCE_TREE=4495eec58fce3a73e7b825d376a9aea9e68b1b57",
+        "-DPUTGD_SOURCE_COMMIT_COUNT=4805",
+        "-DPUTGD_SOURCE_COMMIT_TIME=1794551920",
+        "-DPUTGD_BUNDLE_PROTON=ON"
+      ],
+      [
+        "cmake",
+        "--build",
+        "--preset",
+        "release",
+        "--parallel",
+        "4"
+      ]
+    ],
+    "rebuiltProton": {
+      "sha256": "d4bea9c8a1cdaffa6ae4efc7489bb6eb5c70720277950fe6999e6ba466b4555e",
+      "bundledSha256": "d4bea9c8a1cdaffa6ae4efc7489bb6eb5c70720277950fe6999e6ba466b4555e",
+      "manifestSha256": "81eddfc254501011e81ebd47b8b9392179bda0a221e2e66d57491a3b83b9424a"
+    },
+    "compiledBuild": {
+      "schemaVersion": 1,
+      "version": "26.1113.4805-dev+gbcb868f9ac5b",
+      "baseVersion": "26.1113.4805",
+      "packageVersion": "26.1113.4805~dev+gbcb868f9ac5b",
+      "gitCommit": "bcb868f9ac5b50967976656ed306858f5d8ae72f",
+      "gitTree": "4495eec58fce3a73e7b825d376a9aea9e68b1b57",
+      "commitCount": 4805,
+      "dirty": null,
+      "sourceProvenance": "supplied"
+    },
+    "identityMatchedPrograms": [
+      "putgd",
+      "putgd-cli",
+      "putgd-ui",
+      "putgd-capture",
+      "putgd-s3-worker",
+      "putgd-b2-worker",
+      "putgd-http-worker",
+      "putgd-ocr",
+      "putgd-region",
+      "putgd-record"
+    ],
+    "wallSeconds": 541.4068891039999
+  },
+  "parameters": {
+    "schemaVersion": 1,
+    "archive": {
+      "bytes": 24463898,
+      "file": "putgd-26.1113.4805-dev+gbcb868f9ac5b-source.tar.gz",
+      "sha256": "af137bf6eed102f6094b5e7083b34867d72cdeb7edbc25e90f261978ed722c4c"
+    },
+    "identity": {
+      "baseVersion": "26.1113.4805",
+      "commitCount": 4805,
+      "dirty": false,
+      "gitCommit": "bcb868f9ac5b50967976656ed306858f5d8ae72f",
+      "gitTree": "4495eec58fce3a73e7b825d376a9aea9e68b1b57",
+      "packageVersion": "26.1113.4805~dev+gbcb868f9ac5b",
+      "schemaVersion": 1,
+      "sourceProvenance": "git",
+      "version": "26.1113.4805-dev+gbcb868f9ac5b"
+    },
+    "sdkPrefix": "/__w/put.gd-desktop/put.gd-desktop/build/sdk",
+    "sdkSource": "/__w/put.gd-desktop/put.gd-desktop/build/dependencies/aws-sdk-cpp",
+    "bundleProton": true,
+    "protonSource": "/__w/put.gd-desktop/put.gd-desktop/build/dependencies/proton-runtime/sdk-source",
+    "protonCryptoSource": "/__w/put.gd-desktop/put.gd-desktop/build/dependencies/proton-runtime/crypto-source",
+    "protonOffline": true,
+    "scope": "Actual source-export production compilation; no desktop or memory acceptance"
+  },
+  "scope": "Real CI extracted-source production build with OCR ON and bundled Proton; no application/desktop acceptance"
+}
