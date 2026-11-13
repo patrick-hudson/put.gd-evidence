@@ -1,0 +1,13 @@
+# Issue 1428 Mint real-target corpus
+
+29 original Capture region PNGs from the published nightly 26.1112.4660 Ubuntu 24.04 DEB on physical m74, Mint 22.3 Cinnamon X11. Build, package SHA-256 and session identities are adjacent. No put.gd compilation was used. A private resident wrote local-only files; no destination credentials or user objects were used.
+
+Seven classes in light/dark at 100%/125%: xterm, Firefox on a known local HTML page, live GitHub PR 1430 and Wikipedia QR code article, Xed showing code, a synthetic chat-like GTK list with small text, and a full monitor. Each class exceeds 200 words per desktop. A separate dense terminal region is 1001x990 pixels with 8,740 characters at 12px. Every transcript has raw and NFC/whitespace-normalized character counts in manifest.json. Each full-monitor transcript contains 1,890 raw / 1,889 normalized characters.
+
+Muffin fractional scaling uses its supported x11-randr-fractional-scaling mode: 125% logical scale, legacy UI scale 2, 3072x1728 backing framebuffer on 1920x1080 physical scanout. PNG font sizes are recorded in backing pixels: terminal/editor/local browser 16/32px, small UI 10/20px, Wikipedia body 16/32px and reference 12.8/25.6px, GitHub body 14/28px and inline code 11.9/23.8px. These images do not close the 4K physical-monitor gate.
+
+Local transcripts are source-cut; live transcripts were written and checked by hand against only the captured region. GitHub contains the intro and first two description paragraphs of PR 1430. Wikipedia ends at capacity in, before the following line and adjacent code. Source URLs are in the manifest; Wikipedia text is attributable to that linked article and its contributors under its published license. No select-all transcript was used.
+
+Baseline receipts use distribution Tesseract 5.3.4, English, OEM 1, OMP_THREAD_LIMIT=1, at 1x and Lanczos 2x. PSM 3 is the distribution default; PSM 6 comparison receipts may follow separately. Whole-process times are not feature phase latency. No feature acceptance is claimed. Read a receipt status before using its class score.
+
+Every image has an operation ID/UTC receipt. Scaling and experimental preferences were restored exactly; owned apps and the private resident were stopped and the test package removed before lease release. The lease extension at 04:29:48 occurred after its 04:28:31 expiry; no GUI actions occurred during that expired interval, and the lock remained owned by this session. Release and cleanup receipts are included. Failed source/selector attempts remain private under ~/work/ocr-corpus-1428 and /tmp/t1428p.
