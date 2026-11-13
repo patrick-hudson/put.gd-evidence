@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-13-issue-1428-editor-text-qr](2026-11-13-issue-1428-editor-text-qr/README.md) | — | Issue 1428 item 5: editor Copy text, Quick redact, Show QR code (catalog renders) |
 | [2026-11-13-issue-1428-mint-corpus](2026-11-13-issue-1428-mint-corpus/README.md) | — | Issue 1428 Mint real-target corpus |
 | [2026-11-13-issue-1428-debian-corpus](2026-11-13-issue-1428-debian-corpus/README.md) | — | Issue 1428 Debian real-target corpus |
 | [2026-11-13-issue-1428-synthetic](2026-11-13-issue-1428-synthetic/README.md) | — | Issue 1428 synthetic fixtures |
