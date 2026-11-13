@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-13-issue-1428-packaging-bcb868f9a](2026-11-13-issue-1428-packaging-bcb868f9a/README.md) | — | Issue 1428 packaging: integration build and package receipts |
 | [2026-11-13-issue-1428-checklist-preparation](2026-11-13-issue-1428-checklist-preparation/README.md) | — | Issue 1428 acceptance checklist preparation |
 | [2026-11-13-issue-1428-first-light](2026-11-13-issue-1428-first-light/README.md) | — | Issue 1428: first light of Copy text with the real helper, m74 and d69 |
 | [2026-11-13-issue-1428-gnome-4k-corpus](2026-11-13-issue-1428-gnome-4k-corpus/README.md) | — | Issue 1428 real mixed-desktop 4K monitor corpus |
