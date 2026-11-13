@@ -1,0 +1,212 @@
+{
+  "candidate": "357210d2f1cb7b65f77166e34eb535d42e497fd0",
+  "ciRun": 43448444706,
+  "ciConclusion": "success",
+  "rows": [
+    {
+      "section": "Acceptance",
+      "row": "Real targets / transcript audit",
+      "status": "met",
+      "observation": "Stored178:174 corrected real-target captures,2real4K guest captures,2large-font pages. No transcript edits or new audit in this final pass.",
+      "receipt": "https://github.com/patrick-hudson/put.gd-evidence/tree/060646f0893d08565a1555b2f14675be18ef38d9/records/2026-11-13-issue-1428-corpus-index"
+    },
+    {
+      "section": "Acceptance",
+      "row": "Quality per engine build",
+      "status": "met",
+      "observation": "All178 per build:Ubuntu24/Mint,Ubuntu26,Debian13,Fedora44(shared45/Aurora),Arch original23MB model,AppImage5.5.4. Each class separately.",
+      "receipt": "quality-table.md"
+    },
+    {
+      "section": "Acceptance",
+      "row": "Text bars / exact entities / German",
+      "status": "met",
+      "observation": "Every class median within its2%/5%bar. URL52/52exceptArch50/52(96.15%);email52/52all. German12captures816words,medianCER0%.",
+      "receipt": "quality-table.md"
+    },
+    {
+      "section": "Acceptance",
+      "row": "Hidden / hostile content",
+      "status": "met",
+      "observation": "Near-white and3px glyph pages0characters. Hostile prose has0forbidden codepoints.18hostile codes reported as41-byte binary only.",
+      "receipt": "codes/assessment.json"
+    },
+    {
+      "section": "Acceptance",
+      "row": "Limits / bands",
+      "status": "met",
+      "observation": "Dense24MP English+three languages all6engines; budget truncation recorded. Tall2columns90/90lines,no truncation,column order accepted. Other limit pages carried as directed.",
+      "receipt": "columns/receipt.json"
+    },
+    {
+      "section": "Acceptance",
+      "row": "Quick redact every listed item",
+      "status": "missed",
+      "observation": "431/439 acceptance item-lines; eight14px pages each16/17, uncovered GitHub-classic token(index7). Held-out303/304.",
+      "receipt": "quick-summary.json"
+    },
+    {
+      "section": "Acceptance",
+      "row": "Quick redact clean/hash/export pixels",
+      "status": "met",
+      "observation": "Clean pages0marks;hashes30/30;heading-email1/1,no extra. All736marks fully opaque black across acceptance+held pages.",
+      "receipt": "quick-summary.json"
+    },
+    {
+      "section": "Acceptance",
+      "row": "Editor privacy: add/move/redo/stale IDs",
+      "status": "met",
+      "observation": "Native+AppImage live word exclusion,inspect/copy exclusion and stale select/copy rejection measured.",
+      "receipt": "group4/group4-export/privacy-native/receipt.json"
+    },
+    {
+      "section": "Acceptance",
+      "row": "Editor privacy: forced obsolete result delivery",
+      "status": "not run",
+      "observation": "No external switch to force an old packet after revision change; no live late-delivery pass inferred. Existing prior controlled core receipt remains separate.",
+      "receipt": "https://github.com/patrick-hudson/put.gd-evidence/tree/9b86520081652b5881cf6a8ab1913b03580d1ca9/records/2026-11-13-issue-1428-candidate-fe838a950-measurement/editor-late-core"
+    },
+    {
+      "section": "Acceptance",
+      "row": "Code reader",
+      "status": "known limit",
+      "observation": "182/183 contract-safe decodes; rotated3pxMicroQR unreadable. Original busy3/4,correctlyframedbusy4/4exact inone job; unframed dark code is the second accepted reader limit.",
+      "receipt": "codes/busy/receipt.json"
+    },
+    {
+      "section": "Acceptance",
+      "row": "ShowQR readback",
+      "status": "met",
+      "observation": "Prior short/long/maximum links and two independent decoders carried forward as expressly directed; not rerun.",
+      "receipt": "https://github.com/patrick-hudson/put.gd-evidence/tree/9b86520081652b5881cf6a8ab1913b03580d1ca9/records/2026-11-13-issue-1428-candidate-fe838a950-measurement/qr-writer"
+    },
+    {
+      "section": "Acceptance",
+      "row": "Debug logging privacy canaries",
+      "status": "met",
+      "observation": "Both packages: admitted canary absent from product files,system journal,notifications,History,checkpoints,diagnostics,tmp/runtime; no screen pixels persisted.",
+      "receipt": "group4/group4-export/privacy-native/receipt.json"
+    },
+    {
+      "section": "Acceptance",
+      "row": "Clipboard",
+      "status": "met",
+      "observation": "Native+AppImage user-copy race,pending-upload,later-explicit-copy,copy:false,PRIMARY,aftereditor/quit/unmount. Correctly admitted50-character two-line German pasted byte-exact on both. Keeper cells belong to desktop worker.",
+      "receipt": "group4/group4-export/unicode/receipt.json"
+    },
+    {
+      "section": "Acceptance",
+      "row": "Helper failures",
+      "status": "met",
+      "observation": "18/18 including2positivecontrols: exact fixed errors, exact children/threads gone, no changed/tmp/runtime files. Cooperative cancel measured in group4.",
+      "receipt": "failures/helper-failures.json"
+    },
+    {
+      "section": "Acceptance",
+      "row": "Confinement once",
+      "status": "met",
+      "observation": "16/16 including2recognitioncontrols; all seven forbidden action variants denied first recognition and later3bands;ABI6,nativeOpenMP,unsanitized.",
+      "receipt": "confinement/receipt.json"
+    },
+    {
+      "section": "Acceptance",
+      "row": "m74 desktop three-trigger pipeline",
+      "status": "met",
+      "observation": "Native+actualFUSEAppImage:hotkey,tray,windowbutton each exact55-character independent paste;sixhelpers exited0. Other cells owned by desktop worker.",
+      "receipt": "group4/pipeline-native/receipt.json"
+    },
+    {
+      "section": "Acceptance",
+      "row": "Conditional d69 30-run assignment",
+      "status": "not run",
+      "observation": "Skipped per final brief; desktop worker recovered capture and ran5samples but never requested30runs from this worker. No d69/f44/k72/Aurora access in this final pass.",
+      "receipt": "accepted-carry-forward.json"
+    },
+    {
+      "section": "Acceptance",
+      "row": "Clean installs / source rebuild / CVEs / notices / Recommends",
+      "status": "met",
+      "observation": "Prior proofs carried forward as expressly directed; current6package CI audits green.",
+      "receipt": "https://github.com/patrick-hudson/put.gd-evidence/tree/9b86520081652b5881cf6a8ab1913b03580d1ca9/records/2026-11-13-issue-1428-candidate-fe838a950-measurement/package-audits"
+    },
+    {
+      "section": "Acceptance",
+      "row": "Signed repository upgrades",
+      "status": "not run",
+      "observation": "After the nightly is published; coordinator runs signedapt/dnf/pacman upgrades then.",
+      "receipt": "accepted-carry-forward.json"
+    },
+    {
+      "section": "Performance and memory",
+      "row": "Only OCR binary links engine libraries",
+      "status": "met",
+      "observation": "Current CI43448444706 package audits onall6packages; SHA256 for every package recorded.",
+      "receipt": "ci.json"
+    },
+    {
+      "section": "Performance and memory",
+      "row": "Resident forbidden-library maps after20+5/180s",
+      "status": "met",
+      "observation": "Native andAppImage completed25jobs+180s; both forbidden lists empty;libgomp allowed.50helper exits0. Other desktops belong to desktop worker.",
+      "receipt": "group4/group4-export/native/workload.json"
+    },
+    {
+      "section": "Performance and memory",
+      "row": "Idle RSS/PSS frozen Gate C",
+      "status": "met",
+      "observation": "Native10112/6990KiB;AppImage10804/8973KiB. Both unchanged judge_idle calls accepted.",
+      "receipt": "group4/group4-export/native/gate-c.json"
+    },
+    {
+      "section": "Performance and memory",
+      "row": "Agent cache bounded / expires",
+      "status": "met",
+      "observation": "Prior<8MiB growth at60s; expiration observed120.002\u2013120.07s expressly accepted. Not rerun.",
+      "receipt": "https://github.com/patrick-hudson/put.gd-evidence/tree/9b86520081652b5881cf6a8ab1913b03580d1ca9/records/2026-11-13-issue-1428-candidate-fe838a950-measurement/cache-expiry-repeat"
+    },
+    {
+      "section": "Performance and memory",
+      "row": "UI main/edit startup and libraries A/B",
+      "status": "met",
+      "observation": "Prior main-window+1.2% and identical mapped libraries expressly accepted;edit-image proof carried. Not rerun.",
+      "receipt": "https://github.com/patrick-hudson/put.gd-evidence/tree/9b86520081652b5881cf6a8ab1913b03580d1ca9/records/2026-11-13-issue-1428-candidate-fe838a950-measurement/ui-ab/assessment.json"
+    },
+    {
+      "section": "Performance and memory",
+      "row": "Helper peak RSS all engines / Arch / three languages",
+      "status": "met",
+      "observation": "All measured corpus/dense/editor peaks under131072KiB before any extra-language allowance. Max126064KiB. Dense24MP English+3languages measured all6;Arch original model measured separately.",
+      "receipt": "memory-table.md"
+    },
+    {
+      "section": "Performance and memory",
+      "row": "m74 dense/paragraph/4K latency",
+      "status": "recorded",
+      "observation": "30runs per case perpackage. Native p95dense3167.5/paragraph658.8/4Klight6383.2/dark7939.2ms;AppImage2033.3/520.2/4128.7/2749.5ms. Separate phase clocks;1s/3s bars withdrawn.",
+      "receipt": "group4/summary.json"
+    },
+    {
+      "section": "Performance and memory",
+      "row": "Other captures hotkey-to-selector A/B",
+      "status": "missed",
+      "observation": "Observed on-screenp95+15.82ms(+7.94%):nightlycodebaseline199.35,candidate215.17ms;median181.01\u2192179.27ms. Frozen outer-black-edge mismatch diagnosed;separate documented#1085 inner-ring method has30real samples each. Not a causal-regression claim.",
+      "receipt": "hotkey-ab/hotkey-export/summary.json"
+    },
+    {
+      "section": "Performance and memory",
+      "row": "Explicit action only / no warm helper",
+      "status": "met",
+      "observation": "Exactlyonehelper per job, zeroextra jobs in25-job lifecycle/cooldown; all helpers exit. No warm helper remained at cleanup.",
+      "receipt": "group4/group4-export/native/helpers.jsonl"
+    },
+    {
+      "section": "Performance and memory",
+      "row": "AppImage size",
+      "status": "recorded",
+      "observation": "New size164624888bytes; prior growth target expressly accepted, not rerun.",
+      "receipt": "package-hashes.json"
+    }
+  ],
+  "scope": "Final measurement worker; other desktop pipeline/unavailable/window-size cells separately owned. No new source changes/tests/PR.",
+  "cleanup": "m74leases released16:44:06and16:52:24UTC;emptyowninventory,privatewatchesstopped,no nativepackage mutation;no newguests."
+}

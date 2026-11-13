@@ -1,17 +1,47 @@
-# Issue 1428 final candidate measurements
+# Final issue1428 measurements,357210d2
 
-Candidate357210d2f1cb7b65f77166e34eb535d42e497fd0, dispatched CI43448444706. In progress; no whole-feature acceptance yet. Arch early178-image quality is complete. Corrected references retained unchanged.
+Candidate `357210d2f1cb7b65f77166e34eb535d42e497fd0`, tree `f13f1391140504ce7e2b6b6fd8700857dc85b4ba`. Exact-head dispatched [CI43448444706](https://github.com/patrick-hudson/put.gd-desktop/actions/runs/43448444706) completed successfully. [Every package SHA256 and byte size](package-hashes.json).
 
-|Arch class|n|Median CER|
-|---|---:|---:|
-|browser-github/body>=11px|24|0.147%|
-|browser-local/body>=11px|24|0.000%|
-|browser-wikipedia/body>=11px|24|1.533%|
-|editor-code/body>=11px|24|1.270%|
-|monitor/body>=11px|26|0.000%|
-|small-ui/body>=11px|8|0.088%|
-|small-ui/small<11px|16|0.067%|
-|synthetic-24px/body>=11px|2|0.000%|
-|terminal/body>=11px|30|0.262%|
+This is a measurement report, not a release acceptance or timing test. Two misses remain reported: Quick redact431/439 and observed other-capture hotkeyp95+15.82ms. Forced obsolete editor-result delivery was not measured live. Failed lab launches and raw generic code-match booleans remain visible alongside their assessments.
 
-URLs50/52, emails52/52. Maximum fresh-child conservative RSS113552KiB (<128MiB); dense24MP/three-language kernel measurements follow separately. All numbers use the exact final CI helper and matching Git-manifest real parent.
+All physical work here used m74 Mint22.3/CinnamonX11, with isolated CI native prefixes and an actual FUSE AppImage. Fixed-image engine runs used nativeMint andAppImage plus rootless distribution containers. The desktop worker owns other desktops. No nativepackage install/remove, newguest, product/source edit, test, or PR in this pass. Both desktopleases released after cleanup; work remains privately under `~/work/ocr-final-1428/` onm74. The existing corpus copy ond69 was not touched.
+
+[Per-engine/per-class quality](quality-table.md), [kernel peak and conservative Arch upper-bound memory table](memory-table.md), [all30-run latencies/quiet readings](group4/summary.json), [structured complete statuses](final-status.json).
+
+|Section / row|Status|Observation / receipt|
+|---|---|---|
+|Acceptance: Real targets / transcript audit|**met**|Stored178:174 corrected real-target captures,2real4K guest captures,2large-font pages. No transcript edits or new audit in this final pass. [Receipt](https://github.com/patrick-hudson/put.gd-evidence/tree/060646f0893d08565a1555b2f14675be18ef38d9/records/2026-11-13-issue-1428-corpus-index).|
+|Acceptance: Quality per engine build|**met**|All178 per build:Ubuntu24/Mint,Ubuntu26,Debian13,Fedora44(shared45/Aurora),Arch original23MB model,AppImage5.5.4. Each class separately. [Receipt](quality-table.md).|
+|Acceptance: Text bars / exact entities / German|**met**|Every class median within its2%/5%bar. URL52/52exceptArch50/52(96.15%);email52/52all. German12captures816words,medianCER0%. [Receipt](quality-table.md).|
+|Acceptance: Hidden / hostile content|**met**|Near-white and3px glyph pages0characters. Hostile prose has0forbidden codepoints.18hostile codes reported as41-byte binary only. [Receipt](codes/assessment.json).|
+|Acceptance: Limits / bands|**met**|Dense24MP English+three languages all6engines; budget truncation recorded. Tall2columns90/90lines,no truncation,column order accepted. Other limit pages carried as directed. [Receipt](columns/receipt.json).|
+|Acceptance: Quick redact every listed item|**missed**|431/439 acceptance item-lines; eight14px pages each16/17, uncovered GitHub-classic token(index7). Held-out303/304. [Receipt](quick-summary.json).|
+|Acceptance: Quick redact clean/hash/export pixels|**met**|Clean pages0marks;hashes30/30;heading-email1/1,no extra. All736marks fully opaque black across acceptance+held pages. [Receipt](quick-summary.json).|
+|Acceptance: Editor privacy: add/move/redo/stale IDs|**met**|Native+AppImage live word exclusion,inspect/copy exclusion and stale select/copy rejection measured. [Receipt](group4/group4-export/privacy-native/receipt.json).|
+|Acceptance: Editor privacy: forced obsolete result delivery|**not run**|No external switch to force an old packet after revision change; no live late-delivery pass inferred. Existing prior controlled core receipt remains separate. [Receipt](https://github.com/patrick-hudson/put.gd-evidence/tree/9b86520081652b5881cf6a8ab1913b03580d1ca9/records/2026-11-13-issue-1428-candidate-fe838a950-measurement/editor-late-core).|
+|Acceptance: Code reader|**known limit**|182/183 contract-safe decodes; rotated3pxMicroQR unreadable. Original busy3/4,correctlyframedbusy4/4exact inone job; unframed dark code is the second accepted reader limit. [Receipt](codes/busy/receipt.json).|
+|Acceptance: ShowQR readback|**met**|Prior short/long/maximum links and two independent decoders carried forward as expressly directed; not rerun. [Receipt](https://github.com/patrick-hudson/put.gd-evidence/tree/9b86520081652b5881cf6a8ab1913b03580d1ca9/records/2026-11-13-issue-1428-candidate-fe838a950-measurement/qr-writer).|
+|Acceptance: Debug logging privacy canaries|**met**|Both packages: admitted canary absent from product files,system journal,notifications,History,checkpoints,diagnostics,tmp/runtime; no screen pixels persisted. [Receipt](group4/group4-export/privacy-native/receipt.json).|
+|Acceptance: Clipboard|**met**|Native+AppImage user-copy race,pending-upload,later-explicit-copy,copy:false,PRIMARY,aftereditor/quit/unmount. Correctly admitted50-character two-line German pasted byte-exact on both. Keeper cells belong to desktop worker. [Receipt](group4/group4-export/unicode/receipt.json).|
+|Acceptance: Helper failures|**met**|18/18 including2positivecontrols: exact fixed errors, exact children/threads gone, no changed/tmp/runtime files. Cooperative cancel measured in group4. [Receipt](failures/helper-failures.json).|
+|Acceptance: Confinement once|**met**|16/16 including2recognitioncontrols; all seven forbidden action variants denied first recognition and later3bands;ABI6,nativeOpenMP,unsanitized. [Receipt](confinement/receipt.json).|
+|Acceptance: m74 desktop three-trigger pipeline|**met**|Native+actualFUSEAppImage:hotkey,tray,windowbutton each exact55-character independent paste;sixhelpers exited0. Other cells owned by desktop worker. [Receipt](group4/pipeline-native/receipt.json).|
+|Acceptance: Conditional d69 30-run assignment|**not run**|Skipped per final brief; desktop worker recovered capture and ran5samples but never requested30runs from this worker. No d69/f44/k72/Aurora access in this final pass. [Receipt](accepted-carry-forward.json).|
+|Acceptance: Clean installs / source rebuild / CVEs / notices / Recommends|**met**|Prior proofs carried forward as expressly directed; current6package CI audits green. [Receipt](https://github.com/patrick-hudson/put.gd-evidence/tree/9b86520081652b5881cf6a8ab1913b03580d1ca9/records/2026-11-13-issue-1428-candidate-fe838a950-measurement/package-audits).|
+|Acceptance: Signed repository upgrades|**not run**|After the nightly is published; coordinator runs signedapt/dnf/pacman upgrades then. [Receipt](accepted-carry-forward.json).|
+|Performance and memory: Only OCR binary links engine libraries|**met**|Current CI43448444706 package audits onall6packages; SHA256 for every package recorded. [Receipt](ci.json).|
+|Performance and memory: Resident forbidden-library maps after20+5/180s|**met**|Native andAppImage completed25jobs+180s; both forbidden lists empty;libgomp allowed.50helper exits0. Other desktops belong to desktop worker. [Receipt](group4/group4-export/native/workload.json).|
+|Performance and memory: Idle RSS/PSS frozen Gate C|**met**|Native10112/6990KiB;AppImage10804/8973KiB. Both unchanged judge_idle calls accepted. [Receipt](group4/group4-export/native/gate-c.json).|
+|Performance and memory: Agent cache bounded / expires|**met**|Prior<8MiB growth at60s; expiration observed120.002–120.07s expressly accepted. Not rerun. [Receipt](https://github.com/patrick-hudson/put.gd-evidence/tree/9b86520081652b5881cf6a8ab1913b03580d1ca9/records/2026-11-13-issue-1428-candidate-fe838a950-measurement/cache-expiry-repeat).|
+|Performance and memory: UI main/edit startup and libraries A/B|**met**|Prior main-window+1.2% and identical mapped libraries expressly accepted;edit-image proof carried. Not rerun. [Receipt](https://github.com/patrick-hudson/put.gd-evidence/tree/9b86520081652b5881cf6a8ab1913b03580d1ca9/records/2026-11-13-issue-1428-candidate-fe838a950-measurement/ui-ab/assessment.json).|
+|Performance and memory: Helper peak RSS all engines / Arch / three languages|**met**|All measured corpus/dense/editor peaks under131072KiB before any extra-language allowance. Max126064KiB. Dense24MP English+3languages measured all6;Arch original model measured separately. [Receipt](memory-table.md).|
+|Performance and memory: m74 dense/paragraph/4K latency|**recorded**|30runs per case perpackage. Native p95dense3167.5/paragraph658.8/4Klight6383.2/dark7939.2ms;AppImage2033.3/520.2/4128.7/2749.5ms. Separate phase clocks;1s/3s bars withdrawn. [Receipt](group4/summary.json).|
+|Performance and memory: Other captures hotkey-to-selector A/B|**missed**|Observed on-screenp95+15.82ms(+7.94%):nightlycodebaseline199.35,candidate215.17ms;median181.01→179.27ms. Frozen outer-black-edge mismatch diagnosed;separate documented#1085 inner-ring method has30real samples each. Not a causal-regression claim. [Receipt](hotkey-ab/hotkey-export/summary.json).|
+|Performance and memory: Explicit action only / no warm helper|**met**|Exactlyonehelper per job, zeroextra jobs in25-job lifecycle/cooldown; all helpers exit. No warm helper remained at cleanup. [Receipt](group4/group4-export/native/helpers.jsonl).|
+|Performance and memory: AppImage size|**recorded**|New size164624888bytes; prior growth target expressly accepted, not rerun. [Receipt](package-hashes.json).|
+
+The corpus manifest is178captures; German is separately12captures. Transcript audit and accepted carry-forward rows were not rerun. The original28Quickpages and16heldpages are unchanged; all eight new acceptance misses are index7 at14px. Candidate dumps preserve numeric codepoints for diagnosis.
+
+The code matrix ran once. All183rows survive in its original incomplete receipt because the subsequent busy block hit a missing working-copy truth filename. Its separately recorded assessment is164ordinary/intended-binary matches,18hostile binary-length-only results,oneaccepted MicroQR limit. Busy placements were reconstructed from the original generator and byte-verified against unchanged source crops; the framedpage has its own one-job receipt.
+
+Frozen hotkey source/binary were not modified. It asks for white at the selector's black outeredge; every measured inner-ring witness found blackouter/whiteinner pixels. Firstbaseline canvas admission failed without samples; retry activates the exact owned canvas before timing. Actual baseline binary commit466449a4 is the last nightly code head; current79732195 changes onlyAGENTS andthree non-package docs. Full comparison and separate launch-correction note retained. All reported A/B timing loops are identical; no unchanged-time pass is inferred.
