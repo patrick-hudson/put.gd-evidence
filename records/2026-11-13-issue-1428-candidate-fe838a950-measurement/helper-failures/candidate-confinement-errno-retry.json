@@ -1,0 +1,71 @@
+{
+  "case": "confinement-refused",
+  "status": "measured",
+  "allowedParentErrors": [
+    "helper_sandbox_unavailable"
+  ],
+  "socketBytes": {
+    "/home/patrick/work/te1428/confinement-refused/r/putgd/session.sock": 66,
+    "/home/patrick/work/te1428/confinement-refused/r/bus": 51
+  },
+  "command": [
+    "systemd-run",
+    "--user",
+    "--pipe",
+    "--wait",
+    "--collect",
+    "--quiet",
+    "--unit=text-fault-69444",
+    "-p",
+    "SystemCallFilter=~landlock_create_ruleset landlock_add_rule landlock_restrict_self",
+    "-p",
+    "SystemCallErrorNumber=EPERM",
+    "-p",
+    "UnsetEnvironment=DISPLAY WAYLAND_DISPLAY DBUS_SESSION_BUS_ADDRESS AT_SPI_BUS_ADDRESS",
+    "-p",
+    "RuntimeMaxSec=35",
+    "--setenv=XDG_RUNTIME_DIR=/home/patrick/work/te1428/confinement-refused/r",
+    "--setenv=TMPDIR=/home/patrick/work/te1428/confinement-refused/t",
+    "--setenv=QT_QPA_PLATFORM=offscreen",
+    "/home/patrick/work/ocr-corpus-1428/test_ocr_run",
+    "--helper",
+    "/home/patrick/work/te1428/confinement-refused/child.py",
+    "--data",
+    "/usr/share/tesseract-ocr/5/tessdata",
+    "--required",
+    "--lang",
+    "eng",
+    "/home/patrick/work/ocr-corpus-1428/synthetic-codepoints/limit-24mp.png"
+  ],
+  "method": "landlock",
+  "child": {
+    "pid": 69455,
+    "parentPid": 69447,
+    "startTicks": "234580710"
+  },
+  "parent": {
+    "pid": 69447,
+    "startTicks": "234580660",
+    "state": "S",
+    "cpuTicks": 45
+  },
+  "threadsBeforeExec": [
+    {
+      "pid": 69455,
+      "startTicks": "234580710",
+      "state": "S",
+      "cpuTicks": 2
+    }
+  ],
+  "parentExit": 1,
+  "stderrBytes": 0,
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "parentError": "helper_sandbox_unavailable",
+  "pidfdExitObserved": true,
+  "childAndThreadsGone": true,
+  "residue": {
+    "changed": [],
+    "matches": [],
+    "unreadable": []
+  }
+}

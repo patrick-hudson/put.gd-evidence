@@ -1,0 +1,1130 @@
+{
+  "status": "incomplete",
+  "cases": [
+    {
+      "case": "fixture-control",
+      "status": "measured",
+      "allowedParentErrors": [
+        ""
+      ],
+      "socketBytes": {
+        "/home/patrick/work/tf1428/fixture-control/r/putgd/session.sock": 62,
+        "/home/patrick/work/tf1428/fixture-control/r/bus": 47
+      },
+      "fixturePlan": "/home/patrick/work/tf1428/fixture-control/data/fixture.json",
+      "command": [
+        "/home/patrick/work/ocr-corpus-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/tf1428/fixture-control/child.py",
+        "--data",
+        "/home/patrick/work/tf1428/fixture-control/data",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-codepoints/limit-24mp.png"
+      ],
+      "method": "result",
+      "child": {
+        "pid": 68457,
+        "parentPid": 68456,
+        "startTicks": "234561577"
+      },
+      "parent": {
+        "pid": 68456,
+        "startTicks": "234561535",
+        "state": "S",
+        "cpuTicks": 41
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 68457,
+          "startTicks": "234561577",
+          "state": "S",
+          "cpuTicks": 1
+        }
+      ],
+      "parentExit": 0,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "real-control",
+      "status": "measured",
+      "allowedParentErrors": [
+        ""
+      ],
+      "socketBytes": {
+        "/home/patrick/work/tf1428/real-control/r/putgd/session.sock": 59,
+        "/home/patrick/work/tf1428/real-control/r/bus": 44
+      },
+      "command": [
+        "/home/patrick/work/ocr-corpus-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/tf1428/real-control/child.py",
+        "--data",
+        "/usr/share/tesseract-ocr/5/tessdata",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-codepoints/limit-24mp.png"
+      ],
+      "method": "none",
+      "child": {
+        "pid": 68459,
+        "parentPid": 68458,
+        "startTicks": "234561701"
+      },
+      "parent": {
+        "pid": 68458,
+        "startTicks": "234561656",
+        "state": "S",
+        "cpuTicks": 44
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 68459,
+          "startTicks": "234561701",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "parentExit": 0,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "wrong-build",
+      "status": "measured",
+      "allowedParentErrors": [
+        "text_incompatible"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/tf1428/wrong-build/r/putgd/session.sock": 58,
+        "/home/patrick/work/tf1428/wrong-build/r/bus": 43
+      },
+      "fixturePlan": "/home/patrick/work/tf1428/wrong-build/data/fixture.json",
+      "command": [
+        "/home/patrick/work/ocr-corpus-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/tf1428/wrong-build/child.py",
+        "--data",
+        "/home/patrick/work/tf1428/wrong-build/data",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-codepoints/limit-24mp.png"
+      ],
+      "method": "wrong-build",
+      "child": {
+        "pid": 68479,
+        "parentPid": 68478,
+        "startTicks": "234563380"
+      },
+      "parent": {
+        "pid": 68478,
+        "startTicks": "234563338",
+        "state": "S",
+        "cpuTicks": 42
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 68479,
+          "startTicks": "234563380",
+          "state": "S",
+          "cpuTicks": 1
+        }
+      ],
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "text_incompatible",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "malformed-result",
+      "status": "measured",
+      "allowedParentErrors": [
+        "text_incompatible"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/tf1428/malformed-result/r/putgd/session.sock": 63,
+        "/home/patrick/work/tf1428/malformed-result/r/bus": 48
+      },
+      "fixturePlan": "/home/patrick/work/tf1428/malformed-result/data/fixture.json",
+      "command": [
+        "/home/patrick/work/ocr-corpus-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/tf1428/malformed-result/child.py",
+        "--data",
+        "/home/patrick/work/tf1428/malformed-result/data",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-codepoints/limit-24mp.png"
+      ],
+      "method": "result",
+      "child": {
+        "pid": 68486,
+        "parentPid": 68483,
+        "startTicks": "234563502"
+      },
+      "parent": {
+        "pid": 68483,
+        "startTicks": "234563459",
+        "state": "S",
+        "cpuTicks": 42
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 68486,
+          "startTicks": "234563502",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "text_incompatible",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "malformed-frame",
+      "status": "measured",
+      "allowedParentErrors": [
+        "text_incompatible"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/tf1428/malformed-frame/r/putgd/session.sock": 62,
+        "/home/patrick/work/tf1428/malformed-frame/r/bus": 47
+      },
+      "fixturePlan": "/home/patrick/work/tf1428/malformed-frame/data/fixture.json",
+      "command": [
+        "/home/patrick/work/ocr-corpus-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/tf1428/malformed-frame/child.py",
+        "--data",
+        "/home/patrick/work/tf1428/malformed-frame/data",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-codepoints/limit-24mp.png"
+      ],
+      "method": "bad-frame",
+      "child": {
+        "pid": 68490,
+        "parentPid": 68487,
+        "startTicks": "234563624"
+      },
+      "parent": {
+        "pid": 68487,
+        "startTicks": "234563581",
+        "state": "S",
+        "cpuTicks": 41
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 68490,
+          "startTicks": "234563624",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "text_incompatible",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "output-cap",
+      "status": "measured",
+      "allowedParentErrors": [
+        "text_incompatible"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/tf1428/output-cap/r/putgd/session.sock": 57,
+        "/home/patrick/work/tf1428/output-cap/r/bus": 42
+      },
+      "fixturePlan": "/home/patrick/work/tf1428/output-cap/data/fixture.json",
+      "command": [
+        "/home/patrick/work/ocr-corpus-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/tf1428/output-cap/child.py",
+        "--data",
+        "/home/patrick/work/tf1428/output-cap/data",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-codepoints/limit-24mp.png"
+      ],
+      "method": "oversize",
+      "child": {
+        "pid": 68494,
+        "parentPid": 68493,
+        "startTicks": "234563746"
+      },
+      "parent": {
+        "pid": 68493,
+        "startTicks": "234563703",
+        "state": "S",
+        "cpuTicks": 42
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 68494,
+          "startTicks": "234563746",
+          "state": "S",
+          "cpuTicks": 1
+        }
+      ],
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "text_incompatible",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "hang-deadline",
+      "status": "measured",
+      "allowedParentErrors": [
+        "text_job_timeout"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/tf1428/hang-deadline/r/putgd/session.sock": 60,
+        "/home/patrick/work/tf1428/hang-deadline/r/bus": 45
+      },
+      "fixturePlan": "/home/patrick/work/tf1428/hang-deadline/data/fixture.json",
+      "command": [
+        "/home/patrick/work/ocr-corpus-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/tf1428/hang-deadline/child.py",
+        "--data",
+        "/home/patrick/work/tf1428/hang-deadline/data",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-codepoints/limit-24mp.png"
+      ],
+      "method": "stall",
+      "child": {
+        "pid": 68498,
+        "parentPid": 68497,
+        "startTicks": "234563875"
+      },
+      "parent": {
+        "pid": 68497,
+        "startTicks": "234563832",
+        "state": "S",
+        "cpuTicks": 42
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 68498,
+          "startTicks": "234563875",
+          "state": "S",
+          "cpuTicks": 1
+        }
+      ],
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "text_job_timeout",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "child-error",
+      "status": "measured",
+      "allowedParentErrors": [
+        "engine_unavailable"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/tf1428/child-error/r/putgd/session.sock": 58,
+        "/home/patrick/work/tf1428/child-error/r/bus": 43
+      },
+      "fixturePlan": "/home/patrick/work/tf1428/child-error/data/fixture.json",
+      "command": [
+        "/home/patrick/work/ocr-corpus-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/tf1428/child-error/child.py",
+        "--data",
+        "/home/patrick/work/tf1428/child-error/data",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-codepoints/limit-24mp.png"
+      ],
+      "method": "child-error",
+      "child": {
+        "pid": 68543,
+        "parentPid": 68542,
+        "startTicks": "234565991"
+      },
+      "parent": {
+        "pid": 68542,
+        "startTicks": "234565948",
+        "state": "S",
+        "cpuTicks": 42
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 68543,
+          "startTicks": "234565991",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "engine_unavailable",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "crash",
+      "status": "measured",
+      "allowedParentErrors": [
+        "text_job_failed"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/tf1428/crash/r/putgd/session.sock": 52,
+        "/home/patrick/work/tf1428/crash/r/bus": 37
+      },
+      "command": [
+        "/home/patrick/work/ocr-corpus-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/tf1428/crash/child.py",
+        "--data",
+        "/usr/share/tesseract-ocr/5/tessdata",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-codepoints/limit-24mp.png"
+      ],
+      "method": "kill",
+      "child": {
+        "pid": 68549,
+        "parentPid": 68546,
+        "startTicks": "234566114"
+      },
+      "parent": {
+        "pid": 68546,
+        "startTicks": "234566071",
+        "state": "S",
+        "cpuTicks": 42
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 68549,
+          "startTicks": "234566114",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "atInjection": {
+        "pid": 68549,
+        "startTicks": "234566114",
+        "state": "R",
+        "cpuTicks": 25
+      },
+      "threadsAtInjection": [
+        {
+          "pid": 68549,
+          "startTicks": "234566114",
+          "state": "R",
+          "cpuTicks": 25
+        }
+      ],
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "text_job_failed",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "cancel-by-signal",
+      "status": "measured",
+      "allowedParentErrors": [
+        "text_job_failed"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/tf1428/cancel-by-signal/r/putgd/session.sock": 63,
+        "/home/patrick/work/tf1428/cancel-by-signal/r/bus": 48
+      },
+      "command": [
+        "/home/patrick/work/ocr-corpus-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/tf1428/cancel-by-signal/child.py",
+        "--data",
+        "/usr/share/tesseract-ocr/5/tessdata",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-codepoints/limit-24mp.png"
+      ],
+      "method": "term",
+      "child": {
+        "pid": 68553,
+        "parentPid": 68552,
+        "startTicks": "234566258"
+      },
+      "parent": {
+        "pid": 68552,
+        "startTicks": "234566215",
+        "state": "S",
+        "cpuTicks": 42
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 68553,
+          "startTicks": "234566258",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "atInjection": {
+        "pid": 68553,
+        "startTicks": "234566258",
+        "state": "R",
+        "cpuTicks": 25
+      },
+      "threadsAtInjection": [
+        {
+          "pid": 68553,
+          "startTicks": "234566258",
+          "state": "R",
+          "cpuTicks": 25
+        }
+      ],
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "text_job_failed",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "limit-data",
+      "status": "measured",
+      "allowedParentErrors": [
+        "text_job_failed",
+        "text_job_timeout",
+        "text_job_io",
+        "input_excessive",
+        "engine_unavailable",
+        "language_unavailable"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/tf1428/limit-data/r/putgd/session.sock": 57,
+        "/home/patrick/work/tf1428/limit-data/r/bus": 42
+      },
+      "command": [
+        "/home/patrick/work/ocr-corpus-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/tf1428/limit-data/child.py",
+        "--data",
+        "/usr/share/tesseract-ocr/5/tessdata",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-codepoints/limit-24mp.png"
+      ],
+      "method": "data",
+      "child": {
+        "pid": 68559,
+        "parentPid": 68556,
+        "startTicks": "234566402"
+      },
+      "parent": {
+        "pid": 68556,
+        "startTicks": "234566359",
+        "state": "S",
+        "cpuTicks": 42
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 68559,
+          "startTicks": "234566402",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "atInjection": {
+        "pid": 68559,
+        "startTicks": "234566402",
+        "state": "R",
+        "cpuTicks": 3
+      },
+      "threadsAtInjection": [
+        {
+          "pid": 68559,
+          "startTicks": "234566402",
+          "state": "R",
+          "cpuTicks": 3
+        }
+      ],
+      "prlimit": {
+        "resource": "data",
+        "before": [
+          201326592,
+          201326592
+        ],
+        "after": [
+          33554432,
+          33554432
+        ],
+        "method": "lower after helper confinement; its startup would otherwise reset inherited limits"
+      },
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "text_job_failed",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "limit-cpu",
+      "status": "measured",
+      "allowedParentErrors": [
+        "text_job_failed"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/tf1428/limit-cpu/r/putgd/session.sock": 56,
+        "/home/patrick/work/tf1428/limit-cpu/r/bus": 41
+      },
+      "command": [
+        "/home/patrick/work/ocr-corpus-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/tf1428/limit-cpu/child.py",
+        "--data",
+        "/usr/share/tesseract-ocr/5/tessdata",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-codepoints/limit-24mp.png"
+      ],
+      "method": "cpu",
+      "child": {
+        "pid": 68564,
+        "parentPid": 68561,
+        "startTicks": "234566535"
+      },
+      "parent": {
+        "pid": 68561,
+        "startTicks": "234566492",
+        "state": "S",
+        "cpuTicks": 42
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 68564,
+          "startTicks": "234566535",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "atInjection": {
+        "pid": 68564,
+        "startTicks": "234566535",
+        "state": "R",
+        "cpuTicks": 110
+      },
+      "threadsAtInjection": [
+        {
+          "pid": 68564,
+          "startTicks": "234566535",
+          "state": "R",
+          "cpuTicks": 110
+        }
+      ],
+      "prlimit": {
+        "resource": "cpu",
+        "before": [
+          84,
+          85
+        ],
+        "after": [
+          1,
+          1
+        ],
+        "method": "lower after helper confinement; its startup would otherwise reset inherited limits"
+      },
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "text_job_failed",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "limit-file-size",
+      "status": "measured",
+      "allowedParentErrors": [
+        "text_job_failed",
+        "text_job_timeout",
+        "text_job_io",
+        "input_excessive",
+        "engine_unavailable",
+        "language_unavailable"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/tf1428/limit-file-size/r/putgd/session.sock": 62,
+        "/home/patrick/work/tf1428/limit-file-size/r/bus": 47
+      },
+      "command": [
+        "/home/patrick/work/ocr-corpus-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/tf1428/limit-file-size/child.py",
+        "--data",
+        "/usr/share/tesseract-ocr/5/tessdata",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-codepoints/limit-24mp.png"
+      ],
+      "method": "fsize",
+      "child": {
+        "pid": 68574,
+        "parentPid": 68573,
+        "startTicks": "234566764"
+      },
+      "parent": {
+        "pid": 68573,
+        "startTicks": "234566721",
+        "state": "S",
+        "cpuTicks": 41
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 68574,
+          "startTicks": "234566764",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "atInjection": {
+        "pid": 68574,
+        "startTicks": "234566764",
+        "state": "R",
+        "cpuTicks": 25
+      },
+      "threadsAtInjection": [
+        {
+          "pid": 68574,
+          "startTicks": "234566764",
+          "state": "R",
+          "cpuTicks": 25
+        }
+      ],
+      "prlimit": {
+        "resource": "fsize",
+        "before": [
+          8388608,
+          8388608
+        ],
+        "after": [
+          1,
+          1
+        ],
+        "method": "lower after helper confinement; its startup would otherwise reset inherited limits"
+      },
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "text_job_io",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "limit-descriptors",
+      "status": "measured",
+      "allowedParentErrors": [
+        "text_job_failed",
+        "text_job_timeout",
+        "text_job_io",
+        "input_excessive",
+        "engine_unavailable",
+        "language_unavailable"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/tf1428/limit-descriptors/r/putgd/session.sock": 64,
+        "/home/patrick/work/tf1428/limit-descriptors/r/bus": 49
+      },
+      "command": [
+        "/home/patrick/work/ocr-corpus-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/tf1428/limit-descriptors/child.py",
+        "--data",
+        "/usr/share/tesseract-ocr/5/tessdata",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-codepoints/limit-24mp.png"
+      ],
+      "method": "nofile",
+      "child": {
+        "pid": 68614,
+        "parentPid": 68612,
+        "startTicks": "234568446"
+      },
+      "parent": {
+        "pid": 68612,
+        "startTicks": "234568403",
+        "state": "S",
+        "cpuTicks": 42
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 68614,
+          "startTicks": "234568446",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "atInjection": {
+        "pid": 68614,
+        "startTicks": "234568446",
+        "state": "R",
+        "cpuTicks": 3
+      },
+      "threadsAtInjection": [
+        {
+          "pid": 68614,
+          "startTicks": "234568446",
+          "state": "R",
+          "cpuTicks": 3
+        }
+      ],
+      "prlimit": {
+        "resource": "nofile",
+        "before": [
+          32,
+          32
+        ],
+        "after": [
+          5,
+          5
+        ],
+        "method": "lower after helper confinement; its startup would otherwise reset inherited limits"
+      },
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "language_unavailable",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "corrupt-data",
+      "status": "measured",
+      "allowedParentErrors": [
+        "language_unavailable",
+        "engine_unavailable"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/tf1428/corrupt-data/r/putgd/session.sock": 59,
+        "/home/patrick/work/tf1428/corrupt-data/r/bus": 44
+      },
+      "command": [
+        "/home/patrick/work/ocr-corpus-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/tf1428/corrupt-data/child.py",
+        "--data",
+        "/home/patrick/work/tf1428/corrupt-data/data",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-codepoints/limit-24mp.png"
+      ],
+      "method": "corrupt",
+      "child": {
+        "pid": 68620,
+        "parentPid": 68619,
+        "startTicks": "234568650"
+      },
+      "parent": {
+        "pid": 68619,
+        "startTicks": "234568607",
+        "state": "S",
+        "cpuTicks": 42
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 68620,
+          "startTicks": "234568650",
+          "state": "S",
+          "cpuTicks": 1
+        }
+      ],
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "language_unavailable",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "missing-data",
+      "status": "measured",
+      "allowedParentErrors": [
+        "language_unavailable"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/tf1428/missing-data/r/putgd/session.sock": 59,
+        "/home/patrick/work/tf1428/missing-data/r/bus": 44
+      },
+      "command": [
+        "/home/patrick/work/ocr-corpus-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/tf1428/missing-data/child.py",
+        "--data",
+        "/home/patrick/work/tf1428/missing-data/data",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-codepoints/limit-24mp.png"
+      ],
+      "method": "missing",
+      "child": {
+        "pid": 68626,
+        "parentPid": 68625,
+        "startTicks": "234568854"
+      },
+      "parent": {
+        "pid": 68625,
+        "startTicks": "234568811",
+        "state": "S",
+        "cpuTicks": 42
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 68626,
+          "startTicks": "234568854",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "language_unavailable",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "confinement-refused",
+      "status": "not_covered",
+      "allowedParentErrors": [
+        "helper_sandbox_unavailable"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/tf1428/confinement-refused/r/putgd/session.sock": 66,
+        "/home/patrick/work/tf1428/confinement-refused/r/bus": 51
+      },
+      "command": [
+        "systemd-run",
+        "--user",
+        "--pipe",
+        "--wait",
+        "--collect",
+        "--quiet",
+        "--unit=text-fault-68454",
+        "-p",
+        "SystemCallFilter=~landlock_create_ruleset landlock_add_rule landlock_restrict_self",
+        "-p",
+        "UnsetEnvironment=DISPLAY WAYLAND_DISPLAY DBUS_SESSION_BUS_ADDRESS AT_SPI_BUS_ADDRESS",
+        "-p",
+        "RuntimeMaxSec=35",
+        "--setenv=XDG_RUNTIME_DIR=/home/patrick/work/tf1428/confinement-refused/r",
+        "--setenv=TMPDIR=/home/patrick/work/tf1428/confinement-refused/t",
+        "--setenv=QT_QPA_PLATFORM=offscreen",
+        "/home/patrick/work/ocr-corpus-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/tf1428/confinement-refused/child.py",
+        "--data",
+        "/usr/share/tesseract-ocr/5/tessdata",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-codepoints/limit-24mp.png"
+      ],
+      "method": "landlock",
+      "reason": "required process observation was not obtained",
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "parent-killed",
+      "status": "measured",
+      "allowedParentErrors": [],
+      "socketBytes": {
+        "/home/patrick/work/tf1428/parent-killed/r/putgd/session.sock": 60,
+        "/home/patrick/work/tf1428/parent-killed/r/bus": 45
+      },
+      "command": [
+        "/home/patrick/work/ocr-corpus-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/tf1428/parent-killed/child.py",
+        "--data",
+        "/usr/share/tesseract-ocr/5/tessdata",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-codepoints/limit-24mp.png"
+      ],
+      "method": "parent",
+      "child": {
+        "pid": 68652,
+        "parentPid": 68649,
+        "startTicks": "234569932"
+      },
+      "parent": {
+        "pid": 68649,
+        "startTicks": "234569889",
+        "state": "S",
+        "cpuTicks": 42
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 68652,
+          "startTicks": "234569932",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "atInjection": {
+        "pid": 68652,
+        "startTicks": "234569932",
+        "state": "R",
+        "cpuTicks": 25
+      },
+      "threadsAtInjection": [
+        {
+          "pid": 68652,
+          "startTicks": "234569932",
+          "state": "R",
+          "cpuTicks": 25
+        }
+      ],
+      "parentExit": -9,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": null,
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    }
+  ],
+  "limits": [
+    "SIGTERM tests external termination; cooperative TextJob Cancel needs a driver cancel handle.",
+    "Every new/changed regular file under /tmp and private runtime/temp requires human review, even if it has no image header or exact canary match. This also catches unknown pixel/text encodings."
+  ],
+  "identities": {
+    "/home/patrick/work/ocr-corpus-1428/test_ocr_run": "987f793f13852b3544eb860b3ccc87f1f1d9c5f55eb6e0cdb7ce74134685849b",
+    "/home/patrick/work/ocr-corpus-1428/debian-candidate/usr/bin/putgd-ocr": "04fbc047c2406b9b6c1565a8a083fe858566413bdfadb646a51be884d6d2b4a2",
+    "/home/patrick/work/ocr-corpus-1428/test_text_job_fixture": "5e622a5c1d44a9eb275cc246c130e2399fd143c422d120c1bf51a5630dd17452",
+    "/home/patrick/work/ocr-corpus-1428/synthetic-codepoints/limit-24mp.png": "d7536fe72c061b0001fb154fc82415b849d5d31b4938aa747e468605f48a9826",
+    "/home/patrick/work/ocr-corpus-1428/candidate-fault-canary.txt": "603646f685be9bb572b475d3555320501546ea84b189ab1ef4696f45e3d97a07",
+    "/usr/share/tesseract-ocr/5/tessdata/eng.traineddata": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2"
+  }
+}
