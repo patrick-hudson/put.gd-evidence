@@ -1,0 +1,484 @@
+{
+  "desktop": "Omarchy-Hyprland-AppImage-keeper",
+  "sessionProcess": "quickshell",
+  "sessionType": "wayland",
+  "currentDesktop": "Hyprland",
+  "hotkey": "Ctrl+Shift+9",
+  "triggers": [
+    {
+      "trigger": "hotkey",
+      "clipboardBefore": "sentinel-hotkey-1794577473"
+    }
+  ],
+  "socketPathsUtf8Bytes": {
+    "/tmp/tp-z815xh9s/rt/putgd/session.sock": 38,
+    "/run/user/1000/putgd-text-proof-input.sock": 42,
+    "/home/lab/b1428-input.sock": 26
+  },
+  "build": {
+    "baseVersion": "26.1113.4844",
+    "commitCount": 4844,
+    "dirty": false,
+    "gitCommit": "8a3294c3c5ba54bfc2431d15beede7aaca74b29e",
+    "gitTree": "0dab5caf8d614cf4f76f62725d93159c26565341",
+    "packageVersion": "26.1113.4844~dev+g8a3294c3c5ba",
+    "schemaVersion": 1,
+    "sourceProvenance": "git",
+    "version": "26.1113.4844-dev+g8a3294c3c5ba"
+  },
+  "capabilities": {
+    "editor": {
+      "admissionPixels": 24000000,
+      "available": true,
+      "blurStyles": [
+        "blur",
+        "pixelate"
+      ],
+      "commands": [
+        "inspect",
+        "apply",
+        "preview",
+        "saveCopy",
+        "copy",
+        "fileDialog",
+        "view",
+        "submit",
+        "cancel",
+        "raise"
+      ],
+      "fileFormats": [
+        "png",
+        "jpeg"
+      ],
+      "open": false,
+      "output": "png",
+      "shapes": [
+        "redact",
+        "blur",
+        "arrow",
+        "rectangle",
+        "text",
+        "highlight",
+        "step",
+        "pen",
+        "ellipse",
+        "line"
+      ],
+      "sources": [
+        "region",
+        "window",
+        "desktop",
+        "clipboard",
+        "file",
+        "scroll"
+      ]
+    },
+    "providers": {
+      "backblaze-b2": {
+        "conditionalCreate": true,
+        "conditionalDelete": false,
+        "conditionalReplace": false,
+        "delete": true,
+        "deletionEffect": "Deletes exactly the uploaded B2 file version by its ID. put.gd never uploads over a visible file, so the name then shows nothing, or an older version that was hidden before the upload. Authorized links stop working when they expire.",
+        "maximumNameBytes": 1023,
+        "maximumObjectBytes": 10000000000000,
+        "privateUploads": false,
+        "referenceDelete": false,
+        "serverNamesObjects": false,
+        "sharing": false,
+        "stat": true,
+        "urls": true,
+        "versionAddressing": true
+      },
+      "custom-http": {
+        "conditionalCreate": false,
+        "conditionalDelete": false,
+        "conditionalReplace": false,
+        "delete": false,
+        "deletionEffect": "Asks the server to delete this upload through the deletion URL it returned with the link. What the server removes, and how soon the link stops working, is up to the server.",
+        "maximumNameBytes": 255,
+        "maximumObjectBytes": null,
+        "privateUploads": false,
+        "referenceDelete": true,
+        "serverNamesObjects": true,
+        "sharing": false,
+        "stat": false,
+        "urls": true,
+        "versionAddressing": false
+      },
+      "proton-drive": {
+        "conditionalCreate": true,
+        "conditionalDelete": false,
+        "conditionalReplace": false,
+        "delete": false,
+        "deletionEffect": "Safe remote deletion is unavailable: Proton does not expose an atomic revision-guarded file deletion. Revoke share links separately.",
+        "maximumNameBytes": 255,
+        "maximumObjectBytes": null,
+        "privateUploads": true,
+        "referenceDelete": false,
+        "serverNamesObjects": false,
+        "sharing": true,
+        "stat": true,
+        "urls": true,
+        "versionAddressing": false
+      },
+      "s3": {
+        "conditionalCreate": true,
+        "conditionalDelete": true,
+        "conditionalReplace": true,
+        "delete": true,
+        "deletionEffect": "Guarded origin removal; selected versions only; browser/CDN caches may retain bytes",
+        "maximumNameBytes": 1024,
+        "maximumObjectBytes": 5497558138880,
+        "privateUploads": false,
+        "referenceDelete": false,
+        "serverNamesObjects": false,
+        "sharing": false,
+        "stat": true,
+        "urls": true,
+        "versionAddressing": true
+      }
+    },
+    "recording": {
+      "acquisition": "portal",
+      "active": null,
+      "audio": {
+        "microphone": true,
+        "system": true
+      },
+      "available": true,
+      "clickHighlights": {
+        "available": false,
+        "drawnBy": "recorder",
+        "message": "This desktop gives put.gd no pointer clicks, so recordings cannot highlight them.",
+        "reason": "click_route_missing",
+        "route": "none",
+        "targets": []
+      },
+      "codecs": {
+        "mp4": [
+          "h264",
+          "h265"
+        ],
+        "webm": [
+          "vp9"
+        ]
+      },
+      "commands": [
+        "windows",
+        "microphones",
+        "prepare",
+        "start",
+        "pause",
+        "resume",
+        "stop",
+        "cancel",
+        "inspect",
+        "select",
+        "raise",
+        "overlay",
+        "audio",
+        "edit",
+        "preview",
+        "review",
+        "saveCopy",
+        "upload"
+      ],
+      "editCommands": [
+        "setTrim",
+        "resetTrim",
+        "addMask",
+        "updateMask",
+        "removeMask"
+      ],
+      "exportEncoders": {
+        "h264": [
+          "libx264"
+        ],
+        "h265": [
+          "libx265"
+        ],
+        "vp9": [
+          "libvpx-vp9"
+        ]
+      },
+      "ffmpeg": {
+        "avcodec": "63.1.102",
+        "avfilter": "12.1.102",
+        "avformat": "63.1.102",
+        "avutil": "61.1.102",
+        "encoderFailures": {
+          "h264_nvenc": "libcuda.so.1 is not installed",
+          "h264_vaapi": "no VA-API device accepts it",
+          "hevc_nvenc": "libcuda.so.1 is not installed",
+          "hevc_vaapi": "no VA-API device accepts it"
+        },
+        "encoders": {
+          "aac": true,
+          "gif": true,
+          "h264_nvenc": true,
+          "h264_vaapi": true,
+          "hevc_nvenc": true,
+          "hevc_vaapi": true,
+          "libopenh264": false,
+          "libopus": true,
+          "libvorbis": false,
+          "libvpx-vp9": true,
+          "libwebp_anim": true,
+          "libx264": true,
+          "libx265": true,
+          "vp9_vaapi": false
+        },
+        "filters": {
+          "asetpts": true,
+          "atrim": true,
+          "avgblur": true,
+          "crop": true,
+          "drawbox": true,
+          "format": true,
+          "fps": true,
+          "palettegen": true,
+          "paletteuse": true,
+          "scale": true,
+          "setpts": true,
+          "trim": true
+        },
+        "h264Decoder": {
+          "failure": null,
+          "name": "h264",
+          "usable": true
+        },
+        "muxers": {
+          "gif": true,
+          "matroska": true,
+          "mp4": true,
+          "webm": true,
+          "webp": true
+        }
+      },
+      "formats": [
+        "mp4",
+        "webm",
+        "gif",
+        "webp"
+      ],
+      "gstreamer": {
+        "audioSources": [
+          "pulsesrc",
+          "pipewiresrc"
+        ],
+        "available": true,
+        "elements": {
+          "aacparse": "1.24.2",
+          "appsink": "1.24.2",
+          "appsrc": "1.24.2",
+          "audioconvert": "1.24.2",
+          "audiomixer": "1.24.2",
+          "audioresample": "1.24.2",
+          "avenc_aac": null,
+          "compositor": null,
+          "fdkaacenc": null,
+          "h264parse": "1.24.2",
+          "identity": "1.24.2",
+          "matroskamux": "1.24.2",
+          "mp4mux": null,
+          "openh264enc": null,
+          "pipewiresrc": "1.0.5",
+          "pulsesrc": "1.24.2",
+          "vaapih264enc": null,
+          "vah264enc": null,
+          "vah264lpenc": null,
+          "videoconvert": "1.24.2",
+          "videocrop": "1.24.2",
+          "videorate": "1.24.2",
+          "videoscale": "1.24.2",
+          "voaacenc": "1.24.2",
+          "vp9enc": null,
+          "webmmux": "1.24.2",
+          "webpenc": null,
+          "x264enc": "1.24.1",
+          "x265enc": null,
+          "ximagesrc": "1.24.2"
+        },
+        "encoderFailures": {},
+        "liveAacEncoders": [
+          "voaacenc"
+        ],
+        "liveH264Encoders": [
+          "x264enc"
+        ],
+        "liveSources": [
+          "ximagesrc",
+          "pipewiresrc"
+        ],
+        "pluginDirectories": [
+          "/tmp/.mount_candidihcbDK/usr/lib/gstreamer-1.0"
+        ],
+        "usableH264Encoders": [
+          "x264enc"
+        ],
+        "version": "GStreamer 1.24.2",
+        "webpAnimated": false
+      },
+      "limits": {
+        "animationMaxEdge": 1280,
+        "animationMaxUs": 60000000,
+        "maxFileBytes": 1099511627776,
+        "maxMasks": 64
+      },
+      "liveCapture": {
+        "audio": true,
+        "encoder": true,
+        "source": true
+      },
+      "maskKinds": [
+        "blur",
+        "solid"
+      ],
+      "overlayExclusion": {},
+      "pipewire": {
+        "socket": null
+      },
+      "portal": {
+        "available": true,
+        "cursorModes": 3,
+        "portalVersion": 6,
+        "sourceTypes": 7
+      },
+      "reason": null,
+      "schemaVersion": 1,
+      "session": "wayland",
+      "states": [
+        "preparing",
+        "ready",
+        "starting",
+        "recording",
+        "paused",
+        "stopping",
+        "reviewing",
+        "exporting",
+        "submitted",
+        "cancelled",
+        "failed"
+      ],
+      "targets": [
+        "monitor",
+        "desktop",
+        "region",
+        "window"
+      ],
+      "timeUnit": "microseconds",
+      "windowAcquisition": "portal",
+      "windowList": false
+    },
+    "scroll": {
+      "available": false,
+      "frames": "",
+      "injector": "",
+      "maxHeight": 30000,
+      "message": "This desktop has no dialog-free frame stream",
+      "reason": "frame_source_unavailable",
+      "selection": "none"
+    },
+    "source": {
+      "adapter": "wayland-data-control",
+      "capture": {
+        "desktop": {
+          "available": false,
+          "error": "Capture is not available on this desktop"
+        },
+        "region": {
+          "available": false,
+          "error": "Capture is not available on this desktop"
+        },
+        "text": {
+          "available": false,
+          "error": "Capture is not available on this desktop"
+        },
+        "window": {
+          "available": false,
+          "error": "Capture is not available on this desktop"
+        }
+      },
+      "clipboard": {
+        "available": true,
+        "error": "",
+        "import": "ext-data-control-v1",
+        "protocol_version": 1,
+        "result": "ext-data-control-v1-clipboard-only",
+        "types": [
+          "files",
+          "image",
+          "text"
+        ]
+      },
+      "scroll": {
+        "available": false,
+        "frames": "",
+        "injector": "",
+        "maxHeight": 30000,
+        "message": "This desktop has no dialog-free frame stream",
+        "reason": "frame_source_unavailable",
+        "selection": "none"
+      },
+      "shortcuts": {
+        "available": false
+      }
+    },
+    "text": {
+      "available": true,
+      "engines": {},
+      "landlockAbi": 10,
+      "languages": [
+        {
+          "bytes": 4113088,
+          "id": "eng",
+          "kind": "packaged"
+        }
+      ],
+      "sources": {
+        "clipboard": {
+          "available": true
+        },
+        "desktop": {
+          "available": false,
+          "error": {
+            "code": "source_unavailable",
+            "details": {},
+            "message": "Capture is not available on this desktop"
+          }
+        },
+        "file": {
+          "available": true
+        },
+        "history": {
+          "available": true
+        },
+        "monitor": {
+          "available": false,
+          "error": {
+            "code": "source_unavailable",
+            "details": {},
+            "message": "This desktop cannot read this source"
+          }
+        },
+        "region": {
+          "available": false,
+          "error": {
+            "code": "source_unavailable",
+            "details": {},
+            "message": "Capture is not available on this desktop"
+          }
+        },
+        "window": {
+          "available": false,
+          "error": {
+            "code": "source_unavailable",
+            "details": {},
+            "message": "Capture is not available on this desktop"
+          }
+        }
+      }
+    }
+  }
+}
