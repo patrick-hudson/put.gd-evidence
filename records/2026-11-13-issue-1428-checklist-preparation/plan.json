@@ -1,0 +1,163 @@
+{
+  "status": "not_run",
+  "cases": [
+    {
+      "case": "fixture-control",
+      "method": {
+        "mode": "result"
+      },
+      "allowedParentErrors": [
+        ""
+      ]
+    },
+    {
+      "case": "real-control",
+      "method": "none",
+      "allowedParentErrors": [
+        ""
+      ]
+    },
+    {
+      "case": "wrong-build",
+      "method": {
+        "mode": "wrong-build"
+      },
+      "allowedParentErrors": [
+        "text_incompatible"
+      ]
+    },
+    {
+      "case": "malformed-result",
+      "method": {
+        "mode": "result",
+        "invalid": true
+      },
+      "allowedParentErrors": [
+        "text_incompatible"
+      ]
+    },
+    {
+      "case": "malformed-frame",
+      "method": "bad-frame",
+      "allowedParentErrors": [
+        "text_incompatible"
+      ]
+    },
+    {
+      "case": "output-cap",
+      "method": {
+        "mode": "oversize"
+      },
+      "allowedParentErrors": [
+        "text_incompatible"
+      ]
+    },
+    {
+      "case": "hang-deadline",
+      "method": {
+        "mode": "stall"
+      },
+      "allowedParentErrors": [
+        "text_job_timeout"
+      ]
+    },
+    {
+      "case": "child-error",
+      "method": {
+        "mode": "child-error",
+        "code": "engine_unavailable"
+      },
+      "allowedParentErrors": [
+        "engine_unavailable"
+      ]
+    },
+    {
+      "case": "crash",
+      "method": "kill",
+      "allowedParentErrors": [
+        "text_job_failed"
+      ]
+    },
+    {
+      "case": "cancel-by-signal",
+      "method": "term",
+      "allowedParentErrors": [
+        "text_job_failed"
+      ]
+    },
+    {
+      "case": "limit-data",
+      "method": "data",
+      "allowedParentErrors": [
+        "text_job_failed",
+        "text_job_timeout",
+        "text_job_io",
+        "input_excessive",
+        "engine_unavailable",
+        "language_unavailable"
+      ]
+    },
+    {
+      "case": "limit-cpu",
+      "method": "cpu",
+      "allowedParentErrors": [
+        "text_job_failed"
+      ]
+    },
+    {
+      "case": "limit-file-size",
+      "method": "fsize",
+      "allowedParentErrors": [
+        "text_job_failed",
+        "text_job_timeout",
+        "text_job_io",
+        "input_excessive",
+        "engine_unavailable",
+        "language_unavailable"
+      ]
+    },
+    {
+      "case": "limit-descriptors",
+      "method": "nofile",
+      "allowedParentErrors": [
+        "text_job_failed",
+        "text_job_timeout",
+        "text_job_io",
+        "input_excessive",
+        "engine_unavailable",
+        "language_unavailable"
+      ]
+    },
+    {
+      "case": "corrupt-data",
+      "method": "corrupt",
+      "allowedParentErrors": [
+        "language_unavailable",
+        "engine_unavailable"
+      ]
+    },
+    {
+      "case": "missing-data",
+      "method": "missing",
+      "allowedParentErrors": [
+        "language_unavailable"
+      ]
+    },
+    {
+      "case": "confinement-refused",
+      "method": "landlock",
+      "allowedParentErrors": [
+        "helper_sandbox_unavailable"
+      ]
+    },
+    {
+      "case": "parent-killed",
+      "method": "parent",
+      "allowedParentErrors": []
+    }
+  ],
+  "limits": [
+    "SIGTERM tests external termination; cooperative TextJob Cancel needs a driver cancel handle.",
+    "Every new/changed regular file under /tmp and private runtime/temp requires human review, even if it has no image header or exact canary match. This also catches unknown pixel/text encodings."
+  ]
+}
