@@ -1,0 +1,26 @@
+{
+  "restoredBaseline": {
+    "enabled-extensions": [
+      "background-logo@fedorahosted.org",
+      "appindicatorsupport@rgcjonas.gmail.com"
+    ],
+    "disabled-extensions": [
+      "hkwitness@lab",
+      "putgd@put.gd"
+    ]
+  },
+  "probe": [
+    {
+      "case": "real",
+      "systemctlExit": 0,
+      "systemctlError": "",
+      "gsettingsEnabled": "['background-logo@fedorahosted.org', 'appindicatorsupport@rgcjonas.gmail.com']"
+    },
+    {
+      "case": "private",
+      "systemctlExit": 1,
+      "systemctlError": "Failed to connect to user scope bus via local transport: No such file or directory",
+      "gsettingsEnabled": "['background-logo@fedorahosted.org']"
+    }
+  ]
+}

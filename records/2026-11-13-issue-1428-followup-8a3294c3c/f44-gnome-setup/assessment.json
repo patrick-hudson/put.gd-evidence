@@ -1,0 +1,8 @@
+{
+  "finding": "Initial private-runtime setup dropped AppIndicator from real GNOME enabled list and ignored the real disabled putgd entry. Restored immediately before login.",
+  "initialContext": "Private app config/data/state/cache and private XDG_RUNTIME_DIR, real session DBus address and absolute Wayland socket.",
+  "probe": "systemctl --user show-environment returns1 in private runtime,0 in real runtime; gsettings get in private config reads background-logo default, real config reads AppIndicator too.",
+  "normalRecipe": "Retain private app config/data/state/cache, use actual owned runtime with full socket/peer checks. Restore original lists then explicitly enable putgd for test; AppIndicator remains enabled. Logout/login then managed user extension23ACTIVE.",
+  "classification": "Lab-isolation context finding; not hidden or counted as a successful first attempt. Normal-session measurement running separately. Coordinator can decide whether setup fallback needs a product follow-up.",
+  "OSQueue": "No physical package install/remove; pending offline OS transaction untouched."
+}

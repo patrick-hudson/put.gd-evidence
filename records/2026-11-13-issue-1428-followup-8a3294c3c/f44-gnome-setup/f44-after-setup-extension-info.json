@@ -1,0 +1,22 @@
+{
+  "gnome-extensions list --enabled": {
+    "code": 0,
+    "out": "background-logo@fedorahosted.org\n",
+    "err": ""
+  },
+  "gnome-extensions info putgd@put.gd": {
+    "code": 2,
+    "out": "",
+    "err": "Extension \u201cputgd@put.gd\u201d doesn't exist\n"
+  },
+  "gsettings get org.gnome.shell enabled-extensions": {
+    "code": 0,
+    "out": "['background-logo@fedorahosted.org', 'putgd@put.gd']\n",
+    "err": ""
+  },
+  "gsettings get org.gnome.shell disabled-extensions": {
+    "code": 0,
+    "out": "['hkwitness@lab']\n",
+    "err": ""
+  }
+}
