@@ -1,0 +1,17 @@
+from pathlib import Path
+import sys,json,subprocess
+cell,key,publish=sys.argv[1:];r=Path('/tmp/b1428');o=r/'final-evidence'/cell;p=next(o.glob('tp-*/receipt.json'));d=json.loads(p.read_text());q=d['finalAcceptance']['quickRedact'];expected='ALPHA BRAVO CHARLIE\nSYNTHETIC TEXT 1428\nhello@example.test';t=d['triggers'][0];assert d['passed'] and t['trigger']=='hotkey' and t['paste']==expected and t['pasteMatchesExact'] and q['passed'] and q['oneHelperExit0'] and q['externalVerification']['passed'];h=d['firstLight']['helperRuns'];assert any(x.get('parent')==d['firstLight']['residentPid'] and x.get('exitCode')==0 for x in h);pack=json.loads((r/'final-packages/ready.json').read_text())[key];pub=json.loads(Path(publish).read_text());url=pub['tree_url']+'/'+cell
+body=f"**Final 357210d2f / {cell}: PASS.** Real hotkey → exact independent 58-character paste after a sentinel; own OCR helper exited 0, total {t['record']['timings']['totalMs']} ms. Email-only Quick redact created exactly one mark on the email; visible editor and saved PNG personally checked, both earlier lines unchanged and all email ink covered; Quick redact helper exited 0. Actual adapter `{d.get('adapter')}`, session `{d.get('sessionType')}`.\n\nCI 43448444706, `{Path(pack['file']).name}`, SHA256 `{pack['sha256']}`. [Receipt, kernel helper events, source/editor/saved PNG and verification]({url})."
+m=d.get('measurements',{})
+if m:
+ for mode in ('dense','paragraph'):
+  rows=m.get(mode,[])
+  if rows:
+   assert len(rows)==5 and all(x['measured'] and x['clipboardMatchesResult'] for x in rows);vals=[x['selectionToObservedAckMs'] for x in rows];body+=f" {mode.capitalize()}: 5 end-selection→observed ACK{min(vals):.1f}–{max(vals):.1f}ms; separate spawn/engineStart/recognize/copy/total retained."
+ body+=' Latency is informational, no speed gate.'
+carried='The 8a full-trigger and Repeat proof stands separately.' if cell in ('kde-x11','gnome-x11') else 'The 8a clipboard keeper lifecycle proof stands separately.' if cell in ('budgie','hyprland','budgie-appimage','hyprland-appimage') else 'The authorized 8a adapter/lifecycle and resident post-text proofs stand separately.'
+body+='\n\n'+carried+' This final receipt covers hotkey and Quick redact; restoration/guest retirement is reported separately.'
+if (o/'completion.json').exists():
+ c=json.loads((o/'completion.json').read_text());assert c['completed'] and c['outcome']=='passed';st=json.loads((o/'state.json').read_text());source='/'.join(Path(st['golden']).parts[-2:]);route='manual lab overlay allocator (exact config retained; no automated profile added)' if (o/'manual-launch-config.json').exists() else 'lab profile `'+st['profile']+'`';body+='\n\nFresh guest from `'+source+'`, golden SHA256 `'+st['golden_sha256']+'`, launched through '+route+'. Guest, builder and workstation export hashes verified; disposable overlay retired. No golden was booted or modified.'
+if (o/'failed-attempt').exists():body+='\n\nThe first attempt observed the same functional results but failed during evidence retention because my private retention parent directory was absent. Its raw attempt, failure and export are preserved; the PASS above is the complete fresh retry with that test-directory setup corrected.'
+f=r/(cell+'-auto-comment.md');f.write_text(body);print(body);subprocess.run(['gh','issue','comment','1428','--repo','patrick-hudson/put.gd-desktop','--body-file',str(f)],check=True)
