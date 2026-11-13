@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/b1428/resume.py", line 9, in <module>
+    a=lab.command(lab.qemu_command(cfg,r,r/'disk.qcow2',d['ssh_port'],d['vnc_display'],'kvm'),check=False);assert a.returncode==0,a.stderr
+                                                                                                                  ^^^^^^^^^^^^^^^
+AssertionError: qemu-system-x86_64: -drive file=/home/patrick/work/b1428/r/work/lab-runs/fg/disk.qcow2,format=qcow2,if=virtio: Failed to get "write" lock
+Is another process using the image [/home/patrick/work/b1428/r/work/lab-runs/fg/disk.qcow2]?
+
