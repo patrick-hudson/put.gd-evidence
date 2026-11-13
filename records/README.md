@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-13-issue-1428-candidate-transcript-audit](2026-11-13-issue-1428-candidate-transcript-audit/README.md) | — | Candidate transcript audit |
 | [2026-11-13-issue-1428-m74-corpus](2026-11-13-issue-1428-m74-corpus/README.md) | — | Issue 1428 Mint real-target corpus |
 | [2026-11-13-issue-1428-k72-corpus](2026-11-13-issue-1428-k72-corpus/README.md) | — | Issue 1428 Kubuntu real-target corpus |
 | [2026-11-13-issue-1428-f44-corpus](2026-11-13-issue-1428-f44-corpus/README.md) | — | Issue 1428 Fedora GNOME real-target corpus |
