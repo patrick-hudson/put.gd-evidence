@@ -1,0 +1,21 @@
+{
+  "action": "Restart existing GNOME VNC service after scale restoration; same output/listener",
+  "checks": [
+    {
+      "requested": [
+        400,
+        400
+      ],
+      "observed": "X=400\nY=400\nSCREEN=0\nWINDOW=6291474\n"
+    },
+    {
+      "requested": [
+        600,
+        500
+      ],
+      "observed": "X=600\nY=500\nSCREEN=0\nWINDOW=6291474\n"
+    }
+  ],
+  "observer": "XQueryPointer against a settled owned X11 window; a bare Wayland desktop does not update this observer",
+  "owned_check_window_stopped": 4109789
+}
