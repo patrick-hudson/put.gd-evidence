@@ -1,0 +1,26 @@
+{
+  "gnome-extensions list --enabled": {
+    "code": 0,
+    "out": "background-logo@fedorahosted.org\nappindicatorsupport@rgcjonas.gmail.com\n",
+    "err": ""
+  },
+  "gnome-extensions info putgd@put.gd": {
+    "code": 2,
+    "out": "",
+    "err": "Extension \u201cputgd@put.gd\u201d doesn't exist\n"
+  },
+  "gsettings get org.gnome.shell enabled-extensions": {
+    "code": 0,
+    "out": "['background-logo@fedorahosted.org', 'appindicatorsupport@rgcjonas.gmail.com']\n",
+    "err": ""
+  },
+  "gsettings get org.gnome.shell disabled-extensions": {
+    "code": 0,
+    "out": "['hkwitness@lab', 'putgd@put.gd']\n",
+    "err": ""
+  }
+}
+package putgd is not installed
+An offline transaction was initiated by the following command:
+	dnf5daemon-server
+Run `dnf5 offline reboot` to reboot and perform the offline transaction.
