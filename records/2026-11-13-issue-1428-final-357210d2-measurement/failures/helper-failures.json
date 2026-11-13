@@ -1,0 +1,1156 @@
+{
+  "status": "measured",
+  "cases": [
+    {
+      "case": "fixture-control",
+      "status": "measured",
+      "allowedParentErrors": [
+        ""
+      ],
+      "socketBytes": {
+        "/home/patrick/work/ocr-final-1428/fault-run-357/fixture-control/r/putgd/session.sock": 84,
+        "/home/patrick/work/ocr-final-1428/fault-run-357/fixture-control/r/bus": 69
+      },
+      "fixturePlan": "/home/patrick/work/ocr-final-1428/fault-run-357/fixture-control/data/fixture.json",
+      "command": [
+        "/home/patrick/work/ocr-final-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/fixture-control/child.py",
+        "--data",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/fixture-control/data",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-final/limit-24mp.png"
+      ],
+      "method": "result",
+      "child": {
+        "pid": 803143,
+        "parentPid": 803142,
+        "startTicks": "198617500"
+      },
+      "parent": {
+        "pid": 803142,
+        "startTicks": "198617456",
+        "state": "S",
+        "cpuTicks": 43
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 803143,
+          "startTicks": "198617500",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "parentExit": 0,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "real-control",
+      "status": "measured",
+      "allowedParentErrors": [
+        ""
+      ],
+      "socketBytes": {
+        "/home/patrick/work/ocr-final-1428/fault-run-357/real-control/r/putgd/session.sock": 81,
+        "/home/patrick/work/ocr-final-1428/fault-run-357/real-control/r/bus": 66
+      },
+      "command": [
+        "/home/patrick/work/ocr-final-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/real-control/child.py",
+        "--data",
+        "/usr/share/tesseract-ocr/5/tessdata",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-final/limit-24mp.png"
+      ],
+      "method": "none",
+      "child": {
+        "pid": 803145,
+        "parentPid": 803144,
+        "startTicks": "198617675"
+      },
+      "parent": {
+        "pid": 803144,
+        "startTicks": "198617632",
+        "state": "S",
+        "cpuTicks": 42
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 803145,
+          "startTicks": "198617675",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "parentExit": 0,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "wrong-build",
+      "status": "measured",
+      "allowedParentErrors": [
+        "text_incompatible"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/ocr-final-1428/fault-run-357/wrong-build/r/putgd/session.sock": 80,
+        "/home/patrick/work/ocr-final-1428/fault-run-357/wrong-build/r/bus": 65
+      },
+      "fixturePlan": "/home/patrick/work/ocr-final-1428/fault-run-357/wrong-build/data/fixture.json",
+      "command": [
+        "/home/patrick/work/ocr-final-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/wrong-build/child.py",
+        "--data",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/wrong-build/data",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-final/limit-24mp.png"
+      ],
+      "method": "wrong-build",
+      "child": {
+        "pid": 803149,
+        "parentPid": 803148,
+        "startTicks": "198619453"
+      },
+      "parent": {
+        "pid": 803148,
+        "startTicks": "198619408",
+        "state": "S",
+        "cpuTicks": 43
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 803149,
+          "startTicks": "198619453",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "text_incompatible",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "malformed-result",
+      "status": "measured",
+      "allowedParentErrors": [
+        "text_incompatible"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/ocr-final-1428/fault-run-357/malformed-result/r/putgd/session.sock": 85,
+        "/home/patrick/work/ocr-final-1428/fault-run-357/malformed-result/r/bus": 70
+      },
+      "fixturePlan": "/home/patrick/work/ocr-final-1428/fault-run-357/malformed-result/data/fixture.json",
+      "command": [
+        "/home/patrick/work/ocr-final-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/malformed-result/child.py",
+        "--data",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/malformed-result/data",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-final/limit-24mp.png"
+      ],
+      "method": "result",
+      "child": {
+        "pid": 803151,
+        "parentPid": 803150,
+        "startTicks": "198619629"
+      },
+      "parent": {
+        "pid": 803150,
+        "startTicks": "198619585",
+        "state": "S",
+        "cpuTicks": 43
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 803151,
+          "startTicks": "198619629",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "text_incompatible",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "malformed-frame",
+      "status": "measured",
+      "allowedParentErrors": [
+        "text_incompatible"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/ocr-final-1428/fault-run-357/malformed-frame/r/putgd/session.sock": 84,
+        "/home/patrick/work/ocr-final-1428/fault-run-357/malformed-frame/r/bus": 69
+      },
+      "fixturePlan": "/home/patrick/work/ocr-final-1428/fault-run-357/malformed-frame/data/fixture.json",
+      "command": [
+        "/home/patrick/work/ocr-final-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/malformed-frame/child.py",
+        "--data",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/malformed-frame/data",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-final/limit-24mp.png"
+      ],
+      "method": "bad-frame",
+      "child": {
+        "pid": 803153,
+        "parentPid": 803152,
+        "startTicks": "198619806"
+      },
+      "parent": {
+        "pid": 803152,
+        "startTicks": "198619762",
+        "state": "S",
+        "cpuTicks": 43
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 803153,
+          "startTicks": "198619806",
+          "state": "S",
+          "cpuTicks": 1
+        }
+      ],
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "text_incompatible",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "output-cap",
+      "status": "measured",
+      "allowedParentErrors": [
+        "text_incompatible"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/ocr-final-1428/fault-run-357/output-cap/r/putgd/session.sock": 79,
+        "/home/patrick/work/ocr-final-1428/fault-run-357/output-cap/r/bus": 64
+      },
+      "fixturePlan": "/home/patrick/work/ocr-final-1428/fault-run-357/output-cap/data/fixture.json",
+      "command": [
+        "/home/patrick/work/ocr-final-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/output-cap/child.py",
+        "--data",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/output-cap/data",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-final/limit-24mp.png"
+      ],
+      "method": "oversize",
+      "child": {
+        "pid": 803155,
+        "parentPid": 803154,
+        "startTicks": "198619981"
+      },
+      "parent": {
+        "pid": 803154,
+        "startTicks": "198619937",
+        "state": "S",
+        "cpuTicks": 43
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 803155,
+          "startTicks": "198619981",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "text_incompatible",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "hang-deadline",
+      "status": "measured",
+      "allowedParentErrors": [
+        "text_job_timeout"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/ocr-final-1428/fault-run-357/hang-deadline/r/putgd/session.sock": 82,
+        "/home/patrick/work/ocr-final-1428/fault-run-357/hang-deadline/r/bus": 67
+      },
+      "fixturePlan": "/home/patrick/work/ocr-final-1428/fault-run-357/hang-deadline/data/fixture.json",
+      "command": [
+        "/home/patrick/work/ocr-final-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/hang-deadline/child.py",
+        "--data",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/hang-deadline/data",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-final/limit-24mp.png"
+      ],
+      "method": "stall",
+      "child": {
+        "pid": 803157,
+        "parentPid": 803156,
+        "startTicks": "198620165"
+      },
+      "parent": {
+        "pid": 803156,
+        "startTicks": "198620121",
+        "state": "S",
+        "cpuTicks": 44
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 803157,
+          "startTicks": "198620165",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "text_job_timeout",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "child-error",
+      "status": "measured",
+      "allowedParentErrors": [
+        "engine_unavailable"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/ocr-final-1428/fault-run-357/child-error/r/putgd/session.sock": 80,
+        "/home/patrick/work/ocr-final-1428/fault-run-357/child-error/r/bus": 65
+      },
+      "fixturePlan": "/home/patrick/work/ocr-final-1428/fault-run-357/child-error/data/fixture.json",
+      "command": [
+        "/home/patrick/work/ocr-final-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/child-error/child.py",
+        "--data",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/child-error/data",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-final/limit-24mp.png"
+      ],
+      "method": "child-error",
+      "child": {
+        "pid": 803170,
+        "parentPid": 803169,
+        "startTicks": "198622337"
+      },
+      "parent": {
+        "pid": 803169,
+        "startTicks": "198622293",
+        "state": "S",
+        "cpuTicks": 43
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 803170,
+          "startTicks": "198622337",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "engine_unavailable",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "crash",
+      "status": "measured",
+      "allowedParentErrors": [
+        "text_job_failed"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/ocr-final-1428/fault-run-357/crash/r/putgd/session.sock": 74,
+        "/home/patrick/work/ocr-final-1428/fault-run-357/crash/r/bus": 59
+      },
+      "command": [
+        "/home/patrick/work/ocr-final-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/crash/child.py",
+        "--data",
+        "/usr/share/tesseract-ocr/5/tessdata",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-final/limit-24mp.png"
+      ],
+      "method": "kill",
+      "child": {
+        "pid": 803172,
+        "parentPid": 803171,
+        "startTicks": "198622512"
+      },
+      "parent": {
+        "pid": 803171,
+        "startTicks": "198622468",
+        "state": "S",
+        "cpuTicks": 43
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 803172,
+          "startTicks": "198622512",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "atInjection": {
+        "pid": 803172,
+        "startTicks": "198622512",
+        "state": "R",
+        "cpuTicks": 25
+      },
+      "threadsAtInjection": [
+        {
+          "pid": 803172,
+          "startTicks": "198622512",
+          "state": "R",
+          "cpuTicks": 25
+        }
+      ],
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "text_job_failed",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "cancel-by-signal",
+      "status": "measured",
+      "allowedParentErrors": [
+        "text_job_failed"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/ocr-final-1428/fault-run-357/cancel-by-signal/r/putgd/session.sock": 85,
+        "/home/patrick/work/ocr-final-1428/fault-run-357/cancel-by-signal/r/bus": 70
+      },
+      "command": [
+        "/home/patrick/work/ocr-final-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/cancel-by-signal/child.py",
+        "--data",
+        "/usr/share/tesseract-ocr/5/tessdata",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-final/limit-24mp.png"
+      ],
+      "method": "term",
+      "child": {
+        "pid": 803174,
+        "parentPid": 803173,
+        "startTicks": "198622711"
+      },
+      "parent": {
+        "pid": 803173,
+        "startTicks": "198622667",
+        "state": "S",
+        "cpuTicks": 43
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 803174,
+          "startTicks": "198622711",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "atInjection": {
+        "pid": 803174,
+        "startTicks": "198622711",
+        "state": "R",
+        "cpuTicks": 25
+      },
+      "threadsAtInjection": [
+        {
+          "pid": 803174,
+          "startTicks": "198622711",
+          "state": "R",
+          "cpuTicks": 25
+        }
+      ],
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "text_job_failed",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "limit-data",
+      "status": "measured",
+      "allowedParentErrors": [
+        "text_job_failed",
+        "text_job_timeout",
+        "text_job_io",
+        "input_excessive",
+        "engine_unavailable",
+        "language_unavailable"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/ocr-final-1428/fault-run-357/limit-data/r/putgd/session.sock": 79,
+        "/home/patrick/work/ocr-final-1428/fault-run-357/limit-data/r/bus": 64
+      },
+      "command": [
+        "/home/patrick/work/ocr-final-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/limit-data/child.py",
+        "--data",
+        "/usr/share/tesseract-ocr/5/tessdata",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-final/limit-24mp.png"
+      ],
+      "method": "data",
+      "child": {
+        "pid": 803176,
+        "parentPid": 803175,
+        "startTicks": "198622911"
+      },
+      "parent": {
+        "pid": 803175,
+        "startTicks": "198622867",
+        "state": "S",
+        "cpuTicks": 43
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 803176,
+          "startTicks": "198622911",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "atInjection": {
+        "pid": 803176,
+        "startTicks": "198622911",
+        "state": "R",
+        "cpuTicks": 3
+      },
+      "threadsAtInjection": [
+        {
+          "pid": 803176,
+          "startTicks": "198622911",
+          "state": "R",
+          "cpuTicks": 3
+        }
+      ],
+      "prlimit": {
+        "resource": "data",
+        "before": [
+          201326592,
+          201326592
+        ],
+        "after": [
+          33554432,
+          33554432
+        ],
+        "method": "lower after helper confinement; its startup would otherwise reset inherited limits"
+      },
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "text_job_failed",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "limit-cpu",
+      "status": "measured",
+      "allowedParentErrors": [
+        "text_job_failed"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/ocr-final-1428/fault-run-357/limit-cpu/r/putgd/session.sock": 78,
+        "/home/patrick/work/ocr-final-1428/fault-run-357/limit-cpu/r/bus": 63
+      },
+      "command": [
+        "/home/patrick/work/ocr-final-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/limit-cpu/child.py",
+        "--data",
+        "/usr/share/tesseract-ocr/5/tessdata",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-final/limit-24mp.png"
+      ],
+      "method": "cpu",
+      "child": {
+        "pid": 803178,
+        "parentPid": 803177,
+        "startTicks": "198623099"
+      },
+      "parent": {
+        "pid": 803177,
+        "startTicks": "198623055",
+        "state": "S",
+        "cpuTicks": 43
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 803178,
+          "startTicks": "198623099",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "atInjection": {
+        "pid": 803178,
+        "startTicks": "198623099",
+        "state": "R",
+        "cpuTicks": 111
+      },
+      "threadsAtInjection": [
+        {
+          "pid": 803178,
+          "startTicks": "198623099",
+          "state": "R",
+          "cpuTicks": 111
+        }
+      ],
+      "prlimit": {
+        "resource": "cpu",
+        "before": [
+          84,
+          85
+        ],
+        "after": [
+          1,
+          1
+        ],
+        "method": "lower after helper confinement; its startup would otherwise reset inherited limits"
+      },
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "text_job_failed",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "limit-file-size",
+      "status": "measured",
+      "allowedParentErrors": [
+        "text_job_failed",
+        "text_job_timeout",
+        "text_job_io",
+        "input_excessive",
+        "engine_unavailable",
+        "language_unavailable"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/ocr-final-1428/fault-run-357/limit-file-size/r/putgd/session.sock": 84,
+        "/home/patrick/work/ocr-final-1428/fault-run-357/limit-file-size/r/bus": 69
+      },
+      "command": [
+        "/home/patrick/work/ocr-final-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/limit-file-size/child.py",
+        "--data",
+        "/usr/share/tesseract-ocr/5/tessdata",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-final/limit-24mp.png"
+      ],
+      "method": "fsize",
+      "child": {
+        "pid": 803180,
+        "parentPid": 803179,
+        "startTicks": "198623383"
+      },
+      "parent": {
+        "pid": 803179,
+        "startTicks": "198623340",
+        "state": "S",
+        "cpuTicks": 42
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 803180,
+          "startTicks": "198623383",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "atInjection": {
+        "pid": 803180,
+        "startTicks": "198623383",
+        "state": "R",
+        "cpuTicks": 25
+      },
+      "threadsAtInjection": [
+        {
+          "pid": 803180,
+          "startTicks": "198623383",
+          "state": "R",
+          "cpuTicks": 25
+        }
+      ],
+      "prlimit": {
+        "resource": "fsize",
+        "before": [
+          8388608,
+          8388608
+        ],
+        "after": [
+          1,
+          1
+        ],
+        "method": "lower after helper confinement; its startup would otherwise reset inherited limits"
+      },
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "text_job_io",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "limit-descriptors",
+      "status": "measured",
+      "allowedParentErrors": [
+        "text_job_failed",
+        "text_job_timeout",
+        "text_job_io",
+        "input_excessive",
+        "engine_unavailable",
+        "language_unavailable"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/ocr-final-1428/fault-run-357/limit-descriptors/r/putgd/session.sock": 86,
+        "/home/patrick/work/ocr-final-1428/fault-run-357/limit-descriptors/r/bus": 71
+      },
+      "command": [
+        "/home/patrick/work/ocr-final-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/limit-descriptors/child.py",
+        "--data",
+        "/usr/share/tesseract-ocr/5/tessdata",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-final/limit-24mp.png"
+      ],
+      "method": "nofile",
+      "child": {
+        "pid": 803194,
+        "parentPid": 803193,
+        "startTicks": "198625157"
+      },
+      "parent": {
+        "pid": 803193,
+        "startTicks": "198625113",
+        "state": "S",
+        "cpuTicks": 43
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 803194,
+          "startTicks": "198625157",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "atInjection": {
+        "pid": 803194,
+        "startTicks": "198625157",
+        "state": "R",
+        "cpuTicks": 4
+      },
+      "threadsAtInjection": [
+        {
+          "pid": 803194,
+          "startTicks": "198625157",
+          "state": "R",
+          "cpuTicks": 4
+        }
+      ],
+      "prlimit": {
+        "resource": "nofile",
+        "before": [
+          32,
+          32
+        ],
+        "after": [
+          5,
+          5
+        ],
+        "method": "lower after helper confinement; its startup would otherwise reset inherited limits"
+      },
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "language_unavailable",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "corrupt-data",
+      "status": "measured",
+      "allowedParentErrors": [
+        "language_unavailable",
+        "engine_unavailable"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/ocr-final-1428/fault-run-357/corrupt-data/r/putgd/session.sock": 81,
+        "/home/patrick/work/ocr-final-1428/fault-run-357/corrupt-data/r/bus": 66
+      },
+      "command": [
+        "/home/patrick/work/ocr-final-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/corrupt-data/child.py",
+        "--data",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/corrupt-data/data",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-final/limit-24mp.png"
+      ],
+      "method": "corrupt",
+      "child": {
+        "pid": 803196,
+        "parentPid": 803195,
+        "startTicks": "198625439"
+      },
+      "parent": {
+        "pid": 803195,
+        "startTicks": "198625395",
+        "state": "S",
+        "cpuTicks": 43
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 803196,
+          "startTicks": "198625439",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "language_unavailable",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "missing-data",
+      "status": "measured",
+      "allowedParentErrors": [
+        "language_unavailable"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/ocr-final-1428/fault-run-357/missing-data/r/putgd/session.sock": 81,
+        "/home/patrick/work/ocr-final-1428/fault-run-357/missing-data/r/bus": 66
+      },
+      "command": [
+        "/home/patrick/work/ocr-final-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/missing-data/child.py",
+        "--data",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/missing-data/data",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-final/limit-24mp.png"
+      ],
+      "method": "missing",
+      "child": {
+        "pid": 803198,
+        "parentPid": 803197,
+        "startTicks": "198625721"
+      },
+      "parent": {
+        "pid": 803197,
+        "startTicks": "198625677",
+        "state": "S",
+        "cpuTicks": 43
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 803198,
+          "startTicks": "198625721",
+          "state": "S",
+          "cpuTicks": 1
+        }
+      ],
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "language_unavailable",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "confinement-refused",
+      "status": "measured",
+      "allowedParentErrors": [
+        "helper_sandbox_unavailable"
+      ],
+      "socketBytes": {
+        "/home/patrick/work/ocr-final-1428/fault-run-357/confinement-refused/r/putgd/session.sock": 88,
+        "/home/patrick/work/ocr-final-1428/fault-run-357/confinement-refused/r/bus": 73
+      },
+      "command": [
+        "systemd-run",
+        "--user",
+        "--pipe",
+        "--wait",
+        "--collect",
+        "--quiet",
+        "--unit=text-fault-803141",
+        "-p",
+        "SystemCallFilter=~landlock_create_ruleset landlock_add_rule landlock_restrict_self",
+        "-p",
+        "SystemCallErrorNumber=EPERM",
+        "-p",
+        "UnsetEnvironment=DISPLAY WAYLAND_DISPLAY DBUS_SESSION_BUS_ADDRESS AT_SPI_BUS_ADDRESS",
+        "-p",
+        "RuntimeMaxSec=35",
+        "--setenv=XDG_RUNTIME_DIR=/home/patrick/work/ocr-final-1428/fault-run-357/confinement-refused/r",
+        "--setenv=TMPDIR=/home/patrick/work/ocr-final-1428/fault-run-357/confinement-refused/t",
+        "--setenv=QT_QPA_PLATFORM=offscreen",
+        "/home/patrick/work/ocr-final-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/confinement-refused/child.py",
+        "--data",
+        "/usr/share/tesseract-ocr/5/tessdata",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-final/limit-24mp.png"
+      ],
+      "method": "landlock",
+      "child": {
+        "pid": 803202,
+        "parentPid": 803200,
+        "startTicks": "198626010"
+      },
+      "parent": {
+        "pid": 803200,
+        "startTicks": "198625964",
+        "state": "S",
+        "cpuTicks": 44
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 803202,
+          "startTicks": "198626010",
+          "state": "R",
+          "cpuTicks": 2
+        }
+      ],
+      "parentExit": 1,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": "helper_sandbox_unavailable",
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    },
+    {
+      "case": "parent-killed",
+      "status": "measured",
+      "allowedParentErrors": [],
+      "socketBytes": {
+        "/home/patrick/work/ocr-final-1428/fault-run-357/parent-killed/r/putgd/session.sock": 82,
+        "/home/patrick/work/ocr-final-1428/fault-run-357/parent-killed/r/bus": 67
+      },
+      "command": [
+        "/home/patrick/work/ocr-final-1428/test_ocr_run",
+        "--helper",
+        "/home/patrick/work/ocr-final-1428/fault-run-357/parent-killed/child.py",
+        "--data",
+        "/usr/share/tesseract-ocr/5/tessdata",
+        "--required",
+        "--lang",
+        "eng",
+        "/home/patrick/work/ocr-corpus-1428/synthetic-final/limit-24mp.png"
+      ],
+      "method": "parent",
+      "child": {
+        "pid": 803210,
+        "parentPid": 803209,
+        "startTicks": "198626189"
+      },
+      "parent": {
+        "pid": 803209,
+        "startTicks": "198626145",
+        "state": "S",
+        "cpuTicks": 43
+      },
+      "threadsBeforeExec": [
+        {
+          "pid": 803210,
+          "startTicks": "198626189",
+          "state": "S",
+          "cpuTicks": 2
+        }
+      ],
+      "atInjection": {
+        "pid": 803210,
+        "startTicks": "198626189",
+        "state": "R",
+        "cpuTicks": 25
+      },
+      "threadsAtInjection": [
+        {
+          "pid": 803210,
+          "startTicks": "198626189",
+          "state": "R",
+          "cpuTicks": 25
+        }
+      ],
+      "parentExit": -9,
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parentError": null,
+      "pidfdExitObserved": true,
+      "childAndThreadsGone": true,
+      "residue": {
+        "changed": [],
+        "matches": [],
+        "unreadable": []
+      }
+    }
+  ],
+  "limits": [
+    "SIGTERM tests external termination; cooperative TextJob Cancel needs a driver cancel handle.",
+    "Every new/changed regular file under /tmp and private runtime/temp requires human review, even if it has no image header or exact canary match. This also catches unknown pixel/text encodings."
+  ],
+  "identities": {
+    "/home/patrick/work/ocr-final-1428/test_ocr_run": "fb2cf5ca5ad82d8cc8a2b217f8a598a735310d5f29a33d6705aa871d4b446703",
+    "/home/patrick/work/ocr-final-1428/ubuntu24-candidate/usr/bin/putgd-ocr": "f43f9289d36e0a8ed53219b4560a536ba5ab1732d848e59751a625c75546eba0",
+    "/home/patrick/work/ocr-final-1428/test_text_job_fixture": "95020bf1dd96dc7def041d8b99dfc5de190bf7e1cd47db6f021755a1b0fdf7e4",
+    "/home/patrick/work/ocr-corpus-1428/synthetic-final/limit-24mp.png": "d7536fe72c061b0001fb154fc82415b849d5d31b4938aa747e468605f48a9826",
+    "/home/patrick/work/ocr-final-1428/fault-canary.txt": "603646f685be9bb572b475d3555320501546ea84b189ab1ef4696f45e3d97a07",
+    "/usr/share/tesseract-ocr/5/tessdata/eng.traineddata": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2"
+  }
+}
