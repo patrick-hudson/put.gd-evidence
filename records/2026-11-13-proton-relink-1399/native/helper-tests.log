@@ -1,0 +1,144 @@
+bun test v1.4.4-canary.1 (38afee6c8)
+
+protocol.test.ts:
+(pass) single bounded JSON and strict UTF-8, provider and keychain references [0.62ms]
+(pass) optional folder display name survives receipts without changing folder identity [0.51ms]
+(pass) raw passwords accepted only by storeSharePassword [0.18ms]
+(pass) upload receipt uses exact completion identities and opaque checksum [0.10ms]
+(pass) ownership requires exact identity, revision and encrypted publication marker [0.11ms]
+(pass) decrypted SDK markers without verified name/revision signatures are unknown [0.05ms]
+(pass) fresh ownership failure after sharing suppresses every URL without rollback [0.11ms]
+(pass) reconnect preserves existing credentials and requires new reference for replacement [0.02ms]
+(pass) only active unexpired SDK URL access is usable [0.08ms]
+(pass) the confirmed link expiry is returned, including after it passes (#253) [0.11ms]
+(pass) sanitized errors never copy provider exception text [0.08ms]
+(pass) extended request budgets are bounded independently from accepted receipt identity [0.15ms]
+(pass) upload retries keep a publication-specific client identity without persisting authentication [0.24ms]
+
+runtime.test.ts:
+(pass) account response hooks synchronize crypto server time using official header precedence [100.88ms]
+(pass) inspect accepts a matching configured account before any folder is selected [0.77ms]
+(pass) first folder creation accepts matching configured account with empty folder UID [0.16ms]
+(pass) wrong configured account rejects inspection and creation before either SDK action [0.13ms]
+(pass) another account under the configured root rejects file operations whatever the batch returned [0.61ms]
+(pass) the folder and a further node are read from the service in one batch, past the request cache [0.31ms]
+(pass) a folder the service no longer returns, or one outside My files, is an unavailable destination [0.17ms]
+(pass) file operations still require a selected folder [0.07ms]
+(pass) failed node lookup remains unknown when destination UID listing contains the target [0.41ms]
+(pass) failed node lookup is missing only after a complete destination UID list excludes it [0.09ms]
+(pass) failed or incomplete destination UID listing cannot establish absence [0.14ms]
+(pass) name preflight uses SDK hashed availability without listing unrelated folder contents [0.46ms]
+(pass) failed name availability is inconclusive rather than permission-as-absence [0.19ms]
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+{"event":"progress","phase":"uploading","bytesTransferred":65536}
+(pass) production upload wires the SDK progress callback and confirms publication only through completion [9.00ms]
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+(pass) unfinished upload collision remains distinguishable without overriding another client draft [1.45ms]
+(pass) name and ownership failures retain safe service recovery codes [0.66ms]
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"preparing"}
+(pass) quota and rate limiting after upload dispatch retain uncertainty and recovery guidance [2.09ms]
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+{"event":"progress","phase":"preparing"}
+(pass) a plan or quota refusal settles as failed only when the name is still free afterwards [4.36ms]
+(pass) changed revision blocks sharing before mutation and suppresses a raced link after mutation [1.15ms]
+(pass) sharing failures and denied postchecks retain unknown outcomes without exposing an old link [0.69ms]
+(pass) sharing preserves protection options and expired inspection never creates a replacement link [0.32ms]
+(pass) a file over the plan limit is not reported as a full drive [0.05ms]
+(pass) service classification accepts typed account errors and never trusts raw exception properties [0.12ms]
+(pass) official account refresh handles expired access, revoked refresh and refresh rate limiting [3.25ms]
+(pass) revoked refresh cleared by account foundation still reports reconnect guidance [0.51ms]
+(pass) pinned SDK honors Retry-After before recovery and cancellation stops repeated 429 requests [3006.33ms]
+(pass) a refused keychain session write reports keychain_unavailable without provider detail (#252) [363.13ms]
+(pass) a session shares only good My files and root share answers between its clients [1.74ms]
+(pass) a prepared link answers the SDK for exactly the password and salt it hashed, once [0.68ms]
+(pass) a prepared link is not used once its modulus is old, and a failed preparation is made again in line [0.23ms]
+(pass) the share session key is wrapped ahead for the prepared password only, and only that wrap is reused [1.56ms]
+(pass) the OpenPGP module reports session keys and asks for the wrap made ahead [1.65ms]
+(pass) the pinned SDK draws a link password where the helper takes it over [0.82ms]
+(pass) a link preparation ended before it began, or before its password was drawn, leaves nothing [222.17ms]
+(pass) transfers and share creation are reported to their listeners, and nothing else is [0.54ms]
+(pass) only a Proton storage host is named as a transfer host or accepted as a hint [0.07ms]
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+(pass) an upload a link follows prepares that link once, when its bytes go out [5.03ms]
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+(pass) a block upload names its storage host, and opens a hinted one before its bytes are ready [47.94ms]
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+(pass) a failed upload ends its link preparation [1.15ms]
+(pass) a link prepared ahead reads no modulus of its own, and its preparation ends with the request [0.38ms]
+(pass) a token refresh keeps the user data load of the same session, and of no other [0.64ms]
+(pass) the first read is sent on every candidate, and the connection that answers first carries the rest [105.05ms]
+(pass) requests to other origins and a first request that is not a read go to the ordinary client [15.03ms]
+(pass) an expired token still chooses a connection, and later answers are returned as the service gave them [21.77ms]
+(pass) the ordinary client takes over for good when no candidate connects, answers in time or answers as the API does [192.88ms]
+(pass) a failed request retires the kept connection, and is sent again only when that is safe [145.12ms]
+(pass) a first connection that is not on a fast backend is replaced by one that is [1860.50ms]
+(pass) a cancelled request ends its stream and rejects as the ordinary client would [635.41ms]
+(pass) a read cancelled while the choice is under way keeps no connection [102.23ms]
+(pass) a change the service says it never acted on is sent again on the ordinary client [1.91ms]
+(pass) a connection is not replaced once the caller is about to change something [1362.96ms]
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+{"event":"progress","phase":"preparing"}
+{"event":"progress","phase":"uploading"}
+(pass) a file this process just uploaded is read again before an incomplete read of it is believed [1211.04ms]
+(pass) a keychain exchange the service refused is made again before the refusal is believed (#1418) [490.86ms]
+(pass) the first process to find no session says so once, and the one started after it believes what it finds (#1418) [0.21ms]
+
+crypto-cache.test.ts:
+(pass) request crypto cache retains keys until explicit invalidation [0.30ms]
+(pass) request crypto cache never crosses request instances [0.06ms]
+(pass) request crypto cache evicts least recently used entries at its fixed bound [0.54ms]
+(pass) request crypto cache replacement, tagged enumeration and clearing preserve SDK semantics [0.35ms]
+(pass) a fresh read is never answered from the cache, and what it stored answers afterwards [0.33ms]
+
+progress.test.ts:
+(pass) progress coalesces synchronous SDK bursts, preserves retry rollback and has no guessed total [8.81ms]
+(pass) slow stdout has one in-flight write and one replaceable report, then drains before completion [6.64ms]
+(pass) invalid counters are ignored and failed writes are surfaced without an unhandled promise [0.39ms]
+(pass) scheduled progress reaches the reader while the reporter remains open [0.42ms]
+(pass) an open blocked write reschedules the latest counter without overlapping writes [0.30ms]
+
+ 77 pass
+ 0 fail
+ 575 expect() calls
+Ran 77 tests across 4 files. [10.03s]

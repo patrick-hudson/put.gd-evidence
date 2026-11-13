@@ -1,0 +1,168 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.5, pytest-8.3.5, pluggy-1.5.0
+rootdir: /home/patrick/work/w7-1399/src4
+plugins: anyio-4.8.0
+collected 436 items
+
+tests/desktop/test_surface_a11y_bounds.py ....                           [  0%]
+tests/desktop/test_surface_appimage.py ....                              [  1%]
+tests/desktop/test_surface_clear_screen.py ....                          [  2%]
+tests/desktop/test_surface_clipboard.py .....                            [  3%]
+tests/desktop/test_surface_consent.py ...........                        [  6%]
+tests/desktop/test_surface_critical.py FFFF..                            [  7%]
+tests/desktop/test_surface_driver.py ................................... [ 15%]
+..................                                                       [ 19%]
+tests/desktop/test_surface_driver_collection.py .....                    [ 21%]
+tests/desktop/test_surface_driver_desktop.py ................            [ 24%]
+tests/desktop/test_surface_driver_geometry.py .......................    [ 30%]
+tests/desktop/test_surface_fixtures.py ...........                       [ 32%]
+tests/desktop/test_surface_hardening.py ...........                      [ 35%]
+tests/desktop/test_surface_input_guards.py ................              [ 38%]
+tests/desktop/test_surface_live_evidence.py ............................ [ 45%]
+............                                                             [ 47%]
+tests/desktop/test_surface_nightly_desktops.py ......................... [ 53%]
+...FF.....................                                               [ 59%]
+tests/desktop/test_surface_observation_privacy.py ...........            [ 62%]
+tests/desktop/test_surface_outcomes_live.py ........................     [ 67%]
+tests/desktop/test_surface_plasma.py .........                           [ 69%]
+tests/desktop/test_surface_qmp.py .                                      [ 69%]
+tests/desktop/test_surface_recipes_history.py ..............             [ 73%]
+tests/desktop/test_surface_recipes_links.py .............                [ 76%]
+tests/desktop/test_surface_recipes_outcomes.py ......................... [ 81%]
+........                                                                 [ 83%]
+tests/desktop/test_surface_redact.py .............                       [ 86%]
+tests/desktop/test_surface_shell_health.py .......                       [ 88%]
+tests/desktop/test_surface_tier1_blockers.py ...............             [ 91%]
+tests/desktop/test_review_adversarial.py ............................... [ 98%]
+.....                                                                    [100%]
+
+=================================== FAILURES ===================================
+____________________ AimedRelease.test_click_release_guest _____________________
+
+self = <test_surface_critical.AimedRelease testMethod=test_click_release_guest>
+
+    def test_click_release_guest(self):
+>       self.sweep(lambda ctx: ctx._pointer_click(5, 5, 'left', 0, guarded=True))
+
+tests/desktop/test_surface_critical.py:135: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/desktop/test_surface_critical.py:110: in sweep
+    while time.perf_counter() < deadline_end:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+_signum = 14
+_frame = <frame at 0x7f42dd1ebec0, file '/home/patrick/work/w7-1399/src4/tests/desktop/test_surface_critical.py', line 110, code sweep>
+
+    def deadline(_signum, _frame):
+>       raise RecipeFailed('recipe deadline exceeded: sweep')
+E       tools.lab.surface_driver.api.RecipeFailed: recipe deadline exceeded: sweep
+
+tests/desktop/test_surface_critical.py:22: RecipeFailed
+___________________ AimedRelease.test_click_release_physical ___________________
+
+self = <test_surface_critical.AimedRelease testMethod=test_click_release_physical>
+
+    def test_click_release_physical(self):
+>       self.sweep(lambda ctx: ctx._pointer_click(5, 5, 'left', 0, guarded=True), physical=True)
+
+tests/desktop/test_surface_critical.py:132: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/desktop/test_surface_critical.py:110: in sweep
+    while time.perf_counter() < deadline_end:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+_signum = 14
+_frame = <frame at 0x7f42dc2e3c40, file '/home/patrick/work/w7-1399/src4/tests/desktop/test_surface_critical.py', line 110, code sweep>
+
+    def deadline(_signum, _frame):
+>       raise RecipeFailed('recipe deadline exceeded: sweep')
+E       tools.lab.surface_driver.api.RecipeFailed: recipe deadline exceeded: sweep
+
+tests/desktop/test_surface_critical.py:22: RecipeFailed
+________________________ AimedRelease.test_drag_release ________________________
+
+self = <test_surface_critical.AimedRelease testMethod=test_drag_release>
+
+    def test_drag_release(self):
+        def drag(ctx):
+            ctx.drag((10, 10), (90, 90), steps=1)
+>       self.sweep(drag, arm_on='move')
+
+tests/desktop/test_surface_critical.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/desktop/test_surface_critical.py:110: in sweep
+    while time.perf_counter() < deadline_end:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+_signum = 14
+_frame = <frame at 0x7f42dd1ebec0, file '/home/patrick/work/w7-1399/src4/tests/desktop/test_surface_critical.py', line 110, code sweep>
+
+    def deadline(_signum, _frame):
+>       raise RecipeFailed('recipe deadline exceeded: sweep')
+E       tools.lab.surface_driver.api.RecipeFailed: recipe deadline exceeded: sweep
+
+tests/desktop/test_surface_critical.py:22: RecipeFailed
+______________________ AimedRelease.test_held_key_release ______________________
+
+self = <test_surface_critical.AimedRelease testMethod=test_held_key_release>
+
+    def test_held_key_release(self):
+        def held(ctx):
+            with ctx.held_keys('Shift'):
+                signal.setitimer(signal.ITIMER_REAL, ctx.target.offset)
+>       self.sweep(held, arm_on=None)
+
+tests/desktop/test_surface_critical.py:146: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/desktop/test_surface_critical.py:110: in sweep
+    while time.perf_counter() < deadline_end:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+_signum = 14
+_frame = <frame at 0x7f42dd08da80, file '/home/patrick/work/w7-1399/src4/tests/desktop/test_surface_critical.py', line 110, code sweep>
+
+    def deadline(_signum, _frame):
+>       raise RecipeFailed('recipe deadline exceeded: sweep')
+E       tools.lab.surface_driver.api.RecipeFailed: recipe deadline exceeded: sweep
+
+tests/desktop/test_surface_critical.py:22: RecipeFailed
+_____ NightlyTests.test_lost_session_stops_the_row_with_the_first_failure ______
+
+self = <test_surface_nightly_desktops.NightlyTests testMethod=test_lost_session_stops_the_row_with_the_first_failure>
+
+    def test_lost_session_stops_the_row_with_the_first_failure(self):
+        record, cells, retire, slot = self.lost_session_row(['resident quit transport unavailable; private session retained'])
+>       self.assertEqual(cells, ['idle_memory-1'])
+E       AssertionError: Lists differ: [] != ['idle_memory-1']
+E       
+E       Second list contains 1 additional elements.
+E       First extra element 0:
+E       'idle_memory-1'
+E       
+E       - []
+E       + ['idle_memory-1']
+
+tests/desktop/test_surface_nightly_desktops.py:450: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"desktop": "Test", "green": 0, "total": 12}
+_ NightlyTests.test_lost_session_that_also_left_unsafe_cleanup_stays_retained __
+
+self = <test_surface_nightly_desktops.NightlyTests testMethod=test_lost_session_that_also_left_unsafe_cleanup_stays_retained>
+
+    def test_lost_session_that_also_left_unsafe_cleanup_stays_retained(self):
+        record, cells, retire, slot = self.lost_session_row(['resident quit transport unavailable; private session retained',
+                                                             'previous clipboard restoration unavailable; private session retained'])
+>       self.assertEqual(len(cells), 1)
+E       AssertionError: 0 != 1
+
+tests/desktop/test_surface_nightly_desktops.py:465: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"desktop": "Test", "green": 0, "total": 12}
+=========================== short test summary info ============================
+FAILED tests/desktop/test_surface_critical.py::AimedRelease::test_click_release_guest
+FAILED tests/desktop/test_surface_critical.py::AimedRelease::test_click_release_physical
+FAILED tests/desktop/test_surface_critical.py::AimedRelease::test_drag_release
+FAILED tests/desktop/test_surface_critical.py::AimedRelease::test_held_key_release
+FAILED tests/desktop/test_surface_nightly_desktops.py::NightlyTests::test_lost_session_stops_the_row_with_the_first_failure
+FAILED tests/desktop/test_surface_nightly_desktops.py::NightlyTests::test_lost_session_that_also_left_unsafe_cleanup_stays_retained
+======================== 6 failed, 430 passed in 28.58s ========================
