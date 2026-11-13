@@ -1,0 +1,64 @@
+● w0vncserver.service - Share the KDE Wayland desktop over VNC
+     Loaded: loaded (/home/patrick/.config/systemd/user/w0vncserver.service; enabled; preset: enabled)
+    Drop-In: /home/patrick/.config/systemd/user/w0vncserver.service.d
+             └─localhost.conf
+     Active: active (running) since Fri 2026-11-13 09:36:30 CST; 19s ago
+ Invocation: db42593e3da94adf81819b916378a8c4
+       Docs: https://tigervnc.org/doc/w0vncserver.html
+   Main PID: 122524 (w0vncserver)
+      Tasks: 4 (limit: 38191)
+     Memory: 3.9M (peak: 4.2M)
+        CPU: 30ms
+     CGroup: /user.slice/user-1000.slice/user@1000.service/app.slice/w0vncserver.service
+             └─122524 /usr/local/bin/w0vncserver -SecurityTypes=None -AlwaysShared -QueryConnect=0 -RememberDisplayChoice=Always -rfbport=5900 -interface=127.0.0.1 -localhost -UseIPv6=0
+
+Nov 13 09:36:34 debian w0vncserver[122524]: Fri Nov 13 09:36:34 2026
+Nov 13 09:36:34 debian w0vncserver[122524]:  Connections: Accepted: 127.0.0.1::43370
+Nov 13 09:36:34 debian w0vncserver[122524]:  SConnection: Client needs protocol version 3.8
+Nov 13 09:36:34 debian w0vncserver[122524]:  SConnection: Client requests security type None(1)
+Nov 13 09:36:40 debian w0vncserver[122524]: Fri Nov 13 09:36:40 2026
+Nov 13 09:36:40 debian w0vncserver[122524]:  VNCSConnST:  Closing 127.0.0.1::43336: Failed to start remote desktop session
+Nov 13 09:36:40 debian w0vncserver[122524]:  EncodeManager: Framebuffer updates: 0
+Nov 13 09:36:40 debian w0vncserver[122524]:  EncodeManager:   Total: 0 rects, 0 pixels
+Nov 13 09:36:40 debian w0vncserver[122524]:  EncodeManager:          0 B (1:-nan ratio)
+Nov 13 09:36:40 debian w0vncserver[122524]:  Connections: Closed: 127.0.0.1::43336
+Nov 13 09:36:40 debian w0vncserver[122524]:  Connections: Accepted: 127.0.0.1::49566
+Nov 13 09:36:40 debian w0vncserver[122524]:  SConnection: Client needs protocol version 3.8
+Nov 13 09:36:40 debian w0vncserver[122524]:  SConnection: Client requests security type None(1)
+Nov 13 09:36:44 debian w0vncserver[122524]: Fri Nov 13 09:36:44 2026
+Nov 13 09:36:44 debian w0vncserver[122524]:  VNCSConnST:  Closing 127.0.0.1::43370: SConnection::processMsg: Bogus data
+Nov 13 09:36:44 debian w0vncserver[122524]:               from client while waiting for desktop
+Nov 13 09:36:44 debian w0vncserver[122524]:  EncodeManager: Framebuffer updates: 0
+Nov 13 09:36:44 debian w0vncserver[122524]:  EncodeManager:   Total: 0 rects, 0 pixels
+Nov 13 09:36:44 debian w0vncserver[122524]:  EncodeManager:          0 B (1:-nan ratio)
+Nov 13 09:36:44 debian w0vncserver[122524]:  Connections: Closed: 127.0.0.1::43370
+Nov 13 09:36:30 debian w0vncserver[122524]:  SConnection: Client requests security type None(1)
+Nov 13 09:36:30 debian w0vncserver[122524]:  RemoteDesktop: Failed to create session
+Nov 13 09:36:32 debian w0vncserver[122524]: Fri Nov 13 09:36:32 2026
+Nov 13 09:36:32 debian w0vncserver[122524]:  Connections: Accepted: 127.0.0.1::43350
+Nov 13 09:36:32 debian w0vncserver[122524]:  SConnection: Client needs protocol version 3.8
+Nov 13 09:36:32 debian w0vncserver[122524]:  SConnection: Client requests security type None(1)
+Nov 13 09:36:33 debian w0vncserver[122524]: Fri Nov 13 09:36:33 2026
+Nov 13 09:36:33 debian w0vncserver[122524]:  Connections: Accepted: 127.0.0.1::43362
+Nov 13 09:36:33 debian w0vncserver[122524]:  SConnection: Client needs protocol version 3.8
+Nov 13 09:36:33 debian w0vncserver[122524]:  SConnection: Client requests security type None(1)
+Nov 13 09:36:34 debian w0vncserver[122524]: Fri Nov 13 09:36:34 2026
+Nov 13 09:36:34 debian w0vncserver[122524]:  Connections: Accepted: 127.0.0.1::43370
+Nov 13 09:36:34 debian w0vncserver[122524]:  SConnection: Client needs protocol version 3.8
+Nov 13 09:36:34 debian w0vncserver[122524]:  SConnection: Client requests security type None(1)
+Nov 13 09:36:40 debian w0vncserver[122524]: Fri Nov 13 09:36:40 2026
+Nov 13 09:36:40 debian w0vncserver[122524]:  VNCSConnST:  Closing 127.0.0.1::43336: Failed to start remote desktop session
+Nov 13 09:36:40 debian w0vncserver[122524]:  EncodeManager: Framebuffer updates: 0
+Nov 13 09:36:40 debian w0vncserver[122524]:  EncodeManager:   Total: 0 rects, 0 pixels
+Nov 13 09:36:40 debian w0vncserver[122524]:  EncodeManager:          0 B (1:-nan ratio)
+Nov 13 09:36:40 debian w0vncserver[122524]:  Connections: Closed: 127.0.0.1::43336
+Nov 13 09:36:40 debian w0vncserver[122524]:  Connections: Accepted: 127.0.0.1::49566
+Nov 13 09:36:40 debian w0vncserver[122524]:  SConnection: Client needs protocol version 3.8
+Nov 13 09:36:40 debian w0vncserver[122524]:  SConnection: Client requests security type None(1)
+Nov 13 09:36:44 debian w0vncserver[122524]: Fri Nov 13 09:36:44 2026
+Nov 13 09:36:44 debian w0vncserver[122524]:  VNCSConnST:  Closing 127.0.0.1::43370: SConnection::processMsg: Bogus data
+Nov 13 09:36:44 debian w0vncserver[122524]:               from client while waiting for desktop
+Nov 13 09:36:44 debian w0vncserver[122524]:  EncodeManager: Framebuffer updates: 0
+Nov 13 09:36:44 debian w0vncserver[122524]:  EncodeManager:   Total: 0 rects, 0 pixels
+Nov 13 09:36:44 debian w0vncserver[122524]:  EncodeManager:          0 B (1:-nan ratio)
+Nov 13 09:36:44 debian w0vncserver[122524]:  Connections: Closed: 127.0.0.1::43370

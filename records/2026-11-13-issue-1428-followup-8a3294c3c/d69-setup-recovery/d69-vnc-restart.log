@@ -1,0 +1,21 @@
+○ w0vncserver.service - Share the KDE Wayland desktop over VNC
+     Loaded: loaded (/home/patrick/.config/systemd/user/w0vncserver.service; enabled; preset: enabled)
+    Drop-In: /home/patrick/.config/systemd/user/w0vncserver.service.d
+             └─localhost.conf
+     Active: inactive (dead) since Fri 2026-11-13 09:35:50 CST; 39s ago
+   Duration: 1d 10h 3min 28.428s
+ Invocation: 8e37df5c2c8a4484a1316659d25c9e82
+       Docs: https://tigervnc.org/doc/w0vncserver.html
+    Process: 3928251 ExecStart=/usr/local/bin/w0vncserver -SecurityTypes=None -AlwaysShared -QueryConnect=0 -RememberDisplayChoice=Always -rfbport=5900 -interface=127.0.0.1 -localhost -UseIPv6=0 (code=exited, status=0/SUCCESS)
+   Main PID: 3928251 (code=exited, status=0/SUCCESS)
+   Mem peak: 57.1M
+        CPU: 29min 17.700s
+
+Nov 13 09:35:47 debian w0vncserver[3928251]:  EncodeManager:                  50.9842 MiB (1:14.4817 ratio)
+Nov 13 09:35:47 debian w0vncserver[3928251]:  EncodeManager:   Total: 157.261 krects, 323.679 Mpixels
+Nov 13 09:35:47 debian w0vncserver[3928251]:  EncodeManager:          65.3698 MiB (1:18.916 ratio)
+Nov 13 09:35:47 debian w0vncserver[3928251]:  Connections: Closed: 127.0.0.1::53864
+Nov 13 09:35:50 debian w0vncserver[3928251]: Fri Nov 13 09:35:50 2026
+Nov 13 09:35:50 debian w0vncserver[3928251]:  PortalProxy: call(): error calling Close: Timeout was reached
+Nov 13 09:35:50 debian systemd[937]: Stopped w0vncserver.service - Share the KDE Wayland desktop over VNC.
+Nov 13 09:35:50 debian systemd[937]: w0vncserver.service: Consumed 29min 17.700s CPU time, 57.1M memory peak.
