@@ -1,0 +1,9 @@
+from pathlib import Path
+import subprocess,json,os,hashlib,re,time
+r=Path.home()/'work/ocr-corpus-1428';w=r/'candidate-limit-checks';w.mkdir(mode=0o700);f=r/'synthetic-codepoints';rows=[]
+for name in ['limit-24mp','limit-over','limit-wide','limit-no-gap','limit-columns']:
+ image=f/(name+'.png');cmd=[str(r/'test_ocr_run'),'--helper',str(r/'debian-candidate/usr/bin/putgd-ocr'),'--data','/usr/share/tesseract-ocr/5/tessdata','--text',str(image)];start=time.monotonic();p=subprocess.run(cmd,capture_output=True,text=True,timeout=40);row={'image':name,'imageSha256':hashlib.sha256(image.read_bytes()).hexdigest(),'exit':p.returncode,'elapsedMs':(time.monotonic()-start)*1000,'stderrBytes':len(p.stderr),'status':'not_run'}
+ try:
+  v=json.loads(p.stdout.splitlines()[-1]);text=v.pop('text','');row.update(status='measured',result=v,text_codepoints=list(map(ord,text)));truth=json.loads(image.with_suffix('.truth.json').read_text());expected=[x.get('text',''.join(map(chr,x.get('text_codepoints',[])))) for x in truth.get('words',[])];ids=re.findall(r'Row\s+(\d+)\s+column\s+(\d+)',text);want=re.findall(r'Row\s+(\d+)\s+column\s+(\d+)','\n'.join(expected));row.update(expectedRowColumnPairs=len(want),exactRecognizedRowColumnPairs=len(ids),duplicateRecognizedPairs=len(ids)-len(set(ids)),missingPairs=len(set(want)-set(ids)),unexpectedPairs=len(set(ids)-set(want)));row['assessment']='Raw order and row/column identity observations; no seam pass inferred from successful completion or truncated output.'
+ except Exception as e:row['reason']=type(e).__name__
+ rows.append(row);(w/'receipt.json').write_text(json.dumps({'candidate':'fe838a9502167672f3512e27c32c74cfcf6c84d1','scope':'real Debian package helper via real parent, offline fixed inputs','rows':rows},indent=2));print(name,row['status'],row.get('result'),flush=True)

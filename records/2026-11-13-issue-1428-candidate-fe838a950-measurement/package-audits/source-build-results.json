@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "passed": true,
+  "archive": {
+    "bytes": 24478308,
+    "file": "putgd-26.1113.4836-dev+gfe838a950216-source.tar.gz",
+    "sha256": "b3396764cbf2410e01a41240950abbd03bfca47dae3c11d20dc6b79afce6fc7e"
+  },
+  "commands": [
+    [
+      "/usr/bin/python3",
+      "tools/proton/provision_runtime.py",
+      "--source",
+      "/__w/put.gd-desktop/put.gd-desktop/build/dependencies/proton-runtime/sdk-source",
+      "--crypto-source",
+      "/__w/put.gd-desktop/put.gd-desktop/build/dependencies/proton-runtime/crypto-source",
+      "--offline"
+    ],
+    [
+      "cmake",
+      "--preset",
+      "release",
+      "-DPUTGD_OCR=ON",
+      "-DBUILD_TESTING=OFF",
+      "-DPUTGD_LAB_FIXTURE=OFF",
+      "-DPUTGD_PHYSICAL_BENCHMARKS=OFF",
+      "-DCMAKE_PREFIX_PATH=/__w/put.gd-desktop/put.gd-desktop/build/sdk",
+      "-DPUTGD_AWS_SOURCE_DIR=/__w/put.gd-desktop/put.gd-desktop/build/dependencies/aws-sdk-cpp",
+      "-DPUTGD_AWS_RUNTIME_DIR=/__w/put.gd-desktop/put.gd-desktop/build/sdk/lib",
+      "-DPUTGD_SOURCE_COMMIT=fe838a9502167672f3512e27c32c74cfcf6c84d1",
+      "-DPUTGD_SOURCE_TREE=65b34b9fe6c0851102d79205703a921dd46db3ff",
+      "-DPUTGD_SOURCE_COMMIT_COUNT=4836",
+      "-DPUTGD_SOURCE_COMMIT_TIME=1794558840",
+      "-DPUTGD_BUNDLE_PROTON=ON"
+    ],
+    [
+      "cmake",
+      "--build",
+      "--preset",
+      "release",
+      "--parallel",
+      "4"
+    ]
+  ],
+  "rebuiltProton": {
+    "sha256": "d4bea9c8a1cdaffa6ae4efc7489bb6eb5c70720277950fe6999e6ba466b4555e",
+    "bundledSha256": "d4bea9c8a1cdaffa6ae4efc7489bb6eb5c70720277950fe6999e6ba466b4555e",
+    "manifestSha256": "81eddfc254501011e81ebd47b8b9392179bda0a221e2e66d57491a3b83b9424a"
+  },
+  "compiledBuild": {
+    "schemaVersion": 1,
+    "version": "26.1113.4836-dev+gfe838a950216",
+    "baseVersion": "26.1113.4836",
+    "packageVersion": "26.1113.4836~dev+gfe838a950216",
+    "gitCommit": "fe838a9502167672f3512e27c32c74cfcf6c84d1",
+    "gitTree": "65b34b9fe6c0851102d79205703a921dd46db3ff",
+    "commitCount": 4836,
+    "dirty": null,
+    "sourceProvenance": "supplied"
+  },
+  "identityMatchedPrograms": [
+    "putgd",
+    "putgd-cli",
+    "putgd-ui",
+    "putgd-capture",
+    "putgd-s3-worker",
+    "putgd-b2-worker",
+    "putgd-http-worker",
+    "putgd-ocr",
+    "putgd-region",
+    "putgd-record"
+  ],
+  "wallSeconds": 451.68088048000004
+}
