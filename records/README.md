@@ -9,6 +9,10 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-13-issue-1428-m74-corpus](2026-11-13-issue-1428-m74-corpus/README.md) | — | Issue 1428 Mint real-target corpus |
+| [2026-11-13-issue-1428-k72-corpus](2026-11-13-issue-1428-k72-corpus/README.md) | — | Issue 1428 Kubuntu real-target corpus |
+| [2026-11-13-issue-1428-f44-corpus](2026-11-13-issue-1428-f44-corpus/README.md) | — | Issue 1428 Fedora GNOME real-target corpus |
+| [2026-11-13-issue-1428-d69-corpus](2026-11-13-issue-1428-d69-corpus/README.md) | — | Issue 1428 Debian real-target corpus |
 | [2026-11-13-issue-1428-copy-text-real-helper-m74](2026-11-13-issue-1428-copy-text-real-helper-m74/README.md) | — | Issue 1428: Copy text from the hotkey, the tray entry and the window button with the real helper, m74 |
 | [2026-11-13-issue-1428-packaging-bcb868f9a](2026-11-13-issue-1428-packaging-bcb868f9a/README.md) | — | Issue 1428 packaging: integration build and package receipts |
 | [2026-11-13-issue-1428-checklist-preparation](2026-11-13-issue-1428-checklist-preparation/README.md) | — | Issue 1428 acceptance checklist preparation |
