@@ -1,0 +1,86 @@
+{
+  "candidate": "fe838a9502167672f3512e27c32c74cfcf6c84d1",
+  "rows": [
+    {
+      "case": "privacy-notifications",
+      "status": "met",
+      "notificationCalls": 1,
+      "canaryInNotifications": false,
+      "monitorExit": -15
+    },
+    {
+      "case": "privacy-canary-files",
+      "status": "not_run",
+      "reason": "invalid_query"
+    },
+    {
+      "case": "user-copy-during-recognition",
+      "status": "met",
+      "stateBeforeUserCopy": "recognizing",
+      "copyStatus": "suppressed"
+    },
+    {
+      "case": "copy-false",
+      "status": "met",
+      "copyStatus": "not_requested"
+    },
+    {
+      "case": "multi-line-unicode",
+      "status": "met",
+      "exactPaste": true,
+      "characterCount": 66,
+      "textSha256": "1569f0cda5716aa413c86d56186dcd9b75638b90d822accbefb8adbd061d7b50",
+      "codes": 0
+    },
+    {
+      "case": "PRIMARY-untouched",
+      "status": "met"
+    },
+    {
+      "case": "cooperative-text-cancel",
+      "status": "met",
+      "state": "cancelled",
+      "operationId": "0113c7e1-ff87-4c51-bd55-2e82ee601fcd",
+      "helpers": [
+        {
+          "pid": 720544,
+          "startTicks": "196575178"
+        }
+      ],
+      "helpersAndThreadsGone": true
+    },
+    {
+      "case": "editor-privacy",
+      "status": "not_run",
+      "reason": "editor_starting"
+    },
+    {
+      "case": "pending-upload-link",
+      "status": "met",
+      "recognitionCopyStatus": "copied",
+      "uploadCopyStatus": "suppressed"
+    },
+    {
+      "case": "upload-and-show-qr",
+      "status": "not_run",
+      "reason": "KeyError"
+    },
+    {
+      "case": "paste-after-resident-quits",
+      "status": "met",
+      "nonemptyBytes": 68,
+      "independentPasteBefore": true,
+      "independentPasteAfter": true
+    },
+    {
+      "case": "paste-after-AppImage-unmount",
+      "status": "met",
+      "independentPasteBefore": true,
+      "independentPasteAfter": true,
+      "mountGone": true,
+      "PRIMARYUnchanged": true,
+      "textBytes": 67,
+      "textSha256": "b84230bdb846837107ff6503e6067b7d53c6bde9f7ec0c7906dd431ecab9fc93"
+    }
+  ]
+}

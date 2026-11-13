@@ -1,0 +1,663 @@
+{
+  "editor": {
+    "admissionPixels": 24000000,
+    "available": true,
+    "blurStyles": [
+      "blur",
+      "pixelate"
+    ],
+    "commands": [
+      "inspect",
+      "apply",
+      "preview",
+      "saveCopy",
+      "copy",
+      "fileDialog",
+      "view",
+      "submit",
+      "cancel",
+      "raise"
+    ],
+    "fileFormats": [
+      "png",
+      "jpeg"
+    ],
+    "open": false,
+    "output": "png",
+    "shapes": [
+      "redact",
+      "blur",
+      "arrow",
+      "rectangle",
+      "text",
+      "highlight",
+      "step",
+      "pen",
+      "ellipse",
+      "line"
+    ],
+    "sources": [
+      "region",
+      "window",
+      "desktop",
+      "clipboard",
+      "file",
+      "scroll"
+    ]
+  },
+  "providers": {
+    "backblaze-b2": {
+      "conditionalCreate": true,
+      "conditionalDelete": false,
+      "conditionalReplace": false,
+      "delete": true,
+      "deletionEffect": "Deletes exactly the uploaded B2 file version by its ID. put.gd never uploads over a visible file, so the name then shows nothing, or an older version that was hidden before the upload. Authorized links stop working when they expire.",
+      "maximumNameBytes": 1023,
+      "maximumObjectBytes": 10000000000000,
+      "privateUploads": false,
+      "referenceDelete": false,
+      "serverNamesObjects": false,
+      "sharing": false,
+      "stat": true,
+      "urls": true,
+      "versionAddressing": true
+    },
+    "custom-http": {
+      "conditionalCreate": false,
+      "conditionalDelete": false,
+      "conditionalReplace": false,
+      "delete": false,
+      "deletionEffect": "Asks the server to delete this upload through the deletion URL it returned with the link. What the server removes, and how soon the link stops working, is up to the server.",
+      "maximumNameBytes": 255,
+      "maximumObjectBytes": null,
+      "privateUploads": false,
+      "referenceDelete": true,
+      "serverNamesObjects": true,
+      "sharing": false,
+      "stat": false,
+      "urls": true,
+      "versionAddressing": false
+    },
+    "proton-drive": {
+      "conditionalCreate": true,
+      "conditionalDelete": false,
+      "conditionalReplace": false,
+      "delete": false,
+      "deletionEffect": "Safe remote deletion is unavailable: Proton does not expose an atomic revision-guarded file deletion. Revoke share links separately.",
+      "maximumNameBytes": 255,
+      "maximumObjectBytes": null,
+      "privateUploads": true,
+      "referenceDelete": false,
+      "serverNamesObjects": false,
+      "sharing": true,
+      "stat": true,
+      "urls": true,
+      "versionAddressing": false
+    },
+    "s3": {
+      "conditionalCreate": true,
+      "conditionalDelete": true,
+      "conditionalReplace": true,
+      "delete": true,
+      "deletionEffect": "Guarded origin removal; selected versions only; browser/CDN caches may retain bytes",
+      "maximumNameBytes": 1024,
+      "maximumObjectBytes": 5497558138880,
+      "privateUploads": false,
+      "referenceDelete": false,
+      "serverNamesObjects": false,
+      "sharing": false,
+      "stat": true,
+      "urls": true,
+      "versionAddressing": true
+    }
+  },
+  "recording": {
+    "acquisition": "x11",
+    "active": null,
+    "audio": {
+      "microphone": true,
+      "system": true
+    },
+    "available": true,
+    "clickHighlights": {
+      "available": true,
+      "drawnBy": "recorder",
+      "route": "x11-xinput2",
+      "targets": [
+        "monitor",
+        "desktop",
+        "region",
+        "window"
+      ]
+    },
+    "codecs": {
+      "mp4": [
+        "h264",
+        "h265"
+      ],
+      "webm": [
+        "vp9"
+      ]
+    },
+    "commands": [
+      "windows",
+      "microphones",
+      "prepare",
+      "start",
+      "pause",
+      "resume",
+      "stop",
+      "cancel",
+      "inspect",
+      "select",
+      "raise",
+      "overlay",
+      "audio",
+      "edit",
+      "preview",
+      "review",
+      "saveCopy",
+      "upload"
+    ],
+    "editCommands": [
+      "setTrim",
+      "resetTrim",
+      "addMask",
+      "updateMask",
+      "removeMask"
+    ],
+    "exportEncoders": {
+      "h264": [
+        "h264_vaapi",
+        "libx264"
+      ],
+      "h265": [
+        "libx265"
+      ],
+      "vp9": [
+        "libvpx-vp9"
+      ]
+    },
+    "ffmpeg": {
+      "avcodec": "60.31.102",
+      "avfilter": "9.12.100",
+      "avformat": "60.16.100",
+      "avutil": "58.29.100",
+      "encoderFailures": {
+        "h264_nvenc": "libcuda.so.1 is not installed",
+        "hevc_nvenc": "libcuda.so.1 is not installed",
+        "hevc_vaapi": "Function not implemented"
+      },
+      "encoders": {
+        "aac": true,
+        "gif": true,
+        "h264_nvenc": true,
+        "h264_vaapi": true,
+        "hevc_nvenc": true,
+        "hevc_vaapi": true,
+        "libopenh264": false,
+        "libopus": true,
+        "libvorbis": true,
+        "libvpx-vp9": true,
+        "libwebp_anim": true,
+        "libx264": true,
+        "libx265": true,
+        "vp9_vaapi": true
+      },
+      "filters": {
+        "asetpts": true,
+        "atrim": true,
+        "avgblur": true,
+        "crop": true,
+        "drawbox": true,
+        "format": true,
+        "fps": true,
+        "palettegen": true,
+        "paletteuse": true,
+        "scale": true,
+        "setpts": true,
+        "trim": true
+      },
+      "h264Decoder": {
+        "failure": null,
+        "name": "h264",
+        "usable": true
+      },
+      "muxers": {
+        "gif": true,
+        "matroska": true,
+        "mp4": true,
+        "webm": true,
+        "webp": true
+      }
+    },
+    "formats": [
+      "mp4",
+      "webm",
+      "gif",
+      "webp"
+    ],
+    "gstreamer": {
+      "audioSources": [
+        "pulsesrc",
+        "pipewiresrc"
+      ],
+      "available": true,
+      "elements": {
+        "aacparse": "1.24.2",
+        "appsink": "1.24.2",
+        "appsrc": "1.24.2",
+        "audioconvert": "1.24.2",
+        "audiomixer": "1.24.2",
+        "audioresample": "1.24.2",
+        "avenc_aac": "1.24.1",
+        "compositor": "1.24.2",
+        "fdkaacenc": null,
+        "h264parse": "1.24.2",
+        "identity": "1.24.2",
+        "matroskamux": "1.24.2",
+        "mp4mux": "1.24.2",
+        "openh264enc": "1.24.2",
+        "pipewiresrc": "1.0.5",
+        "pulsesrc": "1.24.2",
+        "vaapih264enc": "1.24.2",
+        "vah264enc": null,
+        "vah264lpenc": "1.24.2",
+        "videoconvert": "1.24.2",
+        "videocrop": "1.24.2",
+        "videorate": "1.24.2",
+        "videoscale": "1.24.2",
+        "voaacenc": "1.24.2",
+        "vp9enc": "1.24.2",
+        "webmmux": "1.24.2",
+        "webpenc": "1.24.2",
+        "x264enc": "1.24.1",
+        "x265enc": "1.24.2",
+        "ximagesrc": "1.24.2"
+      },
+      "encoderFailures": {},
+      "liveAacEncoders": [
+        "avenc_aac",
+        "voaacenc"
+      ],
+      "liveH264Encoders": [
+        "vah264lpenc",
+        "vaapih264enc",
+        "x264enc",
+        "openh264enc"
+      ],
+      "liveSources": [
+        "ximagesrc",
+        "pipewiresrc"
+      ],
+      "pluginDirectories": [
+        "/usr/lib/x86_64-linux-gnu/gstreamer-1.0"
+      ],
+      "usableH264Encoders": [
+        "vah264lpenc",
+        "vaapih264enc",
+        "x264enc",
+        "openh264enc"
+      ],
+      "version": "GStreamer 1.24.2",
+      "webpAnimated": true
+    },
+    "limits": {
+      "animationMaxEdge": 1280,
+      "animationMaxUs": 60000000,
+      "maxFileBytes": 1099511627776,
+      "maxMasks": 64
+    },
+    "liveCapture": {
+      "audio": true,
+      "encoder": true,
+      "source": true
+    },
+    "maskKinds": [
+      "blur",
+      "solid"
+    ],
+    "overlayExclusion": {},
+    "reason": null,
+    "schemaVersion": 1,
+    "session": "x11",
+    "states": [
+      "preparing",
+      "ready",
+      "starting",
+      "recording",
+      "paused",
+      "stopping",
+      "reviewing",
+      "exporting",
+      "submitted",
+      "cancelled",
+      "failed"
+    ],
+    "targets": [
+      "monitor",
+      "desktop",
+      "region",
+      "window"
+    ],
+    "timeUnit": "microseconds",
+    "windowAcquisition": "x11",
+    "windowList": false
+  },
+  "scroll": {
+    "available": true,
+    "frames": "ximagesrc",
+    "injector": "xtest",
+    "maxHeight": 30000,
+    "reason": null,
+    "selection": "helper"
+  },
+  "source": {
+    "adapter": "cinnamon-core-x11",
+    "capture": {
+      "desktop": {
+        "available": true,
+        "consent": "none",
+        "helper": {
+          "active": false,
+          "build": {
+            "baseVersion": "26.1113.4836",
+            "commitCount": 4836,
+            "dirty": false,
+            "gitCommit": "fe838a9502167672f3512e27c32c74cfcf6c84d1",
+            "gitTree": "65b34b9fe6c0851102d79205703a921dd46db3ff",
+            "packageVersion": "26.1113.4836~dev+gfe838a950216",
+            "schemaVersion": 1,
+            "sourceProvenance": "git",
+            "version": "26.1113.4836-dev+gfe838a950216"
+          },
+          "lastExit": {
+            "code": 0,
+            "generation": "1",
+            "processId": 726396,
+            "startTicks": "196693553",
+            "status": "normal"
+          },
+          "processId": 0
+        },
+        "mode": "visible-pixels"
+      },
+      "monitor": {
+        "available": true,
+        "consent": "none",
+        "helper": {
+          "active": false,
+          "build": {
+            "baseVersion": "26.1113.4836",
+            "commitCount": 4836,
+            "dirty": false,
+            "gitCommit": "fe838a9502167672f3512e27c32c74cfcf6c84d1",
+            "gitTree": "65b34b9fe6c0851102d79205703a921dd46db3ff",
+            "packageVersion": "26.1113.4836~dev+gfe838a950216",
+            "schemaVersion": 1,
+            "sourceProvenance": "git",
+            "version": "26.1113.4836-dev+gfe838a950216"
+          },
+          "lastExit": {
+            "code": 0,
+            "generation": "1",
+            "processId": 726396,
+            "startTicks": "196693553",
+            "status": "normal"
+          },
+          "processId": 0
+        },
+        "mode": "visible-pixels"
+      },
+      "region": {
+        "available": true,
+        "consent": "none",
+        "helper": {
+          "active": false,
+          "build": {
+            "baseVersion": "26.1113.4836",
+            "commitCount": 4836,
+            "dirty": false,
+            "gitCommit": "fe838a9502167672f3512e27c32c74cfcf6c84d1",
+            "gitTree": "65b34b9fe6c0851102d79205703a921dd46db3ff",
+            "packageVersion": "26.1113.4836~dev+gfe838a950216",
+            "schemaVersion": 1,
+            "sourceProvenance": "git",
+            "version": "26.1113.4836-dev+gfe838a950216"
+          },
+          "lastExit": {
+            "code": 0,
+            "generation": "1",
+            "processId": 726396,
+            "startTicks": "196693553",
+            "status": "normal"
+          },
+          "processId": 0
+        },
+        "mode": "visible-pixels"
+      },
+      "repeat": {
+        "available": true,
+        "consent": "none",
+        "helper": {
+          "active": false,
+          "build": {
+            "baseVersion": "26.1113.4836",
+            "commitCount": 4836,
+            "dirty": false,
+            "gitCommit": "fe838a9502167672f3512e27c32c74cfcf6c84d1",
+            "gitTree": "65b34b9fe6c0851102d79205703a921dd46db3ff",
+            "packageVersion": "26.1113.4836~dev+gfe838a950216",
+            "schemaVersion": 1,
+            "sourceProvenance": "git",
+            "version": "26.1113.4836-dev+gfe838a950216"
+          },
+          "lastExit": {
+            "code": 0,
+            "generation": "1",
+            "processId": 726396,
+            "startTicks": "196693553",
+            "status": "normal"
+          },
+          "processId": 0
+        },
+        "mode": "visible-pixels",
+        "remembered": false
+      },
+      "text": {
+        "available": true,
+        "consent": "none",
+        "helper": {
+          "active": false,
+          "build": {
+            "baseVersion": "26.1113.4836",
+            "commitCount": 4836,
+            "dirty": false,
+            "gitCommit": "fe838a9502167672f3512e27c32c74cfcf6c84d1",
+            "gitTree": "65b34b9fe6c0851102d79205703a921dd46db3ff",
+            "packageVersion": "26.1113.4836~dev+gfe838a950216",
+            "schemaVersion": 1,
+            "sourceProvenance": "git",
+            "version": "26.1113.4836-dev+gfe838a950216"
+          },
+          "lastExit": {
+            "code": 0,
+            "generation": "1",
+            "processId": 726396,
+            "startTicks": "196693553",
+            "status": "normal"
+          },
+          "processId": 0
+        },
+        "mode": "visible-pixels"
+      },
+      "window": {
+        "available": true,
+        "consent": "none",
+        "helper": {
+          "active": false,
+          "build": {
+            "baseVersion": "26.1113.4836",
+            "commitCount": 4836,
+            "dirty": false,
+            "gitCommit": "fe838a9502167672f3512e27c32c74cfcf6c84d1",
+            "gitTree": "65b34b9fe6c0851102d79205703a921dd46db3ff",
+            "packageVersion": "26.1113.4836~dev+gfe838a950216",
+            "schemaVersion": 1,
+            "sourceProvenance": "git",
+            "version": "26.1113.4836-dev+gfe838a950216"
+          },
+          "lastExit": {
+            "code": 0,
+            "generation": "1",
+            "processId": 726396,
+            "startTicks": "196693553",
+            "status": "normal"
+          },
+          "processId": 0
+        },
+        "mode": "visible-pixels"
+      }
+    },
+    "clipboard": {
+      "available": true,
+      "import": "asynchronous-x11-selection",
+      "result": "native-x11-ownership",
+      "types": [
+        "files",
+        "image",
+        "text"
+      ]
+    },
+    "delay": {
+      "available": true,
+      "indicator": "helper-window",
+      "seconds": [
+        3,
+        5,
+        10
+      ]
+    },
+    "scroll": {
+      "available": true,
+      "frames": "ximagesrc",
+      "injector": "xtest",
+      "maxHeight": 30000,
+      "reason": null,
+      "selection": "helper"
+    },
+    "shortcuts": {
+      "available": true,
+      "bindings": {
+        "clipboard": {
+          "bound": false,
+          "error": "disabled",
+          "requested": ""
+        },
+        "desktop": {
+          "actual": "Ctrl+Shift+3",
+          "bound": true,
+          "requested": "Ctrl+Shift+3"
+        },
+        "edit": {
+          "bound": false,
+          "error": "disabled",
+          "requested": ""
+        },
+        "monitor": {
+          "bound": false,
+          "error": "disabled",
+          "requested": ""
+        },
+        "record": {
+          "bound": false,
+          "error": "disabled",
+          "requested": ""
+        },
+        "region": {
+          "actual": "Ctrl+Shift+F12",
+          "bound": true,
+          "requested": "Ctrl+Shift+F12"
+        },
+        "repeat": {
+          "bound": false,
+          "error": "disabled",
+          "requested": ""
+        },
+        "scroll": {
+          "bound": false,
+          "error": "disabled",
+          "requested": ""
+        },
+        "text": {
+          "bound": false,
+          "error": "disabled",
+          "requested": ""
+        },
+        "window": {
+          "actual": "Ctrl+Shift+2",
+          "bound": true,
+          "requested": "Ctrl+Shift+2"
+        }
+      },
+      "keyPaths": {
+        "lastActivation": {
+          "action": "region",
+          "path": "passive",
+          "sequence": 1,
+          "serverTime": 1966935530
+        },
+        "passive": true,
+        "raw": {
+          "available": true,
+          "xinput": "2.2"
+        }
+      }
+    }
+  },
+  "text": {
+    "available": true,
+    "engines": {},
+    "landlockAbi": 6,
+    "languages": [
+      {
+        "bytes": 1525436,
+        "id": "deu",
+        "kind": "system"
+      },
+      {
+        "bytes": 4113088,
+        "id": "eng",
+        "kind": "system"
+      },
+      {
+        "bytes": 1130365,
+        "id": "fra",
+        "kind": "system"
+      }
+    ],
+    "sources": {
+      "clipboard": {
+        "available": true
+      },
+      "desktop": {
+        "available": true
+      },
+      "file": {
+        "available": true
+      },
+      "history": {
+        "available": true
+      },
+      "monitor": {
+        "available": true
+      },
+      "region": {
+        "available": true
+      },
+      "window": {
+        "available": true
+      }
+    }
+  }
+}

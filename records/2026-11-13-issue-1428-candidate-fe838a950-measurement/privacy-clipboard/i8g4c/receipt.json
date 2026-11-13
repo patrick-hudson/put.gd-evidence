@@ -1,0 +1,56 @@
+{
+  "candidate": "fe838a9502167672f3512e27c32c74cfcf6c84d1",
+  "rows": [
+    {
+      "case": "privacy-source-admitted",
+      "status": "not_run",
+      "state": "completed",
+      "canaryRecognized": false,
+      "characterCount": 48
+    },
+    {
+      "case": "privacy-notifications",
+      "status": "met",
+      "notificationCalls": 1,
+      "canaryInNotifications": false,
+      "monitorExit": -15
+    },
+    {
+      "case": "privacy-canary-files",
+      "status": "not_run",
+      "reason": "AssertionError",
+      "stack": [
+        {
+          "function": "case",
+          "line": 35
+        },
+        {
+          "function": "privacy",
+          "line": 58
+        }
+      ]
+    },
+    {
+      "case": "editor-privacy",
+      "status": "not_run",
+      "reason": "StopIteration",
+      "stack": [
+        {
+          "function": "case",
+          "line": 35
+        },
+        {
+          "function": "editor",
+          "line": 96
+        }
+      ]
+    },
+    {
+      "case": "paste-after-resident-quits",
+      "status": "met",
+      "nonemptyBytes": 61,
+      "independentPasteBefore": true,
+      "independentPasteAfter": true
+    }
+  ]
+}

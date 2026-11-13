@@ -1,0 +1,494 @@
+{
+  "editor": {
+    "admissionPixels": 24000000,
+    "available": true,
+    "blurStyles": [
+      "blur",
+      "pixelate"
+    ],
+    "commands": [
+      "inspect",
+      "apply",
+      "preview",
+      "saveCopy",
+      "copy",
+      "fileDialog",
+      "view",
+      "submit",
+      "cancel",
+      "raise"
+    ],
+    "fileFormats": [
+      "png",
+      "jpeg"
+    ],
+    "open": false,
+    "output": "png",
+    "shapes": [
+      "redact",
+      "blur",
+      "arrow",
+      "rectangle",
+      "text",
+      "highlight",
+      "step",
+      "pen",
+      "ellipse",
+      "line"
+    ],
+    "sources": [
+      "region",
+      "window",
+      "desktop",
+      "clipboard",
+      "file",
+      "scroll"
+    ]
+  },
+  "providers": {
+    "backblaze-b2": {
+      "conditionalCreate": true,
+      "conditionalDelete": false,
+      "conditionalReplace": false,
+      "delete": true,
+      "deletionEffect": "Deletes exactly the uploaded B2 file version by its ID. put.gd never uploads over a visible file, so the name then shows nothing, or an older version that was hidden before the upload. Authorized links stop working when they expire.",
+      "maximumNameBytes": 1023,
+      "maximumObjectBytes": 10000000000000,
+      "privateUploads": false,
+      "referenceDelete": false,
+      "serverNamesObjects": false,
+      "sharing": false,
+      "stat": true,
+      "urls": true,
+      "versionAddressing": true
+    },
+    "custom-http": {
+      "conditionalCreate": false,
+      "conditionalDelete": false,
+      "conditionalReplace": false,
+      "delete": false,
+      "deletionEffect": "Asks the server to delete this upload through the deletion URL it returned with the link. What the server removes, and how soon the link stops working, is up to the server.",
+      "maximumNameBytes": 255,
+      "maximumObjectBytes": null,
+      "privateUploads": false,
+      "referenceDelete": true,
+      "serverNamesObjects": true,
+      "sharing": false,
+      "stat": false,
+      "urls": true,
+      "versionAddressing": false
+    },
+    "proton-drive": {
+      "conditionalCreate": true,
+      "conditionalDelete": false,
+      "conditionalReplace": false,
+      "delete": false,
+      "deletionEffect": "Safe remote deletion is unavailable: Proton does not expose an atomic revision-guarded file deletion. Revoke share links separately.",
+      "maximumNameBytes": 255,
+      "maximumObjectBytes": null,
+      "privateUploads": true,
+      "referenceDelete": false,
+      "serverNamesObjects": false,
+      "sharing": true,
+      "stat": true,
+      "urls": true,
+      "versionAddressing": false
+    },
+    "s3": {
+      "conditionalCreate": true,
+      "conditionalDelete": true,
+      "conditionalReplace": true,
+      "delete": true,
+      "deletionEffect": "Guarded origin removal; selected versions only; browser/CDN caches may retain bytes",
+      "maximumNameBytes": 1024,
+      "maximumObjectBytes": 5497558138880,
+      "privateUploads": false,
+      "referenceDelete": false,
+      "serverNamesObjects": false,
+      "sharing": false,
+      "stat": true,
+      "urls": true,
+      "versionAddressing": true
+    }
+  },
+  "recording": {
+    "active": null,
+    "audio": {
+      "microphone": false,
+      "system": false
+    },
+    "available": false,
+    "clickHighlights": {
+      "available": true,
+      "drawnBy": "compositor",
+      "note": "KWin draws the rings on the screen for the length of the recording; window recordings carry none.",
+      "route": "kwin-mouseclick-effect",
+      "targetReasons": {
+        "window": "KWin draws the click rings on the screen; a window recording's stream carries the window alone, so it has none."
+      },
+      "targets": [
+        "monitor",
+        "desktop",
+        "region"
+      ]
+    },
+    "codecs": {},
+    "commands": [
+      "windows",
+      "microphones",
+      "prepare",
+      "start",
+      "pause",
+      "resume",
+      "stop",
+      "cancel",
+      "inspect",
+      "select",
+      "raise",
+      "overlay",
+      "audio",
+      "edit",
+      "preview",
+      "review",
+      "saveCopy",
+      "upload"
+    ],
+    "editCommands": [
+      "setTrim",
+      "resetTrim",
+      "addMask",
+      "updateMask",
+      "removeMask"
+    ],
+    "formats": [],
+    "limits": {
+      "animationMaxEdge": 1280,
+      "animationMaxUs": 60000000,
+      "maxFileBytes": 1099511627776,
+      "maxMasks": 64
+    },
+    "maskKinds": [
+      "blur",
+      "solid"
+    ],
+    "overlayExclusion": {},
+    "reason": "recording_not_probed",
+    "states": [
+      "preparing",
+      "ready",
+      "starting",
+      "recording",
+      "paused",
+      "stopping",
+      "reviewing",
+      "exporting",
+      "submitted",
+      "cancelled",
+      "failed"
+    ],
+    "targets": [],
+    "timeUnit": "microseconds",
+    "windowList": true
+  },
+  "scroll": {
+    "available": false,
+    "frames": "kde-screencast",
+    "injector": "kwin-fake-input",
+    "maxHeight": 30000,
+    "message": "KWin screen casting is unavailable: kde_screencast_unavailable",
+    "reason": "frame_source_unavailable",
+    "selection": "helper"
+  },
+  "source": {
+    "adapter": "kde-wayland",
+    "capture": {
+      "desktop": {
+        "available": true,
+        "error": "",
+        "interface": "org.kde.KWin.ScreenShot2",
+        "interface_version": 4,
+        "mode": "compositor-native",
+        "permission": "restricted-desktop-entry",
+        "permission_entry_matches_executable": true,
+        "permission_rejected": false
+      },
+      "monitor": {
+        "available": true,
+        "error": "",
+        "interface": "org.kde.KWin.ScreenShot2",
+        "interface_version": 4,
+        "mode": "compositor-native",
+        "permission": "restricted-desktop-entry",
+        "permission_entry_matches_executable": true,
+        "permission_rejected": false
+      },
+      "region": {
+        "available": true,
+        "error": "",
+        "helper": {
+          "active": false,
+          "build": {
+            "baseVersion": "26.1113.4836",
+            "commitCount": 4836,
+            "dirty": false,
+            "gitCommit": "fe838a9502167672f3512e27c32c74cfcf6c84d1",
+            "gitTree": "65b34b9fe6c0851102d79205703a921dd46db3ff",
+            "packageVersion": "26.1113.4836~dev+gfe838a950216",
+            "schemaVersion": 1,
+            "sourceProvenance": "git",
+            "version": "26.1113.4836-dev+gfe838a950216"
+          },
+          "cleanupRequired": false,
+          "lastExit": {},
+          "processId": 0
+        },
+        "interface": "org.kde.KWin.ScreenShot2",
+        "interface_version": 4,
+        "mode": "compositor-native",
+        "permission": "restricted-desktop-entry",
+        "permission_entry_matches_executable": true,
+        "permission_rejected": false
+      },
+      "repeat": {
+        "available": true,
+        "error": "",
+        "interface": "org.kde.KWin.ScreenShot2",
+        "interface_version": 4,
+        "mode": "compositor-native",
+        "permission": "restricted-desktop-entry",
+        "permission_entry_matches_executable": true,
+        "permission_rejected": false,
+        "remembered": false
+      },
+      "text": {
+        "available": true,
+        "error": "",
+        "helper": {
+          "active": false,
+          "build": {
+            "baseVersion": "26.1113.4836",
+            "commitCount": 4836,
+            "dirty": false,
+            "gitCommit": "fe838a9502167672f3512e27c32c74cfcf6c84d1",
+            "gitTree": "65b34b9fe6c0851102d79205703a921dd46db3ff",
+            "packageVersion": "26.1113.4836~dev+gfe838a950216",
+            "schemaVersion": 1,
+            "sourceProvenance": "git",
+            "version": "26.1113.4836-dev+gfe838a950216"
+          },
+          "cleanupRequired": false,
+          "lastExit": {},
+          "processId": 0
+        },
+        "interface": "org.kde.KWin.ScreenShot2",
+        "interface_version": 4,
+        "mode": "compositor-native",
+        "permission": "restricted-desktop-entry",
+        "permission_entry_matches_executable": true,
+        "permission_rejected": false
+      },
+      "window": {
+        "available": true,
+        "error": "",
+        "interface": "org.kde.KWin.ScreenShot2",
+        "interface_version": 4,
+        "mode": "compositor-native",
+        "permission": "restricted-desktop-entry",
+        "permission_entry_matches_executable": true,
+        "permission_rejected": false
+      }
+    },
+    "captureHelper": {
+      "active": false,
+      "build": {
+        "baseVersion": "26.1113.4836",
+        "commitCount": 4836,
+        "dirty": false,
+        "gitCommit": "fe838a9502167672f3512e27c32c74cfcf6c84d1",
+        "gitTree": "65b34b9fe6c0851102d79205703a921dd46db3ff",
+        "packageVersion": "26.1113.4836~dev+gfe838a950216",
+        "schemaVersion": 1,
+        "sourceProvenance": "git",
+        "version": "26.1113.4836-dev+gfe838a950216"
+      },
+      "cleanupRequired": false,
+      "lastExit": {},
+      "processId": 0
+    },
+    "clipboard": {
+      "available": true,
+      "error": "",
+      "import": "wlr-data-control-unstable-v1",
+      "protocol_version": 2,
+      "result": "wlr-data-control-unstable-v1-clipboard-only",
+      "types": [
+        "files",
+        "image",
+        "text"
+      ]
+    },
+    "delay": {
+      "available": true,
+      "indicator": "layer-surface",
+      "seconds": [
+        3,
+        5,
+        10
+      ]
+    },
+    "outputs": {
+      "available": true,
+      "error": "",
+      "outputs": 1,
+      "protocol": "wl-output+xdg-output",
+      "protocol_version": 3,
+      "revision": 4
+    },
+    "resident": "qt-core",
+    "scroll": {
+      "available": false,
+      "frames": "kde-screencast",
+      "injector": "kwin-fake-input",
+      "maxHeight": 30000,
+      "message": "KWin screen casting is unavailable: kde_screencast_unavailable",
+      "reason": "frame_source_unavailable",
+      "selection": "helper"
+    },
+    "shortcuts": {
+      "available": true,
+      "bindings": {
+        "clipboard": {
+          "actual": [],
+          "bound": false,
+          "effective": "",
+          "layout": 0,
+          "requested": "",
+          "state": "unbound"
+        },
+        "desktop": {
+          "actual": [
+            "Ctrl+#"
+          ],
+          "bound": true,
+          "effective": "Ctrl+#",
+          "layout": 0,
+          "requested": "Ctrl+Shift+3",
+          "state": "bound"
+        },
+        "edit": {
+          "actual": [],
+          "bound": false,
+          "effective": "",
+          "layout": 0,
+          "requested": "",
+          "state": "unbound"
+        },
+        "monitor": {
+          "actual": [],
+          "bound": false,
+          "effective": "",
+          "layout": 0,
+          "requested": "",
+          "state": "unbound"
+        },
+        "record": {
+          "actual": [],
+          "bound": false,
+          "effective": "",
+          "layout": 0,
+          "requested": "",
+          "state": "unbound"
+        },
+        "region": {
+          "actual": [
+            "Ctrl+!"
+          ],
+          "bound": true,
+          "effective": "Ctrl+!",
+          "layout": 0,
+          "requested": "Ctrl+Shift+1",
+          "state": "bound"
+        },
+        "repeat": {
+          "actual": [],
+          "bound": false,
+          "effective": "",
+          "layout": 0,
+          "requested": "",
+          "state": "unbound"
+        },
+        "scroll": {
+          "actual": [],
+          "bound": false,
+          "effective": "",
+          "layout": 0,
+          "requested": "",
+          "state": "unbound"
+        },
+        "text": {
+          "actual": [],
+          "bound": false,
+          "effective": "",
+          "layout": 0,
+          "requested": "",
+          "state": "unbound"
+        },
+        "window": {
+          "actual": [
+            "Ctrl+@"
+          ],
+          "bound": true,
+          "effective": "Ctrl+@",
+          "layout": 0,
+          "requested": "Ctrl+Shift+2",
+          "state": "bound"
+        }
+      }
+    }
+  },
+  "text": {
+    "available": true,
+    "engines": {},
+    "landlockAbi": 6,
+    "languages": [
+      {
+        "bytes": 1525436,
+        "id": "deu",
+        "kind": "system"
+      },
+      {
+        "bytes": 4113088,
+        "id": "eng",
+        "kind": "system"
+      },
+      {
+        "bytes": 1130365,
+        "id": "fra",
+        "kind": "system"
+      }
+    ],
+    "sources": {
+      "clipboard": {
+        "available": true
+      },
+      "desktop": {
+        "available": true
+      },
+      "file": {
+        "available": true
+      },
+      "history": {
+        "available": true
+      },
+      "monitor": {
+        "available": true
+      },
+      "region": {
+        "available": true
+      },
+      "window": {
+        "available": true
+      }
+    }
+  }
+}
