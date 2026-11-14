@@ -299,7 +299,7 @@ Omarchy overlay retirement completed at 11:01:49 UTC; Budgie completed at 11:37:
 
 ## Untouched capture timings
 
-These are observed timings, not a separate performance threshold. Every timed-out candidate image remains a failed completion check.
+These are observed timings, not a separate performance threshold. Every timed-out candidate image remains a failed completion check. Excluded first-run-modal attempts are retained separately and omitted from this table. Hyprland’s recovered nightly session is an additional completed session after a screenshot-transport failure; it is supporting evidence outside the two-run primary series.
 
 | Desktop | Build | Result file | Height | Seconds | End |
 |---|---|---|---:|---:|---|
@@ -308,3 +308,19 @@ These are observed timings, not a separate performance threshold. Every timed-ou
 | gnome | candidate | `gnome/a/live-0.json` | 23735 | 91.488 | end_of_content |
 | gnome | candidate | `gnome/a/live-1.json` | 23734 | 88.000 | end_of_content |
 | hyprland | nightly | `hyprland/b/live-0-original.json` | 22940 | 61.124 | end_of_content |
+| hyprland | nightly | `hyprland/b/live-0-recovered.json` | 23327 | 69.018 | end_of_content |
+| hyprland | nightly | `hyprland/b/live-0.json` | 22940 | 81.085 | end_of_content |
+| hyprland | nightly | `hyprland/b/live-1-original.json` | 22940 | 64.994 | end_of_content |
+| hyprland | nightly | `hyprland/b/live-1.json` | 22940 | 110.826 | end_of_content |
+| hyprland | candidate | `hyprland/a/live-0-mixedload.json` | 16560 | 180.023 | time_limit |
+| hyprland | candidate | `hyprland/a/live-0.json` | 21000 | 180.016 | time_limit |
+| hyprland | candidate | `hyprland/a/live-1-mixedload.json` | 15360 | 180.061 | time_limit |
+| hyprland | candidate | `hyprland/a/live-1.json` | 21240 | 180.048 | time_limit |
+| budgie | nightly | `budgie/b/live-0.json` | 24122 | 39.092 | end_of_content |
+| budgie | nightly | `budgie/b/live-1.json` | 23734 | 37.700 | end_of_content |
+| budgie | candidate | `budgie/a/live-0.json` | 23735 | 147.700 | end_of_content |
+| budgie | candidate | `budgie/a/live-1.json` | 23734 | 152.529 | end_of_content |
+| plasma-6.8.2 | nightly | `plasma-6.8.2/b/live-0.json` | 25298 | 31.566 | end_of_content |
+| plasma-6.8.2 | nightly | `plasma-6.8.2/b/live-1.json` | 25298 | 31.432 | end_of_content |
+| plasma-6.8.2 | candidate | `plasma-6.8.2/a/live-0.json` | 25298 | 67.611 | end_of_content |
+| plasma-6.8.2 | candidate | `plasma-6.8.2/a/live-1.json` | 25298 | 66.809 | end_of_content |
