@@ -1,0 +1,5 @@
+$ test ! -e ~/repo1428p4 && test ! -e ~/work/r1428p4 && echo owned-scratch-absent; pgrep -a qemu-system || true
+owned-scratch-absent
+481656 qemu-system-x86_64 -machine q35,accel=kvm -cpu host -smp 2 -m 6144 -device virtio-vga,id=video0 -device usb-ehci -device usb-tablet -drive file=/home/patrick/nd/work/lab-runs/n99be1d41/disk.qcow2,format=qcow2,if=virtio -netdev user,id=net0,hostfwd=tcp:127.0.0.1:22446-:22 -device virtio-net-pci,netdev=net0 -qmp unix:/home/patrick/nd/work/lab-runs/n99be1d41/qmp.sock,server=on,wait=off -vnc 127.0.0.1:46 -display none -daemonize -pidfile /home/patrick/nd/work/lab-runs/n99be1d41/qemu.pid
+
+exit=0
