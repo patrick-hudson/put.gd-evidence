@@ -326,8 +326,12 @@ browser's own picture has the margins empty. Rows that a page pins are left out;
   (`testStaleStreamAtDone`). On the live article it found nothing missing.
 - **A blank stretch taller than the region.** The end check cannot tell it from the end: both are frames that stop
   changing after a step, and the tracker places a blank frame as "no movement" under any hint. Kept as a documented limit,
-  but the end is no longer claimed: when the last frame is plain (`plainFrame`), auto-scroll ends `done` with
-  `reachedEnd: false`, `stats.endBlank: true` and a note to scroll on by hand (`testBlankStretch`).
+  but the end is no longer claimed: when the last frame is plain (`plainFrame`, put.gd's bar inside the region left out),
+  auto-scroll ends `done` with `reachedEnd: false`, and the person is told in a notice (`scroll_blank_stretch`), in History
+  and in the view's `note` (`testBlankStretch`, a service test row; b667b3959, acb0e4977).
+- **Every end from a fresh frame** (acb0e4977, CodeRabbit). A stream that went stale resends its last picture with new
+  times, so frames after a step's response time prove nothing. Auto-scroll's end is now always taken from a fresh frame of
+  the screen (`testStaleStreamUnderAuto`).
 - **The pinned advertisement column after a 590 px jump under a hint of 0.** The hint was the session's correct claim:
   no wheel movement was owed, and the jump was the page's own (a photo loading above). An unknown hint instead of 0 was tried
   and broke repeating pages at rest (`scroll_capture_x11`), so the hint stays.

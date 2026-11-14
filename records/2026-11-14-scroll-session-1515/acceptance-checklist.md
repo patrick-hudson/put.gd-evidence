@@ -36,7 +36,8 @@ Hyprland (the Omarchy guest), Budgie (labwc, the Fedora 45 Budgie guest).
    A page that lays itself out again after the capture passed (the article's video playlist strip, 220 px; GitHub's
    re-wrap in Chrome) differs from the browser's later picture by that much: find where with `r4/lab/where.py` and
    look with `r4/lab/seam.py` before calling rows lost (round 4 of the README).
-2. **Auto-scroll** (`driver: putgd`), same pages. Pass: `end_of_content`, or `done` with `reachedEnd: true` and frames
+2. **Auto-scroll** (`driver: putgd`), same pages. The helper log has `scroll fresh frame:` before every end of the page.
+   Pass: `end_of_content`, or `done` with `reachedEnd: true` and frames
    skipped, or `height_cap`; the whole page; seconds per 10,000 px (from `elapsedMs` and `height`). Chrome on the Python
    docs: no unwritten or undrawn cells (`lab/unwritten.py` reports 0). Hyprland: no painted arrow in the image. The
    GitHub pull request in Chrome is expected to be handed back near 36,300 px (the column re-wraps: row 7).
@@ -72,7 +73,8 @@ Hyprland (the Omarchy guest), Budgie (labwc, the Fedora 45 Budgie guest).
    `scroll.cancel` leaves no History row and no staging files. A toggle sent while the capture stops is refused with
    `scroll_state` and the capture goes on.
 10. **A blank stretch taller than the region** (`lab/blank.html`): auto-scroll stops at it and ends `done` with
-    `reachedEnd: false` and the note "auto-scroll stopped where the page showed nothing"; you scroll: lost after it (the
+    `reachedEnd: false`; a notice "Auto-scroll stopped where the page showed nothing..." (`scroll_blank_stretch` in the
+    resident's log), the same note in History and in `scroll.inspect`'s `note`; you scroll: lost after it (the
     documented limit).
 
 ## Cleanup (every desktop)
