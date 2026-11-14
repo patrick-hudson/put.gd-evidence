@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-14-scroll-pointer-release-1520-acceptance](2026-11-14-scroll-pointer-release-1520-acceptance/README.md) | — | PR 1520 scrolling-pointer desktop acceptance — 2026-11-14 |
 | [2026-11-14-scroll-pointer-release-1514](2026-11-14-scroll-pointer-release-1514/README.md) | #1514 | Scrolling capture gives the pointer back (#1514) |
 | [2026-11-14-history-finish-share-link](2026-11-14-history-finish-share-link/README.md) | #1512 | History Finish share link: m74 desktop acceptance, PR #1512 |
 | [2026-11-14-proton-helper-34dda9fa](2026-11-14-proton-helper-34dda9fa/README.md) | — | Proton helper 34dda9fa native relink and P6 |
