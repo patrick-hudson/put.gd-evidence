@@ -1,0 +1,59 @@
+{
+  "id": 81788973,
+  "xwininfo": {
+    "argv": [
+      "xwininfo",
+      "-id",
+      "81788973",
+      "-all"
+    ],
+    "exitCode": 0,
+    "stdout": "\nxwininfo: Window id: 0x4e0002d \"put.gd recording controls\"\n\n  Root window id: 0x48b (the root window) (has no name)\n  Parent window id: 0x48b (the root window) (has no name)\n     1 child:\n     0x4e0002f \"Qt NET_WM User Time Window\": ()  1x1+-1+-1  +1044+1017\n\n  Absolute upper-left X:  1045\n  Absolute upper-left Y:  1018\n  Relative upper-left X:  1045\n  Relative upper-left Y:  1018\n  Width: 865\n  Height: 52\n  Depth: 24\n  Visual: 0x21\n  Visual Class: TrueColor\n  Border width: 0\n  Class: InputOutput\n  Colormap: 0x4e0002c (not installed)\n  Bit Gravity State: NorthWestGravity\n  Window Gravity State: NorthWestGravity\n  Backing Store State: NotUseful\n  Save Under State: yes\n  Map State: IsViewable\n  Override Redirect State: yes\n  Corners:  +1045+1018  -10+1018  -10-10  +1045-10\n  -geometry 865x52-10-10\n\n  Bit gravity: NorthWestGravity\n  Window gravity: NorthWestGravity\n  Backing-store hint: NotUseful\n  Backing-planes to be preserved: 0xffffffff\n  Backing pixel: 0\n  Save-unders: Yes\n\n  Someone wants these events:\n      KeyPress\n      KeyRelease\n      ButtonPress\n      ButtonRelease\n      EnterWindow\n      LeaveWindow\n      PointerMotion\n      ButtonMotion\n      Exposure\n      StructureNotify\n      FocusChange\n      PropertyChange\n  Do not propagate these events:\n  Override redirection?: Yes\n\n  Window manager hints:\n      Client accepts input or input focus: Yes\n      Window type:\n          Utility\n           Kde Net Wm Window Type Override\n          Normal\n      Window state:\n          Skip Pager\n          Skip Taskbar\n      Process id: 899439 on host mint-builder\n\n  Normal window size hints:\n      User supplied location: 1045, 1018\n      User supplied size: 865 by 52\n      Program supplied minimum size: 865 by 52\n      Program supplied window gravity: StaticGravity\n  No zoom window size hints defined\n\n  No window shape defined\n  No border shape defined\n\n",
+    "stderr": ""
+  },
+  "properties": {
+    "argv": [
+      "xprop",
+      "-id",
+      "81788973",
+      "_NET_WM_PID",
+      "_NET_WM_WINDOW_TYPE",
+      "WM_HINTS",
+      "WM_CLASS",
+      "WM_NAME"
+    ],
+    "exitCode": 0,
+    "stdout": "_NET_WM_PID(CARDINAL) = 899439\n_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_UTILITY, _KDE_NET_WM_WINDOW_TYPE_OVERRIDE, _NET_WM_WINDOW_TYPE_NORMAL\nWM_HINTS(WM_HINTS):\n\t\tClient accepts input or input focus: True\n\t\twindow id # of group leader: 0x4e00009\nWM_CLASS(STRING) = \"putgd-record\", \"putgd-record\"\nWM_NAME(STRING) = \"put.gd recording controls\"\n",
+    "stderr": ""
+  },
+  "processTree": [
+    {
+      "pid": 898854,
+      "parent": 898847,
+      "startTicks": 201602134,
+      "comm": "putgd",
+      "exe": "/home/patrick/work/sc1114/native-bin/putgd"
+    },
+    {
+      "pid": 898881,
+      "parent": 898854,
+      "startTicks": 201602171,
+      "comm": "putgd-ui",
+      "exe": "/home/patrick/work/sc1114/native-bin/putgd-ui"
+    },
+    {
+      "pid": 898933,
+      "parent": 898881,
+      "startTicks": 201602233,
+      "comm": "gsettings",
+      "exe": "/usr/bin/gsettings"
+    },
+    {
+      "pid": 899439,
+      "parent": 898854,
+      "startTicks": 201605909,
+      "comm": "putgd-record",
+      "exe": "/home/patrick/work/sb1114/analyzer/squashfs-root/usr/bin/putgd-record"
+    }
+  ]
+}
