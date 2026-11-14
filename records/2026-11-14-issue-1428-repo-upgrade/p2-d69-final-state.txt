@@ -1,0 +1,12 @@
+$ dpkg-query -s putgd | head -6; dpkg-query -W tesseract-ocr tesseract-ocr-eng; test ! -e ~/repo1428 && test ! -e ~/work/r1428 && echo scratch-and-runner-absent; pgrep -a qemu-system || true
+Package: putgd
+Status: deinstall ok config-files
+Priority: optional
+Section: graphics
+Installed-Size: 335596
+Maintainer: put.gd maintainers <packages@put.gd>
+tesseract-ocr	5.5.0-1+b1
+tesseract-ocr-eng	1:4.1.0-2
+scratch-and-runner-absent
+
+exit=0
