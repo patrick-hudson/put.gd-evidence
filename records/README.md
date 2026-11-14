@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-14-history-finish-share-link](2026-11-14-history-finish-share-link/README.md) | #1512 | History Finish share link: m74 desktop acceptance, PR #1512 |
 | [2026-11-14-proton-helper-34dda9fa](2026-11-14-proton-helper-34dda9fa/README.md) | — | Proton helper 34dda9fa native relink and P6 |
 | [2026-11-14-hyprland-early-drag-1487](2026-11-14-hyprland-early-drag-1487/README.md) | #1487 | Hyprland: early drag and post-reload region capture end with capture_geometry (issue 1487) |
 | [2026-11-14-sweep-c-acceptance](2026-11-14-sweep-c-acceptance/README.md) | — | Sweep C — m74 scroll Escape and recording-bar activation |
