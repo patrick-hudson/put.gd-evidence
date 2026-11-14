@@ -1,0 +1,169 @@
+$ python3 tests/desktop/test_boat_candidate.py
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 0.495s
+
+OK
+
+$ python3 tests/desktop/test_boat_snapshots.py
+.............
+----------------------------------------------------------------------
+Ran 13 tests in 0.011s
+
+OK
+
+$ python3 tests/desktop/test_desktop_lock.py
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.371s
+
+OK
+
+$ python3 -m pytest -q -p no:cacheprovider tests/desktop/test_fluidity.py
+...........                                                              [100%]
+11 passed in 0.09s
+
+$ python3 tests/desktop/test_guest_idle.py
+.........
+----------------------------------------------------------------------
+Ran 9 tests in 0.022s
+
+OK
+
+$ python3 tests/desktop/test_guest_reboot.py
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.004s
+
+OK
+
+$ python3 tests/desktop/test_headless_output.py
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.015s
+
+OK
+
+$ python3 tests/desktop/test_host_input.py
+{"client": "disconnected", "error": "BrokenPipeError"}
+.{"client": "disconnected", "error": "BrokenPipeError"}
+........{"client": "disconnected", "error": "BrokenPipeError"}
+.
+----------------------------------------------------------------------
+Ran 10 tests in 0.114s
+
+OK
+
+$ python3 tests/desktop/test_lab.py
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.664s
+
+OK
+
+$ python3 tests/desktop/test_live_credentials_lab.py
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.088s
+
+OK
+
+$ python3 tests/desktop/test_multi_output.py
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.045s
+
+OK
+
+$ python3 tests/desktop/test_multi_output_review.py
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 0.640s
+
+OK
+
+$ python3 tests/desktop/test_native_acceptance.py
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.003s
+
+OK
+
+$ python3 tests/desktop/test_overlay_cleanup.py
+..............................
+----------------------------------------------------------------------
+Ran 30 tests in 1.341s
+
+OK
+
+$ python3 tests/desktop/test_package_install.py
+................
+----------------------------------------------------------------------
+Ran 16 tests in 12.036s
+
+OK
+
+$ python3 tests/desktop/test_proton_lab.py
+...............................
+----------------------------------------------------------------------
+Ran 31 tests in 2.175s
+
+OK
+
+$ python3 tests/desktop/test_record_run.py
+............
+----------------------------------------------------------------------
+Ran 12 tests in 0.001s
+
+OK
+
+$ python3 tests/desktop/test_restore_evidence.py
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.004s
+
+OK
+
+$ python3 tests/desktop/test_rfb_frames.py
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK
+
+$ python3 tests/desktop/test_wayland_toplevels.py
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.044s
+
+OK
+
+$ python3 tests/maintenance/test_archive_evidence.py
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.011s
+
+OK
+
+$ python3 tests/maintenance/test_evidence.py
+........................
+----------------------------------------------------------------------
+Ran 24 tests in 20.960s
+
+OK
+
+$ python3 tests/maintenance/test_refresh_pins.py
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.004s
+
+OK
+
+$ python3 tests/performance/test_bench_ui_process.py
+{"label": "existing-process-0", "elapsedSeconds": 0.09506183117628098, "totals": {"rssBytes": 36982784, "pssBytes": 26001408, "privateBytes": 24772608}, "processCount": 2, "uiProcessCount": 1, "escapedProcessCount": 0, "sampleSeconds": 0.058741912711411715}
+..........UI process measurement failed; inspect its private evidence. No memory result was accepted.
+.....
+----------------------------------------------------------------------
+Ran 15 tests in 1.067s
+
+OK

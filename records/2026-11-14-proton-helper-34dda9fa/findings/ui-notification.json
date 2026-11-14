@@ -1,0 +1,55 @@
+{
+  "finding": "Cinnamon shows a window-could-not-be-opened notification although History is visibly open.",
+  "currentImage": "m74/history.png",
+  "earlierImage": "findings/earlier-nightly-ui-notification.png",
+  "predatesTestedBuild": true,
+  "earlierBuild": "26.1113.4757-nightly",
+  "earlierEvidenceCommit": "1c5cd560aba11e20758ee317da29256db610a87e",
+  "earlierArchiveMember": "records/2026-11-13-proton-relink-1399/m74-numeric.tar.gz -> m74/w7m2/history.png",
+  "messageCallPoint": "src/app/UiProcessController.cpp:12",
+  "causeEstablished": true,
+  "productCodeChanged": false,
+  "issueFiled": false,
+  "acceptanceAssessment": "Not evidence of a current UI failure: all matching queued warnings predate both W7 package rounds, and their source PIDs differ. Current UI is ready and exits normally; no driver kill precedes the frame. Coordinator accepted the retained-lab-state finding. The original cause of the older warnings is not attributed.",
+  "displayedWarningCause": "Cinnamon retained critical no-expiry notifications from earlier lab residents; extra post-use History activation reveals the old queue.",
+  "currentProductFailure": false,
+  "labStateArtifact": true,
+  "exactStep": "After revoke-additions and update.check, ui.show(view=history) precedes the pre-close frame; the same full sequence without this final activation shows no error toast.",
+  "onScreenNotification": {
+    "id": 511,
+    "sourcePid": 726275,
+    "timestamp": "2026-11-13T11:23:46.187Z",
+    "expires": 0,
+    "urgency": 2
+  },
+  "matchingNoticeCountBeforeCleanup": 81,
+  "newestMatchingTimestamp": "2026-11-13T18:10:47.812Z",
+  "oldWarningGenerationCauseEstablished": false,
+  "originalRunTimelines": "findings/ui-historical.json",
+  "notificationServerMetadata": "findings/toast-server-metadata.json",
+  "reproductions": [
+    {
+      "run": "w34m5",
+      "functional": "26/26",
+      "toastBeforeTeardown": false,
+      "driverSignalBeforeFrame": false
+    },
+    {
+      "run": "w34m6",
+      "functional": "26/26",
+      "toastBeforeNormalClose": true,
+      "uiPid": 904621,
+      "normalExitCode": 0,
+      "driverSignalBeforeFrame": false,
+      "sameMemoryPrelude": true,
+      "laterIdleObserverSkipped": true
+    }
+  ],
+  "residentUiUnavailableOrIncompatibleLines": [],
+  "cleanup": {
+    "closed": 81,
+    "remainingMatching": 0,
+    "receipt": "findings/toast-cleanup.json"
+  },
+  "provenance": "findings/toast-provenance.json"
+}

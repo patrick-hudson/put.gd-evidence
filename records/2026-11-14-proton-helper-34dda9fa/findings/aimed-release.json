@@ -1,0 +1,32 @@
+{
+  "finding": "Required surface suite fails four existing AimedRelease cases on d69 Python 3.13.5",
+  "sourceCommit": "05af68552bb7029660349d90c3fd82e7f4d2aa4c",
+  "cases": [
+    "test_click_release_guest",
+    "test_click_release_physical",
+    "test_drag_release",
+    "test_held_key_release"
+  ],
+  "fullSuite": {
+    "passed": 432,
+    "failed": 4,
+    "log": "contracts/current-surfaces.log"
+  },
+  "isolatedReproduction": "Same four cases fail under pytest alone and the direct unittest script; RecipeFailed from SIGALRM at tests/desktop/test_surface_critical.py:110, handler at line22.",
+  "earlierReproduction": "Same four failed before this proof metadata on package producer ff636bba2; retained original surfaces.log.",
+  "causeEstablished": false,
+  "productOrTestCodeChanged": false,
+  "issueFiled": false,
+  "scope": "Host-side signal/input-driver test failure; no real desktop input in these synthetic test cases. Not relabelled as a pass. Producer CI completed successfully.",
+  "command": "python3 -m pytest tests/desktop/test_surface*.py tests/desktop/test_review_adversarial.py",
+  "pythonVersion": "3.13.5",
+  "loadDuringFullCommand": {
+    "source": "d69 sysstat sa13, sar -q, 2026-11-13 19:20:06 -0600 (2026-11-14 01:20:06 UTC), during full command ending01:20:30",
+    "oneMinute": 0.54,
+    "fiveMinutes": 0.24,
+    "fifteenMinutes": 0.16,
+    "runQueue": 4,
+    "blocked": 0,
+    "scope": "One contemporaneous sysstat sample; not a continuous host-load trace."
+  }
+}

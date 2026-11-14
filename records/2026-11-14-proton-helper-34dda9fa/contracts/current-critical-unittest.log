@@ -1,0 +1,64 @@
+FFFF..
+======================================================================
+FAIL: test_click_release_guest (__main__.AimedRelease.test_click_release_guest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/patrick/work/w7-34/src/tests/desktop/test_surface_critical.py", line 135, in test_click_release_guest
+    self.sweep(lambda ctx: ctx._pointer_click(5, 5, 'left', 0, guarded=True))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/w7-34/src/tests/desktop/test_surface_critical.py", line 110, in sweep
+    while time.perf_counter() < deadline_end:
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/w7-34/src/tests/desktop/test_surface_critical.py", line 22, in deadline
+    raise RecipeFailed('recipe deadline exceeded: sweep')
+tools.lab.surface_driver.api.RecipeFailed: recipe deadline exceeded: sweep
+
+======================================================================
+FAIL: test_click_release_physical (__main__.AimedRelease.test_click_release_physical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/patrick/work/w7-34/src/tests/desktop/test_surface_critical.py", line 132, in test_click_release_physical
+    self.sweep(lambda ctx: ctx._pointer_click(5, 5, 'left', 0, guarded=True), physical=True)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/w7-34/src/tests/desktop/test_surface_critical.py", line 110, in sweep
+    while time.perf_counter() < deadline_end:
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/w7-34/src/tests/desktop/test_surface_critical.py", line 22, in deadline
+    raise RecipeFailed('recipe deadline exceeded: sweep')
+tools.lab.surface_driver.api.RecipeFailed: recipe deadline exceeded: sweep
+
+======================================================================
+FAIL: test_drag_release (__main__.AimedRelease.test_drag_release)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/patrick/work/w7-34/src/tests/desktop/test_surface_critical.py", line 140, in test_drag_release
+    self.sweep(drag, arm_on='move')
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/w7-34/src/tests/desktop/test_surface_critical.py", line 110, in sweep
+    while time.perf_counter() < deadline_end:
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/w7-34/src/tools/lab/surface_driver/critical.py", line 72, in __call__
+    return self.original(signum, frame)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/patrick/work/w7-34/src/tests/desktop/test_surface_critical.py", line 22, in deadline
+    raise RecipeFailed('recipe deadline exceeded: sweep')
+tools.lab.surface_driver.api.RecipeFailed: recipe deadline exceeded: sweep
+
+======================================================================
+FAIL: test_held_key_release (__main__.AimedRelease.test_held_key_release)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/patrick/work/w7-34/src/tests/desktop/test_surface_critical.py", line 146, in test_held_key_release
+    self.sweep(held, arm_on=None)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/w7-34/src/tests/desktop/test_surface_critical.py", line 110, in sweep
+    while time.perf_counter() < deadline_end:
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/w7-34/src/tests/desktop/test_surface_critical.py", line 22, in deadline
+    raise RecipeFailed('recipe deadline exceeded: sweep')
+tools.lab.surface_driver.api.RecipeFailed: recipe deadline exceeded: sweep
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.237s
+
+FAILED (failures=4)

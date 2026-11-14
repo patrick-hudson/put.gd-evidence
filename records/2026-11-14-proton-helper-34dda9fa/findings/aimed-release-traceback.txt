@@ -1,0 +1,21 @@
+____________________ AimedRelease.test_click_release_guest _____________________
+
+self = <test_surface_critical.AimedRelease testMethod=test_click_release_guest>
+
+    def test_click_release_guest(self):
+>       self.sweep(lambda ctx: ctx._pointer_click(5, 5, 'left', 0, guarded=True))
+
+tests/desktop/test_surface_critical.py:135: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/desktop/test_surface_critical.py:110: in sweep
+    while time.perf_counter() < deadline_end:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+_signum = 14
+_frame = <frame at 0x7f81831d3b00, file '/home/patrick/work/w7-34/src/tests/desktop/test_surface_critical.py', line 110, code sweep>
+
+    def deadline(_signum, _frame):
+>       raise RecipeFailed('recipe deadline exceeded: sweep')
+E       tools.lab.surface_driver.api.RecipeFailed: recipe deadline exceeded: sweep
+
+tests/desktop/test_surface_critical.py:22: RecipeFailed
