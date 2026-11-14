@@ -254,3 +254,8 @@ Aurora: no package installed; extracted AppImages and private evidence remain un
 Invalid GNOME initial nightly attempts captured the owned Settings window at 1098 px; they were excluded and retained as `s1-initial-settings-invalid.jsonl`. The Settings window was visibly closed before the three valid article controls. A malformed candidate launcher replaced parts of `bin`/`bus` text; the failed attempt and log were retained, command corrected, and sockets rechecked before retry. The first post-login VNC frame was black; a later independent live frame established the desktop before valid measurements. Plasma's Firefox first-run Terms page was closed before any measurements. No invalid setup attempt was counted as an acceptance capture.
 
 Raw helper logs contain only our public/synthetic capture content and technical state. No profile database, credential input, private key or browser data is published. Cold export archives remain privately retained outside this record, with [verified SHA-256 and byte sizes](export-checksums.json). Exported test source, full result images, operation IDs and errors remain here; source evidence is not deleted as a substitute for archiving.
+
+
+## Cinnamon X11 final-head addendum
+
+The coordinator requested m74 after accepting the four-desktop round above. [Cinnamon X11 acceptance](m74/README.md) tests the same final head and full tree, with three captures per build, all relative-mouse modes, Resume equality, paused-window input, Esc, pointer restoration and cleanup. All candidate rows passed; the addendum retains the full nightly comparison. m74 was released 2026-11-14T17:29:47Z.

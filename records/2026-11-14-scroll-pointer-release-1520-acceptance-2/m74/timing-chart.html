@@ -1,0 +1,37 @@
+<section id="m74-capture-times" data-viz-composition>
+  <div data-viz-container></div>
+  <script type="application/json" data-viz-chart>
+    {
+      "id": "m74-capture-times",
+      "title": "Cinnamon X11 untouched captures",
+      "description": "Three captures per build; helper elapsed time in seconds.",
+      "height": 240,
+      "spec": {
+        "type": "horizontalBar",
+        "x": "seconds",
+        "y": "capture",
+        "xLabel": "Seconds",
+        "xDomain": [0, 26],
+        "sortOrder": "original",
+        "showValues": true,
+        "showLegend": false,
+        "valueFormat": {"style": "decimal", "minimumFractionDigits": 3, "maximumFractionDigits": 3}
+      },
+      "columns": ["capture", "seconds"],
+      "rows": [
+        ["Nightly 1", 24.322],
+        ["Nightly 2", 24.540],
+        ["Nightly 3", 24.028],
+        ["PR 1520 · 1", 23.329],
+        ["PR 1520 · 2", 23.534],
+        ["PR 1520 · 3", 23.454]
+      ]
+    }
+  </script>
+</section>
+<script type="module">
+  import { mountChart } from "https://persistent.oaistatic.com/plugins/visualize/charts/1.2.3/element.js";
+  const root = document.getElementById("m74-capture-times");
+  const config = JSON.parse(root.querySelector("[data-viz-chart]").textContent);
+  mountChart(root.querySelector("[data-viz-container]"), config);
+</script>
