@@ -248,3 +248,24 @@ path). `lab/sess.py` now stops a run's capture on any error and refuses to start
 ![Cinnamon, the region fills the screen](r2-cinnamon-full-auto-end.png)
 
 ![The bar's new words](r2-bar-lost-states.png)
+
+## Round 3: GNOME's pause (#1531, PR #1528 at 0bfc9325f)
+
+GNOME 50.6 on f44, this PR's build, Wikipedia in Firefox, a relative uinput mouse to the bar's Done
+at 600 px/s, 10 tries from a fixed start (2 s) and 10 from a random one (1 to 6 s) for each
+extension. Per-try tables in [r3-gnome/tries.md](r3-gnome/tries.md), the driver in `r3-gnome/lab/`.
+
+| Extension loaded | Fixed start: first click stopped | Random start: first click stopped | Motions sent after the hand | Pulled back |
+| --- | --- | --- | --- | --- |
+| 23 (the bar's window is the only witness) | 10 of 10 | 8 of 10 | 0 in 18 tries; 2 and 9 in the two misses | 0 |
+| **24 (the Shell watches the pointer)** | **10 of 10** | **10 of 10** | **0** | **0** |
+
+With 24 the pause came 2 to 23 ms after the first motion, and the Shell's watch was on in all 20
+tries. The extension sent 142 `Pointer` signals in one minute of tries (the helper's own moves to
+its wheel points and back, and the hand until 300 ms after the pause); it sends none outside
+auto-scroll. For comparison, #1520's acceptance on its own build with extension 23 had 6 of 10 and
+9 of 10.
+
+f44 afterwards: the extension copy removed, both extension lists and the mouse acceleration as
+they were (`r3-gnome/saved-state.txt`), a re-login, no put.gd process or Firefox left, the lock
+released at 20:41 UTC.
