@@ -1,0 +1,1079 @@
+Refreshing run status every 60 seconds. Press Ctrl+C to quit.
+
+* fix/scroll-pointer-release-1514 CI patrick-hudson/put.gd-desktop#1520 · 43581469746
+Triggered via workflow_dispatch about 15 minutes ago
+
+JOBS
+✓ changes in 5s (ID 132406921405)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Select jobs from changed paths
+  - Retain exact source CI provenance
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ contracts in 3m36s (ID 132406921698)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install QEMU disk utilities and dwz for the contracts
+  ✓ Release, packaging and CI tool contracts
+  ✓ Proton helper source contracts
+  ✓ Lab identity and storage safety contracts
+  ✓ Surface driver, map, fixture, redact and recipe contracts
+  ✓ Cold-family observer contracts
+  ✓ Replay saved live-S3 numeric evidence
+  ✓ Lint workflows
+  ✓ Scan every branch and tag for leaked secrets
+  ✓ Preserve contract reports
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ linux (24.04) in 8m35s (ID 132406949712)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Install distro dependencies
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Trust container checkout for build identity
+  ✓ Identify exact dependency cache environment
+  ✓ Restore verified dependency prefix
+  ✓ Verify restored dependency prefix
+  - Provision pinned AWS SDK
+  - Save verified dependency prefix
+  ✓ Provision pinned Proton helper
+  ✓ Reproduce the exact compiled Proton helper
+  ✓ Restore compiler cache
+  ✓ Build
+  ✓ Keep only this build's compiler cache entries
+  - Save compiler cache
+  ✓ Restore test durations
+  ✓ Test
+  ✓ Report flaky tests
+  ✓ Save test durations
+  - Check the surface map against the UI catalog
+  - Preserve the UI catalog
+  ✓ Preserve structured test reports
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ sanitizers (clang ASan/UBSan) in 7m27s (ID 132406949713)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Install distro dependencies
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Trust container checkout for build identity
+  ✓ Identify exact dependency cache environment
+  ✓ Restore verified dependency prefix
+  ✓ Verify restored dependency prefix
+  - Provision pinned AWS SDK
+  - Save verified dependency prefix
+  ✓ Identify instrumented QtCore
+  ✓ Restore instrumented QtCore
+  - Build instrumented QtCore
+  - Save instrumented QtCore
+  ✓ Restore compiler cache
+  ✓ Build
+  ✓ Keep only this build's compiler cache entries
+  - Save compiler cache
+  ✓ Test core contracts under ASan/UBSan
+  ✓ Report flaky tests
+  ✓ Preserve structured test reports
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ linux (26.04) in 11m5s (ID 132406949737)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Install distro dependencies
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Trust container checkout for build identity
+  ✓ Identify exact dependency cache environment
+  ✓ Restore verified dependency prefix
+  ✓ Verify restored dependency prefix
+  - Provision pinned AWS SDK
+  - Save verified dependency prefix
+  ✓ Provision pinned Proton helper
+  ✓ Reproduce the exact compiled Proton helper
+  ✓ Restore compiler cache
+  ✓ Build
+  ✓ Keep only this build's compiler cache entries
+  - Save compiler cache
+  ✓ Restore test durations
+  ✓ Test
+  ✓ Report flaky tests
+  ✓ Save test durations
+  ✓ Check the surface map against the UI catalog
+  ✓ Preserve the UI catalog
+  ✓ Preserve structured test reports
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / arch in 5m10s (ID 132406949831)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Bootstrap checkout
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Restore release compiler cache
+  ✓ Distro dependencies and build user
+  ✓ Build verified dependencies and production package
+  - Save release compiler cache
+  ✓ Stage flat native evidence
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / appimage in 10m42s (ID 132406949837)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Use official Ubuntu archive mirrors
+  ✓ Identify the package snapshot
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Standard build dependencies
+  ✓ The locked Qt version
+  ✓ Run jurplel/install-qt-action@b344308e4483fc892e0d27b3cd1b173ebdd95f06
+  - Validate exact release source
+  ✓ Verify pinned SDK source
+  ✓ Identify AppImage dependency environment
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Verify restored AppImage dependencies and fresh notices
+  - Standard upstream dependency builds
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Provision pinned Proton helper
+  ✓ Headless Wayland compositor for the image's start check
+  ✓ Restore release compiler cache
+  ✓ Build and audit AppImage
+  - Save release compiler cache
+  ✓ Stage split debug symbols by build ID
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Stage flat AppImage artifact evidence
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run jurplel/install-qt-action@b344308e4483fc892e0d27b3cd1b173ebdd95f06
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ packages / native (ubuntu24.04) in 9m32s (ID 132406949869)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Bootstrap checkout tools
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Identify the package snapshot
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Standard distro dependencies
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  - Validate exact release source
+  ✓ Identify release dependency environment
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Verify pinned SDK source
+  ✓ Verify restored prefix
+  - Build official SDK
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Provision pinned Proton helper
+  ✓ Restore release compiler cache
+  ✓ Build production release and audit native package
+  - Save release compiler cache
+  ✓ Stage split debug symbols by build ID
+  ✓ Export exact application source
+  - Check the source export holds every build input
+  ✓ Restore source-export compiler cache
+  ✓ Compile the source export on development and stable builds
+  - Save source-export compiler cache
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Stage flat native artifact evidence
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / native (fedora44) in 14m7s (ID 132406949874)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Bootstrap checkout tools
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Identify the package snapshot
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Standard distro dependencies
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  - Validate exact release source
+  ✓ Identify release dependency environment
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Verify pinned SDK source
+  - Verify restored prefix
+  ✓ Build official SDK
+  ✓ Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Provision pinned Proton helper
+  ✓ Restore release compiler cache
+  ✓ Build production release and audit native package
+  - Save release compiler cache
+  ✓ Stage split debug symbols by build ID
+  - Export exact application source
+  - Check the source export holds every build input
+  - Restore source-export compiler cache
+  - Compile the source export on development and stable builds
+  - Save source-export compiler cache
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Stage flat native artifact evidence
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / native (debian13) in 8m22s (ID 132406949889)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Bootstrap checkout tools
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Identify the package snapshot
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Standard distro dependencies
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  - Validate exact release source
+  ✓ Identify release dependency environment
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Verify pinned SDK source
+  ✓ Verify restored prefix
+  - Build official SDK
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Provision pinned Proton helper
+  ✓ Restore release compiler cache
+  ✓ Build production release and audit native package
+  - Save release compiler cache
+  ✓ Stage split debug symbols by build ID
+  - Export exact application source
+  - Check the source export holds every build input
+  - Restore source-export compiler cache
+  - Compile the source export on development and stable builds
+  - Save source-export compiler cache
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Stage flat native artifact evidence
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / native (ubuntu26.04) in 9m5s (ID 132406949902)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Bootstrap checkout tools
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Identify the package snapshot
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Standard distro dependencies
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  - Validate exact release source
+  ✓ Identify release dependency environment
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Verify pinned SDK source
+  ✓ Verify restored prefix
+  - Build official SDK
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Provision pinned Proton helper
+  ✓ Restore release compiler cache
+  ✓ Build production release and audit native package
+  - Save release compiler cache
+  ✓ Stage split debug symbols by build ID
+  - Export exact application source
+  - Check the source export holds every build input
+  - Restore source-export compiler cache
+  - Compile the source export on development and stable builds
+  - Save source-export compiler cache
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Stage flat native artifact evidence
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / native (fedora45) in 5m14s (ID 132406949917)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Bootstrap checkout tools
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Identify the package snapshot
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Standard distro dependencies
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  - Validate exact release source
+  ✓ Identify release dependency environment
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Verify pinned SDK source
+  ✓ Verify restored prefix
+  - Build official SDK
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Provision pinned Proton helper
+  ✓ Restore release compiler cache
+  ✓ Build production release and audit native package
+  - Save release compiler cache
+  ✓ Stage split debug symbols by build ID
+  - Export exact application source
+  - Check the source export holds every build input
+  - Restore source-export compiler cache
+  - Compile the source export on development and stable builds
+  - Save source-export compiler cache
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Stage flat native artifact evidence
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / arch-install in 56s (ID 132408164830)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Run pacman -Syu --noconfirm --needed git ca-certificates python
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+  ✓ Install exact CI artifact, start resident, and uninstall
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / appimage-sources in 3m18s (ID 132409451119)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+  ✓ Signed Ubuntu source indexes
+  ✓ Key distro source downloads by the bundled Ubuntu packages
+  ✓ Restore authenticated distro source downloads
+  ✓ Collect exact bundled-component sources
+  - Save authenticated distro source downloads
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ packages / appimage-pipewire in 1m32s (ID 132409451275)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+  ✓ Extract the AppImage
+  ✓ Link pipewiresrc on Ubuntu 26.04's PipeWire
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+- prune caches (ID 132409539084)
+* packages / sbom (ID 132410241122)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+  ✓ RPM extraction tools
+  ✓ Pinned Syft and Grype
+  ✓ Identify the current Grype database
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  * Download, verify and import the Grype database
+  * Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  * Generate the packages' SBOMs
+  * Scan the SBOMs and apply the vulnerability policy
+  * Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  * Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+Refreshing run status every 60 seconds. Press Ctrl+C to quit.
+
+* fix/scroll-pointer-release-1514 CI patrick-hudson/put.gd-desktop#1520 · 43581469746
+Triggered via workflow_dispatch about 16 minutes ago
+
+JOBS
+✓ changes in 5s (ID 132406921405)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Select jobs from changed paths
+  - Retain exact source CI provenance
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ contracts in 3m36s (ID 132406921698)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install QEMU disk utilities and dwz for the contracts
+  ✓ Release, packaging and CI tool contracts
+  ✓ Proton helper source contracts
+  ✓ Lab identity and storage safety contracts
+  ✓ Surface driver, map, fixture, redact and recipe contracts
+  ✓ Cold-family observer contracts
+  ✓ Replay saved live-S3 numeric evidence
+  ✓ Lint workflows
+  ✓ Scan every branch and tag for leaked secrets
+  ✓ Preserve contract reports
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ linux (24.04) in 8m35s (ID 132406949712)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Install distro dependencies
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Trust container checkout for build identity
+  ✓ Identify exact dependency cache environment
+  ✓ Restore verified dependency prefix
+  ✓ Verify restored dependency prefix
+  - Provision pinned AWS SDK
+  - Save verified dependency prefix
+  ✓ Provision pinned Proton helper
+  ✓ Reproduce the exact compiled Proton helper
+  ✓ Restore compiler cache
+  ✓ Build
+  ✓ Keep only this build's compiler cache entries
+  - Save compiler cache
+  ✓ Restore test durations
+  ✓ Test
+  ✓ Report flaky tests
+  ✓ Save test durations
+  - Check the surface map against the UI catalog
+  - Preserve the UI catalog
+  ✓ Preserve structured test reports
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ sanitizers (clang ASan/UBSan) in 7m27s (ID 132406949713)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Install distro dependencies
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Trust container checkout for build identity
+  ✓ Identify exact dependency cache environment
+  ✓ Restore verified dependency prefix
+  ✓ Verify restored dependency prefix
+  - Provision pinned AWS SDK
+  - Save verified dependency prefix
+  ✓ Identify instrumented QtCore
+  ✓ Restore instrumented QtCore
+  - Build instrumented QtCore
+  - Save instrumented QtCore
+  ✓ Restore compiler cache
+  ✓ Build
+  ✓ Keep only this build's compiler cache entries
+  - Save compiler cache
+  ✓ Test core contracts under ASan/UBSan
+  ✓ Report flaky tests
+  ✓ Preserve structured test reports
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ linux (26.04) in 11m5s (ID 132406949737)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Install distro dependencies
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Trust container checkout for build identity
+  ✓ Identify exact dependency cache environment
+  ✓ Restore verified dependency prefix
+  ✓ Verify restored dependency prefix
+  - Provision pinned AWS SDK
+  - Save verified dependency prefix
+  ✓ Provision pinned Proton helper
+  ✓ Reproduce the exact compiled Proton helper
+  ✓ Restore compiler cache
+  ✓ Build
+  ✓ Keep only this build's compiler cache entries
+  - Save compiler cache
+  ✓ Restore test durations
+  ✓ Test
+  ✓ Report flaky tests
+  ✓ Save test durations
+  ✓ Check the surface map against the UI catalog
+  ✓ Preserve the UI catalog
+  ✓ Preserve structured test reports
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / arch in 5m10s (ID 132406949831)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Bootstrap checkout
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Restore release compiler cache
+  ✓ Distro dependencies and build user
+  ✓ Build verified dependencies and production package
+  - Save release compiler cache
+  ✓ Stage flat native evidence
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / appimage in 10m42s (ID 132406949837)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Use official Ubuntu archive mirrors
+  ✓ Identify the package snapshot
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Standard build dependencies
+  ✓ The locked Qt version
+  ✓ Run jurplel/install-qt-action@b344308e4483fc892e0d27b3cd1b173ebdd95f06
+  - Validate exact release source
+  ✓ Verify pinned SDK source
+  ✓ Identify AppImage dependency environment
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Verify restored AppImage dependencies and fresh notices
+  - Standard upstream dependency builds
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Provision pinned Proton helper
+  ✓ Headless Wayland compositor for the image's start check
+  ✓ Restore release compiler cache
+  ✓ Build and audit AppImage
+  - Save release compiler cache
+  ✓ Stage split debug symbols by build ID
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Stage flat AppImage artifact evidence
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run jurplel/install-qt-action@b344308e4483fc892e0d27b3cd1b173ebdd95f06
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ packages / native (ubuntu24.04) in 9m32s (ID 132406949869)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Bootstrap checkout tools
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Identify the package snapshot
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Standard distro dependencies
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  - Validate exact release source
+  ✓ Identify release dependency environment
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Verify pinned SDK source
+  ✓ Verify restored prefix
+  - Build official SDK
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Provision pinned Proton helper
+  ✓ Restore release compiler cache
+  ✓ Build production release and audit native package
+  - Save release compiler cache
+  ✓ Stage split debug symbols by build ID
+  ✓ Export exact application source
+  - Check the source export holds every build input
+  ✓ Restore source-export compiler cache
+  ✓ Compile the source export on development and stable builds
+  - Save source-export compiler cache
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Stage flat native artifact evidence
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / native (fedora44) in 14m7s (ID 132406949874)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Bootstrap checkout tools
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Identify the package snapshot
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Standard distro dependencies
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  - Validate exact release source
+  ✓ Identify release dependency environment
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Verify pinned SDK source
+  - Verify restored prefix
+  ✓ Build official SDK
+  ✓ Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Provision pinned Proton helper
+  ✓ Restore release compiler cache
+  ✓ Build production release and audit native package
+  - Save release compiler cache
+  ✓ Stage split debug symbols by build ID
+  - Export exact application source
+  - Check the source export holds every build input
+  - Restore source-export compiler cache
+  - Compile the source export on development and stable builds
+  - Save source-export compiler cache
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Stage flat native artifact evidence
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / native (debian13) in 8m22s (ID 132406949889)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Bootstrap checkout tools
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Identify the package snapshot
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Standard distro dependencies
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  - Validate exact release source
+  ✓ Identify release dependency environment
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Verify pinned SDK source
+  ✓ Verify restored prefix
+  - Build official SDK
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Provision pinned Proton helper
+  ✓ Restore release compiler cache
+  ✓ Build production release and audit native package
+  - Save release compiler cache
+  ✓ Stage split debug symbols by build ID
+  - Export exact application source
+  - Check the source export holds every build input
+  - Restore source-export compiler cache
+  - Compile the source export on development and stable builds
+  - Save source-export compiler cache
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Stage flat native artifact evidence
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / native (ubuntu26.04) in 9m5s (ID 132406949902)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Bootstrap checkout tools
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Identify the package snapshot
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Standard distro dependencies
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  - Validate exact release source
+  ✓ Identify release dependency environment
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Verify pinned SDK source
+  ✓ Verify restored prefix
+  - Build official SDK
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Provision pinned Proton helper
+  ✓ Restore release compiler cache
+  ✓ Build production release and audit native package
+  - Save release compiler cache
+  ✓ Stage split debug symbols by build ID
+  - Export exact application source
+  - Check the source export holds every build input
+  - Restore source-export compiler cache
+  - Compile the source export on development and stable builds
+  - Save source-export compiler cache
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Stage flat native artifact evidence
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / native (fedora45) in 5m14s (ID 132406949917)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Bootstrap checkout tools
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Identify the package snapshot
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Standard distro dependencies
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  - Validate exact release source
+  ✓ Identify release dependency environment
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Verify pinned SDK source
+  ✓ Verify restored prefix
+  - Build official SDK
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Provision pinned Proton helper
+  ✓ Restore release compiler cache
+  ✓ Build production release and audit native package
+  - Save release compiler cache
+  ✓ Stage split debug symbols by build ID
+  - Export exact application source
+  - Check the source export holds every build input
+  - Restore source-export compiler cache
+  - Compile the source export on development and stable builds
+  - Save source-export compiler cache
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Stage flat native artifact evidence
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / arch-install in 56s (ID 132408164830)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Run pacman -Syu --noconfirm --needed git ca-certificates python
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+  ✓ Install exact CI artifact, start resident, and uninstall
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / appimage-sources in 3m18s (ID 132409451119)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+  ✓ Signed Ubuntu source indexes
+  ✓ Key distro source downloads by the bundled Ubuntu packages
+  ✓ Restore authenticated distro source downloads
+  ✓ Collect exact bundled-component sources
+  - Save authenticated distro source downloads
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ packages / appimage-pipewire in 1m32s (ID 132409451275)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+  ✓ Extract the AppImage
+  ✓ Link pipewiresrc on Ubuntu 26.04's PipeWire
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+- prune caches (ID 132409539084)
+* packages / sbom (ID 132410241122)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+  ✓ RPM extraction tools
+  ✓ Pinned Syft and Grype
+  ✓ Identify the current Grype database
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Download, verify and import the Grype database
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Generate the packages' SBOMs
+  * Scan the SBOMs and apply the vulnerability policy
+  * Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  * Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+✓ fix/scroll-pointer-release-1514 CI patrick-hudson/put.gd-desktop#1520 · 43581469746
+Triggered via workflow_dispatch about 17 minutes ago
+
+JOBS
+✓ changes in 5s (ID 132406921405)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Select jobs from changed paths
+  - Retain exact source CI provenance
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ contracts in 3m36s (ID 132406921698)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install QEMU disk utilities and dwz for the contracts
+  ✓ Release, packaging and CI tool contracts
+  ✓ Proton helper source contracts
+  ✓ Lab identity and storage safety contracts
+  ✓ Surface driver, map, fixture, redact and recipe contracts
+  ✓ Cold-family observer contracts
+  ✓ Replay saved live-S3 numeric evidence
+  ✓ Lint workflows
+  ✓ Scan every branch and tag for leaked secrets
+  ✓ Preserve contract reports
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ linux (24.04) in 8m35s (ID 132406949712)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Install distro dependencies
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Trust container checkout for build identity
+  ✓ Identify exact dependency cache environment
+  ✓ Restore verified dependency prefix
+  ✓ Verify restored dependency prefix
+  - Provision pinned AWS SDK
+  - Save verified dependency prefix
+  ✓ Provision pinned Proton helper
+  ✓ Reproduce the exact compiled Proton helper
+  ✓ Restore compiler cache
+  ✓ Build
+  ✓ Keep only this build's compiler cache entries
+  - Save compiler cache
+  ✓ Restore test durations
+  ✓ Test
+  ✓ Report flaky tests
+  ✓ Save test durations
+  - Check the surface map against the UI catalog
+  - Preserve the UI catalog
+  ✓ Preserve structured test reports
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ sanitizers (clang ASan/UBSan) in 7m27s (ID 132406949713)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Install distro dependencies
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Trust container checkout for build identity
+  ✓ Identify exact dependency cache environment
+  ✓ Restore verified dependency prefix
+  ✓ Verify restored dependency prefix
+  - Provision pinned AWS SDK
+  - Save verified dependency prefix
+  ✓ Identify instrumented QtCore
+  ✓ Restore instrumented QtCore
+  - Build instrumented QtCore
+  - Save instrumented QtCore
+  ✓ Restore compiler cache
+  ✓ Build
+  ✓ Keep only this build's compiler cache entries
+  - Save compiler cache
+  ✓ Test core contracts under ASan/UBSan
+  ✓ Report flaky tests
+  ✓ Preserve structured test reports
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ linux (26.04) in 11m5s (ID 132406949737)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Install distro dependencies
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Trust container checkout for build identity
+  ✓ Identify exact dependency cache environment
+  ✓ Restore verified dependency prefix
+  ✓ Verify restored dependency prefix
+  - Provision pinned AWS SDK
+  - Save verified dependency prefix
+  ✓ Provision pinned Proton helper
+  ✓ Reproduce the exact compiled Proton helper
+  ✓ Restore compiler cache
+  ✓ Build
+  ✓ Keep only this build's compiler cache entries
+  - Save compiler cache
+  ✓ Restore test durations
+  ✓ Test
+  ✓ Report flaky tests
+  ✓ Save test durations
+  ✓ Check the surface map against the UI catalog
+  ✓ Preserve the UI catalog
+  ✓ Preserve structured test reports
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / arch in 5m10s (ID 132406949831)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Bootstrap checkout
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Restore release compiler cache
+  ✓ Distro dependencies and build user
+  ✓ Build verified dependencies and production package
+  - Save release compiler cache
+  ✓ Stage flat native evidence
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / appimage in 10m42s (ID 132406949837)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Use official Ubuntu archive mirrors
+  ✓ Identify the package snapshot
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Standard build dependencies
+  ✓ The locked Qt version
+  ✓ Run jurplel/install-qt-action@b344308e4483fc892e0d27b3cd1b173ebdd95f06
+  - Validate exact release source
+  ✓ Verify pinned SDK source
+  ✓ Identify AppImage dependency environment
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Verify restored AppImage dependencies and fresh notices
+  - Standard upstream dependency builds
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Provision pinned Proton helper
+  ✓ Headless Wayland compositor for the image's start check
+  ✓ Restore release compiler cache
+  ✓ Build and audit AppImage
+  - Save release compiler cache
+  ✓ Stage split debug symbols by build ID
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Stage flat AppImage artifact evidence
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run jurplel/install-qt-action@b344308e4483fc892e0d27b3cd1b173ebdd95f06
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ packages / native (ubuntu24.04) in 9m32s (ID 132406949869)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Bootstrap checkout tools
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Identify the package snapshot
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Standard distro dependencies
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  - Validate exact release source
+  ✓ Identify release dependency environment
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Verify pinned SDK source
+  ✓ Verify restored prefix
+  - Build official SDK
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Provision pinned Proton helper
+  ✓ Restore release compiler cache
+  ✓ Build production release and audit native package
+  - Save release compiler cache
+  ✓ Stage split debug symbols by build ID
+  ✓ Export exact application source
+  - Check the source export holds every build input
+  ✓ Restore source-export compiler cache
+  ✓ Compile the source export on development and stable builds
+  - Save source-export compiler cache
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Stage flat native artifact evidence
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / native (fedora44) in 14m7s (ID 132406949874)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Bootstrap checkout tools
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Identify the package snapshot
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Standard distro dependencies
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  - Validate exact release source
+  ✓ Identify release dependency environment
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Verify pinned SDK source
+  - Verify restored prefix
+  ✓ Build official SDK
+  ✓ Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Provision pinned Proton helper
+  ✓ Restore release compiler cache
+  ✓ Build production release and audit native package
+  - Save release compiler cache
+  ✓ Stage split debug symbols by build ID
+  - Export exact application source
+  - Check the source export holds every build input
+  - Restore source-export compiler cache
+  - Compile the source export on development and stable builds
+  - Save source-export compiler cache
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Stage flat native artifact evidence
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / native (debian13) in 8m22s (ID 132406949889)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Bootstrap checkout tools
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Identify the package snapshot
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Standard distro dependencies
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  - Validate exact release source
+  ✓ Identify release dependency environment
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Verify pinned SDK source
+  ✓ Verify restored prefix
+  - Build official SDK
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Provision pinned Proton helper
+  ✓ Restore release compiler cache
+  ✓ Build production release and audit native package
+  - Save release compiler cache
+  ✓ Stage split debug symbols by build ID
+  - Export exact application source
+  - Check the source export holds every build input
+  - Restore source-export compiler cache
+  - Compile the source export on development and stable builds
+  - Save source-export compiler cache
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Stage flat native artifact evidence
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / native (ubuntu26.04) in 9m5s (ID 132406949902)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Bootstrap checkout tools
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Identify the package snapshot
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Standard distro dependencies
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  - Validate exact release source
+  ✓ Identify release dependency environment
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Verify pinned SDK source
+  ✓ Verify restored prefix
+  - Build official SDK
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Provision pinned Proton helper
+  ✓ Restore release compiler cache
+  ✓ Build production release and audit native package
+  - Save release compiler cache
+  ✓ Stage split debug symbols by build ID
+  - Export exact application source
+  - Check the source export holds every build input
+  - Restore source-export compiler cache
+  - Compile the source export on development and stable builds
+  - Save source-export compiler cache
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Stage flat native artifact evidence
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / native (fedora45) in 5m14s (ID 132406949917)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Bootstrap checkout tools
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Identify the package snapshot
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Standard distro dependencies
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  - Validate exact release source
+  ✓ Identify release dependency environment
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Verify pinned SDK source
+  ✓ Verify restored prefix
+  - Build official SDK
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Provision pinned Proton helper
+  ✓ Restore release compiler cache
+  ✓ Build production release and audit native package
+  - Save release compiler cache
+  ✓ Stage split debug symbols by build ID
+  - Export exact application source
+  - Check the source export holds every build input
+  - Restore source-export compiler cache
+  - Compile the source export on development and stable builds
+  - Save source-export compiler cache
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Stage flat native artifact evidence
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / arch-install in 56s (ID 132408164830)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Run pacman -Syu --noconfirm --needed git ca-certificates python
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+  ✓ Install exact CI artifact, start resident, and uninstall
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Stop containers
+  ✓ Complete job
+✓ packages / appimage-sources in 3m18s (ID 132409451119)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+  ✓ Signed Ubuntu source indexes
+  ✓ Key distro source downloads by the bundled Ubuntu packages
+  ✓ Restore authenticated distro source downloads
+  ✓ Collect exact bundled-component sources
+  - Save authenticated distro source downloads
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ packages / appimage-pipewire in 1m32s (ID 132409451275)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+  ✓ Extract the AppImage
+  ✓ Link pipewiresrc on Ubuntu 26.04's PipeWire
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+- prune caches (ID 132409539084)
+✓ packages / sbom in 1m50s (ID 132410241122)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+  ✓ RPM extraction tools
+  ✓ Pinned Syft and Grype
+  ✓ Identify the current Grype database
+  ✓ Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Download, verify and import the Grype database
+  - Run actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+  ✓ Generate the packages' SBOMs
+  ✓ Scan the SBOMs and apply the vulnerability policy
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ CI in 3s (ID 132410667093)
+  ✓ Set up job
+  ✓ Require every selected job
+  ✓ Complete job
+- packages / collect (ID 132410667865)
+- pipewire in 0s (ID 132410668293)

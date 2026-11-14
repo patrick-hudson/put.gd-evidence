@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "/home/lab/work/s1520/rfbshot.py", line 95, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/lab/work/s1520/rfbshot.py", line 55, in main
+    t = recvn(s, 1)[0]
+        ~~~~~^^^^^^
+  File "/home/lab/work/s1520/rfbshot.py", line 16, in recvn
+    chunk = sock.recv(min(1 << 20, n - len(data)))
+TimeoutError: timed out
+Traceback (most recent call last):
+  File "/home/lab/work/s1520/campaign.py", line 35, in <module>
+    page();s=start();time.sleep(5);shot('live-'+str(i)+'-running');output('live-'+str(i),wait(s))
+                                   ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lab/work/s1520/campaign.py", line 12, in shot
+    def shot(n):subprocess.run(['python3',str(LAB/'rfbshot.py'),str(d/(n+'.png')),'--vnc',str(port)],check=True)
+                ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['python3', '/home/lab/work/s1520/rfbshot.py', '/home/lab/work/s1520/b/live-0-running.png', '--vnc', '5900']' returned non-zero exit status 1.

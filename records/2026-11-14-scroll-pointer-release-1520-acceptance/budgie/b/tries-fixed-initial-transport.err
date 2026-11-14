@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/home/lab/work/s1520/trial.py", line 232, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/lab/work/s1520/trial.py", line 130, in main
+    rfb = Rfb(a.vnc)
+  File "/home/lab/work/s1520/trial.py", line 42, in __init__
+    self.sock = socket.create_connection(('127.0.0.1', port), timeout=10)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.15/socket.py", line 883, in create_connection
+    raise exceptions[0]
+  File "/usr/lib64/python3.15/socket.py", line 868, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+ConnectionRefusedError: [Errno 111] Connection refused
