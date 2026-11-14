@@ -1,0 +1,36 @@
+{"socketPath": "/tmp/sbr883414/putgd/session.sock", "utf8Bytes": 33}
+{"socketPath": "/tmp/sbr883414/wayland-0", "utf8Bytes": 24}
+{"socketPath": "/tmp/sbr883414/pipewire-0", "utf8Bytes": 25}
+XGetWindowProperty[_NET_WM_DESKTOP] failed (code=1)
+XGetWindowProperty[_NET_WM_DESKTOP] failed (code=1)
+XGetWindowProperty[_NET_WM_DESKTOP] failed (code=1)
+XGetWindowProperty[_NET_WM_DESKTOP] failed (code=1)
+Traceback (most recent call last):
+  File "/home/patrick/work/sb1114/physical_b.py", line 155, in <module>
+    sys.exit(r.main())
+             ^^^^^^^^
+  File "/home/patrick/work/sb1114/tools/lab/record_run.py", line 1228, in main
+    return Driver(args).main()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/sb1114/physical_b.py", line 139, in flow
+    frozen=record(False);moving=record(True,self.env.get('XDG_SESSION_TYPE')=='x11');row('12-monitor-motion' if self.env.get('XDG_SESSION_TYPE')=='wayland' else '10-motion-vs-control',moving>frozen+.05,motion=moving,frozenControl=frozen)
+           ^^^^^^^^^^^^^
+  File "/home/patrick/work/sb1114/physical_b.py", line 96, in record
+    control(motion=False);p=focus();target={'kind':'monitor'};active=call('recording.prepare',{'target':target,'format':'mp4','audio':{'system':False},'clickHighlights':moving and self.env.get('XDG_SESSION_TYPE')=='x11'})['recordingId'];rid=active;ready=record_wait(rid,('ready',));process_tree('11-bar' if moving else 'control-bar');call('recording.overlay',{'id':rid,'visible':False});control(motion=moving);call('recording.start',{'id':rid});time.sleep(1)
+                                                                                                                                                                                                                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/sb1114/physical_b.py", line 58, in process_tree
+    try:xd('windowactivate','--sync',window)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/sb1114/physical_b.py", line 10, in xd
+    def xd(*a):return subprocess.check_output(['xdotool',*map(str,a)],env=self.env,text=True,timeout=5).strip()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 1196, in communicate
+    stdout = self.stdout.read()
+             ^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

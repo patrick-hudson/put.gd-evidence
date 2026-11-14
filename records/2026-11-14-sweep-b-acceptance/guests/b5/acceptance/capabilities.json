@@ -1,0 +1,633 @@
+{
+  "editor": {
+    "admissionPixels": 24000000,
+    "available": true,
+    "blurStyles": [
+      "blur",
+      "pixelate"
+    ],
+    "commands": [
+      "inspect",
+      "apply",
+      "preview",
+      "saveCopy",
+      "copy",
+      "fileDialog",
+      "view",
+      "submit",
+      "cancel",
+      "raise"
+    ],
+    "fileFormats": [
+      "png",
+      "jpeg"
+    ],
+    "open": false,
+    "output": "png",
+    "shapes": [
+      "redact",
+      "blur",
+      "arrow",
+      "rectangle",
+      "text",
+      "highlight",
+      "step",
+      "pen",
+      "ellipse",
+      "line"
+    ],
+    "sources": [
+      "region",
+      "window",
+      "desktop",
+      "clipboard",
+      "file",
+      "scroll"
+    ]
+  },
+  "providers": {
+    "backblaze-b2": {
+      "conditionalCreate": true,
+      "conditionalDelete": false,
+      "conditionalReplace": false,
+      "delete": true,
+      "deletionEffect": "Deletes exactly the uploaded B2 file version by its ID. put.gd never uploads over a visible file, so the name then shows nothing, or an older version that was hidden before the upload. Authorized links stop working when they expire.",
+      "maximumNameBytes": 1023,
+      "maximumObjectBytes": 10000000000000,
+      "privateUploads": false,
+      "referenceDelete": false,
+      "serverNamesObjects": false,
+      "sharing": false,
+      "stat": true,
+      "urls": true,
+      "versionAddressing": true
+    },
+    "custom-http": {
+      "conditionalCreate": false,
+      "conditionalDelete": false,
+      "conditionalReplace": false,
+      "delete": false,
+      "deletionEffect": "Asks the server to delete this upload through the deletion URL it returned with the link. What the server removes, and how soon the link stops working, is up to the server.",
+      "maximumNameBytes": 255,
+      "maximumObjectBytes": null,
+      "privateUploads": false,
+      "referenceDelete": true,
+      "serverNamesObjects": true,
+      "sharing": false,
+      "stat": false,
+      "urls": true,
+      "versionAddressing": false
+    },
+    "proton-drive": {
+      "conditionalCreate": true,
+      "conditionalDelete": false,
+      "conditionalReplace": false,
+      "delete": false,
+      "deletionEffect": "Safe remote deletion is unavailable: Proton does not expose an atomic revision-guarded file deletion. Revoke share links separately.",
+      "maximumNameBytes": 255,
+      "maximumObjectBytes": null,
+      "privateUploads": true,
+      "referenceDelete": false,
+      "serverNamesObjects": false,
+      "sharing": true,
+      "stat": true,
+      "urls": true,
+      "versionAddressing": false
+    },
+    "s3": {
+      "conditionalCreate": true,
+      "conditionalDelete": true,
+      "conditionalReplace": true,
+      "delete": true,
+      "deletionEffect": "Guarded origin removal; selected versions only; browser/CDN caches may retain bytes",
+      "maximumNameBytes": 1024,
+      "maximumObjectBytes": 5497558138880,
+      "privateUploads": false,
+      "referenceDelete": false,
+      "serverNamesObjects": false,
+      "sharing": false,
+      "stat": true,
+      "urls": true,
+      "versionAddressing": true
+    }
+  },
+  "recording": {
+    "acquisition": "wlr-capture",
+    "active": null,
+    "audio": {
+      "microphone": true,
+      "system": true
+    },
+    "available": true,
+    "clickHighlights": {
+      "available": true,
+      "drawnBy": "recorder",
+      "route": "labwc-mouse-binds",
+      "targetReasons": {
+        "window": "A window recording on labwc has no pointer position: the compositor's window capture source has no cursor source, and labwc reports no window geometry."
+      },
+      "targets": [
+        "monitor",
+        "desktop",
+        "region"
+      ]
+    },
+    "codecs": {
+      "mp4": [
+        "h264",
+        "h265"
+      ],
+      "webm": [
+        "vp9"
+      ]
+    },
+    "commands": [
+      "windows",
+      "microphones",
+      "prepare",
+      "start",
+      "pause",
+      "resume",
+      "stop",
+      "cancel",
+      "inspect",
+      "select",
+      "raise",
+      "overlay",
+      "audio",
+      "edit",
+      "preview",
+      "review",
+      "saveCopy",
+      "upload"
+    ],
+    "editCommands": [
+      "setTrim",
+      "resetTrim",
+      "addMask",
+      "updateMask",
+      "removeMask"
+    ],
+    "exportEncoders": {
+      "h264": [
+        "libx264"
+      ],
+      "h265": [
+        "libx265"
+      ],
+      "vp9": [
+        "libvpx-vp9"
+      ]
+    },
+    "ffmpeg": {
+      "avcodec": "63.1.102",
+      "avfilter": "12.1.102",
+      "avformat": "63.1.102",
+      "avutil": "61.1.102",
+      "encoderFailures": {
+        "h264_nvenc": "libcuda.so.1 is not installed",
+        "h264_vaapi": "no VA-API device accepts it",
+        "hevc_nvenc": "libcuda.so.1 is not installed",
+        "hevc_vaapi": "no VA-API device accepts it"
+      },
+      "encoders": {
+        "aac": true,
+        "gif": true,
+        "h264_nvenc": true,
+        "h264_vaapi": true,
+        "hevc_nvenc": true,
+        "hevc_vaapi": true,
+        "libopenh264": false,
+        "libopus": true,
+        "libvorbis": false,
+        "libvpx-vp9": true,
+        "libwebp_anim": true,
+        "libx264": true,
+        "libx265": true,
+        "vp9_vaapi": false
+      },
+      "filters": {
+        "asetpts": true,
+        "atrim": true,
+        "avgblur": true,
+        "crop": true,
+        "drawbox": true,
+        "format": true,
+        "fps": true,
+        "palettegen": true,
+        "paletteuse": true,
+        "scale": true,
+        "setpts": true,
+        "trim": true
+      },
+      "h264Decoder": {
+        "failure": null,
+        "name": "h264",
+        "usable": true
+      },
+      "muxers": {
+        "gif": true,
+        "matroska": true,
+        "mp4": true,
+        "webm": true,
+        "webp": true
+      }
+    },
+    "formats": [
+      "mp4",
+      "webm",
+      "gif",
+      "webp"
+    ],
+    "gstreamer": {
+      "audioSources": [
+        "pulsesrc",
+        "pipewiresrc"
+      ],
+      "available": true,
+      "elements": {
+        "aacparse": "1.24.2",
+        "appsink": "1.24.2",
+        "appsrc": "1.24.2",
+        "audioconvert": "1.24.2",
+        "audiomixer": "1.24.2",
+        "audioresample": "1.24.2",
+        "avenc_aac": null,
+        "compositor": null,
+        "fdkaacenc": null,
+        "h264parse": "1.24.2",
+        "identity": "1.24.2",
+        "matroskamux": "1.24.2",
+        "mp4mux": null,
+        "openh264enc": null,
+        "pipewiresrc": "1.0.5",
+        "pulsesrc": "1.24.2",
+        "vaapih264enc": null,
+        "vah264enc": null,
+        "vah264lpenc": null,
+        "videoconvert": "1.24.2",
+        "videocrop": "1.24.2",
+        "videorate": "1.24.2",
+        "videoscale": "1.24.2",
+        "voaacenc": "1.24.2",
+        "vp9enc": null,
+        "webmmux": "1.24.2",
+        "webpenc": null,
+        "x264enc": "1.24.1",
+        "x265enc": null,
+        "ximagesrc": "1.24.2"
+      },
+      "encoderFailures": {},
+      "liveAacEncoders": [
+        "voaacenc"
+      ],
+      "liveH264Encoders": [
+        "x264enc"
+      ],
+      "liveSources": [
+        "ximagesrc",
+        "pipewiresrc"
+      ],
+      "pluginDirectories": [
+        "/tmp/.mount_putgd-KLanNK/usr/lib/gstreamer-1.0"
+      ],
+      "usableH264Encoders": [
+        "x264enc"
+      ],
+      "version": "GStreamer 1.24.2",
+      "webpAnimated": false
+    },
+    "limits": {
+      "animationMaxEdge": 1280,
+      "animationMaxUs": 60000000,
+      "maxFileBytes": 1099511627776,
+      "maxMasks": 64
+    },
+    "liveCapture": {
+      "audio": true,
+      "encoder": true,
+      "source": true
+    },
+    "maskKinds": [
+      "blur",
+      "solid"
+    ],
+    "overlayExclusion": {},
+    "pipewire": {
+      "socket": "/run/user/1000/pipewire-0"
+    },
+    "schemaVersion": 1,
+    "session": "wayland",
+    "states": [
+      "preparing",
+      "ready",
+      "starting",
+      "recording",
+      "paused",
+      "stopping",
+      "reviewing",
+      "exporting",
+      "submitted",
+      "cancelled",
+      "failed"
+    ],
+    "targetReasons": {
+      "desktop": "Recording the whole desktop here covers one output; record a monitor instead"
+    },
+    "targets": [
+      "monitor",
+      "region",
+      "window"
+    ],
+    "timeUnit": "microseconds",
+    "windowAcquisition": "wlr-capture",
+    "windowList": true,
+    "wlrCapture": {
+      "available": true,
+      "elements": true,
+      "outputs": 2,
+      "pointer": true,
+      "protocols": {
+        "ext_foreign_toplevel_image_capture_source_manager_v1": 1,
+        "ext_foreign_toplevel_list_v1": 1,
+        "ext_image_copy_capture_manager_v1": 1,
+        "ext_output_image_capture_source_manager_v1": 1,
+        "wl_shm": 1,
+        "zwlr_foreign_toplevel_manager_v1": 3
+      },
+      "windows": true
+    }
+  },
+  "scroll": {
+    "available": true,
+    "frames": "image-copy",
+    "injector": "wlr-virtual-pointer",
+    "maxHeight": 30000,
+    "reason": null,
+    "selection": "helper"
+  },
+  "source": {
+    "adapter": "budgie-wayland",
+    "capture": {
+      "desktop": {
+        "available": true,
+        "protocol": "ext-image-copy-capture-v1"
+      },
+      "monitor": {
+        "available": true,
+        "pointer": "ext-image-copy-capture-cursor-session",
+        "protocol": "ext-image-copy-capture-v1"
+      },
+      "region": {
+        "available": true,
+        "helper": {
+          "active": false,
+          "build": {
+            "baseVersion": "26.1113.4927",
+            "commitCount": 4927,
+            "dirty": false,
+            "gitCommit": "dd7e9c4b18b7ab75c2b5f9825e3b78a5d0452c4b",
+            "gitTree": "e12d7610bec4319749a5b55b5411ce3f2b7318c2",
+            "packageVersion": "26.1113.4927~dev+gdd7e9c4b18b7",
+            "schemaVersion": 1,
+            "sourceProvenance": "git",
+            "version": "26.1113.4927-dev+gdd7e9c4b18b7"
+          },
+          "cleanupRequired": false,
+          "lastExit": {},
+          "processId": 0
+        },
+        "protocol": "ext-image-copy-capture-v1"
+      },
+      "repeat": {
+        "available": true,
+        "protocol": "ext-image-copy-capture-v1",
+        "remembered": false
+      },
+      "text": {
+        "available": true,
+        "helper": {
+          "active": false,
+          "build": {
+            "baseVersion": "26.1113.4927",
+            "commitCount": 4927,
+            "dirty": false,
+            "gitCommit": "dd7e9c4b18b7ab75c2b5f9825e3b78a5d0452c4b",
+            "gitTree": "e12d7610bec4319749a5b55b5411ce3f2b7318c2",
+            "packageVersion": "26.1113.4927~dev+gdd7e9c4b18b7",
+            "schemaVersion": 1,
+            "sourceProvenance": "git",
+            "version": "26.1113.4927-dev+gdd7e9c4b18b7"
+          },
+          "cleanupRequired": false,
+          "lastExit": {},
+          "processId": 0
+        },
+        "protocol": "ext-image-copy-capture-v1"
+      },
+      "window": {
+        "available": true,
+        "content": "client-only",
+        "occlusion": "ignored",
+        "protocol": "ext-foreign-toplevel-image-capture-source-v1"
+      }
+    },
+    "captureHelper": {
+      "active": false,
+      "build": {
+        "baseVersion": "26.1113.4927",
+        "commitCount": 4927,
+        "dirty": false,
+        "gitCommit": "dd7e9c4b18b7ab75c2b5f9825e3b78a5d0452c4b",
+        "gitTree": "e12d7610bec4319749a5b55b5411ce3f2b7318c2",
+        "packageVersion": "26.1113.4927~dev+gdd7e9c4b18b7",
+        "schemaVersion": 1,
+        "sourceProvenance": "git",
+        "version": "26.1113.4927-dev+gdd7e9c4b18b7"
+      },
+      "cleanupRequired": false,
+      "lastExit": {},
+      "processId": 0
+    },
+    "clipboard": {
+      "available": true,
+      "error": "",
+      "import": "ext-data-control-v1",
+      "protocol_version": 1,
+      "result": "ext-data-control-v1-clipboard-only",
+      "types": [
+        "files",
+        "image",
+        "text"
+      ]
+    },
+    "delay": {
+      "available": true,
+      "indicator": "layer-surface",
+      "seconds": [
+        3,
+        5,
+        10
+      ]
+    },
+    "imageCopy": {
+      "available": true,
+      "outputs": {
+        "available": true,
+        "error": ""
+      },
+      "protocol": "ext-image-copy-capture-v1",
+      "protocols": {
+        "ext_foreign_toplevel_image_capture_source_manager_v1": 1,
+        "ext_foreign_toplevel_list_v1": 1,
+        "ext_image_copy_capture_manager_v1": 1,
+        "ext_output_image_capture_source_manager_v1": 1,
+        "wl_shm": 1,
+        "zwlr_foreign_toplevel_manager_v1": 3
+      },
+      "windows": {
+        "available": true,
+        "error": "",
+        "listed": 1
+      }
+    },
+    "outputs": {
+      "available": true,
+      "error": "",
+      "outputs": 2,
+      "protocol": "wl-output+xdg-output",
+      "protocol_version": 3,
+      "revision": 4
+    },
+    "resident": "qt-core",
+    "scroll": {
+      "available": true,
+      "frames": "image-copy",
+      "injector": "wlr-virtual-pointer",
+      "maxHeight": 30000,
+      "reason": null,
+      "selection": "helper"
+    },
+    "shortcuts": {
+      "available": true,
+      "backend": "labwc-bridge",
+      "bindings": {
+        "clipboard": {
+          "actual": [],
+          "backend": "labwc-bridge",
+          "bound": false,
+          "requested": "",
+          "state": "unbound"
+        },
+        "desktop": {
+          "actual": [
+            "Ctrl+Shift+3"
+          ],
+          "backend": "labwc-bridge",
+          "bound": true,
+          "effective": "Ctrl+Shift+3",
+          "requested": "Ctrl+Shift+3",
+          "state": "bound"
+        },
+        "edit": {
+          "actual": [],
+          "backend": "labwc-bridge",
+          "bound": false,
+          "requested": "",
+          "state": "unbound"
+        },
+        "monitor": {
+          "actual": [],
+          "backend": "labwc-bridge",
+          "bound": false,
+          "requested": "",
+          "state": "unbound"
+        },
+        "record": {
+          "actual": [],
+          "backend": "labwc-bridge",
+          "bound": false,
+          "requested": "",
+          "state": "unbound"
+        },
+        "region": {
+          "actual": [
+            "Ctrl+Shift+1"
+          ],
+          "backend": "labwc-bridge",
+          "bound": true,
+          "effective": "Ctrl+Shift+1",
+          "requested": "Ctrl+Shift+1",
+          "state": "bound"
+        },
+        "repeat": {
+          "actual": [],
+          "backend": "labwc-bridge",
+          "bound": false,
+          "requested": "",
+          "state": "unbound"
+        },
+        "scroll": {
+          "actual": [],
+          "backend": "labwc-bridge",
+          "bound": false,
+          "requested": "",
+          "state": "unbound"
+        },
+        "text": {
+          "actual": [],
+          "backend": "labwc-bridge",
+          "bound": false,
+          "requested": "",
+          "state": "unbound"
+        },
+        "window": {
+          "actual": [
+            "Ctrl+Shift+2"
+          ],
+          "backend": "labwc-bridge",
+          "bound": true,
+          "effective": "Ctrl+Shift+2",
+          "requested": "Ctrl+Shift+2",
+          "state": "bound"
+        }
+      },
+      "service": "org.putgd.App.Budgie"
+    }
+  },
+  "text": {
+    "available": true,
+    "engines": {},
+    "landlockAbi": 10,
+    "languages": [
+      {
+        "bytes": 4113088,
+        "id": "eng",
+        "kind": "packaged"
+      }
+    ],
+    "sources": {
+      "clipboard": {
+        "available": true
+      },
+      "desktop": {
+        "available": true
+      },
+      "file": {
+        "available": true
+      },
+      "history": {
+        "available": true
+      },
+      "monitor": {
+        "available": true
+      },
+      "region": {
+        "available": true
+      },
+      "window": {
+        "available": true
+      }
+    }
+  }
+}

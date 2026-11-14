@@ -1,0 +1,1587 @@
+[
+  {
+    "row": "capabilities",
+    "passed": true,
+    "capabilities": {
+      "acquisition": "x11",
+      "active": null,
+      "audio": {
+        "microphone": false,
+        "microphoneMessage": "The sound server did not answer, so no microphone can be opened.",
+        "microphoneReason": "sound_server_unavailable",
+        "system": true
+      },
+      "available": true,
+      "clickHighlights": {
+        "available": true,
+        "drawnBy": "recorder",
+        "route": "x11-xinput2",
+        "targets": [
+          "monitor",
+          "desktop",
+          "region",
+          "window"
+        ]
+      },
+      "codecs": {
+        "mp4": [
+          "h264",
+          "h265"
+        ],
+        "webm": [
+          "vp9"
+        ]
+      },
+      "commands": [
+        "windows",
+        "microphones",
+        "prepare",
+        "start",
+        "pause",
+        "resume",
+        "stop",
+        "cancel",
+        "inspect",
+        "select",
+        "raise",
+        "overlay",
+        "audio",
+        "edit",
+        "preview",
+        "review",
+        "saveCopy",
+        "upload"
+      ],
+      "editCommands": [
+        "setTrim",
+        "resetTrim",
+        "addMask",
+        "updateMask",
+        "removeMask"
+      ],
+      "exportEncoders": {
+        "h264": [
+          "h264_vaapi",
+          "libx264"
+        ],
+        "h265": [
+          "libx265"
+        ],
+        "vp9": [
+          "libvpx-vp9"
+        ]
+      },
+      "ffmpeg": {
+        "avcodec": "63.1.102",
+        "avfilter": "12.1.102",
+        "avformat": "63.1.102",
+        "avutil": "61.1.102",
+        "encoderFailures": {
+          "h264_nvenc": "libcuda.so.1 is not installed",
+          "hevc_nvenc": "libcuda.so.1 is not installed",
+          "hevc_vaapi": "Function not implemented"
+        },
+        "encoders": {
+          "aac": true,
+          "gif": true,
+          "h264_nvenc": true,
+          "h264_vaapi": true,
+          "hevc_nvenc": true,
+          "hevc_vaapi": true,
+          "libopenh264": false,
+          "libopus": true,
+          "libvorbis": false,
+          "libvpx-vp9": true,
+          "libwebp_anim": true,
+          "libx264": true,
+          "libx265": true,
+          "vp9_vaapi": false
+        },
+        "filters": {
+          "asetpts": true,
+          "atrim": true,
+          "avgblur": true,
+          "crop": true,
+          "drawbox": true,
+          "format": true,
+          "fps": true,
+          "palettegen": true,
+          "paletteuse": true,
+          "scale": true,
+          "setpts": true,
+          "trim": true
+        },
+        "h264Decoder": {
+          "failure": null,
+          "name": "h264",
+          "usable": true
+        },
+        "muxers": {
+          "gif": true,
+          "matroska": true,
+          "mp4": true,
+          "webm": true,
+          "webp": true
+        }
+      },
+      "formats": [
+        "mp4",
+        "webm",
+        "gif",
+        "webp"
+      ],
+      "gstreamer": {
+        "audioSources": [
+          "pulsesrc",
+          "pipewiresrc"
+        ],
+        "available": true,
+        "elements": {
+          "aacparse": "1.24.2",
+          "appsink": "1.24.2",
+          "appsrc": "1.24.2",
+          "audioconvert": "1.24.2",
+          "audiomixer": "1.24.2",
+          "audioresample": "1.24.2",
+          "avenc_aac": null,
+          "compositor": null,
+          "fdkaacenc": null,
+          "h264parse": "1.24.2",
+          "identity": "1.24.2",
+          "matroskamux": "1.24.2",
+          "mp4mux": null,
+          "openh264enc": null,
+          "pipewiresrc": "1.0.5",
+          "pulsesrc": "1.24.2",
+          "vaapih264enc": "1.24.2",
+          "vah264enc": null,
+          "vah264lpenc": "1.24.2",
+          "videoconvert": "1.24.2",
+          "videocrop": "1.24.2",
+          "videorate": "1.24.2",
+          "videoscale": "1.24.2",
+          "voaacenc": "1.24.2",
+          "vp9enc": null,
+          "webmmux": "1.24.2",
+          "webpenc": null,
+          "x264enc": "1.24.1",
+          "x265enc": null,
+          "ximagesrc": "1.24.2"
+        },
+        "encoderFailures": {},
+        "liveAacEncoders": [
+          "voaacenc"
+        ],
+        "liveH264Encoders": [
+          "vah264lpenc",
+          "vaapih264enc",
+          "x264enc"
+        ],
+        "liveSources": [
+          "ximagesrc",
+          "pipewiresrc"
+        ],
+        "pluginDirectories": [
+          "/home/patrick/work/sb1114/analyzer/squashfs-root/usr/lib/gstreamer-1.0"
+        ],
+        "usableH264Encoders": [
+          "vah264lpenc",
+          "vaapih264enc",
+          "x264enc"
+        ],
+        "version": "GStreamer 1.24.2",
+        "webpAnimated": false
+      },
+      "limits": {
+        "animationMaxEdge": 1280,
+        "animationMaxUs": 60000000,
+        "maxFileBytes": 1099511627776,
+        "maxMasks": 64
+      },
+      "liveCapture": {
+        "audio": true,
+        "encoder": true,
+        "source": true
+      },
+      "maskKinds": [
+        "blur",
+        "solid"
+      ],
+      "overlayExclusion": {},
+      "schemaVersion": 1,
+      "session": "x11",
+      "states": [
+        "preparing",
+        "ready",
+        "starting",
+        "recording",
+        "paused",
+        "stopping",
+        "reviewing",
+        "exporting",
+        "submitted",
+        "cancelled",
+        "failed"
+      ],
+      "targets": [
+        "monitor",
+        "desktop",
+        "region",
+        "window"
+      ],
+      "timeUnit": "microseconds",
+      "windowAcquisition": "x11",
+      "windowList": false
+    }
+  },
+  {
+    "row": "8-screenshot-1px",
+    "passed": true,
+    "operation": {
+      "action": "region",
+      "cancelled": false,
+      "clipboardRevision": "2",
+      "copyStatus": "copied",
+      "created": "2026-11-13T23:53:00.497Z",
+      "destination": {
+        "credentials": {},
+        "profileId": "",
+        "profileRevision": "",
+        "providerId": "",
+        "settings": {}
+      },
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "id": "f836782a-2905-4071-873f-f14d5668f7e8",
+      "invocation": "1",
+      "items": [
+        {
+          "artifact": {
+            "bytes": 90,
+            "category": "images",
+            "id": "d0018744-c9f6-49a0-9d55-412b49edcbc0",
+            "mime": "image/png",
+            "name": "Screen-Capture-2026-11-13-17-53-00.png",
+            "namingPrepared": true,
+            "originalFile": false,
+            "previewPath": "/tmp/sbm12/data/putgd/artifacts/../previews/d0018744-c9f6-49a0-9d55-412b49edcbc0.png",
+            "sha256": "a95f73ef3e16e667ed573516a02fa1b4adee9936fec45da9cc3c21be1400d637"
+          },
+          "candidate": "",
+          "concurrencyToken": "",
+          "condition": "",
+          "error": {
+            "code": "",
+            "details": {},
+            "message": ""
+          },
+          "local": {
+            "error": {
+              "code": "",
+              "details": {},
+              "message": ""
+            },
+            "path": "/tmp/sbm12/archive/images/Screen-Capture-2026-11-13-17-53-00.png",
+            "status": "saved"
+          },
+          "objectReference": {},
+          "phase": "stored",
+          "publicationId": "53f67e90-572b-4f7d-8802-78ee6f408797",
+          "receipt": {
+            "concurrencyToken": "",
+            "destination": {
+              "credentials": {},
+              "profileId": "",
+              "profileRevision": "",
+              "providerId": "",
+              "settings": {}
+            },
+            "directUrl": "",
+            "objectReference": {},
+            "publicationId": "",
+            "schemaVersion": 1
+          },
+          "remoteStatus": "not_requested",
+          "shareIntent": "",
+          "shareIntentOptions": {},
+          "shareStatus": "not_requested",
+          "uploadProgress": null,
+          "uploadStatus": "local_only"
+        }
+      ],
+      "note": "",
+      "phase": "completed",
+      "requestTimeoutMs": null,
+      "settingsRevision": "2eda683985f82a5c652f4c17658687a95efcec09cee497102f3939ad02485d44",
+      "state": "completed"
+    },
+    "size": [
+      1,
+      1
+    ]
+  },
+  {
+    "row": "8-recording-drag-3",
+    "passed": true,
+    "operation": {
+      "action": "record",
+      "cancelled": true,
+      "clipboardRevision": "3",
+      "copyStatus": "no_result",
+      "created": "2026-11-13T23:53:03.198Z",
+      "destination": {
+        "credentials": {},
+        "profileId": "",
+        "profileRevision": "",
+        "providerId": "",
+        "settings": {}
+      },
+      "error": {
+        "code": "cancelled",
+        "details": {
+          "step": null
+        },
+        "message": "Region selection canceled; nothing was recorded"
+      },
+      "id": "6a0a0b87-8b88-4285-a607-8990797d8a3e",
+      "invocation": "2",
+      "items": [],
+      "note": "",
+      "phase": "cancelled",
+      "requestTimeoutMs": null,
+      "settingsRevision": "2eda683985f82a5c652f4c17658687a95efcec09cee497102f3939ad02485d44",
+      "state": "cancelled"
+    }
+  },
+  {
+    "row": "8-recording-drag-4",
+    "passed": true,
+    "operation": {
+      "canvas": [
+        4,
+        4
+      ],
+      "config": {
+        "adaptiveFps": true,
+        "audio": {
+          "microphone": false,
+          "system": false
+        },
+        "budgetBytes": 31748691285,
+        "clickHighlights": false,
+        "codec": "h264",
+        "format": "mp4",
+        "fps": 30,
+        "mime": "video/mp4"
+      },
+      "durationUs": 0,
+      "edit": {
+        "masks": [],
+        "revision": 1,
+        "trimEnd": null,
+        "trimStart": 0
+      },
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "exports": 0,
+      "lastExport": null,
+      "operationId": "81fbf9da-45ff-4bb7-b24c-bf23b732124a",
+      "outputSize": [
+        4,
+        4
+      ],
+      "overlayExcluded": true,
+      "overlayPlacement": "outside",
+      "pending": null,
+      "progress": {
+        "recordingAudio": {
+          "effective": false,
+          "requested": false
+        },
+        "recordingMicrophone": {
+          "available": false,
+          "effective": false,
+          "requested": false,
+          "unavailable": "The sound server did not answer, so no microphone can be opened."
+        }
+      },
+      "recordingId": "81fbf9da-45ff-4bb7-b24c-bf23b732124a",
+      "retainedUs": 0,
+      "selecting": false,
+      "state": "ready",
+      "target": {
+        "kind": "region",
+        "rect": [
+          150,
+          182,
+          4,
+          4
+        ]
+      }
+    }
+  },
+  {
+    "row": "9-select-escape",
+    "passed": true,
+    "operation": {
+      "action": "record",
+      "cancelled": true,
+      "clipboardRevision": "3",
+      "copyStatus": "no_result",
+      "created": "2026-11-13T23:53:07.689Z",
+      "destination": {
+        "credentials": {},
+        "profileId": "",
+        "profileRevision": "",
+        "providerId": "",
+        "settings": {}
+      },
+      "error": {
+        "code": "cancelled",
+        "details": {
+          "step": null
+        },
+        "message": "Region selection canceled; nothing was recorded"
+      },
+      "id": "bcb94783-2359-42ac-b88d-f6b083fc1c28",
+      "invocation": "4",
+      "items": [],
+      "note": "",
+      "phase": "cancelled",
+      "requestTimeoutMs": null,
+      "settingsRevision": "2eda683985f82a5c652f4c17658687a95efcec09cee497102f3939ad02485d44",
+      "state": "cancelled"
+    }
+  },
+  {
+    "row": "11-external-window",
+    "passed": true,
+    "operation": {
+      "action": "window",
+      "cancelled": false,
+      "clipboardRevision": "3",
+      "copyStatus": "copied",
+      "created": "2026-11-13T23:53:09.660Z",
+      "destination": {
+        "credentials": {},
+        "profileId": "",
+        "profileRevision": "",
+        "providerId": "",
+        "settings": {}
+      },
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "id": "4b22ea1a-8dba-4f37-907f-5e4e0ca356e9",
+      "invocation": "5",
+      "items": [
+        {
+          "artifact": {
+            "bytes": 7435,
+            "category": "images",
+            "id": "c5763ab5-50ac-4671-9247-8be2ec20adb9",
+            "mime": "image/png",
+            "name": "Screen-Capture-2026-11-13-17-53-09.png",
+            "namingPrepared": true,
+            "originalFile": false,
+            "previewPath": "/tmp/sbm12/data/putgd/artifacts/../previews/c5763ab5-50ac-4671-9247-8be2ec20adb9.png",
+            "sha256": "6e09022d47739b2d2acaa8829a2cedec271ed689ff1f68a69aa985894f00d928"
+          },
+          "candidate": "",
+          "concurrencyToken": "",
+          "condition": "",
+          "error": {
+            "code": "",
+            "details": {},
+            "message": ""
+          },
+          "local": {
+            "error": {
+              "code": "",
+              "details": {},
+              "message": ""
+            },
+            "path": "/tmp/sbm12/archive/images/Screen-Capture-2026-11-13-17-53-09.png",
+            "status": "saved"
+          },
+          "objectReference": {},
+          "phase": "stored",
+          "publicationId": "42123572-7691-4d6e-8bcc-196109a81a03",
+          "receipt": {
+            "concurrencyToken": "",
+            "destination": {
+              "credentials": {},
+              "profileId": "",
+              "profileRevision": "",
+              "providerId": "",
+              "settings": {}
+            },
+            "directUrl": "",
+            "objectReference": {},
+            "publicationId": "",
+            "schemaVersion": 1
+          },
+          "remoteStatus": "not_requested",
+          "shareIntent": "",
+          "shareIntentOptions": {},
+          "shareStatus": "not_requested",
+          "uploadProgress": null,
+          "uploadStatus": "local_only"
+        }
+      ],
+      "note": "",
+      "phase": "completed",
+      "requestTimeoutMs": null,
+      "settingsRevision": "2eda683985f82a5c652f4c17658687a95efcec09cee497102f3939ad02485d44",
+      "state": "completed"
+    }
+  },
+  {
+    "row": "10-frozen-control",
+    "passed": true,
+    "ready": {
+      "canvas": [
+        1920,
+        1080
+      ],
+      "config": {
+        "adaptiveFps": true,
+        "audio": {
+          "microphone": false,
+          "system": false
+        },
+        "budgetBytes": 31748643498,
+        "clickHighlights": false,
+        "codec": "h264",
+        "format": "mp4",
+        "fps": 30,
+        "mime": "video/mp4"
+      },
+      "durationUs": 0,
+      "edit": {
+        "masks": [],
+        "revision": 1,
+        "trimEnd": null,
+        "trimStart": 0
+      },
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "exports": 0,
+      "lastExport": null,
+      "operationId": "0a73cdb0-929f-4b27-a33f-5bae2a31a415",
+      "outputSize": [
+        1920,
+        1080
+      ],
+      "overlayExcluded": false,
+      "overlayPlacement": "handle",
+      "pending": null,
+      "progress": {
+        "recordingAudio": {
+          "effective": false,
+          "requested": false
+        },
+        "recordingMicrophone": {
+          "available": false,
+          "effective": false,
+          "requested": false,
+          "unavailable": "The sound server did not answer, so no microphone can be opened."
+        }
+      },
+      "recordingId": "0a73cdb0-929f-4b27-a33f-5bae2a31a415",
+      "retainedUs": 0,
+      "selecting": false,
+      "state": "ready",
+      "target": {
+        "kind": "monitor"
+      }
+    },
+    "review": {
+      "canvas": [
+        1920,
+        1080
+      ],
+      "config": {
+        "adaptiveFps": true,
+        "audio": {
+          "microphone": false,
+          "system": false
+        },
+        "budgetBytes": 31748643498,
+        "clickHighlights": false,
+        "codec": "h264",
+        "format": "mp4",
+        "fps": 30,
+        "mime": "video/mp4"
+      },
+      "durationUs": 3133333,
+      "edit": {
+        "masks": [],
+        "revision": 1,
+        "trimEnd": null,
+        "trimStart": 0
+      },
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "exports": 0,
+      "lastExport": null,
+      "operationId": "0a73cdb0-929f-4b27-a33f-5bae2a31a415",
+      "outputSize": [
+        1920,
+        1080
+      ],
+      "overlayExcluded": false,
+      "overlayPlacement": "handle",
+      "pending": null,
+      "progress": {
+        "audioEncoder": "",
+        "audioSources": {
+          "microphone": false,
+          "system": false
+        },
+        "bytes": 27888,
+        "canvas": [
+          1920,
+          1080
+        ],
+        "durationUs": 3133333,
+        "encoder": "vah264lpenc",
+        "frameRate": 30,
+        "framesCaptured": 96,
+        "framesDelivered": 96,
+        "framesDropped": 0,
+        "framesEncoded": 70,
+        "paused": false,
+        "recordingAudio": {
+          "effective": false,
+          "requested": false
+        },
+        "recordingMicrophone": {
+          "available": false,
+          "effective": false,
+          "requested": false,
+          "unavailable": "The sound server did not answer, so no microphone can be opened."
+        }
+      },
+      "recordingId": "0a73cdb0-929f-4b27-a33f-5bae2a31a415",
+      "retainedUs": 3133333,
+      "selecting": false,
+      "state": "reviewing",
+      "stopReason": "user",
+      "target": {
+        "kind": "monitor"
+      }
+    },
+    "exported": {
+      "canvas": [
+        1920,
+        1080
+      ],
+      "config": {
+        "adaptiveFps": true,
+        "audio": {
+          "microphone": false,
+          "system": false
+        },
+        "budgetBytes": 31748643498,
+        "clickHighlights": false,
+        "codec": "h264",
+        "format": "mp4",
+        "fps": 30,
+        "mime": "video/mp4"
+      },
+      "durationUs": 3133333,
+      "edit": {
+        "masks": [],
+        "revision": 1,
+        "trimEnd": null,
+        "trimStart": 0
+      },
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "exports": 1,
+      "lastExport": {
+        "bytes": 34016,
+        "command": "saveCopy",
+        "durationUs": 3133333,
+        "path": "/tmp/sbm12/out/frozen.mp4",
+        "revision": 1,
+        "status": "saved"
+      },
+      "operationId": "0a73cdb0-929f-4b27-a33f-5bae2a31a415",
+      "outputSize": [
+        1920,
+        1080
+      ],
+      "overlayExcluded": false,
+      "overlayPlacement": "handle",
+      "pending": null,
+      "progress": {
+        "exportFraction": 0.851064026708939
+      },
+      "recordingId": "0a73cdb0-929f-4b27-a33f-5bae2a31a415",
+      "retainedUs": 3133333,
+      "selecting": false,
+      "state": "reviewing",
+      "stopReason": "user",
+      "target": {
+        "kind": "monitor"
+      }
+    },
+    "motion": 0.002,
+    "path": "/tmp/sbm12/out/frozen.mp4",
+    "click": null
+  },
+  {
+    "row": "9-recording-escape",
+    "passed": false,
+    "afterEscape": {
+      "canvas": [
+        1920,
+        1080
+      ],
+      "config": {
+        "adaptiveFps": true,
+        "audio": {
+          "microphone": false,
+          "system": false
+        },
+        "budgetBytes": 31748511061,
+        "clickHighlights": true,
+        "codec": "h264",
+        "format": "mp4",
+        "fps": 30,
+        "mime": "video/mp4"
+      },
+      "durationUs": 3066666,
+      "edit": {
+        "masks": [],
+        "revision": 1,
+        "trimEnd": null,
+        "trimStart": 0
+      },
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "exports": 0,
+      "lastExport": null,
+      "operationId": "c53de51c-363a-4c0a-b5d7-0053d6f50f99",
+      "outputSize": [
+        1920,
+        1080
+      ],
+      "overlayExcluded": false,
+      "overlayPlacement": "handle",
+      "pending": null,
+      "progress": {
+        "audioEncoder": "",
+        "audioSources": {
+          "microphone": false,
+          "system": false
+        },
+        "bytes": 275583,
+        "durationUs": 3066666,
+        "encoder": "vah264lpenc",
+        "frameRate": 30,
+        "framesCaptured": 93,
+        "framesDelivered": 94,
+        "framesDropped": 0,
+        "framesEncoded": 92,
+        "paused": false,
+        "recordingAudio": {
+          "effective": false,
+          "requested": false
+        },
+        "recordingMicrophone": {
+          "available": false,
+          "effective": false,
+          "requested": false,
+          "unavailable": "The sound server did not answer, so no microphone can be opened."
+        }
+      },
+      "recordingId": "c53de51c-363a-4c0a-b5d7-0053d6f50f99",
+      "retainedUs": 0,
+      "selecting": false,
+      "state": "recording",
+      "target": {
+        "kind": "monitor"
+      }
+    },
+    "observed": "recording"
+  },
+  {
+    "row": "9-click-highlight",
+    "passed": true,
+    "check": {
+      "canvas": [
+        1920,
+        1080
+      ],
+      "count": 1,
+      "durationMs": 5433,
+      "seen": 1,
+      "watches": [
+        {
+          "dx": 8.1,
+          "dy": -7.7,
+          "firstMs": 2033,
+          "frames": 39,
+          "fromMs": 1966,
+          "lastMs": 3266,
+          "lengthMs": 1233,
+          "peak": 10897,
+          "peakMs": 2666,
+          "rgb": [
+            118,
+            115,
+            114
+          ],
+          "seen": true,
+          "toMs": 3266,
+          "x": 240,
+          "y": 447
+        }
+      ]
+    },
+    "reaction": {
+      "count": 1,
+      "x": 190.0,
+      "y": 365.0,
+      "at": 2011915.233996733
+    }
+  },
+  {
+    "row": "10-export-moving",
+    "passed": true,
+    "ready": {
+      "canvas": [
+        1920,
+        1080
+      ],
+      "config": {
+        "adaptiveFps": true,
+        "audio": {
+          "microphone": false,
+          "system": false
+        },
+        "budgetBytes": 31748511061,
+        "clickHighlights": true,
+        "codec": "h264",
+        "format": "mp4",
+        "fps": 30,
+        "mime": "video/mp4"
+      },
+      "durationUs": 0,
+      "edit": {
+        "masks": [],
+        "revision": 1,
+        "trimEnd": null,
+        "trimStart": 0
+      },
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "exports": 0,
+      "lastExport": null,
+      "operationId": "c53de51c-363a-4c0a-b5d7-0053d6f50f99",
+      "outputSize": [
+        1920,
+        1080
+      ],
+      "overlayExcluded": false,
+      "overlayPlacement": "handle",
+      "pending": null,
+      "progress": {
+        "recordingAudio": {
+          "effective": false,
+          "requested": false
+        },
+        "recordingMicrophone": {
+          "available": false,
+          "effective": false,
+          "requested": false,
+          "unavailable": "The sound server did not answer, so no microphone can be opened."
+        }
+      },
+      "recordingId": "c53de51c-363a-4c0a-b5d7-0053d6f50f99",
+      "retainedUs": 0,
+      "selecting": false,
+      "state": "ready",
+      "target": {
+        "kind": "monitor"
+      }
+    },
+    "review": {
+      "canvas": [
+        1920,
+        1080
+      ],
+      "config": {
+        "adaptiveFps": true,
+        "audio": {
+          "microphone": false,
+          "system": false
+        },
+        "budgetBytes": 31748511061,
+        "clickHighlights": true,
+        "codec": "h264",
+        "format": "mp4",
+        "fps": 30,
+        "mime": "video/mp4"
+      },
+      "durationUs": 5433333,
+      "edit": {
+        "masks": [],
+        "revision": 1,
+        "trimEnd": null,
+        "trimStart": 0
+      },
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "exports": 0,
+      "lastExport": null,
+      "operationId": "c53de51c-363a-4c0a-b5d7-0053d6f50f99",
+      "outputSize": [
+        1920,
+        1080
+      ],
+      "overlayExcluded": false,
+      "overlayPlacement": "handle",
+      "pending": null,
+      "progress": {
+        "audioEncoder": "",
+        "audioSources": {
+          "microphone": false,
+          "system": false
+        },
+        "bytes": 558216,
+        "canvas": [
+          1920,
+          1080
+        ],
+        "durationUs": 5433333,
+        "encoder": "vah264lpenc",
+        "frameRate": 30,
+        "framesCaptured": 183,
+        "framesDelivered": 184,
+        "framesDropped": 0,
+        "framesEncoded": 157,
+        "paused": false,
+        "recordingAudio": {
+          "effective": false,
+          "requested": false
+        },
+        "recordingMicrophone": {
+          "available": false,
+          "effective": false,
+          "requested": false,
+          "unavailable": "The sound server did not answer, so no microphone can be opened."
+        }
+      },
+      "recordingId": "c53de51c-363a-4c0a-b5d7-0053d6f50f99",
+      "retainedUs": 5433333,
+      "selecting": false,
+      "state": "reviewing",
+      "stopReason": "user",
+      "target": {
+        "kind": "monitor"
+      }
+    },
+    "exported": {
+      "canvas": [
+        1920,
+        1080
+      ],
+      "config": {
+        "adaptiveFps": true,
+        "audio": {
+          "microphone": false,
+          "system": false
+        },
+        "budgetBytes": 31748511061,
+        "clickHighlights": true,
+        "codec": "h264",
+        "format": "mp4",
+        "fps": 30,
+        "mime": "video/mp4"
+      },
+      "durationUs": 5433333,
+      "edit": {
+        "masks": [],
+        "revision": 1,
+        "trimEnd": null,
+        "trimStart": 0
+      },
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "exports": 1,
+      "lastExport": {
+        "bytes": 613937,
+        "command": "saveCopy",
+        "durationUs": 5433333,
+        "path": "/tmp/sbm12/out/moving.mp4",
+        "revision": 1,
+        "status": "saved"
+      },
+      "operationId": "c53de51c-363a-4c0a-b5d7-0053d6f50f99",
+      "outputSize": [
+        1920,
+        1080
+      ],
+      "overlayExcluded": false,
+      "overlayPlacement": "handle",
+      "pending": null,
+      "progress": {
+        "exportFraction": 0.9815950908954043
+      },
+      "recordingId": "c53de51c-363a-4c0a-b5d7-0053d6f50f99",
+      "retainedUs": 5433333,
+      "selecting": false,
+      "state": "reviewing",
+      "stopReason": "user",
+      "target": {
+        "kind": "monitor"
+      }
+    },
+    "motion": 5.719,
+    "path": "/tmp/sbm12/out/moving.mp4",
+    "click": {
+      "x": 240,
+      "y": 447,
+      "beforePress": {
+        "canvas": [
+          1920,
+          1080
+        ],
+        "config": {
+          "adaptiveFps": true,
+          "audio": {
+            "microphone": false,
+            "system": false
+          },
+          "budgetBytes": 31748511061,
+          "clickHighlights": true,
+          "codec": "h264",
+          "format": "mp4",
+          "fps": 30,
+          "mime": "video/mp4"
+        },
+        "durationUs": 2066666,
+        "edit": {
+          "masks": [],
+          "revision": 1,
+          "trimEnd": null,
+          "trimStart": 0
+        },
+        "error": {
+          "code": "",
+          "details": {},
+          "message": ""
+        },
+        "exports": 0,
+        "lastExport": null,
+        "operationId": "c53de51c-363a-4c0a-b5d7-0053d6f50f99",
+        "outputSize": [
+          1920,
+          1080
+        ],
+        "overlayExcluded": false,
+        "overlayPlacement": "handle",
+        "pending": null,
+        "progress": {
+          "audioEncoder": "",
+          "audioSources": {
+            "microphone": false,
+            "system": false
+          },
+          "bytes": 205722,
+          "durationUs": 2066666,
+          "encoder": "vah264lpenc",
+          "frameRate": 30,
+          "framesCaptured": 63,
+          "framesDelivered": 64,
+          "framesDropped": 0,
+          "framesEncoded": 62,
+          "paused": false,
+          "recordingAudio": {
+            "effective": false,
+            "requested": false
+          },
+          "recordingMicrophone": {
+            "available": false,
+            "effective": false,
+            "requested": false,
+            "unavailable": "The sound server did not answer, so no microphone can be opened."
+          }
+        },
+        "recordingId": "c53de51c-363a-4c0a-b5d7-0053d6f50f99",
+        "retainedUs": 0,
+        "selecting": false,
+        "state": "recording",
+        "target": {
+          "kind": "monitor"
+        }
+      },
+      "reaction": {
+        "count": 1,
+        "x": 190.0,
+        "y": 365.0,
+        "at": 2011915.233996733
+      }
+    },
+    "clickCheck": {
+      "canvas": [
+        1920,
+        1080
+      ],
+      "count": 1,
+      "durationMs": 5433,
+      "seen": 1,
+      "watches": [
+        {
+          "dx": 8.1,
+          "dy": -7.7,
+          "firstMs": 2033,
+          "frames": 39,
+          "fromMs": 1966,
+          "lastMs": 3266,
+          "lengthMs": 1233,
+          "peak": 10897,
+          "peakMs": 2666,
+          "rgb": [
+            118,
+            115,
+            114
+          ],
+          "seen": true,
+          "toMs": 3266,
+          "x": 240,
+          "y": 447
+        }
+      ]
+    }
+  },
+  {
+    "row": "10-playback",
+    "passed": true,
+    "samples": [
+      {
+        "at": 0.30111311096698046,
+        "timestampUs": 133333,
+        "error": null
+      },
+      {
+        "at": 0.5653626250568777,
+        "timestampUs": 398002,
+        "error": null
+      },
+      {
+        "at": 0.8322050569113344,
+        "timestampUs": 664856,
+        "error": null
+      },
+      {
+        "at": 1.0976905340794474,
+        "timestampUs": 930341,
+        "error": null
+      },
+      {
+        "at": 1.3648442120756954,
+        "timestampUs": 1197495,
+        "error": null
+      },
+      {
+        "at": 1.6321448299568146,
+        "timestampUs": 1464794,
+        "error": null
+      },
+      {
+        "at": 1.900206444086507,
+        "timestampUs": 1732857,
+        "error": null
+      },
+      {
+        "at": 2.16500810906291,
+        "timestampUs": 1997658,
+        "error": null
+      },
+      {
+        "at": 2.430915362900123,
+        "timestampUs": 2263565,
+        "error": null
+      },
+      {
+        "at": 2.7014266680926085,
+        "timestampUs": 2533333,
+        "error": null
+      }
+    ]
+  },
+  {
+    "row": "10-motion-vs-control",
+    "passed": true,
+    "motion": 5.719,
+    "frozenControl": 0.002
+  },
+  {
+    "row": "11-settings",
+    "passed": true,
+    "tree": {
+      "stage": "11-settings",
+      "exclusion": {
+        "focusedWindow": "77594630",
+        "title": "put.gd",
+        "ownerPid": 886576,
+        "reply": {
+          "error": {
+            "code": "",
+            "details": {},
+            "message": ""
+          },
+          "ok": true,
+          "requestId": "3ed889aa-bc8b-4433-b091-60825de8d1a5",
+          "result": {
+            "operation": {
+              "action": "window",
+              "cancelled": false,
+              "clipboardRevision": "4",
+              "copyStatus": "pending",
+              "created": "2026-11-13T23:53:40.625Z",
+              "destination": {
+                "credentials": {},
+                "profileId": "",
+                "profileRevision": "",
+                "providerId": "",
+                "settings": {}
+              },
+              "error": {
+                "code": "",
+                "details": {},
+                "message": ""
+              },
+              "id": "2c2a1697-496c-410b-a084-5c12fe58ed60",
+              "invocation": "10",
+              "items": [],
+              "note": "",
+              "phase": "accepted",
+              "requestTimeoutMs": null,
+              "settingsRevision": "2eda683985f82a5c652f4c17658687a95efcec09cee497102f3939ad02485d44",
+              "state": "accepted"
+            },
+            "operationId": "2c2a1697-496c-410b-a084-5c12fe58ed60"
+          },
+          "schemaVersion": 1
+        },
+        "outcome": {
+          "action": "window",
+          "cancelled": false,
+          "clipboardRevision": "4",
+          "copyStatus": "no_result",
+          "created": "2026-11-13T23:53:40.625Z",
+          "destination": {
+            "credentials": {},
+            "profileId": "",
+            "profileRevision": "",
+            "providerId": "",
+            "settings": {}
+          },
+          "error": {
+            "code": "capture_target",
+            "details": {},
+            "message": "Focus an external window before invoking window capture"
+          },
+          "id": "2c2a1697-496c-410b-a084-5c12fe58ed60",
+          "invocation": "10",
+          "items": [],
+          "note": "",
+          "phase": "failed",
+          "requestTimeoutMs": null,
+          "settingsRevision": "2eda683985f82a5c652f4c17658687a95efcec09cee497102f3939ad02485d44",
+          "state": "failed"
+        }
+      },
+      "resident": 885818,
+      "processes": [
+        {
+          "pid": 885818,
+          "parent": 885813,
+          "startTicks": 201187660,
+          "comm": "putgd",
+          "exe": "/home/patrick/work/sb1114/native-bin/putgd"
+        },
+        {
+          "pid": 886576,
+          "parent": 885818,
+          "startTicks": 201192687,
+          "comm": "putgd-ui",
+          "exe": "/home/patrick/work/sb1114/native-bin/putgd-ui"
+        },
+        {
+          "pid": 886586,
+          "parent": 886576,
+          "startTicks": 201192755,
+          "comm": "gsettings",
+          "exe": "/usr/bin/gsettings"
+        }
+      ],
+      "offered": {
+        "windows": [],
+        "notRun": "X11 has no recording window list; process tree only"
+      }
+    }
+  },
+  {
+    "row": "11-history",
+    "passed": true,
+    "tree": {
+      "stage": "11-history",
+      "exclusion": {
+        "focusedWindow": "77594630",
+        "title": "put.gd",
+        "ownerPid": 886576,
+        "reply": {
+          "error": {
+            "code": "",
+            "details": {},
+            "message": ""
+          },
+          "ok": true,
+          "requestId": "6ce1068e-65ee-4b91-849b-2b9e1bed1141",
+          "result": {
+            "operation": {
+              "action": "window",
+              "cancelled": false,
+              "clipboardRevision": "4",
+              "copyStatus": "pending",
+              "created": "2026-11-13T23:53:42.494Z",
+              "destination": {
+                "credentials": {},
+                "profileId": "",
+                "profileRevision": "",
+                "providerId": "",
+                "settings": {}
+              },
+              "error": {
+                "code": "",
+                "details": {},
+                "message": ""
+              },
+              "id": "2f55bb1a-7433-43b2-a54d-9d9c32957f9b",
+              "invocation": "11",
+              "items": [],
+              "note": "",
+              "phase": "accepted",
+              "requestTimeoutMs": null,
+              "settingsRevision": "2eda683985f82a5c652f4c17658687a95efcec09cee497102f3939ad02485d44",
+              "state": "accepted"
+            },
+            "operationId": "2f55bb1a-7433-43b2-a54d-9d9c32957f9b"
+          },
+          "schemaVersion": 1
+        },
+        "outcome": {
+          "action": "window",
+          "cancelled": false,
+          "clipboardRevision": "4",
+          "copyStatus": "no_result",
+          "created": "2026-11-13T23:53:42.494Z",
+          "destination": {
+            "credentials": {},
+            "profileId": "",
+            "profileRevision": "",
+            "providerId": "",
+            "settings": {}
+          },
+          "error": {
+            "code": "capture_target",
+            "details": {},
+            "message": "Focus an external window before invoking window capture"
+          },
+          "id": "2f55bb1a-7433-43b2-a54d-9d9c32957f9b",
+          "invocation": "11",
+          "items": [],
+          "note": "",
+          "phase": "failed",
+          "requestTimeoutMs": null,
+          "settingsRevision": "2eda683985f82a5c652f4c17658687a95efcec09cee497102f3939ad02485d44",
+          "state": "failed"
+        }
+      },
+      "resident": 885818,
+      "processes": [
+        {
+          "pid": 885818,
+          "parent": 885813,
+          "startTicks": 201187660,
+          "comm": "putgd",
+          "exe": "/home/patrick/work/sb1114/native-bin/putgd"
+        },
+        {
+          "pid": 886576,
+          "parent": 885818,
+          "startTicks": 201192687,
+          "comm": "putgd-ui",
+          "exe": "/home/patrick/work/sb1114/native-bin/putgd-ui"
+        },
+        {
+          "pid": 886586,
+          "parent": 886576,
+          "startTicks": 201192755,
+          "comm": "gsettings",
+          "exe": "/usr/bin/gsettings"
+        }
+      ],
+      "offered": {
+        "windows": [],
+        "notRun": "X11 has no recording window list; process tree only"
+      }
+    }
+  },
+  {
+    "row": "11-editor",
+    "passed": true,
+    "tree": {
+      "stage": "11-editor",
+      "exclusion": {
+        "focusedWindow": "81788934",
+        "title": "Edit image \u2014 put.gd",
+        "ownerPid": 886648,
+        "reply": {
+          "error": {
+            "code": "",
+            "details": {},
+            "message": ""
+          },
+          "ok": true,
+          "requestId": "a7bb0c22-2e47-42f9-a1e1-47633e8d36fb",
+          "result": {
+            "operation": {
+              "action": "window",
+              "cancelled": false,
+              "clipboardRevision": "4",
+              "copyStatus": "pending",
+              "created": "2026-11-13T23:53:44.393Z",
+              "destination": {
+                "credentials": {},
+                "profileId": "",
+                "profileRevision": "",
+                "providerId": "",
+                "settings": {}
+              },
+              "error": {
+                "code": "",
+                "details": {},
+                "message": ""
+              },
+              "id": "550e59e8-79be-4ba9-83e9-4ba938200ab1",
+              "invocation": "13",
+              "items": [],
+              "note": "",
+              "phase": "accepted",
+              "requestTimeoutMs": null,
+              "settingsRevision": "2eda683985f82a5c652f4c17658687a95efcec09cee497102f3939ad02485d44",
+              "state": "accepted"
+            },
+            "operationId": "550e59e8-79be-4ba9-83e9-4ba938200ab1"
+          },
+          "schemaVersion": 1
+        },
+        "outcome": {
+          "action": "window",
+          "cancelled": false,
+          "clipboardRevision": "4",
+          "copyStatus": "no_result",
+          "created": "2026-11-13T23:53:44.393Z",
+          "destination": {
+            "credentials": {},
+            "profileId": "",
+            "profileRevision": "",
+            "providerId": "",
+            "settings": {}
+          },
+          "error": {
+            "code": "capture_target",
+            "details": {},
+            "message": "Focus an external window before invoking window capture"
+          },
+          "id": "550e59e8-79be-4ba9-83e9-4ba938200ab1",
+          "invocation": "13",
+          "items": [],
+          "note": "",
+          "phase": "failed",
+          "requestTimeoutMs": null,
+          "settingsRevision": "2eda683985f82a5c652f4c17658687a95efcec09cee497102f3939ad02485d44",
+          "state": "failed"
+        }
+      },
+      "resident": 885818,
+      "processes": [
+        {
+          "pid": 885818,
+          "parent": 885813,
+          "startTicks": 201187660,
+          "comm": "putgd",
+          "exe": "/home/patrick/work/sb1114/native-bin/putgd"
+        },
+        {
+          "pid": 886576,
+          "parent": 885818,
+          "startTicks": 201192687,
+          "comm": "putgd-ui",
+          "exe": "/home/patrick/work/sb1114/native-bin/putgd-ui"
+        },
+        {
+          "pid": 886586,
+          "parent": 886576,
+          "startTicks": 201192755,
+          "comm": "gsettings",
+          "exe": "/usr/bin/gsettings"
+        },
+        {
+          "pid": 886648,
+          "parent": 885818,
+          "startTicks": 201193129,
+          "comm": "putgd-ui",
+          "exe": "/home/patrick/work/sb1114/native-bin/putgd-ui"
+        }
+      ],
+      "offered": {
+        "windows": [],
+        "notRun": "X11 has no recording window list; process tree only"
+      }
+    }
+  },
+  {
+    "row": "fixture-process-before-cleanup",
+    "passed": true,
+    "pid": 885904,
+    "returncode": null
+  }
+]

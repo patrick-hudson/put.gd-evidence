@@ -1,0 +1,1 @@
+const w=workspace.windowList().find(w=>w.caption==="put.gd independent GTK clipboard fixture");if(w){w.minimized=false;workspace.activeWindow=w;}

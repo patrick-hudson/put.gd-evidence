@@ -1,0 +1,468 @@
+[
+  {
+    "row": "capabilities",
+    "passed": true,
+    "capabilities": {
+      "acquisition": "x11",
+      "active": null,
+      "audio": {
+        "microphone": false,
+        "microphoneMessage": "The sound server did not answer, so no microphone can be opened.",
+        "microphoneReason": "sound_server_unavailable",
+        "system": true
+      },
+      "available": true,
+      "clickHighlights": {
+        "available": true,
+        "drawnBy": "recorder",
+        "route": "x11-xinput2",
+        "targets": [
+          "monitor",
+          "desktop",
+          "region",
+          "window"
+        ]
+      },
+      "codecs": {
+        "mp4": [
+          "h264",
+          "h265"
+        ],
+        "webm": [
+          "vp9"
+        ]
+      },
+      "commands": [
+        "windows",
+        "microphones",
+        "prepare",
+        "start",
+        "pause",
+        "resume",
+        "stop",
+        "cancel",
+        "inspect",
+        "select",
+        "raise",
+        "overlay",
+        "audio",
+        "edit",
+        "preview",
+        "review",
+        "saveCopy",
+        "upload"
+      ],
+      "editCommands": [
+        "setTrim",
+        "resetTrim",
+        "addMask",
+        "updateMask",
+        "removeMask"
+      ],
+      "exportEncoders": {
+        "h264": [
+          "h264_vaapi",
+          "libx264"
+        ],
+        "h265": [
+          "libx265"
+        ],
+        "vp9": [
+          "libvpx-vp9"
+        ]
+      },
+      "ffmpeg": {
+        "avcodec": "63.1.102",
+        "avfilter": "12.1.102",
+        "avformat": "63.1.102",
+        "avutil": "61.1.102",
+        "encoderFailures": {
+          "h264_nvenc": "libcuda.so.1 is not installed",
+          "hevc_nvenc": "libcuda.so.1 is not installed",
+          "hevc_vaapi": "Function not implemented"
+        },
+        "encoders": {
+          "aac": true,
+          "gif": true,
+          "h264_nvenc": true,
+          "h264_vaapi": true,
+          "hevc_nvenc": true,
+          "hevc_vaapi": true,
+          "libopenh264": false,
+          "libopus": true,
+          "libvorbis": false,
+          "libvpx-vp9": true,
+          "libwebp_anim": true,
+          "libx264": true,
+          "libx265": true,
+          "vp9_vaapi": false
+        },
+        "filters": {
+          "asetpts": true,
+          "atrim": true,
+          "avgblur": true,
+          "crop": true,
+          "drawbox": true,
+          "format": true,
+          "fps": true,
+          "palettegen": true,
+          "paletteuse": true,
+          "scale": true,
+          "setpts": true,
+          "trim": true
+        },
+        "h264Decoder": {
+          "failure": null,
+          "name": "h264",
+          "usable": true
+        },
+        "muxers": {
+          "gif": true,
+          "matroska": true,
+          "mp4": true,
+          "webm": true,
+          "webp": true
+        }
+      },
+      "formats": [
+        "mp4",
+        "webm",
+        "gif",
+        "webp"
+      ],
+      "gstreamer": {
+        "audioSources": [
+          "pulsesrc",
+          "pipewiresrc"
+        ],
+        "available": true,
+        "elements": {
+          "aacparse": "1.24.2",
+          "appsink": "1.24.2",
+          "appsrc": "1.24.2",
+          "audioconvert": "1.24.2",
+          "audiomixer": "1.24.2",
+          "audioresample": "1.24.2",
+          "avenc_aac": null,
+          "compositor": null,
+          "fdkaacenc": null,
+          "h264parse": "1.24.2",
+          "identity": "1.24.2",
+          "matroskamux": "1.24.2",
+          "mp4mux": null,
+          "openh264enc": null,
+          "pipewiresrc": "1.0.5",
+          "pulsesrc": "1.24.2",
+          "vaapih264enc": "1.24.2",
+          "vah264enc": null,
+          "vah264lpenc": "1.24.2",
+          "videoconvert": "1.24.2",
+          "videocrop": "1.24.2",
+          "videorate": "1.24.2",
+          "videoscale": "1.24.2",
+          "voaacenc": "1.24.2",
+          "vp9enc": null,
+          "webmmux": "1.24.2",
+          "webpenc": null,
+          "x264enc": "1.24.1",
+          "x265enc": null,
+          "ximagesrc": "1.24.2"
+        },
+        "encoderFailures": {},
+        "liveAacEncoders": [
+          "voaacenc"
+        ],
+        "liveH264Encoders": [
+          "vah264lpenc",
+          "vaapih264enc",
+          "x264enc"
+        ],
+        "liveSources": [
+          "ximagesrc",
+          "pipewiresrc"
+        ],
+        "pluginDirectories": [
+          "/home/patrick/work/sb1114/analyzer/squashfs-root/usr/lib/gstreamer-1.0"
+        ],
+        "usableH264Encoders": [
+          "vah264lpenc",
+          "vaapih264enc",
+          "x264enc"
+        ],
+        "version": "GStreamer 1.24.2",
+        "webpAnimated": false
+      },
+      "limits": {
+        "animationMaxEdge": 1280,
+        "animationMaxUs": 60000000,
+        "maxFileBytes": 1099511627776,
+        "maxMasks": 64
+      },
+      "liveCapture": {
+        "audio": true,
+        "encoder": true,
+        "source": true
+      },
+      "maskKinds": [
+        "blur",
+        "solid"
+      ],
+      "overlayExclusion": {},
+      "schemaVersion": 1,
+      "session": "x11",
+      "states": [
+        "preparing",
+        "ready",
+        "starting",
+        "recording",
+        "paused",
+        "stopping",
+        "reviewing",
+        "exporting",
+        "submitted",
+        "cancelled",
+        "failed"
+      ],
+      "targets": [
+        "monitor",
+        "desktop",
+        "region",
+        "window"
+      ],
+      "timeUnit": "microseconds",
+      "windowAcquisition": "x11",
+      "windowList": false
+    }
+  },
+  {
+    "row": "8-screenshot-1px",
+    "passed": true,
+    "operation": {
+      "action": "region",
+      "cancelled": false,
+      "clipboardRevision": "2",
+      "copyStatus": "copied",
+      "created": "2026-11-13T23:45:39.239Z",
+      "destination": {
+        "credentials": {},
+        "profileId": "",
+        "profileRevision": "",
+        "providerId": "",
+        "settings": {}
+      },
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "id": "876d94d7-76b1-4d4e-b393-4a520762d2e7",
+      "invocation": "1",
+      "items": [
+        {
+          "artifact": {
+            "bytes": 90,
+            "category": "images",
+            "id": "77e562c6-5bcb-4819-8940-26b7ae55bd2c",
+            "mime": "image/png",
+            "name": "Screen-Capture-2026-11-13-17-45-39.png",
+            "namingPrepared": true,
+            "originalFile": false,
+            "previewPath": "/tmp/sbm10/data/putgd/artifacts/../previews/77e562c6-5bcb-4819-8940-26b7ae55bd2c.png",
+            "sha256": "a95f73ef3e16e667ed573516a02fa1b4adee9936fec45da9cc3c21be1400d637"
+          },
+          "candidate": "",
+          "concurrencyToken": "",
+          "condition": "",
+          "error": {
+            "code": "",
+            "details": {},
+            "message": ""
+          },
+          "local": {
+            "error": {
+              "code": "",
+              "details": {},
+              "message": ""
+            },
+            "path": "/tmp/sbm10/archive/images/Screen-Capture-2026-11-13-17-45-39.png",
+            "status": "saved"
+          },
+          "objectReference": {},
+          "phase": "stored",
+          "publicationId": "fe3e835e-2567-47f9-97ae-1a34ab14d2ee",
+          "receipt": {
+            "concurrencyToken": "",
+            "destination": {
+              "credentials": {},
+              "profileId": "",
+              "profileRevision": "",
+              "providerId": "",
+              "settings": {}
+            },
+            "directUrl": "",
+            "objectReference": {},
+            "publicationId": "",
+            "schemaVersion": 1
+          },
+          "remoteStatus": "not_requested",
+          "shareIntent": "",
+          "shareIntentOptions": {},
+          "shareStatus": "not_requested",
+          "uploadProgress": null,
+          "uploadStatus": "local_only"
+        }
+      ],
+      "note": "",
+      "phase": "completed",
+      "requestTimeoutMs": null,
+      "settingsRevision": "d40f3cf62a2d35e12e9748c74868cab4a994500c9940c1c7558b4860f310daae",
+      "state": "completed"
+    },
+    "size": [
+      1,
+      1
+    ]
+  },
+  {
+    "row": "8-recording-drag-3",
+    "passed": true,
+    "operation": {
+      "action": "record",
+      "cancelled": true,
+      "clipboardRevision": "3",
+      "copyStatus": "no_result",
+      "created": "2026-11-13T23:45:41.973Z",
+      "destination": {
+        "credentials": {},
+        "profileId": "",
+        "profileRevision": "",
+        "providerId": "",
+        "settings": {}
+      },
+      "error": {
+        "code": "cancelled",
+        "details": {
+          "step": null
+        },
+        "message": "Region selection canceled; nothing was recorded"
+      },
+      "id": "da60f06e-8493-449a-a7ac-9f4101e06fa8",
+      "invocation": "2",
+      "items": [],
+      "note": "",
+      "phase": "cancelled",
+      "requestTimeoutMs": null,
+      "settingsRevision": "d40f3cf62a2d35e12e9748c74868cab4a994500c9940c1c7558b4860f310daae",
+      "state": "cancelled"
+    }
+  },
+  {
+    "row": "8-recording-drag-4",
+    "passed": true,
+    "operation": {
+      "canvas": [
+        4,
+        4
+      ],
+      "config": {
+        "adaptiveFps": true,
+        "audio": {
+          "microphone": false,
+          "system": false
+        },
+        "budgetBytes": 32009093120,
+        "clickHighlights": false,
+        "codec": "h264",
+        "format": "mp4",
+        "fps": 30,
+        "mime": "video/mp4"
+      },
+      "durationUs": 0,
+      "edit": {
+        "masks": [],
+        "revision": 1,
+        "trimEnd": null,
+        "trimStart": 0
+      },
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "exports": 0,
+      "lastExport": null,
+      "operationId": "8025795d-fc2b-445e-8882-89953f4c72bd",
+      "outputSize": [
+        4,
+        4
+      ],
+      "overlayExcluded": true,
+      "overlayPlacement": "outside",
+      "pending": null,
+      "progress": {
+        "recordingAudio": {
+          "effective": false,
+          "requested": false
+        },
+        "recordingMicrophone": {
+          "available": false,
+          "effective": false,
+          "requested": false,
+          "unavailable": "The sound server did not answer, so no microphone can be opened."
+        }
+      },
+      "recordingId": "8025795d-fc2b-445e-8882-89953f4c72bd",
+      "retainedUs": 0,
+      "selecting": false,
+      "state": "ready",
+      "target": {
+        "kind": "region",
+        "rect": [
+          150,
+          182,
+          4,
+          4
+        ]
+      }
+    }
+  },
+  {
+    "row": "9-select-escape",
+    "passed": true,
+    "operation": {
+      "action": "record",
+      "cancelled": true,
+      "clipboardRevision": "3",
+      "copyStatus": "no_result",
+      "created": "2026-11-13T23:45:46.453Z",
+      "destination": {
+        "credentials": {},
+        "profileId": "",
+        "profileRevision": "",
+        "providerId": "",
+        "settings": {}
+      },
+      "error": {
+        "code": "cancelled",
+        "details": {
+          "step": null
+        },
+        "message": "Region selection canceled; nothing was recorded"
+      },
+      "id": "fab693f8-395f-4306-8843-dbe080fd4143",
+      "invocation": "4",
+      "items": [],
+      "note": "",
+      "phase": "cancelled",
+      "requestTimeoutMs": null,
+      "settingsRevision": "d40f3cf62a2d35e12e9748c74868cab4a994500c9940c1c7558b4860f310daae",
+      "state": "cancelled"
+    }
+  },
+  {
+    "row": "fixture-process-before-cleanup",
+    "passed": true,
+    "pid": 883500,
+    "returncode": null
+  }
+]

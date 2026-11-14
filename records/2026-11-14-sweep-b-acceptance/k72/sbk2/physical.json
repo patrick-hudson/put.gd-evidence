@@ -1,0 +1,1051 @@
+[
+  {
+    "row": "capabilities",
+    "passed": true,
+    "capabilities": {
+      "acquisition": "kde-screencast",
+      "active": null,
+      "audio": {
+        "microphone": false,
+        "microphoneMessage": "The sound server did not answer, so no microphone can be opened.",
+        "microphoneReason": "sound_server_unavailable",
+        "system": true
+      },
+      "available": true,
+      "clickHighlights": {
+        "available": true,
+        "drawnBy": "compositor",
+        "note": "KWin draws the rings on the screen for the length of the recording; window recordings carry none.",
+        "route": "kwin-mouseclick-effect",
+        "targetReasons": {
+          "window": "KWin draws the click rings on the screen; a window recording's stream carries the window alone, so it has none."
+        },
+        "targets": [
+          "monitor",
+          "desktop",
+          "region"
+        ]
+      },
+      "codecs": {
+        "mp4": [
+          "h264",
+          "h265"
+        ],
+        "webm": [
+          "vp9"
+        ]
+      },
+      "commands": [
+        "windows",
+        "microphones",
+        "prepare",
+        "start",
+        "pause",
+        "resume",
+        "stop",
+        "cancel",
+        "inspect",
+        "select",
+        "raise",
+        "overlay",
+        "audio",
+        "edit",
+        "preview",
+        "review",
+        "saveCopy",
+        "upload"
+      ],
+      "editCommands": [
+        "setTrim",
+        "resetTrim",
+        "addMask",
+        "updateMask",
+        "removeMask"
+      ],
+      "exportEncoders": {
+        "h264": [
+          "h264_vaapi",
+          "libx264"
+        ],
+        "h265": [
+          "libx265"
+        ],
+        "vp9": [
+          "libvpx-vp9"
+        ]
+      },
+      "ffmpeg": {
+        "avcodec": "62.11.100",
+        "avfilter": "11.4.100",
+        "avformat": "62.3.100",
+        "avutil": "60.8.100",
+        "encoderFailures": {
+          "h264_nvenc": "libcuda.so.1 is not installed",
+          "hevc_nvenc": "libcuda.so.1 is not installed",
+          "hevc_vaapi": "Function not implemented"
+        },
+        "encoders": {
+          "aac": true,
+          "gif": true,
+          "h264_nvenc": true,
+          "h264_vaapi": true,
+          "hevc_nvenc": true,
+          "hevc_vaapi": true,
+          "libopenh264": false,
+          "libopus": true,
+          "libvorbis": true,
+          "libvpx-vp9": true,
+          "libwebp_anim": true,
+          "libx264": true,
+          "libx265": true,
+          "vp9_vaapi": true
+        },
+        "filters": {
+          "asetpts": true,
+          "atrim": true,
+          "avgblur": true,
+          "crop": true,
+          "drawbox": true,
+          "format": true,
+          "fps": true,
+          "palettegen": true,
+          "paletteuse": true,
+          "scale": true,
+          "setpts": true,
+          "trim": true
+        },
+        "h264Decoder": {
+          "failure": null,
+          "name": "h264",
+          "usable": true
+        },
+        "muxers": {
+          "gif": true,
+          "matroska": true,
+          "mp4": true,
+          "webm": true,
+          "webp": true
+        }
+      },
+      "formats": [
+        "mp4",
+        "webm",
+        "gif",
+        "webp"
+      ],
+      "gstreamer": {
+        "audioSources": [
+          "pulsesrc",
+          "pipewiresrc"
+        ],
+        "available": true,
+        "elements": {
+          "aacparse": "1.28.2",
+          "appsink": "1.28.2",
+          "appsrc": "1.28.2",
+          "audioconvert": "1.28.2",
+          "audiomixer": "1.28.2",
+          "audioresample": "1.28.2",
+          "avenc_aac": "1.28.2",
+          "compositor": "1.28.2",
+          "fdkaacenc": null,
+          "h264parse": "1.28.2",
+          "identity": "1.28.2",
+          "matroskamux": "1.28.2",
+          "mp4mux": "1.28.2",
+          "openh264enc": "1.28.2",
+          "pipewiresrc": "1.6.2",
+          "pulsesrc": "1.28.2",
+          "vaapih264enc": "1.26.8",
+          "vah264enc": null,
+          "vah264lpenc": "1.28.2",
+          "videoconvert": "1.28.2",
+          "videocrop": "1.28.2",
+          "videorate": "1.28.2",
+          "videoscale": "1.28.2",
+          "voaacenc": "1.28.2",
+          "vp9enc": "1.28.2",
+          "webmmux": "1.28.2",
+          "webpenc": "1.28.2",
+          "x264enc": "1.28.2",
+          "x265enc": "1.28.2",
+          "ximagesrc": "1.28.2"
+        },
+        "encoderFailures": {},
+        "liveAacEncoders": [
+          "avenc_aac",
+          "voaacenc"
+        ],
+        "liveH264Encoders": [
+          "vah264lpenc",
+          "vaapih264enc",
+          "x264enc",
+          "openh264enc"
+        ],
+        "liveSources": [
+          "ximagesrc",
+          "pipewiresrc"
+        ],
+        "pluginDirectories": [
+          "/usr/lib/x86_64-linux-gnu/gstreamer-1.0"
+        ],
+        "usableH264Encoders": [
+          "vah264lpenc",
+          "vaapih264enc",
+          "x264enc",
+          "openh264enc"
+        ],
+        "version": "GStreamer 1.28.2",
+        "webpAnimated": true
+      },
+      "kdeScreencast": {
+        "available": true,
+        "hidesRequester": true,
+        "kwinVersion": "6.6.6",
+        "outputs": [
+          {
+            "logical": [
+              0,
+              0,
+              1920,
+              1080
+            ],
+            "name": "HDMI-A-1"
+          }
+        ],
+        "version": 5
+      },
+      "limits": {
+        "animationMaxEdge": 1280,
+        "animationMaxUs": 60000000,
+        "maxFileBytes": 1099511627776,
+        "maxMasks": 64
+      },
+      "liveCapture": {
+        "audio": true,
+        "encoder": true,
+        "source": true
+      },
+      "maskKinds": [
+        "blur",
+        "solid"
+      ],
+      "overlayExclusion": {},
+      "pipewire": {
+        "socket": "/run/user/1000/pipewire-0"
+      },
+      "portal": {
+        "available": true,
+        "cursorModes": 7,
+        "portalVersion": 5,
+        "sourceTypes": 7
+      },
+      "schemaVersion": 1,
+      "session": "wayland",
+      "states": [
+        "preparing",
+        "ready",
+        "starting",
+        "recording",
+        "paused",
+        "stopping",
+        "reviewing",
+        "exporting",
+        "submitted",
+        "cancelled",
+        "failed"
+      ],
+      "targets": [
+        "monitor",
+        "desktop",
+        "region",
+        "window"
+      ],
+      "timeUnit": "microseconds",
+      "windowAcquisition": "kde-screencast",
+      "windowList": true
+    }
+  },
+  {
+    "row": "12-region",
+    "passed": true,
+    "operation": {
+      "action": "region",
+      "cancelled": false,
+      "clipboardRevision": "1",
+      "copyStatus": "copied",
+      "created": "2026-11-14T00:03:01.323Z",
+      "destination": {
+        "credentials": {},
+        "profileId": "",
+        "profileRevision": "",
+        "providerId": "",
+        "settings": {}
+      },
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "id": "e6d70aed-8a87-4285-b5ba-2a4c6f651d72",
+      "invocation": "1",
+      "items": [
+        {
+          "artifact": {
+            "bytes": 773,
+            "category": "images",
+            "id": "98844586-d8e2-4fb7-9e35-89c39fae71b4",
+            "mime": "image/png",
+            "name": "Screen-Capture-2026-11-13-18-03-01.png",
+            "namingPrepared": true,
+            "originalFile": false,
+            "previewPath": "/tmp/sbk2/data/putgd/artifacts/../previews/98844586-d8e2-4fb7-9e35-89c39fae71b4.png",
+            "sha256": "2171382357960a5b5cd2630908f326cd1e39adefa99d6cf6751069631be42cb7"
+          },
+          "candidate": "",
+          "concurrencyToken": "",
+          "condition": "",
+          "error": {
+            "code": "",
+            "details": {},
+            "message": ""
+          },
+          "local": {
+            "error": {
+              "code": "",
+              "details": {},
+              "message": ""
+            },
+            "path": "/tmp/sbk2/archive/images/Screen-Capture-2026-11-13-18-03-01.png",
+            "status": "saved"
+          },
+          "objectReference": {},
+          "phase": "stored",
+          "publicationId": "82dc8388-1190-443e-a9de-38b0611ebd3a",
+          "receipt": {
+            "concurrencyToken": "",
+            "destination": {
+              "credentials": {},
+              "profileId": "",
+              "profileRevision": "",
+              "providerId": "",
+              "settings": {}
+            },
+            "directUrl": "",
+            "objectReference": {},
+            "publicationId": "",
+            "schemaVersion": 1
+          },
+          "remoteStatus": "not_requested",
+          "shareIntent": "",
+          "shareIntentOptions": {},
+          "shareStatus": "not_requested",
+          "uploadProgress": null,
+          "uploadStatus": "local_only"
+        }
+      ],
+      "note": "",
+      "phase": "completed",
+      "requestTimeoutMs": null,
+      "settingsRevision": "455f4cb8b6a3222a7a4c63fcec55afb450d0b00ccc22004cff4de29e5c43688c",
+      "state": "completed"
+    }
+  },
+  {
+    "row": "10-frozen-control",
+    "passed": true,
+    "ready": {
+      "canvas": [
+        1920,
+        1080
+      ],
+      "config": {
+        "adaptiveFps": true,
+        "audio": {
+          "microphone": false,
+          "system": false
+        },
+        "budgetBytes": 1857912832,
+        "clickHighlights": false,
+        "codec": "h264",
+        "format": "mp4",
+        "fps": 30,
+        "mime": "video/mp4"
+      },
+      "durationUs": 0,
+      "edit": {
+        "masks": [],
+        "revision": 1,
+        "trimEnd": null,
+        "trimStart": 0
+      },
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "exports": 0,
+      "lastExport": null,
+      "operationId": "93461386-9528-469f-bf8f-70b8e7fcc5df",
+      "outputSize": [
+        1920,
+        1080
+      ],
+      "overlayExcluded": true,
+      "overlayPlacement": "hidden",
+      "pending": null,
+      "progress": {
+        "recordingAudio": {
+          "effective": false,
+          "requested": false
+        },
+        "recordingMicrophone": {
+          "available": false,
+          "effective": false,
+          "requested": false,
+          "unavailable": "The sound server did not answer, so no microphone can be opened."
+        }
+      },
+      "recordingId": "93461386-9528-469f-bf8f-70b8e7fcc5df",
+      "retainedUs": 0,
+      "selecting": false,
+      "state": "ready",
+      "target": {
+        "kind": "monitor"
+      }
+    },
+    "review": {
+      "canvas": [
+        1920,
+        1080
+      ],
+      "config": {
+        "adaptiveFps": true,
+        "audio": {
+          "microphone": false,
+          "system": false
+        },
+        "budgetBytes": 1857912832,
+        "clickHighlights": false,
+        "codec": "h264",
+        "format": "mp4",
+        "fps": 30,
+        "mime": "video/mp4"
+      },
+      "durationUs": 4166666,
+      "edit": {
+        "masks": [],
+        "revision": 1,
+        "trimEnd": null,
+        "trimStart": 0
+      },
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "exports": 0,
+      "lastExport": null,
+      "operationId": "93461386-9528-469f-bf8f-70b8e7fcc5df",
+      "outputSize": [
+        1920,
+        1080
+      ],
+      "overlayExcluded": true,
+      "overlayPlacement": "hidden",
+      "pending": null,
+      "progress": {
+        "audioEncoder": "",
+        "audioSources": {
+          "microphone": false,
+          "system": false
+        },
+        "bytes": 61011,
+        "canvas": [
+          1920,
+          1080
+        ],
+        "durationUs": 4166666,
+        "encoder": "vah264lpenc",
+        "frameRate": 30,
+        "framesCaptured": 7,
+        "framesDelivered": 10,
+        "framesDropped": 0,
+        "framesEncoded": 94,
+        "paused": false,
+        "recordingAudio": {
+          "effective": false,
+          "requested": false
+        },
+        "recordingMicrophone": {
+          "available": false,
+          "effective": false,
+          "requested": false,
+          "unavailable": "The sound server did not answer, so no microphone can be opened."
+        }
+      },
+      "recordingId": "93461386-9528-469f-bf8f-70b8e7fcc5df",
+      "retainedUs": 4166666,
+      "selecting": false,
+      "state": "reviewing",
+      "stopReason": "user",
+      "target": {
+        "kind": "monitor"
+      }
+    },
+    "exported": {
+      "canvas": [
+        1920,
+        1080
+      ],
+      "config": {
+        "adaptiveFps": true,
+        "audio": {
+          "microphone": false,
+          "system": false
+        },
+        "budgetBytes": 1857912832,
+        "clickHighlights": false,
+        "codec": "h264",
+        "format": "mp4",
+        "fps": 30,
+        "mime": "video/mp4"
+      },
+      "durationUs": 4166666,
+      "edit": {
+        "masks": [],
+        "revision": 1,
+        "trimEnd": null,
+        "trimStart": 0
+      },
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "exports": 1,
+      "lastExport": {
+        "bytes": 64457,
+        "command": "saveCopy",
+        "durationUs": 4166667,
+        "path": "/tmp/sbk2/out/frozen.mp4",
+        "revision": 1,
+        "status": "saved"
+      },
+      "operationId": "93461386-9528-469f-bf8f-70b8e7fcc5df",
+      "outputSize": [
+        1920,
+        1080
+      ],
+      "overlayExcluded": true,
+      "overlayPlacement": "hidden",
+      "pending": null,
+      "progress": {
+        "exportFraction": 0.9440000710400114
+      },
+      "recordingId": "93461386-9528-469f-bf8f-70b8e7fcc5df",
+      "retainedUs": 4166666,
+      "selecting": false,
+      "state": "reviewing",
+      "stopReason": "user",
+      "target": {
+        "kind": "monitor"
+      }
+    },
+    "motion": 0.005,
+    "path": "/tmp/sbk2/out/frozen.mp4",
+    "click": null
+  },
+  {
+    "row": "10-export-moving",
+    "passed": true,
+    "ready": {
+      "canvas": [
+        1920,
+        1080
+      ],
+      "config": {
+        "adaptiveFps": true,
+        "audio": {
+          "microphone": false,
+          "system": false
+        },
+        "budgetBytes": 1857675264,
+        "clickHighlights": false,
+        "codec": "h264",
+        "format": "mp4",
+        "fps": 30,
+        "mime": "video/mp4"
+      },
+      "durationUs": 0,
+      "edit": {
+        "masks": [],
+        "revision": 1,
+        "trimEnd": null,
+        "trimStart": 0
+      },
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "exports": 0,
+      "lastExport": null,
+      "operationId": "f2bd465f-38cb-4cda-a6c4-b3edf54f8f7b",
+      "outputSize": [
+        1920,
+        1080
+      ],
+      "overlayExcluded": true,
+      "overlayPlacement": "hidden",
+      "pending": null,
+      "progress": {
+        "recordingAudio": {
+          "effective": false,
+          "requested": false
+        },
+        "recordingMicrophone": {
+          "available": false,
+          "effective": false,
+          "requested": false,
+          "unavailable": "The sound server did not answer, so no microphone can be opened."
+        }
+      },
+      "recordingId": "f2bd465f-38cb-4cda-a6c4-b3edf54f8f7b",
+      "retainedUs": 0,
+      "selecting": false,
+      "state": "ready",
+      "target": {
+        "kind": "monitor"
+      }
+    },
+    "review": {
+      "canvas": [
+        1920,
+        1080
+      ],
+      "config": {
+        "adaptiveFps": true,
+        "audio": {
+          "microphone": false,
+          "system": false
+        },
+        "budgetBytes": 1857675264,
+        "clickHighlights": false,
+        "codec": "h264",
+        "format": "mp4",
+        "fps": 30,
+        "mime": "video/mp4"
+      },
+      "durationUs": 5100000,
+      "edit": {
+        "masks": [],
+        "revision": 1,
+        "trimEnd": null,
+        "trimStart": 0
+      },
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "exports": 0,
+      "lastExport": null,
+      "operationId": "f2bd465f-38cb-4cda-a6c4-b3edf54f8f7b",
+      "outputSize": [
+        1920,
+        1080
+      ],
+      "overlayExcluded": true,
+      "overlayPlacement": "hidden",
+      "pending": null,
+      "progress": {
+        "audioEncoder": "",
+        "audioSources": {
+          "microphone": false,
+          "system": false
+        },
+        "bytes": 521500,
+        "canvas": [
+          1920,
+          1080
+        ],
+        "durationUs": 5100000,
+        "encoder": "vah264lpenc",
+        "frameRate": 30,
+        "framesCaptured": 115,
+        "framesDelivered": 120,
+        "framesDropped": 0,
+        "framesEncoded": 139,
+        "paused": false,
+        "recordingAudio": {
+          "effective": false,
+          "requested": false
+        },
+        "recordingMicrophone": {
+          "available": false,
+          "effective": false,
+          "requested": false,
+          "unavailable": "The sound server did not answer, so no microphone can be opened."
+        }
+      },
+      "recordingId": "f2bd465f-38cb-4cda-a6c4-b3edf54f8f7b",
+      "retainedUs": 5100000,
+      "selecting": false,
+      "state": "reviewing",
+      "stopReason": "user",
+      "target": {
+        "kind": "monitor"
+      }
+    },
+    "exported": {
+      "canvas": [
+        1920,
+        1080
+      ],
+      "config": {
+        "adaptiveFps": true,
+        "audio": {
+          "microphone": false,
+          "system": false
+        },
+        "budgetBytes": 1857675264,
+        "clickHighlights": false,
+        "codec": "h264",
+        "format": "mp4",
+        "fps": 30,
+        "mime": "video/mp4"
+      },
+      "durationUs": 5100000,
+      "edit": {
+        "masks": [],
+        "revision": 1,
+        "trimEnd": null,
+        "trimStart": 0
+      },
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "exports": 1,
+      "lastExport": {
+        "bytes": 579592,
+        "command": "saveCopy",
+        "durationUs": 5100000,
+        "path": "/tmp/sbk2/out/moving.mp4",
+        "revision": 1,
+        "status": "saved"
+      },
+      "operationId": "f2bd465f-38cb-4cda-a6c4-b3edf54f8f7b",
+      "outputSize": [
+        1920,
+        1080
+      ],
+      "overlayExcluded": true,
+      "overlayPlacement": "hidden",
+      "pending": null,
+      "progress": {
+        "exportFraction": 0.9411764705882353
+      },
+      "recordingId": "f2bd465f-38cb-4cda-a6c4-b3edf54f8f7b",
+      "retainedUs": 5100000,
+      "selecting": false,
+      "state": "reviewing",
+      "stopReason": "user",
+      "target": {
+        "kind": "monitor"
+      }
+    },
+    "motion": 5.532,
+    "path": "/tmp/sbk2/out/moving.mp4",
+    "click": null
+  },
+  {
+    "row": "10-playback",
+    "passed": true,
+    "samples": [
+      {
+        "at": 0.31210211385041475,
+        "timestampUs": 141619,
+        "error": null
+      },
+      {
+        "at": 0.5791844399645925,
+        "timestampUs": 408700,
+        "error": null
+      },
+      {
+        "at": 0.8543188569601625,
+        "timestampUs": 683834,
+        "error": null
+      },
+      {
+        "at": 1.1281801448203623,
+        "timestampUs": 957697,
+        "error": null
+      },
+      {
+        "at": 1.3997330549173057,
+        "timestampUs": 1229248,
+        "error": null
+      },
+      {
+        "at": 1.6714850959833711,
+        "timestampUs": 1501002,
+        "error": null
+      },
+      {
+        "at": 1.9457145237829536,
+        "timestampUs": 1775230,
+        "error": null
+      },
+      {
+        "at": 2.1958431319799274,
+        "timestampUs": 2025357,
+        "error": null
+      },
+      {
+        "at": 2.4699939619749784,
+        "timestampUs": 2299511,
+        "error": null
+      },
+      {
+        "at": 2.744025621796027,
+        "timestampUs": 2573541,
+        "error": null
+      },
+      {
+        "at": 3.0172493949066848,
+        "timestampUs": 2846764,
+        "error": null
+      }
+    ]
+  },
+  {
+    "row": "12-monitor-motion",
+    "passed": true,
+    "motion": 5.532,
+    "frozenControl": 0.005
+  },
+  {
+    "row": "11-settings",
+    "passed": true,
+    "tree": {
+      "stage": "11-settings",
+      "exclusion": null,
+      "resident": 1614247,
+      "processes": [
+        {
+          "pid": 1614247,
+          "parent": 1614243,
+          "startTicks": 129528314,
+          "comm": "putgd",
+          "exe": "/usr/bin/putgd"
+        },
+        {
+          "pid": 1614838,
+          "parent": 1614247,
+          "startTicks": 129532229,
+          "comm": "putgd-ui",
+          "exe": "/usr/bin/putgd-ui"
+        }
+      ],
+      "offered": {
+        "activeExcluded": true,
+        "windows": [
+          {
+            "active": false,
+            "appId": "org.kde.konsole",
+            "identity": "{6e1ea6d5-8d79-4e46-bb87-f28901e4582a}",
+            "minimized": true,
+            "rect": [
+              506,
+              229,
+              907,
+              567
+            ],
+            "title": "~ : btop \u2014 Konsole"
+          },
+          {
+            "active": false,
+            "appId": "cover_player.py",
+            "identity": "{dd585314-64d9-499b-a017-63b037a92d31}",
+            "minimized": false,
+            "rect": [
+              0,
+              0,
+              1920,
+              1080
+            ],
+            "title": "put.gd lab cover"
+          },
+          {
+            "active": false,
+            "appId": "org.putgd.SyntheticGtkClipboard",
+            "identity": "{a54a7544-eeb0-4e59-8a6d-aca47620655c}",
+            "minimized": false,
+            "rect": [
+              640,
+              289,
+              640,
+              448
+            ],
+            "title": "put.gd independent GTK clipboard fixture"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "row": "11-history",
+    "passed": true,
+    "tree": {
+      "stage": "11-history",
+      "exclusion": null,
+      "resident": 1614247,
+      "processes": [
+        {
+          "pid": 1614247,
+          "parent": 1614243,
+          "startTicks": 129528314,
+          "comm": "putgd",
+          "exe": "/usr/bin/putgd"
+        },
+        {
+          "pid": 1614838,
+          "parent": 1614247,
+          "startTicks": 129532229,
+          "comm": "putgd-ui",
+          "exe": "/usr/bin/putgd-ui"
+        }
+      ],
+      "offered": {
+        "activeExcluded": true,
+        "windows": [
+          {
+            "active": false,
+            "appId": "org.kde.konsole",
+            "identity": "{6e1ea6d5-8d79-4e46-bb87-f28901e4582a}",
+            "minimized": true,
+            "rect": [
+              506,
+              229,
+              907,
+              567
+            ],
+            "title": "~ : btop \u2014 Konsole"
+          },
+          {
+            "active": false,
+            "appId": "cover_player.py",
+            "identity": "{dd585314-64d9-499b-a017-63b037a92d31}",
+            "minimized": false,
+            "rect": [
+              0,
+              0,
+              1920,
+              1080
+            ],
+            "title": "put.gd lab cover"
+          },
+          {
+            "active": false,
+            "appId": "org.putgd.SyntheticGtkClipboard",
+            "identity": "{a54a7544-eeb0-4e59-8a6d-aca47620655c}",
+            "minimized": false,
+            "rect": [
+              640,
+              289,
+              640,
+              448
+            ],
+            "title": "put.gd independent GTK clipboard fixture"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "row": "11-editor",
+    "passed": true,
+    "tree": {
+      "stage": "11-editor",
+      "exclusion": null,
+      "resident": 1614247,
+      "processes": [
+        {
+          "pid": 1614247,
+          "parent": 1614243,
+          "startTicks": 129528314,
+          "comm": "putgd",
+          "exe": "/usr/bin/putgd"
+        },
+        {
+          "pid": 1614838,
+          "parent": 1614247,
+          "startTicks": 129532229,
+          "comm": "putgd-ui",
+          "exe": "/usr/bin/putgd-ui"
+        },
+        {
+          "pid": 1614874,
+          "parent": 1614247,
+          "startTicks": 129532577,
+          "comm": "putgd-ui",
+          "exe": "/usr/bin/putgd-ui"
+        }
+      ],
+      "offered": {
+        "activeExcluded": true,
+        "windows": [
+          {
+            "active": false,
+            "appId": "org.kde.konsole",
+            "identity": "{6e1ea6d5-8d79-4e46-bb87-f28901e4582a}",
+            "minimized": true,
+            "rect": [
+              506,
+              229,
+              907,
+              567
+            ],
+            "title": "~ : btop \u2014 Konsole"
+          },
+          {
+            "active": false,
+            "appId": "cover_player.py",
+            "identity": "{dd585314-64d9-499b-a017-63b037a92d31}",
+            "minimized": false,
+            "rect": [
+              0,
+              0,
+              1920,
+              1080
+            ],
+            "title": "put.gd lab cover"
+          },
+          {
+            "active": false,
+            "appId": "org.putgd.SyntheticGtkClipboard",
+            "identity": "{a54a7544-eeb0-4e59-8a6d-aca47620655c}",
+            "minimized": false,
+            "rect": [
+              640,
+              289,
+              640,
+              448
+            ],
+            "title": "put.gd independent GTK clipboard fixture"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "row": "fixture-process-before-cleanup",
+    "passed": true,
+    "pid": 1614339,
+    "returncode": null
+  }
+]

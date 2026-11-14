@@ -1,0 +1,16 @@
+{"socketPath": "/tmp/sbr880834/putgd/session.sock", "utf8Bytes": 33}
+{"socketPath": "/tmp/sbr880834/wayland-0", "utf8Bytes": 24}
+{"socketPath": "/tmp/sbr880834/pipewire-0", "utf8Bytes": 25}
+Traceback (most recent call last):
+  File "/home/patrick/work/sb1114/physical_b.py", line 134, in <module>
+    sys.exit(r.main())
+             ^^^^^^^^
+  File "/home/patrick/work/sb1114/tools/lab/record_run.py", line 1228, in main
+    return Driver(args).main()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/sb1114/physical_b.py", line 104, in flow
+    self.start_resident(b);time.sleep(3);self.open_cover()
+                                         ^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/sb1114/tools/lab/record_run.py", line 668, in open_cover
+    raise RunError('cover precheck failed, nothing recorded: %s' % json.dumps(report))
+lab_resident.RunError: cover precheck failed, nothing recorded: {"check": "precheck", "fraction": 0.9751, "framebuffer": [1920, 1080], "minFraction": 0.98, "ok": false, "output": ["HDMI-1"], "rect": [0, 0, 1920, 1080]}

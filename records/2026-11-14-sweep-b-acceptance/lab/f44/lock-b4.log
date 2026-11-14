@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/sb1114/lock_test.py", line 26, in <module>
+    lab.guest_session(run,'gtklock --daemonize\n')
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/sb1114/tools/lab/lab.py", line 648, in guest_session
+    return ssh(run, script, timeout=timeout)
+  File "/home/patrick/work/sb1114/tools/lab/lab.py", line 532, in ssh
+    result = command(ssh_args(run, bootstrap) + ['sh', '-s'], timeout=timeout, input=script, check=not refusals)
+  File "/home/patrick/work/sb1114/tools/lab/lab.py", line 84, in command
+    result = subprocess.run([str(a) for a in args], input=input, text=True,
+                            capture_output=True, timeout=timeout)
+  File "/usr/lib64/python3.14/subprocess.py", line 557, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.14/subprocess.py", line 1221, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.14/subprocess.py", line 2154, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.14/subprocess.py", line 1268, in _check_timeout
+    raise TimeoutExpired(
+    ...<2 lines>...
+            stderr=b''.join(stderr_seq) if stderr_seq else None)
+subprocess.TimeoutExpired: Command '['ssh', '-o', 'BatchMode=yes', '-o', 'IdentitiesOnly=yes', '-o', 'StrictHostKeyChecking=yes', '-o', 'ConnectTimeout=5', '-o', 'UserKnownHostsFile=/home/patrick/work/sb1114/work/lab-runs/b4/known_hosts', '-i', '/home/patrick/work/sb1114/work/lab-runs/b4/identity', '-p', '22601', 'lab@127.0.0.1', 'sh', '-s']' timed out after 60 seconds

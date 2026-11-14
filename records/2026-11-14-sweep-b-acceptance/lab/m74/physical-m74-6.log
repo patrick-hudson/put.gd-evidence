@@ -1,0 +1,28 @@
+{"socketPath": "/tmp/sbr881726/putgd/session.sock", "utf8Bytes": 33}
+{"socketPath": "/tmp/sbr881726/wayland-0", "utf8Bytes": 24}
+{"socketPath": "/tmp/sbr881726/pipewire-0", "utf8Bytes": 25}
+Traceback (most recent call last):
+  File "/home/patrick/work/sb1114/physical_b.py", line 137, in <module>
+    sys.exit(r.main())
+             ^^^^^^^^
+  File "/home/patrick/work/sb1114/tools/lab/record_run.py", line 1228, in main
+    return Driver(args).main()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/sb1114/physical_b.py", line 123, in flow
+    call('ui.show',{'view':view});time.sleep(.5);row('11-'+view,tree=process_tree('11-'+view))
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/sb1114/physical_b.py", line 49, in process_tree
+    offered=call('recording.windows');external=[w for w in offered['windows'] if 'independent GTK' in w.get('title','')];own=[w for w in offered['windows'] if w.get('title') in ('put.gd','Edit image','Review recording')]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/sb1114/physical_b.py", line 9, in call
+    def call(m,p=None):return self.cli(b,m,p)
+                              ^^^^^^^^^^^^^^^
+  File "/home/patrick/work/sb1114/record_acceptance.py", line 25, in cli
+    result=original_cli(self,build,method,params,timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/sb1114/tools/lab/record_run.py", line 325, in cli
+    return lab_resident.cli(self, build, method, params, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/sb1114/tools/lab/lab_resident.py", line 28, in cli
+    raise RunError('%s failed: %s %s' % (method, error.get('code'), error.get('message')))
+lab_resident.RunError: recording.windows failed: recording_unsupported This desktop does not list windows for recording; a window target without an identity records the focused window

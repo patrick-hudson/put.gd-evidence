@@ -1,0 +1,262 @@
+[
+  {
+    "row": "capabilities",
+    "passed": true,
+    "capabilities": {
+      "acquisition": "x11",
+      "active": null,
+      "audio": {
+        "microphone": false,
+        "microphoneMessage": "The sound server did not answer, so no microphone can be opened.",
+        "microphoneReason": "sound_server_unavailable",
+        "system": true
+      },
+      "available": true,
+      "clickHighlights": {
+        "available": true,
+        "drawnBy": "recorder",
+        "route": "x11-xinput2",
+        "targets": [
+          "monitor",
+          "desktop",
+          "region",
+          "window"
+        ]
+      },
+      "codecs": {
+        "mp4": [
+          "h264",
+          "h265"
+        ],
+        "webm": [
+          "vp9"
+        ]
+      },
+      "commands": [
+        "windows",
+        "microphones",
+        "prepare",
+        "start",
+        "pause",
+        "resume",
+        "stop",
+        "cancel",
+        "inspect",
+        "select",
+        "raise",
+        "overlay",
+        "audio",
+        "edit",
+        "preview",
+        "review",
+        "saveCopy",
+        "upload"
+      ],
+      "editCommands": [
+        "setTrim",
+        "resetTrim",
+        "addMask",
+        "updateMask",
+        "removeMask"
+      ],
+      "exportEncoders": {
+        "h264": [
+          "h264_vaapi",
+          "libx264"
+        ],
+        "h265": [
+          "libx265"
+        ],
+        "vp9": [
+          "libvpx-vp9"
+        ]
+      },
+      "ffmpeg": {
+        "avcodec": "63.1.102",
+        "avfilter": "12.1.102",
+        "avformat": "63.1.102",
+        "avutil": "61.1.102",
+        "encoderFailures": {
+          "h264_nvenc": "libcuda.so.1 is not installed",
+          "hevc_nvenc": "libcuda.so.1 is not installed",
+          "hevc_vaapi": "Function not implemented"
+        },
+        "encoders": {
+          "aac": true,
+          "gif": true,
+          "h264_nvenc": true,
+          "h264_vaapi": true,
+          "hevc_nvenc": true,
+          "hevc_vaapi": true,
+          "libopenh264": false,
+          "libopus": true,
+          "libvorbis": false,
+          "libvpx-vp9": true,
+          "libwebp_anim": true,
+          "libx264": true,
+          "libx265": true,
+          "vp9_vaapi": false
+        },
+        "filters": {
+          "asetpts": true,
+          "atrim": true,
+          "avgblur": true,
+          "crop": true,
+          "drawbox": true,
+          "format": true,
+          "fps": true,
+          "palettegen": true,
+          "paletteuse": true,
+          "scale": true,
+          "setpts": true,
+          "trim": true
+        },
+        "h264Decoder": {
+          "failure": null,
+          "name": "h264",
+          "usable": true
+        },
+        "muxers": {
+          "gif": true,
+          "matroska": true,
+          "mp4": true,
+          "webm": true,
+          "webp": true
+        }
+      },
+      "formats": [
+        "mp4",
+        "webm",
+        "gif",
+        "webp"
+      ],
+      "gstreamer": {
+        "audioSources": [
+          "pulsesrc",
+          "pipewiresrc"
+        ],
+        "available": true,
+        "elements": {
+          "aacparse": "1.24.2",
+          "appsink": "1.24.2",
+          "appsrc": "1.24.2",
+          "audioconvert": "1.24.2",
+          "audiomixer": "1.24.2",
+          "audioresample": "1.24.2",
+          "avenc_aac": null,
+          "compositor": null,
+          "fdkaacenc": null,
+          "h264parse": "1.24.2",
+          "identity": "1.24.2",
+          "matroskamux": "1.24.2",
+          "mp4mux": null,
+          "openh264enc": null,
+          "pipewiresrc": "1.0.5",
+          "pulsesrc": "1.24.2",
+          "vaapih264enc": "1.24.2",
+          "vah264enc": null,
+          "vah264lpenc": "1.24.2",
+          "videoconvert": "1.24.2",
+          "videocrop": "1.24.2",
+          "videorate": "1.24.2",
+          "videoscale": "1.24.2",
+          "voaacenc": "1.24.2",
+          "vp9enc": null,
+          "webmmux": "1.24.2",
+          "webpenc": null,
+          "x264enc": "1.24.1",
+          "x265enc": null,
+          "ximagesrc": "1.24.2"
+        },
+        "encoderFailures": {},
+        "liveAacEncoders": [
+          "voaacenc"
+        ],
+        "liveH264Encoders": [
+          "vah264lpenc",
+          "vaapih264enc",
+          "x264enc"
+        ],
+        "liveSources": [
+          "ximagesrc",
+          "pipewiresrc"
+        ],
+        "pluginDirectories": [
+          "/home/patrick/work/sb1114/analyzer/squashfs-root/usr/lib/gstreamer-1.0"
+        ],
+        "usableH264Encoders": [
+          "vah264lpenc",
+          "vaapih264enc",
+          "x264enc"
+        ],
+        "version": "GStreamer 1.24.2",
+        "webpAnimated": false
+      },
+      "limits": {
+        "animationMaxEdge": 1280,
+        "animationMaxUs": 60000000,
+        "maxFileBytes": 1099511627776,
+        "maxMasks": 64
+      },
+      "liveCapture": {
+        "audio": true,
+        "encoder": true,
+        "source": true
+      },
+      "maskKinds": [
+        "blur",
+        "solid"
+      ],
+      "overlayExclusion": {},
+      "schemaVersion": 1,
+      "session": "x11",
+      "states": [
+        "preparing",
+        "ready",
+        "starting",
+        "recording",
+        "paused",
+        "stopping",
+        "reviewing",
+        "exporting",
+        "submitted",
+        "cancelled",
+        "failed"
+      ],
+      "targets": [
+        "monitor",
+        "desktop",
+        "region",
+        "window"
+      ],
+      "timeUnit": "microseconds",
+      "windowAcquisition": "x11",
+      "windowList": false
+    }
+  },
+  {
+    "row": "8-1px",
+    "passed": false,
+    "error": "recording.windows failed: recording_unsupported This desktop does not list windows for recording; a window target without an identity records the focused window"
+  },
+  {
+    "row": "8-small",
+    "passed": false,
+    "error": "recording.windows failed: recording_unsupported This desktop does not list windows for recording; a window target without an identity records the focused window"
+  },
+  {
+    "row": "8-four",
+    "passed": false,
+    "error": "recording.windows failed: recording_unsupported This desktop does not list windows for recording; a window target without an identity records the focused window"
+  },
+  {
+    "row": "9-esc-select",
+    "passed": false,
+    "error": "recording.windows failed: recording_unsupported This desktop does not list windows for recording; a window target without an identity records the focused window"
+  },
+  {
+    "row": "driver-error",
+    "passed": false,
+    "error": "recording.windows failed: recording_unsupported This desktop does not list windows for recording; a window target without an identity records the focused window"
+  }
+]

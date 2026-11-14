@@ -1,0 +1,268 @@
+{
+  "acquisition": "kde-screencast",
+  "active": null,
+  "audio": {
+    "microphone": false,
+    "microphoneMessage": "No microphone is connected.",
+    "microphoneReason": "no_microphone",
+    "system": true
+  },
+  "available": true,
+  "clickHighlights": {
+    "available": true,
+    "drawnBy": "compositor",
+    "note": "KWin draws the rings on the screen for the length of the recording; window recordings carry none.",
+    "route": "kwin-mouseclick-effect",
+    "targetReasons": {
+      "window": "KWin draws the click rings on the screen; a window recording's stream carries the window alone, so it has none."
+    },
+    "targets": [
+      "monitor",
+      "desktop",
+      "region"
+    ]
+  },
+  "codecs": {
+    "mp4": [
+      "h264",
+      "h265"
+    ],
+    "webm": [
+      "vp9"
+    ]
+  },
+  "commands": [
+    "windows",
+    "microphones",
+    "prepare",
+    "start",
+    "pause",
+    "resume",
+    "stop",
+    "cancel",
+    "inspect",
+    "select",
+    "raise",
+    "overlay",
+    "audio",
+    "edit",
+    "preview",
+    "review",
+    "saveCopy",
+    "upload"
+  ],
+  "editCommands": [
+    "setTrim",
+    "resetTrim",
+    "addMask",
+    "updateMask",
+    "removeMask"
+  ],
+  "exportEncoders": {
+    "h264": [
+      "libx264"
+    ],
+    "h265": [
+      "libx265"
+    ],
+    "vp9": [
+      "libvpx-vp9"
+    ]
+  },
+  "ffmpeg": {
+    "avcodec": "62.11.100",
+    "avfilter": "11.4.100",
+    "avformat": "62.3.100",
+    "avutil": "60.8.100",
+    "encoderFailures": {
+      "h264_nvenc": "libcuda.so.1 is not installed",
+      "h264_vaapi": "no VA-API device accepts it",
+      "hevc_nvenc": "libcuda.so.1 is not installed",
+      "hevc_vaapi": "no VA-API device accepts it"
+    },
+    "encoders": {
+      "aac": true,
+      "gif": true,
+      "h264_nvenc": true,
+      "h264_vaapi": true,
+      "hevc_nvenc": true,
+      "hevc_vaapi": true,
+      "libopenh264": false,
+      "libopus": true,
+      "libvorbis": true,
+      "libvpx-vp9": true,
+      "libwebp_anim": true,
+      "libx264": true,
+      "libx265": true,
+      "vp9_vaapi": true
+    },
+    "filters": {
+      "asetpts": true,
+      "atrim": true,
+      "avgblur": true,
+      "crop": true,
+      "drawbox": true,
+      "format": true,
+      "fps": true,
+      "palettegen": true,
+      "paletteuse": true,
+      "scale": true,
+      "setpts": true,
+      "trim": true
+    },
+    "h264Decoder": {
+      "failure": null,
+      "name": "h264",
+      "usable": true
+    },
+    "muxers": {
+      "gif": true,
+      "matroska": true,
+      "mp4": true,
+      "webm": true,
+      "webp": true
+    }
+  },
+  "formats": [
+    "mp4",
+    "webm",
+    "gif",
+    "webp"
+  ],
+  "gstreamer": {
+    "audioSources": [
+      "pulsesrc",
+      "pipewiresrc"
+    ],
+    "available": true,
+    "elements": {
+      "aacparse": "1.28.2",
+      "appsink": "1.28.2",
+      "appsrc": "1.28.2",
+      "audioconvert": "1.28.2",
+      "audiomixer": "1.28.2",
+      "audioresample": "1.28.2",
+      "avenc_aac": "1.28.2",
+      "compositor": "1.28.2",
+      "fdkaacenc": null,
+      "h264parse": "1.28.2",
+      "identity": "1.28.2",
+      "matroskamux": "1.28.2",
+      "mp4mux": "1.28.2",
+      "openh264enc": "1.28.2",
+      "pipewiresrc": "1.6.2",
+      "pulsesrc": "1.28.2",
+      "vaapih264enc": null,
+      "vah264enc": null,
+      "vah264lpenc": null,
+      "videoconvert": "1.28.2",
+      "videocrop": "1.28.2",
+      "videorate": "1.28.2",
+      "videoscale": "1.28.2",
+      "voaacenc": "1.28.2",
+      "vp9enc": "1.28.2",
+      "webmmux": "1.28.2",
+      "webpenc": "1.28.2",
+      "x264enc": "1.28.2",
+      "x265enc": "1.28.2",
+      "ximagesrc": "1.28.2"
+    },
+    "encoderFailures": {},
+    "liveAacEncoders": [
+      "avenc_aac",
+      "voaacenc"
+    ],
+    "liveH264Encoders": [
+      "x264enc",
+      "openh264enc"
+    ],
+    "liveSources": [
+      "ximagesrc",
+      "pipewiresrc"
+    ],
+    "pluginDirectories": [
+      "/usr/lib/x86_64-linux-gnu/gstreamer-1.0"
+    ],
+    "usableH264Encoders": [
+      "x264enc",
+      "openh264enc"
+    ],
+    "version": "GStreamer 1.28.2",
+    "webpAnimated": true
+  },
+  "kdeScreencast": {
+    "available": true,
+    "hidesRequester": true,
+    "kwinVersion": "6.6.6",
+    "outputs": [
+      {
+        "logical": [
+          0,
+          0,
+          1280,
+          800
+        ],
+        "name": "Virtual-1"
+      },
+      {
+        "logical": [
+          1280,
+          0,
+          1024,
+          768
+        ],
+        "name": "Virtual-2"
+      }
+    ],
+    "version": 5
+  },
+  "limits": {
+    "animationMaxEdge": 1280,
+    "animationMaxUs": 60000000,
+    "maxFileBytes": 1099511627776,
+    "maxMasks": 64
+  },
+  "liveCapture": {
+    "audio": true,
+    "encoder": true,
+    "source": true
+  },
+  "maskKinds": [
+    "blur",
+    "solid"
+  ],
+  "overlayExclusion": {},
+  "pipewire": {
+    "socket": "/run/user/1000/pipewire-0"
+  },
+  "portal": {
+    "available": true,
+    "cursorModes": 7,
+    "portalVersion": 5,
+    "sourceTypes": 7
+  },
+  "schemaVersion": 1,
+  "session": "wayland",
+  "states": [
+    "preparing",
+    "ready",
+    "starting",
+    "recording",
+    "paused",
+    "stopping",
+    "reviewing",
+    "exporting",
+    "submitted",
+    "cancelled",
+    "failed"
+  ],
+  "targets": [
+    "monitor",
+    "desktop",
+    "region",
+    "window"
+  ],
+  "timeUnit": "microseconds",
+  "windowAcquisition": "kde-screencast",
+  "windowList": true
+}

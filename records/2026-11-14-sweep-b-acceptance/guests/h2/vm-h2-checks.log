@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/sb1114/guest_b.py", line 332, in <module>
+    focus_fixture();control(primarySet=True);primary()
+    ~~~~~~~~~~~~~^^
+  File "/home/patrick/work/sb1114/guest_b.py", line 178, in focus_fixture
+    move(2300,790);time.sleep(.2);h,v=find_fixture();ox,oy=ORIGIN[h];click(ox+v['x']+100,oy+v['y']+100);return h,v
+                                      ~~~~~~~~~~~~^^
+  File "/home/patrick/work/sb1114/guest_b.py", line 168, in find_fixture
+    raise RuntimeError('Independent GTK paint not found')
+RuntimeError: Independent GTK paint not found

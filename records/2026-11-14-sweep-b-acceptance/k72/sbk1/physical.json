@@ -1,0 +1,365 @@
+[
+  {
+    "row": "capabilities",
+    "passed": true,
+    "capabilities": {
+      "acquisition": "kde-screencast",
+      "active": null,
+      "audio": {
+        "microphone": false,
+        "microphoneMessage": "The sound server did not answer, so no microphone can be opened.",
+        "microphoneReason": "sound_server_unavailable",
+        "system": true
+      },
+      "available": true,
+      "clickHighlights": {
+        "available": true,
+        "drawnBy": "compositor",
+        "note": "KWin draws the rings on the screen for the length of the recording; window recordings carry none.",
+        "route": "kwin-mouseclick-effect",
+        "targetReasons": {
+          "window": "KWin draws the click rings on the screen; a window recording's stream carries the window alone, so it has none."
+        },
+        "targets": [
+          "monitor",
+          "desktop",
+          "region"
+        ]
+      },
+      "codecs": {
+        "mp4": [
+          "h264",
+          "h265"
+        ],
+        "webm": [
+          "vp9"
+        ]
+      },
+      "commands": [
+        "windows",
+        "microphones",
+        "prepare",
+        "start",
+        "pause",
+        "resume",
+        "stop",
+        "cancel",
+        "inspect",
+        "select",
+        "raise",
+        "overlay",
+        "audio",
+        "edit",
+        "preview",
+        "review",
+        "saveCopy",
+        "upload"
+      ],
+      "editCommands": [
+        "setTrim",
+        "resetTrim",
+        "addMask",
+        "updateMask",
+        "removeMask"
+      ],
+      "exportEncoders": {
+        "h264": [
+          "h264_vaapi",
+          "libx264"
+        ],
+        "h265": [
+          "libx265"
+        ],
+        "vp9": [
+          "libvpx-vp9"
+        ]
+      },
+      "ffmpeg": {
+        "avcodec": "62.11.100",
+        "avfilter": "11.4.100",
+        "avformat": "62.3.100",
+        "avutil": "60.8.100",
+        "encoderFailures": {
+          "h264_nvenc": "libcuda.so.1 is not installed",
+          "hevc_nvenc": "libcuda.so.1 is not installed",
+          "hevc_vaapi": "Function not implemented"
+        },
+        "encoders": {
+          "aac": true,
+          "gif": true,
+          "h264_nvenc": true,
+          "h264_vaapi": true,
+          "hevc_nvenc": true,
+          "hevc_vaapi": true,
+          "libopenh264": false,
+          "libopus": true,
+          "libvorbis": true,
+          "libvpx-vp9": true,
+          "libwebp_anim": true,
+          "libx264": true,
+          "libx265": true,
+          "vp9_vaapi": true
+        },
+        "filters": {
+          "asetpts": true,
+          "atrim": true,
+          "avgblur": true,
+          "crop": true,
+          "drawbox": true,
+          "format": true,
+          "fps": true,
+          "palettegen": true,
+          "paletteuse": true,
+          "scale": true,
+          "setpts": true,
+          "trim": true
+        },
+        "h264Decoder": {
+          "failure": null,
+          "name": "h264",
+          "usable": true
+        },
+        "muxers": {
+          "gif": true,
+          "matroska": true,
+          "mp4": true,
+          "webm": true,
+          "webp": true
+        }
+      },
+      "formats": [
+        "mp4",
+        "webm",
+        "gif",
+        "webp"
+      ],
+      "gstreamer": {
+        "audioSources": [
+          "pulsesrc",
+          "pipewiresrc"
+        ],
+        "available": true,
+        "elements": {
+          "aacparse": "1.28.2",
+          "appsink": "1.28.2",
+          "appsrc": "1.28.2",
+          "audioconvert": "1.28.2",
+          "audiomixer": "1.28.2",
+          "audioresample": "1.28.2",
+          "avenc_aac": "1.28.2",
+          "compositor": "1.28.2",
+          "fdkaacenc": null,
+          "h264parse": "1.28.2",
+          "identity": "1.28.2",
+          "matroskamux": "1.28.2",
+          "mp4mux": "1.28.2",
+          "openh264enc": "1.28.2",
+          "pipewiresrc": "1.6.2",
+          "pulsesrc": "1.28.2",
+          "vaapih264enc": "1.26.8",
+          "vah264enc": null,
+          "vah264lpenc": "1.28.2",
+          "videoconvert": "1.28.2",
+          "videocrop": "1.28.2",
+          "videorate": "1.28.2",
+          "videoscale": "1.28.2",
+          "voaacenc": "1.28.2",
+          "vp9enc": "1.28.2",
+          "webmmux": "1.28.2",
+          "webpenc": "1.28.2",
+          "x264enc": "1.28.2",
+          "x265enc": "1.28.2",
+          "ximagesrc": "1.28.2"
+        },
+        "encoderFailures": {},
+        "liveAacEncoders": [
+          "avenc_aac",
+          "voaacenc"
+        ],
+        "liveH264Encoders": [
+          "vah264lpenc",
+          "vaapih264enc",
+          "x264enc",
+          "openh264enc"
+        ],
+        "liveSources": [
+          "ximagesrc",
+          "pipewiresrc"
+        ],
+        "pluginDirectories": [
+          "/usr/lib/x86_64-linux-gnu/gstreamer-1.0"
+        ],
+        "usableH264Encoders": [
+          "vah264lpenc",
+          "vaapih264enc",
+          "x264enc",
+          "openh264enc"
+        ],
+        "version": "GStreamer 1.28.2",
+        "webpAnimated": true
+      },
+      "kdeScreencast": {
+        "available": true,
+        "hidesRequester": true,
+        "kwinVersion": "6.6.6",
+        "outputs": [
+          {
+            "logical": [
+              0,
+              0,
+              1920,
+              1080
+            ],
+            "name": "HDMI-A-1"
+          }
+        ],
+        "version": 5
+      },
+      "limits": {
+        "animationMaxEdge": 1280,
+        "animationMaxUs": 60000000,
+        "maxFileBytes": 1099511627776,
+        "maxMasks": 64
+      },
+      "liveCapture": {
+        "audio": true,
+        "encoder": true,
+        "source": true
+      },
+      "maskKinds": [
+        "blur",
+        "solid"
+      ],
+      "overlayExclusion": {},
+      "pipewire": {
+        "socket": "/run/user/1000/pipewire-0"
+      },
+      "portal": {
+        "available": true,
+        "cursorModes": 7,
+        "portalVersion": 5,
+        "sourceTypes": 7
+      },
+      "schemaVersion": 1,
+      "session": "wayland",
+      "states": [
+        "preparing",
+        "ready",
+        "starting",
+        "recording",
+        "paused",
+        "stopping",
+        "reviewing",
+        "exporting",
+        "submitted",
+        "cancelled",
+        "failed"
+      ],
+      "targets": [
+        "monitor",
+        "desktop",
+        "region",
+        "window"
+      ],
+      "timeUnit": "microseconds",
+      "windowAcquisition": "kde-screencast",
+      "windowList": true
+    }
+  },
+  {
+    "row": "12-region",
+    "passed": true,
+    "operation": {
+      "action": "region",
+      "cancelled": false,
+      "clipboardRevision": "1",
+      "copyStatus": "copied",
+      "created": "2026-11-14T00:01:16.254Z",
+      "destination": {
+        "credentials": {},
+        "profileId": "",
+        "profileRevision": "",
+        "providerId": "",
+        "settings": {}
+      },
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "id": "79a7ff24-f7a0-4756-84f3-42890b3914dc",
+      "invocation": "1",
+      "items": [
+        {
+          "artifact": {
+            "bytes": 773,
+            "category": "images",
+            "id": "64690732-1a56-409d-8e97-5a7da22cbb38",
+            "mime": "image/png",
+            "name": "Screen-Capture-2026-11-13-18-01-16.png",
+            "namingPrepared": true,
+            "originalFile": false,
+            "previewPath": "/tmp/sbk1/data/putgd/artifacts/../previews/64690732-1a56-409d-8e97-5a7da22cbb38.png",
+            "sha256": "2171382357960a5b5cd2630908f326cd1e39adefa99d6cf6751069631be42cb7"
+          },
+          "candidate": "",
+          "concurrencyToken": "",
+          "condition": "",
+          "error": {
+            "code": "",
+            "details": {},
+            "message": ""
+          },
+          "local": {
+            "error": {
+              "code": "",
+              "details": {},
+              "message": ""
+            },
+            "path": "/tmp/sbk1/archive/images/Screen-Capture-2026-11-13-18-01-16.png",
+            "status": "saved"
+          },
+          "objectReference": {},
+          "phase": "stored",
+          "publicationId": "bd57b287-0488-42d6-a765-540c72d48e57",
+          "receipt": {
+            "concurrencyToken": "",
+            "destination": {
+              "credentials": {},
+              "profileId": "",
+              "profileRevision": "",
+              "providerId": "",
+              "settings": {}
+            },
+            "directUrl": "",
+            "objectReference": {},
+            "publicationId": "",
+            "schemaVersion": 1
+          },
+          "remoteStatus": "not_requested",
+          "shareIntent": "",
+          "shareIntentOptions": {},
+          "shareStatus": "not_requested",
+          "uploadProgress": null,
+          "uploadStatus": "local_only"
+        }
+      ],
+      "note": "",
+      "phase": "completed",
+      "requestTimeoutMs": null,
+      "settingsRevision": "12fa3bd606b7806f089f9f8ed7ca113091b7ad7cb354ab7ee4e39b29e6aa9733",
+      "state": "completed"
+    }
+  },
+  {
+    "row": "driver-error",
+    "passed": false,
+    "error": "Native fixture not visible"
+  },
+  {
+    "row": "fixture-process-before-cleanup",
+    "passed": true,
+    "pid": 1613689,
+    "returncode": null
+  }
+]
