@@ -259,3 +259,8 @@ Raw helper logs contain only our public/synthetic capture content and technical 
 ## Cinnamon X11 final-head addendum
 
 The coordinator requested m74 after accepting the four-desktop round above. [Cinnamon X11 acceptance](m74/README.md) tests the same final head and full tree, with three captures per build, all relative-mouse modes, Resume equality, paused-window input, Esc, pointer restoration and cleanup. All candidate rows passed; the addendum retains the full nightly comparison. m74 was released 2026-11-14T17:29:47Z.
+
+
+## Round 3 final review-fix re-check
+
+[Round 3 GNOME and Hyprland acceptance](round3/README.md) tests head `57a8749739583638bf991c925d49f7e850608830`, tree `06cb312233f9a0155419f99c92db3e0277138c88`, from completed CI run 43626107441. This is a separate follow-up to the accepted round-2 and Cinnamon results above. It preserves the first-click misses, their published-nightly comparisons, successful GNOME relative correction and Hyprland early-pause/Resume watch checks, and final restoration receipts.

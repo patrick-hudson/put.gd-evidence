@@ -1,0 +1,2 @@
+set -eu
+python3 "$HOME/work/s52/tools/lab/lab.py" launch --profile omarchy-hyprland --golden "$HOME/work/put.gd/work/lab-images/omarchy-hyprland-20261108/image.qcow2" --run "$HOME/work/s52/work/lab-runs/h3" --bootstrap-key "$HOME/work/put.gd/work/lab-bootstrap-omarchy/identity" --known-hosts "$HOME/work/put.gd/work/lab-images/omarchy-hyprland-20261108/known_hosts" --ssh-port 22446 --vnc-display 46 --timeout 300
