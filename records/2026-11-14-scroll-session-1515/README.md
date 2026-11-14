@@ -169,3 +169,82 @@ captures beside the browser's own picture.
 the open defects above.
 
 `acceptance-checklist.md`: what the acceptance round on GNOME, Hyprland and Budgie checks.
+
+## Round 2 (PR #1528 at ae69e7245)
+
+Lab builds are the dev preset (Debug): timings while the tracker is lost are far slower than a
+release build (the tracker's replay of the same frames at -O2: 6 ms a frame on average).
+
+### Auto-scroll's pace (Plasma 6.8.2, Chrome for Testing 157, auto-scroll left alone)
+
+The black cells in Python's documentation under auto-scroll are Chrome's undrawn tiles at a fixed
+place in the viewport (the tracker's live recordings). Counted as pure black 8-column runs on the
+cell grid (`lab/unwritten.py`); HN thread and Wikipedia show the same few page lines in both
+drivers. Seconds per 10,000 px from the result's `elapsedMs` and `height`.
+
+| Pace | Python cells | Python s/10k px | Python bands | HN thread s/10k | Wikipedia s/10k |
+| --- | --- | --- | --- | --- | --- |
+| next step at 85% of the last (round 1) | 126,164 | 16.7 | 430/938 | 15.5 | 18.0 |
+| next step at 100% of the last | 189,952 | 18.9 | | | |
+| at rest: a still frame 150 ms after the movement | 0 | 71.6 | | | |
+| at rest: two still frames | 0 | 126 (stopped at 47,691) | | | |
+| **at rest: a still frame, or no frame for 100 ms (this PR)** | **0** | **22.6** | **937/938** | **22.6** | **24.8** |
+
+Cinnamon X11 (m74), Firefox 158, Python: 12.0 s per 10,000 px before, 17.9 now (0.50 s a step,
+the 150 ms after Firefox's animation); no black cells either way.
+
+### Auto-scroll that loses the page (GitHub PR 1398 in Chrome)
+
+Auto-scroll went back five times near 36,763 px, where the conversation column widens and every
+paragraph wraps anew, and handed the page back: **Auto-scroll lost the page / Scroll back a
+little**. The person scrolled back 6 notches: **Found the page again / Scroll on, or Auto-scroll to
+go on** (`activity: paused`, `pausedBy: lost`). The bar's own Auto-scroll button, pressed with the
+pointer, carried on; it was lost again at the same place and the capture ended `lost_track` at
+37,248 px, `scrolledBy: both`.
+
+Before the fixes of this round the same run ended `end_of_content`-like at 37,096 of 44,491 px
+(`done`, `reachedEnd: true`): KWin's stream had stopped sending new pictures while Chrome went on
+scrolling, and the end proof's restarted stream gave its first frame 56 s later, showing the page
+elsewhere. The session now takes the end only from a fresh frame that shows the page where it was.
+It also learned 540 px a notch from the re-layout (a notch is 180): samples over 1.5 times the
+learned one are now ignored.
+
+### Region that fills the screen (#1519)
+
+| Desktop, browser | Driver | Result | Bar | Bar pixels in the image |
+| --- | --- | --- | --- | --- |
+| Cinnamon X11, Firefox 158, Wikipedia | you scroll | `done`, 24,275 rows (page 24,117 plus toolbar and panel) | inside at 1288,1018 622x52 | none; `hiddenCells` 7,216 in 88 rows (plain) |
+| Cinnamon X11, Firefox 158, Wikipedia | auto | `end_of_content`, 24,275 rows | same | none |
+| Plasma 6.8.2, Chrome, Wikipedia | you scroll | `done`, 24,132 rows | inside at 1288,1018 | none (dark rows only in Chrome's own toolbar); `hiddenCells` 5,760 in 72 rows |
+| Plasma 6.8.2, Chrome, Wikipedia | auto | `end_of_content`, 23,493 rows (page 23,304 plus toolbar and panel) | same | none; `hiddenCells` 5,760 in 72 rows |
+
+Wikipedia's sticky contents column (its highlighted entry changes as the page moves) is drawn in
+fragments at the image's end, with or without the bar (round 1's run without it shows the same),
+and with the region filling the screen a few letters of the footer under that column are plain.
+For the tracker.
+
+### Not shown before, now run
+
+- **A blank stretch taller than the region** (`lab/blank.html`: 30 paragraphs, 2,600 px of nothing,
+  30 paragraphs; Chrome on Plasma). Auto-scroll: `end_of_content` at 3,896 of 8,957 px; the blank
+  stretch looks like the end. You scroll: `done` at 3,885 px, 5,405 of 9,395 frames skipped;
+  nothing after the blank stretch is placed. The known limit, as documented.
+- **Al Jazeera in Firefox**, loaded as if typed (`window.location`, no wait for a load event).
+  Auto-scroll: `end_of_content`, 7,528 of 7,528 px, nothing skipped; you scroll: `done`, 7,526 px,
+  339 of 502 frames skipped. Both have the cookie banner drawn in strips (auto-scroll also as a
+  dark column down the right): the tracker's banner defect, as in Chrome.
+
+### Harness note
+
+Two first attempts in this round raised a DevTools timeout after their capture had started and
+left it running beside the retry (two auto-scrolls on one desktop; two helpers on one staging
+path). `lab/sess.py` now stops a run's capture on any error and refuses to start while a
+`putgd-record` runs; those runs were repeated.
+
+![Python, old pace and new](r2-python-chrome-pace.png)
+
+![GitHub hand-back](r2-github-handback.png)
+
+![Cinnamon, the region fills the screen](r2-cinnamon-full-auto-end.png)
+
+![The bar's new words](r2-bar-lost-states.png)

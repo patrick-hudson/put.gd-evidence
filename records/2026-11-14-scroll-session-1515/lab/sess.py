@@ -54,7 +54,7 @@ class Driver:
         self.stage.mkdir(mode=0o700)
         self.stop = out / 'stop'
         cmd = [str(BUILD / 'test_scroll_capture_driver'), '--helper', str(BUILD / 'putgd-record'), '--rect', ','.join(map(str, rect)), '--out', str(self.stage),
-               '--max-height', '60000', '--driver', 'putgd' if mode == 'auto' else 'user', '--stop-file', str(self.stop)]
+               '--max-height', os.environ.get('LAB_MAX', '60000'), '--driver', 'putgd' if mode == 'auto' else 'user', '--stop-file', str(self.stop)]
         self.lines = []
         self.p = subprocess.Popen(cmd, env=env, stdout=subprocess.PIPE, stderr=open(out / 'driver.err', 'w'), text=True)
         threading.Thread(target=self._read, daemon=True).start()
@@ -112,8 +112,57 @@ def person(b, d, wheel, seed):
     d.stop.touch()
 
 
+def desk(path):
+    v = rfb.RFB(5900)
+    v.screenshot(path)
+    v.close()
+
+
+def come_back(d, out, rect, wheel):
+    """Auto-scroll handed the page back lost (#1515 round 2): what a person
+    sees, scrolling back until the bar no longer says lost, and the bar's own
+    Auto-scroll button pressed again."""
+    note = {'handedAt': time.time()}
+    time.sleep(1.5)
+    desk(out / 'handback.png')
+    note['handbackState'] = [e for e in d.events() if e.get('event') == 'progress'][-1]
+    v = rfb.RFB(5900)
+    v.pointer(rect[0] + rect[2] // 2, rect[1] + rect[3] // 2)
+    v.close()
+    time.sleep(0.5)
+    notches = 0
+    while notches < 60:
+        last = [e for e in d.events() if e.get('event') == 'progress'][-1]
+        if last.get('state') != 'lost':
+            break
+        wheel('w -2')
+        notches += 2
+        time.sleep(0.9)
+    time.sleep(1.0)
+    note['scrolledBackNotches'] = notches
+    note['foundState'] = [e for e in d.events() if e.get('event') == 'progress'][-1]
+    desk(out / 'found.png')
+    import re
+    at = None
+    for line in (out / 'helper.log').read_text(errors='replace').splitlines():
+        m = re.search(r'scroll: bar at .*autoScroll (-?\d+),(-?\d+) (\d+)x(\d+)', line)
+        if m:
+            x, y, w, h = map(int, m.groups())
+            at = (x + w // 2, y + h // 2)
+    note['button'] = at
+    if at:
+        v = rfb.RFB(5900)
+        v.click(*at)
+        v.close()
+        note['pressedAt'] = time.time()
+        time.sleep(3)
+        desk(out / 'resumed.png')
+        note['afterPress'] = [e for e in d.events() if e.get('event') == 'progress'][-1]
+    return note
+
+
 def run(kind, site, mode, wheel):
-    name = f'{kind}-{site}-{mode}'
+    name = f'{kind}-{site}-{mode}' + (('-' + os.environ['LAB_TAG']) if os.environ.get('LAB_TAG') else '')
     out = LAB / 'runs' / name
     if (out / 'result.json').exists():
         return
@@ -122,8 +171,14 @@ def run(kind, site, mode, wheel):
     out.mkdir(parents=True)
     b, _ = L.connect()
     view = json.loads((LAB / 'viewport.json').read_text())
-    url = PAGES[site][kind] if isinstance(PAGES[site], dict) else PAGES[site]
-    b.navigate(url)
+    url = os.environ.get('LAB_URL') or (PAGES[site][kind] if isinstance(PAGES[site], dict) else PAGES[site])
+    if os.environ.get('LAB_NAV_JS') == '1':
+        # As if typed into the address bar: no wait for a load event that a page
+        # full of ads never sends (Al Jazeera in Firefox timed out three times).
+        b.js('window.location.href = %s; return 0;' % json.dumps(url))
+        time.sleep(15)
+    else:
+        b.navigate(url)
     time.sleep(6)
     L.wait_loaded(b, 25)
     b.js('window.scrollTo({top:0,behavior:"instant"});return 0;')
@@ -132,11 +187,37 @@ def run(kind, site, mode, wheel):
     rect = list(view['rect'])
     rect[2] = min(rect[2], int(round(before['clientWidth'] * before['dpr'])))
     rect[3] = min(rect[3], int(round(before['h'] * before['dpr'])))
+    if os.environ.get('LAB_RECT'):
+        # A region of our choosing, such as the whole screen (#1519: no room for the bar outside).
+        rect = [int(v) for v in os.environ['LAB_RECT'].split(',')]
     env, _ = L.session_env()
     env.update(PUTGD_RECORD_DEBUG_LOG=str(out / 'helper.log'), PIPEWIRE_RUNTIME_DIR='/run/user/%d' % os.getuid())
+    for k in ('PUTGD_LAB_PACE', 'PUTGD_SCROLL_WATCH'):
+        if os.environ.get(k):
+            env[k] = os.environ[k]
     result = {'name': name, 'site': site, 'url': url, 'mode': mode, 'browser': kind, 'rect': rect, 'before': before, 'viewport': view}
     start = time.time()
+    # One capture at a time on this desktop: a driver left from a run that
+    # raised would capture beside this one (and auto-scroll would fight it).
+    left = subprocess.run(['pgrep', '-x', 'putgd-record'], capture_output=True, text=True).stdout.split()
+    if left:
+        raise RuntimeError('a putgd-record is still running: %s' % ' '.join(left))
     d = Driver(rect, out, mode, env)
+    try:
+        finish_run(b, d, out, rect, mode, wheel, result, start, name)
+    except BaseException:
+        # Whatever went wrong, this run's capture ends with it.
+        d.stop.touch()
+        try:
+            d.p.wait(timeout=60)
+        except subprocess.TimeoutExpired:
+            d.p.terminate()
+            d.p.wait(timeout=20)
+        raise
+
+
+def finish_run(b, d, out, rect, mode, wheel, result, start, name):
+    env, _ = L.session_env()
     for _ in range(200):
         if d.capturing() or not d.running():
             break
@@ -155,8 +236,14 @@ def run(kind, site, mode, wheel):
     # this one presses Done, as a person who saw it stop would.
     began = time.time()
     handed = None
+    resumed = 0
     while d.running() and time.time() - began < 600:
         progress = [e for e in d.events() if e.get('event') == 'progress']
+        if (mode == 'auto' and os.environ.get('LAB_RESUME') == '1' and not resumed and progress and progress[-1].get('driver') == 'user'
+                and progress[-1].get('pausedBy') == 'lost'):
+            resumed = 1
+            result['resume'] = come_back(d, out, rect, wheel)
+            continue
         if mode == 'auto' and progress and progress[-1].get('driver') == 'user':
             handed = handed or time.time()
             if time.time() - handed > 15:
