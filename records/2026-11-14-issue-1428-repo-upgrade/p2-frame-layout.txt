@@ -1,0 +1,4 @@
+$ python3 -c 'import sys;sys.path.insert(0,"/home/patrick/repo1428");from rfb import RFB;c=RFB(5901);w,h,p=c.frame();print([(y,sum(p[(y*w+x)*4:(y*w+x)*4+3]==bytes([255]*3) for x in range(w))) for y in range(0,h,100)]);c.close()'
+[(0, 0), (100, 0), (200, 0), (300, 0), (400, 0), (500, 0), (600, 0), (700, 0), (800, 0), (900, 0), (1000, 0)]
+
+exit=0

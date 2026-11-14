@@ -1,0 +1,38 @@
+$ systemctl --user status putgd-gnome-vnc.service --no-pager; journalctl --user -u putgd-gnome-vnc.service -n 12 --no-pager
+● putgd-gnome-vnc.service - Existing GNOME desktop VNC over SSH
+     Loaded: loaded (/home/patrick/.config/systemd/user/putgd-gnome-vnc.service; enabled; preset: disabled)
+    Drop-In: /usr/lib/systemd/user/service.d
+             └─10-timeout-abort.conf
+     Active: active (running) since Sat 2026-11-14 06:12:31 CST; 7s ago
+ Invocation: 4cd5cda08f8f48059b299a8a4b139df5
+   Main PID: 147692 (w0vncserver)
+      Tasks: 5 (limit: 18974)
+     Memory: 19.6M (peak: 20.3M)
+        CPU: 149ms
+     CGroup: /user.slice/user-1000.slice/user@1000.service/app.slice/putgd-gnome-vnc.service
+             └─147692 /usr/bin/w0vncserver -interface=127.0.0.1 -localhost -UseIPv6=0 -rfbport=5901 -SecurityTypes=None -AlwaysShared -DisconnectClients=0 -RememberDisplayChoice=Always
+
+Nov 14 06:12:31 fedora systemd[1051]: Started putgd-gnome-vnc.service - Existing GNOME desktop VNC over SSH.
+Nov 14 06:12:31 fedora w0vncserver[147692]: Sat Nov 14 06:12:31 2026
+Nov 14 06:12:31 fedora w0vncserver[147692]:  main:        Listening for VNC connections on local interface(s), port 5901
+Nov 14 06:12:32 fedora w0vncserver[147692]: Sat Nov 14 06:12:32 2026
+Nov 14 06:12:32 fedora w0vncserver[147692]:  Connections: Accepted: 127.0.0.1::51226
+Nov 14 06:12:32 fedora w0vncserver[147692]:  SConnection: Client needs protocol version 3.8
+Nov 14 06:12:32 fedora w0vncserver[147692]:  SConnection: Client requests security type None(1)
+Nov 14 06:12:32 fedora w0vncserver[147692]:  VNCSConnST:  Server default pixel format depth 24 (32bpp) big-endian rgb max
+Nov 14 06:12:32 fedora w0vncserver[147692]:               255,255,255 shift 8,16,24
+Nov 14 06:12:32 fedora w0vncserver[147692]:  VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian bgr888
+Nov 14 06:12:27 fedora systemd[1051]: putgd-gnome-vnc.service: Consumed 110ms CPU time over 2.883s wall clock time, 78.6M memory peak.
+Nov 14 06:12:31 fedora systemd[1051]: putgd-gnome-vnc.service: Scheduled restart job, restart counter is at 1.
+Nov 14 06:12:31 fedora systemd[1051]: Started putgd-gnome-vnc.service - Existing GNOME desktop VNC over SSH.
+Nov 14 06:12:31 fedora w0vncserver[147692]: Sat Nov 14 06:12:31 2026
+Nov 14 06:12:31 fedora w0vncserver[147692]:  main:        Listening for VNC connections on local interface(s), port 5901
+Nov 14 06:12:32 fedora w0vncserver[147692]: Sat Nov 14 06:12:32 2026
+Nov 14 06:12:32 fedora w0vncserver[147692]:  Connections: Accepted: 127.0.0.1::51226
+Nov 14 06:12:32 fedora w0vncserver[147692]:  SConnection: Client needs protocol version 3.8
+Nov 14 06:12:32 fedora w0vncserver[147692]:  SConnection: Client requests security type None(1)
+Nov 14 06:12:32 fedora w0vncserver[147692]:  VNCSConnST:  Server default pixel format depth 24 (32bpp) big-endian rgb max
+Nov 14 06:12:32 fedora w0vncserver[147692]:               255,255,255 shift 8,16,24
+Nov 14 06:12:32 fedora w0vncserver[147692]:  VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian bgr888
+
+exit=0

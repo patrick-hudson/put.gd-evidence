@@ -1,0 +1,37 @@
+$ sudo -n dnf install --assumeno ~/repo1428/old.rpm; cat /etc/gdm/custom.conf; loginctl list-sessions; gsettings get org.gnome.shell enabled-extensions
+Updating and loading repositories:
+Repositories loaded.
+Package Arch   Version                       Repository        Size
+Installing:
+ putgd  x86_64 0:26.1113.4757~nightly-1.fc44 @commandline 317.2 MiB
+
+Transaction Summary:
+ Installing:         1 package
+
+Total size of inbound packages is 108 MiB. Need to download 0 B.
+After this operation, 317 MiB extra will be used (install 317 MiB, remove 0 B).
+Warning: A pending offline transaction initiated by the following command will be invalidated: dnf5daemon-server
+Operation aborted by the user.
+# GDM configuration storage
+
+[daemon]
+
+AutomaticLogin=patrick
+AutomaticLoginEnable=True
+[security]
+
+[debug]
+# Uncomment the line below to turn on debugging
+#Enable=true
+SESSION  UID USER    SEAT  LEADER CLASS   TTY  IDLE SINCE
+  15784 1000 patrick -     98126  user    -    no   -
+  15785 1000 patrick -     98146  user    -    no   -
+  16021 1000 patrick seat0 126157 user    tty2 no   -
+  16278 1000 patrick -     143573 user    -    no   -
+      2 1000 patrick -     1051   manager -    no   -
+   4402 1000 patrick -     693177 user    -    no   -
+
+6 sessions listed.
+['background-logo@fedorahosted.org', 'putgd@put.gd']
+
+exit=0

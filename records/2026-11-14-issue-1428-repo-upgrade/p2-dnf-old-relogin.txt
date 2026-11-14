@@ -1,0 +1,39 @@
+$ sudo -n dnf install -y ~/repo1428/old.rpm && sudo -n systemctl restart gdm; sleep 8; systemctl --user show-environment | grep -E "DISPLAY|XDG_SESSION"; gnome-extensions info putgd@put.gd; rpm -q putgd
+Updating and loading repositories:
+Repositories loaded.
+Package Arch   Version                       Repository        Size
+Installing:
+ putgd  x86_64 0:26.1113.4757~nightly-1.fc44 @commandline 317.2 MiB
+
+Transaction Summary:
+ Installing:         1 package
+
+Total size of inbound packages is 108 MiB. Need to download 0 B.
+After this operation, 317 MiB extra will be used (install 317 MiB, remove 0 B).
+Warning: A pending offline transaction initiated by the following command will be invalidated: dnf5daemon-server
+Running transaction
+[1/3] Verify package files              100% |   0.0   B/s |   1.0   B |  00m01s
+[2/3] Prepare transaction               100% |   4.0   B/s |   1.0   B |  00m00s
+[3/3] Installing putgd-0:26.1113.4757~n 100% | 122.3 MiB/s | 317.2 MiB |  00m03s
+Warning: skipped OpenPGP checks for 1 package from repository: @commandline
+Warning: Pending offline transaction has been invalidated.
+To reschedule, run: dnf5daemon-server
+Complete!
+DISPLAY=:0
+GNOME_SETUP_DISPLAY=unix:/tmp/.X11-unix/X1
+WAYLAND_DISPLAY=wayland-0
+XDG_SESSION_CLASS=user
+XDG_SESSION_DESKTOP=gnome
+XDG_SESSION_EXTRA_DEVICE_ACCESS=render:accel
+XDG_SESSION_TYPE=wayland
+putgd@put.gd
+  Name: put.gd native capture
+  Description: Native GNOME 50 capture, global actions and bounded background CLIPBOARD transfer for put.gd.
+  Path: /usr/share/gnome-shell/extensions/putgd@put.gd
+  URL: https://put.gd
+  Version: 22
+  Enabled: No
+  State: INITIALIZED
+putgd-26.1113.4757~nightly-1.fc44.x86_64
+
+exit=0
