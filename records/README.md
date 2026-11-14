@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-14-tray-action-bar-acceptance](2026-11-14-tray-action-bar-acceptance/README.md) | — | PR 1532 tray and action bar acceptance — incomplete |
 | [2026-11-14-tray-action-bar-layout-1532](2026-11-14-tray-action-bar-layout-1532/README.md) | #1532 | Tray menu and action bar layout (#1532): catalog pictures |
 | [2026-11-14-scroll-tracker-1515-3](2026-11-14-scroll-tracker-1515-3/README.md) | #3, #1515 | Scroll tracker (#1515), round 3: live Chrome failures |
 | [2026-11-14-scroll-session-1515](2026-11-14-scroll-session-1515/README.md) | #1515 | Scrolling capture's session on the tracker, on real pages (#1515) |
