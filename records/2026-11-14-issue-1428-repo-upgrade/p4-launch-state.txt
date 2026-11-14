@@ -1,0 +1,14 @@
+$ pgrep -a qemu-system; ls ~/work/r1428p4/work/lab-runs/a1 | head; tail -3 ~/work/r1428p4/work/lab-runs/a1/qemu.log
+480809 qemu-system-x86_64 -machine q35,accel=kvm -cpu host -drive if=pflash,format=raw,readonly=on,file=/usr/share/OVMF/OVMF_CODE_4M.fd -drive if=pflash,format=raw,file=/home/patrick/work/r1428p4/work/lab-runs/a1/vars.fd -smp 2 -m 6144 -device virtio-vga,id=video0 -device usb-ehci -device usb-tablet -drive file=/home/patrick/work/r1428p4/work/lab-runs/a1/disk.qcow2,format=qcow2,if=virtio -netdev user,id=net0,hostfwd=tcp:127.0.0.1:22440-:22 -device virtio-net-pci,netdev=net0 -qmp unix:/home/patrick/work/r1428p4/work/lab-runs/a1/qmp.sock,server=on,wait=off -vnc 127.0.0.1:40 -display none -daemonize -pidfile /home/patrick/work/r1428p4/work/lab-runs/a1/qemu.pid
+disk.qcow2
+guest-preflight-3036cbfc2f5742dfa7ffe2c07bbe3fde-attempt0-head0.ppm
+guest-preflight-3036cbfc2f5742dfa7ffe2c07bbe3fde-attempt10-head0.ppm
+guest-preflight-3036cbfc2f5742dfa7ffe2c07bbe3fde-attempt11-head0.ppm
+guest-preflight-3036cbfc2f5742dfa7ffe2c07bbe3fde-attempt12-head0.ppm
+guest-preflight-3036cbfc2f5742dfa7ffe2c07bbe3fde-attempt1-head0.ppm
+guest-preflight-3036cbfc2f5742dfa7ffe2c07bbe3fde-attempt2-head0.ppm
+guest-preflight-3036cbfc2f5742dfa7ffe2c07bbe3fde-attempt3-head0.ppm
+guest-preflight-3036cbfc2f5742dfa7ffe2c07bbe3fde-attempt4-head0.ppm
+guest-preflight-3036cbfc2f5742dfa7ffe2c07bbe3fde-attempt5-head0.ppm
+
+exit=0

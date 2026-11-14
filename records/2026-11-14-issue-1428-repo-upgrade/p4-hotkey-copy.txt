@@ -1,0 +1,12 @@
+$ ssh -i ~/work/put.gd/work/lab-bootstrap-omarchy/identity -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=~/work/put.gd/work/lab-images/omarchy-hyprland-20261108/known_hosts -p 22440 lab@127.0.0.1 'python3 ~/repo1428p4/p4-nocli-copy.py'
+socket preflight [('/run/user/1000/putgd/session.sock', 33), ('/run/user/1000/wayland-1', 24), ('/run/user/1000/hypr/efb50993780079460b0cbed1363e2166a2de1d9f_1794659307_1031227757/.socket.sock', 95), ('/run/user/1000/hypr/efb50993780079460b0cbed1363e2166a2de1d9f_1794659307_1031227757/.socket2.sock', 96)]
+resident PID 6039 poll after 5 seconds None
+text binding []
+stopped owned PIDs 6039 None
+Traceback (most recent call last):
+  File "/home/lab/repo1428p4/p4-nocli-copy.py", line 19, in <module>
+    b=subprocess.run(['hyprctl','binds','-j'],capture_output=True,text=True);(out/'p4-binds.json').write_text(b.stdout);binds=json.loads(b.stdout);text=[x for x in binds if 'putgd:text' in str(x)];print('text binding',json.dumps(text),flush=True);assert text,'Text hotkey was not bound'
+                                                                                                                                                                                                                                                              ^^^^
+AssertionError: Text hotkey was not bound
+
+exit=1

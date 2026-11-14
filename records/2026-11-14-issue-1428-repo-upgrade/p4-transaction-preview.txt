@@ -1,0 +1,39 @@
+$ ssh -i ~/work/put.gd/work/lab-bootstrap-omarchy/identity -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=~/work/put.gd/work/lab-images/omarchy-hyprland-20261108/known_hosts -p 22440 lab@127.0.0.1 'printf "\nn\n" | sudo -n pacman -Syu putgd'
+:: Synchronizing package databases...
+ omarchy downloading...
+ core downloading...
+ extra downloading...
+ multilib downloading...
+ putgd-nightly downloading...
+:: Starting full system upgrade...
+resolving dependencies...
+:: There are 128 providers available for tessdata:
+:: Repository extra
+
+Enter a number (default=1):    1) tesseract-data-afr  2) tesseract-data-amh  3) tesseract-data-ara  4) tesseract-data-asm  5) tesseract-data-aze  6) tesseract-data-aze_cyrl  7) tesseract-data-bel  8) tesseract-data-ben  9) tesseract-data-bod  10) tesseract-data-bos  11) tesseract-data-bre  12) tesseract-data-bul  13) tesseract-data-cat  14) tesseract-data-ceb  15) tesseract-data-ces  16) tesseract-data-chi_sim  17) tesseract-data-chi_sim_vert  18) tesseract-data-chi_tra  19) tesseract-data-chi_tra_vert  20) tesseract-data-chr  21) tesseract-data-cos  22) tesseract-data-cym  23) tesseract-data-dan  24) tesseract-data-dan_frak  25) tesseract-data-deu  26) tesseract-data-deu_frak  27) tesseract-data-div  28) tesseract-data-dzo  29) tesseract-data-ell  30) tesseract-data-eng  31) tesseract-data-enm  32) tesseract-data-epo  33) tesseract-data-equ  34) tesseract-data-est  35) tesseract-data-eus  36) tesseract-data-fao  37) tesseract-data-fas  38) tesseract-data-fil  39) tesseract-data-fin  40) tesseract-data-fra  41) tesseract-data-frk  42) tesseract-data-frm  43) tesseract-data-fry  44) tesseract-data-gla  45) tesseract-data-gle  46) tesseract-data-glg  47) tesseract-data-grc  48) tesseract-data-guj  49) tesseract-data-hat  50) tesseract-data-heb  51) tesseract-data-hin  52) tesseract-data-hrv  53) tesseract-data-hun  54) tesseract-data-hye  55) tesseract-data-iku  56) tesseract-data-ind  57) tesseract-data-isl  58) tesseract-data-ita  59) tesseract-data-ita_old  60) tesseract-data-jav  61) tesseract-data-jpn  62) tesseract-data-jpn_vert  63) tesseract-data-kan  64) tesseract-data-kat  65) tesseract-data-kat_old  66) tesseract-data-kaz  67) tesseract-data-khm  68) tesseract-data-kir  69) tesseract-data-kmr  70) tesseract-data-kor  71) tesseract-data-kor_vert  72) tesseract-data-lao  73) tesseract-data-lat  74) tesseract-data-lav  75) tesseract-data-lit  76) tesseract-data-ltz  77) tesseract-data-mal  78) tesseract-data-mar  79) tesseract-data-mkd  80) tesseract-data-mlt  81) tesseract-data-mon  82) tesseract-data-mri  83) tesseract-data-msa  84) tesseract-data-mya  85) tesseract-data-nep  86) tesseract-data-nld  87) tesseract-data-nor  88) tesseract-data-oci  89) tesseract-data-ori  90) tesseract-data-pan  91) tesseract-data-pol  92) tesseract-data-por  93) tesseract-data-pus  94) tesseract-data-que  95) tesseract-data-ron  96) tesseract-data-rus  97) tesseract-data-san  98) tesseract-data-sin  99) tesseract-data-slk  100) tesseract-data-slk_frak  101) tesseract-data-slv  102) tesseract-data-snd  103) tesseract-data-spa  104) tesseract-data-spa_old  105) tesseract-data-sqi  106) tesseract-data-srp  107) tesseract-data-srp_latn  108) tesseract-data-sun  109) tesseract-data-swa  110) tesseract-data-swe  111) tesseract-data-syr  112) tesseract-data-tam  113) tesseract-data-tat  114) tesseract-data-tel  115) tesseract-data-tgk  116) tesseract-data-tgl  117) tesseract-data-tha  118) tesseract-data-tir  119) tesseract-data-ton  120) tesseract-data-tur  121) tesseract-data-uig  122) tesseract-data-ukr  123) tesseract-data-urd  124) tesseract-data-uzb  125) tesseract-data-uzb_cyrl  126) tesseract-data-vie  127) tesseract-data-yid  128) tesseract-data-yor
+looking for conflicting packages...
+
+Package (14)              Old Version            New Version            Net Change  Download Size
+
+extra/ada                                        4.0.0-1                  0.95 MiB       0.31 MiB
+omarchy/cliamp            2.3.0-3                2.4.1-1                 36.14 MiB      21.32 MiB
+omarchy/gliff             0.4.2-1                0.4.3-1                  0.00 MiB       6.29 MiB
+omarchy/herdr             0.9.1-2                0.9.5-1                  2.98 MiB       8.54 MiB
+omarchy/mise-bin          2026.11.0-1            2026.11.7-1              2.27 MiB      50.85 MiB
+extra/nodejs                                     26.12.0-1               64.12 MiB      17.48 MiB
+omarchy/owe               0.2.13-1               0.2.14-1                 0.01 MiB       0.16 MiB
+extra/simdjson                                   1:5.0.5-1               10.27 MiB       0.44 MiB
+omarchy/superwhisper-bin  1.2.0-1                1.3.1-1                 61.28 MiB      66.26 MiB
+extra/tesseract                                  5.5.3-1                  4.66 MiB       1.68 MiB
+extra/tesseract-data-afr                         2:4.1.0-5                7.49 MiB       3.44 MiB
+extra/tesseract-data-eng                         2:4.1.0-5               22.38 MiB       9.03 MiB
+omarchy/yt-dlp            2026.08.19-1           2026.10.26-1           -28.75 MiB       2.80 MiB
+putgd-nightly/putgd       26.1113.4757nightly-1  26.1114.5000nightly-1    2.95 MiB     127.16 MiB
+
+Total Download Size:   315.75 MiB
+Total Installed Size:  940.41 MiB
+Net Upgrade Size:      186.76 MiB
+
+:: Proceed with installation? [Y/n] n
+
+exit=1
