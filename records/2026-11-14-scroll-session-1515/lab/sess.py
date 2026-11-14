@@ -19,7 +19,7 @@ sys.path.insert(0, str(LAB / 'tools'))
 import live7 as L  # noqa: E402
 import rfb  # noqa: E402
 
-BUILD = Path.home() / 'work/scroll-session/repo/build/dev'
+BUILD = Path.home() / 'work/scroll-session/repo/build' / os.environ.get('LAB_BUILD', 'dev')
 # Cinnamon X11 (m74): no uinput for this user, so the wheel is XTest from this
 # separate client (xdotool), which X11 applications take as any mouse's wheel.
 X11 = os.environ.get('LAB_X11') == '1'
@@ -84,6 +84,7 @@ def person(b, d, wheel, seed):
     back up a little past the middle, to the end of the page; then Done."""
     rng = random.Random(seed)
     went_up = False
+    jumped = False
     at_end_since = None
     began = time.time()
     while d.running() and time.time() - began < 480:
@@ -101,6 +102,16 @@ def person(b, d, wheel, seed):
         if progress and progress[-1].get('state') == 'lost':
             wheel('w -2')
             time.sleep(0.7)
+            continue
+        if os.environ.get('LAB_JUMP') in ('1', 'js') and not jumped and y > 0.3 * (doc - h):
+            # A person's jump: far more than a screen in one go (lost), then back as the bar asks.
+            # js: at once, as a scrollbar drag or a key does (a wheel burst is animated and followed).
+            if os.environ.get('LAB_JUMP') == 'js':
+                b.js('window.scrollBy({top: 3000, behavior: "instant"}); return 0;')
+            else:
+                wheel('w 25')
+            jumped = True
+            time.sleep(1.5)
             continue
         if not went_up and doc - h > 3000 and y > 0.45 * (doc - h):
             wheel('w -5')

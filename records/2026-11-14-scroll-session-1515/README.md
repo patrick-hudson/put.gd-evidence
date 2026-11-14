@@ -269,3 +269,70 @@ auto-scroll. For comparison, #1520's acceptance on its own build with extension 
 f44 afterwards: the extension copy removed, both extension lists and the mouse acceleration as
 they were (`r3-gnome/saved-state.txt`), a re-login, no put.gd process or Firefox left, the lock
 released at 20:41 UTC.
+
+## Round 4: an optimised build on Plasma 6.8.2 (PR #1528 at 8d36e0b88)
+
+The PR's sources at 8d36e0b88 (the tracker's round 3 of #1534 merged in, and Done's fresh frame) built with the
+`release` preset (`r4/lab/build-rel.sh`, putgd-build toolbox on aurora-amd), driven as in round 1 by `lab/sess.py`
+(`r4/lab/r4.sh`), one fresh browser per page, Chrome for Testing 157 and Firefox 160. Every run's result is in
+`r4/runs.json`. fafa6e8c9, the PR's head after these runs, adds only `stats.rowsAtDone` and a log line for it.
+
+| Browser | Page | You scroll | Auto-scroll (s per 10,000 px) |
+| --- | --- | --- | --- |
+| Chrome | Al Jazeera article | `done` 7,293 / 7,513 px: the page added 220 px after it was written (below); 2,791 placed, 14,131 skipped while a video advertisement played in the region | `done`, `reachedEnd`, 7,514 / 7,514, 339 skipped (23.0) |
+| Chrome | GitHub PR 1398 | `done` 44,927 / 44,491: taller than the page after the column re-wrapped; not judged | `lost_track` at 36,764 as expected (the column re-wraps; round 2) (30.5) |
+| Chrome | Wikipedia "Linux" | `done` 23,304, whole | `end_of_content` 23,304, whole (24.6) |
+| Chrome | Python `stdtypes` (dark) | `height_cap` 30,000, 0 unwritten cells | `height_cap` 30,000, 0 unwritten cells, 0 skipped (21.9) |
+| Chrome | Wikipedia, 25 notches at once | whole, 0 skipped (Chrome animates the burst: no loss) | |
+| Chrome | Wikipedia, `scrollBy(3000)` at once | **Lost the page**, found again, whole, 105 skipped | |
+| Firefox | Al Jazeera article | `done` 7,291 / 7,511: the same 220 px added after (below); 5,097 skipped | `end_of_content` 7,511 / 7,511, 0 skipped (28.4), a pinned side advertisement drawn down the page (below) |
+| Firefox | GitHub PR 1398 | `done` 46,171 / 46,171, bands 722 of 722 | `end_of_content` 46,171, 722 of 722 (26.8) |
+| Firefox | Wikipedia "Linux" | `done` 24,094, 375 of 377 | `end_of_content` 24,094, 377 of 377 (26.9) |
+| Firefox | Python `stdtypes` | `height_cap` 30,000, 0 unwritten | `height_cap` 30,000, 0 unwritten (25.5) |
+| Firefox | Wikipedia, 25 notches at once | whole, 0 skipped | |
+| Firefox | Wikipedia, `scrollBy(3000)` at once | **Lost the page**, found again, whole, 428 skipped, 377 of 377 | |
+
+Frames: Firefox 59 to 60 per second, Chrome 22 to 32 (58.7 on the article while its advertisement played). The cookie banner's
+colour above the image's last screen: 0 rows in Chrome (both drivers) and Firefox "you scroll" 1; Firefox auto-scroll 4,164,
+which are the side advertisement below, not the banner.
+
+**The article's 220 px in "you scroll" are not lost rows and not a stale stream.** Done took its fresh frame in both runs
+(`scroll fresh frame:` 0.3 s before `ended Finished`), and it showed what the image already ended with. Rows of the image
+against the browser's picture (`r4/lab/where.py`): equal (mean difference 0.0 in Firefox) to row 2,400, then 220 rows
+lower to the end. The difference is the first video's playlist strip (thumbnails, "Now Playing", "Next"): the page drew the
+player without it while the capture passed and added it later. The frames that showed the strip under rows already written
+contradicted them and were skipped, so the image is the page as it was laid out when written
+(`r4/news-firefox-you-scroll-player-strip.png`, `r4/news-chrome-you-scroll-player-strip.png`). This is the documented limit
+of a page that lays itself out again while it is captured. Auto-scroll passed the player after the strip was there.
+
+**For the tracker** (#1515's engine, not this PR's session): in Chrome "you scroll" the image stopped at 3,793 px for about
+seven minutes (from progress event 40 to 3,225 of 3,255) while a video advertisement played in the box below the first
+video (the image's rows 3,220 to 3,390, in the region's lower half): 14,131 frames skipped as contradicted, **Lost the page**
+267 times as the harness scrolled back and on, and then it went through to the end. Auto-scroll over the same box skipped
+339 frames and went through on the hint.
+
+**Wikipedia's pinned contents column at the image's end** (`r4/wikipedia-tails.png`, the last 1,400 rows of each image):
+still drawn in pieces in "you scroll" in both browsers ("Conte", "Logo", "Graphics and Hardware supp" beside the navigation
+boxes); under auto-scroll none in Chrome and one small scrap in Firefox.
+
+**A pinned side advertisement** (Firefox auto-scroll on the article, `r4/news-firefox-auto-side-column.png`): a dark ad
+pinned in the left and right margins is in every frame, so it is in every row of the image, as on the screen; the
+browser's own picture has the margins empty. Rows that a page pins are left out; a column it pins is not.
+
+### What changed in this round
+
+- **Done takes the screen as it is.** Done asks the screen for a fresh frame (`freshAtDoneMs`, 1.5 s at most) and feeds it
+  before finishing; `stats.rowsAtDone` says how many rows it added. Tested with a synthetic stream that goes stale
+  (`testStaleStreamAtDone`). On the live article it found nothing missing.
+- **A blank stretch taller than the region.** The end check cannot tell it from the end: both are frames that stop
+  changing after a step, and the tracker places a blank frame as "no movement" under any hint. Kept as a documented limit,
+  but the end is no longer claimed: when the last frame is plain (`plainFrame`), auto-scroll ends `done` with
+  `reachedEnd: false`, `stats.endBlank: true` and a note to scroll on by hand (`testBlankStretch`).
+- **The pinned advertisement column after a 590 px jump under a hint of 0.** The hint was the session's correct claim:
+  no wheel movement was owed, and the jump was the page's own (a photo loading above). An unknown hint instead of 0 was tried
+  and broke repeating pages at rest (`scroll_capture_x11`), so the hint stays.
+- **The measuring step** (auto-scroll's first notch, before px per notch is known) now carries the movement of the step
+  before it as a hint. Without one the repeating ruler page of `scroll_capture_x11` was ambiguous after the tracker's
+  round 3.
+- **A jump far past the image**: the session test runs the whole flow on a text page and on one with plain stretches (lost,
+  scrolled back, paused by the loss, auto-scroll again, an exact image to the end).
