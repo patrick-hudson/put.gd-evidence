@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-14-sweep-b-acceptance](2026-11-14-sweep-b-acceptance/README.md) | — | Sweep B desktop acceptance — 2026-11-14 |
 | [2026-11-14-link-step-notification](2026-11-14-link-step-notification/README.md) | #1399 | Notification for an uploaded file whose link step did not finish (#1399 follow-up) |
 | [2026-11-13-sweep-a-acceptance](2026-11-13-sweep-a-acceptance/README.md) | — | Sweep A desktop acceptance — 2026-11-13 |
 | [2026-11-13-proton-relink-1399](2026-11-13-proton-relink-1399/README.md) | #1399 | Proton helper native relink and installed-package acceptance (#1399) |
