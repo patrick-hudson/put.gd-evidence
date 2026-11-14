@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-14-scroll-pointer-release-1514-round2](2026-11-14-scroll-pointer-release-1514-round2/README.md) | #1514, #1520 | Scrolling capture pointer release, round 2 (#1514, PR #1520) |
 | [2026-11-14-scroll-tracker-1515-2](2026-11-14-scroll-tracker-1515-2/README.md) | #2, #1515 | Scroll tracker (#1515), round 2: excluded rectangle and the cookie box |
 | [2026-11-14-scroll-tracker-1515](2026-11-14-scroll-tracker-1515/README.md) | #1515 | Scroll tracker (#1515): replay of the lab corpus |
 | [2026-11-14-issue-1428-repo-upgrade](2026-11-14-issue-1428-repo-upgrade/README.md) | — | Issue 1428: signed repository upgrade, 2026-11-14 |
