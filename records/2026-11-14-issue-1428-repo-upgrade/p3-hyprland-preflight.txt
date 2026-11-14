@@ -1,0 +1,6 @@
+$ ssh -i ~/work/put.gd/work/lab-bootstrap-omarchy/identity -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=~/work/put.gd/work/lab-images/omarchy-hyprland-20261108/known_hosts -p 22440 lab@127.0.0.1 'python3 -c '"'"'import pathlib,os,subprocess;p=next(x for x in pathlib.Path("/proc").iterdir() if x.name.isdigit() and (x/"comm").exists() and (x/"comm").read_text().strip()=="quickshell");e=dict(v.split("=",1) for v in (p/"environ").read_bytes().decode().split("\0") if "=" in v);os.environ.update(e);subprocess.run(["hyprctl","clients","-j"]);subprocess.run(["hyprctl","getoption","ecosystem:enforce_permissions"])'"'"'; grep -R "permission" ~/.config/hypr/*.lua /usr/share/omarchy/default/hypr/*.lua 2>/dev/null | head -20'
+[]
+bool: false
+set: false
+
+exit=0

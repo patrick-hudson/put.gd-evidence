@@ -1,69 +1,52 @@
-# Issue 1428: signed repository upgrade, final corrected pass
+# Issue 1428: repository upgrades, final Omarchy updater pass
 
-Part of #1428. Source/build commit df229be2990554bb9c4dff5a020e1407e4eb1885, version 26.1114.5000-nightly. Run date 2026-11-14. No source changes, release workflow dispatches, or subordinate agents.
+Part of #1428. Tested build 26.1114.5000-nightly, commit df229be2990554bb9c4dff5a020e1407e4eb1885. Date 2026-11-14. No source changes, new repository tests, subordinate agents or release workflows.
 
-| Cell | System | Old → new | Dependencies newly installed in upgrade | Copy text result | Acceptance |
+| Cell | System | Old → new | Dependencies installed by upgrade | Copy text | Final acceptance |
 | --- | --- | --- | --- | --- | --- |
-| apt (first pass retained) | d69 Debian 13 / Plasma Wayland, physical | 26.1113.4757~nightly → 26.1114.5000~nightly | tesseract-ocr-eng 1:4.1.0-2; tesseract-ocr 5.5.0-1+b1 | Exact 62-character match through independent wl-paste | met |
-| dnf (corrected pass) | f44 Fedora 44 / GNOME 50.6 Wayland, physical | 26.1113.4757~nightly-1.fc44 → 26.1114.5000~nightly-1.fc44 | None; English data 4.1.0-12.fc44 arrived with the old package via FFmpeg | Expected helper_outdated before re-login; after re-login extension 23 active and independent wl-paste exact 62-character match | met |
-| pacman (corrected pass) | fresh Omarchy 4.5.0 Arch / Hyprland 0.56.2 guest on d69 | 26.1113.4757nightly-1 → unchanged | None committed. Planned: tesseract 5.5.3-1, tesseract-data-eng 2:4.1.0-5, also tesseract-data-afr 2:4.1.0-5. zxing-cpp 3.1.1-1 was already pulled by old-package GStreamer | Not run: upgrade aborted by Omarchy pre-transaction hook; old build has no helper | not met |
+| apt, first pass retained | d69 Debian 13 / Plasma Wayland, physical | 26.1113.4757~nightly → 26.1114.5000~nightly | tesseract-ocr-eng 1:4.1.0-2; tesseract-ocr 5.5.0-1+b1 | Independent wl-paste exact 62-character match | met |
+| dnf, second pass retained | f44 Fedora 44 / GNOME 50.6 Wayland, physical | 26.1113.4757~nightly-1.fc44 → 26.1114.5000~nightly-1.fc44 | None; English data arrived with the old package through FFmpeg | Extension 22 active before upgrade; expected helper_outdated before login; extension 23 active after login and independent wl-paste exact match | met |
+| pacman, third pass through omarchy update | fresh Omarchy 4.5.0 / Arch Hyprland guest on d69 | 26.1113.4757nightly-1 → 26.1114.5000nightly-1 | tesseract 5.5.3-1, tesseract-data-eng and tesseract-data-afr both 2:4.1.0-5. zxing-cpp 3.1.1-1 was already present from the old-package GStreamer dependencies | Not run: packaged CLI cannot load libcrypto.so.4, so no recognition request or clipboard comparison was submitted | not met: product CLI runtime failure blocks acceptance |
 
-## Corrected Fedora pass
+## Third pass: normal Omarchy updater
 
-Receipts: p2-dnf-old-preview.txt, p2-dnf-old-relogin.txt, p2-dnf-upgrade-preview.txt, p2-dnf-old-enabled.txt, p2-dnf-new-relogin.txt, p2-dnf-copy-desktop.txt, p2-dnf-clipboard.txt, p2-dnf-fixture.txt, p2-dnf-fixture.png, p2-dnf-result.png and p2-dnf-lock-release.json.
+Fresh overlay /home/patrick/work/r1428p3/work/lab-runs/a1, run 140e9059-416e-4de5-a85e-4ea32fd16b9c, created by lab.py on d69 from the immutable omarchy-hyprland-20261108 golden. The runner checked resolved socket lengths before boot; the isolated app socket was 41 UTF-8 bytes. Its separate loopback VNC tunnel and wall tile remained active throughout graphical work. No physical builder desktop was used or locked in this pass.
 
-The old GitHub release RPM was installed normally. After restarting GDM for an autologin, its version-22 system extension was initialized; explicitly enabling it gave Enabled Yes / State ACTIVE, independently recorded by gnome-extensions and org.gnome.Shell.Extensions.GetExtensionInfo. This establishes the requested old loaded state. The reviewed dnf upgrade changed only putgd. Signature verification remained enabled (gpgcheck=1, shipped repo_gpgcheck=0); Verify package files passed and the upgrade completed. No new dependency was needed. English data already present through the earlier FFmpeg dependency chain is retained as an accepted limitation of this distro's transaction.
+As in earlier passes, normally removed omasnap, LibreOffice and their English/Tesseract/ZXing dependencies in the disposable overlay to establish absence before the old install. The old 26.1113.4757 release asset was installed with pacman -U after syncing the golden's initially missing package databases. Old install brought back zxing-cpp via gst-plugins-bad, but did not install Tesseract or language data. p3-old-prepare.txt and p3-old-install.txt retain the transactions and installed states.
 
-Before the second login, action.invoke {action:text} returned helper_outdated, loaded 22 / packaged 23, with the documented logout/login message. No crash or silent success. After the second GDM restart/autologin, gnome-extensions reported version 23 active; production capabilities reported extensionVersion 23, outdated false and setup ready. One post-login text.recognize region job was submitted, operation b179d9f8-6c90-4c7d-b317-72abbd95e239, completed with copyStatus copied. wl-paste --no-newline independently returned exactly:
+p3-arch-config.sh uses only the old package's shipped key/source files. It checks the full nightly fingerprint 4032E28D893BAF66F4AC23D9A11D38D55536B371, runs pacman-key --add and --lsign-key, copies the .conf at public mode 0644 and adds its Include. SigLevel remains PackageRequired DatabaseRequired. No verification check was disabled. p3-repository-config.txt records the actual matching fingerprint and signing.
 
-```text
-Repository upgrade test
-English text is ready
-Copy this region
-```
+A read-only/declined transaction preview (p3-transaction-preview.txt) was inspected before confirming Omarchy's update. It synchronized the signed repository, selected the default tessdata provider and declined package installation. The real update was then run as `omarchy update` in an interactive SSH terminal with the guest's actual Hyprland/quickshell environment. The initial SSH-only launch lacked OMARCHY_PATH and was cancelled at the confirmation screen before an update began; p3-environment-precheck.ansi/.txt preserves that setup error. p3-update-session.py supplies the documented session environment. No updater source, hooks, package requirements or signature policy were changed.
 
-There is no final newline (62 characters). The normal GTK fixture uses 24 px dark text on white. RFB drag selected (110,130)–(650,300). Only fixture-only crops left the host, after the crop coverage check. A few post-login frame prechecks failed before any recognition request: GNOME's overview showed the fixture scaled, and the VNC service reconnected once. Esc dismissed the overview; the fullscreen fixture then covered 99.7% of the desktop in white and the single recognition job ran. These lab/precheck failures remain in the p2-dnf-* receipts; no product recognition failure was retried.
+The normal updater's start confirmation was answered Yes. Sudo used the approved shared guest login only in memory through its masked prompt; neither the value nor any private key is in these receipts. The whole updater terminal output is p3-omarchy-update.ansi, with ANSI-stripped readable companion p3-omarchy-update.txt. The updater completed with OMARCHY_EXIT=0. It created a system snapshot, verified signing keys, upgraded its 14-package system transaction, cleaned 33 orphan packages, restarted its shell, checked mise and finished normally. No retry of the actual updater was required.
 
-/usr/bin/putgd-ocr --version-json succeeded and returned build identity 26.1114.5000-nightly / df229be2990554bb9c4dff5a020e1407e4eb1885, dirty false, schema 1. Engine versions are not part of that command, as the user corrected; the first-pass expectation was mistaken.
+The updater printed a tessdata provider list and `Enter a number (default=1)`, but its own pacman --noconfirm selected provider 1 (Afrikaans) without waiting for user input. English was separately a hard dependency and arrived too. No manual language package was installed. The recorded package metadata says `Validated By: SHA-256 Sum Signature`. All package keyring/integrity checks passed. OMARCHY_ALLOW_DIRECT_PACMAN was never set; the native updater satisfied its own update guard.
 
-## Corrected pacman pass: real command failure
+Hyprland 0.56.2-4, quickshell 0.3.2.r7.g2b4501a-1, Omarchy 4.5.0-3, Qt base 6.12.0-3 and xdg-desktop-portal-hyprland 1.4.1-2 remained unchanged. The transaction updated putgd, cliamp, gliff, herdr, mise-bin, owe, superwhisper-bin and yt-dlp, and installed ada/nodejs/simdjson plus OCR/data packages. It requested no reboot; the live Hyprland session survived. Its normal shell restart was recorded. Full package activity, including orphan removals, is retained in the transcript and p3-loader-finding.txt's pacman journal.
 
-Fresh independent overlay a3, run ffd1c3c1-401f-4f01-9870-2dbb5448f31e. Its immutable Omarchy golden was not modified. As in the first pass, removed omasnap and LibreOffice and their OCR dependencies normally, verified no putgd, English data, Tesseract or ZXing, synced the golden's initially missing package databases and installed the old asset with pacman -U. That old install pulls ZXing via gst-plugins-bad.
+## Product finding after successful update
 
-No installer configure-only mode was used. arch-config.sh reproduces the repository setup using the old package's files: verified full fingerprint 4032E28D893BAF66F4AC23D9A11D38D55536B371, pacman-key --add, pacman-key --lsign-key, copied the nightly .conf, set public mode 0644 and added its Include. SigLevel stayed PackageRequired DatabaseRequired. The approved shared guest login was used only in memory over SSH stdin for sudo; no workstation private key was transferred. The source script contains no login value.
+/usr/bin/putgd-ocr --version-json succeeds and reports schema 1, version 26.1114.5000-nightly, packageVersion 26.1114.5000~nightly, commit df229be2990554bb9c4dff5a020e1407e4eb1885, tree 72e44106c147d2c855ff55044f59c85ce0b1b113, count 5000, dirty false and sourceProvenance git. Its installed location was obtained from pacman -Ql.
 
-p2-arch-config-preview.txt records the fingerprint, local signing and successfully synchronized signed database. p2-arch-upgrade-preview.txt records the full transaction before confirmation; a provider prompt consumed the first scripted n as an invalid number, then EOF chose the default provider and declined the final transaction. No package was changed by that preview. The final pacman -Syu putgd --noconfirm used the same default provider and planned 14 packages, including Afrikaans and English data, with 315.75 MiB download. It planned no Hyprland, compositor, portal, kernel or desktop-package change. All package signatures passed `checking keyring` and `checking package integrity` before the pre-transaction hook failed.
-
-Exact failure in p2-arch-upgrade.txt:
+The single planned region-job driver started the installed resident with a fresh private profile. Before submitting a job, its capabilities inspection invoked the installed CLI and received no JSON because the dynamic loader refused the CLI. Subsequent direct read-only commands made the error explicit:
 
 ```text
-(1/2) Checking Omarchy update entrypoint...
-
-Woah partner...
-
-This looks like a direct pacman system upgrade. Omarchy updates should normally
-run through:
-
-  omarchy update
-
-That path handles the update transcript, snapshot, keyrings, package upgrade,
-migrations, post-update hooks, shell update state, and restart checks together.
-
-If you really meant to bypass Omarchy for this transaction, rerun pacman with:
-
-  sudo env OMARCHY_ALLOW_DIRECT_PACMAN=1 pacman -Syu
-
-error: command failed to execute correctly
-error: failed to commit transaction (failed to run transaction hooks)
-Errors occurred, no packages were upgraded.
+$ /usr/bin/putgd-cli --version-json
+/usr/bin/putgd-cli: error while loading shared libraries: libcrypto.so.4: cannot open shared object file: No such file or directory
+$ /usr/bin/putgd-cli capabilities
+/usr/bin/putgd-cli: error while loading shared libraries: libcrypto.so.4: cannot open shared object file: No such file or directory
 ```
 
-Stopped here as requested: no bypass variable, no alternate updater, manual dependency install or disabled verification. putgd remained 26.1113.4757nightly-1, Tesseract/English data absent, ZXing 3.1.1-1 present. putgd-ocr was absent and Copy text was not run. This is a failure of the specified direct command on Omarchy, not evidence of broken OCR or invalid package signatures. The guest session survived because nothing was committed.
+p3-copy.txt retains the driver error; p3-copy-error.txt records these commands and ldd. p3-loader-finding.txt records that readelf -d lists a direct NEEDED entry for libcrypto.so.4, while the installed system has openssl 3.6.5-1. The putgd package declares an unversioned openssl dependency, satisfied by that package. This is a packaged-runtime compatibility finding; the signed repository upgrade and OCR dependency arrival succeeded.
 
-## First attempt and cleanup
+Stopped at that finding: no manual library installation, symlink, alternate library path, rebuild, alternate updater, ABI bypass or switch to a GUI/hotkey path to make acceptance pass. No recognition operation ID exists and no clipboard readback was taken. Consequently this does **not** establish that the GUI's Copy text action itself fails, nor does it establish a successful OCR/clipboard result on Arch. The row remains not met because the production CLI needed to run the requested acceptance job is unusable.
 
-[first-attempt.md](first-attempt.md) preserves the complete original summary and its superseded dnf/pacman verdicts. Original receipt filenames are unchanged. The two first-attempt gaps were corrected by the user's follow-up: Fedora needed the old extension loaded and two logins; Arch needed installer-equivalent repository configuration. apt's first-pass met verdict stands. All new receipts have p2- prefixes.
+p3-loader-result.png shows the actual loader error rendered by `/usr/bin/foot --hold /usr/bin/putgd-cli --version-json` in the guest session. It is a failure frame, not a fabricated OCR result. The terminal and resident were stopped by their exact owned PIDs. The driver's secondary None PID reporting error happened during its finally block after stopping the resident; pgrep confirmed no putgd process remained.
 
-Fedora was returned to putgd uninstalled (the initial package state) and its lock released at 12:13:50 UTC, before 12:15. No test process or input helper remains. d69 was not relocked or driven on its physical desktop. The a3 guest was stopped and its overlay retired through guarded cleanup; p2-overlay-cleanup.json preserves its exact disk/run identity. Both a2 and a3 retirement manifests and state receipts are included. The temporary a3 wall tile/tunnel was removed. No golden changed.
+## Prior attempts and cleanup
 
-First-pass retained package changes remain: Debian has tesseract-ocr and English data plus the residual nightly apt source; Fedora has restored FFmpeg/development packages advanced to 8.1.3-2.fc44 and gstreamer1-plugin-libav 1.28.9-1.fc44. No physical compositor/desktop package changed. dnf invalidated its pending lab offline transaction, as the receipts state. After publishing the corrected receipts, exact-file find manifests were passed to xargs -0 rm -f, followed by removal of the emptied directories. p2-f44-scratch-cleanup.txt and p2-d69-scratch-cleanup.txt record every removed path and absence afterward. All owned /tmp/r1428-* profiles, both ~/repo1428 directories and d69 ~/work/r1428 were removed. Final state receipts confirm those paths absent and no QEMU process. Run identities, final state, qemu logs and retirement receipts were exported and published first; no golden or pre-existing work was removed. The first a3 retirement attempt required a literally named completion.json; the corrected p2-retire manifest supplied it and guarded cleanup succeeded. All outcome receipts are retained.
+[first-attempt.md](first-attempt.md) preserves the initial pass, including apt's accepted result. [second-attempt.md](second-attempt.md) preserves the corrected Fedora pass and the direct pacman command rejected by Omarchy's own hook. All their receipts remain unchanged. That direct-command failure was a route mismatch, not a putgd failure. This third pass uses the native updater and exposes the separate CLI loader finding above.
+
+The new guest was stopped and its exact overlay retired through guarded cleanup. p3-retired-run retains final state, qemu log and retirement receipt; p3-retire retains the completion evidence manifest. A collection/retirement sequencing error stopped the guest before the final app-log transfer finished: the driver log itself had already been read into p3-copy-error.txt, the failure frame was transferred, and the host-side state was then exported directly. The first guarded retirement refused the not-yet-created manifest; p3-retirement-corrected.txt records the successful corrected cleanup. No failed product operation was retried and no source golden was modified.
+
+The temporary wall tile/tunnel is removed. No physical package state changed in this pass; apt/dnf retain their previously documented cleanup state. The complete new receipts and retirement evidence are being published before exact-file removal of d69's owned ~/repo1428p3 and ~/work/r1428p3 scratch. A subsequent receipt will record completed host scratch cleanup. No desktop locks were acquired in this guest-only pass.

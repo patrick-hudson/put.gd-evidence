@@ -1,0 +1,6 @@
+$ ssh -i ~/work/put.gd/work/lab-bootstrap-omarchy/identity -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=~/work/put.gd/work/lab-images/omarchy-hyprland-20261108/known_hosts -p 22440 lab@127.0.0.1 'pgrep -a quickshell; printf "OMARCHY_PATH from session: "; python3 -c '"'"'import pathlib; p=next(x for x in pathlib.Path("/proc").iterdir() if x.name.isdigit() and (x/"comm").exists() and (x/"comm").read_text().strip()=="quickshell");e=dict(v.split("=",1) for v in (p/"environ").read_bytes().decode().split("\0") if "=" in v);print(e.get("OMARCHY_PATH"));print({k:e.get(k) for k in ["WAYLAND_DISPLAY","XDG_RUNTIME_DIR","XDG_CURRENT_DESKTOP","HYPRLAND_INSTANCE_SIGNATURE"]})'"'"''
+875 quickshell -n -p /usr/share/omarchy/shell
+OMARCHY_PATH from session: /usr/share/omarchy
+{'WAYLAND_DISPLAY': 'wayland-1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XDG_CURRENT_DESKTOP': 'Hyprland', 'HYPRLAND_INSTANCE_SIGNATURE': 'efb50993780079460b0cbed1363e2166a2de1d9f_1794658756_563002036'}
+
+exit=0

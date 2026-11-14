@@ -1,0 +1,26 @@
+$ ssh -i ~/work/put.gd/work/lab-bootstrap-omarchy/identity -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=~/work/put.gd/work/lab-images/omarchy-hyprland-20261108/known_hosts -p 22440 lab@127.0.0.1 'cat ~/repo1428p3/p3-arch-app.log; /usr/bin/putgd-cli --version-json; /usr/bin/putgd-cli capabilities; ldd /usr/bin/putgd-cli | grep -E "not found|Qt"; pgrep -a putgd || true; sed -n "1,14p" ~/repo1428p3/p3-graphic.py'
+qt.qpa.services: Failed to register with host portal QDBusError("org.freedesktop.portal.Error.Failed", "Could not register app ID: Connection already associated with an application ID")
+/usr/bin/putgd-cli: error while loading shared libraries: libcrypto.so.4: cannot open shared object file: No such file or directory
+/usr/bin/putgd-cli: error while loading shared libraries: libcrypto.so.4: cannot open shared object file: No such file or directory
+	libQt6Network.so.6 => /usr/lib/libQt6Network.so.6 (0x00007ff882404000)
+	libQt6Gui.so.6 => /usr/lib/libQt6Gui.so.6 (0x00007ff881a00000)
+	libQt6Sql.so.6 => /usr/lib/libQt6Sql.so.6 (0x00007ff882a6d000)
+	libQt6DBus.so.6 => /usr/lib/libQt6DBus.so.6 (0x00007ff881931000)
+	libcrypto.so.4 => not found
+	libQt6Core.so.6 => /usr/lib/libQt6Core.so.6 (0x00007ff881200000)
+import os,pathlib,subprocess,json,time,sys,tempfile,signal
+out=pathlib.Path.home()/'repo1428p3'; port=int(sys.argv[1]); name=sys.argv[2]
+for proc in pathlib.Path('/proc').iterdir():
+ try:
+  if (proc/'comm').read_text().strip() in ('quickshell',):
+   env=dict(x.split('=',1) for x in (proc/'environ').read_bytes().decode().split('\0') if '=' in x)
+   if 'WAYLAND_DISPLAY' in env:break
+ except (OSError,UnicodeError):pass
+env.update(dict(x.split('=',1) for x in subprocess.check_output(['systemctl','--user','show-environment'],text=True).splitlines() if '=' in x))
+os.environ.update(env)
+os.environ['WAYLAND_DISPLAY']=env['XDG_RUNTIME_DIR']+'/'+env['WAYLAND_DISPLAY'] if not env['WAYLAND_DISPLAY'].startswith('/') else env['WAYLAND_DISPLAY']
+r=pathlib.Path(tempfile.mkdtemp(prefix='r1428-',dir='/tmp'));r.chmod(0o700)
+for x in ['config','data','cache','state','rt']:(r/x).mkdir(mode=0o700)
+for key,sub in [('XDG_CONFIG_HOME','config'),('XDG_DATA_HOME','data'),('XDG_CACHE_HOME','cache'),('XDG_STATE_HOME','state'),('XDG_RUNTIME_DIR','rt')]:os.environ[key]=str(r/sub)
+
+exit=0

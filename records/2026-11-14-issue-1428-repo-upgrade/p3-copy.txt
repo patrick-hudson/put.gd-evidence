@@ -1,0 +1,29 @@
+$ ssh -i ~/work/put.gd/work/lab-bootstrap-omarchy/identity -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=~/work/put.gd/work/lab-images/omarchy-hyprland-20261108/known_hosts -p 22440 lab@127.0.0.1 'python3 ~/repo1428p3/p3-graphic.py 5940 p3-arch'
+socket /tmp/r1428-u0weemyd/rt/putgd/session.sock 41
+capabilities 
+Traceback (most recent call last):
+  File "/home/lab/repo1428p3/p3-graphic.py", line 26, in <module>
+    cli('capabilities');f=subprocess.Popen(['/usr/bin/python3',str(out/'fixture.py')])
+    ~~~^^^^^^^^^^^^^^^^
+  File "/home/lab/repo1428p3/p3-graphic.py", line 25, in cli
+    z=subprocess.run(['/usr/bin/putgd-cli','--socket',str(sock),m,json.dumps(params)],capture_output=True,text=True);print(m,z.stdout,flush=True);return json.loads(z.stdout)
+                                                                                                                                                         ~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lab/repo1428p3/p3-graphic.py", line 51, in <module>
+    print('stopped owned PIDs',p.pid,f.pid,flush=True)
+                                     ^^^^^
+AttributeError: 'NoneType' object has no attribute 'pid'
+
+exit=1

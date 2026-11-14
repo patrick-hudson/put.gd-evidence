@@ -1,0 +1,256 @@
+$ ssh -i ~/work/put.gd/work/lab-bootstrap-omarchy/identity -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=~/work/put.gd/work/lab-images/omarchy-hyprland-20261108/known_hosts -p 22440 lab@127.0.0.1 'sudo -n pacman -R --noconfirm omasnap libreoffice-fresh tesseract-data-eng tesseract zxing-cpp; pacman -Q putgd tesseract-data-eng tesseract zxing-cpp; mkdir -m 700 ~/repo1428p3; curl -fL https://github.com/patrick-hudson/put.gd-desktop/releases/download/v26.1113.4757-nightly/putgd-26.1113.4757-nightly-archlinux-x86_64.pkg.tar.zst -o ~/repo1428p3/old.pkg.tar.zst; sudo -n pacman -Sy; sudo -n pacman -U --print ~/repo1428p3/old.pkg.tar.zst; head -160 /usr/bin/omarchy-update'
+warning: database file for 'omarchy' does not exist (use '-Sy' to download)
+warning: database file for 'core' does not exist (use '-Sy' to download)
+warning: database file for 'extra' does not exist (use '-Sy' to download)
+warning: database file for 'multilib' does not exist (use '-Sy' to download)
+checking dependencies...
+:: sushi optionally requires libreoffice: OpenDocument formats
+
+Package (5)         Old Version  Net Change 
+
+libreoffice-fresh   26.8.1-2     -423.01 MiB
+omasnap             1.25.0-1       -2.33 MiB
+tesseract           5.5.3-1        -4.66 MiB
+tesseract-data-eng  2:4.1.0-5     -22.38 MiB
+zxing-cpp           3.1.1-1        -1.85 MiB
+
+Total Removed Size:  454.23 MiB
+
+:: Do you want to remove these packages? [Y/n] 
+:: Running pre-transaction hooks...
+(1/1) Waiting for limine-snapper-sync to finish...
+:: Processing package changes...
+removing libreoffice-fresh...
+removing zxing-cpp...
+removing omasnap...
+removing tesseract-data-eng...
+removing tesseract...
+:: Running post-transaction hooks...
+(1/4) Updating the MIME type database...
+(2/4) Arming ConditionNeedsUpdate...
+(3/4) Updating icon theme caches...
+(4/4) Updating the desktop file MIME type cache...
+warning: database file for 'omarchy' does not exist (use '-Sy' to download)
+warning: database file for 'core' does not exist (use '-Sy' to download)
+warning: database file for 'extra' does not exist (use '-Sy' to download)
+warning: database file for 'multilib' does not exist (use '-Sy' to download)
+error: package 'putgd' was not found
+error: package 'tesseract-data-eng' was not found
+error: package 'tesseract' was not found
+error: package 'zxing-cpp' was not found
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+
+  0      0   0      0   0      0      0      0                              0
+  0      0   0      0   0      0      0      0                              0
+  0      0   0      0   0      0      0      0                              0
+
+  0      0   0      0   0      0      0      0                              0
+  4 126.0M   4  5.51M   0      0  4.12M      0   00:30   00:01   00:29  5.51M
+ 12 126.0M  12 16.37M   0      0  7.00M      0   00:17   00:02   00:15  8.18M
+ 24 126.0M  24 30.51M   0      0  9.14M      0   00:13   00:03   00:10 10.16M
+ 39 126.0M  39 50.20M   0      0 11.56M      0   00:10   00:04   00:06 12.53M
+ 57 126.0M  57 72.41M   0      0 13.55M      0   00:09   00:05   00:04 14.46M
+ 79 126.0M  79 100.6M   0      0 15.84M      0   00:07   00:06   00:01 18.97M
+100 126.0M 100 126.0M   0      0 17.65M      0   00:07   00:07         18.97M
+100 126.0M 100 126.0M   0      0 17.65M      0   00:07   00:07         18.97M
+100 126.0M 100 126.0M   0      0 17.65M      0   00:07   00:07         18.97M
+:: Synchronizing package databases...
+ omarchy downloading...
+ core downloading...
+ extra downloading...
+ multilib downloading...
+https://stable-mirror.omarchy.org/extra/os/x86_64/qtkeychain-qt6-0.17.0-1-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/cdparanoia-10.2-10-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/gst-plugins-base-1.28.8-1-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/aalib-1.4rc5-19-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/imlib2-1.12.7-3-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/libcaca-0.99.beta20-7-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/libdv-1.0.0-12-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/libshout-1:2.4.6-5-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/taglib-2.3.2-1-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/twolame-0.4.0-4-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/wavpack-5.9.0-1-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/gst-plugins-good-1.28.8-1-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/chromaprint-1.6.2-1-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/faac-2.1-1-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/faad2-2.11.4-1-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/fluidsynth-2.6.1-1-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/libavtp-0.2.0-3-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/libdc1394-2.2.7-2-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/libdca-0.0.7-3-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/libgme-0.6.5-1-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/liblrdf-0.6.1-5-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/libltc-1.3.2-2-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/libmicrodns-0.2.0-2-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/libmpcdec-1:0.1+r475-6-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/libsrtp-1:2.8.1-1-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/mjpegtools-2.2.1-4-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/rtmpdump-1:2.6-2-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/soundtouch-2.4.1-1-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/wildmidi-0.5.0-1-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/zvbi-0.2.45-1-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/zxing-cpp-3.1.1-1-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/gst-plugins-bad-1.28.8-1-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/a52dec-0.8.0-3-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/libmpeg2-0.5.1-11-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/gst-plugins-ugly-1.28.8-1-x86_64.pkg.tar.zst
+https://stable-mirror.omarchy.org/extra/os/x86_64/gst-libav-1.28.8-1-x86_64.pkg.tar.zst
+/home/lab/repo1428p3/old.pkg.tar.zst
+#!/bin/bash
+
+# omarchy:summary=Update Omarchy and system packages
+# omarchy:alias=omarchy up
+# omarchy:args=[-y]
+# omarchy:examples=omarchy update | omarchy update -y
+# omarchy:requires-sudo=true
+
+set -e
+
+update_stay_awake_stopped=0
+sudo_keepalive_pid=""
+
+# Ask for the password once, then keep sudo's timestamp fresh so long package
+# downloads, migrations, hooks, and mise never outlast it and prompt again.
+# Authorize by running a command rather than sudo -v: under the default
+# verifypw=all, -v prompts even when passwordless sudo is enabled.
+authorize_update() {
+  sudo true || return 1
+
+  local update_pid=$$
+  (
+    [[ -z ${OMARCHY_UPDATE_LOCK_FD:-} ]] || exec {OMARCHY_UPDATE_LOCK_FD}>&-
+    sleep_pid=""
+    trap - EXIT HUP INT
+    trap '[[ -z $sleep_pid ]] || kill "$sleep_pid" 2>/dev/null; exit 0' TERM
+    while :; do
+      sleep 60 &
+      sleep_pid=$!
+      wait "$sleep_pid"
+      kill -0 "$update_pid" 2>/dev/null || exit 0
+      sudo -n true 2>/dev/null || exit 0
+    done
+  ) &
+  sudo_keepalive_pid=$!
+}
+
+end_update_authorization() {
+  if [[ -n $sudo_keepalive_pid ]]; then
+    kill "$sudo_keepalive_pid" 2>/dev/null || true
+    wait "$sudo_keepalive_pid" 2>/dev/null || true
+    sudo_keepalive_pid=""
+  fi
+}
+
+cleanup_update() {
+  local status=$?
+  trap - EXIT HUP INT TERM
+  end_update_authorization
+  if (( update_stay_awake_stopped == 0 )); then
+    omarchy-update-stay-awake stop || status=1
+  fi
+  exit "$status"
+}
+
+if [[ -z ${OMARCHY_UPDATE_LOGGED:-} ]]; then
+  script_command=$(printf '%q ' "$0" "$@")
+  exec env OMARCHY_UPDATE_LOGGED=1 script -qefc "$script_command" "/tmp/omarchy-update.log"
+fi
+
+if ! omarchy-update-lock held; then
+  exec omarchy-update-lock run "$0" "$@"
+fi
+
+trap 'echo ""; echo -e "\033[0;31mSomething went wrong during the update!\n\nPlease review the output above carefully, correct the error, and retry the update.\n\nIf you need assistance, get help from the community at https://omarchy.org/discord\033[0m"' ERR
+trap cleanup_update EXIT
+trap 'exit 129' HUP
+trap 'exit 130' INT
+trap 'exit 143' TERM
+
+omarchy-update-requires-free-space
+
+# -y skips the start confirmation and, unless the caller set
+# OMARCHY_UPDATE_UNATTENDED itself, suppresses Omarchy confirmation prompts;
+# sudo authorization is still required. Interactive review steps report and
+# move on instead of waiting.
+[[ ${1:-} != "-y" ]] || export OMARCHY_UPDATE_UNATTENDED=${OMARCHY_UPDATE_UNATTENDED:-1}
+
+if [[ ${1:-} == "-y" ]] || omarchy-update-confirm; then
+  authorize_update
+
+  # Before the snapshot: the cache is on the snapshotted subvolume, so pruning
+  # after it frees nothing until that snapshot ages out.
+  omarchy-update-pkg-prune
+
+  # 127 means Snapper is deliberately absent. Any other failure already said
+  # what went wrong, and a missing snapshot is not worth blocking an update
+  # over, but it must not pass for one either.
+  omarchy-snapshot create || (($? == 127)) ||
+    echo -e "\e[33mContinuing the update without a snapshot.\e[0m" >&2
+
+  omarchy-update-stay-awake start
+
+  # Preserve the established development-checkout update ordering.
+  omarchy-update-dev
+  omarchy-update-keyring
+
+  # Migrations ship with the packages installed here and are written against
+  # them, so everything below waits on this finishing. An upgrade that stopped
+  # takes the update with it rather than migrating against what is still on disk.
+  omarchy-update-system-pkgs
+
+  # Migrations call the shell over IPC, so give them one running current code.
+  if omarchy-migrate --pending >/dev/null; then
+    omarchy-restart-shell || true
+  fi
+  omarchy-migrate
+  omarchy-update-orphan-pkgs -y
+
+  omarchy-update-analyze-logs
+
+  # The dev checkout was fast-forwarded and the full upgrade went through, so
+  # there is no Omarchy update left to show. Rechecking would download every
+  # sync database again and refetch the checkout only to hear the same.
+  omarchy-shell -q omarchy.system-update clear
+
+  # Service restart helpers can need sudo. The reboot-only phase below
+  # performs no privileged work.
+  omarchy-update-restart --services-only
+
+  omarchy-hook post-update
+  # Optional tool downloads must not skip boot verification or the reboot
+  # prompt after system packages have already been upgraded.
+  mise_updated=1
+  omarchy-update-mise || mise_updated=0
+
+  # AUR packages build against the upgraded system, so they go after it, and
+  # share the update's one authorization like every step before them.
+  omarchy-update-aur-pkgs
+
+  # The last sudo-capable step: the boot files every package step left, AUR
+  # packages' initramfs rebuilds included, must be shown to boot the updated
+  # system. Until it passes, the update neither finishes nor offers a reboot.
+  boot_verified=1
+  omarchy-update-boot || boot_verified=0
+  end_update_authorization
+
+  # The sleep inhibitor covers AUR builds, hooks and mise as well. Release it
+  # before offering a reboot: a confirmed reboot can terminate this
+  # process before its EXIT trap gets a chance to remove the persistent Stay
+  # Awake marker.
+  omarchy-update-stay-awake stop
+  update_stay_awake_stopped=1
+
+  if (( mise_updated == 0 )); then
+    echo -e "\e[33m\nSome mise tools could not be updated. Review the errors above and run 'omarchy update mise' to retry.\e[0m" >&2
+  fi
+
+  if (( boot_verified )); then
+    "$OMARCHY_PATH/bin/omarchy-update-restart" --reboot-only
+  else
+    echo -e "\e[31m\nThe update is not finished: its boot files did not pass verification (see above). Do not reboot until omarchy update completes.\e[0m" >&2
+    exit 1
+  fi
+fi
+
+exit=0
