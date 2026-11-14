@@ -1,0 +1,17 @@
+$ ssh -i ~/work/put.gd/work/lab-bootstrap-omarchy/identity -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=~/work/put.gd/work/lab-images/omarchy-hyprland-20261108/known_hosts -p 22440 lab@127.0.0.1 'cat /usr/share/putgd/repo/putgd-nightly.conf; sudo -n pacman -Sy putgd --noconfirm; pacman -Q putgd tesseract-data-eng tesseract zxing-cpp; pacman -Ql putgd | grep putgd-ocr; putgd-ocr --version-json'
+[putgd-nightly]
+SigLevel = PackageRequired DatabaseRequired
+Server = https://pkg.put.gd/pacman/x86_64/nightly
+:: Synchronizing package databases...
+ omarchy downloading...
+ core downloading...
+ extra downloading...
+ multilib downloading...
+error: target not found: putgd
+putgd 26.1113.4757nightly-1
+zxing-cpp 3.1.1-1
+error: package 'tesseract-data-eng' was not found
+error: package 'tesseract' was not found
+bash: line 1: putgd-ocr: command not found
+
+exit=127

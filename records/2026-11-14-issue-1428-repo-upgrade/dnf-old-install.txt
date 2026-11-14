@@ -1,0 +1,130 @@
+$ sudo -n dnf install -y ~/repo1428/old.rpm; rpm -q putgd tesseract-langpack-eng; cat /etc/yum.repos.d/putgd.repo; sudo -n dnf upgrade --refresh --assumeno putgd
+Updating and loading repositories:
+Repositories loaded.
+Package                               Arch   Version                       Repository        Size
+Upgrading:
+ libavcodec-free                      x86_64 0:8.1.3-2.fc44                updates       10.4 MiB
+   replacing libavcodec-free          x86_64 0:8.1.3-1.fc44                updates       10.3 MiB
+ libavcodec-free-devel                x86_64 0:8.1.3-2.fc44                updates      266.3 KiB
+   replacing libavcodec-free-devel    x86_64 0:8.1.3-1.fc44                updates      266.3 KiB
+ libavformat-free                     x86_64 0:8.1.3-2.fc44                updates        2.8 MiB
+   replacing libavformat-free         x86_64 0:8.1.3-1.fc44                updates        2.8 MiB
+ libavformat-free-devel               x86_64 0:8.1.3-2.fc44                updates      151.5 KiB
+   replacing libavformat-free-devel   x86_64 0:8.1.3-1.fc44                updates      151.5 KiB
+ libavutil-free                       x86_64 0:8.1.3-2.fc44                updates      975.2 KiB
+   replacing libavutil-free           x86_64 0:8.1.3-1.fc44                updates      975.2 KiB
+ libavutil-free-devel                 x86_64 0:8.1.3-2.fc44                updates      733.6 KiB
+   replacing libavutil-free-devel     x86_64 0:8.1.3-1.fc44                updates      733.6 KiB
+ libswresample-free                   x86_64 0:8.1.3-2.fc44                updates      155.2 KiB
+   replacing libswresample-free       x86_64 0:8.1.3-1.fc44                updates      155.2 KiB
+ libswresample-free-devel             x86_64 0:8.1.3-2.fc44                updates       26.4 KiB
+   replacing libswresample-free-devel x86_64 0:8.1.3-1.fc44                updates       26.4 KiB
+ libswscale-free                      x86_64 0:8.1.3-2.fc44                updates        1.0 MiB
+   replacing libswscale-free          x86_64 0:8.1.3-1.fc44                updates        1.0 MiB
+ libswscale-free-devel                x86_64 0:8.1.3-2.fc44                updates       29.9 KiB
+   replacing libswscale-free-devel    x86_64 0:8.1.3-1.fc44                updates       29.9 KiB
+Installing:
+ putgd                                x86_64 0:26.1113.4757~nightly-1.fc44 @commandline 317.2 MiB
+Installing dependencies:
+ libavfilter-free                     x86_64 0:8.1.3-2.fc44                updates        4.3 MiB
+ tesseract-common                     noarch 0:5.5.4-1.fc44                updates       14.7 KiB
+ tesseract-langpack-eng               noarch 0:4.1.0-12.fc44               fedora         3.9 MiB
+ tesseract-libs                       x86_64 0:5.5.4-1.fc44                updates        3.4 MiB
+
+Transaction Summary:
+ Installing:         5 packages
+ Upgrading:         10 packages
+ Replacing:         10 packages
+
+Total size of inbound packages is 119 MiB. Need to download 12 MiB.
+After this operation, 329 MiB extra will be used (install 345 MiB, remove 16 MiB).
+Warning: A pending offline transaction initiated by the following command will be invalidated: dnf5daemon-server
+[ 1/14] tesseract-common-0:5.5.4-1.fc44 100% |  73.6 KiB/s |  24.3 KiB |  00m00s
+[ 2/14] tesseract-libs-0:5.5.4-1.fc44.x 100% |   2.2 MiB/s |   1.4 MiB |  00m01s
+[ 3/14] libavfilter-free-0:8.1.3-2.fc44 100% |   2.0 MiB/s |   1.6 MiB |  00m01s
+[ 4/14] libavcodec-free-0:8.1.3-2.fc44. 100% |  15.0 MiB/s |   4.5 MiB |  00m00s
+[ 5/14] libavformat-free-0:8.1.3-2.fc44 100% |   9.4 MiB/s |   1.2 MiB |  00m00s
+[ 6/14] libavutil-free-0:8.1.3-2.fc44.x 100% |   5.3 MiB/s | 381.1 KiB |  00m00s
+[ 7/14] libswresample-free-0:8.1.3-2.fc 100% |   1.0 MiB/s |  70.5 KiB |  00m00s
+[ 8/14] tesseract-langpack-eng-0:4.1.0- 100% |   2.4 MiB/s |   1.7 MiB |  00m01s
+[ 9/14] libswscale-free-0:8.1.3-2.fc44. 100% |   5.0 MiB/s | 331.2 KiB |  00m00s
+[10/14] libavcodec-free-devel-0:8.1.3-2 100% | 711.4 KiB/s |  79.0 KiB |  00m00s
+[11/14] libavutil-free-devel-0:8.1.3-2. 100% |   2.1 MiB/s | 177.5 KiB |  00m00s
+[12/14] libavformat-free-devel-0:8.1.3- 100% | 226.1 KiB/s |  49.1 KiB |  00m00s
+[13/14] libswscale-free-devel-0:8.1.3-2 100% | 172.6 KiB/s |  21.9 KiB |  00m00s
+[14/14] libswresample-free-devel-0:8.1. 100% | 139.3 KiB/s |  20.9 KiB |  00m00s
+--------------------------------------------------------------------------------
+[14/14] Total                           100% |   6.3 MiB/s |  11.6 MiB |  00m02s
+Running transaction
+[ 1/27] Verify package files            100% |  11.0   B/s |  15.0   B |  00m01s
+[ 2/27] Prepare transaction             100% |  51.0   B/s |  25.0   B |  00m00s
+[ 3/27] Upgrading libavutil-free-0:8.1. 100% |  50.2 MiB/s | 976.5 KiB |  00m00s
+[ 4/27] Upgrading libswresample-free-0: 100% |  15.3 MiB/s | 156.5 KiB |  00m00s
+[ 5/27] Upgrading libavcodec-free-0:8.1 100% | 108.3 MiB/s |  10.4 MiB |  00m00s
+[ 6/27] Upgrading libavutil-free-devel- 100% |  10.8 MiB/s | 749.6 KiB |  00m00s
+[ 7/27] Upgrading libavformat-free-0:8. 100% |  65.7 MiB/s |   2.8 MiB |  00m00s
+[ 8/27] Upgrading libswscale-free-0:8.1 100% |  58.8 MiB/s |   1.0 MiB |  00m00s
+[ 9/27] Upgrading libswresample-free-de 100% |   3.9 MiB/s |  27.6 KiB |  00m00s
+[10/27] Upgrading libavcodec-free-devel 100% |   9.1 MiB/s | 270.8 KiB |  00m00s
+[11/27] Installing tesseract-common-0:5 100% |   1.5 MiB/s |  20.9 KiB |  00m00s
+[12/27] Installing tesseract-langpack-e 100% | 103.2 MiB/s |   3.9 MiB |  00m00s
+[13/27] Installing tesseract-libs-0:5.5 100% |  93.4 MiB/s |   3.4 MiB |  00m00s
+[14/27] Installing libavfilter-free-0:8 100% | 123.5 MiB/s |   4.3 MiB |  00m00s
+[15/27] Installing putgd-0:26.1113.4757 100% | 179.9 MiB/s | 317.2 MiB |  00m02s
+[16/27] Upgrading libavformat-free-deve 100% |  16.6 MiB/s | 152.8 KiB |  00m00s
+[17/27] Upgrading libswscale-free-devel 100% |   3.0 MiB/s |  31.1 KiB |  00m00s
+[18/27] Removing libavformat-free-devel 100% |   1.3 KiB/s |   8.0   B |  00m00s
+[19/27] Removing libavcodec-free-devel- 100% |   5.7 KiB/s |  29.0   B |  00m00s
+[20/27] Removing libswresample-free-dev 100% |   1.4 KiB/s |   7.0   B |  00m00s
+[21/27] Removing libswscale-free-devel- 100% |   1.4 KiB/s |   7.0   B |  00m00s
+[22/27] Removing libavformat-free-0:8.1 100% |   1.1 KiB/s |   8.0   B |  00m00s
+[23/27] Removing libavcodec-free-0:8.1. 100% |   1.1 KiB/s |   8.0   B |  00m00s
+[24/27] Removing libswresample-free-0:8 100% |   1.6 KiB/s |   8.0   B |  00m00s
+[25/27] Removing libswscale-free-0:8.1. 100% |   1.3 KiB/s |   8.0   B |  00m00s
+[26/27] Removing libavutil-free-devel-0 100% |  12.8 KiB/s | 105.0   B |  00m00s
+[27/27] Removing libavutil-free-0:8.1.3 100% |   3.0   B/s |   8.0   B |  00m02s
+Warning: skipped OpenPGP checks for 1 package from repository: @commandline
+Warning: Pending offline transaction has been invalidated.
+To reschedule, run: dnf5daemon-server
+Complete!
+putgd-26.1113.4757~nightly-1.fc44.x86_64
+tesseract-langpack-eng-4.1.0-12.fc44.noarch
+# put.gd nightly packages from pkg.put.gd, added by the putgd package.
+# To stop updates from this repository, delete this file or set enabled=0;
+# upgrades leave your change alone and `dnf remove putgd` removes the file.
+[putgd-nightly]
+name=put.gd (nightly)
+baseurl=https://pkg.put.gd/rpm/fedora/44/x86_64/nightly
+enabled=1
+gpgcheck=1
+repo_gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-putgd-nightly
+metadata_expire=6h
+Updating and loading repositories:
+ Fedora 44 - x86_64 - Updates           100% |   8.3 KiB/s |  19.1 KiB |  00m02s
+ Tailscale stable                       100% | 572.0   B/s | 905.0   B |  00m02s
+ RPM Fusion for Fedora 44 - Nonfree - S 100% |   2.2 KiB/s |   5.1 KiB |  00m02s
+ RPM Fusion for Fedora 44 - Nonfree - N 100% |   2.5 KiB/s |   5.7 KiB |  00m02s
+ put.gd (nightly)                       100% |   1.5 KiB/s |   2.4 KiB |  00m02s
+ ChatGPT                                100% |   2.4 KiB/s |   3.8 KiB |  00m02s
+ google-chrome                          100% | 909.0   B/s |   1.3 KiB |  00m01s
+ Fedora 44 openh264 (From Cisco) - x86_ 100% | 470.0   B/s | 986.0   B |  00m02s
+ Fedora 44 - x86_64                     100% |  10.2 KiB/s |  20.9 KiB |  00m02s
+ Copr repo for PyCharm owned by phracek 100% |   1.1 KiB/s |   1.5 KiB |  00m01s
+>>> Curl error (35): SSL connect error for [third-party mirror presigned URL redacted] [Recv failure: Connection reset by peer] - [third-party mirror presigned URL redacted]
+Repositories loaded.
+Package            Arch   Version                       Repository         Size
+Upgrading:
+ putgd             x86_64 0:26.1114.5000~nightly-1.fc44 putgd-nightly 320.0 MiB
+   replacing putgd x86_64 0:26.1113.4757~nightly-1.fc44 @commandline  317.2 MiB
+
+Transaction Summary:
+ Upgrading:          1 package
+ Replacing:          1 package
+
+Total size of inbound packages is 108 MiB. Need to download 108 MiB.
+After this operation, 3 MiB extra will be used (install 320 MiB, remove 317 MiB).
+Warning: A pending offline transaction initiated by the following command will be invalidated: dnf5daemon-server
+Operation aborted by the user.
+
+exit=1

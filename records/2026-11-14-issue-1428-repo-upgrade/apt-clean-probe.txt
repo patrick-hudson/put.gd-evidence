@@ -1,0 +1,14 @@
+$ ps -u patrick -o pid,ppid,stat,args | grep -E "4765|putgd-cli|graphic.py"; ls /tmp/r1428-*
+ 476525  476516 S    sshd-session: patrick@notty
+ 476528       1 Sl   /usr/bin/python3 /home/patrick/repo1428/fixture.py
+ 476529       1 Sl   /usr/bin/putgd --background
+ 476541  476529 Sl   /usr/bin/putgd-ui
+ 476782  476781 Ss   bash -c ps -u patrick -o pid,ppid,stat,args | grep -E "4765|putgd-cli|graphic.py"; ls /tmp/r1428-*
+ 476784  476782 S    grep -E 4765|putgd-cli|graphic.py
+cache
+config
+data
+rt
+state
+
+exit=0

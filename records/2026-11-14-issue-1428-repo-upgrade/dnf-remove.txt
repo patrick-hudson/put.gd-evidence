@@ -1,0 +1,98 @@
+$ sudo -n dnf remove --noautoremove -y putgd tesseract-langpack-eng; rpm -q putgd tesseract-langpack-eng; curl -fL https://github.com/patrick-hudson/put.gd-desktop/releases/download/v26.1113.4757-nightly/putgd-26.1113.4757-nightly-fedora44-x86_64.rpm -o ~/repo1428/old.rpm; sudo -n dnf install --assumeno ~/repo1428/old.rpm
+Package                  Arch   Version         Repository                            Size
+Removing:
+ tesseract-langpack-eng  noarch 0:4.1.0-12.fc44 19278be6a81040f5b6cbc7bacea5148e   3.9 MiB
+Removing dependent packages:
+ ffmpeg-free             x86_64 0:8.1.3-1.fc44  updates                            2.6 MiB
+ ffmpeg-free-devel       x86_64 0:8.1.3-1.fc44  updates                          576.7 KiB
+ gstreamer1-plugin-libav x86_64 0:1.28.8-1.fc44 updates                          339.3 KiB
+ libavdevice-free        x86_64 0:8.1.3-1.fc44  updates                          244.2 KiB
+ libavdevice-free-devel  x86_64 0:8.1.3-1.fc44  updates                           18.0 KiB
+ libavfilter-free        x86_64 0:8.1.3-1.fc44  updates                            4.3 MiB
+ libavfilter-free-devel  x86_64 0:8.1.3-1.fc44  updates                           64.0 KiB
+ tesseract               x86_64 0:5.5.4-1.fc44  updates                           83.5 KiB
+ tesseract-common        noarch 0:5.5.4-1.fc44  updates                           14.7 KiB
+ tesseract-devel         x86_64 0:5.5.4-1.fc44  updates                           19.7 MiB
+ tesseract-libs          x86_64 0:5.5.4-1.fc44  updates                            3.4 MiB
+
+Transaction Summary:
+ Removing:          12 packages
+
+No packages to remove for argument: putgd
+
+After this operation, 35 MiB will be freed (install 0 B, remove 35 MiB).
+Warning: A pending offline transaction initiated by the following command will be invalidated: dnf5daemon-server
+Running transaction
+[ 1/13] Prepare transaction             100% |  27.0   B/s |  12.0   B |  00m00s
+[ 2/13] Removing ffmpeg-free-0:8.1.3-1. 100% | 583.0   B/s |  35.0   B |  00m00s
+[ 3/13] Removing tesseract-devel-0:5.5. 100% |   1.8 KiB/s |  22.0   B |  00m00s
+[ 4/13] Removing ffmpeg-free-devel-0:8. 100% |   5.9 KiB/s |  48.0   B |  00m00s
+[ 5/13] Removing libavdevice-free-devel 100% | 875.0   B/s |   7.0   B |  00m00s
+[ 6/13] Removing libavfilter-free-devel 100% |   1.1 KiB/s |   9.0   B |  00m00s
+[ 7/13] Removing libavdevice-free-0:8.1 100% | 444.0   B/s |   8.0   B |  00m00s
+[ 8/13] Removing tesseract-0:5.5.4-1.fc 100% | 440.0   B/s |  11.0   B |  00m00s
+[ 9/13] Removing gstreamer1-plugin-liba 100% | 391.0   B/s |   9.0   B |  00m00s
+[10/13] Removing libavfilter-free-0:8.1 100% |   1.0 KiB/s |   8.0   B |  00m00s
+[11/13] Removing tesseract-libs-0:5.5.4 100% | 555.0   B/s |   5.0   B |  00m00s
+[12/13] Removing tesseract-common-0:5.5 100% |   4.8 KiB/s |  39.0   B |  00m00s
+[13/13] Removing tesseract-langpack-eng 100% |   1.0   B/s |   1.0   B |  00m01s
+Warning: Pending offline transaction has been invalidated.
+To reschedule, run: dnf5daemon-server
+Complete!
+package putgd is not installed
+package tesseract-langpack-eng is not installed
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+
+  0      0   0      0   0      0      0      0                              0
+  0      0   0      0   0      0      0      0                              0
+  0      0   0      0   0      0      0      0                              0
+
+  0      0   0      0   0      0      0      0                              0
+ 47 107.5M  47 51.05M   0      0 39.80M      0   00:02   00:01   00:01 51.05M
+100 107.5M 100 107.5M   0      0 53.20M      0   00:02   00:02         51.05M
+100 107.5M 100 107.5M   0      0 53.20M      0   00:02   00:02         51.05M
+100 107.5M 100 107.5M   0      0 53.19M      0   00:02   00:02         51.05M
+Updating and loading repositories:
+Repositories loaded.
+Package                               Arch   Version                       Repository        Size
+Upgrading:
+ libavcodec-free                      x86_64 0:8.1.3-2.fc44                updates       10.4 MiB
+   replacing libavcodec-free          x86_64 0:8.1.3-1.fc44                updates       10.3 MiB
+ libavcodec-free-devel                x86_64 0:8.1.3-2.fc44                updates      266.3 KiB
+   replacing libavcodec-free-devel    x86_64 0:8.1.3-1.fc44                updates      266.3 KiB
+ libavformat-free                     x86_64 0:8.1.3-2.fc44                updates        2.8 MiB
+   replacing libavformat-free         x86_64 0:8.1.3-1.fc44                updates        2.8 MiB
+ libavformat-free-devel               x86_64 0:8.1.3-2.fc44                updates      151.5 KiB
+   replacing libavformat-free-devel   x86_64 0:8.1.3-1.fc44                updates      151.5 KiB
+ libavutil-free                       x86_64 0:8.1.3-2.fc44                updates      975.2 KiB
+   replacing libavutil-free           x86_64 0:8.1.3-1.fc44                updates      975.2 KiB
+ libavutil-free-devel                 x86_64 0:8.1.3-2.fc44                updates      733.6 KiB
+   replacing libavutil-free-devel     x86_64 0:8.1.3-1.fc44                updates      733.6 KiB
+ libswresample-free                   x86_64 0:8.1.3-2.fc44                updates      155.2 KiB
+   replacing libswresample-free       x86_64 0:8.1.3-1.fc44                updates      155.2 KiB
+ libswresample-free-devel             x86_64 0:8.1.3-2.fc44                updates       26.4 KiB
+   replacing libswresample-free-devel x86_64 0:8.1.3-1.fc44                updates       26.4 KiB
+ libswscale-free                      x86_64 0:8.1.3-2.fc44                updates        1.0 MiB
+   replacing libswscale-free          x86_64 0:8.1.3-1.fc44                updates        1.0 MiB
+ libswscale-free-devel                x86_64 0:8.1.3-2.fc44                updates       29.9 KiB
+   replacing libswscale-free-devel    x86_64 0:8.1.3-1.fc44                updates       29.9 KiB
+Installing:
+ putgd                                x86_64 0:26.1113.4757~nightly-1.fc44 @commandline 317.2 MiB
+Installing dependencies:
+ libavfilter-free                     x86_64 0:8.1.3-2.fc44                updates        4.3 MiB
+ tesseract-common                     noarch 0:5.5.4-1.fc44                updates       14.7 KiB
+ tesseract-langpack-eng               noarch 0:4.1.0-12.fc44               fedora         3.9 MiB
+ tesseract-libs                       x86_64 0:5.5.4-1.fc44                updates        3.4 MiB
+
+Transaction Summary:
+ Installing:         5 packages
+ Upgrading:         10 packages
+ Replacing:         10 packages
+
+Total size of inbound packages is 119 MiB. Need to download 12 MiB.
+After this operation, 329 MiB extra will be used (install 345 MiB, remove 16 MiB).
+Warning: A pending offline transaction initiated by the following command will be invalidated: dnf5daemon-server
+Operation aborted by the user.
+
+exit=1

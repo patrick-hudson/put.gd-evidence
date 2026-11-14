@@ -1,0 +1,13 @@
+$ pgrep -a qemu-system; ls ~/work/r1428/work/lab-runs/a2; cat ~/work/r1428/work/lab-runs/a2/qemu.stderr.log 2>/dev/null | tail -4
+477039 qemu-system-x86_64 -machine q35,accel=kvm -cpu host -drive if=pflash,format=raw,readonly=on,file=/usr/share/OVMF/OVMF_CODE_4M.fd -drive if=pflash,format=raw,file=/home/patrick/work/r1428/work/lab-runs/a2/vars.fd -smp 2 -m 6144 -device virtio-vga,id=video0 -device usb-ehci -device usb-tablet -drive file=/home/patrick/work/r1428/work/lab-runs/a2/disk.qcow2,format=qcow2,if=virtio -netdev user,id=net0,hostfwd=tcp:127.0.0.1:22440-:22 -device virtio-net-pci,netdev=net0 -qmp unix:/home/patrick/work/r1428/work/lab-runs/a2/qmp.sock,server=on,wait=off -vnc 127.0.0.1:40 -display none -daemonize -pidfile /home/patrick/work/r1428/work/lab-runs/a2/qemu.pid
+disk.qcow2
+identity
+identity.pub
+known_hosts
+qemu.log
+qemu.pid
+qmp.sock
+state.json
+vars.fd
+
+exit=0

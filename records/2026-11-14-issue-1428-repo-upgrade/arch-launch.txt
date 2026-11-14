@@ -1,0 +1,5 @@
+$ cd ~/work/put.gd; python3 -c 'from pathlib import Path; p=Path("work/lab-runs/r1428").resolve(); paths=[p/"qmp.sock",p/"runtime/putgd/session.sock"]; print([(str(x),len(str(x).encode())) for x in paths]); assert all(len(str(x).encode())<=107 for x in paths)'; python3 tools/lab/lab.py launch --profile omarchy-hyprland --golden ~/work/put.gd/work/lab-images/omarchy-hyprland-20261108/image.qcow2 --known-hosts ~/work/put.gd/work/lab-images/omarchy-hyprland-20261108/known_hosts --bootstrap-key ~/work/put.gd/work/lab-bootstrap-omarchy/identity --run ~/work/put.gd/work/lab-runs/r1428 --ssh-port 22440 --vnc-display 40 --timeout 90
+[('/home/patrick/work/put.gd/work/lab-runs/r1428/qmp.sock', 54), ('/home/patrick/work/put.gd/work/lab-runs/r1428/runtime/putgd/session.sock', 72)]
+{"ok": false, "error": "Profile unavailable; see tools/lab/profiles"}
+
+exit=1

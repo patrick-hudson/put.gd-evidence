@@ -1,0 +1,57 @@
+$ sudo -n dnf install -y ffmpeg-free ffmpeg-free-devel gstreamer1-plugin-libav libavdevice-free libavdevice-free-devel libavfilter-free-devel tesseract tesseract-devel; sudo -n dnf remove --noautoremove --assumeno putgd
+Updating and loading repositories:
+Repositories loaded.
+Package                  Arch   Version         Repository      Size
+Installing:
+ ffmpeg-free             x86_64 0:8.1.3-2.fc44  updates      2.6 MiB
+ ffmpeg-free-devel       x86_64 0:8.1.3-2.fc44  updates    576.7 KiB
+ gstreamer1-plugin-libav x86_64 0:1.28.9-1.fc44 updates    340.6 KiB
+ libavdevice-free-devel  x86_64 0:8.1.3-2.fc44  updates     18.0 KiB
+ libavfilter-free-devel  x86_64 0:8.1.3-2.fc44  updates     64.0 KiB
+ tesseract               x86_64 0:5.5.4-1.fc44  updates     83.5 KiB
+ tesseract-devel         x86_64 0:5.5.4-1.fc44  updates     19.7 MiB
+Installing dependencies:
+ libavdevice-free        x86_64 0:8.1.3-2.fc44  updates    248.2 KiB
+
+Transaction Summary:
+ Installing:         8 packages
+
+Total size of inbound packages is 6 MiB. Need to download 6 MiB.
+After this operation, 24 MiB extra will be used (install 24 MiB, remove 0 B).
+Warning: A pending offline transaction initiated by the following command will be invalidated: dnf5daemon-server
+[1/8] libavdevice-free-0:8.1.3-2.fc44.x 100% | 215.7 KiB/s | 104.2 KiB |  00m00s
+[2/8] gstreamer1-plugin-libav-0:1.28.9- 100% |   1.7 MiB/s | 174.4 KiB |  00m00s
+[3/8] libavdevice-free-devel-0:8.1.3-2. 100% | 262.3 KiB/s |  18.6 KiB |  00m00s
+[4/8] libavfilter-free-devel-0:8.1.3-2. 100% | 370.0 KiB/s |  28.9 KiB |  00m00s
+[5/8] tesseract-0:5.5.4-1.fc44.x86_64   100% |   1.0 MiB/s |  50.1 KiB |  00m00s
+[6/8] ffmpeg-free-0:8.1.3-2.fc44.x86_64 100% |   2.3 MiB/s |   2.0 MiB |  00m01s
+[7/8] tesseract-devel-0:5.5.4-1.fc44.x8 100% |  11.4 MiB/s |   3.1 MiB |  00m00s
+[8/8] ffmpeg-free-devel-0:8.1.3-2.fc44. 100% | 142.0 KiB/s | 155.9 KiB |  00m01s
+--------------------------------------------------------------------------------
+[8/8] Total                             100% |   4.0 MiB/s |   5.6 MiB |  00m01s
+Running transaction
+[ 1/10] Verify package files            100% | 115.0   B/s |   8.0   B |  00m00s
+[ 2/10] Prepare transaction             100% |  19.0   B/s |   8.0   B |  00m00s
+[ 3/10] Installing libavfilter-free-dev 100% |   4.9 MiB/s |  65.5 KiB |  00m00s
+[ 4/10] Installing libavdevice-free-0:8 100% |  24.4 MiB/s | 249.5 KiB |  00m00s
+[ 5/10] Installing libavdevice-free-dev 100% |   3.1 MiB/s |  19.1 KiB |  00m00s
+[ 6/10] Installing ffmpeg-free-devel-0: 100% |  35.7 MiB/s | 584.6 KiB |  00m00s
+[ 7/10] Installing ffmpeg-free-0:8.1.3- 100% |  66.6 MiB/s |   2.6 MiB |  00m00s
+[ 8/10] Installing tesseract-devel-0:5. 100% | 199.3 MiB/s |  19.7 MiB |  00m00s
+[ 9/10] Installing tesseract-0:5.5.4-1. 100% |   3.5 MiB/s |  85.2 KiB |  00m00s
+[10/10] Installing gstreamer1-plugin-li 100% | 552.6 KiB/s | 342.1 KiB |  00m01s
+Warning: Pending offline transaction has been invalidated.
+To reschedule, run: dnf5daemon-server
+Complete!
+Package Arch   Version                       Repository         Size
+Removing:
+ putgd  x86_64 0:26.1114.5000~nightly-1.fc44 putgd-nightly 320.0 MiB
+
+Transaction Summary:
+ Removing:           1 package
+
+After this operation, 320 MiB will be freed (install 0 B, remove 320 MiB).
+Warning: A pending offline transaction initiated by the following command will be invalidated: dnf5daemon-server
+Operation aborted by the user.
+
+exit=1

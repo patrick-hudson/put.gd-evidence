@@ -1,0 +1,8 @@
+$ tail -12 ~/repo1428/apt-app.log; ps -u patrick -o pid,comm,args | grep -E "graphic.py|fixture.py|/usr/bin/putgd" | head -10
+ 476528 python3         /usr/bin/python3 /home/patrick/repo1428/fixture.py
+ 476529 putgd           /usr/bin/putgd --background
+ 476541 putgd-ui        /usr/bin/putgd-ui
+ 476684 bash            bash -c tail -12 ~/repo1428/apt-app.log; ps -u patrick -o pid,comm,args | grep -E "graphic.py|fixture.py|/usr/bin/putgd" | head -10
+ 476687 grep            grep -E graphic.py|fixture.py|/usr/bin/putgd
+
+exit=0

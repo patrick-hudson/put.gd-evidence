@@ -1,0 +1,121 @@
+$ sudo -n apt-get install -y --only-upgrade putgd; dpkg-query -W putgd tesseract-ocr-eng tesseract-ocr; dpkg -L putgd | grep putgd-ocr; /usr/lib/putgd/putgd-ocr --version-json; /usr/bin/putgd-cli --help
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  libtinyxml2-11 libvncclient1 libvncserver1 tcl tk
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  tesseract-ocr tesseract-ocr-eng
+The following NEW packages will be installed:
+  tesseract-ocr tesseract-ocr-eng
+The following packages will be upgraded:
+  putgd
+1 upgraded, 2 newly installed, 0 to remove and 224 not upgraded.
+Need to get 139 MB of archives.
+After this operation, 9,322 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian trixie/main amd64 tesseract-ocr-eng all 1:4.1.0-2 [1,594 kB]
+Get:2 http://deb.debian.org/debian trixie/main amd64 tesseract-ocr amd64 5.5.0-1+b1 [439 kB]
+Get:3 https://pkg.put.gd/apt/debian13 nightly/main amd64 putgd amd64 26.1114.5000~nightly [137 MB]
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Fetched 139 MB in 3s (46.2 MB/s)
+Selecting previously unselected package tesseract-ocr-eng.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 426181 files and directories currently installed.)
+Preparing to unpack .../tesseract-ocr-eng_1%3a4.1.0-2_all.deb ...
+Unpacking tesseract-ocr-eng (1:4.1.0-2) ...
+Preparing to unpack .../putgd_26.1114.5000~nightly_amd64.deb ...
+Unpacking putgd (26.1114.5000~nightly) over (26.1113.4757~nightly) ...
+Selecting previously unselected package tesseract-ocr.
+Preparing to unpack .../tesseract-ocr_5.5.0-1+b1_amd64.deb ...
+Unpacking tesseract-ocr (5.5.0-1+b1) ...
+Setting up tesseract-ocr-eng (1:4.1.0-2) ...
+Setting up tesseract-ocr (5.5.0-1+b1) ...
+Setting up putgd (26.1114.5000~nightly) ...
+Processing triggers for desktop-file-utils (0.28-1) ...
+Processing triggers for hicolor-icon-theme (0.18-2) ...
+Processing triggers for gnome-menus (3.36.0-3) ...
+Processing triggers for man-db (2.13.1-1) ...
+Processing triggers for mailcap (3.74) ...
+
+Running kernel seems to be up-to-date.
+
+The processor microcode seems to be up-to-date.
+
+Services to be restarted:
+ systemctl restart avahi-daemon.service
+ systemctl restart polkit.service
+
+Service restarts being deferred:
+ systemctl restart NetworkManager.service
+ /etc/needrestart/restart.d/dbus.service
+
+No containers need to be restarted.
+
+User sessions running outdated binaries:
+ patrick @ session #26256: gsd-datetime[3127639], localsearch-3[3127800]
+ patrick @ user service: dbus.service[3120395,3127539], evolution-addressbook-factory.service[3120425], evolution-calendar-factory.service[3120413], evolution-source-registry.service[3120369]
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+putgd	26.1114.5000~nightly
+tesseract-ocr	5.5.0-1+b1
+tesseract-ocr-eng	1:4.1.0-2
+/usr/bin/putgd-ocr
+bash: line 1: /usr/lib/putgd/putgd-ocr: No such file or directory
+Usage: /usr/bin/putgd-cli [options] method [params]
+JSON client for the resident put.gd session
+
+Options:
+  --params-stdin      Read the JSON parameter object from standard input
+  -h, --help          Displays help on commandline options.
+  --help-all          Displays help, including generic Qt options.
+  -v, --version       Displays version information.
+  --socket <path>     Session socket path
+  --request-id <id>   Correlation ID
+  --operation <id>    diagnostics.bundle: package one operation
+  --since <duration>  diagnostics.bundle: failures and logs from this long ago
+                      (1m to 365d, default 7d)
+  --include-names     diagnostics.bundle: keep file names, object keys and URLs
+                      instead of hashes
+  --output <path>     diagnostics.bundle: a .zip path or an existing folder
+                      (default: <archive>/diagnostics)
+  --upload            diagnostics.bundle: also upload the saved package to a
+                      working destination and return its link
+  --profile <id>      diagnostics.bundle --upload: the destination (default:
+                      the capture destination)
+  --copy-link         diagnostics.bundle --upload: also copy the link to the
+                      clipboard
+
+Arguments:
+  method              Versioned session method
+  params              JSON parameter object (default {})
+
+exit=0

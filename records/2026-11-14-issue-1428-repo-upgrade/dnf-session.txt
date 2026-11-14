@@ -1,0 +1,21 @@
+$ loginctl list-sessions; systemctl --user show-environment | grep -E "DISPLAY|XDG_RUNTIME_DIR|XDG_SESSION_TYPE"; pgrep -a gnome-shell; ls /run/user/1000/wayland-*
+SESSION  UID USER    SEAT  LEADER CLASS   TTY  IDLE SINCE
+  15784 1000 patrick -     98126  user    -    no   -
+  15785 1000 patrick -     98146  user    -    no   -
+  16021 1000 patrick seat0 126157 user    tty2 no   -
+  16264 1000 patrick -     142079 user    -    no   -
+      2 1000 patrick -     1051   manager -    no   -
+   4402 1000 patrick -     693177 user    -    no   -
+
+6 sessions listed.
+XDG_RUNTIME_DIR=/run/user/1000
+DISPLAY=:0
+GNOME_SETUP_DISPLAY=unix:/tmp/.X11-unix/X1
+WAYLAND_DISPLAY=wayland-0
+XDG_SESSION_TYPE=wayland
+126257 /usr/bin/gnome-shell --mode=user
+126348 /usr/libexec/gnome-shell-calendar-server
+/run/user/1000/wayland-0
+/run/user/1000/wayland-0.lock
+
+exit=0

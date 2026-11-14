@@ -1,0 +1,48 @@
+$ sudo -n dnf upgrade -y putgd; rpm -q putgd tesseract-langpack-eng; rpm -ql putgd | grep putgd-ocr; /usr/bin/putgd-ocr --version-json; rpm -V putgd; python3 ~/repo1428/graphic.py 5901 dnf
+Updating and loading repositories:
+Repositories loaded.
+Package            Arch   Version                       Repository         Size
+Upgrading:
+ putgd             x86_64 0:26.1114.5000~nightly-1.fc44 putgd-nightly 320.0 MiB
+   replacing putgd x86_64 0:26.1113.4757~nightly-1.fc44 @commandline  317.2 MiB
+
+Transaction Summary:
+ Upgrading:          1 package
+ Replacing:          1 package
+
+Total size of inbound packages is 108 MiB. Need to download 108 MiB.
+After this operation, 3 MiB extra will be used (install 320 MiB, remove 317 MiB).
+Warning: A pending offline transaction initiated by the following command will be invalidated: dnf5daemon-server
+[1/1] putgd-0:26.1114.5000~nightly-1.fc 100% |  32.1 MiB/s | 108.5 MiB |  00m03s
+--------------------------------------------------------------------------------
+[1/1] Total                             100% |  32.1 MiB/s | 108.5 MiB |  00m03s
+Running transaction
+[1/4] Verify package files              100% |   0.0   B/s |   1.0   B |  00m01s
+[2/4] Prepare transaction               100% |   8.0   B/s |   2.0   B |  00m00s
+[3/4] Upgrading putgd-0:26.1114.5000~ni 100% | 167.3 MiB/s | 320.0 MiB |  00m02s
+[4/4] Removing putgd-0:26.1113.4757~nig 100% | 185.0   B/s | 207.0   B |  00m01s
+Warning: Pending offline transaction has been invalidated.
+To reschedule, run: dnf5daemon-server
+Complete!
+putgd-26.1114.5000~nightly-1.fc44.x86_64
+tesseract-langpack-eng-4.1.0-12.fc44.noarch
+/usr/bin/putgd-ocr
+{
+  "schemaVersion": 1,
+  "version": "26.1114.5000-nightly",
+  "baseVersion": "26.1114.5000",
+  "packageVersion": "26.1114.5000~nightly",
+  "gitCommit": "df229be2990554bb9c4dff5a020e1407e4eb1885",
+  "gitTree": "72e44106c147d2c855ff55044f59c85ce0b1b113",
+  "commitCount": 5000,
+  "dirty": false,
+  "sourceProvenance": "git"
+}
+
+Traceback (most recent call last):
+  File "/home/patrick/repo1428/graphic.py", line 10, in <module>
+    os.environ['WAYLAND_DISPLAY']=env['XDG_RUNTIME_DIR']+'/'+env['WAYLAND_DISPLAY'] if not env['WAYLAND_DISPLAY'].startswith('/') else env['WAYLAND_DISPLAY']
+                                                                                           ~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'WAYLAND_DISPLAY'
+
+exit=1

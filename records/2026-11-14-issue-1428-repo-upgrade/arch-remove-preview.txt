@@ -1,0 +1,7 @@
+$ ssh -i ~/work/put.gd/work/lab-bootstrap-omarchy/identity -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=~/work/put.gd/work/lab-images/omarchy-hyprland-20261108/known_hosts -p 22440 lab@127.0.0.1 'sudo -n pacman -R --print tesseract-data-eng tesseract zxing-cpp'
+:: removing zxing-cpp breaks dependency 'zxing-cpp' required by libreoffice-fresh
+:: removing tesseract breaks dependency 'tesseract' required by omasnap
+:: removing tesseract-data-eng breaks dependency 'tesseract-data-eng' required by omasnap
+error: failed to prepare transaction (could not satisfy dependencies)
+
+exit=1

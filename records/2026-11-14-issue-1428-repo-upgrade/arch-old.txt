@@ -1,0 +1,61 @@
+$ ssh -i ~/work/put.gd/work/lab-bootstrap-omarchy/identity -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=~/work/put.gd/work/lab-images/omarchy-hyprland-20261108/known_hosts -p 22440 lab@127.0.0.1 'sudo -n pacman -R --noconfirm omasnap libreoffice-fresh tesseract-data-eng tesseract zxing-cpp; pacman -Q putgd tesseract-data-eng tesseract zxing-cpp; mkdir -m 700 ~/repo1428; curl -fL https://github.com/patrick-hudson/put.gd-desktop/releases/download/v26.1113.4757-nightly/putgd-26.1113.4757-nightly-archlinux-x86_64.pkg.tar.zst -o ~/repo1428/old.pkg.tar.zst; sudo -n pacman -U --print ~/repo1428/old.pkg.tar.zst'
+warning: database file for 'omarchy' does not exist (use '-Sy' to download)
+warning: database file for 'core' does not exist (use '-Sy' to download)
+warning: database file for 'extra' does not exist (use '-Sy' to download)
+warning: database file for 'multilib' does not exist (use '-Sy' to download)
+checking dependencies...
+:: sushi optionally requires libreoffice: OpenDocument formats
+
+Package (5)         Old Version  Net Change 
+
+libreoffice-fresh   26.8.1-2     -423.01 MiB
+omasnap             1.25.0-1       -2.33 MiB
+tesseract           5.5.3-1        -4.66 MiB
+tesseract-data-eng  2:4.1.0-5     -22.38 MiB
+zxing-cpp           3.1.1-1        -1.85 MiB
+
+Total Removed Size:  454.23 MiB
+
+:: Do you want to remove these packages? [Y/n] 
+:: Running pre-transaction hooks...
+(1/1) Waiting for limine-snapper-sync to finish...
+:: Processing package changes...
+removing libreoffice-fresh...
+removing zxing-cpp...
+removing omasnap...
+removing tesseract-data-eng...
+removing tesseract...
+:: Running post-transaction hooks...
+(1/4) Updating the MIME type database...
+(2/4) Arming ConditionNeedsUpdate...
+(3/4) Updating icon theme caches...
+(4/4) Updating the desktop file MIME type cache...
+warning: database file for 'omarchy' does not exist (use '-Sy' to download)
+warning: database file for 'core' does not exist (use '-Sy' to download)
+warning: database file for 'extra' does not exist (use '-Sy' to download)
+warning: database file for 'multilib' does not exist (use '-Sy' to download)
+error: package 'putgd' was not found
+error: package 'tesseract-data-eng' was not found
+error: package 'tesseract' was not found
+error: package 'zxing-cpp' was not found
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+
+  0      0   0      0   0      0      0      0                              0
+  0      0   0      0   0      0      0      0                              0
+  0      0   0      0   0      0      0      0                              0
+
+  0      0   0      0   0      0      0      0                              0
+ 52 126.0M  52 65.56M   0      0 49.42M      0   00:02   00:01   00:01 65.55M
+100 126.0M 100 126.0M   0      0 60.68M      0   00:02   00:02         65.55M
+100 126.0M 100 126.0M   0      0 60.68M      0   00:02   00:02         65.55M
+100 126.0M 100 126.0M   0      0 60.68M      0   00:02   00:02         65.55M
+error: failed to prepare transaction (could not satisfy dependencies)
+:: unable to satisfy dependency 'qtkeychain-qt6' required by putgd
+:: unable to satisfy dependency 'gst-plugins-base' required by putgd
+:: unable to satisfy dependency 'gst-plugins-good' required by putgd
+:: unable to satisfy dependency 'gst-plugins-bad' required by putgd
+:: unable to satisfy dependency 'gst-plugins-ugly' required by putgd
+:: unable to satisfy dependency 'gst-libav' required by putgd
+
+exit=1
