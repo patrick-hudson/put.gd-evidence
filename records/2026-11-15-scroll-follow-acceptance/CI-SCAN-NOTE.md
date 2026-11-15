@@ -1,0 +1,9 @@
+# Evidence CI scan triage
+
+Both bounded evidence additions were published with tools/maintenance/evidence.py. The complete record at ce3a7673d8142ec68247bb9be0bd105eeb76e6c4 contains4,231files, independently verified against the staging source with no missing/extra file or changed byte/executable mode. All desktop acceptance results remain as reported: acceptance is not passed.
+
+[Physical-batch CI43709278408](https://github.com/patrick-hudson/put.gd-evidence/actions/runs/43709278408) passed check, secrets and index. [Complete-record CI43709664530](https://github.com/patrick-hudson/put.gd-evidence/actions/runs/43709664530) passed check and index, but secrets reported one generic-api-key finding at budgie/native-export/labwc-before.xml line37. The extracted value is the standard compositor keyboard shortcut **XF86Calculator**. The XML element is a labwc keyboard binding with bridge and key attributes; it is not an API credential. The scan log publishes only rule/location/commit, not raw matched material. No real credential was discovered or printed during triage.
+
+The original XML remains unchanged, including its recorded SHA and restoration proof. This acceptance worker does not change product code, repository scanner policy, an allowlist, or the already-published archival bytes to make a scan green. This note is an additive evidence update, not an exception or a substitute for the failed full-content scan. A passing CI run for the note alone does not retrospectively change that earlier scan result. The coordinator can decide whether a narrowly scoped scanner exception belongs in separate repository maintenance.
+
+All test apps, input devices, resident scopes, guest overlays and leases were already cleaned/released before publication. First and second publication foreground commands and their CI runs have settled. No PR comment or merge was made.
