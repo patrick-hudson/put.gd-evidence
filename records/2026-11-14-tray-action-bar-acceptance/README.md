@@ -1,6 +1,6 @@
 # PR 1532 tray and action bar acceptance — revised campaign
 
-The revised campaign is finished. **W7 fails on KDE: resizing the candidate to 1,060 pixels can erase the output summary while “Settings save automatically” remains visible.** The candidate DEB and AppImage show this; the published nightly AppImage retains the summary at the same width. A native UI restart restores it, so this is a resize-path regression, not a claim that the summary is always absent at that width.
+**Latest: [W7 fix recheck PASS on f5b3d0a](r3/README.md).** The earlier W7 description was incorrect: the summary remained visible; automatic-save text displaced the version. The dedicated recheck corrects the interpretation and gives every width’s visibility. The remaining campaign below describes the older f63d24db build only.
 
 The requested tray state sequences pass on all five desktops. T9's recording/upload/failure combination passes on each; its **update portion is NOT RUN** because the exact candidate is a development build whose production update API refuses checks. T5's four missing-shortcut-hint failures are retained as established pre-existing nightly behavior, without repeating them. This is not an all-checklist-pass result.
 
@@ -54,20 +54,9 @@ T2/T10 NOT RUN cells are outside the revised requested host scope. T9 is conserv
 | W4 | PASS |
 | W5 | PASS |
 
-## New failure: W7, KDE resize path
+## Corrected W7 finding and fixed-head recheck
 
-Exact reproduction used a private profile on k72, normal desktop font, and the actual destination **Tray acceptance HTTP destination with a long label** (50 characters):
-
-1. Set every capture output to inherit the default destination, choose that custom uploader, keep a local copy, and set capture delay to 5 seconds.
-2. Open Settings → General in a 1,440 × 880 window. The output summary, delay control and automatic-save explanation are visible: [wide candidate](r2/k72/W7-wide-long-output.png).
-3. Resize the live window to 1,200 pixels, then 1,060 × 880. At 1,200 the output remains visible and the automatic-save explanation hides ([frame](r2/k72/W7-width1200.png)). At 1,060 the output summary is absent and the explanation returns, while delay remains intact: [candidate DEB failure](r2/k72/W7-width1060.png).
-4. Restore the width: [summary returns](r2/k72/W7-width-restored.png). Quit/restart the native UI and revisit the narrow case: [later frame](r2/k72/W7-width1060-settled.png) has the summary visible. This limits the finding to the live resize path and contradicts any claim of permanent loss.
-5. Run the exact CI candidate AppImage with the same output configuration and resize from wide to 1,060: [candidate AppImage failure](r2/k72/W7-candidate-appimage-width1060.png), [wide](r2/k72/W7-candidate-appimage-wide.png), [candidate identity](r2/k72/W7-candidate-appimage-identity.json).
-6. Run the published nightly AppImage with the same accepted output configuration on the same KDE desktop and resize to 1,060 × 880: [nightly retains full summary](r2/k72/W7-nightly-width1060.png), [nightly identity](r2/k72/W7-nightly-identity.json). KWin's actual frame/content geometry is logged in the trace.
-
-**Classification: regression.** Published nightly v26.1114.5000-nightly, commit df229be2990554bb9c4dff5a020e1407e4eb1885, tree 72e44106c147d2c855ff55044f59c85ce0b1b113 does not lose the summary in the matched resize comparison. The nightly lacks the new delay control, so it is a comparison of output-summary retention, not a claim of identical status-band contents. The exact candidate AppImage comparison removes the native-package versus AppImage format difference.
-
-Other W7 portions passed: delay appears on History, Destinations, General, Capture, Hotkeys and Advanced; the output summary hides on Capture; choosing 5 highlights the delay control and updates the native tray. Those frames remain indexed.
+The earlier output-summary-loss interpretation is withdrawn. In [the old 1060 frame](r2/k72/W7-width1060.png), the summary is shown in full. The actual priority fault was automatic-save text appearing while the build version was absent. Claims that candidate/nightly frames established summary-loss behavior are also withdrawn. The old W7 FAIL cell records this corrected priority fault on f63d24db; the dedicated [new-head recheck](r3/README.md) is **PASS** on f5b3d0a, with full frames at every requested width and fresh-window proof. Other desktop rows were not rerun on that head.
 
 ## Retained failures: T5 missing bound shortcut hints
 
