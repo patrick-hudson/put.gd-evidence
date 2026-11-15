@@ -1,0 +1,13 @@
+{"rect": [0, 118, 1920, 922], "solid": 0.9987657040853217, "inner": [1920, 922], "dpr": 1}
+stopped 1049866 still there
+Traceback (most recent call last):
+  File "/home/patrick/work/sfa15/baseline-pointer.py", line 43, in <module>
+    sid=rpc('scroll.prepare',{'rect':[240,200,1440,820]})['result']['id'];rpc('scroll.start',{'id':sid});time.sleep(1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/sfa15/baseline-pointer.py", line 32, in rpc
+    result=A.rpc(m,p)
+           ^^^^^^^^^^
+  File "/home/patrick/work/sfa15/accept.py", line 24, in rpc
+    if not o.get('ok'):raise RuntimeError(o)
+                       ^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: {'error': {'code': 'invalid_request', 'details': {}, 'message': 'Invalid scrolling capture parameters'}, 'ok': False, 'requestId': '8675b33d-d059-4e9e-aa10-f6caabbb8b33', 'result': {}, 'schemaVersion': 1}

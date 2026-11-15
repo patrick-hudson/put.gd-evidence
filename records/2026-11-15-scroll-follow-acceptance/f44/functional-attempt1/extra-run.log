@@ -1,0 +1,15 @@
+{"rect": [0, 85, 1920, 963], "solid": 0.9667634778470059, "inner": [1920, 963], "dpr": 1}
+stopped 296846 still there
+Traceback (most recent call last):
+  File "/home/patrick/work/sfa15/extra-relative.py", line 44, in <module>
+    L.browser_start('firefox');b,_=L.connect();b.navigate('https://en.wikipedia.org/wiki/Linux');time.sleep(6)
+                                   ~~~~~~~~~^^
+  File "/home/patrick/work/sfa15/live7.py", line 237, in connect
+    return (Marionette() if kind == 'firefox' else DevTools()), kind
+            ~~~~~~~~~~^^
+  File "/home/patrick/work/sfa15/live7.py", line 60, in __init__
+    self.recv()
+    ~~~~~~~~~^^
+  File "/home/patrick/work/sfa15/live7.py", line 68, in recv
+    raise RuntimeError('marionette closed')
+RuntimeError: marionette closed

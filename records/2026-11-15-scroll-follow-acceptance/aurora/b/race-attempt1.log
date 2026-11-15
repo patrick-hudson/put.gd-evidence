@@ -1,0 +1,18 @@
+{"rect": [0, 85, 1920, 949], "solid": 0.9978766025641026, "inner": [1920, 949], "dpr": 1}
+Traceback (most recent call last):
+  File "/home/patrick/work/sfa15/b/race-supported-alias.py", line 5, in <module>
+    sid=A.rpc('scroll.prepare',{'rect':[240,200,1440,820],'driver':'user'})['id'];A.rpc('scroll.start',{'id':sid});time.sleep(.5)
+        ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/sfa15/accept.py", line 23, in rpc
+    if not o.get('ok'):raise RuntimeError(o)
+                       ^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: {'error': {'code': 'invalid_request', 'details': {}, 'message': 'Invalid scrolling capture parameters'}, 'ok': False, 'requestId': '1584a2be-bf1e-4e56-bc49-688ea51e5d8d', 'result': {}, 'schemaVersion': 1}
+stopped 2760943 still there
+Traceback (most recent call last):
+  File "/home/patrick/work/sfa15/baseline-race.py", line 11, in <module>
+    subprocess.run([sys.executable,str(P/'race-supported-alias.py')],check=True,env=dict(A.os.environ,PYTHONPATH=str(Path(__file__).parent)))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.15/subprocess.py", line 692, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['/usr/bin/python3', '/home/patrick/work/sfa15/b/race-supported-alias.py']' returned non-zero exit status 1.

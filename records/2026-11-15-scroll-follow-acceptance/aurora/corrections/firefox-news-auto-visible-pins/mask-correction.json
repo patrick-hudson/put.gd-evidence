@@ -1,0 +1,31 @@
+{
+ "reason": "Use only the visible intersection of pinned DOM boxes with the viewport; the background-inscreen-display box extends below it and previously masked the entire image as a tall sidebar.",
+ "viewport": [
+  1920,
+  949
+ ],
+ "changes": [
+  {
+   "before": {
+    "rect": [
+     0,
+     813,
+     1920,
+     903
+    ],
+    "position": "fixed",
+    "what": "DIV.background-inscreen-display"
+   },
+   "after": {
+    "rect": [
+     0,
+     813,
+     1920,
+     136
+    ],
+    "position": "fixed",
+    "what": "DIV.background-inscreen-display"
+   }
+  }
+ ]
+}

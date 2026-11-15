@@ -1,0 +1,17 @@
+{"rect": [0, 118, 1920, 922], "solid": 0.9959395336225596, "inner": [1920, 922], "dpr": 1}
+stopped 989475 still there
+Traceback (most recent call last):
+  File "/home/patrick/work/sfa15/extra.py", line 47, in <module>
+    import trial_relative; trial_relative.flat()
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/sfa15/trial_relative.py", line 109, in flat
+    out = subprocess.run([shutil.which('qdbus-qt6') or shutil.which('qdbus6') or 'qdbus', 'org.kde.KWin', '/org/kde/KWin/InputDevice', 'org.kde.KWin.InputDeviceManager.devicesSysNames'], capture_output=True, text=True).stdout.split()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'qdbus'

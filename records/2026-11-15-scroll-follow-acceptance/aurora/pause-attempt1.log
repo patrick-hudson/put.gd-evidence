@@ -1,0 +1,18 @@
+{"rect": [0, 85, 1920, 949], "solid": 0.9978925184404637, "inner": [1920, 949], "dpr": 1}
+stopped 2609360 still there
+Traceback (most recent call last):
+  File "/home/patrick/work/sfa15/pause.py", line 27, in <module>
+    run()
+    ~~~^^
+  File "/home/patrick/work/sfa15/pause.py", line 14, in run
+    b,_=L.connect();b.js('window.scrollTo({top:0,behavior:"instant"}); return 0;');time.sleep(1)
+        ~~~~~~~~~^^
+  File "/home/patrick/work/sfa15/live7.py", line 237, in connect
+    return (Marionette() if kind == 'firefox' else DevTools()), kind
+            ~~~~~~~~~~^^
+  File "/home/patrick/work/sfa15/live7.py", line 60, in __init__
+    self.recv()
+    ~~~~~~~~~^^
+  File "/home/patrick/work/sfa15/live7.py", line 68, in recv
+    raise RuntimeError('marionette closed')
+RuntimeError: marionette closed

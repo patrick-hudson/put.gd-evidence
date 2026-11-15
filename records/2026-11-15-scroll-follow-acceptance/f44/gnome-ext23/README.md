@@ -1,0 +1,2 @@
+# GNOME extension 23 still loaded
+Version23 was loaded after a full GDM login, then candidate version24 files were installed without another login. ShellPID378126 stayed the same throughout all20pointertries. All helper logs report no Shell pointer watch. The runner mutated sys.argv inside trial.main, so its only-pointer flag was lost and it also executed the later race/inside-cancel extras; they are retained separately and do not replace extension24 inside-control evidence.\n

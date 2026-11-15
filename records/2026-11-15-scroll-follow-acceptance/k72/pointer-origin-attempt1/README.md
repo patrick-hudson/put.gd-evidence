@@ -1,0 +1,1 @@
+Initial 8/10 fixed,10/10 random used last requested position rather than independently observed native pointer origin. Two misses also have nominal post-hand injection entries within1ms clock resolution. Preserve as unclassified origin/timing evidence; authoritative repeat samples native KWin cursor after first real6px movement. No old result is discarded.

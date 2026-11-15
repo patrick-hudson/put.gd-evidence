@@ -1,0 +1,2 @@
+# Invalid foreground setup
+The private resident Settings window opened after settings.save and obscured Firefox (native magenta coverage0.4869). Wikipedia captured963unchanged rows containing Settings. GitHub was interrupted by exact PID386998 and cleaned up. This is a harness foreground error, not a tracker acceptance result. New calibration rejects coverage below0.98, and normal native window close precedes the retry.

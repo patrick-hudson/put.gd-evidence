@@ -1,0 +1,3 @@
+# Invalid browser-coordinate page runs
+
+The native magenta viewport is [0,117,1920,963]. Firefox reports [0,85,1920,963], excluding GNOME's 32px panel from screen Y. The harness overrode its native calibration with Firefox's value, selecting browser chrome and excluding 32 bottom rows. These page runs are setup failures, not product corruption evidence. Every original result, image and helper log is preserved. The page worker was interrupted by exact owned PID with SIGINT and cleaned up; the corrected command uses screen-derived geometry and new run directories. The fixed-rectangle pointer gate, full-screen functional buttons and agent controls are independent and remain valid.

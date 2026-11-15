@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/sfa15/post-candidate.py", line 24, in <module>
+    run('lostauto-relative.py','lostauto-run.log');run('collect-lostauto.py','collect-lostauto.log');run('audit-controls.py','control-audit.log')
+                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/sfa15/post-candidate.py", line 13, in run
+    with (P/log).open('w') as f:subprocess.run(['python3','-u',str(P/script),*args],cwd=P,env=os.environ,stdout=f,stderr=subprocess.STDOUT,check=True)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python3', '-u', '/home/patrick/work/sfa15/audit-controls.py']' returned non-zero exit status 1.

@@ -1,0 +1,10 @@
+{"rect": [0, 117, 1920, 963], "solid": 0.9998896677050882, "inner": [1920, 963], "dpr": 1}
+stopped 324560 still there
+Traceback (most recent call last):
+  File "/home/patrick/work/sfa15/keyboard-probe.py", line 17, in <module>
+    after=b.js('return {y:scrollY,focused:document.hasFocus(),tag:document.activeElement.tagName,keys:sfaKeys};')
+  File "/home/patrick/work/sfa15/live7.py", line 86, in js
+    v = self.cmd('WebDriver:ExecuteScript', {'script': script, 'args': [], 'newSandbox': True, 'sandbox': 'default', 'line': 0, 'filename': 'live7'})
+  File "/home/patrick/work/sfa15/live7.py", line 82, in cmd
+    raise RuntimeError(r[2])
+RuntimeError: {'error': 'javascript error', 'message': 'ReferenceError: sfaKeys is not defined', 'stacktrace': '@live7:1:88\n@live7:2:8\n'}

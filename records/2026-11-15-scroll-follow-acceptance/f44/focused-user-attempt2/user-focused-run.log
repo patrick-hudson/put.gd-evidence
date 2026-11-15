@@ -1,0 +1,13 @@
+{"rect": [0, 117, 1920, 963], "solid": 0.9998896677050882, "inner": [1920, 963], "dpr": 1}
+content-focus-before {"focused": true, "tag": "BODY", "scrollY": 0}
+keyboard-preflight-End {"focused": true, "scrollY": 23131.466796875, "h": 24094}
+keyboard-preflight-Home {"focused": true, "scrollY": 0}
+focus-before-End {"focused": true, "tag": "BODY", "scrollY": 0}
+page-after-End {"focused": true, "scrollY": 0}
+lost {"activity": "waiting", "driver": "user", "height": 820, "id": "f35cea7e-9c76-482d-bebb-a2ac6569d915", "operationId": "f35cea7e-9c76-482d-bebb-a2ac6569d915", "paused": false, "pixelsPerNotch": 0, "placed": 1, "rect": [240, 200, 1440, 820], "skipped": 0, "state": "capturing", "steps": 0}
+stopped 326351 still there
+Traceback (most recent call last):
+  File "/home/patrick/work/sfa15/user-focused.py", line 32, in <module>
+    keyboard.stdin.write('107\n');keyboard.stdin.flush();time.sleep(.3);rec('page-after-End',b.js('return {focused:document.hasFocus(),scrollY};'));v=wait('lost');rec('lost',v);shot('bar-lost');assert v.get('activity')=='lost',v
+                                                                                                                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'activity': 'waiting', 'driver': 'user', 'height': 820, 'id': 'f35cea7e-9c76-482d-bebb-a2ac6569d915', 'operationId': 'f35cea7e-9c76-482d-bebb-a2ac6569d915', 'paused': False, 'pixelsPerNotch': 0, 'placed': 1, 'rect': [240, 200, 1440, 820], 'skipped': 0, 'state': 'capturing', 'steps': 0}

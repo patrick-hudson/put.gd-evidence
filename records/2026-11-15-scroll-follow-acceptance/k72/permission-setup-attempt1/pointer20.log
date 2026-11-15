@@ -1,0 +1,10 @@
+{"rect": [0, 85, 1920, 939], "solid": 0.9998053115015975, "inner": [1920, 941], "dpr": 1}
+stopped 2015697 still there
+Traceback (most recent call last):
+  File "/home/patrick/work/sfa15/pause-relative.py", line 42, in <module>
+    sid=A.rpc('scroll.prepare',{'rect':[240,200,1440,820]})['id'];A.rpc('scroll.start',{'id':sid});time.sleep(1);A.rpc('scroll.cancel',{'id':sid})
+        ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/sfa15/accept.py", line 21, in rpc
+    if not o.get('ok'):raise RuntimeError(o)
+                       ^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: {'error': {'code': 'scroll_unavailable', 'details': {'reason': 'frame_source_unavailable'}, 'message': 'Scrolling capture is unavailable'}, 'ok': False, 'requestId': 'edfd256a-8048-4bb5-8b3b-3e4e8b466e3a', 'result': {}, 'schemaVersion': 1}

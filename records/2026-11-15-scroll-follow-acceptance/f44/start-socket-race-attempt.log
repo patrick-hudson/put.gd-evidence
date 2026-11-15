@@ -1,0 +1,11 @@
+socket bytes 45
+Traceback (most recent call last):
+  File "/home/patrick/work/sfa15/accept.py", line 43, in <module>
+    if sys.argv[1]=='start':start()
+                            ~~~~~^^
+  File "/home/patrick/work/sfa15/accept.py", line 31, in start
+    s=rpc('settings.get'); t=rpc('settings.developmentTemplate'); (P/'template.json').write_text(json.dumps(t,indent=1))
+  File "/home/patrick/work/sfa15/accept.py", line 21, in rpc
+    if not o.get('ok'):raise RuntimeError(o)
+                       ^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: {'error': {'code': 'session_unavailable', 'details': {}, 'message': 'Start the resident put.gd app in this user session'}, 'ok': False, 'requestId': '09f0d83a-80a2-47e8-ab5b-2351314b11fe', 'result': {}, 'schemaVersion': 1}

@@ -1,0 +1,7 @@
+{"rect": [0, 118, 1920, 922], "solid": 0.9987657040853217, "inner": [1920, 922], "dpr": 1}
+stopped 1048696 still there
+Traceback (most recent call last):
+  File "/home/patrick/work/sfa15/retry-control-audit.py", line 11, in <module>
+    q=subprocess.run([A.os.environ['SFA_MCP_PYTHON'],str(P/'mcptest.py')],capture_output=True,text=True);(P/'mcp-retry-process.json').write_text(json.dumps({'exit':q.returncode,'stdout':q.stdout,'stderr':q.stderr},indent=1));assert q.returncode==0
+                                                                                                                                                                                                                                        ^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,3 @@
+# Calibrated pre-motion-origin attempt
+
+This preserved batch used valid flat profile 0,1,0 and one-to-one motion calibration. Fixed trial 10 missed because the helper visited its wheel point after the origin was sampled but BEFORE the first nonzero user event. There were no post-hand injections. Its open-loop trajectory was stale by 32,96 pixels. The final driver writes its first real relative event before sampling the resulting native position, and counts all subsequent injections. The inside-bar centre click failures are real and were independently reproduced at the exact target with the input paused.

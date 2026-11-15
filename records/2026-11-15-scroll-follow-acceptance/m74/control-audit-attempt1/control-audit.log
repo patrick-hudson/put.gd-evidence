@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/sfa15/audit-controls.py", line 10, in <module>
+    v=A.rpc('history.list',{'limit':1000,'offset':offset});chunk=v['records'];records.extend(chunk);offset+=len(chunk)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/sfa15/accept.py", line 24, in rpc
+    if not o.get('ok'):raise RuntimeError(o)
+                       ^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: {'error': {'code': 'invalid_query', 'details': {}, 'message': 'History page must be between 1 and 200 records'}, 'ok': False, 'requestId': 'c6785aa2-684f-4361-9b6f-4d0948cbd54c', 'result': {}, 'schemaVersion': 1}
