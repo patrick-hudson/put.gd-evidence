@@ -1,0 +1,2 @@
+# Correction to initial runtime note
+The measured socket path is102UTF-8bytes, below the107-byte limit. The original note wrongly said it exceeded the limit. The initial capability failure was because the private runtime had no Hyprland IPC directory, as exists:false records. The corrected private runtime exposes only the existing owned compositor IPC directory and checks both textual and resolved socket lengths; application session ownership checks are unchanged. No scrolling capture had started before this correction.

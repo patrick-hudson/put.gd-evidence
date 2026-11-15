@@ -1,0 +1,10 @@
+{"rect": [12, 123, 1896, 945], "solid": 0.9998861429241176, "version": "Mozilla Firefox 160.0"}
+content-focus-before {'focused': True, 'tag': 'BODY', 'scrollY': 0}
+stimulus {'method': 'Live page-script scrollBy(3000, instant); native End suppression is tested separately, not replaced as a pass.'}
+handback {'activity': 'lost', 'driver': 'user', 'height': 820, 'id': 'cd929bf1-96c9-4e52-a4d3-4d8606394528', 'operationId': 'cd929bf1-96c9-4e52-a4d3-4d8606394528', 'paused': True, 'pausedBy': 'no_movement', 'pixelsPerNotch': 0, 'placed': 1, 'rect': [240, 200, 1440, 820], 'skipped': 1604, 'state': 'capturing', 'steps': 8}
+{"stoppedPid": 51268}
+Traceback (most recent call last):
+  File "/home/patrick/work/sfa15/guest-h/auto-script-recovery.py", line 28, in <module>
+    v=wait(lambda v:v.get('driver')=='user' and v.get('pausedBy')=='lost',45);log('handback',v);shot('bar-js-auto-lost');assert v.get('driver')=='user' and v.get('pausedBy')=='lost',v
+                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'activity': 'lost', 'driver': 'user', 'height': 820, 'id': 'cd929bf1-96c9-4e52-a4d3-4d8606394528', 'operationId': 'cd929bf1-96c9-4e52-a4d3-4d8606394528', 'paused': True, 'pausedBy': 'no_movement', 'pixelsPerNotch': 0, 'placed': 1, 'rect': [240, 200, 1440, 820], 'skipped': 1604, 'state': 'capturing', 'steps': 8}

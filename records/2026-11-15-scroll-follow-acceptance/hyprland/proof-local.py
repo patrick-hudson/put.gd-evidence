@@ -1,0 +1,2 @@
+import accept as A,json
+v=A.rpc('settings.get')['document'];dest={k:a['destination']for k,a in v['actions'].items()if isinstance(a,dict)and'destination'in a};assert dest and all(x=='local'for x in dest.values());proof={'actionDestinations':dest,'archive':v['archive'],'updates':v['preferences']['updates']};(A.P/'local-only-settings-proof.json').write_text(json.dumps(proof,indent=1));print(json.dumps(proof))

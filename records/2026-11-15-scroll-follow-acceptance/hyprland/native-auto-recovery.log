@@ -1,0 +1,10 @@
+{"rect": [12, 123, 1896, 945], "solid": 0.9998861429241176, "version": "Mozilla Firefox 160.0"}
+content-focus-before {'focused': True, 'tag': 'BODY', 'scrollY': 0}
+stimulus {'method': 'Native separate /dev/uinput keyboard: End, then Home, then real relative Auto-scroll button.'}
+handback {'activity': 'autoScrolling', 'driver': 'putgd', 'height': 8073, 'id': 'd39a8bd8-d332-4fb5-bf56-f6bf765f2dff', 'operationId': 'd39a8bd8-d332-4fb5-bf56-f6bf765f2dff', 'paused': False, 'pixelsPerNotch': 211, 'placed': 65, 'rect': [240, 200, 1440, 820], 'skipped': 0, 'state': 'capturing', 'steps': 65}
+{"stoppedPid": 43338}
+Traceback (most recent call last):
+  File "/home/patrick/work/sfa15/guest-h/auto-native-recovery.py", line 30, in <module>
+    v=wait(lambda v:v.get('driver')=='user' and v.get('pausedBy')=='lost',45);log('handback',v);shot('bar-native-auto-lost');assert v.get('driver')=='user' and v.get('pausedBy')=='lost',v
+                                                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'activity': 'autoScrolling', 'driver': 'putgd', 'height': 8073, 'id': 'd39a8bd8-d332-4fb5-bf56-f6bf765f2dff', 'operationId': 'd39a8bd8-d332-4fb5-bf56-f6bf765f2dff', 'paused': False, 'pixelsPerNotch': 211, 'placed': 65, 'rect': [240, 200, 1440, 820], 'skipped': 0, 'state': 'capturing', 'steps': 65}

@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+import sys,subprocess,shlex,json
+from pathlib import Path
+r=Path.home()/"work/sfa15/repo/work/lab-runs/sfa15h2";s=json.loads((r/"state.json").read_text())
+a=["ssh","-i",str(r/"identity"),"-o","IdentitiesOnly=yes","-o","BatchMode=yes","-o","StrictHostKeyChecking=yes","-o","UserKnownHostsFile="+s["known_hosts"],"-p",str(s["ssh_port"]),"lab@127.0.0.1",shlex.join(["/home/lab/work/sfa15/b/cli",*sys.argv[1:]])]
+sys.exit(subprocess.run(a).returncode)

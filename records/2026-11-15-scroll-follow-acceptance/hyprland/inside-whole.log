@@ -1,0 +1,28 @@
+{"rect": [12, 123, 1896, 945], "solid": 0.9998861429241176, "version": "Mozilla Firefox 160.0"}
+{"name": "firefox-wiki-user-inside", "end": "done", "height": 23478, "doc": 23343, "placed": 53, "skipped": 197, "by": "user", "seconds": 74.15, "failed": null}
+{"stoppedPid": 44448}
+{"rect": [12, 123, 1896, 945], "solid": 0.9998861429241176, "version": "Mozilla Firefox 160.0"}
+{"stoppedPid": 45808}
+Traceback (most recent call last):
+  File "/home/patrick/work/sfa15/guest-h/pages-relative.py", line 140, in <module>
+    S.run(kind,site,mode,wheel)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 44, in run
+  File "/home/patrick/work/sfa15/guest-h/pages-relative.py", line 123, in finish_with_view
+    try:return old_finish(b,d,out,rect,mode,wheel,result,start,name)
+               ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 17, in finish_run
+  File "/home/patrick/work/sfa15/guest-h/pages-relative.py", line 59, in running
+    if self.last['state']=='done' and hasattr(A,'sync_artifact'):A.sync_artifact(self.sid)
+                                                                 ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/patrick/work/sfa15/guest-h/accept.py", line 17, in sync_artifact
+    r=remote('artifact',sid);subprocess.run([*SCP,'lab@127.0.0.1:'+r['local']['path'],str(dst)],check=True,capture_output=True)
+  File "/home/patrick/work/sfa15/guest-h/accept.py", line 9, in remote
+    if r.returncode:raise RuntimeError('Guest '+mode+' failed: '+r.stderr)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Guest artifact failed: Traceback (most recent call last):
+  File "/home/lab/work/sfa15/guest-agent.py", line 54, in <module>
+    f=Path(found['local']['path']);assert f.is_relative_to(P/'archive') and f.is_file() and not f.is_symlink();assert hashlib.sha256(f.read_bytes()).hexdigest()==found['sha256']
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+

@@ -1,0 +1,2 @@
+# Runtime setup correction
+The initial private runtime did not expose native Hyprland IPC, and its computed socket path was too long. No scrolling capture was attempted. Corrected command: start the same all-local resident with XDG_RUNTIME_DIR=/tmp/sh15 (new owned0700directory), private configs/data unchanged, and a symlink only to the existing owned compositor IPC directory. Application session socket checks are unchanged. All textual and resolved Unix socket paths are checked before restart in socket-preflight-corrected.json.

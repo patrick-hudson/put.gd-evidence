@@ -1,0 +1,4 @@
+Nov 15 01:16:01 debian systemd[937]: Started sfa15b-transport.service - [systemd-run] /usr/bin/ssh -NT -o ExitOnForwardFailure=yes -o ServerAliveInterval=30 -L 127.0.0.1:28291:127.0.0.1:28291 -R 127.0.0.1:5900:127.0.0.1:5941 -i /home/patrick/work/sfa15/repo/work/lab-runs/sfa15b/identity -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=/home/patrick/work/sfa15/repo/work/lab-runs/sfa15b/known_hosts -p 22442 lab@127.0.0.1.
+Nov 15 01:16:02 debian ssh[1282151]: Error: remote port forwarding failed for listen port 5900
+Nov 15 01:16:02 debian systemd[937]: sfa15b-transport.service: Main process exited, code=exited, status=255/EXCEPTION
+Nov 15 01:16:02 debian systemd[937]: sfa15b-transport.service: Failed with result 'exit-code'.

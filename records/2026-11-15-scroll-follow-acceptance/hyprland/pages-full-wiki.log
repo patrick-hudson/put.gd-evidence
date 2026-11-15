@@ -1,0 +1,30 @@
+{"rect": [12, 123, 1896, 945], "solid": 1.0, "version": "Mozilla Firefox 160.0"}
+{"stoppedPid": 8146}
+Traceback (most recent call last):
+  File "/home/patrick/work/sfa15/guest-h/pages-relative.py", line 140, in <module>
+    S.run(kind,site,mode,wheel)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 44, in run
+  File "/home/patrick/work/sfa15/guest-h/pages-relative.py", line 123, in finish_with_view
+    try:return old_finish(b,d,out,rect,mode,wheel,result,start,name)
+               ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 11, in finish_run
+  File "/home/patrick/work/sfa15/guest-h/sess.py", line 90, in person
+    while d.running() and time.time() - began < 480:
+          ~~~~~~~~~^^
+  File "/home/patrick/work/sfa15/guest-h/pages-relative.py", line 50, in running
+    self.last=A.rpc('scroll.inspect',{'id':self.sid})
+              ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/sfa15/guest-h/accept.py", line 17, in rpc
+    r=subprocess.run([str(P/'cli'),m,json.dumps(p)],capture_output=True,text=True,timeout=110);o=json.loads(r.stdout)
+  File "/usr/lib/python3.13/subprocess.py", line 556, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/subprocess.py", line 1222, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/subprocess.py", line 2128, in _communicate
+    ready = selector.select(timeout)
+  File "/usr/lib/python3.13/selectors.py", line 398, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt

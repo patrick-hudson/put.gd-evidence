@@ -1,0 +1,9 @@
+socket bytes 28
+Traceback (most recent call last):
+  File "<string>", line 5, in <module>
+    A.start()
+    ~~~~~~~^^
+  File "/home/lab/work/sfa15/b/accept.py", line 45, in start
+    diagnostic=rpc('diagnostics'); (P/'diagnostics.json').write_text(json.dumps(diagnostic,indent=1)); assert diagnostic['build']['gitTree']==os.environ.get('SFA_EXPECT_TREE','bd64ffc5ac593690430bdbabb7e1f9ce6964de7e'),diagnostic['build']; print((P/'diagnostics.json').read_text()[:1600])
+                                                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'baseVersion': '26.1113.4757', 'commitCount': 4757, 'dirty': False, 'gitCommit': '466449a4c69a07a1997668d1b70d637abac76a16', 'gitTree': '4346aa6ecf750b5cceb4dcedf6c10e5c11279ad3', 'packageVersion': '26.1113.4757~nightly', 'schemaVersion': 1, 'sourceProvenance': 'git', 'version': '26.1113.4757-nightly'}
