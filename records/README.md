@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-15-failed-uploads-unknown-outcome](2026-11-15-failed-uploads-unknown-outcome/README.md) | — | PR 1541: failed uploads with unknown outcomes — KDE acceptance |
 | [2026-11-14-failed-uploads-unknown-outcome](2026-11-14-failed-uploads-unknown-outcome/README.md) | #1539 | Failed uploads lists unknown-outcome uploads (#1539) |
 | [2026-11-14-tray-action-bar-acceptance](2026-11-14-tray-action-bar-acceptance/README.md) | — | PR 1532 tray and action bar acceptance — incomplete |
 | [2026-11-14-tray-action-bar-layout-1532](2026-11-14-tray-action-bar-layout-1532/README.md) | #1532 | Tray menu and action bar layout (#1532): catalog pictures |
