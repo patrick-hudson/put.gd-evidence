@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-16-scroll-acceptance-wiring-1548](2026-11-16-scroll-acceptance-wiring-1548/README.md) | #1548 | Scrolling capture: the acceptance findings in the capture's wiring (PR #1548) |
 | [2026-11-15-scroll-follow-acceptance](2026-11-15-scroll-follow-acceptance/README.md) | — | Scroll-follow acceptance — PR1536, 2026-11-15 |
 | [2026-11-15-failed-uploads-unknown-outcome](2026-11-15-failed-uploads-unknown-outcome/README.md) | — | PR 1541: failed uploads with unknown outcomes — KDE acceptance |
 | [2026-11-14-failed-uploads-unknown-outcome](2026-11-14-failed-uploads-unknown-outcome/README.md) | #1539 | Failed uploads lists unknown-outcome uploads (#1539) |
