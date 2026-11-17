@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/sfr2/history-notice.py", line 12, in <module>
+    r=find_operation(A,c['id']);(P/'history-note.json').write_text(json.dumps({'run':d.name,'inspect':A.rpc('scroll.inspect',{'id':c['id']}),'historyRecord':r},indent=1))
+                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/patrick/work/sfr2/accept.py", line 22, in rpc
+    if not o.get('ok'):raise RuntimeError(o)
+                       ^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: {'error': {'code': 'scroll_not_found', 'details': {}, 'message': 'No scrolling capture has this ID'}, 'ok': False, 'requestId': '51d60077-c1b5-4354-88c8-aebd4ab763b9', 'result': {}, 'schemaVersion': 1}

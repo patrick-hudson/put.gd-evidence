@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "/home/patrick/work/sfr2/cutouts.py", line 41, in <module>
+    if 'github'in d.name and(d/'band-details.json').exists():scan(d)
+                                                             ^^^^^^^
+  File "/home/patrick/work/sfr2/cutouts.py", line 39, in scan
+    (P/'prior-cutouts'/'candidates.json'if prior else d/'cutout-candidates.json').write_text(json.dumps(boxes,indent=1));print(d.name,boxes,flush=True)
+                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 430, in _iterencode
+    yield from _iterencode_list(o, _current_indent_level)
+  File "/usr/lib/python3.12/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type int64 is not JSON serializable

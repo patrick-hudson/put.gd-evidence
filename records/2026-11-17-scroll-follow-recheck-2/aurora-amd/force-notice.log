@@ -1,0 +1,16 @@
+{"rect": [0, 85, 1920, 947], "solid": 0.9998922034494896, "inner": [1920, 949], "dpr": 1}
+{"name": "firefox-wiki-user-D-forced", "end": "done", "height": 24092, "doc": 24094, "placed": 136, "skipped": 0, "by": "user", "seconds": 16.52, "failed": null}
+stopped 2897301 still there
+Traceback (most recent call last):
+  File "/var/home/patrick/work/sfr2/force-notice.py", line 25, in <module>
+    finally:L.browser_stop();wheel('q');mouse.wait(5)
+                                        ~~~~~~~~~~^^^
+  File "/usr/lib64/python3.15/subprocess.py", line 1445, in wait
+    return self._wait(timeout=timeout)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.15/subprocess.py", line 2310, in _wait
+    if self._wait_pidfd(timeout) or self._wait_kqueue(timeout):
+       ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib64/python3.15/subprocess.py", line 2249, in _wait_pidfd
+    raise TimeoutExpired(self.args, timeout)
+subprocess.TimeoutExpired: Command '['sudo', '-n', 'python3', '/home/patrick/work/sfr2/umouse.py']' timed out after 5 seconds
