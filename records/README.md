@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-17-scroll-follow-recheck-2](2026-11-17-scroll-follow-recheck-2/README.md) | #2 | Scrolling capture final re-check — 2026-11-17 (round 2) |
 | [2026-11-17-scroll-follow-recheck](2026-11-17-scroll-follow-recheck/README.md) | — | Scrolling capture re-check — 2026-11-17 |
 | [2026-11-16-scroll-acceptance-wiring-1548](2026-11-16-scroll-acceptance-wiring-1548/README.md) | #1548 | Scrolling capture: the acceptance findings in the capture's wiring (PR #1548) |
 | [2026-11-15-scroll-follow-acceptance](2026-11-15-scroll-follow-acceptance/README.md) | — | Scroll-follow acceptance — PR1536, 2026-11-15 |
