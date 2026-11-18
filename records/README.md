@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-18-history-preview-fix-after](2026-11-18-history-preview-fix-after/README.md) | — | Expanded history preview with the fix, under an empty work area |
 | [2026-11-18-history-preview-empty-workarea](2026-11-18-history-preview-empty-workarea/README.md) | — | Expanded history preview shrinks to a 150x145 box when the screen reports no work area |
 | [2026-11-18-history-final-write-retry](2026-11-18-history-final-write-retry/README.md) | #1579 | An upload whose final History write is refused stays active until it lands (#1579) |
 | [2026-11-18-s3-worker-start-advice](2026-11-18-s3-worker-start-advice/README.md) | — | S3 worker start failure: the uploader helper's advice |
