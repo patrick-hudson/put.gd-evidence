@@ -1,0 +1,21 @@
+contracts	Release, packaging and CI tool contracts	2026-11-18T10:45:26.8713917Z FAIL: test_repository_tests_use_the_scaled_helpers (__main__.WaitLint.test_repository_tests_use_the_scaled_helpers)
+contracts	Release, packaging and CI tool contracts	2026-11-18T10:45:26.8714968Z ----------------------------------------------------------------------
+contracts	Release, packaging and CI tool contracts	2026-11-18T10:45:26.8715586Z Traceback (most recent call last):
+contracts	Release, packaging and CI tool contracts	2026-11-18T10:45:26.8716225Z   File "/home/runner/work/put.gd-desktop/put.gd-desktop/tests/ci/test_flake_tools.py", line 131, in test_repository_tests_use_the_scaled_helpers
+contracts	Release, packaging and CI tool contracts	2026-11-18T10:45:26.8717488Z     self.assertEqual(problems, [], '\n'.join(problems))
+contracts	Release, packaging and CI tool contracts	2026-11-18T10:45:26.8718102Z AssertionError: Lists differ: ['tests/gui/test_review_window_actions.cpp[294 chars]ome'] != []
+contracts	Release, packaging and CI tool contracts	2026-11-18T10:45:26.8718503Z 
+contracts	Release, packaging and CI tool contracts	2026-11-18T10:45:26.8718631Z First list contains 2 additional elements.
+contracts	Release, packaging and CI tool contracts	2026-11-18T10:45:26.8718936Z First extra element 0:
+contracts	Release, packaging and CI tool contracts	2026-11-18T10:45:26.8724094Z 'tests/gui/test_review_window_actions.cpp: 3 qwait at line 625, 652, 955: use putgd::test::settle(ms) for fixed time, or a PUTGD_TRY/STEADY macro to wait for an outcome'
+contracts	Release, packaging and CI tool contracts	2026-11-18T10:45:26.8724716Z 
+contracts	Release, packaging and CI tool contracts	2026-11-18T10:45:26.8724805Z + []
+contracts	Release, packaging and CI tool contracts	2026-11-18T10:45:26.8725143Z - ['tests/gui/test_review_window_actions.cpp: 3 qwait at line 625, 652, 955: use '
+contracts	Release, packaging and CI tool contracts	2026-11-18T10:45:26.8725720Z -  'putgd::test::settle(ms) for fixed time, or a PUTGD_TRY/STEADY macro to wait '
+contracts	Release, packaging and CI tool contracts	2026-11-18T10:45:26.8726117Z -  'for an outcome',
+contracts	Release, packaging and CI tool contracts	2026-11-18T10:45:26.8726481Z -  'tests/integration/test_recording_service.cpp: 2 qwait at line 400, 416: use '
+contracts	Release, packaging and CI tool contracts	2026-11-18T10:45:26.8727037Z -  'putgd::test::settle(ms) for fixed time, or a PUTGD_TRY/STEADY macro to wait '
+contracts	Release, packaging and CI tool contracts	2026-11-18T10:45:26.8728264Z -  'for an outcome'] : tests/gui/test_review_window_actions.cpp: 3 qwait at line 625, 652, 955: use putgd::test::settle(ms) for fixed time, or a PUTGD_TRY/STEADY macro to wait for an outcome
+contracts	Release, packaging and CI tool contracts	2026-11-18T10:45:26.8729412Z tests/integration/test_recording_service.cpp: 2 qwait at line 400, 416: use putgd::test::settle(ms) for fixed time, or a PUTGD_TRY/STEADY macro to wait for an outcome
+contracts	Release, packaging and CI tool contracts	2026-11-18T10:45:26.8730003Z 
+contracts	Release, packaging and CI tool contracts	2026-11-18T10:45:26.8730163Z ----------------------------------------------------------------------
