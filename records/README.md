@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-18-region-refuse-unpermitted](2026-11-18-region-refuse-unpermitted/README.md) | — | Region capture refuses at once when KWin capture is not permitted |
 | [2026-11-17-scroll-follow-recheck-2](2026-11-17-scroll-follow-recheck-2/README.md) | #2 | Scrolling capture final re-check — 2026-11-17 (round 2) |
 | [2026-11-17-scroll-follow-recheck](2026-11-17-scroll-follow-recheck/README.md) | — | Scrolling capture re-check — 2026-11-17 |
 | [2026-11-16-scroll-acceptance-wiring-1548](2026-11-16-scroll-acceptance-wiring-1548/README.md) | #1548 | Scrolling capture: the acceptance findings in the capture's wiring (PR #1548) |
