@@ -1,0 +1,9 @@
+Row 10 on f44 (r10-agent-errors.json). redactText {"categories":["list"],"terms":["build-host-7"]} over a text-editor window with "build-host-7" and "Build-Host-7":
+counts {"list": 2}, 2 marks (r10-agent-verify.json: both fully black). Bad inputs, all edit_command_invalid, none repeats the text:
+  patterns ["ok-\\d+","(ZQXJsecretword"] -> "redactText patterns entry 1: This pattern does not compile: missing closing parenthesis at offset 15"
+  patterns ["(ZQXJsecretword"]            -> "... patterns entry 0: This pattern does not compile: missing closing parenthesis at offset 15"
+  a 501-character pattern                 -> "... patterns entry 0: A pattern is longer than 500 characters"
+  patterns ["a*"]                          -> "... patterns entry 0: This pattern matches empty text"
+  terms ["ab<newline>cd"]                  -> "redactText terms entry 0: An entry has a line break"
+  8 categories / "bogus"                   -> "redactText takes categories: 1 to 7 of email, phone, ip, card, key, name and list"
+Result: pass.

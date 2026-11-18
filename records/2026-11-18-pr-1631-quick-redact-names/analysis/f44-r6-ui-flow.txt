@@ -1,0 +1,15 @@
+Row 6 on f44 (GNOME Wayland), real input over the wall VNC (tools/lab/rfb.py), state read with editor.inspect.
+Capture: desktop with the terminal on top (r6-suggestions-orig.png). Quick redact > "My username and name" in the editor's menu.
+
+1  Quick redact menu -> My username and name: panel text "Added 3 suggested redactions".
+   shapes: 1 [839,279,242,47] suggested=name; 2 [588,339,249,24] suggested=name; 3 [588,459,285,24] suggested=name
+2  Select tool (V), click mark 3: panel shows "Suggested: My username and name" (ui-frames/wall-f44-14-sel.png).
+   editor.inspect: selectedShapeId=3, shapes[2].suggested="name"
+3  Delete key: shapes 1,2 left (ui-frames/wall-f44-15-del.png).
+4  Redact tool > Quick redact > My username and name again: panel "No matches found. Text can still be there."
+   editor.inspect: still shapes 1,2 only; mark 3 NOT added back (ui-frames/wall-f44-16-rerun.png).
+5  Ctrl+Z: shapes 1,2,3 again, mark 3 suggested=name, canRedo=true (ui-frames/wall-f44-17-undo.png).
+6  Redact tool, drag a hand-drawn mark: shape 4 [595,382,113,19] suggested=null.
+7  Quick redact menu > Remove suggestions (menu: ui-frames/wall-f44-18-menu2.png): panel "Removed 3 suggested redactions";
+   editor.inspect: only shape 4 (hand-drawn) remains (ui-frames/wall-f44-19-removed.png).
+Result: pass.

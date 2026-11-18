@@ -1,0 +1,8 @@
+Row 8 on f44, real input in Settings > Capture > Text recognition (config.json read after each step).
+1  Typed "(" in "Patterns (regular expressions)": error in place "Pattern 1: This pattern does not compile: missing closing parenthesis at offset 1."
+   (also in the footer; ui-frames/wall-f44-25-bad.png). config.json still held the earlier patterns ["#\\d{4}","ZQX-\\d{3}"]: nothing saved.
+2  Replaced it with "ZQX-\d{3}" and "ticket-\d+": saved. config.json preferences.quickRedactPatterns = ["ZQX-\\d{3}","ticket-\\d+"],
+   quickRedactTerms = ["Patrick Hudson","build-host-7","Zebrafish Quartz"] (ui-frames/wall-f44-26-fixed.png).
+3  Cleared both boxes (Ctrl+A, Delete): config.json preferences has neither key (ui-frames/wall-f44-27-cleared.png, placeholders back).
+Note: my first click for step 1 landed in the words box (page layout moved after a scroll) and saved the literal word "(" as a valid entry; restored by retyping the three words.
+Result: pass.

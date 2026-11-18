@@ -1,0 +1,11 @@
+Row 6 via CLI on k72 (editor.apply update/remove/undo/redactText, editor.inspect)
+
+quick redact: ok=True counts={'name': 7} created=[1, 2, 3, 4, 5, 6, 7] shapes=[(1, 'name'), (2, 'name'), (3, 'name'), (4, 'name'), (5, 'name'), (6, 'name'), (7, 'name')]
+move mark 1 by 4px: ok=True counts=None created=[] shapes=[(1, 'name'), (2, 'name'), (3, 'name'), (4, 'name'), (5, 'name'), (6, 'name'), (7, 'name')]
+delete mark 7: ok=True counts=None created=[] shapes=[(1, 'name'), (2, 'name'), (3, 'name'), (4, 'name'), (5, 'name'), (6, 'name')]
+quick redact again: ok=True counts={'name': 0} created=[] shapes=[(1, 'name'), (2, 'name'), (3, 'name'), (4, 'name'), (5, 'name'), (6, 'name')]
+undo: ok=True counts=None created=[] shapes=[(1, 'name'), (2, 'name'), (3, 'name'), (4, 'name'), (5, 'name'), (6, 'name'), (7, 'name')]
+add hand mark: ok=True counts=None created=[8] shapes=[(1, 'name'), (2, 'name'), (3, 'name'), (4, 'name'), (5, 'name'), (6, 'name'), (7, 'name'), (8, None)]
+remove each suggested mark by id: ok=True counts=None created=None shapes=[(8, None)]
+
+{"suggested_tag_on_marks": true, "moved_mark_keeps_tag": ["name"], "deleted_mark_not_readded": true, "undo_brings_it_back": true, "hand_mark_kept": true}

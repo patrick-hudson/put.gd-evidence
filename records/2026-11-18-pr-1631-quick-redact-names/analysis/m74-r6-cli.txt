@@ -1,0 +1,11 @@
+Row 6 via CLI on m74 (editor.apply update/remove/undo/redactText, editor.inspect)
+
+quick redact: ok=True counts={'name': 9} created=[1, 2, 3, 4, 5, 6, 7, 8, 9] shapes=[(1, 'name'), (2, 'name'), (3, 'name'), (4, 'name'), (5, 'name'), (6, 'name'), (7, 'name'), (8, 'name'), (9, 'name')]
+move mark 1 by 4px: ok=True counts=None created=[] shapes=[(1, 'name'), (2, 'name'), (3, 'name'), (4, 'name'), (5, 'name'), (6, 'name'), (7, 'name'), (8, 'name'), (9, 'name')]
+delete mark 9: ok=True counts=None created=[] shapes=[(1, 'name'), (2, 'name'), (3, 'name'), (4, 'name'), (5, 'name'), (6, 'name'), (7, 'name'), (8, 'name')]
+quick redact again: ok=True counts={'name': 1} created=[10] shapes=[(1, 'name'), (2, 'name'), (3, 'name'), (4, 'name'), (5, 'name'), (6, 'name'), (7, 'name'), (8, 'name'), (10, 'name')]
+undo: ok=True counts=None created=[] shapes=[(1, 'name'), (2, 'name'), (3, 'name'), (4, 'name'), (5, 'name'), (6, 'name'), (7, 'name'), (8, 'name')]
+add hand mark: ok=True counts=None created=[11] shapes=[(1, 'name'), (2, 'name'), (3, 'name'), (4, 'name'), (5, 'name'), (6, 'name'), (7, 'name'), (8, 'name'), (11, None)]
+remove each suggested mark by id: ok=True counts=None created=None shapes=[(11, None)]
+
+{"suggested_tag_on_marks": true, "moved_mark_keeps_tag": ["name"], "deleted_mark_not_readded": false, "undo_brings_it_back": false, "hand_mark_kept": true}

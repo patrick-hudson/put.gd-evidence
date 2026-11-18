@@ -1,0 +1,7 @@
+Row 7 on f44: saved patterns "(a+)+$" and "#\d{4}" (settings.patch), captured a gnome-text-editor window with a 44-character a...ab line and "Issue #4321 is open."
+redactText ["list"] answered in 0.81 s. While it ran, editor.inspect polled every 0.1 s: 5 polls, slowest 0.114 s (editor stayed responsive).
+Result counts {"list": 1}: one mark over "#4321" (suggested=list). The editor panel says:
+  "Added 1 suggested redaction / Pattern 1 took too long and was skipped."  (ui-frames/wall-f44-21.png)
+A second redactText over the same editor returned "skippedPatterns": [0] to the agent.
+Export check: r7-runaway-verify.json (1 mark, fully black, nothing else changed).
+Result: pass.
