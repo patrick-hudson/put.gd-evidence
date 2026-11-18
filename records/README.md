@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-18-recording-review-acceptance](2026-11-18-recording-review-acceptance/README.md) | — | Recording review acceptance, first pass |
 | [2026-11-18-history-unsaved-notice](2026-11-18-history-unsaved-notice/README.md) | #1579 | History couldn't save a result: one notice, Retry refused until a restart (#1579) |
 | [2026-11-18-recording-review-catalog](2026-11-18-recording-review-catalog/README.md) | #1613 | Recording review redesign: UI catalog renders of the built window (#1613) |
 | [2026-11-18-pr-1631-quick-redact-names](2026-11-18-pr-1631-quick-redact-names/README.md) | #1618, #1631 | PR #1631 (issue #1618) Quick redact names and list: real-capture acceptance |
