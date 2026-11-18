@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-17-recording-review-redesign](2026-11-17-recording-review-redesign/README.md) | — | Recording review redesign: council design, mock pictures and filmstrip measurement |
 | [2026-11-18-s3-overwrite-protection](2026-11-18-s3-overwrite-protection/README.md) | #1583, #1589, #1601 | S3 services that ignore overwrite protection (#1583, #1589, #1601) |
 | [2026-11-18-region-refuse-unpermitted](2026-11-18-region-refuse-unpermitted/README.md) | — | Region capture refuses at once when KWin capture is not permitted |
 | [2026-11-17-scroll-follow-recheck-2](2026-11-17-scroll-follow-recheck-2/README.md) | #2 | Scrolling capture final re-check — 2026-11-17 (round 2) |
