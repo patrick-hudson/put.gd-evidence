@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-18-history-final-write-retry](2026-11-18-history-final-write-retry/README.md) | #1579 | An upload whose final History write is refused stays active until it lands (#1579) |
 | [2026-11-18-s3-worker-start-advice](2026-11-18-s3-worker-start-advice/README.md) | — | S3 worker start failure: the uploader helper's advice |
 | [2026-11-18-s3-worker-start](2026-11-18-s3-worker-start/README.md) | — | S3 worker that cannot start says why and to try again |
 | [2026-11-18-history-journal-errors](2026-11-18-history-journal-errors/README.md) | #1576, #1579 | History when the journal cannot be read or written (#1576, #1579) |
