@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-18-review-recipes-1659-round-2](2026-11-18-review-recipes-1659-round-2/README.md) | #2 | Recording review recipes, Sol round 2 |
 | [2026-11-18-review-recipes-1659-round-1](2026-11-18-review-recipes-1659-round-1/README.md) | #1 | Recording review recipes, Sol round 1 |
 | [2026-11-18-pr-1631-coderabbit-recheck](2026-11-18-pr-1631-coderabbit-recheck/README.md) | #1618, #1631 | PR #1631 (issue #1618) CodeRabbit-fix recheck at 1f883eeaf |
 | [2026-11-18-review-recipes-1651](2026-11-18-review-recipes-1651/README.md) | #1651 | Recording review recipes on Cinnamon and Plasma |
