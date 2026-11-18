@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-18-history-preview-fix-after-round2](2026-11-18-history-preview-fix-after-round2/README.md) | #1626 | Expanded history preview, round 2 of PR #1626: work area, then screen, then a fixed default |
 | [2026-11-18-history-preview-fix-after](2026-11-18-history-preview-fix-after/README.md) | — | Expanded history preview with the fix, under an empty work area |
 | [2026-11-18-history-preview-empty-workarea](2026-11-18-history-preview-empty-workarea/README.md) | — | Expanded history preview shrinks to a 150x145 box when the screen reports no work area |
 | [2026-11-18-history-final-write-retry](2026-11-18-history-final-write-retry/README.md) | #1579 | An upload whose final History write is refused stays active until it lands (#1579) |
