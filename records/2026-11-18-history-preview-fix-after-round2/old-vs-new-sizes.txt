@@ -1,0 +1,10 @@
+Expanded history preview sizes (picture / dialog), the formula of a190ece96 against src/ui/PreviewSize.h (margin 32, overhead 113, limit 900x640)
+normal 1920x1040, 2560x1440 image                      | a190ece96: picture 900x506 dialog 932x619 | new: picture 900x506 dialog 932x619
+empty work area, 2560x1440 image                       | a190ece96: picture 900x506 dialog 932x619 | new: picture 900x506 dialog 932x619
+1920x48 strip, 1200x3000 portrait                      | a190ece96: picture 0x1   dialog 32x114   | new: picture 256x640 dialog 288x753
+800x600 screen with 800x48 strip, 4000x1000 image      | a190ece96: picture 4x1   dialog 36x114   | new: picture 720x180 dialog 752x293
+800x600 screen, empty work area, 4000x1000 image       | a190ece96: picture 900x225 dialog 932x338 | new: picture 720x180 dialog 752x293
+800x560 work area, 4000x1000 image                     | a190ece96: picture 720x180 dialog 752x293 | new: picture 720x180 dialog 752x293
+
+test_preview_size (QtTest 6.4.2, m74): new rule 9 passed 0 failed; the old rule (work area unless empty, else 1000x700) in the same header: 5 passed 4 failed
+(empty work area, strip, small screen, empty work area on a small screen).
