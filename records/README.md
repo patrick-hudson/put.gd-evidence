@@ -9,6 +9,8 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-18-recording-review-catalog](2026-11-18-recording-review-catalog/README.md) | #1613 | Recording review redesign: UI catalog renders of the built window (#1613) |
+| [2026-11-18-pr-1631-quick-redact-names](2026-11-18-pr-1631-quick-redact-names/README.md) | #1618, #1631 | PR #1631 (issue #1618) Quick redact names and list: real-capture acceptance |
 | [2026-11-18-history-in-process-recovery](2026-11-18-history-in-process-recovery/README.md) | #1579 | An upload History could not record is recovered in place (#1579) |
 | [2026-11-18-history-preview-fix-after-round2](2026-11-18-history-preview-fix-after-round2/README.md) | #1626 | Expanded history preview, round 2 of PR #1626: work area, then screen, then a fixed default |
 | [2026-11-18-history-preview-fix-after](2026-11-18-history-preview-fix-after/README.md) | — | Expanded history preview with the fix, under an empty work area |
