@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-18-recording-review-acceptance-final](2026-11-18-recording-review-acceptance-final/README.md) | — | Recording review final desktop acceptance |
 | [2026-11-18-pr-1631-final-recheck](2026-11-18-pr-1631-final-recheck/README.md) | #1618, #1631 | PR #1631 (issue #1618) final acceptance recheck at head 31de163ea |
 | [2026-11-18-final-recheck](2026-11-18-final-recheck/README.md) | #1618, #1631 | PR #1631 (issue #1618) final acceptance recheck at head 31de163ea |
 | [2026-11-18-recording-review-acceptance](2026-11-18-recording-review-acceptance/README.md) | — | Recording review acceptance, first pass |
