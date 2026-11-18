@@ -1,0 +1,7 @@
+two words -> (True, '')
+ config: ['projectalpha', 'ProjectAlpha']
+500 spaces + x (501 chars) -> (False, 'Pattern 1: A pattern is longer than 500 characters.') | config changed: False
+499 spaces + x (500 chars) -> (True, '') | config changed: True
+x*500 -> (True, '') | config changed: True
+x*501 -> (False, 'Pattern 1: A pattern is longer than 500 characters.') | config changed: False
+ final patterns lens: [500]
