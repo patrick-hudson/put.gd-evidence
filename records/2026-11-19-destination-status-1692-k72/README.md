@@ -7,7 +7,7 @@ All eight checks passed on the physical k72 desktop on 2026-11-19. The machine r
 - PR head tested was `a86fbe882f94f8eb271b4b2b8b9e3a0f8824e6d5` from [CI run 44477653690](https://github.com/patrick-hudson/put.gd-desktop/actions/runs/44477653690) for [PR #1695](https://github.com/patrick-hudson/put.gd-desktop/pull/1695) and [issue #1692](https://github.com/patrick-hudson/put.gd-desktop/issues/1692).
 - The `release-native-ubuntu26.04` artifact contained package `26.1119.5622~dev+g860a6b5b9458`. The DEB SHA-256 was `63f4b1ad8e38b27bd8215f59b8a12788418268d395440b93c8f30ae5631f7b9b`.
 - Diagnostics before and after restart reported CI build commit `860a6b5b9458746990780bc8d5fef08b51c5675c` and Git tree `d9a194de6ac3243306fd4f2bb8fdf6cc4f29413b`. The tree exactly matched the requested PR head. [Running build diagnostics](build-diagnostics.json)
-- The resident changed from PID 2489825 at 06:55:00 UTC to PID 2492330 at 06:57:06 UTC. The resident SHA-256 was `7ddca2c192973f9d64e1696bdd6d6004d1c7c238851e194439923b7c8837d76f`. Both launches used the extracted native package and a private XDG profile. The resolved app socket was 46 UTF-8 bytes and the native Wayland socket path was 24 bytes.
+- The resident changed from PID 2489825 at 07:55:00 UTC to PID 2492330 at 07:57:06 UTC. The resident SHA-256 was `7ddca2c192973f9d64e1696bdd6d6004d1c7c238851e194439923b7c8837d76f`. Both launches used the extracted native package and a private XDG profile. The resolved app socket was 46 UTF-8 bytes and the native Wayland socket path was 24 bytes.
 
 ## Results
 
