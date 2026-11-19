@@ -42,3 +42,17 @@ History deletion ended `unknown`. With #1686/#1697 as they stand, R2 test journa
 tests; none held a signed query). With `cloudflare-r2` taking the S3 path in `linkedProvider` and
 `destinationTestSettled`, all three were settled and removed. No output file of the live runs holds a key, the
 account id, the bucket name or the r2.dev host (checked by count).
+
+## Round 1 after the Sol review (`e080f2b1b`)
+
+| Frame | What it shows |
+| --- | --- |
+| `6-s3-destination-on-r2-move-offered.png` (retaken) | Move to Cloudflare R2 now sits at the left of its row, like the other row actions. |
+| `8-other-service-to-amazon-s3.png` | Other S3-compatible (`https://minio.example.test`, `us-west-1`) → Amazon S3: saved `us-west-1` and `https://s3.us-west-1.amazonaws.com`, and the picker stays on Amazon S3. |
+| `9-back-to-other-s3-compatible.png` | Back to Other S3-compatible: the MinIO endpoint and region are restored and saved. |
+
+Live again on the scoped token, built from this head with nightly (#1686) and #1682's driver commits merged in a
+local test tree: Test upload and link with expiring links and with the r2.dev Link domain passed; public links with
+no Link domain gave `public_url_unreachable`; uploads in both modes loaded with the right bytes; Copy link renewed a
+backdated expiry; History deletion ended `removed` for both; 0 objects left. Three test journals were kept (#1697 no
+longer removes them) and none held a signed query.
