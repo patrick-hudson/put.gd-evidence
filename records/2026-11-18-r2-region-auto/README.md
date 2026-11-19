@@ -20,6 +20,9 @@ rows that changed. The R2 endpoint uses a synthetic account `0123456789abcdef012
 | `5-before-saved-r2-wnam-opened.png` / `5-after-…` | A saved R2 destination with a jurisdiction endpoint (`….eu.r2.cloudflarestorage.com`) and a dashboard location as its region. Before: an AWS-style Region field shows the location. After (round 2): the note shows, and the saved region is left unchanged. Opening Settings writes nothing; requests to an R2 host sign with `auto` (#1688). |
 | `6-after-region-tab-existing-destination-empty-bucket.png` | Bucket emptied on a saved destination, then Tab into and out of Region. The problem shows only under Bucket; nothing under Region. |
 | `7-before-region-tab-new-destination.png` / `7-after-…` | A new destination with no bucket yet; Tab into and out of Region. Before: the generic "Invalid S3 settings; use a supported endpoint…" appears under Region. After: the problem shows only under Bucket. |
+| `8-after-other-service-with-region-auto.png` | Round 3 (`3a31096b4`): an Other S3-compatible destination saved with region `auto` says at Region that auto is Cloudflare R2's region, instead of keeping it quietly. |
+| `9-after-refused-endpoint-error-under-endpoint.png` | Round 3 (`74dde223b`): after a refused one-letter Bucket, a refused Other endpoint (with a query string) shows its error under Endpoint, not under Bucket. Nothing was saved. |
+| `10-after-refused-r2-endpoint-nothing-saved.png` | Round 3 (`74dde223b`): AWS destination, Cloudflare R2 chosen, an R2 endpoint with a query string entered and refused. Region and Endpoint are retried as one unit, so the saved destination stays `us-east-1` + `https://s3.us-east-1.amazonaws.com`. Before, `auto` was saved against the AWS endpoint. |
 
 Saved settings read back with `settings.get` (round 2 build, synthetic destinations):
 
