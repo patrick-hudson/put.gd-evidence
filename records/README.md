@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-19-s3-region-endpoint-checks-round5](2026-11-19-s3-region-endpoint-checks-round5/README.md) | #1675, #1676 | S3 Region and Endpoint checks, review round 5 (#1675, #1676) |
 | [2026-11-19-cloudflare-r2-destination](2026-11-19-cloudflare-r2-destination/README.md) | #1678, #1679, #1691 | Cloudflare R2 as its own destination type (#1678, #1679, #1691) |
 | [2026-11-19-s3-region-endpoint-checks-round4](2026-11-19-s3-region-endpoint-checks-round4/README.md) | #1675, #1676 | S3 Region and Endpoint checks, review rounds 3 and 4 (#1675, #1676) |
 | [2026-11-19-destination-tested-status-1692](2026-11-19-destination-tested-status-1692/README.md) | #1692 | Destination "Connected" status kept after closing Settings and renaming (#1692) |
