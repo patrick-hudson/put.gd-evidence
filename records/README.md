@@ -9,6 +9,8 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-19-s3-region-endpoint-checks-round4](2026-11-19-s3-region-endpoint-checks-round4/README.md) | #1675, #1676 | S3 Region and Endpoint checks, review rounds 3 and 4 (#1675, #1676) |
+| [2026-11-19-destination-tested-status-1692](2026-11-19-destination-tested-status-1692/README.md) | #1692 | Destination "Connected" status kept after closing Settings and renaming (#1692) |
 | [2026-11-19-tooltip-wrap](2026-11-19-tooltip-wrap/README.md) | — | Long tooltips wrap to a reading width |
 | [2026-11-19-s3-region-endpoint-checks-round2](2026-11-19-s3-region-endpoint-checks-round2/README.md) | #1675, #1676 | S3 Region and Endpoint checks, review round 2 (#1675, #1676) |
 | [2026-11-19-s3-region-endpoint-checks-round1](2026-11-19-s3-region-endpoint-checks-round1/README.md) | #1675, #1676 | S3 Region and Endpoint checks, review round 1 (#1675, #1676) |
