@@ -9,6 +9,8 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-18-r2-region-auto](2026-11-18-r2-region-auto/README.md) | #1678 | Cloudflare R2 uses the region auto in Settings (#1678) |
+| [2026-11-18-r2-link-domain-warning](2026-11-18-r2-link-domain-warning/README.md) | #1679 | Settings warns about Cloudflare R2 public links with no Link domain (#1679) |
 | [2026-11-19-scroll-pinned-columns](2026-11-19-scroll-pinned-columns/README.md) | #1538 | Scroll capture: pinned side columns drawn once (#1538) |
 | [2026-11-18-review-recipes-1659-round-2](2026-11-18-review-recipes-1659-round-2/README.md) | #2 | Recording review recipes, Sol round 2 |
 | [2026-11-18-review-recipes-1659-round-1](2026-11-18-review-recipes-1659-round-1/README.md) | #1 | Recording review recipes, Sol round 1 |
