@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-19-settings-save-queue](2026-11-19-settings-save-queue/README.md) | #1701, #1704 | Settings save queue (#1704, #1701) |
 | [2026-11-19-destination-status-1692-k72](2026-11-19-destination-status-1692-k72/README.md) | — | Destination connection status on k72 |
 | [2026-11-19-destination-status-1692-aurora](2026-11-19-destination-status-1692-aurora/README.md) | — | Destination status acceptance on Aurora |
 | [2026-11-19-s3-region-endpoint-checks-council1](2026-11-19-s3-region-endpoint-checks-council1/README.md) | #1675, #1676 | S3 Region and Endpoint checks, council round 1 (#1675, #1676) |
