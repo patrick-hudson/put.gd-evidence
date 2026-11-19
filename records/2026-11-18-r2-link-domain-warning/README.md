@@ -21,7 +21,11 @@ Xvfb's framebuffer to the put.gd window. Red boxes mark the Link domain row and 
 Saved settings after each step (from `settings.get`): Link domain set → `linkMode public`, `publicUrlBase` set;
 cleared → `publicUrlBase null`; expiring links → `linkMode presigned`. The region was `auto` throughout.
 
-**Why the warning is needed** (live, build `94240e1e3`, see record `2026-11-18-r2-region-auto`): Test upload and link
-on R2 with public links and an empty Link domain fails with `public_url_unreachable`, while the same destination
-with expiring links passes. The lab bucket has no r2.dev address in the lab notes, so the public-link pass with an
-r2.dev Link domain was not run, and none was enabled.
+**Why the warning is needed** (live on the lab R2 bucket, region `auto`; see record `2026-11-18-r2-region-auto`):
+Test upload and link with public links and an empty Link domain fails with `public_url_unreachable`. The same
+destination with the bucket's r2.dev address as Link domain (written `https://<r2.dev>`) passes, and so do
+expiring links. Checked on nightly `faf34a8c6`, on round 2 of #1684, and on #1688 `5e7906655` + #1684
+`df35b37e1`. Each run left 0 objects under its prefix.
+
+**Round 2.** #1685 is now `403818861`, rebased onto #1684 `df35b37e1` (which sits on #1688). Its own change is
+unchanged, so the frames above still show it.
