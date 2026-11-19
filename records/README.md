@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-19-s3-region-endpoint-checks](2026-11-19-s3-region-endpoint-checks/README.md) | #1675, #1676 | S3 Region and Endpoint checks (#1675, #1676) |
 | [2026-11-18-r2-region-auto](2026-11-18-r2-region-auto/README.md) | #1678 | Cloudflare R2 uses the region auto in Settings (#1678) |
 | [2026-11-18-r2-link-domain-warning](2026-11-18-r2-link-domain-warning/README.md) | #1679 | Settings warns about Cloudflare R2 public links with no Link domain (#1679) |
 | [2026-11-19-scroll-pinned-columns](2026-11-19-scroll-pinned-columns/README.md) | #1538 | Scroll capture: pinned side columns drawn once (#1538) |
