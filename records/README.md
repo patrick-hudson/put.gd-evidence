@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-20-tray-menu-by-pixels](2026-11-20-tray-menu-by-pixels/README.md) | — | Nightly Tray menu cell by pixels: Cinnamon, Budgie and Omarchy green |
 | [2026-11-20-fedora-gnome-appindicator-tray](2026-11-20-fedora-gnome-appindicator-tray/README.md) | — | Fedora GNOME guest: AppIndicator tray set up, Tray menu cell green twice |
 | [2026-11-19-random-name-characters-1729](2026-11-19-random-name-characters-1729/README.md) | #1729 | Random names: UUID or random characters (#1729) |
 | [2026-11-20-history-details-unbroken-name](2026-11-20-history-details-unbroken-name/README.md) | #1722 | History details pane with a long unbroken file name (PR #1722) |
