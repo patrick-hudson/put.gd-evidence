@@ -11,4 +11,4 @@ Pictures for put.gd-desktop PR #1722, which keeps a file name with no break oppo
   profile through the nightly controller code. The name wraps inside the pane, the close button shows, and
   **Copy link** is whole. The cell and the whole k72 and aurora-amd rows passed (14 of 14).
 
-Frames are the surface driver's own frames from those receipts, cropped to nothing and annotated with boxes.
+Frames are the surface driver's own uncropped frames from those receipts, with a caption band and boxes added.
