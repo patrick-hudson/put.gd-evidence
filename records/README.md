@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-20-history-details-unbroken-name](2026-11-20-history-details-unbroken-name/README.md) | #1722 | History details pane with a long unbroken file name (PR #1722) |
 | [2026-11-19-issue-1721-update-status-row](2026-11-19-issue-1721-update-status-row/README.md) | #1721 | #1721: the update Status row grows back to fit its text after Check now |
 | [2026-11-19-settings-save-queue](2026-11-19-settings-save-queue/README.md) | #1701, #1704 | Settings save queue (#1704, #1701) |
 | [2026-11-19-destination-status-1692-k72](2026-11-19-destination-status-1692-k72/README.md) | — | Destination connection status on k72 |
