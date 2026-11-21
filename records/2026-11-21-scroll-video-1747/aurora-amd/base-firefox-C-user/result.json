@@ -1,0 +1,12 @@
+{
+  "name": "base-firefox-C-user",
+  "host": "aurora-amd",
+  "build": "base",
+  "browser": "firefox",
+  "row": "C",
+  "mode": "user",
+  "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position",
+  "trace": [],
+  "browserVersion": "Mozilla Firefox 160.0",
+  "error": "Traceback (most recent call last):\n  File \"/var/home/patrick/work/s1747/run.py\", line 358, in run\n    view = calibration(b,out)\n  File \"/var/home/patrick/work/s1747/run.py\", line 166, in calibration\n    b.js(\"document.documentElement.style.background='rgb(255,0,254)';document.body.style.margin='0';document.body.style.height='100vh';return 0;\")\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/home/patrick/work/s1747/tools/live7.py\", line 86, in js\n    v = self.cmd('WebDriver:ExecuteScript', {'script': script, 'args': [], 'newSandbox': True, 'sandbox': 'default', 'line': 0, 'filename': 'live7'})\n  File \"/var/home/patrick/work/s1747/tools/live7.py\", line 82, in cmd\n    raise RuntimeError(r[2])\nRuntimeError: {'error': 'unsupported operation', 'message': 'The command does not support browsing contexts in privileged scope', 'stacktrace': 'RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8\\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5\\nUnsupportedOperationError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:977:5\\ngetBrowsingContext@chrome://remote/content/marionette/driver.sys.mjs:1445:13\\n#execute@chrome://remote/content/marionette/driver.sys.mjs:4370:27\\nexecuteScript@chrome://remote/content/marionette/driver.sys.mjs:1051:25\\ndispatch@chrome://remote/content/marionette/server.sys.mjs:317:49\\nexecute@chrome://remote/content/marionette/server.sys.mjs:289:16\\nonPacket/<@chrome://remote/content/marionette/server.sys.mjs:262:20\\nonPacket@chrome://remote/content/marionette/server.sys.mjs:263:9\\n_onJSONObjectReady/<@chrome://remote/content/marionette/transport.sys.mjs:493:20\\n'}\n"
+}
