@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-20-tray-stages-real-upload](2026-11-20-tray-stages-real-upload/README.md) | — | Physical tray activity with live S3 uploads |
 | [2026-11-20-tray-activity-stages](2026-11-20-tray-activity-stages/README.md) | — | Tray icon activity stages (fix/tray-activity-stages) |
 | [2026-11-21-issue-1748-copy-text-emoji-desktops-round-2](2026-11-21-issue-1748-copy-text-emoji-desktops-round-2/README.md) | #2 | Copy text emoji desktop acceptance, round 2 |
 | [2026-11-20-issue-1748-copy-text-emoji-desktops](2026-11-20-issue-1748-copy-text-emoji-desktops/README.md) | #1751 | Desktop acceptance for Copy text emoji in PR #1751 |
