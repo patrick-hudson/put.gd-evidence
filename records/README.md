@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-21-scroll-white-boxes-1557](2026-11-21-scroll-white-boxes-1557/README.md) | #1557 | Scrolling capture: white boxes over page content (#1557), round 1 — 2026-11-21 |
 | [2026-11-21-custom-endpoint-help-fixed](2026-11-21-custom-endpoint-help-fixed/README.md) | #1793, #1794 | Use a custom endpoint help opens without blank space (#1793, PR #1794) |
 | [2026-11-21-custom-endpoint-help-spacing](2026-11-21-custom-endpoint-help-spacing/README.md) | — | Use a custom endpoint help leaves blank space around its text |
 | [2026-11-21-settings-help-placement](2026-11-21-settings-help-placement/README.md) | #1787, #1789 | Settings help opens under its own field (#1787, PR #1789) |
