@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-21-issue-1808-ocr-memory-budget](2026-11-21-issue-1808-ocr-memory-budget/README.md) | — | Issue 1808: text recognition memory budget raised to 320 MiB |
 | [2026-11-22-scroll-edge-line-1796](2026-11-22-scroll-edge-line-1796/README.md) | #1796 | Scrolling capture: the region's bottom-edge line stays out of the page (#1796) |
 | [2026-11-21-issue-1805-ocr-speed](2026-11-21-issue-1805-ocr-speed/README.md) | — | Issue 1805: OCR speed research raw timings |
 | [2026-11-21-scroll-lost-marks-1795](2026-11-21-scroll-lost-marks-1795/README.md) | #1795 | Scrolling capture: no rows marked as changing from a guessed place while lost (#1795) |
