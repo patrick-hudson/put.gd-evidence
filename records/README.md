@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-21-appimage-builtin-zsync-1766](2026-11-21-appimage-builtin-zsync-1766/README.md) | #1766 | AppImage updates with put.gd's own zsync client (#1766) |
 | [2026-11-21-deletion-checkpoint-way-out](2026-11-21-deletion-checkpoint-way-out/README.md) | #1763 | Remove from History only for a deletion that ended without removing the file (#1763) |
 | [2026-11-21-error-log-remove-from-history-1760](2026-11-21-error-log-remove-from-history-1760/README.md) | #1760 | Error log: Remove from History only for a removed destination (#1760) |
 | [2026-11-21-removed-destination-1759](2026-11-21-removed-destination-1759/README.md) | #1759, #1760 | Deleting files whose destination was removed (#1759, PR #1760) |
