@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-21-custom-endpoint-help-spacing](2026-11-21-custom-endpoint-help-spacing/README.md) | — | Use a custom endpoint help leaves blank space around its text |
 | [2026-11-21-settings-help-placement](2026-11-21-settings-help-placement/README.md) | #1787, #1789 | Settings help opens under its own field (#1787, PR #1789) |
 | [2026-11-21-s3-slow-upload-1758](2026-11-21-s3-slow-upload-1758/README.md) | #1758 | S3 24 MiB upload hang and publication_unknown (#1758) |
 | [2026-11-21-budgie-tray-row-click](2026-11-21-budgie-tray-row-click/README.md) | — | Budgie nightly: the Tray menu click landed above the Capture region row |
