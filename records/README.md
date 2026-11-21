@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-21-settings-error-log-1753](2026-11-21-settings-error-log-1753/README.md) | #1753, #1756 | Settings error log and History's deletion notice (#1753, PR #1756) |
 | [2026-11-21-tray-stages-real-upload-retest](2026-11-21-tray-stages-real-upload-retest/README.md) | — | Physical tray activity and live S3 re-test |
 | [2026-11-20-tray-stages-real-upload](2026-11-20-tray-stages-real-upload/README.md) | — | Physical tray activity with live S3 uploads |
 | [2026-11-20-tray-activity-stages](2026-11-20-tray-activity-stages/README.md) | — | Tray icon activity stages (fix/tray-activity-stages) |
