@@ -1,0 +1,16 @@
+ docs/desktops/budgie.md                            |  18 +-
+ docs/desktops/hyprland.md                          |   7 +-
+ docs/lab/omarchy-vm.md                             |  14 +-
+ docs/lab/remote-builders.md                        |  74 ++++-
+ tests/desktop/test_surface_compositor_witnesses.py | 155 ++++++++++-
+ tests/desktop/test_surface_nightly_desktops.py     |  28 ++
+ tests/desktop/test_surface_outcomes_live.py        |  68 ++++-
+ tools/lab/nightly_desktop_guest.py                 | 147 +++++++++-
+ tools/lab/surface_driver/browser.py                |  14 +-
+ tools/lab/surface_driver/context.py                |  63 ++++-
+ tools/lab/surface_driver/fixtures/live_outcomes.py |  74 ++++-
+ tools/lab/surface_driver/probe.py                  | 304 +++++++++++++++------
+ .../profiles/fedora-budgie-wayland.json            |  18 ++
+ tools/lab/surface_driver/recipes/outcomes_live.py  |  41 ++-
+ tools/lab/surface_driver/target.py                 |  10 +
+ 15 files changed, 909 insertions(+), 126 deletions(-)
