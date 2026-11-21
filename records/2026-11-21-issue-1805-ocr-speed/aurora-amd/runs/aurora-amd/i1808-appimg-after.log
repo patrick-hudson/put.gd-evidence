@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/var/home/patrick/work/r1805/tools/bench.py", line 194, in <module>
+    main()
+    ~~~~^^
+  File "/var/home/patrick/work/r1805/tools/bench.py", line 134, in main
+    for row in json.loads((a.reference / 'rows.json').read_text()):
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib64/python3.15/pathlib/__init__.py", line 986, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.15/pathlib/__init__.py", line 970, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'runs/aurora-amd/i1808-appimg-before/rows.json'

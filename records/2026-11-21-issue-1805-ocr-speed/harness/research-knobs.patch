@@ -1,0 +1,196 @@
+diff --git a/src/ocr/Layout.cpp b/src/ocr/Layout.cpp
+index c938fee46..48a240000 100644
+--- a/src/ocr/Layout.cpp
++++ b/src/ocr/Layout.cpp
+@@ -6,11 +6,15 @@
+ #include <vector>
+ 
+ namespace putgd::ocr {
++// Research #1805: overridable by bench_ocr_method.
++int researchTargetLineRows=24;
++double researchMinimumScale=1.0;
++int researchLineTasks=0;
+ namespace {
+ // Ink must differ from the background by at least this much.
+ constexpr int inkContrast=24;
+ // A text height Tesseract's LSTM reads well: line runs of about this many rows.
+-constexpr int targetLineRows=24;
++#define targetLineRows researchTargetLineRows
+ QRect bounds(const Quad& q){
+  int left=q[0].x(),right=q[0].x(),top=q[0].y(),bottom=q[0].y();
+  for(const auto& p:q){left=std::min(left,p.x());right=std::max(right,p.x());top=std::min(top,p.y());bottom=std::max(bottom,p.y());}
+@@ -130,7 +134,7 @@ Plan plan(int width,int height,const Profile& profile,const PlanLimits& limits){
+  const qint64 pixels=qint64(width)*height;
+  if(width<1||height<1||pixels>maximumInputPixels){result.error="input_excessive";return result;}
+  double scale=limits.forcedScale>0?limits.forcedScale:preferredScale(profile.lineHeight,limits.maximumScale);
+- if(double(pixels)*scale*scale>double(limits.scaledPixels))scale=std::max(1.0,std::sqrt(double(limits.scaledPixels)/double(pixels)));
++ if(double(pixels)*scale*scale>double(limits.scaledPixels))scale=std::max(researchMinimumScale,std::sqrt(double(limits.scaledPixels)/double(pixels)));
+  const int lineRows=profile.lineHeight>0?profile.lineHeight:16;
+  for(;;){
+   const qint64 scaledWidth=qint64(std::ceil(width*scale))+2*limits.border;
+diff --git a/src/ocr/Layout.h b/src/ocr/Layout.h
+index 786525403..99858874b 100644
+--- a/src/ocr/Layout.h
++++ b/src/ocr/Layout.h
+@@ -63,6 +63,9 @@ struct PlanLimits {
+ Plan plan(int width,int height,const Profile& profile,const PlanLimits& limits);
+ // The integer scale the text height asks for, before the cap.
+ int preferredScale(int lineHeight,int maximumScale);
++extern int researchTargetLineRows;   // research #1805 only
++extern double researchMinimumScale; // research #1805 only
++extern int researchLineTasks;        // research #1805 only: 1 reads every row run (a text line) as its own task
+ 
+ // Cuts rows [0, height) into about `parts` strips between text lines only:
+ // each cut is the middle of the blank run nearest its even share, searched
+diff --git a/src/ocr/Recognize.cpp b/src/ocr/Recognize.cpp
+index edbffe804..4eddd2c58 100644
+--- a/src/ocr/Recognize.cpp
++++ b/src/ocr/Recognize.cpp
+@@ -60,7 +60,23 @@ JobResult recognizeImage(const GreyView& image,const JobOptions& options){
+  // engine starts, so the pages read here are given back before recognition
+  // reaches its peak; what was found replaces Tesseract's reading at the end.
+  EmojiScan emoji;
+- if(options.colour.valid()&&options.emojiTemplates&&options.emojiTemplates->count()>0){
++ // Research #1805: the scan on its own thread, overlapping engine start and recognition.
++ std::thread emojiThread;
++ struct Joiner { std::thread& t; ~Joiner(){if(t.joinable())t.join();} } joiner{emojiThread};
++ const auto scanEmoji=[&]{
++  QElapsedTimer clock;clock.start();
++  emoji=findEmoji(options.colour,*options.emojiTemplates,options.emoji,[&]{return options.emojiBudgetMs>0&&total.elapsed()>=options.emojiBudgetMs;});
++  options.emojiTemplates->release();
++  emoji.hits.removeIf([&](const EmojiHit& hit){
++   for(const auto& q:std::as_const(areas))if(insideCode(q,hit.rect.center()))return true;
++   return false;
++  });
++  result.emoji=int(emoji.hits.size());result.emojiCandidates=emoji.candidates;result.emojiCut=emoji.cut;
++  result.timings.emojiMs=clock.elapsed();
++ };
++ if(researchEmojiParallel&&options.colour.valid()&&options.emojiTemplates&&options.emojiTemplates->count()>0){
++  emojiThread=std::thread(scanEmoji);
++ }else if(options.colour.valid()&&options.emojiTemplates&&options.emojiTemplates->count()>0){
+   stage.restart();
+   emoji=findEmoji(options.colour,*options.emojiTemplates,options.emoji,[&]{return options.emojiBudgetMs>0&&total.elapsed()>=options.emojiBudgetMs;});
+   options.emojiTemplates->release();
+@@ -107,7 +123,7 @@ JobResult recognizeImage(const GreyView& image,const JobOptions& options){
+  for(auto& p:panelList){
+   auto limits=options.limits;limits.threads=threads;limits.scaledPixels=std::numeric_limits<qint64>::max();
+   const double s=options.limits.forcedScale>0?options.limits.forcedScale:preferredScale(p.profile.lineHeight,options.limits.maximumScale);
+-  limits.forcedScale=std::max(1.0,s*lower);
++  limits.forcedScale=std::max(researchMinimumScale,s*lower);
+   p.plan=putgd::ocr::plan(p.rect.width(),p.rect.height(),p.profile,limits);
+   if(!p.plan.error.isEmpty()){result.error=p.plan.error;return result;}
+   p.tasks=p.plan.bands;
+@@ -172,6 +188,21 @@ JobResult recognizeImage(const GreyView& image,const JobOptions& options){
+    const auto cut=strips(p.profile,p.rect.width(),p.rect.height(),threads*options.stripsPerThread);
+    if(cut.size()>1){p.tasks=cut;p.split=true;}
+   }
++  if(researchLineTasks>0){
++   // Research #1805: our own line pre-pass. Every run of inked rows is a task.
++   QList<Band> lines;const int H=p.rect.height(),W=p.rect.width();int y=0;
++   const bool rows=p.profile.rowInk.size()>=H;
++   while(rows&&y<H){
++    while(y<H&&p.profile.blank(y,W))++y;
++    if(y>=H)break;
++    const int s=y;while(y<H&&!p.profile.blank(y,W))++y;
++    if(y-s<3)continue;
++    int top=std::max(0,s-2);const int bottom=std::min(H,y+2);
++    if(!lines.isEmpty()&&top<lines.last().bottom)top=lines.last().bottom;
++    if(bottom>top)lines.append({top,bottom,false});
++   }
++   if(!lines.isEmpty()){p.tasks=lines;p.split=true;}
++  }
+   anyBanded|=p.plan.banded();
+   for(int j=0;j<p.tasks.size();++j){
+    const qint64 pixels=qint64(std::ceil(p.rect.width()*p.plan.scale))*qint64(std::ceil((p.tasks[j].bottom-p.tasks[j].top)*p.plan.scale));
+@@ -360,6 +391,7 @@ JobResult recognizeImage(const GreyView& image,const JobOptions& options){
+   result.recognition.scale=std::max(result.recognition.scale,p.plan.scale);result.recognition.bands+=int(p.plan.bands.size());
+  }
+  result.timings.recognitionMs=stage.elapsed();
++ if(emojiThread.joinable())emojiThread.join();
+  // Emoji, found before recognition, take the place of what Tesseract made of them.
+  placeEmoji(result.recognition,emoji.hits);
+  joinUrls(result.recognition);
+diff --git a/src/ocr/Recognize.h b/src/ocr/Recognize.h
+index 4723cc72f..52c59228a 100644
+--- a/src/ocr/Recognize.h
++++ b/src/ocr/Recognize.h
+@@ -9,7 +9,8 @@
+ // One recognition job, from the grey input to the result JSON (#1428 decisions 3 and 4).
+ namespace putgd::ocr {
+ // Recognition runs on at most this many threads, each with its own engine.
+-inline constexpr int maximumWorkerThreads=4;
++inline int maximumWorkerThreads=4;
++inline bool researchEmojiParallel=false;  // research #1805  // research #1805: overridable by bench_ocr_method
+ // The threads a job uses: requested, or one per core, at most maximumWorkerThreads.
+ int workerThreads(int requested=0);
+ 
+diff --git a/src/ocr/TextEngine.cpp b/src/ocr/TextEngine.cpp
+index 4bc7c0393..8d6f5b04e 100644
+--- a/src/ocr/TextEngine.cpp
++++ b/src/ocr/TextEngine.cpp
+@@ -133,8 +133,8 @@ bool readData(const char* filename,std::vector<char>* data){
+ }
+ // Without the dictionary, none of the word lists is loaded: system and frequent
+ // words, punctuation, numbers, unambiguous words and bigrams.
+-std::vector<std::string> initNames(const EngineOptions& o){return o.dictionary?std::vector<std::string>{}:std::vector<std::string>{"load_system_dawg","load_freq_dawg","load_punc_dawg","load_number_dawg","load_unambig_dawg","load_bigram_dawg"};}
+-std::vector<std::string> initValues(const EngineOptions& o){return o.dictionary?std::vector<std::string>{}:std::vector<std::string>(6,"0");}
++std::vector<std::string> initNames(const EngineOptions& o){auto v=o.dictionary?std::vector<std::string>{}:std::vector<std::string>{"load_system_dawg","load_freq_dawg","load_punc_dawg","load_number_dawg","load_unambig_dawg","load_bigram_dawg"};for(const auto& r:o.research)v.push_back(r.first);return v;}
++std::vector<std::string> initValues(const EngineOptions& o){auto v=o.dictionary?std::vector<std::string>{}:std::vector<std::string>(6,"0");for(const auto& r:o.research)v.push_back(r.second);return v;}
+ }
+ LanguageData::LanguageData(const QStringList& directories){delete resolver;resolver=new Resolver;resolver->directories=directories;}
+ LanguageData::~LanguageData(){delete resolver;resolver=nullptr;}
+@@ -208,6 +208,7 @@ void TextEngine::prepare(const GreyImage& band,double scale){
+  api_->SetVariable("tessedit_do_invert",options_.invertLines?"1":"0");
+  api_->SetImage(reinterpret_cast<const unsigned char*>(band.pixels.constData()),band.width,band.height,1,band.width);
+  api_->SetSourceResolution(options_.resolution>0?options_.resolution:std::clamp(int(96*scale),70,600));
++ for(const auto& r:options_.research)api_->SetVariable(r.first.c_str(),r.second.c_str());
+ }
+ BandText TextEngine::recognize(const GreyImage& band,double scale,int deadlineMs,bool* cutShort,bool* failed){
+  BandText out;if(cutShort)*cutShort=false;if(failed)*failed=false;
+diff --git a/src/ocr/TextEngine.h b/src/ocr/TextEngine.h
+index b56d2c0a6..aedbcddcd 100644
+--- a/src/ocr/TextEngine.h
++++ b/src/ocr/TextEngine.h
+@@ -5,6 +5,9 @@
+ #include <QString>
+ #include <QStringList>
+ #include <memory>
++#include <string>
++#include <utility>
++#include <vector>
+ 
+ namespace tesseract { class TessBaseAPI; }
+ namespace putgd::ocr {
+@@ -21,6 +24,7 @@ struct EngineOptions {
+  bool dictionary=true;        // the word lists (system and frequent words)
+  bool invertLines=true;       // Tesseract's own retry of a line as inverted
+  int resolution=0;            // source resolution in DPI given to Tesseract; 0 picks from the scale
++ std::vector<std::pair<std::string,std::string>> research;  // #1805 research only: extra Tesseract variables
+ };
+ // One band's words and lines, in Tesseract's reading order, in the band's pixels.
+ struct BandText {
+diff --git a/tests/integration/ocr/ocr_method.cpp b/tests/integration/ocr/ocr_method.cpp
+index 6a0f9b5b4..ae8fa6c78 100644
+--- a/tests/integration/ocr/ocr_method.cpp
++++ b/tests/integration/ocr/ocr_method.cpp
+@@ -9,6 +9,7 @@
+ // Emoji (#1748) are looked for in the image's colour, with the built-in
+ // templates unless --emoji-templates names a file.
+ #include "ocr/Recognize.h"
++#include "ocr/Layout.h"
+ #include <QGuiApplication>
+ #include <QFile>
+ #include <QImageReader>
+@@ -54,6 +55,12 @@ int main(int argc,char** argv){
+   else if(a=="--emoji-templates")templatesPath=next();
+   else if(a=="--emoji-distance")options.emoji.distance=next().toDouble();
+   else if(a=="--symbols")symbols=true;
++  else if(a=="--var"){const auto kv=next();const int eq=kv.indexOf('=');options.engine.research.emplace_back(kv.left(eq).toStdString(),kv.mid(eq+1).toStdString());}
++  else if(a=="--target-rows")putgd::ocr::researchTargetLineRows=next().toInt();
++  else if(a=="--max-threads")putgd::ocr::maximumWorkerThreads=next().toInt();
++  else if(a=="--emoji-parallel")putgd::ocr::researchEmojiParallel=true;
++  else if(a=="--line-tasks")putgd::ocr::researchLineTasks=1;
++  else if(a=="--min-scale")putgd::ocr::researchMinimumScale=next().toDouble();
+   else images.append(a);
+  }
+  if(!languages.isEmpty())options.languages=languages;

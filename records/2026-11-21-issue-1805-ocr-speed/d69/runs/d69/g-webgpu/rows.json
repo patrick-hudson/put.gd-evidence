@@ -1,0 +1,1828 @@
+[
+{
+"id": "m74-editor-code-light-100",
+"cls": "editor-code",
+"dims": [
+1200,
+665
+],
+"chars": 1390,
+"run": 0,
+"status": "ok",
+"wall": 3.8895,
+"cpu": 3.7688,
+"maxrssKiB": 313644,
+"cer": 0.01655,
+"wer": 0.15625,
+"text": "#include <algorithm>\n#include <iostream>\n#include <numeric>\n#include <string>\n#include <vector>\nstruct Sample { std::string label; int width; int height; };\nint main() {\nconst std::vector<Sample> samples = {\n{\"garden\", 640, 480}, {\"river\", 800, 600}, {\"valley\", 1024, 768}\n}i\nstd::vector<int> areas;\n// Read each synthetic sample and preserve its original label for the report.\nfor (const auto& sample : samples) {\nconst int area = sample.width * sample.height;\nconst bool visible = sample.width > 0 && sample.height > 0;\nif(!visible) {continue; }// Empty rows do not belong in the result.\nareas.push_back(area);\nstd::cout < sample.label <<\" width \"<< sample.width <<\" height \"<< sample.height;\nstd::cout <<\"area \"<< area << '\\n';\n// Sort the values before choosing the middle entry and printing the total.\nstd::sort(areas.begin(), areas.end());\nconst auto total = std::accumulate(areas.begin(), areas.end(), 0);\nconst auto middle = areas.empty() ? 0 : areas[areas.size() / 2];\nstd::cout << \"total \"<< total<<\" middle \"<< middle <<\\n';\n// A copy keeps the source vector intact while the display order is reversed.\nauto reversed = areas;\nstd::reverse(reversed.begin(), reversed.end());\nfor (const int value : reversed) { std::cout << value << ' '; }\nstd::cout << '\\n';\n// Every number and label on this page is disposable synthetic lab content.\nreturn total > 0? 0 : l;\nH",
+"above128Ms": 2193,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 48328,
+"baseOrtKiB": 63784,
+"baseAllKiB": 93916,
+"engineOnlyKiB": 265316,
+"importMs": 1497.5,
+"lines": 32,
+"elapse": [
+0.6795808020979166,
+null,
+1.210811770055443
+],
+"peakRssKiB": 313644,
+"engineMs": 2199.0,
+"loadMs": 22.1
+},
+{
+"id": "m74-editor-code-dark-100",
+"cls": "editor-code",
+"dims": [
+1200,
+665
+],
+"chars": 1390,
+"run": 0,
+"status": "ok",
+"wall": 2.645,
+"cpu": 2.4413,
+"maxrssKiB": 293640,
+"cer": 0.01439,
+"wer": 0.07143,
+"text": "#include <algorithm>\n#include <iostream>\n#include <numeric>\n#include <string>\n#include <vector>\nstruct Sample { std::string label; int width; int height; };\nint main()\nconst std::vector<Sample> samples =\n{\"garden\", 640,480}, {\"river\",800, 600}, {\"valley\", 1024, 768}\nstd::vector<int> areas;\n// Read each synthetic sample and preserve its original label for the report.\nfor (const auto& sample : samples) {\nconst int area = sample.width * sample.height;\nconst bool visible = sample.width > 0 && sample.height > 0;\nif (!visible) { continue; } // Empty rows do not belong in the result.\nareas.push_back(area);\nstd::cout < sample.label << \" width \" << sample.width << \" height \" << sample.height;\nstd::cout << \" area \" << area << '\\n';\nSort the values before choosing the middle entry and printing the total.\nstd::sort(areas.begin(), areas.end());\nconst auto total = std::accumulate(areas.begin(), areas.end(), 0);\nconst auto middle = areas.empty() ? 0 : areas[areas.size() / 2];\nstd: :cout << \"total \" << total’<< \" middle \" << middle << '\\n';\n// A copy keeps the source vector intact while the display order is reversed.\nauto reversed = areas;\nstd::reverse(reversed.begin(), reversed.end());\nfor (const int value : reversed) { std::cout << value << ' '; }\nstd::cout << '\\n';\n// Every number and label on this page is disposable synthetic lab content.\nreturn total > 0 ? 0 : l;",
+"above128Ms": 1564,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 44104,
+"baseOrtKiB": 60500,
+"baseAllKiB": 87776,
+"engineOnlyKiB": 249536,
+"importMs": 897.1,
+"lines": 30,
+"elapse": [
+0.4034687429666519,
+null,
+0.9578684861771762
+],
+"peakRssKiB": 293640,
+"engineMs": 1562.8,
+"loadMs": 19.1
+},
+{
+"id": "m74-monitor-light-100",
+"cls": "monitor",
+"dims": [
+1920,
+1080
+],
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 3.0959,
+"cpu": 2.5274,
+"maxrssKiB": 316272,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 2041,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43968,
+"baseOrtKiB": 60360,
+"baseAllKiB": 87832,
+"engineOnlyKiB": 272304,
+"importMs": 840.7,
+"lines": 24,
+"elapse": [
+0.7801680029369891,
+null,
+1.0485687269829214
+],
+"peakRssKiB": 316272,
+"engineMs": 2059.3,
+"loadMs": 19.0
+},
+{
+"id": "m74-monitor-dark-100",
+"cls": "monitor",
+"dims": [
+1920,
+1080
+],
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 3.14,
+"cpu": 2.5466,
+"maxrssKiB": 311416,
+"cer": 0.00053,
+"wer": 0.00323,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 2077,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43988,
+"baseOrtKiB": 60388,
+"baseAllKiB": 87664,
+"engineOnlyKiB": 267428,
+"importMs": 863.5,
+"lines": 24,
+"elapse": [
+0.7692461777478456,
+null,
+1.0751324971206486
+],
+"peakRssKiB": 311416,
+"engineMs": 2077.9,
+"loadMs": 19.0
+},
+{
+"id": "m74-editor-code-light-125",
+"cls": "editor-code",
+"dims": [
+2600,
+1314
+],
+"chars": 1390,
+"run": 0,
+"status": "ok",
+"wall": 3.496,
+"cpu": 2.7103,
+"maxrssKiB": 347996,
+"cer": 0.01583,
+"wer": 0.12946,
+"text": "#include <algorithm>\n#include <iostream>\n#include <numeric>\n#include <string>\n#include <vector>\nstruct Sample { std::string label; int width; int height; };\nint main() {\nconst std::vector<Sample> samples = {\n{\"garden\",640, 480},{\"river\",800,600},{\"valley\",1024,768}\n}i\nstd::vector<int> areas;\n// Read each synthetic sample and preserve its original label for the report.\nfor (const auto& sample : samples) {\nconst int area = sample.width * sample.height;\nconst bool visible = sample.width > && sample.height > 0;\nif (!visible) { continue; }// Empty rows do not belong in the result.\nareas.push_back(area);\nstd::cout < sample.label << \" width \" << sample.width << \" height \" << sample.height;\nstd::cout << \" area \"<< area << '\\n';\n}\n// Sort the values before choosing the middle entry and printing the total.\nstd::sort(areas.begin(),areas.end());\nconst auto total = std::accumulate(areas.begin(), areas.end(), 0);\nconst auto middle = areas.empty() ? 0 : areas[areas.size() / 2];\nstd::cout << \"total \"<< total<< \" middle \"<< middle <<\\n';\n// A copy keeps the source vector intact while the display order is reversed.\nauto reversed = areas;\nstd::reverse(reversed.begin(), reversed.end());\nfor (const int value : reversed) { std::cout << value << ' '; }\nstd::cout << '\\n';\n// Every number and label on this page is disposable synthetic lab content.\nreturn total > 0? 0 : 1;",
+"above128Ms": 2425,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 44108,
+"baseOrtKiB": 60492,
+"baseAllKiB": 87768,
+"engineOnlyKiB": 303888,
+"importMs": 842.8,
+"lines": 33,
+"elapse": [
+1.2116411519236863,
+null,
+0.9863256700336933
+],
+"peakRssKiB": 347996,
+"engineMs": 2431.5,
+"loadMs": 19.3
+},
+{
+"id": "m74-editor-code-dark-125",
+"cls": "editor-code",
+"dims": [
+2600,
+1314
+],
+"chars": 1390,
+"run": 0,
+"status": "ok",
+"wall": 3.5178,
+"cpu": 2.723,
+"maxrssKiB": 347800,
+"cer": 0.01511,
+"wer": 0.12946,
+"text": "#include <algorithm>\n#include <iostream>\n#include <numeric>\n#include <string>\n#include <vector>\nstruct Sample { std::string label; int width; int height; };\nint main(){\nconst std: :vector<Sample> samples = {\n{\"garden\",640, 480},{\"river\",800,600},{\"valley\",1024,768}\n}i\nstd::vector<int> areas;\n// Read each synthetic sample and preserve its original label for the report.\nfor (const auto& sample : samples) {\nconst int area = sample.width * sample.height;\nconst bool visible = sample.width >0 && sample.height > 0;\nif (!visible) { continue; } // Empty rows do' not belong in the result.\nareas.push_back(area);\nstd::cout << sample.label << \" width \" << sample.width << \" height \" << sample.height;\nstd::cout << \" area \"<< area << '\\n';\n// Sort the values before choosing the middle entry and printing the total.\nstd::sort(areas.begin(), areas.end());\nconst auto total =std::accumulate(areas.begin(), areas.end(), 0) ;\nconst auto middle = areas.empty() ? 0 : areas[areas.size() / 2];\nstd: :cout << \"total \" << total'<< \" middle \" << middle << '\\n';\n// A copy keeps the source vector intact while the display order is reversed.\nauto reversed = areas;\nstd::reverse(reversed.begin(), reversed.end());\nfor (const int value : reversed) { std::cout << value << ' '; }\nstd::cout << '\\n';\n// Every number and label on this page is disposable synthetic lab content.\nreturn total > 0 ? 0 : 1;",
+"above128Ms": 2443,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 44016,
+"baseOrtKiB": 60412,
+"baseAllKiB": 87748,
+"engineOnlyKiB": 303784,
+"importMs": 858.4,
+"lines": 32,
+"elapse": [
+1.2736425399780273,
+null,
+0.9413995747454464
+],
+"peakRssKiB": 347800,
+"engineMs": 2446.6,
+"loadMs": 19.0
+},
+{
+"id": "m74-monitor-light-125",
+"cls": "monitor",
+"dims": [
+3072,
+1728
+],
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 4.1565,
+"cpu": 2.9824,
+"maxrssKiB": 447764,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 3077,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 44016,
+"baseOrtKiB": 60416,
+"baseAllKiB": 87748,
+"engineOnlyKiB": 403748,
+"importMs": 843.1,
+"lines": 24,
+"elapse": [
+1.800035702995956,
+null,
+1.0173405883833766
+],
+"peakRssKiB": 447764,
+"engineMs": 3082.7,
+"loadMs": 22.0
+},
+{
+"id": "m74-monitor-dark-125",
+"cls": "monitor",
+"dims": [
+3072,
+1728
+],
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 4.1305,
+"cpu": 2.8406,
+"maxrssKiB": 447816,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 3058,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43956,
+"baseOrtKiB": 60344,
+"baseAllKiB": 87664,
+"engineOnlyKiB": 403860,
+"importMs": 839.8,
+"lines": 24,
+"elapse": [
+1.7918052240274847,
+null,
+1.029610067140311
+],
+"peakRssKiB": 447816,
+"engineMs": 3064.8,
+"loadMs": 19.1
+},
+{
+"id": "d69-editor-code2-light-100",
+"cls": "editor-code",
+"dims": null,
+"chars": 1643,
+"run": 0,
+"status": "ok",
+"wall": 2.8978,
+"cpu": 2.4409,
+"maxrssKiB": 247304,
+"cer": 0.00791,
+"wer": 0.03831,
+"text": "// kate: font DejaVu Sans Mono; ; font-size 12; scheme Breeze Light;\n// Sample 01: compare the current value with the expected result before returning.\n// Sample 02: compare the current value with the expected result before returning.\n// Sample 03: compare the current value with the expected result before returning.\n// Sample 04: compare the current value with the expected result before returning.\n// Sample 05: compare the current value with the expected result before returning.\n// Sample 06: compare the current value with the expected result before returning.\n// Sample  07： compare the current value with the expected result before returning .\n / Sample 08: compare the current value with the expected result before returning.\n// Sample 09: compare the current value with the expected result before returning.\n// Sample 10: compare the current value with the expected result before returning.\n// Sample ll: compare the current value with the expected result before returning.\n// Sample 12: compare the current value with the expected result before returning.\n / Sample 13: compare the current value with the expected result before returning.\n// Sample 14: compare the current value with the expected result before returning.\n// Sample 15: compare the current value with the expected result before returning.\n// Sample 16: compare the current value with the expected result before returning.\n / Sample 17: compare the current value with the expected result before returning.\n// Sample 18: compare the current value with the expected result before returning.\nint sum(int first, int second)\nconst int total = first + second;\nreturn total;",
+"above128Ms": 1878,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 44032,
+"baseOrtKiB": 60420,
+"baseAllKiB": 87792,
+"engineOnlyKiB": 203216,
+"importMs": 847.0,
+"lines": 80,
+"elapse": [
+0.41763181891292334,
+null,
+1.2343337098136544
+],
+"peakRssKiB": 247248,
+"engineMs": 1885.1,
+"loadMs": 19.3
+},
+{
+"id": "d69-editor-code2-dark-100",
+"cls": "editor-code",
+"dims": null,
+"chars": 1642,
+"run": 0,
+"status": "ok",
+"wall": 2.8281,
+"cpu": 2.4079,
+"maxrssKiB": 265644,
+"cer": 0.00731,
+"wer": 0.02299,
+"text": "// kate: font DejaVu Sans Mono; font-size 12; scheme Breeze Dark;\n// Sample 01: compare the current value with the expected result before returning.\n// Sample 02: compare the current value with the expected result before returning.\n// Sample 03: compare the current value with the expected result before returning.\n// Sample 04: compare the current value with the expected result before returning.\n// Sample 05: compare the current value with the expected result before returning.\n// Sample 06: compare the current value with the expected result before returning.\n// Sample 07: compare the current value with the expected d result before returning.\n// Sample 08: compare the current value with the expected result before returning.\n// Sample 09: compare the current value with the expected d result before returning.\n// Sample 10: compare the current value with the expected result before returning.\n// Sample 11: compare the current value with the expected result before returning.\n// Sample 12: compare the current value with the expected d result before returning.\n// Sample 13: compare the current value with the expected result before returning.\n// Sample 14: compare the current value with the expected d result before returning.\n// Sample 15: compare the current value with the expected result before returning.\n// Sample 16: compare the current value with the  expected result before returning.\n// Sample 17: compare the current value with the expected result before returning.\n// Sample 18: compare the current value with the expected result before returning.\nint sum(int first, int second)\nconst int total = first + second;\nreturn total;",
+"above128Ms": 1835,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43932,
+"baseOrtKiB": 60384,
+"baseAllKiB": 87920,
+"engineOnlyKiB": 221712,
+"importMs": 821.3,
+"lines": 77,
+"elapse": [
+0.4239655309356749,
+null,
+1.1438445327803493
+],
+"peakRssKiB": 265644,
+"engineMs": 1841.1,
+"loadMs": 18.9
+},
+{
+"id": "d69-monitor-light-100",
+"cls": "monitor",
+"dims": null,
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 3.0477,
+"cpu": 2.447,
+"maxrssKiB": 307104,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 2013,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43984,
+"baseOrtKiB": 60368,
+"baseAllKiB": 87784,
+"engineOnlyKiB": 263120,
+"importMs": 829.9,
+"lines": 24,
+"elapse": [
+0.7877220949158072,
+null,
+0.9997193394228816
+],
+"peakRssKiB": 307104,
+"engineMs": 2016.7,
+"loadMs": 19.0
+},
+{
+"id": "d69-monitor-dark-100",
+"cls": "monitor",
+"dims": null,
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 3.0507,
+"cpu": 2.5695,
+"maxrssKiB": 310788,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 2000,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43988,
+"baseOrtKiB": 60368,
+"baseAllKiB": 87668,
+"engineOnlyKiB": 266800,
+"importMs": 839.1,
+"lines": 24,
+"elapse": [
+0.7762881643138826,
+null,
+1.0499201682396233
+],
+"peakRssKiB": 310788,
+"engineMs": 2005.8,
+"loadMs": 19.2
+},
+{
+"id": "d69-editor-code-frac-light-125",
+"cls": "editor-code",
+"dims": null,
+"chars": 1643,
+"run": 0,
+"status": "ok",
+"wall": 2.8523,
+"cpu": 2.4416,
+"maxrssKiB": 305944,
+"cer": 0.0067,
+"wer": 0.04598,
+"text": "// kate: font DejaVu Sans Mono; font-size 12; scheme Breeze Light;\n// Sample 01: compare the current value with the expected result before returning.\n// Sample 02: compare the current value with the expected result before returning.\n// Sample 03: compare the current value with the expected result before returning.\n/ / Sample 04: compare the current value with the expected result before returning.\n/ / Sample 05: compare the  current value with the expected result before returning.\n// Sample 06: compare the current value with the expected result before returning.\n/ / Sample 07: compare the current value with the expected result before returning.\n// Sample 08: compare the current value with the expected result before returning.\n// Sample 09: compare the current value with the  expected result before returning.\n/ / Sample 10: compare the current value with the expected result before returning.\n// Sample ll: compare the current value with the expected result before returning.\n// Sample 12: compare the current value with the expected result before returning.\n// Sample 13: compare the current value with the expected result before returning.\n//9 Sample 14: compare the current value with the expected result before returning.\n// Sample 15: compare the  current value with the expected result before returning.\n// Sample 16: compare the current value with the expected result before returning.\n// Sample 17: compare the current value with the expected result before returning.\n// Sample 18: compare the current value with the expected result before returning.\nint sum(int first, int second)\nconst int total = first + second;\nreturn total;",
+"above128Ms": 1807,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 44084,
+"baseOrtKiB": 60476,
+"baseAllKiB": 87852,
+"engineOnlyKiB": 261860,
+"importMs": 847.8,
+"lines": 41,
+"elapse": [
+0.455933618824929,
+null,
+1.1164619796909392
+],
+"peakRssKiB": 305944,
+"engineMs": 1814.1,
+"loadMs": 19.5
+},
+{
+"id": "d69-editor-code-frac-dark-125",
+"cls": "editor-code",
+"dims": null,
+"chars": 1642,
+"run": 0,
+"status": "ok",
+"wall": 2.7897,
+"cpu": 2.4806,
+"maxrssKiB": 292484,
+"cer": 0.00305,
+"wer": 0.01149,
+"text": "// kate: font DejaVu Sans Mono; font-size 12; scheme Breeze Dark;\n// Sample 01: compare the current value with the expected result before returning.\n// Sample 02: compare the current value with the expected result before returning.\n// Sample 03: compare the current value with the expected result before returning.\n// Sample 04: compare the current value with the expected result before returning.\n// Sample 05: compare the current value with the expected result before returning.\n// Sample 06: compare the current value with the expected result before returning.\n// Sample 07: compare the current value with the expected result before returning.\n// Sample 08: compare the current value with the expected result before returning.\n// Sample 09: compare the current value with the expected result before returning.\n// Sample 10: compare the current value with the expected result before returning.\n// Sample 1l: compare the current value with the expected result before returning.\n// Sample 12: compare the current value with the  expected result before returning.\n// Sample 13: compare the current value with the expected result before returning.\n// Sample 14: compare the current value with the expected result before returning.\n// Sample 15: compare the current value with the expected result before returning.\n// Sample 16: compare the current value with the expected result before returning.\n// Sample 17: compare the current value with the expected result before returning.\n// Sample 18: compare the current value with the expected result before returning.\nint sum(int first, int second)\nconst int total = first + second;\nreturn total;",
+"above128Ms": 1746,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43916,
+"baseOrtKiB": 60380,
+"baseAllKiB": 87724,
+"engineOnlyKiB": 248568,
+"importMs": 841.4,
+"lines": 25,
+"elapse": [
+0.40225744200870395,
+null,
+1.110643362160772
+],
+"peakRssKiB": 292484,
+"engineMs": 1761.2,
+"loadMs": 19.2
+},
+{
+"id": "d69-monitor-light-125",
+"cls": "monitor",
+"dims": null,
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 3.0154,
+"cpu": 2.4647,
+"maxrssKiB": 309516,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 1967,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 44084,
+"baseOrtKiB": 60480,
+"baseAllKiB": 87880,
+"engineOnlyKiB": 265432,
+"importMs": 840.3,
+"lines": 24,
+"elapse": [
+0.7529535782523453,
+null,
+1.0004689511843026
+],
+"peakRssKiB": 309516,
+"engineMs": 1972.8,
+"loadMs": 19.1
+},
+{
+"id": "d69-monitor-dark-125",
+"cls": "monitor",
+"dims": null,
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 3.0904,
+"cpu": 2.4414,
+"maxrssKiB": 308408,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 2038,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43972,
+"baseOrtKiB": 60432,
+"baseAllKiB": 87704,
+"engineOnlyKiB": 264436,
+"importMs": 830.8,
+"lines": 24,
+"elapse": [
+0.7261234163306653,
+null,
+1.0432953536510468
+],
+"peakRssKiB": 308408,
+"engineMs": 2065.3,
+"loadMs": 18.8
+},
+{
+"id": "f44-monitor-light-100",
+"cls": "monitor",
+"dims": [
+1920,
+1080
+],
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 2.8522,
+"cpu": 2.4096,
+"maxrssKiB": 279376,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 1814,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43984,
+"baseOrtKiB": 60372,
+"baseAllKiB": 87688,
+"engineOnlyKiB": 235392,
+"importMs": 835.6,
+"lines": 24,
+"elapse": [
+0.7462073676288128,
+null,
+0.8827274818904698
+],
+"peakRssKiB": 279376,
+"engineMs": 1817.7,
+"loadMs": 19.3
+},
+{
+"id": "f44-monitor-dark-100",
+"cls": "monitor",
+"dims": [
+1920,
+1080
+],
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 2.9139,
+"cpu": 2.4539,
+"maxrssKiB": 279456,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 1850,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 44092,
+"baseOrtKiB": 60480,
+"baseAllKiB": 87936,
+"engineOnlyKiB": 235364,
+"importMs": 853.5,
+"lines": 24,
+"elapse": [
+0.7506380672566593,
+null,
+0.8874329929240048
+],
+"peakRssKiB": 279456,
+"engineMs": 1853.5,
+"loadMs": 19.2
+},
+{
+"id": "f44-editor-code-light-100",
+"cls": "editor-code",
+"dims": [
+1242,
+728
+],
+"chars": 1155,
+"run": 0,
+"status": "ok",
+"wall": 2.3357,
+"cpu": 2.299,
+"maxrssKiB": 273076,
+"cer": 0.01385,
+"wer": 0.15847,
+"text": "#include <algorithm>\n#include <iostream>\n#include <numeric>\n#include <string>\n#include <vector>\nstruct Sample { std::string label; int width; int height; };\nint main() {\nconst std: :vector<Sample> samples = {\n{\"garden\",640, 480}, {\"river\", 800, 600}, {\"valley\", 1024, 768}\n};\nstd::vector<int> areas;\n// Read each synthetic sample and preserve its original label for the report.\nfor(const auto& sample :samples) {\nconst int area = sample.width * sample.height;\nconst bool visible = sample.width > 0&& sample.height > 0;\nif(!visible) { continue; }// Empty rows do not belong in the result.\nareas.push_back(area);\nstd::cout << sample.label << \" width \"<< sample.width << \"height \"<< sample.height;\nstd::cout <<\"area\"<< area << '\\n';\n}\n// Sort the values before choosing the middle entry and printing the total.\nstd::sort(areas.begin(), areas.end());\nconst auto total = std::accumulate(areas.begin(), areas.end(), 0) ;\nconst auto middle = areas.empty() ? 0 : areas[areas.size() / 2];\nstd::cout << \"total \"<< total << \" middle \" << middle << '\\n';\n// A copy keeps the source vector intact while the display order is reversed.\nauto reversed = areas;",
+"above128Ms": 1299,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 44016,
+"baseOrtKiB": 60400,
+"baseAllKiB": 87744,
+"engineOnlyKiB": 229060,
+"importMs": 831.3,
+"lines": 27,
+"elapse": [
+0.37212501280009747,
+null,
+0.7452783179469407
+],
+"peakRssKiB": 273076,
+"engineMs": 1305.1,
+"loadMs": 30.3
+},
+{
+"id": "f44-editor-code-dark-100",
+"cls": "editor-code",
+"dims": [
+1242,
+728
+],
+"chars": 1155,
+"run": 0,
+"status": "ok",
+"wall": 2.363,
+"cpu": 2.2876,
+"maxrssKiB": 272256,
+"cer": 0.00519,
+"wer": 0.06011,
+"text": "#include <algorithm>\n#include <iostream>\n#include <numeric>\n#include <string>\n#include <vector>\nstruct Sample { std::string label; int width; int height; };\nint main(){\nconst std: :vector<Sample> samples = {\n{\"garden\", 640, 480}, {\"river\", 800, 600}, {\"valley\", 1024, 768}\n};\nstd::vector<int> areas;\n// Read each synthetic sample and preserve its original label for the report.\nfor (const auto& sample : samples) {\nconst int area = sample.width * sample.height;\nconst bool visible = sample.width > 0 && sample.height > 0;\nif(!visible){ continue; } // Empty rows do not belong in the result.\nareas.push_back(area) ;\nstd::cout << sample.label << \" width \" << sample.width << \" height \" << sample.height;\nstd::cout << \" area \"<< area << '\\n';\n}\n// Sort the values before choosing the middle entry and printing the total.\nstd::sort(areas.begin(), areas.end());\nconst auto total = std::accumulate(areas.begin(), areas.end(), 0);\nconst auto middle = areas.empty() ? 0 : areas[areas.size() / 2];\nstd::cout << \"total \" << total << \" middle \" << middle << '\\n';\n// A copy keeps the source vector intact while the display order is reversed.\nauto reversed = areas;",
+"above128Ms": 1351,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43984,
+"baseOrtKiB": 60372,
+"baseAllKiB": 87700,
+"engineOnlyKiB": 228272,
+"importMs": 830.4,
+"lines": 27,
+"elapse": [
+0.3832220579497516,
+null,
+0.7508890898898244
+],
+"peakRssKiB": 272256,
+"engineMs": 1354.8,
+"loadMs": 18.9
+},
+{
+"id": "f44-monitor-light-125",
+"cls": "monitor",
+"dims": [
+1920,
+1080
+],
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 2.9383,
+"cpu": 2.474,
+"maxrssKiB": 279196,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 1903,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43996,
+"baseOrtKiB": 60396,
+"baseAllKiB": 87688,
+"engineOnlyKiB": 235200,
+"importMs": 827.8,
+"lines": 24,
+"elapse": [
+0.7690658718347549,
+null,
+0.9137933980673552
+],
+"peakRssKiB": 279196,
+"engineMs": 1905.8,
+"loadMs": 18.9
+},
+{
+"id": "f44-monitor-dark-125",
+"cls": "monitor",
+"dims": [
+1920,
+1080
+],
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 2.9318,
+"cpu": 2.4462,
+"maxrssKiB": 302312,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 1867,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43956,
+"baseOrtKiB": 60336,
+"baseAllKiB": 87684,
+"engineOnlyKiB": 258356,
+"importMs": 846.0,
+"lines": 24,
+"elapse": [
+0.767077109310776,
+null,
+0.8773031840100884
+],
+"peakRssKiB": 302312,
+"engineMs": 1865.8,
+"loadMs": 19.8
+},
+{
+"id": "f44-editor-code-light-125",
+"cls": "editor-code",
+"dims": [
+1553,
+910
+],
+"chars": 1155,
+"run": 0,
+"status": "ok",
+"wall": 2.6137,
+"cpu": 2.3703,
+"maxrssKiB": 280696,
+"cer": 0.01212,
+"wer": 0.14208,
+"text": "#include <algorithm>\n#include <iostream>\n#include <numeric>\n#include <string>\n#include <vector>\nstruct Sample { std::string label; int width; int height; };\nint main() {\nconst std: :vector<Sample> samples = {\n{\"garden\", 640, 480},{\"river\", 800, 600}, {\"valley\", 1024, 768}\n}i\nstd::vector<int> areas;\n// Read each synthetic sample and preserve its original label for the report.\nfor (const auto& sample : samples) {\nconst int area = sample.width * sample.height;\nconst bool visible = sample.width > 0 && sample.height > 0;\nif(!visible) { continue; } // Empty rows do not belong in the result.\nareas.push_back(area);\nstd::cout << sample.label << \" width \"<< sample.width << \"height \"<< sample.height;\nstd::cout <<\"area \"<< area << '\\n';\n}\n// Sort the values before choosing the middle entry and printing the total.\nstd::sort(areas.begin(), areas.end());\nconst auto total = std::accumulate(areas.begin(), areas.end(), 0);\nconst auto middle = areas.empty() ? 0: areas[areas.size() / 2];\nstd::cout << \"total \"<< total << \" middle \"<< middle << '\\n';\n// A copy keeps the source vector intact while the display order is reversed.\nauto reversed = areas ;",
+"above128Ms": 1583,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 44016,
+"baseOrtKiB": 60424,
+"baseAllKiB": 87748,
+"engineOnlyKiB": 236680,
+"importMs": 838.7,
+"lines": 27,
+"elapse": [
+0.5176864550448954,
+null,
+0.8224502876400948
+],
+"peakRssKiB": 280696,
+"engineMs": 1586.8,
+"loadMs": 19.0
+},
+{
+"id": "f44-editor-code-dark-125",
+"cls": "editor-code",
+"dims": [
+1553,
+910
+],
+"chars": 1155,
+"run": 0,
+"status": "ok",
+"wall": 2.5167,
+"cpu": 2.4326,
+"maxrssKiB": 281376,
+"cer": 0.00779,
+"wer": 0.0765,
+"text": "#include <algorithm>\n#include <iostream>\n#include <numeric>\n#include <string>\n#include <vector>\nstruct Sample { std::string label; int width; int height; };\nint main() {\nconst std::vector<Sample> samples = {\n{\"garden\",640, 480}, {\"river\", 800, 600},{\"valley\", 1024, 768}\n}1\nstd::vector<int> areas;\n// Read each synthetic sample and preserve its original label for the report.\nfor (const auto& sample : samples) {\nconst int area = sample.width * sample.height;\nconst bool visible = sample.width >0 && sample.height > 0;\nif(!visible) { continue;} // Empty rows do not belong in the result.\nareas.push_back(area);\nstd::cout << sample.label << \" width \" << sample.width << \" height \" << sample.height;\nstd::cout <<\" area \" << area << '\\n';\n// Sort the values before choosing the middle entry and printing the total.\nstd::sort(areas.begin(), areas.end());\nconst auto total = std::accumulate(areas.begin(), areas.end(), 0);\nconst auto middle = areas.empty() ? 0 : areas[areas.size() / 2];\nstd::cout << \"total \" << total << \" middle \" << middle << '\\n';\n// A copy keeps the source vector intact while the display order is reversed.\nauto reversed = areas;",
+"above128Ms": 1484,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 44020,
+"baseOrtKiB": 60404,
+"baseAllKiB": 87720,
+"engineOnlyKiB": 237356,
+"importMs": 837.3,
+"lines": 26,
+"elapse": [
+0.555308953858912,
+null,
+0.7427170849405229
+],
+"peakRssKiB": 281376,
+"engineMs": 1489.1,
+"loadMs": 19.2
+},
+{
+"id": "k72-monitor-light-100",
+"cls": "monitor",
+"dims": [
+1920,
+1080
+],
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 2.9664,
+"cpu": 2.4038,
+"maxrssKiB": 306432,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 1936,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 44008,
+"baseOrtKiB": 60400,
+"baseAllKiB": 87708,
+"engineOnlyKiB": 262424,
+"importMs": 834.5,
+"lines": 24,
+"elapse": [
+0.7553260941058397,
+null,
+0.9325638567097485
+],
+"peakRssKiB": 306432,
+"engineMs": 1941.8,
+"loadMs": 18.9
+},
+{
+"id": "k72-monitor-dark-100",
+"cls": "monitor",
+"dims": [
+1920,
+1080
+],
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 2.9618,
+"cpu": 2.43,
+"maxrssKiB": 305180,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 1928,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 44000,
+"baseOrtKiB": 60396,
+"baseAllKiB": 87652,
+"engineOnlyKiB": 261180,
+"importMs": 831.7,
+"lines": 24,
+"elapse": [
+0.7646263050846756,
+null,
+0.9473217441700399
+],
+"peakRssKiB": 305180,
+"engineMs": 1930.9,
+"loadMs": 19.0
+},
+{
+"id": "k72-editor-code-light-100",
+"cls": "editor-code",
+"dims": [
+1254,
+665
+],
+"chars": 1457,
+"run": 0,
+"status": "ok",
+"wall": 2.4831,
+"cpu": 2.2146,
+"maxrssKiB": 302240,
+"cer": 0.01716,
+"wer": 0.15745,
+"text": "V/ kate: font DejaVu Sans Mono; font-size 12; scheme Breeze Light;\n#include <algorithm>\n#include <iostream>\n#include <numeric>\n#include <string>\n#include <vector>\nstruct Sample { std::string label; int width; int height; };\nint main(){\nconst std: :vector<Sample> samples = {\n{\"garden\",640, 480},{\"river\",800,600},{\"valley\",1024, 768}\n};\nstd::vector<int> areas;\n// Read each synthetic sample and preserve its original label for the report.\nfor (const auto& sample : samples) {\nconst int area = sample.width * sample.height;\nconst bool visible = sample.width >0 && sample.height > 0;\nif(!visible) { continue; }// Empty rows do not belong in the result.\nareas.push_back(area);\nstd::cout < sample.label << \" width \" << sample.width << \" height \" << sample.height;\nstd::cout <<\"area \"<< area << '\\n';\n// Sort the values before choosing the middle entry and printing the total.\nstd::sort(areas.begin(), areas.end());\nconst auto total = std::accumulate(areas.begin(), areas.end(), 0);\nconst auto middle = areas.empty() ? 0: areas[areas.size() / 2];\nstd::cout << \"total \" << total<< \" middle \"<< middle <<'\\n';\n// A copy keeps the source vector intact while the display order is reversed.\nauto reversed = areas;\nstd::reverse(reversed.begin(), reversed.end());\nfor (const int value : reversed) { std::cout << value << ' '; }\nstd::cout << '\\n';\n// Every number and label on this page is disposable synthetic lab content.\nreturn total > 0? 0 : 1;",
+"above128Ms": 1526,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43912,
+"baseOrtKiB": 60288,
+"baseAllKiB": 87660,
+"engineOnlyKiB": 258328,
+"importMs": 772.6,
+"lines": 32,
+"elapse": [
+0.4142141481861472,
+null,
+0.9262791429646313
+],
+"peakRssKiB": 302240,
+"engineMs": 1544.3,
+"loadMs": 19.0
+},
+{
+"id": "k72-editor-code-dark-100",
+"cls": "editor-code",
+"dims": [
+1254,
+665
+],
+"chars": 1456,
+"run": 0,
+"status": "ok",
+"wall": 2.7679,
+"cpu": 2.5012,
+"maxrssKiB": 308860,
+"cer": 0.02198,
+"wer": 0.14894,
+"text": "V/ kate: font DejaVu Sans Mono; font-size 12; scheme Breeze Dark;\n#include <algorithm>\n#include <iostream>\n#include <numeric>\n#include <string>\n#include <vector>\nstruct Sample { std::string label; int width; int height; };\nint main()\nconst std::vector<Sample> samples = {\n{\"garden\",640,480},{\"river\",800,600},{\"valley\",1024, 768}\nstd::vector<int> areas;\n// Read each synthetic sample and preserve its original label for the report.\nfor (const auto& sample : samples)\nconst int area = sample.width * sample.height;\nconst bool visible = sample.width >0 && sample.height > 0;\nif (!visible) { continue; }// Empty rows do not belong in the result.\nareas.push_back(area);\nstd::cout < sample.label << \" width \" << sample.width << \" height \" << sample.height;\nstd::cout << \" area \"<< area << '\\n';\n// Sort the values before choosing the middle entry and printing the total.\nstd::sort(areas.begin(), areas.end());\nconst auto total = std::accumulate(areas.begin(), areas.end(),0);\nconst auto middle = areas.empty() ? 0 : areas[areas.size() / 2];\nstd::cout << \"total \"<< total'<< \" middle \"<< middle << '\\n';\n// A copy keeps the source vector intact while the display order is reversed.\nauto reversed = areas;\nstd::reverse(reversed.begin(), reversed.end());\nfor (const int value : reversed) { std::cout << value << ' ';\nstd::cout << '\\n';\n// Every number and label on this page is disposable synthetic lab content.\nreturn total >0? 0: 1;",
+"above128Ms": 1702,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 44004,
+"baseOrtKiB": 60400,
+"baseAllKiB": 87896,
+"engineOnlyKiB": 264856,
+"importMs": 828.3,
+"lines": 31,
+"elapse": [
+0.4307981110177934,
+null,
+1.0542445546016097
+],
+"peakRssKiB": 308860,
+"engineMs": 1716.8,
+"loadMs": 19.2
+},
+{
+"id": "k72-monitor-light-125",
+"cls": "monitor",
+"dims": [
+1920,
+1080
+],
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 3.0189,
+"cpu": 2.4095,
+"maxrssKiB": 306156,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 2028,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 44144,
+"baseOrtKiB": 60536,
+"baseAllKiB": 87900,
+"engineOnlyKiB": 262012,
+"importMs": 788.9,
+"lines": 24,
+"elapse": [
+0.7871237429790199,
+null,
+1.0003169332630932
+],
+"peakRssKiB": 306156,
+"engineMs": 2028.7,
+"loadMs": 18.8
+},
+{
+"id": "k72-monitor-dark-125",
+"cls": "monitor",
+"dims": [
+1920,
+1080
+],
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 3.1014,
+"cpu": 2.509,
+"maxrssKiB": 308980,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 2020,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43948,
+"baseOrtKiB": 60332,
+"baseAllKiB": 87664,
+"engineOnlyKiB": 265032,
+"importMs": 845.9,
+"lines": 24,
+"elapse": [
+0.751589460298419,
+null,
+1.0031609358265996
+],
+"peakRssKiB": 308980,
+"engineMs": 2051.4,
+"loadMs": 19.6
+},
+{
+"id": "k72-editor-code-light-125",
+"cls": "editor-code",
+"dims": [
+1568,
+832
+],
+"chars": 1457,
+"run": 0,
+"status": "ok",
+"wall": 2.7244,
+"cpu": 2.4298,
+"maxrssKiB": 309472,
+"cer": 0.01579,
+"wer": 0.13617,
+"text": "V/ kate: font DejaVu Sans Mono; font-size 12; scheme Breeze Light;\n#include <algorithm>\n#include <iostream>\n#include <numeric>\n#include <string>\n#include <vector>\nstruct Sample { std::string label; int width; int height; };\nint main() {\nconst std::vector<Sample> samples = {\n{\"garden\",640,480},{\"river\",800,600},{\"valley\",1024,768}\n};\nstd::vector<int> areas;\n// Read each synthetic sample and preserve its original label for the report.\nfor (const auto& sample : samples) {\nconst int area = sample.width * sample.height;\nconst bool visible = sample.width > 0 && sample.height > 0;\nif(!visible) { continue; }// Empty rows do not belong in the result.\nareas.push_back(area);\nstd::cout << sample.label << \" width \" << sample.width << \" height \" << sample.height;\nstd::cout << \"area \"<< area << '\\n';\n// Sort the values before choosing the middle entry and printing the total.\nstd::sort(areas.begin(), areas.end());\nconst auto total = std::accumulate(areas.begin(), areas.end(),_0);\nconst auto middle = areas.empty()? 0: areas[areas.size() / 2];\nstd::cout << \"total \"<< total << \" middle \"<< middle << '\\n';\n// A copy keeps the source vector intact while the display order is reversed.\nauto reversed = areas;\nstd::reverse(reversed.begin(), reversed.end());\nfor (const int value : reversed) { std::cout << value << ' '; }\nstd::cout << '\\n';\n// Every number and label on this page is disposable synthetic lab content.\nreturn total > 0? 0 : 1;",
+"above128Ms": 1640,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 44080,
+"baseOrtKiB": 60476,
+"baseAllKiB": 87800,
+"engineOnlyKiB": 265392,
+"importMs": 888.3,
+"lines": 32,
+"elapse": [
+0.5018886541947722,
+null,
+0.9312085518613458
+],
+"peakRssKiB": 309472,
+"engineMs": 1647.5,
+"loadMs": 19.3
+},
+{
+"id": "k72-editor-code-dark-125",
+"cls": "editor-code",
+"dims": [
+1568,
+832
+],
+"chars": 1456,
+"run": 0,
+"status": "ok",
+"wall": 2.707,
+"cpu": 2.3969,
+"maxrssKiB": 280040,
+"cer": 0.01511,
+"wer": 0.10213,
+"text": "// kate: font DejaVu Sans Mono; font-size 12; scheme Breeze Dark;\n#include <algorithm>\n#include <iostream>\n#include <numeric>\n#include <string>\n#include <vector>\nstruct Sample { std::string label; int width; int height; };\nint main() {\nconst std::vector<Sample> samples = {\n{\"garden\",640,480},{\"river\",800,600},{\"valley\",1024,768}\nstd::vector<int> areas;\n// Read each synthetic sample and preserve its original label for the report.\nfor (const auto& sample : samples) {\nconst int area = sample.width * sample.height;\nconst bool visible = sample.width > 0 && sample.height > 0;\nif (!visible) { continue; } // Empty rows do not belong in²the result.\nareas.push_back(area);\nstd::cout << sample.label << \" width \" << sample.width << \" height \" << sample.height;\nstd::cout << \" area \" << area << '\\n';\n// Sort the values before choosing the middle entry and printing the total.\nstd::sort(areas.begin(), areas.end());\nconst auto total = std::accumulate(areas.begin(), areas.end(),_0);\nconst auto middle = areas.empty()? 0 : areas[areas.size(）/ 2];\nstd::cout << \"total \" << total'<< \" middle \" << middle << '\\n';\n// A copy keeps the source vector intact while the display order is reversed.\nauto reversed = areas;\nstd::reverse(reversed.begin(), reversed.end());\nfor (const int value : reversed) { std::cout << value << ' '; }\nstd::cout << '\\n';\n// Every number and label on this page is disposable synthetic lab content.\nreturn total > 0? 0 : 1;",
+"above128Ms": 1675,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43968,
+"baseOrtKiB": 60420,
+"baseAllKiB": 87660,
+"engineOnlyKiB": 236072,
+"importMs": 833.8,
+"lines": 31,
+"elapse": [
+0.4931469801813364,
+null,
+0.9400363774038851
+],
+"peakRssKiB": 280040,
+"engineMs": 1682.9,
+"loadMs": 19.2
+},
+{
+"id": "budgie-editor-code-light-100",
+"cls": "editor-code",
+"dims": [
+1450,
+646
+],
+"chars": 1390,
+"run": 0,
+"status": "ok",
+"wall": 3.1614,
+"cpu": 2.7914,
+"maxrssKiB": 299064,
+"cer": 0.00719,
+"wer": 0.07143,
+"text": "#include <algorithm>\n#include <iostream>\n#include <numeric>\n#include <string>\n#include <vector>\nstruct Sample { std::string label; int width; int height; };\nint main() {\nconst std::vector<Sample> samples = {\n{\"garden\", 640, 480},{\"river\", 800, 600}, {\"valley\", 1024, 768}\n}i\nstd::vector<int> areas;\n// Read each synthetic sample and preserve its original label for the report.\nfor (const auto& sample : samples) {\nconst int area = sample.width * sample.height;\nconst bool visible = sample.width > 0 && sample.height > 0;\nif (!visible) { continue; }// Empty rows do not belong in the result.\nareas.push_back(area);\nstd::cout << sample.label << \" width \" << sample.width << \" height \" << sample.height;\nstd::cout << \"area \"<< area << '\\n';\n}\n// Sort the values before choosing the middle entry and printing the total.\nstd::sort(areas.begin(), areas.end());\nconst auto total = std::accumulate(areas.begin(), areas.end(), 0);\nconst auto middle = areas.empty() ? 0 : areas[areas.size() / 2];\nstd::cout << \"total \" << total<< \" middle \"<< middle << '\\n';\n// A copy keeps the source vector intact while the display order is reversed.\nauto reversed = areas;\nstd::reverse(reversed.begin(), reversed.end());\nfor (const int value : reversed) { std::cout << value << ' '; }\nstd::cout << '\\n';\n// Every number and label on this page is disposable synthetic lab content.\nreturn total > 0? 0 : 1;",
+"above128Ms": 2026,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43996,
+"baseOrtKiB": 60376,
+"baseAllKiB": 87776,
+"engineOnlyKiB": 255068,
+"importMs": 917.2,
+"lines": 32,
+"elapse": [
+0.8834182410500944,
+null,
+0.9440153050236404
+],
+"peakRssKiB": 299064,
+"engineMs": 2030.2,
+"loadMs": 19.8
+},
+{
+"id": "budgie-editor-code-dark-100",
+"cls": "editor-code",
+"dims": [
+1450,
+646
+],
+"chars": 1390,
+"run": 0,
+"status": "ok",
+"wall": 2.737,
+"cpu": 2.4237,
+"maxrssKiB": 308096,
+"cer": 0.00863,
+"wer": 0.05804,
+"text": "#include <algorithm>\n#include <iostream>\n#include <numeric>\n#include <string>\n#include <vector>\nstruct Sample { std::string label; int width; int height; }i\nint main() {\nconst std::vector<Sample> samples = {\n{\"garden\", 640, 480}, {\"river\", 800, 600}, {\"valley\", 1024, 768}\n}\nstd::vector<int> areas;\n// Read each synthetic sample and preserve its original label for the report.\nfor (const auto& sample : samples) {\nconst int area = sample.width * sample.height;\nconst bool visible = sample.width > 0 && sample.height > 0;\nif (!visible) { continue; } // Empty rows do not belong in the result.\nareas.push_back(area);\nstd::cout << sample.label << \" width \" << sample.width << \" height \" << sample.height;\nstd::cout <<\"area a\"<< area << '\\n';\n// Sort the values before choosing the middle entry and printing the total.\nstd::sort(areas.begin(), areas.end());\nconst auto total = std::accumulate(areas.begin(), areas.end(), 0);\nconst auto middle = areas.empty() ? 0 : areas[areas.size() / 2];\nstd::cout << \"total \" << total << \" middle \" << middle << '\\n';\n// A copy keeps the source vector intact while the display order is reversed.\nauto reversed = areas;\nstd::reverse(reversed.begin(), reversed.end());\nfor (const int value : reversed) { std::cout << value << ' '; }\nstd::cout << '\\n';\n// Every number and label on this page is disposable synthetic lab content.\nreturn total > 0 ?0 :1;",
+"above128Ms": 1706,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43972,
+"baseOrtKiB": 60364,
+"baseAllKiB": 87724,
+"engineOnlyKiB": 264124,
+"importMs": 845.1,
+"lines": 32,
+"elapse": [
+0.49211195996031165,
+null,
+0.9533520950935781
+],
+"peakRssKiB": 308096,
+"engineMs": 1714.3,
+"loadMs": 19.4
+},
+{
+"id": "budgie-monitor-light-100",
+"cls": "monitor",
+"dims": [
+1920,
+1080
+],
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 2.9707,
+"cpu": 2.4264,
+"maxrssKiB": 279432,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 1935,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43948,
+"baseOrtKiB": 60328,
+"baseAllKiB": 87680,
+"engineOnlyKiB": 235484,
+"importMs": 833.2,
+"lines": 24,
+"elapse": [
+0.7545873178169131,
+null,
+0.9212293857708573
+],
+"peakRssKiB": 279432,
+"engineMs": 1942.2,
+"loadMs": 19.2
+},
+{
+"id": "budgie-monitor-dark-100",
+"cls": "monitor",
+"dims": [
+1920,
+1080
+],
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 2.9131,
+"cpu": 2.5139,
+"maxrssKiB": 279256,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 1814,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43984,
+"baseOrtKiB": 60376,
+"baseAllKiB": 87648,
+"engineOnlyKiB": 235272,
+"importMs": 909.5,
+"lines": 24,
+"elapse": [
+0.7553708679042757,
+null,
+0.8796835779212415
+],
+"peakRssKiB": 279256,
+"engineMs": 1814.3,
+"loadMs": 19.2
+},
+{
+"id": "budgie-editor-code-light-125",
+"cls": "editor-code",
+"dims": [
+1813,
+808
+],
+"chars": 1390,
+"run": 0,
+"status": "ok",
+"wall": 2.7811,
+"cpu": 2.4519,
+"maxrssKiB": 284108,
+"cer": 0.01367,
+"wer": 0.12054,
+"text": "#include <algorithm>\n#include <iostream>\n#include <numeric>\n#include <string>\n#include <vector>\nstruct Sample { std::string label; int width; int height; };\nint main(){\nconst std::vector<Sample> samples = {\n{\"garden\", 640, 480},{\"river\", 800, 600}, {\"valley\", 1024, 768}\n}：\nstd::vector<int> areas;\n// Read each synthetic sample and preserve its original label for the report.\nfor (const auto& sample : samples){\nconst int area = sample.width * sample.height;\nconst bool visible = sample.width > 0 && sample.height > 0;\nif (!visible) { continue; }// Empty rows do not belong in the result.\nareas.push_back(area);\nstd::cout < sample.label << \" width \" << sample.width << \" height \" << sample.height;\nstd::cout << \" area \"<< area << '\\n';\n// Sort the values before choosing the middle entry and printing the total.\nstd::sort(areas.begin(), areas.end());\nconst auto total = std::accumulate(areas.begin(), areas.end(), 0);\nconst auto middle = areas.empty() ? 0: areas[areas.size() / 2];\nstd::cout << \"total \"<< total<< \" middle \"<< middle <<\\n';\n// A copy keeps the source vector intact while the display order is reversed.\nauto reversed = areas;\nstd::reverse(reversed.begin(), reversed.end());\nfor (const int value : reversed) { std::cout << value << ' '; }\nstd::cout << '\\n';\n// Every number and label on this page is disposable synthetic lab content.\nreturn total > 0?0 : 1;",
+"above128Ms": 1731,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43952,
+"baseOrtKiB": 60344,
+"baseAllKiB": 87660,
+"engineOnlyKiB": 240156,
+"importMs": 851.2,
+"lines": 31,
+"elapse": [
+0.5475422297604382,
+null,
+0.9324927655979991
+],
+"peakRssKiB": 284108,
+"engineMs": 1748.5,
+"loadMs": 19.3
+},
+{
+"id": "budgie-editor-code-dark-125",
+"cls": "editor-code",
+"dims": [
+1813,
+808
+],
+"chars": 1390,
+"run": 0,
+"status": "ok",
+"wall": 2.793,
+"cpu": 2.5125,
+"maxrssKiB": 283924,
+"cer": 0.01439,
+"wer": 0.13393,
+"text": "#include <algorithm>\n#include <iostream>\n#include <numeric>\n#include <string>\n#include <vector>\nstruct Sample { std::string label; int width; int height; };\nint main(){\nconst std::vector<Sample> samples = {\n{\"garden\", 640, 480}, {\"river\", 800, 600}, {\"valley\", 1024, 768}\n}i\nstd: :vector<int> areas;\n// Read each synthetic sample and preserve its original label for the report.\nfor (const auto& sample : samples) {\nconst int area = sample.width *sample.height;\nconst bool visible = sample.width >0 && sample.height > 0;\nif (!visible) { continue; }// Empty rows do not belong in the result.\nareas.push_back(area);\nstd::cout < sample.label <<\" width \" << sample.width << \" height \" << sample.height;\nstd::cout <<\"area \"<< area << '\\n';\n// Sort the values before choosing the middle entry and printing the total.\nstd::sort(areas.begin(), areas.end());\nconst auto total = std::accumulate(areas.begin(), areas.end(), 0);\nconst auto middle = areas.empty() ?0 : areas[areas.size() / 2];\nstd::cout << \"total \"<< total<<\" middle \"<< middle << '\\n';\n// A copy keeps the source vector intact while the display order is reversed.\nauto reversed = areas;\nstd::reverse(reversed.begin(), reversed.end());\nfor (const int value : reversed) { std::cout << value << ' '; }\nstd::cout << '\\n';\n// Every number and label on this page is disposable synthetic lab content.\nreturn total > 0 ? 0 : 1;",
+"above128Ms": 1724,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 44124,
+"baseOrtKiB": 60516,
+"baseAllKiB": 87840,
+"engineOnlyKiB": 239800,
+"importMs": 880.9,
+"lines": 31,
+"elapse": [
+0.5741323567926884,
+null,
+0.946168655063957
+],
+"peakRssKiB": 283924,
+"engineMs": 1727.8,
+"loadMs": 19.1
+},
+{
+"id": "budgie-monitor-light-125",
+"cls": "monitor",
+"dims": [
+1920,
+1080
+],
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 2.9305,
+"cpu": 2.425,
+"maxrssKiB": 279636,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 1901,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 44092,
+"baseOrtKiB": 60484,
+"baseAllKiB": 87872,
+"engineOnlyKiB": 235544,
+"importMs": 835.1,
+"lines": 24,
+"elapse": [
+0.7604197789914906,
+null,
+0.8691982077434659
+],
+"peakRssKiB": 279636,
+"engineMs": 1904.4,
+"loadMs": 18.9
+},
+{
+"id": "budgie-monitor-dark-125",
+"cls": "monitor",
+"dims": [
+1920,
+1080
+],
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 2.9313,
+"cpu": 2.443,
+"maxrssKiB": 303204,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 1867,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 44000,
+"baseOrtKiB": 60392,
+"baseAllKiB": 87784,
+"engineOnlyKiB": 259204,
+"importMs": 860.7,
+"lines": 24,
+"elapse": [
+0.771763110999018,
+null,
+0.9033094248734415
+],
+"peakRssKiB": 303204,
+"engineMs": 1873.4,
+"loadMs": 18.9
+},
+{
+"id": "hyprland-editor-code-light-100",
+"cls": "editor-code",
+"dims": [
+1450,
+646
+],
+"chars": 1390,
+"run": 0,
+"status": "ok",
+"wall": 2.5918,
+"cpu": 2.3849,
+"maxrssKiB": 305856,
+"cer": 0.00719,
+"wer": 0.07143,
+"text": "#include <algorithm>\n#include <iostream>\n#include <numeric>\n#include <string>\n#include <vector>\nstruct Sample { std::string label; int width; int height; };\nint main() {\nconst std::vector<Sample> samples = {\n{\"garden\", 640, 480},{\"river\", 800, 600}, {\"valley\", 1024, 768}\n}i\nstd::vector<int> areas;\n// Read each synthetic sample and preserve its original label for the report.\nfor (const auto& sample : samples) {\nconst int area = sample.width * sample.height;\nconst bool visible = sample.width > 0 && sample.height > 0;\nif (!visible) { continue; } // Empty rows do not belong in the result.\nareas.push_back(area);\nstd::cout << sample.label << \" width \" << sample.width << \" height \" << sample.height;\nstd::cout << \"area \"<< area << '\\n';\n}\n// Sort the values before choosing the middle entry and printing the total.\nstd::sort(areas.begin(), areas.end());\nconst auto total = std::accumulate(areas.begin(), areas.end(), 0);\nconst auto middle = areas.empty() ? 0 : areas[areas.size() / 2];\nstd::cout << \"total \" << total<< \" middle \"<< middle << '\\n';\n// A copy keeps the source vector intact while the display order is reversed.\nauto reversed = areas;\nstd::reverse(reversed.begin(), reversed.end());\nfor (const int value : reversed) { std::cout << value << ' '; }\nstd::cout << '\\n';\n// Every number and label on this page is disposable synthetic lab content.\nreturn total> 0? 0 : 1;",
+"above128Ms": 1575,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 44164,
+"baseOrtKiB": 60556,
+"baseAllKiB": 87880,
+"engineOnlyKiB": 261692,
+"importMs": 835.4,
+"lines": 32,
+"elapse": [
+0.4770601107738912,
+null,
+0.9229857572354376
+],
+"peakRssKiB": 305856,
+"engineMs": 1578.6,
+"loadMs": 19.1
+},
+{
+"id": "hyprland-editor-code-dark-100",
+"cls": "editor-code",
+"dims": [
+1450,
+646
+],
+"chars": 1390,
+"run": 0,
+"status": "ok",
+"wall": 2.66,
+"cpu": 2.3881,
+"maxrssKiB": 306852,
+"cer": 0.00719,
+"wer": 0.05357,
+"text": "#include <algorithm>\n#include <iostream>\n#include <numeric>\n#include <string>\n#include <vector>\nstruct Sample { std::string label; int width; int height; }i\nint main() {\nconst std::vector<Sample> samples = {\n{\"garden\", 640, 480}, {\"river\", 800, 600}, {\"valley\", 1024, 768}\n}i\nstd::vector<int> areas;\n// Read each synthetic sample and preserve its original label for the report.\nfor (const auto& sample : samples) {\nconst int area = sample.width * sample.height;\nconst bool visible = sample.width > 0 && sample.height > 0;\nif (!visible) { continue; } // Empty rows do not belong in the result.\nareas.push_back(area);\nstd::cout << sample.label << \" width \" << sample.width << \" height \" << sample.height;\nstd::cout <<\" area \"<< area <<'\\n';\n// Sort the values before choosing the middle entry and printing the total.\nstd::sort(areas.begin(), areas.end());\nconst auto total = std::accumulate(areas.begin(), areas.end(), 0);\nconst auto middle = areas.empty() ? 0 : areas[areas.size() / 2];\nstd::cout << \"total \" << total << \" middle \" << middle << '\\n';\n// A copy keeps the source vector intact while the display order is reversed.\nauto reversed = areas;\nstd::reverse(reversed.begin(), reversed.end());\nfor (const int value : reversed) { std::cout << value << ' '; }\nstd: :cout << '\\n';\n// Every number and label on this page is disposable synthetic lab content.\nreturn total > 0 ? 0 : 1;",
+"above128Ms": 1631,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43996,
+"baseOrtKiB": 60392,
+"baseAllKiB": 87812,
+"engineOnlyKiB": 262856,
+"importMs": 849.3,
+"lines": 32,
+"elapse": [
+0.5155136049725115,
+null,
+0.9388476628810167
+],
+"peakRssKiB": 306852,
+"engineMs": 1634.4,
+"loadMs": 19.7
+},
+{
+"id": "hyprland-editor-code-light-125",
+"cls": "editor-code",
+"dims": [
+1450,
+647
+],
+"chars": 1390,
+"run": 0,
+"status": "ok",
+"wall": 2.7067,
+"cpu": 2.3335,
+"maxrssKiB": 304524,
+"cer": 0.00791,
+"wer": 0.08036,
+"text": "#include <algorithm>\n#include <iostream>\n#include <numeric>\n#include <string>\n#include <vector>\nstruct Sample { std::string label; int width; int height; };\nint main() {\nconst std::vector<Sample> samples = {\n{\"garden\", 640, 480},{\"river\", 800, 600}, {\"valley\", 1024, 768}\n}i\nstd::vector<int> areas;\n// Read each synthetic sample and preserve its original label for the report.\nfor (const auto& sample : samples) {\nconst int area = sample.width *sample.height;\nconst bool visible = sample.width > 0 && sample.height > 0;\nif (!visible) { continue; } // Empty rows do not belong in the result.\nareas.push_back(area);\nstd::cout << sample.label << \" width \" << sample.width << \" height \" << sample.height;\nstd::cout << \" area \"<< area << '\\n';\n}\n// Sort the values before choosing the middle entry and printing the total.\nstd::sort(areas.begin(), areas.end());\nconst auto total = std::accumulate(areas.begin(), areas.end(), 0);\nconst auto middle = areas.empty() ? 0: areas[areas.size() /2];\nstd::cout << \"total \" << total << \" middle \"<< middle << '\\n';\n// A copy keeps the source vector intact while the display order is reversed.\nauto reversed = areas;\nstd::reverse(reversed.begin(), reversed.end());\nfor (const int value : reversed) { std::cout << value << ' '; }\nstd::cout << '\\n';\n// Every number and label on this page is disposable synthetic lab content.\nreturn total> 0? 0 : 1;",
+"above128Ms": 1670,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 44000,
+"baseOrtKiB": 60400,
+"baseAllKiB": 87768,
+"engineOnlyKiB": 260524,
+"importMs": 836.3,
+"lines": 32,
+"elapse": [
+0.4697453868575394,
+null,
+0.9113984890282154
+],
+"peakRssKiB": 304524,
+"engineMs": 1695.0,
+"loadMs": 19.0
+},
+{
+"id": "hyprland-editor-code-dark-125",
+"cls": "editor-code",
+"dims": [
+1450,
+647
+],
+"chars": 1390,
+"run": 0,
+"status": "ok",
+"wall": 2.7165,
+"cpu": 2.3889,
+"maxrssKiB": 303680,
+"cer": 0.01079,
+"wer": 0.08929,
+"text": "#include <algorithm>\n#include <iostream>\n#include <numeric>\n#include <string>\n#include <vector>\nstruct Sample { std::string label; int width; int height; };\nint main() {\nconst std::vector<Sample> samples = {\n{\"garden\", 640, 480}, {\"river\", 800, 600}, {\"valley\", 1024, 768}\n}:\nstd::vector<int> areas;\n// Read each synthetic sample and preserve its original label for the report.\nfor (const auto& sample : samples) {\nconst int area = sample.width *sample.height;\nconst bool visible = sample.width >0 && sample.height > 0;\nif (!visible) { continue; } // Empty rows do not belong in the result.\nareas.push_back(area);\nstd::cout << sample.label << \" width \" << sample.width << \" height \" << sample.height;\nstd::cout << \" area a\"<< area < '\\n';\n// Sort the values before choosing the middle entry and printing the total.\nstd::sort(areas.begin(), areas.end());\nconst auto total = std::accumulate(areas.begin(), areas.end(), 0);\nconst auto middle = areas.empty() ? 0 : areas[areas.size() /2];\nstd::cout << \"total \"<< total<< \"middle \"<< middle << '\\n';\n// A copy keeps the source vector intact while the display order is reversed.\nauto reversed = areas;\nstd::reverse(reversed.begin(), reversed.end());\nfor (const int value : reversed) { std::cout << value << ' '; }\nstd::cout << '\\n';\n// Every number and label on this page is disposable synthetic lab content.\nreturn total > 0 ? 0 : 1;",
+"above128Ms": 1679,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43984,
+"baseOrtKiB": 60376,
+"baseAllKiB": 87676,
+"engineOnlyKiB": 259696,
+"importMs": 826.6,
+"lines": 32,
+"elapse": [
+0.4751722668297589,
+null,
+0.9490408729761839
+],
+"peakRssKiB": 303680,
+"engineMs": 1683.8,
+"loadMs": 18.9
+},
+{
+"id": "hyprland-monitor-light-125",
+"cls": "monitor",
+"dims": [
+1920,
+1080
+],
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 3.6851,
+"cpu": 3.1621,
+"maxrssKiB": 279276,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 2570,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43924,
+"baseOrtKiB": 60324,
+"baseAllKiB": 87692,
+"engineOnlyKiB": 235352,
+"importMs": 879.3,
+"lines": 24,
+"elapse": [
+1.3383626090362668,
+null,
+0.9886342687532306
+],
+"peakRssKiB": 279276,
+"engineMs": 2585.5,
+"loadMs": 20.0
+},
+{
+"id": "hyprland-monitor-dark-125",
+"cls": "monitor",
+"dims": [
+1920,
+1080
+],
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 2.9794,
+"cpu": 2.4395,
+"maxrssKiB": 278824,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 1907,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43720,
+"baseOrtKiB": 60040,
+"baseAllKiB": 87276,
+"engineOnlyKiB": 235104,
+"importMs": 873.5,
+"lines": 24,
+"elapse": [
+0.7470719455741346,
+null,
+0.9317249529995024
+],
+"peakRssKiB": 278824,
+"engineMs": 1913.4,
+"loadMs": 18.8
+},
+{
+"id": "hyprland-monitor-light-100",
+"cls": "monitor",
+"dims": [
+1920,
+1080
+],
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 2.9603,
+"cpu": 2.4666,
+"maxrssKiB": 302696,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 1928,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43812,
+"baseOrtKiB": 60152,
+"baseAllKiB": 87364,
+"engineOnlyKiB": 258884,
+"importMs": 840.1,
+"lines": 24,
+"elapse": [
+0.7390323830768466,
+null,
+0.9481808710843325
+],
+"peakRssKiB": 302696,
+"engineMs": 1932.3,
+"loadMs": 18.9
+},
+{
+"id": "hyprland-monitor-dark-100",
+"cls": "monitor",
+"dims": [
+1920,
+1080
+],
+"chars": 1889,
+"run": 0,
+"status": "ok",
+"wall": 2.9777,
+"cpu": 2.4257,
+"maxrssKiB": 278916,
+"cer": 0.0,
+"wer": 0.0,
+"text": "Paragraph 01: Line 01: A careful reader checks each sample beside the river today.\nParagraph 02: Line 02: A careful reader reads each sample beside the river today.\nParagraph 03: Line 03: A careful reader compares each sample beside the river today.\nParagraph 04: Line 04: A careful reader reviews each sample beside the river today.\nParagraph 05: Line 05: A careful reader counts each sample beside the river today.\nParagraph 06: Line 06: A careful reader measures each sample beside the river today.\nParagraph 07: Line 07: A careful reader observes each sample beside the river today.\nParagraph 08: Line 08: A careful reader records each sample beside the river today.\nParagraph 09: Line 09: A careful reader opens each sample beside the river today.\nParagraph 10: Line 10: A careful reader closes each sample beside the river today.\nParagraph 11: Line 11: A careful reader shows each sample beside the river today.\nParagraph 12: Line 12: A careful reader checks each sample beside the river today.\nParagraph 13: Line 13: A careful reader reads each sample beside the river today.\nParagraph 14: Line 14: A careful reader compares each sample beside the river today.\nParagraph 15: Line 15: A careful reader reviews each sample beside the river today.\nParagraph 16: Line 16: A careful reader counts each sample beside the river today.\nParagraph 17: Line 17: A careful reader measures each sample beside the river today.\nParagraph 18: Line 18: A careful reader observes each sample beside the river today.\nParagraph 19: Line 19: A careful reader records each sample beside the river today.\nParagraph 20: Line 20: A careful reader opens each sample beside the river today.\nParagraph 21: Line 21: A careful reader closes each sample beside the river today.\nParagraph 22: Line 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid",
+"above128Ms": 1923,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43660,
+"baseOrtKiB": 60068,
+"baseAllKiB": 87320,
+"engineOnlyKiB": 235256,
+"importMs": 823.6,
+"lines": 24,
+"elapse": [
+0.7595922839827836,
+null,
+0.9346681241877377
+],
+"peakRssKiB": 278916,
+"engineMs": 1941.8,
+"loadMs": 18.8
+},
+{
+"id": "gnome4k-monitor-light",
+"cls": "monitor",
+"dims": [
+3840,
+2160
+],
+"chars": 9706,
+"run": 0,
+"status": "ok",
+"wall": 9.1821,
+"cpu": 4.102,
+"maxrssKiB": 609372,
+"cer": 0.07696,
+"wer": 0.12032,
+"text": "Corpus terminal\nLine 0l: A careful reader checks each sample beside the river today.\nine 02: A careful reader reads each sample beside the river today.\nine 03: A careful reader compares each sample beside the river today.\nLine 04: A careful reader reviews each sample beside the river today.\nLine 05: A careful reader counts each sample beside the river today.\n_ine 06: A careful reader measures each sample beside the river today.\nLine 07: A careful reader observes each sample beside the river today.\nLine 08: A careful reader records each sample beside the river today.\n↑ Line 10: A careful reader closes each sample beside the river today. Line 09: A careful reader opens each sample beside the river today.\nLine 11: A careful reader shows each sample beside the river today.\nX Line 13: A careful reader reads each sample beside the river today. Line 14: A careful reader compares each sample beside the river today. ine 12: A careful reader checks each sample beside the river today.\nLine 15: A careful reader reviews each sample beside the river today.\nLine 16: A careful reader counts each sample beside the river today.\nLine 17: A careful reader measures each sample beside the river today.\nLine 18: A careful reader observes each sample beside the river today.\nLine 19: A careful reader records each sample beside the river today.\nLine 20: A careful reader opens each sample beside the river today.\nLine 21: A careful reader closes each sample beside the river today.\nLine 22: A careful reader shows each sample beside the river today.\n2\nCorpus code\ninclude <algorithm>\n#include <iostream>\n#include <numeric>\n#include <string>\n#include <vector>\nstruct Sample { std::string label; int width; int height; };\nint main()\nconst std::vector<Sample> samples = {\n{\"garden\", 640, 480}, {\"river\", 800, 600}, {\"valley\", 1024, 768}\n}i\nstd::vector<int> areas;\n// Read each synthetic sample and preserve its original label for the report.\nfor (const auto& sample : samples) {\nconst int area = sample.width * sample.height;\nconst bool visible = sample.width > 0 && sample.height > 0;\nif (!visible) { continue; } // Empty rows do not belong in the result.\nareas.push_back(area);\nstd::cout < sample.label << \" width \" << sample.width << \" height \" << sample.height;\nstd::cout << \" area \"<< area << '\\n';\n// Sort the values before choosing the middle entry and printing the total.\nstd::sort(areas.begin(), areas.end());\nconst auto total = std::accumulate(areas.begin(), areas.end(), 0);\nconst auto middle = areas.empty() ? 0: areas[areas.size() / 2];\nstd::cout << \"total \" << total << \" middle \" << middle << '\\n';\n// A copy keeps the source vector intact while the display order is reversed.\nauto reversed = areas;\nstd::reverse(reversed.begin(), reversed.end());\nfor (const int value : reversed) { std::cout << value << ' '; }\nstd::cout << '\\n';\n// Every number and label on this page is disposable synthetic lab content.\nreturn total > 0? 0: 1;\n\n□ × Line 01: A careful reader checks each sample beside the river today.\nLine 02: A careful reader reads each sample beside the river today.\nLine 03: A careful reader compares each sample beside the river today.\nLine 04: A careful reader reviews each sample beside the river today.\nLine 05: A careful reader counts each sample beside the river today.\nLine 06: A careful reader measures each sample beside the river today.\nLine 07: A careful reader observes each sample beside the river today.\nLine 08: A careful reader records each sample beside the river today.\nLine 09: A careful reader opens each sample beside the river today.\nLine 10: A careful reader closes each sample beside the river today.\nLine 11: A careful reader shows each sample beside the river today.\nLine 12: A careful reader checks each sample beside the river today.\nLine 13: A careful reader reads each sample beside the river today.\nLine 14: A careful reader compares each sample beside the river today.\nLine 15: A careful reader reviews each sample beside the river today.\nLine 16: A careful reader counts each sample beside the river today.\nLine 17: A careful reader measures each sample beside the river today.\nLine 18: A careful reader observes each sample beside the river today.\nLine 19: A careful reader records each sample beside the river today.\nLine 20: A careful reader opens each sample beside the river today.\nLine 21: A careful reader closes each sample beside the river today.\nLine 22: A careful reader shows each sample beside the river today.\n\nNoV 13 06:08\n\nhttps://example.invalid/corpus\ncorpus@example.invalid\n□ ×\nProducts Developers Businesses Resources Pricing\n\nSearch\n\nSign in Sign up\n\npatrick-hudson / put.gd-desktop\n<> Code ISsues 23 {3 Pull requests 4  Actions 田 Projects 0 Security and quality  Insights\ntest(text): recognition corpus and  performance harness (#1428) #1430\nfo Merged patrick-hudson merged 9 commits intofeat/text-recognitionfrom feat/text-corpus □15 minutes ago\nQ Conversation -0 Commits 9 曰 Checks 11 Files changed 9\n\n+719 0000\n\npatrick-hudson commented 3 hours ago • edited \n\nOwner\n\nReviewers\nNo reviews\n\nImplements the corpus and performance tools for #1428, against feat/text-recognition .\n\nAssignees\n\nThe scorer compares captured text after Unicode NFC normalization and whitespace collapsing, with case preserved. It No one assigned\nreports exact character edit distance for each image, median character error rate for each target class, and occurrence-\n\ncounted exact matches for URLs and email addresses at eleven pixels and above. Distribution Tesseract can be\nmeasured immediately, without building put.gd. The same scorer accepts helper JSON later. Receipts identify the\nimages, transcripts, engine version, language data hash, segmentation mode, and scaling method.\n\nWIKIPEDIA Search Wikipedia\n25 years of the free eneyclopedia\n\nSearch\n\nLabels\nNone yet\n\nDonate Create account Log in\n\nQR code\n\n文A81 languages \n\nContents hide\n\nArticle Talk\n\nRead View source view history\n\nAppearance hide\n\n(Top)\n\nFrom Wikipedia, the free encyclopedia\n\nText\n\n>History\nAdoption\nUses\nRisks\nDesign\nStandards\n\nA QR code, short for quick-response code,[1] is a type of two-dimensional matrix\nbarcode invented in 1994 by Masahiro Hara of the Japanese company Denso Wave for\nlabelling automobile parts.[2][3] It features white (\"O\") and black (\"1\") squares within a\nsquare grid featuring fiducial markers on the corners, readable by imaging devices like\ncameras, and processed using Reed-Solomon error correction until the image can be\nappropriately interpreted. The required data is then extracted from patterns that are\npresent in both the horizontal and the vertical components of the QR image.[4]\n\nSmall\nStandard\nLarge\nWidth\n Standard\n\n> Variants\n\nWhereas a barcode is a machine-readable optical image that contains information\n\nWide\n\nLicense specific to the labeled item, the QR code contains the data for a locator, an identifier, and Color\nSee also Other 2-D barcodes web tracking. To store data efficiently, QR codes use four standardized modes of encoding: numeric, alphanumeric, byte or binary, and kanji.[5] Compared to standard English Wikipedia main page A QR code for the URL of the Automatic\nUPC barcodes, the QR labeling system was applied beyond the automobile industry • Light\nReferences\nbecause of faster reading of the optical image and greater data-storage capacity in Dark\nBibliography applications such as product tracking, item identification, time tracking, document management, and general marketing.[4]\n\nSynthetic conversation\n\nCorpus synthetic chat\n\nMessage 01: Please compare this synthetic sample with the previous display before continuing.\nMessage 02: Please compare this synthetic sample with the previous display before continuing.\nMessage 0 3: Please compare this synthetic sample with the previous display before continuing.\nMessage 04: Please compare this synthetic sample with the previous display before continuing.\nMessage 05: Please compare this synthetic sample with the previous display before continuing.\nMessage 06: Please compare this synthetic sample with the previous display before continuing.\nMessage 07: Please compare this synthetic sample with the previous display before continuing.\nMessage 08: Please compare this synthetic sample with the previous display before continuing.\nMessage 09: Please compare this synthetic sample with the previous display before continuing.\nMessage 10: Please compare this synthetic sample with the previous display be fore continuing.\nMessage 11: Please compare this synthetic sample with the previous display before continuing.\nMessage 12: Please compare this synthetic sample with the previous display before continuing.\nMessage 1 3: Please compare this synthetic sample with the previous display before continuing.\nMessage 14: Please compare this synthetic sample with the previous display before continuing.\nMessage 15: Please compare this synthetic sample with the previous display before continuing.\nMessage 16: Please compare this synthetic sample with the previous display before continuing.\nMessage 17: Please compare this synthetic sample with the previous display before continuing.\nMessage 18: Please compare this synthetic sample with the previous display before continuing.\nMessage 19: Please compare this synthetic sample with the previous display before continuing.\nMessage 20: Please compare this synthetic sample with the previous display be fore continuing.\nMessage 21: Please compare this synthetic sample with the previous display be fore continuing.\nMessage 22: Please compare this synthetic sample with the previous display before continuing.\nMessage 23: Please compare this synthetic sample with the previous display before continuing.\nMessage 24: Please compare this synthetic sample with the previous display before continuing.\nCancel\n\nOK\n\n卷 ) U",
+"above128Ms": 7996,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43696,
+"baseOrtKiB": 60032,
+"baseAllKiB": 87240,
+"engineOnlyKiB": 565676,
+"importMs": 860.9,
+"lines": 221,
+"elapse": [
+2.833350107073784,
+null,
+4.831919218879193
+],
+"peakRssKiB": 609372,
+"engineMs": 7999.6,
+"loadMs": 19.2
+},
+{
+"id": "gnome4k-monitor-dark",
+"cls": "monitor",
+"dims": [
+3840,
+2160
+],
+"chars": 9708,
+"run": 0,
+"status": "ok",
+"wall": 9.1737,
+"cpu": 4.0878,
+"maxrssKiB": 609412,
+"cer": 0.07283,
+"wer": 0.10755,
+"text": "Corpus terminal\nLine 0l: A careful reader checks each sample beside the river today.\nLine 02: A careful reader reads each sample beside the river today.\nLine 03: A careful reader compares each sample beside the river today.\nLine 04: A careful reader reviews each sample beside the river today.\nLine 05: A careful reader counts each sample beside the river today.\nLine 06: A careful reader measures each sample beside the river today.\nLine 07: A careful reader observes each sample beside the river today.\nLine 08: A careful reader records each sample beside the river today.\nT Line 10: A careful reader closes each sample beside the river today. Line 09: A careful reader opens each sample beside the river today.\nLine 1l: A careful reader shows each sample beside the river today.\nLine 12: A careful reader checks each sample beside the river today.\nLine 13: A careful reader reads each sample beside the river today.\nLine 14: A careful reader compares each sample beside the river today.\nLine 15: A careful reader reviews each sample beside the river today.\nLine 16: A careful reader counts each sample beside the river today.\nLine 17: A careful reader measures each sample beside the river today.\nLine 18: A careful reader observes each sample beside the river today.\nLine 19: A careful reader records each sample beside the river today.\nLine 20: A careful reader opens each sample beside the river today.\nLine 21: A careful reader closes each sample beside the river today.\nLine 22: A careful reader shows each sample beside the river today.\nCorpus code\n#include <algorithm>\n#include <iostream>\n#include <numeric>\n#include <string>\n#include <vector>\nstruct Sample { std::string label; int width; int height; };\nint main()\nconst std::vector<Sample> samples =\n{\"garden\", 640, 480}, {\"river\", 800, 600}, {\"valley\", 1024, 768}\nstd::vector<int> areas;\n// Read each synthetic sample and preserve its original label for the report.\nfor (const auto& sample : samples)\nconst int area = sample.width * sample.height;\nconst bool visible = sample.width >0 && sample.height > 0;\nif (!visible) { continue; } // Empty rows do not belong in the result.\nareas.push_back(area);\nstd: :cout < sample.label << \" width \" << sample.width << \" r height \" << sample.height;\nstd::cout << \" area \" << area << '\\n';\n/ Sort the values before choosing the middle entry and printing the total.\nstd::sort(areas.begin(), areas.end());\nconst auto total = std::accumulate(areas.begin(), areas.end(), 0);\nconst auto middle = areas.empty() ? 0 : areas[areas.size() / 2];\nstd::cout << \"total \" << total << \" middle \" << middle << '\\n';\n// A copy keeps the source vector intact while the display order is reversed.\nauto reversed = areas;\nstd::reverse(reversed.begin(), reversed.end());\nfor (const int value : reversed) { std::cout << value << '\nstd::cout << '\\n';\n// Every number and label on this page is disposable synthetic lab content.\nreturn total > 0 ? 0 : l;\n\n□ × Line 01: A careful reader checks each sample beside the river today.\n\nNoV 13 06:12\n\nLine 02: A careful reader reads each sample beside the river today.\nLine 03: A careful reader compares each sample beside the river today.\nLine 04: A careful reader reviews each sample beside the river today.\nLine 05: A careful reader counts each sample beside the river today.\nLine 06: A careful reader measures each sample beside the river today.\nLine 07: A careful reader observes each sample beside the river today.\nLine 08: A careful reader records each sample beside the river today.\nLine 09: A careful reader opens each sample beside the river today.\nLine 10: A careful reader closes each sample beside the river today.\nLine 11: A careful reader shows each sample beside the river today.\nLine 12: A careful reader checks each sample beside the river today.\nLine 13: A careful reader reads each sample beside the river today.\nLine 14: A careful reader compares each sample beside the river today.\nLine 15: A careful reader reviews each sample beside the river today.\nLine 16: A careful reader counts each sample beside the river today.\nLine 17: A careful reader measures each sample beside the river today.\nLine 18: A careful reader observes each sample beside the river today.\nLine 19: A careful reader records each sample beside the river today.\nLine 20: A careful reader opens each sample beside the river today.\nLine 21: A careful reader closes each sample beside the river today.\nLine 22: A careful reader shows each sample beside the river today.\nhttps://example.invalid/corpus\ncorpus@example.invalid\n\n□\n\nProducts Developers Businesses Resources Pricing\n\nSearch\n\nSign in Sign up\n\npatrick-hudson / put.gd-desktop\n<> Code Issues 23 ?à Pull requests  Actions 田 Projects ① Security and quality ~ Insights\ntest(text): recognition corpus and performance harness (#1428) #1430\nfo Merged patrick-hudson merged 9 commits intofeat/text-recognitionfrom feat/text-corpus □ 19 minutes ago\nQ Conversation -o Commits 9 曰l Checks 11  Files changed 9\n\n+719 00000\n\npatrick-hudson commented 3 hours ago • edited\n\nOwner\n\nReviewers\nNo reviews\n\nImplements the corpus and performance tools for #1428, against feat/text-recognition.\n\nAssignees\n\nThe scorer compares captured text after Unicode NFC normalization and whitespace collapsing, with case preserved. It No one assigned\nreports exact character edit distance for each image, median character error rate for each target class, and occurrence-\n\ncounted exact matches for URLs and email addresses at eleven pixels and above. Distribution Tesseract can be\nmeasured immediately, without building put.gd. The same scorer accepts helper JSON later. Receipts identify the\nimages, transcripts, engine version, language data hash, segmentation mode, and scaling method.\n\nWIKIPEDIAy\n25 years of the free encyclopedia\n\nSearch Wikipedia\n\nSearch\n\nLabels\nNone yet\n\nDonate Create account Log in\n\nContents hide\n(Top)\n>History\nAdoption\nUses\nRisks\n Design\nStandards\n> Variants\nLicense\nOther 2-D barcodes\nSee also\nReferences\nBibliography\n\nQR code\n\n文A 81 languages\n\nArticle Talk\n\nRead View source View history\n\nAppearance hide\n\nFrom Wikipedia, the free encyclopedia\n\nText\n\nA QR code, short for quick-response code,[1] is a type of two-dimensional matrix\nbarcode invented in 1994 by Masahiro Hara of the Japanese company Denso Wave for\nlabelling automobile parts.[2][3] It features white (\"O\") and black (\"1\") squares within a\nsquare grid featuring fiducial markers on the corners, readable by imaging devices like\n\nSmall\nStandard\nLarge\n\ncameras, and processed using Reed-Solomon error correction until the image can be\nappropriately interpreted. The required data is then extracted from patterns that are\npresent in both the horizontal and the vertical components of the QR image.[4]\n\nWidth\nStandard\n\nWhereas a barcode is a machine-readable optical image that contains information\n\nWide\n\nspecific to the labeled item, the QR code contains the data for a locator, an identifier, and\n\nColor\n\nweb tracking. To store data efficiently, QR codes use four standardized modes of\nA QR code for the URL of the\nencoding: numeric, alphanumeric, byte or binary, and kanji.[5] Compared to standard English Wikipedia main page\nUPC barcodes, the QR labeling system was applied beyond the automobile industry\nbecause of faster reading of the optical image and greater data-storage capacity in\napplications such as product tracking, item identification, time tracking, document management, and general marketing.[4]\n\nAutomatic\nLight\nDark\n\nSynthetic conversation\n\nCorpus synthetic chat\n\nMessage 01: Please compare this synthetic sample with the previous display before continuing.\nMessage 02: Please compare this synthetic sample with the previous display before continuing.\nMessage 03: Please compare this synthetic sample with the previous display before continuing.\nMessage 04: Please compare this synthetic sample with the previous display before continuing.\nMessage 05: Please compare this synthetic sample with the previous display before continuing.\nMessage 06: Please compare this synthetic sample with the previous display before continuing.\nMessage 07: Please compare this synthetic sample with the previous display before continuing.\nMessage 08: Please compare this synthetic sample with the previous display before continuing.\nMessage 09: Please compare this synthetic sample with the previous display before continuing.\nMessage 10: Please compare this synthetic sample with the previous display before continuing.\nMessage 11: Please compare this synthetic sample with the previous display before continuing.\nMessage 12: Please compare this synthetic sample with the previous display before continuing.\nMessage 13: Please compare this synthetic sample with the previous display before continuing.\nMessage 14: Please compare this synthetic sample with the previous display before continuing.\nMessage 15: Please compare this synthetic sample with the previous display before continuing.\nMessage 16: Please compare this synthetic sample with the previous display before continuing.\nMessage 17: Please compare this synthetic sample with the previous display before continuing.\nMessage 18: Please compare this synthetic sample with the previous display before continuing.\nMessage 19: Please compare this synthetic sample with the previous display before continuing.\nMessage 20: Please compare this synthetic sample with the previous display before continuing.\nMessage 21: Please compare this synthetic sample with the previous display before continuing.\nMessage 22: Please compare this synthetic sample with the previous display before continuing.\nMessage 23: Please compare this synthetic sample with the previous display before continuing.\nMessage 24: Please compare this synthetic sample with the previous display before continuing.\nCancel\n\nOK\n\n) U",
+"above128Ms": 8034,
+"ep": [
+"WebGpuExecutionProvider",
+"WebGpuExecutionProvider"
+],
+"firstMs": null,
+"baseKiB": 43736,
+"baseOrtKiB": 60076,
+"baseAllKiB": 87268,
+"engineOnlyKiB": 565676,
+"importMs": 818.6,
+"lines": 217,
+"elapse": [
+2.807055313140154,
+null,
+4.978482875972986
+],
+"peakRssKiB": 609412,
+"engineMs": 8034.7,
+"loadMs": 18.6
+}
+]
