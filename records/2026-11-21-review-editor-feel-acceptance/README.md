@@ -11,7 +11,7 @@ PR 1791 did not meet acceptance. A blocked row is missing a required observation
 | Row | Aurora Plasma 6.8.2 Wayland, AppImage | Mint 22.3 Cinnamon 6.6.9 X11, DEB |
 | --- | --- | --- |
 | A · Grip and edge offsets | Pass | Pass |
-| B · Hover and skim | Fail | Fail |
+| B · Hover and skim | Pass | Pass |
 | C · Drag, snap and cancel | Pass | Pass |
 | D · Covers and typed Save | Blocked | Pass |
 | E · Keyboard and focus | Blocked | Pass |
@@ -23,7 +23,7 @@ PR 1791 did not meet acceptance. A blocked row is missing a required observation
 | --- | --- | --- |
 | Fedora 44 GNOME Shell 50.6 Wayland, physical `f44` | RPM | Pass |
 | Fedora 44 Budgie 10.10.2 on labwc 0.9.6, guest `b1` | AppImage | Pass |
-| Omarchy 4.5.0 Hyprland Wayland, guests `o1` and `o2` | AppImage | Blocked at recording readiness |
+| Omarchy 4.5.0 Hyprland Wayland, guest `o5` | AppImage | Pass after readiness retest |
 
 ## Before and after on Plasma
 
@@ -42,7 +42,7 @@ Candidate `26.1121.6117-dev+g799e392e24ee` on the [full Aurora desktop](pictures
 ## Plasma observations
 
 - The intended resize occurred at the centre of all 16 picture handles. Selected cut-edge trials improved from 17/21 to 19/21 on both edges versus the previous Cinnamon nightly run. The [offset table](measurements/hit-targets.md) distinguishes the two compositors and measurement windows. All eight off-midpoint side bands produced the intended resize in 16/21 trials each on both desktops.
-- The 1920×1080 skim sweep produced 26.24 observed viewer updates per second at a 31.16 Hz sample rate, then restored the same decoded frame. Clicking the live skim kept that frame, and a trim drag displayed the edge. The deliberate low-horizontal-ratio post-click gesture re-engaged skim after a 240 ms dwell in step `B-hover-0938`. [Visual skim trace](measurements/plasma-skim-visual.json) · [Assertion receipts](measurements/plasma-assertion-findings.json)
+- The 1920×1080 skim sweep produced 26.24 observed viewer updates per second at a 31.16 Hz sample rate, then restored the same decoded frame. Clicking the live skim kept that frame, and a trim drag displayed the edge. The (+14,+8) px move re-engaged skim after a 240 ms dwell in step `B-hover-0938`. That follows the confirmed design rule. After a click, moving at least 12 px from the click allows a 150 ms dwell to count as skim intent. [Visual skim trace](measurements/plasma-skim-visual.json) · [Assertion receipts](measurements/plasma-assertion-findings.json)
 - With the trim grip aimed five pixels past the playhead, snapping put the trim on the playhead frame. Holding Ctrl and turning Snap off each allowed the adjacent frame. Two early attempts to put the endpoints in view fell short. The corrected test used the furthest valid seek and scrolled the viewport to the edge, then verified the exact 0 and duration trim limits at 2×. A separate drag snapped the cover to the 6 s cut boundary, and the ruler scrub reached the adjacent 6.033333 s frame. [Snap receipt](measurements/plasma-snap.json) · [Endpoints](measurements/plasma-zoomed-trim-endpoints.json) · [Other edge and adjacent frame](measurements/plasma-snap-to-cut-and-adjacent.json)
 - The typed-field Save test did not complete its first field commit with the VNC keyboard. The follow-up input fixture also failed to arm the cover or establish the K speed setup. Real Skim and Snap button presses switched the controls off. The follow-up keyboard presses did not switch them back. Plain Enter and the other exercised shortcuts were checked in the main run. Focused Upload activation and a full set of focus contexts remain unverified on Plasma.
 - The 1100×700 overlay scrolled to a different cover. Clicking the row selected it and closed the overlay. Reopening Edits displayed that cover’s details. A click through to the ruler while Edits was open closed the overlay and moved the playhead. [Selected cover details](pictures/aurora-compact-details.png)
@@ -52,7 +52,7 @@ Candidate `26.1121.6117-dev+g799e392e24ee` on the [full Aurora desktop](pictures
 
 Budgie’s native labwc session on AppImage `26.1121.6117-dev+g799e392e24ee` recorded the moving test pattern, opened review, cut a middle span, and resized the redaction from its top-left handle. Its saved MP4 matched the 10.733333 s shown duration. The guest’s FFmpeg could not initialize OpenH264, so the existing capture and export were checksum-verified and decoded on Aurora. Across the cut and cover checks, all 83 identifiable cut-interior frame codes were absent and all four redaction samples matched. [Budgie review](pictures/budgie-smoke-review.png) · [Decoded export](measurements/budgie-export.json)
 
-Omarchy’s native Hyprland session on AppImage `26.1121.6117-dev+g799e392e24ee` showed the output picker with the synthetic capture surface. The first overlay timed out at the 45 s recording-ready gate. The fresh overlay also timed out with a 105 s gate. Neither attempt reached an editable recording. [Picker witness](pictures/omarchy-screen-share-picker.png)
+Omarchy’s native Hyprland session on AppImage `26.1121.6117-dev+g799e392e24ee` showed the output picker with the synthetic capture surface. The first overlay timed out at the 45 s recording-ready gate. The fresh overlay also timed out with a 105 s gate. Neither attempt reached an editable recording. On fresh overlay o5, the same candidate and nightly both reached review with the corrected picker control and 210 s readiness gate. [Picker witness](pictures/omarchy-screen-share-picker.png) · [Matched comparison](omarchy-comparison/README.md)
 
 ## Measured exports
 
@@ -70,7 +70,7 @@ Detailed [Plasma](measurements/plasma-export.json), [Cinnamon](measurements/cinn
 ## Cinnamon observations
 
 - The native recording fixture captured at 1920×1080 and the seeded offset matrix used the maximized 1920×1040 review client. The full-desktop witness used the same running DEB first put into fullscreen. [Cinnamon desktop, 26.1121.6117-dev+g799e392e24ee](pictures/mint-full-desktop.png)
-- The 1080p skim sweep showed 22.26 viewer updates per second at a 27.00 Hz sample rate and restored the same decoded frame. Clicking the skim kept its time. A trim drag showed the edge frame. The Skim and Snap controls toggled both ways. The low-ratio gesture produced the same `B-hover-0938` finding as on Plasma. Six vertical or diagonal crossings per desktop produced no sampled skim frames. [Skim trace](measurements/cinnamon-skim-visual.json) · [Crossings](measurements/vertical-crossings.json)
+- The 1080p skim sweep showed 22.26 viewer updates per second at a 27.00 Hz sample rate and restored the same decoded frame. Clicking the skim kept its time. A trim drag showed the edge frame. The Skim and Snap controls toggled both ways. The same (+14,+8) px move and dwell engaged skim as designed. Six vertical or diagonal crossings per desktop produced no sampled skim frames. [Skim trace](measurements/cinnamon-skim-visual.json) · [Crossings](measurements/vertical-crossings.json)
 - Both trim brackets reached their exact endpoint at 2× zoom, and the cancel gestures preserved the edits. The initial snap check used a microsecond distance threshold. Frame-index scoring of the same gestures proved that Snap chose the playhead frame and Ctrl and N chose the adjacent frame. One additional Ctrl-wheel probe reported no zoom change. A separate real-pointer drag snapped the cover to the 6 s cut boundary, and the ruler scrub reached the 6.033333 s adjacent frame. [Other edge and adjacent frame](measurements/cinnamon-snap-to-cut-and-adjacent.json) · [Endpoints](measurements/cinnamon-zoomed-trim-endpoints.json) · [Snap receipt](measurements/cinnamon-snap.json) · [Assertion receipts](measurements/cinnamon-assertion-findings.json)
 - Both cover types showed four distinct resize cursor images with matching opposite pairs. The typed cover moved from 2–8 s to 3–7 s. The Until field still read 8 s in the committed edit immediately before the Save button press, and the saved MP4 samples verified the 3–7 s result. [Cover cursors](measurements/cinnamon-cover-cursors.json) · [Typed Save and decoded samples](measurements/cinnamon-typed-save-copy.json)
 - K reset 4× playback to paused 1×. Space did not start playback from the focused cover time field. Enter left the review open until the local-only Upload button had keyboard focus, at which point Enter wrote the private copy. [K](measurements/cinnamon-keyboard-k.json) · [Enter focus](measurements/cinnamon-local-focused-enter.json)
