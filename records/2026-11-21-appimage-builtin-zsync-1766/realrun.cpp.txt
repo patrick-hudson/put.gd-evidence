@@ -1,0 +1,27 @@
+// Throwaway driver for the #1766 real-target run on d69; never committed.
+// It is putgd-cli --install-update with one change: the build identity is the
+// seed's (an older published nightly) instead of this dev build's, which has
+// no release channel. Everything else is the product code: the feed, the
+// signed SHA256SUMS checked with the compiled nightly key, pkg.put.gd's .zsync
+// and Range requests, and the swap.
+#include "cli/UpdateInstall.h"
+#include "core/CaBundle.h"
+#include "core/Update.h"
+#include <QCoreApplication>
+#include <QElapsedTimer>
+#include <QJsonDocument>
+#include <cstdio>
+using namespace putgd;
+static void print(const QJsonObject& object) {const auto bytes=QJsonDocument(object).toJson(QJsonDocument::Compact)+'\n';std::fwrite(bytes.constData(),1,bytes.size(),stdout);std::fflush(stdout);}
+int main(int argc,char** argv) {
+ QCoreApplication app(argc,argv);
+ if(argc<4){std::fprintf(stderr,"realrun VERSION METHOD STATE\n");return 2;}
+ InstallOptions options;options.channel="nightly";options.method=QString::fromLocal8Bit(argv[2]);options.stateRoot=QString::fromLocal8Bit(argv[3]);
+ options.image=qEnvironmentVariable("APPIMAGE");
+ useHostCaBundle();
+ const auto build=update::build(QJsonObject{{"version",QString::fromLocal8Bit(argv[1])},{"gitCommit","0000000000000000000000000000000000000000"},{"dirty",false},{"sourceProvenance","git"}},"appimage",true);
+ QElapsedTimer took;took.start();
+ Error error;const auto result=installUpdate(build,options,print,error);
+ print({{"schemaVersion",1},{"ok",!error},{"result",error?QJsonObject{}:result},{"error",error.toJson()},{"seconds",double(took.elapsed())/1000}});
+ return error?1:0;
+}
