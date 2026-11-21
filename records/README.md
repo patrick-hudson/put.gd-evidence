@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-21-removed-destination-1759](2026-11-21-removed-destination-1759/README.md) | #1759, #1760 | Deleting files whose destination was removed (#1759, PR #1760) |
 | [2026-11-21-scroll-video-1747](2026-11-21-scroll-video-1747/README.md) | #1747 | Live scrolling capture with playing video on Aurora and Mint |
 | [2026-11-21-settings-error-log-1753](2026-11-21-settings-error-log-1753/README.md) | #1753, #1756 | Settings error log and History's deletion notice (#1753, PR #1756) |
 | [2026-11-21-tray-stages-real-upload-retest](2026-11-21-tray-stages-real-upload-retest/README.md) | — | Physical tray activity and live S3 re-test |
