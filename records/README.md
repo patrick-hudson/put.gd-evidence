@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-21-budgie-tray-row-click](2026-11-21-budgie-tray-row-click/README.md) | — | Budgie nightly: the Tray menu click landed above the Capture region row |
 | [2026-11-21-settings-remove-default-1762](2026-11-21-settings-remove-default-1762/README.md) | #1762 | Removing the default destination no longer shows "Settings changed elsewhere" (#1762) |
 | [2026-11-21-deletion-readded-settle](2026-11-21-deletion-readded-settle/README.md) | #1772 | Retry deletion settles a deletion stopped by a destination added back (#1772) |
 | [2026-11-21-appimage-builtin-zsync-1766](2026-11-21-appimage-builtin-zsync-1766/README.md) | #1766 | AppImage updates with put.gd's own zsync client (#1766) |
