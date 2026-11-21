@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-21-review-editor-feel-acceptance](2026-11-21-review-editor-feel-acceptance/README.md) | — | Recording review acceptance for PR 1791 |
 | [2026-11-21-b2-parallel-parts](2026-11-21-b2-parallel-parts/README.md) | #1792, #1798 | B2 large files send parts on idle upload slots (#1792, PR #1798) |
 | [2026-11-21-b2-slow-upload-1782](2026-11-21-b2-slow-upload-1782/README.md) | #1782 | B2 upload on a slow connection finishes instead of being cut at the request timeout (#1782) |
 | [2026-11-21-scroll-white-boxes-1557](2026-11-21-scroll-white-boxes-1557/README.md) | #1557 | Scrolling capture: white boxes over page content (#1557), round 1 — 2026-11-21 |
