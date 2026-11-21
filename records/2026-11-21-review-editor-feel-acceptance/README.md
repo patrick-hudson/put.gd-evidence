@@ -1,5 +1,7 @@
 # Recording review acceptance for PR 1791
 
+See the [campaign results through final candidate e28a26af0](followup-e28a26af0/README.md) for the retests and the matched final Omarchy smoke. This page records the original package run.
+
 The candidate was built by manual CI run [44948858752](https://github.com/patrick-hudson/put.gd-desktop/actions/runs/44948858752). The source commit was `799e392e24ee807bc0c7ec8f3fc8814676cdc105` and the source tree was `ad40905e88405725ebee0697a418cebc124b47af`. The candidate AppImage identified itself as `26.1121.6117-dev+g799e392e24ee`. All fixtures were synthetic and used a private local destination. System audio and microphone were disabled.
 
 The offset matrix used seed `2611216060` and the baseline driver's trajectories. The nightly comparison uses `26.1121.6060-nightly`. Images were annotated with the candidate's offscreen image editor.
