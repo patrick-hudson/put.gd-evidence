@@ -1,0 +1,7 @@
+# Budgie nightly: the Tray menu click landed above the Capture region row
+
+The nightly `v26.1121.6060-nightly` (build `4a7730e4a844582745b9cc3b7686826943c903b1`) ran the Fedora 45 Budgie row on d69 (guest `fedora45-budgie`, run `831390d1`). The Tray menu cell found put.gd's turkey icon by its pixels (score 0.947), opened the menu and read all 16 rows. It then clicked "Capture region", and put.gd recorded no click.
+
+`click-point.png` is that run's frame `tray_menu-1/frames/outcomes.tray_menu/01-tray-menu-by-pixels.png` (cropped, 3x). Tesseract 5.5.0 on d69 read the same crop the recipe reads (box `[864, 272, 1116, 768]`, 12 px margin, 2x, `--psm 4`). It returned the menu's top-left corner as a 15x43 px mark `‘` on the first line, so the "Capture region" line box was `[852, 260, 150, 47]` and its centre (927, 283.5) lay in the menu's top padding (red). With the line box built only from words that have a letter or digit, the same read gives `[900, 293, 102, 14]` and the click point (951, 300) on the row (green).
+
+The menu was then never closed, because the recipe only closed it when no row had been pressed. It held the grab through the cell's second attempt, which then couldn't find the icon, and through Copy text, Live S3, Live R2 and Live Proton, which all reported "input target 'outcome-pattern' is obscured by 'no focused window'". The fix closes the menu on any failure after the press as well.
