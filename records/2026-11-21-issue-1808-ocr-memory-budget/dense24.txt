@@ -1,0 +1,20 @@
+Dense 24 MP page (synth/dense24.png, 6000x4000, sha256 42a4ad5edc961beadf3dfa92ce6f06ed32353d797607aed65aff70f15b03d037), 3 runs each.
+peakKiB = largest VmHWM of the putgd-ocr child, sampled every 5 ms (fileocr.py); peakRssKiB = test_ocr_run's own helper peak figure.
+
+k72, candidate DEB 609c8a64e (packaged resident, text.recognize source=file):
+after {"totalMs": 15816, "engineStartMs": 115, "truncated": true, "peakKiB": 172116, "chars": 70602}
+after {"totalMs": 15401, "engineStartMs": 115, "truncated": true, "peakKiB": 170896, "chars": 66138}
+after {"totalMs": 15663, "engineStartMs": 115, "truncated": true, "peakKiB": 170400, "chars": 66138}
+k72, today's helper (research tree build of nightly + bench-only knobs off, same distro libtesseract, test_ocr_run):
+before {"totalMs": 15538, "peakRssKiB": 116492, "truncated": true, "chars": 48546}
+before {"totalMs": 15574, "peakRssKiB": 117392, "truncated": true, "chars": 48546}
+before {"totalMs": 15559, "peakRssKiB": 117340, "truncated": true, "chars": 48546}
+
+aurora-amd, candidate AppImage 609c8a64e (its own resident and helper):
+after {"totalMs": 12982, "engineStartMs": 20, "truncated": true, "peakKiB": 141124, "chars": 211696}
+after {"totalMs": 12817, "engineStartMs": 20, "truncated": true, "peakKiB": 142124, "chars": 211696}
+after {"totalMs": 12777, "engineStartMs": 20, "truncated": true, "peakKiB": 142244, "chars": 211696}
+aurora-amd, published nightly 26.1121.6060 AppImage:
+before {"totalMs": 15352, "engineStartMs": 20, "truncated": true, "peakKiB": 126156, "chars": 211696}
+before {"totalMs": 15343, "engineStartMs": 21, "truncated": true, "peakKiB": 125924, "chars": 211696}
+before {"totalMs": 15378, "engineStartMs": 20, "truncated": true, "peakKiB": 126256, "chars": 211696}
