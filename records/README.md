@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-21-issue-1805-ocr-speed](2026-11-21-issue-1805-ocr-speed/README.md) | — | Issue 1805: OCR speed research raw timings |
 | [2026-11-21-scroll-lost-marks-1795](2026-11-21-scroll-lost-marks-1795/README.md) | #1795 | Scrolling capture: no rows marked as changing from a guessed place while lost (#1795) |
 | [2026-11-21-review-editor-feel-acceptance](2026-11-21-review-editor-feel-acceptance/README.md) | — | Recording review acceptance for PR 1791 |
 | [2026-11-21-b2-parallel-parts](2026-11-21-b2-parallel-parts/README.md) | #1792, #1798 | B2 large files send parts on idle upload slots (#1792, PR #1798) |
