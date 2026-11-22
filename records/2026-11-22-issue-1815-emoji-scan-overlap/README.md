@@ -17,7 +17,7 @@ Acceptance for [#1815](https://github.com/patrick-hudson/put.gd-desktop/issues/1
 | 4 MP+ screens, mean of medians (×5) | 1.15 / 1.16 s | 0.97 / 0.97 s (−15%) |
 | GNOME 4K light / dark | 1.98 / 1.47 s | 1.75 / 1.20 s |
 | Dense 24 MP page (×3) | 9.05 s | 8.2 s (−9%) |
-| Peak, corpus / dense page | 140 / 203 MiB | 141 / 205 MiB |
+| Peak, corpus / dense page | 137–140 / 203 MiB | 141–142 / 205 MiB |
 | Corpus text against before | | identical, 176/176 (both pairs) |
 | #1748 emoji crops | | identical text, emoji included, 26/26 in every run; 299 emoji a pass |
 
