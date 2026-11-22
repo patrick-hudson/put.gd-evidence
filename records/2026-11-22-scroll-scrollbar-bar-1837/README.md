@@ -32,3 +32,18 @@ showed, and `finish()` painted them flat: 17,573 px missing over three lines of 
   one of them (seed 120: 38 px before, 486 after).
 - No synthetic scene reproduced the real failure: three hand-built scroll-bar strips were not learned as standing still
   the way a browser's scroll bar is. The recorded-frame replay above is the regression evidence.
+
+## Live runs on the candidate packages
+
+Candidate packages from CI run 44983466388 (`26.1122.6302~dev+ge2d8f5f6c653`), with the packaged `putgd-record` as the
+helper. The tracker is the same as the final head `080f4c3e7`, which changes only a test. The lab driver was built from a
+clean clone at the same commit, and its identity matches.
+
+| Desktop | Runs | Ended | Height | Skipped frames |
+| --- | --- | --- | --- | --- |
+| m74, Linux Mint 22.3 Cinnamon X11, Firefox, GitHub PR #1398, "you scroll" | 6 | 6 `done` | all 43,089 of 43,089 rows | 0-86 |
+| aurora-amd, Aurora Fedora 45 Plasma Wayland, Firefox, same page | 3 | 3 `done` | all 43,079 of 43,079 rows | 0 |
+
+No white boxes over text outside the PR body's embedded screenshots, and no stray edge lines in page rows. Run bar-5's one
+difference from Firefox's picture is GitHub's hover card for a linked pull request, which popped up while the harness's
+pointer rested on a link: it was on the screen.
