@@ -1,0 +1,109 @@
+{
+  "counts": {
+    "card": 0,
+    "email": 1,
+    "ip": 0,
+    "key": 1,
+    "phone": 0
+  },
+  "expectedNonzeroCounts": {
+    "key": 1,
+    "email": 1
+  },
+  "countsPass": true,
+  "allSavedMarkPixelsOpaqueBlack": true,
+  "changedOutsideMarks": 0,
+  "marks": [
+    {
+      "id": 1,
+      "kind": "redact",
+      "rect": [
+        160,
+        200,
+        682,
+        40
+      ],
+      "suggested": "key",
+      "savedIntersection": [
+        95,
+        0,
+        777,
+        39
+      ],
+      "opaqueBlackPixels": 26598,
+      "intersectionPixels": 26598
+    },
+    {
+      "id": 2,
+      "kind": "redact",
+      "rect": [
+        47,
+        226,
+        401,
+        52
+      ],
+      "suggested": "email",
+      "savedIntersection": [
+        0,
+        25,
+        383,
+        77
+      ],
+      "opaqueBlackPixels": 19916,
+      "intersectionPixels": 19916
+    }
+  ],
+  "regions": [
+    {
+      "region": "Bearer token",
+      "expectedKind": "key",
+      "rectDesktopEdges": [
+        178,
+        205,
+        823,
+        235
+      ],
+      "inkPixels": 3801,
+      "changedPixels": 19350,
+      "changedInkPixels": 3801,
+      "inkPixelsInsideAnyMark": 3801,
+      "inkPixelsInsideExpectedKind": 3801,
+      "inkPixelsOutsideOpaqueBlackMarks": 0,
+      "inkPixelsByMark": {
+        "1": 3801,
+        "2": 159
+      },
+      "kinds": [
+        "email",
+        "key"
+      ],
+      "pass": true
+    },
+    {
+      "region": "email",
+      "expectedKind": "email",
+      "rectDesktopEdges": [
+        66,
+        237,
+        426,
+        268
+      ],
+      "inkPixels": 1764,
+      "changedPixels": 11160,
+      "changedInkPixels": 1764,
+      "inkPixelsInsideAnyMark": 1764,
+      "inkPixelsInsideExpectedKind": 1764,
+      "inkPixelsOutsideOpaqueBlackMarks": 0,
+      "inkPixelsByMark": {
+        "2": 1764,
+        "1": 6
+      },
+      "kinds": [
+        "email",
+        "key"
+      ],
+      "pass": true
+    }
+  ],
+  "pass": true
+}
