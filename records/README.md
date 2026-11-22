@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-21-sensitive-text-desktop-1804](2026-11-21-sensitive-text-desktop-1804/README.md) | #1804 | Sensitive text check desktop acceptance for PR 1806 |
 | [2026-11-22-issue-1812-ocr-engine-count](2026-11-22-issue-1812-ocr-engine-count/README.md) | #1812 | #1812: text recognition on up to eight engines |
 | [2026-11-22-scroll-turnback-lookalike-1797](2026-11-22-scroll-turnback-lookalike-1797/README.md) | #1797 | Scrolling capture: a look-alike half a screen back no longer wins over the place that goes on (#1797) |
 | [2026-11-21-issue-1808-ocr-memory-budget](2026-11-21-issue-1808-ocr-memory-budget/README.md) | — | Issue 1808: text recognition memory budget raised to 320 MiB |
