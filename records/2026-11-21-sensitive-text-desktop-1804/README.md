@@ -247,3 +247,38 @@ confirms the fixed dashboard path.
 The root Settings picture is the reopened frame from this DEB, cropped and
 annotated with its own put.gd editor. The root prompt picture comes from the
 GNOME session on `74327614e` and was annotated in that build's editor.
+
+## Ubuntu GNOME AppIndicator follow-up on 1eafcaf18
+
+The nightly matrix's Ubuntu 26.04.1 GNOME Wayland golden ran as a fresh
+d69 overlay at 1280 × 800. Ubuntu AppIndicators was active by default
+(`ubuntu-appindicators@ubuntu.com`, GNOME Shell 50.1,
+`gnome-shell-ubuntu-extensions` version `50.26.04.7ubuntu`).
+The native Ubuntu 26.04 DEB came from CI run 44973033446.
+Its SHA-256 is `39944a89a914db009f0bffdb5dc6a8d3dcac1534444325997b338113f9915e7a`.
+The running resident reported `1eafcaf18fd7a0bfd48309e7d949c81bd9f3ea72`
+and the exact tree `c0098c5317bfa210788daa44b1ab7c250e247a2a`.
+The restarted guest loaded put.gd's GNOME capture extension version 25 and
+reported a registered StatusNotifier host. f44's packages and extension
+settings were left as found.
+
+Tray icon visibility and initial prompt focus passed. With the sensitive
+text check enabled, hold Ctrl+Shift+F9 and select the synthetic card across
+`(75, 132)` to `(760, 330)`. The prompt opened raised. Tab visibly focused
+Cancel without a mouse click. Click the synthetic fixture at `(1120, 350)`
+to cover the prompt. Left-click put.gd's gold icon at `(1157, 15)`.
+
+The tray restore check failed. That click opened put.gd's tray menu, including
+the Open put.gd row, and left the prompt covered. The resident's tray-menu
+open counter advanced once. The 20-second header-only D-Bus trace around the
+click showed neither `org.kde.StatusNotifierItem.Activate` nor
+`ProvideXdgActivationToken`. Operation `dc8f1646-77a0-4aca-855a-1dd6c8415ff8`
+remained in `sensitive_text_found`, with one complete card finding, prompt
+counter 1, and no uploaded items. The display frames, exact operation JSON,
+trial receipt and logs are under `ubuntu-gnome-tray/`.
+
+The row stopped at that failure, before Upload anyway, the second capture's
+notification check, and clicking Open put.gd. The CLI Cancel used for cleanup
+saved one local-only History item and sent zero objects. The candidate package
+was removed and the overlay retired. The original Fedora GNOME no-tray result
+above covered notification Show.
