@@ -1,0 +1,48 @@
+A {"expectedMatches": 4620, "marks": {"casesCoveringNeighbours": 126, "casesLeaking": 7, "leakedPixels": 342, "lineCases": 4620, "neighbourInkPixels": 8665, "neighbourWordsTouched": 126}, "missedByRecognition": 177}
+B {"expectedMatches": 4620, "marks": {"casesCoveringNeighbours": 120, "casesLeaking": 0, "leakedPixels": 0, "lineCases": 4620, "neighbourInkPixels": 7715, "neighbourWordsTouched": 120}, "missedByRecognition": 177}
+email sentence {'cases': 660, 'A missed': 51, 'B missed': 51, 'A leak': 6}
+email end of line {'cases': 660, 'A missed': 45, 'B missed': 45, 'A neighbour': 75, 'B neighbour': 70, 'A leak': 1}
+email after a sentence dot {'cases': 660, 'A missed': 24, 'B missed': 24}
+email with initials {'cases': 660, 'A missed': 39, 'B missed': 39, 'A neighbour': 51, 'B neighbour': 50}
+token was leaked today {'cases': 660}
+token (expires next week). {'cases': 660}
+stripe was rotated {'cases': 660, 'A missed': 18, 'B missed': 18}
+('Noto Sans', 18, 'noise', 1) email end of line A 0 94 B 0 0
+   A ['email: jane.doe@example.com', 'email: jane.doe@example.com', 'email: bobb@example.com', 'email: j..doe@example.org', 'key: ghp_<test token> MN3pQ5rS7tU9VW1xY3ZA5 was leaked today', 'key: ghp_<test token> MN3pQ5rS7tU9VW1xY3zZAS5 (expires next week).', 'key: sk_live_<test token> was rotated'] 
+   B ['email: jane.doe@example.com', 'email: at jane.doe@example.com', 'email: bobb@example.com', 'email: j..doe@example.org', 'key: ghp_<test token> MN3pQ5rS7tU9VW1xY3ZA5 was leaked today', 'key: ghp_<test token> MN3pQ5rS7tU9VW1xY3zZAS5 (expires next week).', 'key: sk_live_<test token> was rotated']
+('Red Hat Display', 9, 'dark', 0) email sentence A 46 0 B 0 0
+   A ['email: doe@example.com', 'email: doe@example.com', 'email: j.-doe@example.org', 'key: ghp_<test token> was leaked today', 'key: ghp_<test token> (expires next week).', 'key: sk_live_<test token> was rotated'] 
+   B ['email: jane. doe@example.com', 'email: doe@example.com', 'email: j.-doe@example.org', 'key: ghp_<test token> was leaked today', 'key: ghp_<test token> (expires next week).', 'key: sk_live_<test token> was rotated']
+('Red Hat Display', 9, 'noise', 1) email end of line A 46 0 B 0 0
+   A ['email: jane.doe@example.com', 'email: doe@example.com', 'email: j.-doe@exampile.org', 'key: ghp_<test token> was leaked today', 'key: ghp_<test token> (expires next week).', 'key: sk_live_<test token> was rotated'] 
+   B ['email: jane.doe@example.com', 'email: jane. doe@example.com', 'email: j.-doe@exampile.org', 'key: ghp_<test token> was leaked today', 'key: ghp_<test token> (expires next week).', 'key: sk_live_<test token> was rotated']
+('Red Hat Display', 10, 'dark', 0) email sentence A 50 0 B 0 0
+   A ['email: doe@example.com', 'email: jane.doe@example.com', 'email: bob@example.com', 'email: j..doe@example.org', 'key: ghp_<test token> was leaked today', 'key: ghp_<test token> 32A5 (expires next week).', 'key: sk_live_<test token> was rotated'] 
+   B ['email: jane. doe@example.com', 'email: jane.doe@example.com', 'email: bob@example.com', 'email: j..doe@example.org', 'key: ghp_<test token> was leaked today', 'key: ghp_<test token> 32A5 (expires next week).', 'key: sk_live_<test token> was rotated']
+('Red Hat Display', 10, 'gradient', 0) email sentence A 50 0 B 0 0
+   A ['email: doe@example.com', 'email: jane.doe@example.com', 'email: bob@example.com', 'email: j..doe@example.org', 'key: ghp_<test token> was leaked today', 'key: ghp_<test token> 3245 (expires next week).', 'key: sk_live_<test token> was rotated'] 
+   B ['email: jane doe@example.com', 'email: jane.doe@example.com', 'email: bob@example.com', 'email: j..doe@example.org', 'key: ghp_<test token> was leaked today', 'key: ghp_<test token> 3245 (expires next week).', 'key: sk_live_<test token> was rotated']
+('Red Hat Display', 10, 'light', 0) email sentence A 50 0 B 0 0
+   A ['email: doeg@example.com', 'email: jane.doe@example.com', 'email: bob@example.com', 'email: j..doe@example.org', 'key: ghp_<test token> was leaked today', 'key: ghp_<test token> 3245 (expires next week).', 'key: sk_live_<test token> was rotated'] 
+   B ['email: jane. doeg@example.com', 'email: jane.doe@example.com', 'email: bob@example.com', 'email: j..doe@example.org', 'key: ghp_<test token> was leaked today', 'key: ghp_<test token> 3245 (expires next week).', 'key: sk_live_<test token> was rotated']
+('Red Hat Display', 10, 'noise', 0) email sentence A 50 0 B 0 0
+   A ['email: doeg@example.com', 'email: jane.doe@example.com', 'email: bob@example.com', 'email: j..doe@example.org', 'key: ghp_<test token> Ixy 3zA5 was leaked today', 'key: ghp_<test token> 3245 (expires next week).', 'key: sk_live_<test token> was rotated'] 
+   B ['email: jane. doeg@example.com', 'email: jane.doe@example.com', 'email: bob@example.com', 'email: j..doe@example.org', 'key: ghp_<test token> Ixy 3zA5 was leaked today', 'key: ghp_<test token> 3245 (expires next week).', 'key: sk_live_<test token> was rotated']
+('Red Hat Display', 10, 'tint', 0) email sentence A 50 0 B 0 0
+   A ['email: doe@example.com', 'email: jane.doe@example.com', 'email: bob@example.com', 'email: j..doe@example.org', 'key: ghp_<test token> was leaked today', 'key: ghp_<test token> 32A5 (expires next week).', 'key: sk_live_<test token> was rotated'] 
+   B ['email: jane doe@example.com', 'email: jane.doe@example.com', 'email: bob@example.com', 'email: Mail j..doe@example.org', 'key: ghp_<test token> was leaked today', 'key: ghp_<test token> 32A5 (expires next week).', 'key: sk_live_<test token> was rotated']
+('Red Hat Display', 10, 'tint', 3) email with initials A 0 57 B 0 0
+   A ['email: doe@example.com', 'email: jane.doe@example.com', 'email: bob@example.com', 'email: j..doe@example.org', 'key: ghp_<test token> was leaked today', 'key: ghp_<test token> 32A5 (expires next week).', 'key: sk_live_<test token> was rotated'] 
+   B ['email: jane doe@example.com', 'email: jane.doe@example.com', 'email: bob@example.com', 'email: Mail j..doe@example.org', 'key: ghp_<test token> was leaked today', 'key: ghp_<test token> 32A5 (expires next week).', 'key: sk_live_<test token> was rotated']
+('Red Hat Display', 32, 'gradient', 1) email end of line A 0 241 B 0 0
+   A ['email: jane.doe@example.com', 'email: jane.doe@example.com', 'email: bob@example.com', 'email: j..doe@example.org', 'key: ghp_<test token> 3ZA5 was leaked today', 'key: ghp_<test token> 3ZA5 (expires next week).', 'key: sk_live_<test token> was rotated'] 
+   B ['email: jane.doe@example.com', 'email: at jane.doe@example.com', 'email: bob@example.com', 'email: j..doe@example.org', 'key: ghp_<test token> 3ZA5 was leaked today', 'key: ghp_<test token> 3ZA5 (expires next week).', 'key: sk_live_<test token> was rotated']
+('Red Hat Display', 32, 'light', 1) email end of line A 0 241 B 0 0
+   A ['email: jane.doe@example.com', 'email: jane.doe@example.com', 'email: bob@example.com', 'email: j..doe@example.org', 'key: ghp_<test token> 3ZA5 was leaked today', 'key: ghp_<test token> 3ZA5 (expires next week).', 'key: sk_live_<test token> was rotated'] 
+   B ['email: jane.doe@example.com', 'email: at jane.doe@example.com', 'email: bob@example.com', 'email: j..doe@example.org', 'key: ghp_<test token> 3ZA5 was leaked today', 'key: ghp_<test token> 3ZA5 (expires next week).', 'key: sk_live_<test token> was rotated']
+('Red Hat Text', 16, 'noise', 1) email end of line A 0 85 B 0 0
+   A ['email: jane.doe@example.com', 'email: jane.doe@example.com', 'email: bob@example.com', 'email: j...doe@example.org', 'key: ghp_<test token> 3ZA5 was leaked today', 'key: ghp_<test token> (expires next week).', 'key: sk_live_<test token> was rotated'] 
+   B ['email: jane.doe@example.com', 'email: at jane.doe@example.com', 'email: bob@example.com', 'email: j...doe@example.org', 'key: ghp_<test token> 3ZA5 was leaked today', 'key: ghp_<test token> (expires next week).', 'key: sk_live_<test token> was rotated']
+('Red Hat Text', 32, 'dark', 1) email end of line A 0 232 B 0 0
+   A ['email: jane.doe@example.com', 'email: jane.doe@example.com', 'email: bob@example.com', 'email: j.r.doe@example.org', 'key: ghp_<test token> was leaked today', 'key: ghp_<test token> 3zA5 (expires next week).', 'key: sk_live_<test token> was rotated'] 
+   B ['email: jane.doe@example.com', 'email: at jane.doe@example.com', 'email: bob@example.com', 'email: j.r.doe@example.org', 'key: ghp_<test token> was leaked today', 'key: ghp_<test token> 3zA5 (expires next week).', 'key: sk_live_<test token> was rotated']
