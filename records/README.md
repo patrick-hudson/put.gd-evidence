@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-22-quick-redact-token-tail-1839](2026-11-22-quick-redact-token-tail-1839/README.md) | #1839, #1857 | Quick redact: words after a whole token, #1839 (PR #1857) |
 | [2026-11-22-quick-redact-hex-tail-1850](2026-11-22-quick-redact-hex-tail-1850/README.md) | #1850, #1853 | Quick redact: a wrapped secret's letter-only tail, #1850 (PR #1853) |
 | [2026-11-22-quick-redact-email-split-1840](2026-11-22-quick-redact-email-split-1840/README.md) | #1840, #1851 | Quick redact: an email split in its local part, #1840 (PR #1851) |
 | [2026-11-22-auto-redact-desktop-1820](2026-11-22-auto-redact-desktop-1820/README.md) | #1820 | Auto-redact on upload: desktop acceptance for PR 1826 (issue 1820) |
