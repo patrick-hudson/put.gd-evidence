@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-22-storage-destinations-final-d69-last](2026-11-22-storage-destinations-final-d69-last/README.md) | — | Final redaction labels and idle tray quit on d69 |
 | [2026-11-22-storage-destinations-final-k72](2026-11-22-storage-destinations-final-k72/README.md) | — | Final storage destination acceptance on k72 |
 | [2026-11-22-storage-destinations-final-aurora-amd-rerun](2026-11-22-storage-destinations-final-aurora-amd-rerun/README.md) | — | Aurora desktop rerun for SFTP cancellation and recording Review |
 | [2026-11-22-storage-destinations-final-d69](2026-11-22-storage-destinations-final-d69/README.md) | — | Final storage destination desktop acceptance on d69 |
