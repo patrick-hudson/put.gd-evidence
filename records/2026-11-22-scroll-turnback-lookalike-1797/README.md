@@ -1,7 +1,7 @@
 # Scrolling capture: a look-alike half a screen back no longer wins over the place that goes on (#1797)
 
 Evidence for the #1797 fix ([PR](https://github.com/patrick-hudson/put.gd-desktop/pulls?q=1797)), branch `fix/scroll-jump-lookalike-1797`,
-head `416850099d0be37eaf97d0b79fe6ddeabce4b2c0`.
+final head `09930ec2c902462a4a2079c2a3792c883c0bf056` (the real-use check below ran on the first head `41685009`; the final head gives the same stride results and also keeps a turn back the whole overlap agrees with).
 
 ## Real-use check
 
@@ -26,5 +26,21 @@ true places.
 ## Offline checks
 
 - The 7 full recordings replay pixel-identical to nightly. The 160-sequence corpus is identical to nightly.
-- New tracker test (seed 790 of a randomized search, kept exactly): nightly misplaces 11 frames, the PR none. 87/87 under UBSan.
-- 4,000 randomized look-alike scenes: wrong placements 31,599 → 31,200 (60 scenes better, 10 worse).
+- New tracker test (seed 3583 of a randomized search, kept exactly): nightly misplaces 6 frames, the PR none. 88/88 under UBSan.
+- 4,000 randomized look-alike scenes at the final head: wrong placements 31,599 → 31,372 (33 better, 7 worse; all 7 already broken on nightly).
+
+## Live runs on the candidate packages (final head)
+
+Candidate packages from CI run 44974180968 (`26.1122.6221~dev+g09930ec2c902`), with the packaged `putgd-record` as the
+helper. The lab driver was built from a clean clone at the same commit, and its identity matches.
+
+| Desktop | Runs | Ended | Height | Skipped frames |
+| --- | --- | --- | --- | --- |
+| m74, Linux Mint 22.3 Cinnamon X11, Firefox, GitHub PR #1398, "you scroll" | 6 | 6 `done` | all 44,586 of 44,586 rows | 0-95 |
+| aurora-amd, Aurora Fedora 45 Plasma Wayland, Firefox, same page | 3 | 3 `done` | all 43,079 of 43,079 rows | 0-1 |
+
+On m74, five captures differ from Firefox's picture only in the embedded screenshots and the image's last row. One (turn-2)
+had white boxes over words and a half-cut text line. Two tee'd runs of the same tracker, made right after, kept every
+frame. They replay pixel-identical between nightly and the PR, and the live captures equal their replays. So that defect
+is in code shared with nightly; it is filed as
+[#1837](https://github.com/patrick-hudson/put.gd-desktop/issues/1837). Aurora: no boxes.
