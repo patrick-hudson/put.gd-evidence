@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-22-pr-1920-quick-redact-dark-themes](2026-11-22-pr-1920-quick-redact-dark-themes/README.md) | #1920 | PR #1920 Quick redact in dark themes |
 | [2026-11-22-quick-redact-followups-1916](2026-11-22-quick-redact-followups-1916/README.md) | #1916 | Quick redact follow-up on Cinnamon and Plasma |
 | [2026-11-22-quick-redact-dev-secrets-1894](2026-11-22-quick-redact-dev-secrets-1894/README.md) | #1894 | Quick redact developer secrets on Cinnamon and Plasma |
 | [2026-11-22-issue-1898-fedora-debian-aurora](2026-11-22-issue-1898-fedora-debian-aurora/README.md) | — | Sensitive-text prompt acceptance on Fedora, Debian and Aurora |
