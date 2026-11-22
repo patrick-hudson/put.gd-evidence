@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-22-quick-redact-dropped-dot-1854](2026-11-22-quick-redact-dropped-dot-1854/README.md) | #1854, #1864 | Quick redact: a word joined to an address by a dropped dot, #1854 (PR #1864) |
 | [2026-11-22-pr-1863-quick-redact-line-end-recheck](2026-11-22-pr-1863-quick-redact-line-end-recheck/README.md) | #1863 | Quick redact line-end token recheck after review for PR #1863 |
 | [2026-11-22-quick-redact-card-columns-1846](2026-11-22-quick-redact-card-columns-1846/README.md) | #1846, #1861 | Quick redact: a mark per column, #1846 (PR #1861) |
 | [2026-11-22-pr-1863-quick-redact-line-end](2026-11-22-pr-1863-quick-redact-line-end/README.md) | #1863 | Quick redact line-end token desktop acceptance for PR #1863 |
