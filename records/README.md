@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-22-quick-redact-card-columns-1846](2026-11-22-quick-redact-card-columns-1846/README.md) | #1846, #1861 | Quick redact: a mark per column, #1846 (PR #1861) |
 | [2026-11-22-pr-1863-quick-redact-line-end](2026-11-22-pr-1863-quick-redact-line-end/README.md) | #1863 | Quick redact line-end token desktop acceptance for PR #1863 |
 | [2026-11-22-quick-redact-token-tail-1839](2026-11-22-quick-redact-token-tail-1839/README.md) | #1839, #1857 | Quick redact: words after a whole token, #1839 (PR #1857) |
 | [2026-11-22-quick-redact-hex-tail-1850](2026-11-22-quick-redact-hex-tail-1850/README.md) | #1850, #1853 | Quick redact: a wrapped secret's letter-only tail, #1850 (PR #1853) |
