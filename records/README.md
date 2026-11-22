@@ -9,6 +9,8 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-22-sftp-key-file-1892-m74](2026-11-22-sftp-key-file-1892-m74/README.md) | — | SFTP key file acceptance on m74 |
+| [2026-11-22-sftp-key-file-1892-aurora-amd](2026-11-22-sftp-key-file-1892-aurora-amd/README.md) | — | SFTP key file acceptance on aurora-amd |
 | [2026-11-22-sftp-key-file-1892-k72](2026-11-22-sftp-key-file-1892-k72/README.md) | — | SFTP key file acceptance on k72 |
 | [2026-11-22-sftp-key-file-1892-f44](2026-11-22-sftp-key-file-1892-f44/README.md) | — | SFTP key file acceptance on f44 |
 | [2026-11-22-sftp-key-file-1892-d69](2026-11-22-sftp-key-file-1892-d69/README.md) | — | SFTP key file acceptance on d69 |
