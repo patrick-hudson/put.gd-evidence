@@ -282,3 +282,45 @@ notification check, and clicking Open put.gd. The CLI Cancel used for cleanup
 saved one local-only History item and sent zero objects. The candidate package
 was removed and the overlay retired. The original Fedora GNOME no-tray result
 above covered notification Show.
+
+## Ubuntu GNOME notification recovery on 33dc0d1fc (PR 1831)
+
+The Ubuntu 26.04.1 GNOME Wayland guest on d69 used the same nightly
+golden and its default AppIndicator tray. The active native DEB was
+`26.1122.6248~dev+g33dc0d1fcb14` from CI run 44976335039 and reported
+tree `9b125d76888909eafbcfa6914ce9218153648b94`. The instance used an
+isolated loopback destination with desktop notifications enabled and
+local retention disabled.
+
+- A 685 × 198 hotkey region of the synthetic card opened the panel
+  raised and focused. Tab moved keyboard focus to Cancel. The banner
+  read “A capture is waiting for your decision.” One notification was
+  recorded for `bc15b5f1-774c-45c6-b1ed-8f72ab0aca3e`.
+- Clicking the fixture covered the panel. I opened GNOME's message
+  list from the clock, expanded that notice, and clicked **Show**.
+  GNOME kept its message list open after the action. Closing the list
+  with the clock revealed the same prompt above the fixture.
+- Clicking **Upload anyway** sent one object to the loopback receiver.
+  The retrieved 685 × 198 PNG shows the original synthetic number.
+- A second hotkey capture sent one notice for
+  `593f0cc0-d962-4fa8-a149-59b1685df464`. I clicked Cancel on the prompt.
+  There was no upload or repeated notification. The annotated picture
+  shows this second banner expanded alongside the prompt, with marks
+  drawn using the same build's put.gd editor.
+- A CLI report-mode capture, `7f272d94-b68f-4762-b98c-c6db8cd954d3`,
+  waited in `sensitive_text_found` without a panel or a new notice.
+  `operation.decide` with `cancel` settled it without an upload.
+- One actual left-click on put.gd's AppIndicator at `(1157, 15)`
+  opened its menu, including Open put.gd.
+
+The resident log attributes the two waiting notices to the two human
+operations. The header-only D-Bus trace has two transport calls per
+notice because Ubuntu's gjs proxy forwards to GNOME Shell. The same
+proxy relays the single Shell Show signal back to put.gd. Counts in
+`notification-verification.json` use the original sender for each.
+The first fixture preflight timed out with Settings covering it, before
+any capture was created. Closing that window allowed the test to start.
+
+The DEB was removed and the fresh overlay was retired after exporting
+and verifying the operation evidence. The files are under
+`ubuntu-gnome-notification-1831/`.
