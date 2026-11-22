@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-22-storage-destinations-final-d69](2026-11-22-storage-destinations-final-d69/README.md) | — | Final storage destination desktop acceptance on d69 |
 | [2026-11-22-storage-destinations-final-m74](2026-11-22-storage-destinations-final-m74/README.md) | — | Final storage destination acceptance on m74 |
 | [2026-11-22-storage-destinations-final-aurora-amd](2026-11-22-storage-destinations-final-aurora-amd/README.md) | — | Final SFTP and Nextcloud storage acceptance on Aurora |
 | [2026-11-22-storage-destinations-final-f44](2026-11-22-storage-destinations-final-f44/README.md) | — | Final storage destination acceptance on Fedora 44 |
