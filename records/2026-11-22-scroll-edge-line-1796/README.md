@@ -12,9 +12,9 @@ and its `build-info.json` is identical to the packages'.
 ## Replay
 
 `pictures/q4-edge.png`: m74 run `firefox-github-user-q-4` (from the #1557 record `2026-11-21-scroll-white-boxes-1557`),
-every recorded frame replayed through nightly `4030f0330` and through the PR, next to Firefox's full-page picture at image
-row 24,795. Nightly draws the edge line across the table row and the white margin; the PR doesn't. (The picture was made
-with the PR's first head `17ecb42a5`. The final head `588b9f2` gives the same result at that row.)
+every recorded frame replayed through nightly `4030f0330` and through the PR's final head `588b9f2`, next to Firefox's
+full-page picture at image row 24,795. Nightly draws the edge line across the table row and the white margin; the PR
+doesn't, except for a 16-px piece in the scroll bar's column at the far right, kept on purpose (see below).
 
 The 7 recorded runs (d-1 to d-4, p-1, p-3, q-4) replayed at the final head: every long edge-line piece is gone.
 All 295 row ranges that change move closer to the reference, and none moves away. 2-cell pieces can remain in the
