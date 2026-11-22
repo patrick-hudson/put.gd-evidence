@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-22-scroll-white-box-turn2](2026-11-22-scroll-white-box-turn2/README.md) | — | Scrolling capture: white boxes over words in one live GitHub run (Cinnamon) |
 | [2026-11-22-issue-1815-emoji-scan-overlap](2026-11-22-issue-1815-emoji-scan-overlap/README.md) | #1815 | #1815: the emoji scan runs alongside text recognition |
 | [2026-11-21-sensitive-text-desktop-1804](2026-11-21-sensitive-text-desktop-1804/README.md) | #1804 | Sensitive text check desktop acceptance for PR 1806 |
 | [2026-11-22-issue-1812-ocr-engine-count](2026-11-22-issue-1812-ocr-engine-count/README.md) | #1812 | #1812: text recognition on up to eight engines |
