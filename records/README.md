@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-22-storage-destinations-final-f44](2026-11-22-storage-destinations-final-f44/README.md) | — | Final storage destination acceptance on Fedora 44 |
 | [2026-11-22-quick-redact-jwt-caret-1875](2026-11-22-quick-redact-jwt-caret-1875/README.md) | #1875, #1883 | Quick redact: an unlabelled JWT behind a text caret (#1875, PR #1883) |
 | [2026-11-22-storage-destinations-acceptance-1](2026-11-22-storage-destinations-acceptance-1/README.md) | #1 | Early storage destination acceptance |
 | [2026-11-22-sftp-destination-1871](2026-11-22-sftp-destination-1871/README.md) | #1871 | SFTP destination Settings panel (#1871) |
