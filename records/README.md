@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-22-sftp-destination-1871](2026-11-22-sftp-destination-1871/README.md) | #1871 | SFTP destination Settings panel (#1871) |
 | [2026-11-22-nextcloud-webdav-settings-1872](2026-11-22-nextcloud-webdav-settings-1872/README.md) | #1872 | Nextcloud and WebDAV destination forms in Settings (#1872) |
 | [2026-11-22-quick-redact-dropped-dot-1854](2026-11-22-quick-redact-dropped-dot-1854/README.md) | #1854, #1864 | Quick redact: a word joined to an address by a dropped dot, #1854 (PR #1864) |
 | [2026-11-22-pr-1863-quick-redact-line-end-recheck](2026-11-22-pr-1863-quick-redact-line-end-recheck/README.md) | #1863 | Quick redact line-end token recheck after review for PR #1863 |
