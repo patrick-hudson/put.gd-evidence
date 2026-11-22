@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-22-quick-redact-cover-bounds-1838](2026-11-22-quick-redact-cover-bounds-1838/README.md) | #1838, #1842 | Quick redact cover bounds, #1838 (PR #1842) |
 | [2026-11-22-scroll-scrollbar-bar-1837](2026-11-22-scroll-scrollbar-bar-1837/README.md) | #1837 | Scrolling capture: the window's scroll bar no longer stretches a held-back header down the page (#1837) |
 | [2026-11-22-scroll-white-box-turn2](2026-11-22-scroll-white-box-turn2/README.md) | — | Scrolling capture: white boxes over words in one live GitHub run (Cinnamon) |
 | [2026-11-22-issue-1815-emoji-scan-overlap](2026-11-22-issue-1815-emoji-scan-overlap/README.md) | #1815 | #1815: the emoji scan runs alongside text recognition |
