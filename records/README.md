@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-22-quick-redact-email-split-1840](2026-11-22-quick-redact-email-split-1840/README.md) | #1840, #1851 | Quick redact: an email split in its local part, #1840 (PR #1851) |
 | [2026-11-22-auto-redact-desktop-1820](2026-11-22-auto-redact-desktop-1820/README.md) | #1820 | Auto-redact on upload: desktop acceptance for PR 1826 (issue 1820) |
 | [2026-11-22-quick-redact-cover-bounds-1838](2026-11-22-quick-redact-cover-bounds-1838/README.md) | #1838, #1842 | Quick redact cover bounds, #1838 (PR #1842) |
 | [2026-11-22-scroll-scrollbar-bar-1837](2026-11-22-scroll-scrollbar-bar-1837/README.md) | #1837 | Scrolling capture: the window's scroll bar no longer stretches a held-back header down the page (#1837) |
