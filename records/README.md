@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-24-batch-delete-retry-taken-over](2026-11-24-batch-delete-retry-taken-over/README.md) | #1773 | Retrying an old batch deletion leaves a file a newer deletion took over (#1773) |
 | [2026-11-23-unhinged-mode-acceptance](2026-11-23-unhinged-mode-acceptance/README.md) | — | Unhinged mode desktop acceptance |
 | [2026-11-23-quick-redact-fleet-timing](2026-11-23-quick-redact-fleet-timing/README.md) | — | Quick redact fleet timing |
 | [2026-11-22-pr-1920-quick-redact-dark-themes](2026-11-22-pr-1920-quick-redact-dark-themes/README.md) | #1920 | PR #1920 Quick redact in dark themes |
