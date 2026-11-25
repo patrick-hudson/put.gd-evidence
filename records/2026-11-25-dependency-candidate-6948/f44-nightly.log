@@ -1,0 +1,50 @@
+f44 (Fedora 44 GNOME Wayland): expiry moved
+  codex (deps6948-f44), acquired 2026-11-25T03:03:17Z
+  purpose: candidate native package acceptance
+  expires in 15 min, heartbeat 0 min ago
+Updating and loading repositories:
+Repositories loaded.
+Package            Arch   Version                                 Repository        Size
+Downgrading:
+ putgd             x86_64 0:26.1124.6905~nightly-1.fc44           @commandline 347.1 MiB
+   replacing putgd x86_64 0:26.1125.6948~dev+gf1330c473081-1.fc44 @commandline 347.2 MiB
+
+Transaction Summary:
+ Replacing:          1 package
+ Downgrading:        1 package
+
+Total size of inbound packages is 117 MiB. Need to download 0 B.
+After this operation, 61 KiB will be freed (install 347 MiB, remove 347 MiB).
+Warning: A pending offline transaction initiated by the following command will be invalidated: dnf5daemon-server
+Running transaction
+[1/4] Verify package files              100% |   0.0   B/s |   1.0   B |  00m01s
+[2/4] Prepare transaction               100% |   8.0   B/s |   2.0   B |  00m00s
+[3/4] Downgrading putgd-0:26.1124.6905~ 100% | 177.2 MiB/s | 347.1 MiB |  00m02s
+[4/4] Removing putgd-0:26.1125.6948~dev 100% | 226.0   B/s | 210.0   B |  00m01s
+Warning: skipped OpenPGP checks for 1 package from repository: @commandline
+Warning: Pending offline transaction has been invalidated.
+To reschedule, run: dnf5daemon-server
+Complete!
+Desktop=
+Type=wayland
+LockedHint=no
+Socket path UTF-8 bytes: 68
+{
+  "schemaVersion": 1,
+  "version": "26.1124.6905-nightly",
+  "baseVersion": "26.1124.6905",
+  "packageVersion": "26.1124.6905~nightly",
+  "gitCommit": "97110f6335c39b94681badc7fa72d575de3850c5",
+  "gitTree": "eadbbdc70f2ba5410d1778282305a7dccaf332f4",
+  "commitCount": 6905,
+  "dirty": false,
+  "sourceProvenance": "git"
+}
+
+{"build": {"baseVersion": "26.1124.6905", "commitCount": 6905, "dirty": false, "gitCommit": "97110f6335c39b94681badc7fa72d575de3850c5", "gitTree": "eadbbdc70f2ba5410d1778282305a7dccaf332f4", "packageVersion": "26.1124.6905~nightly", "schemaVersion": 1, "sourceProvenance": "git", "version": "26.1124.6905-nightly"}}
+{"configured": true}
+{"setup": "setup.storeCredentials", "profile": "lab-s3", "id": "82c94b77-478d-4ce4-a5dd-a9b588f67f0d", "state": "completed", "error": ""}
+{"operation": "4c972b8b-5867-4a75-8b2b-605403e8f760", "state": "completed", "error": "", "itemErrors": [""]}
+{"provider": "s3", "id": "180819e1-978a-41b6-97ac-34d456ae9e6f", "linkHTTP": 200, "exactBytes": true}
+{"provider": "s3", "deleteId": "3587b979-6ab9-4678-b811-ced88bc2bbfa", "deleteStatus": "removed", "linkAfter": 200}
+{"quit": true}

@@ -1,0 +1,34 @@
+f44 (Fedora 44 GNOME Wayland): expiry moved
+  codex (deps6948-f44), acquired 2026-11-25T03:03:17Z
+  purpose: candidate native package acceptance
+  expires in 10 min, heartbeat 0 min ago
+Updating and loading repositories:
+Repositories loaded.
+Package            Arch   Version                       Repository        Size
+Downgrading:
+ putgd             x86_64 0:26.1122.6439~nightly-1.fc44 @commandline 341.0 MiB
+   replacing putgd x86_64 0:26.1124.6905~nightly-1.fc44 @commandline 347.1 MiB
+
+Transaction Summary:
+ Replacing:          1 package
+ Downgrading:        1 package
+
+Total size of inbound packages is 115 MiB. Need to download 0 B.
+After this operation, 6 MiB will be freed (install 341 MiB, remove 347 MiB).
+Warning: A pending offline transaction initiated by the following command will be invalidated: dnf5daemon-server
+Running transaction
+[1/4] Verify package files              100% |   0.0   B/s |   1.0   B |  00m01s
+[2/4] Prepare transaction               100% |   8.0   B/s |   2.0   B |  00m00s
+[3/4] Downgrading putgd-0:26.1122.6439~ 100% | 174.8 MiB/s | 341.0 MiB |  00m02s
+[4/4] Removing putgd-0:26.1124.6905~nig 100% | 232.0   B/s | 218.0   B |  00m01s
+Warning: skipped OpenPGP checks for 1 package from repository: @commandline
+Warning: Pending offline transaction has been invalidated.
+To reschedule, run: dnf5daemon-server
+Complete!
+putgd-26.1122.6439~nightly-1.fc44.x86_64
+f44 (Fedora 44 GNOME Wayland): released
+  codex (deps6948-f44), acquired 2026-11-25T03:03:17Z
+  purpose: candidate native package acceptance
+  1 item(s) that were there before the lock stay
+  receipt on the host: /home/patrick/putgd-lab/locks/history/2026-11-25T03-06-39Z-release.json
+  Tell the next session in the queue and your coordinator
