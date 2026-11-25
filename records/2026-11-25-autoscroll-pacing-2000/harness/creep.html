@@ -1,0 +1,41 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Creep page (#2000)</title>
+<style>
+body{margin:0;font:17px/1.5 sans-serif;background:#fff;color:#222}
+#mw-content-text{max-width:1100px;margin:0 auto;padding:24px 40px}
+h2{margin:28px 0 8px;font-size:24px}
+.b{display:inline-block;width:14px;height:14px;margin-right:6px;vertical-align:middle}
+</style></head>
+<body><div id="mw-content-text"></div>
+<script>
+// A page that keeps moving for 3.5 s after the first wheel notch (late layout,
+// a slow smooth scroll), then stands still: the first auto-scroll step runs out
+// of time unmeasured (#2000). Deterministic content so the reference matches.
+let s = 2000;
+const r = () => (s = (s * 1103515245 + 12345) % 2147483648) / 2147483648;
+const words = 'scroll capture page frame notch region stream damage still rest measure step wheel animation tracker image row column browser desktop'.split(' ');
+const root = document.getElementById('mw-content-text');
+let html = '';
+for (let sec = 0; sec < 60; ++sec) {
+  html += `<h2>Section ${sec + 1}: ${words[Math.floor(r() * words.length)]}</h2>`;
+  for (let p = 0; p < 3; ++p) {
+    let t = '';
+    const n = 40 + Math.floor(r() * 50);
+    for (let i = 0; i < n; ++i) {
+      if (r() < 0.06) t += `<span class="b" style="background:hsl(${Math.floor(r() * 360)},70%,50%)"></span>`;
+      t += words[Math.floor(r() * words.length)] + (r() < 0.1 ? '. ' : ' ');
+    }
+    html += `<p>${t}</p>`;
+  }
+}
+root.innerHTML = html;
+let armed = true;
+addEventListener('wheel', e => {
+  if (!armed || e.deltaY <= 0) return;
+  armed = false;
+  const until = performance.now() + 3500;
+  // One row on every painted frame: no frame shows the page still until it stops.
+  const creep = () => { if (performance.now() < until) { scrollBy({top: 1, behavior: 'instant'}); requestAnimationFrame(creep); } };
+  requestAnimationFrame(creep);
+}, {passive: true});
+</script></body></html>
