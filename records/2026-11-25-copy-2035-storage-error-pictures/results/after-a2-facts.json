@@ -1,0 +1,432 @@
+{
+ "label": "after",
+ "build": {
+  "schemaVersion": 1,
+  "version": "0.0.0-dev.unknown",
+  "baseVersion": "0.0.0",
+  "packageVersion": "0.0.0~dev.unknown",
+  "gitCommit": "",
+  "gitTree": "",
+  "commitCount": null,
+  "dirty": null,
+  "sourceProvenance": "unknown"
+ },
+ "residentPid": 1153830,
+ "ports": {
+  "http": 51779,
+  "sftp": 33793
+ },
+ "http": {
+  "id": "d3890767-8c58-4f53-9dfd-49834fc66dfa",
+  "operationId": "15945e30-5e92-402d-a577-56c1e578ea88",
+  "uploadStatus": "failed",
+  "state": "partial",
+  "inspect": {
+   "action": "files",
+   "cancelled": false,
+   "clipboardRevision": "1",
+   "copyStatus": "no_result",
+   "created": "2026-11-25T06:24:26.793Z",
+   "destination": {
+    "credentials": {
+     "mode": "session",
+     "reference": null
+    },
+    "profileId": "lab-http",
+    "profileRevision": "64082b69963ccb5298dc1685dba3fcde670087ff9aa3fcaf603dfb5a7b129a37",
+    "providerId": "custom-http",
+    "settings": {
+     "accepts": [
+      "image",
+      "file"
+     ],
+     "allowInsecureHttp": false,
+     "arguments": [],
+     "body": "multipart",
+     "connectTimeoutMs": 10000,
+     "data": "",
+     "dataSecret": false,
+     "deletionUrl": "{json:files[0].delete}",
+     "errorMessage": "",
+     "fileFormName": "file",
+     "headers": [
+      {
+       "name": "Authorization",
+       "secret": true
+      }
+     ],
+     "parameters": [],
+     "requestMethod": "POST",
+     "requestTimeoutMs": 600000,
+     "requestUrl": "http://127.0.0.1:51779/upload",
+     "responseUrl": "{json:files[0].url}",
+     "secrets": [],
+     "thumbnailUrl": ""
+    }
+   },
+   "error": {
+    "code": "",
+    "details": {},
+    "message": ""
+   },
+   "id": "15945e30-5e92-402d-a577-56c1e578ea88",
+   "invocation": "1",
+   "items": [
+    {
+     "artifact": {
+      "bytes": 3376,
+      "category": "images",
+      "id": "d3890767-8c58-4f53-9dfd-49834fc66dfa",
+      "mime": "image/png",
+      "name": "closed-port-http.png",
+      "namingPrepared": true,
+      "originalFile": true,
+      "previewPath": "/home/patrick/work/c2035/run/after-a2/data/putgd/artifacts/../previews/d3890767-8c58-4f53-9dfd-49834fc66dfa.png",
+      "sha256": "bb098c91ebd9e22f819534b614c44b1ed10b916564fcae4c0d1dedd29b9d253f"
+     },
+     "candidate": "closed-port-http.png",
+     "concurrencyToken": "",
+     "condition": "absent",
+     "error": {
+      "code": "http_connect_failed",
+      "details": {
+       "requestStage": "upload",
+       "transport": "connection refused"
+      },
+      "message": "Couldn't reach the server (connection refused), so the upload didn't start. Check Request URL and your network."
+     },
+     "local": {
+      "error": {
+       "code": "",
+       "details": {},
+       "message": ""
+      },
+      "path": "",
+      "status": "disabled"
+     },
+     "objectReference": {
+      "nonce": "70f83e15-fe5e-4bf7-b3dc-81df43ac3ca9",
+      "schemaVersion": 1
+     },
+     "phase": "failed",
+     "publicationId": "4a98ad44-488e-488f-b6ee-9ed15bdaf41d",
+     "receipt": {
+      "concurrencyToken": "",
+      "destination": {
+       "credentials": {},
+       "profileId": "",
+       "profileRevision": "",
+       "providerId": "",
+       "settings": {}
+      },
+      "directUrl": "",
+      "objectReference": {},
+      "publicationId": "",
+      "schemaVersion": 1
+     },
+     "remoteStatus": "not_requested",
+     "shareIntent": "",
+     "shareIntentOptions": {},
+     "shareStatus": "not_requested",
+     "uploadProgress": {
+      "bytesTotal": 3376,
+      "bytesTransferred": 0,
+      "phase": "preparing"
+     },
+     "uploadStatus": "failed"
+    }
+   ],
+   "note": "",
+   "phase": "partial",
+   "requestTimeoutMs": null,
+   "settingsRevision": "64082b69963ccb5298dc1685dba3fcde670087ff9aa3fcaf603dfb5a7b129a37",
+   "state": "partial"
+  },
+  "detail": {
+   "error": {
+    "code": "",
+    "details": {},
+    "message": ""
+   },
+   "ok": true,
+   "requestId": "165d5d79-d5ea-4674-a972-09b8df5b733a",
+   "result": {
+    "bytes": 3376,
+    "candidate": "closed-port-http.png",
+    "capabilities": {
+     "conditionalCreate": false,
+     "conditionalDelete": false,
+     "conditionalReplace": false,
+     "delete": true,
+     "deletionEffect": "Asks the server to delete this upload through the deletion URL it returned with the link. What the server removes, and how soon the link stops working, is up to the server.",
+     "maximumNameBytes": 255,
+     "maximumObjectBytes": null,
+     "privateUploads": false,
+     "referenceDelete": true,
+     "serverNamesObjects": true,
+     "sharing": false,
+     "stat": false,
+     "urls": true,
+     "versionAddressing": false
+    },
+    "category": "images",
+    "concurrencyToken": "",
+    "condition": "absent",
+    "created": "2026-11-25T06:24:26.793Z",
+    "error": {
+     "code": "http_connect_failed",
+     "details": {
+      "requestStage": "upload",
+      "transport": "connection refused"
+     },
+     "message": "Couldn't reach the server (connection refused), so the upload didn't start. Check Request URL and your network."
+    },
+    "id": "d3890767-8c58-4f53-9dfd-49834fc66dfa",
+    "itemId": "d3890767-8c58-4f53-9dfd-49834fc66dfa",
+    "linkAvailable": false,
+    "linkFinishable": false,
+    "linkRefreshable": false,
+    "local": {
+     "error": {
+      "code": "",
+      "details": {},
+      "message": ""
+     },
+     "path": "",
+     "status": "disabled"
+    },
+    "mime": "image/png",
+    "name": "closed-port-http.png",
+    "namingPrepared": true,
+    "objectReference": {
+     "nonce": "70f83e15-fe5e-4bf7-b3dc-81df43ac3ca9",
+     "schemaVersion": 1
+    },
+    "operationId": "15945e30-5e92-402d-a577-56c1e578ea88",
+    "originalFile": true,
+    "phase": "failed",
+    "previewPath": "/home/patrick/work/c2035/run/after-a2/data/putgd/artifacts/../previews/d3890767-8c58-4f53-9dfd-49834fc66dfa.png",
+    "profileId": "lab-http",
+    "publicationId": "4a98ad44-488e-488f-b6ee-9ed15bdaf41d",
+    "receipt": {
+     "concurrencyToken": "",
+     "destination": {
+      "credentials": {},
+      "profileId": "",
+      "profileRevision": "",
+      "providerId": "",
+      "settings": {}
+     },
+     "directUrl": "",
+     "objectReference": {},
+     "publicationId": "",
+     "schemaVersion": 1
+    },
+    "remoteStatus": "not_requested",
+    "sha256": "bb098c91ebd9e22f819534b614c44b1ed10b916564fcae4c0d1dedd29b9d253f",
+    "shareIntent": "",
+    "shareIntentOptions": {},
+    "shareProgress": {},
+    "shareStatus": "not_requested",
+    "uploadJournal": {},
+    "uploadProgress": {
+     "bytesTotal": 3376,
+     "bytesTransferred": 0,
+     "phase": "preparing"
+    },
+    "uploadStatus": "failed"
+   },
+   "schemaVersion": 1
+  }
+ },
+ "sftp": {
+  "id": "2b090a23-cf01-409b-be2f-fda72ffec8f3",
+  "operationId": "36348b4c-f296-4682-927b-234002acc1b0",
+  "uploadStatus": "failed",
+  "state": "partial",
+  "inspect": {
+   "action": "files",
+   "cancelled": false,
+   "clipboardRevision": "1",
+   "copyStatus": "no_result",
+   "created": "2026-11-25T06:24:27.200Z",
+   "destination": {
+    "credentials": {
+     "mode": "session",
+     "reference": null
+    },
+    "profileId": "lab-sftp",
+    "profileRevision": "64082b69963ccb5298dc1685dba3fcde670087ff9aa3fcaf603dfb5a7b129a37",
+    "providerId": "sftp",
+    "settings": {
+     "folder": "uploads",
+     "hostKeyFingerprint": null,
+     "publicUrlBase": null,
+     "server": "127.0.0.1:33793",
+     "user": "lab"
+    }
+   },
+   "error": {
+    "code": "",
+    "details": {},
+    "message": ""
+   },
+   "id": "36348b4c-f296-4682-927b-234002acc1b0",
+   "invocation": "2",
+   "items": [
+    {
+     "artifact": {
+      "bytes": 3462,
+      "category": "images",
+      "id": "2b090a23-cf01-409b-be2f-fda72ffec8f3",
+      "mime": "image/png",
+      "name": "closed-port-sftp.png",
+      "namingPrepared": true,
+      "originalFile": true,
+      "previewPath": "/home/patrick/work/c2035/run/after-a2/data/putgd/artifacts/../previews/2b090a23-cf01-409b-be2f-fda72ffec8f3.png",
+      "sha256": "5f57b2ab2b124f1925478e9aeef7cdcdaa586262ec2aee262764502bb2bd7d27"
+     },
+     "candidate": "closed-port-sftp.png",
+     "concurrencyToken": "",
+     "condition": "",
+     "error": {
+      "code": "ssh_connection_refused",
+      "details": {},
+      "message": "The server refused the connection on port 33793. Check Server and make sure its SSH service is running."
+     },
+     "local": {
+      "error": {
+       "code": "",
+       "details": {},
+       "message": ""
+      },
+      "path": "",
+      "status": "disabled"
+     },
+     "objectReference": {},
+     "phase": "preflight",
+     "publicationId": "8a79adcb-67ec-401d-b8cc-0aeb2764baeb",
+     "receipt": {
+      "concurrencyToken": "",
+      "destination": {
+       "credentials": {},
+       "profileId": "",
+       "profileRevision": "",
+       "providerId": "",
+       "settings": {}
+      },
+      "directUrl": "",
+      "objectReference": {},
+      "publicationId": "",
+      "schemaVersion": 1
+     },
+     "remoteStatus": "not_requested",
+     "shareIntent": "",
+     "shareIntentOptions": {},
+     "shareStatus": "not_requested",
+     "uploadProgress": null,
+     "uploadStatus": "failed"
+    }
+   ],
+   "note": "",
+   "phase": "partial",
+   "requestTimeoutMs": null,
+   "settingsRevision": "64082b69963ccb5298dc1685dba3fcde670087ff9aa3fcaf603dfb5a7b129a37",
+   "state": "partial"
+  },
+  "detail": {
+   "error": {
+    "code": "",
+    "details": {},
+    "message": ""
+   },
+   "ok": true,
+   "requestId": "27f205af-23f8-4d11-9c45-0042c27ba53a",
+   "result": {
+    "bytes": 3462,
+    "candidate": "closed-port-sftp.png",
+    "capabilities": {
+     "conditionalCreate": true,
+     "conditionalDelete": true,
+     "conditionalReplace": false,
+     "delete": true,
+     "deletionEffect": "Deletes the file after checking that it is unchanged (same size, timestamp, owner, and bytes up to 32 MB). SFTP has no atomic conditional delete, so a file replaced right after the check will still be deleted, and web caches may keep serving it.",
+     "maximumNameBytes": 255,
+     "maximumObjectBytes": null,
+     "privateUploads": false,
+     "referenceDelete": false,
+     "serverNamesObjects": false,
+     "sharing": false,
+     "stat": true,
+     "urls": false,
+     "versionAddressing": false
+    },
+    "category": "images",
+    "concurrencyToken": "",
+    "condition": "",
+    "created": "2026-11-25T06:24:27.200Z",
+    "error": {
+     "code": "ssh_connection_refused",
+     "details": {},
+     "message": "The server refused the connection on port 33793. Check Server and make sure its SSH service is running."
+    },
+    "id": "2b090a23-cf01-409b-be2f-fda72ffec8f3",
+    "itemId": "2b090a23-cf01-409b-be2f-fda72ffec8f3",
+    "linkAvailable": false,
+    "linkFinishable": false,
+    "linkRefreshable": false,
+    "local": {
+     "error": {
+      "code": "",
+      "details": {},
+      "message": ""
+     },
+     "path": "",
+     "status": "disabled"
+    },
+    "mime": "image/png",
+    "name": "closed-port-sftp.png",
+    "namingPrepared": true,
+    "objectReference": {},
+    "operationId": "36348b4c-f296-4682-927b-234002acc1b0",
+    "originalFile": true,
+    "phase": "preflight",
+    "previewPath": "/home/patrick/work/c2035/run/after-a2/data/putgd/artifacts/../previews/2b090a23-cf01-409b-be2f-fda72ffec8f3.png",
+    "profileId": "lab-sftp",
+    "publicationId": "8a79adcb-67ec-401d-b8cc-0aeb2764baeb",
+    "receipt": {
+     "concurrencyToken": "",
+     "destination": {
+      "credentials": {},
+      "profileId": "",
+      "profileRevision": "",
+      "providerId": "",
+      "settings": {}
+     },
+     "directUrl": "",
+     "objectReference": {},
+     "publicationId": "",
+     "schemaVersion": 1
+    },
+    "remoteStatus": "not_requested",
+    "sha256": "5f57b2ab2b124f1925478e9aeef7cdcdaa586262ec2aee262764502bb2bd7d27",
+    "shareIntent": "",
+    "shareIntentOptions": {},
+    "shareProgress": {},
+    "shareStatus": "not_requested",
+    "uploadJournal": {},
+    "uploadProgress": null,
+    "uploadStatus": "failed"
+   },
+   "schemaVersion": 1
+  }
+ },
+ "kwin": [
+  "js: PG2035 a class=putgd-ui caption=put.gd geo={\"x\":240,\"y\":78,\"width\":1440,\"height\":880,\"left\":240,\"right\":1680,\"top\":78,\"bottom\":958} min=false",
+  "js: PG2035 a placed {\"x\":240,\"y\":78,\"width\":1440,\"height\":880,\"left\":240,\"right\":1680,\"top\":78,\"bottom\":958}"
+ ],
+ "kwinAfter": [
+  "js: PG2035 b class=putgd-ui caption=put.gd geo={\"x\":40,\"y\":60,\"width\":1440,\"height\":900,\"left\":40,\"right\":1480,\"top\":60,\"bottom\":960} min=false",
+  "js: PG2035 b placed {\"x\":40,\"y\":60,\"width\":1440,\"height\":900,\"left\":40,\"right\":1480,\"top\":60,\"bottom\":960}"
+ ]
+}
