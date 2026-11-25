@@ -60,8 +60,8 @@ History shows the same message twice: in the item's row and in the details panel
 - `1-…` and `2-…` `-before.png` / `-after.png`: the annotated pictures. `crops-unannotated/`: the same crops before annotation.
 - `frames/`: the uncropped 1920x1080 desktop frames of the final runs (`before-` and `after-`: the desktop before the
   resident started and History with each failed upload selected). `frames/attempts/`: the earlier runs, where the
-  KWin placement script failed (`Qt is not defined`) and the window stayed at 240,78 with notifications over the
-  details panel.
+  window was not placed (the first run's script matched the window title wrongly, the next two used `Qt.rect`, which
+  KWin scripts don't have) and stayed at 240,78, so notifications covered its details panel.
 - `results/`: `facts.json` (the build identity, the unused ports, each upload's error code and message from
   `operation.inspect`) and the log of every run.
 - `tools/`: `capture2035.py` and `run-capture.sh` (run on d69 under the lock), `rfb.py`, `crop2035.py`,
