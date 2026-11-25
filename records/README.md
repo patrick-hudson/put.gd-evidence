@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-25-copy-2028-pr2-error-pictures](2026-11-25-copy-2028-pr2-error-pictures/README.md) | #2028, #2034, #2036, #2037 | Error message wording (#2028): before and after pictures for PRs #2034, #2036 and #2037 |
 | [2026-11-25-copy-2028-error-message-tables](2026-11-25-copy-2028-error-message-tables/README.md) | #2028 | #2028 error and failure messages: full before/after tables |
 | [2026-11-25-copy-2033-tray-notifications](2026-11-25-copy-2033-tray-notifications/README.md) | #2028, #2033 | Tray, status and notification wording (#2028): before and after pictures for PR #2033 |
 | [2026-11-25-dependency-candidate-6948](2026-11-25-dependency-candidate-6948/README.md) | #6948 | Dependency candidate 6948: physical-desktop checks |
