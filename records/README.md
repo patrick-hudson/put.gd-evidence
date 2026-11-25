@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-25-scroll-chrome-redraw-1764](2026-11-25-scroll-chrome-redraw-1764/README.md) | #1764 | Scrolling capture across Chrome mid-scroll greyscale-to-LCD text redraw (#1764) |
 | [2026-11-25-settings-restored-unsaved-1735](2026-11-25-settings-restored-unsaved-1735/README.md) | #1735 | Settings stays unsaved after a restored checkpoint, a finished rename and a daily-check toggle (#1735) |
 | [2026-11-25-ffmpeg-9.1-appimage-2047](2026-11-25-ffmpeg-9.1-appimage-2047/README.md) | #2047 | FFmpeg 9.1 AppImage recording acceptance (#2047) |
 | [2026-11-25-proton-helper-7fc568ce](2026-11-25-proton-helper-7fc568ce/README.md) | #2025 | Proton helper 7fc568ce: desktop/resource and installer acceptance (P6, #2025) |
