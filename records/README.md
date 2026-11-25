@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-25-bytesize-kb-pictures](2026-11-25-bytesize-kb-pictures/README.md) | #2041 | Sizes show as KB (#2041): before and after pictures |
 | [2026-11-25-copy-2040-settings-pictures](2026-11-25-copy-2040-settings-pictures/README.md) | #2028, #2040 | Shortened Settings descriptions (#2028): before and after pictures for PR #2040 |
 | [2026-11-25-copy-2035-storage-error-pictures](2026-11-25-copy-2035-storage-error-pictures/README.md) | #2028, #2035 | Storage error wording (#2028): before and after pictures for PR #2035 |
 | [2026-11-25-copy-2028-pr2-error-pictures](2026-11-25-copy-2028-pr2-error-pictures/README.md) | #2028, #2034, #2036, #2037 | Error message wording (#2028): before and after pictures for PRs #2034, #2036 and #2037 |
