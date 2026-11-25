@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-25-dependency-candidate-6948](2026-11-25-dependency-candidate-6948/README.md) | #6948 | Dependency candidate 6948: physical-desktop checks |
 | [2026-11-25-autoscroll-pacing-2000](2026-11-25-autoscroll-pacing-2000/README.md) | #2000, #2020 | Auto-scroll pacing after a missed first measurement (#2000, PR #2020) |
 | [2026-11-24-issue-1981-script-detection](2026-11-24-issue-1981-script-detection/README.md) | — | Automatic OCR script detection on Linux |
 | [2026-11-24-batch-delete-retry-taken-over](2026-11-24-batch-delete-retry-taken-over/README.md) | #1773 | Retrying an old batch deletion leaves a file a newer deletion took over (#1773) |
