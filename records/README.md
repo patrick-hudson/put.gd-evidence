@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-25-ffmpeg-9.1-appimage-2047](2026-11-25-ffmpeg-9.1-appimage-2047/README.md) | #2047 | FFmpeg 9.1 AppImage recording acceptance (#2047) |
 | [2026-11-25-proton-helper-7fc568ce](2026-11-25-proton-helper-7fc568ce/README.md) | #2025 | Proton helper 7fc568ce: desktop/resource and installer acceptance (P6, #2025) |
 | [2026-11-25-copy-2044-blur-banner-pictures](2026-11-25-copy-2044-blur-banner-pictures/README.md) | #2044 | Recording review blur warning (#2044): before and after pictures |
 | [2026-11-25-copy-2042-ui-text-pictures](2026-11-25-copy-2042-ui-text-pictures/README.md) | #2028, #2042 | UI wording (#2028): before and after pictures for PR #2042 |
