@@ -1,0 +1,10 @@
+Aurora a1, 2026-11-25 12:02 UTC: the candidate saved a 4.600-second H.264 control MP4. The independent distro decoder then failed before opening it:
+
+Unrecognized option 'vsync'.
+Error splitting the argument list: Option not found
+
+Failed evaluator invocation: ffmpeg -hide_banner -nostdin -v error -threads 2 -xerror -i a1/out/control.mp4 -map 0:v:0 -vf scale=160:90:flags=area -pix_fmt rgb24 -vsync 0 -f rawvideo -
+
+Corrected evaluator invocation in new a2 run: ffmpeg -hide_banner -nostdin -v error -threads 2 -xerror -i a2/out/control.mp4 -map 0:v:0 -vf scale=160:90:flags=area -pix_fmt rgb24 -fps_mode passthrough -f rawvideo -
+
+The entire candidate test was rerun with the corrected evaluator and passed.

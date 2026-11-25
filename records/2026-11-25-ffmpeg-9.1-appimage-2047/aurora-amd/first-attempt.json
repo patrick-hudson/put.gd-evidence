@@ -1,0 +1,877 @@
+{
+  "host": "aurora-amd",
+  "session": "wayland",
+  "desktop": "plasmashell",
+  "socket": "/run/user/1000/putgd/session.sock",
+  "socketBytes": 33,
+  "expectedTree": "07d9da15d2e97dfbdb9d9ec3ca6f011b3582e416",
+  "exports": {
+    "control": {
+      "path": "/var/home/patrick/work/ffmpeg91-2047-20261125/a1/out/control.mp4",
+      "reply": {
+        "canvas": [
+          1920,
+          1080
+        ],
+        "config": {
+          "adaptiveFps": true,
+          "audio": {
+            "microphone": false,
+            "system": false
+          },
+          "budgetBytes": 67560267776,
+          "clickHighlights": false,
+          "codec": "h264",
+          "format": "mp4",
+          "fps": 30,
+          "mime": "video/mp4"
+        },
+        "durationUs": 4599999,
+        "edit": {
+          "canRedo": false,
+          "canUndo": false,
+          "cuts": [],
+          "masks": [],
+          "revision": 1,
+          "trimEnd": null,
+          "trimStart": 0
+        },
+        "error": {
+          "code": "",
+          "details": {},
+          "message": ""
+        },
+        "exports": 1,
+        "lastExport": {
+          "bytes": 18288,
+          "command": "saveCopy",
+          "durationUs": 4600000,
+          "path": "/var/home/patrick/work/ffmpeg91-2047-20261125/a1/out/control.mp4",
+          "revision": 1,
+          "status": "saved"
+        },
+        "operationId": "511a6019-9d51-4de3-9bf2-acffaa8f9070",
+        "outputSize": [
+          1920,
+          1080
+        ],
+        "overlayExcluded": true,
+        "overlayPlacement": "hidden",
+        "pending": null,
+        "progress": {
+          "exportFraction": 0.8623189130434783
+        },
+        "recordingId": "511a6019-9d51-4de3-9bf2-acffaa8f9070",
+        "retainedUs": 4599999,
+        "selecting": false,
+        "state": "reviewing",
+        "stopReason": "user",
+        "target": {
+          "kind": "monitor"
+        }
+      }
+    }
+  },
+  "stats": {},
+  "errors": [
+    {
+      "row": "campaign",
+      "error": "Command '['ffmpeg', '-hide_banner', '-nostdin', '-v', 'error', '-threads', '2', '-xerror', '-i', '/var/home/patrick/work/ffmpeg91-2047-20261125/a1/out/control.mp4', '-map', '0:v:0', '-vf', 'scale=160:90:flags=area', '-pix_fmt', 'rgb24', '-vsync', '0', '-f', 'rawvideo', '-']' returned non-zero exit status 8."
+    }
+  ],
+  "identity": {
+    "kind": "appimage",
+    "file": "candidate.AppImage",
+    "sha256": "3c9bc0bd38f64f030ef78e40d647f8f313541ba21a170ef8cd585265316139ff"
+  },
+  "osRelease": "NAME=\"Aurora\"\nVERSION=\"testing-45.20261101.2 (Kinoite)\"\nRELEASE_TYPE=stable\nID=aurora\nID_LIKE=\"fedora\"\nVERSION_ID=45\nVERSION_CODENAME=\"Stargazer\"\nPRETTY_NAME=\"Aurora (Version: testing-45.20261101.2)\"\nANSI_COLOR=\"0;38;2;60;110;180\"\nLOGO=fedora-logo-icon\nCPE_NAME=\"cpe:/o:universal-blue:aurora:45\"\nDEFAULT_HOSTNAME=\"aurora\"\nHOME_URL=\"https://getaurora.dev/\"\nDOCUMENTATION_URL=\"https://docs.getaurora.dev\"\nSUPPORT_URL=\"https://github.com/ublue-os/aurora/issues/\"\nBUG_REPORT_URL=\"https://github.com/ublue-os/aurora/issues/\"\nSUPPORT_END=2027-12-08\nVARIANT=\"Kinoite\"\nVARIANT_ID=aurora\nOSTREE_VERSION='testing-45.20261101.2'\nBUILD_ID=\"db90232\"\nIMAGE_ID=\"aurora\"\nIMAGE_VERSION=\"testing-45.20261101.2\"\n",
+  "kernel": "7.2.11-300.fc45.x86_64",
+  "desktopVersion": "plasmashell 6.8.2",
+  "capabilities": {
+    "acquisition": "kde-screencast",
+    "active": null,
+    "audio": {
+      "microphone": true,
+      "microphoneDevice": {
+        "id": "alsa_input.pci-0000_04_00.6.analog-stereo",
+        "label": "Ryzen HD Audio Controller Analog Stereo"
+      },
+      "system": true
+    },
+    "available": true,
+    "clickHighlights": {
+      "available": true,
+      "drawnBy": "compositor",
+      "note": "KWin draws click rings on the screen while recording. Window recordings don't include them.",
+      "route": "kwin-mouseclick-effect",
+      "targetReasons": {
+        "window": "KWin draws click rings on the screen, so window recordings don't include them."
+      },
+      "targets": [
+        "monitor",
+        "desktop",
+        "region"
+      ]
+    },
+    "codecs": {
+      "mp4": [
+        "h264",
+        "h265"
+      ],
+      "webm": [
+        "vp9"
+      ]
+    },
+    "commands": [
+      "windows",
+      "microphones",
+      "prepare",
+      "start",
+      "pause",
+      "resume",
+      "stop",
+      "cancel",
+      "inspect",
+      "select",
+      "raise",
+      "overlay",
+      "audio",
+      "edit",
+      "preview",
+      "review",
+      "saveCopy",
+      "upload"
+    ],
+    "editCommands": [
+      "setTrim",
+      "resetTrim",
+      "addMask",
+      "updateMask",
+      "removeMask",
+      "addCut",
+      "updateCut",
+      "removeCut",
+      "undo",
+      "redo"
+    ],
+    "exportEncoders": {
+      "h264": [
+        "h264_vaapi",
+        "libx264"
+      ],
+      "h265": [
+        "hevc_vaapi",
+        "libx265"
+      ],
+      "vp9": [
+        "libvpx-vp9"
+      ]
+    },
+    "ffmpeg": {
+      "avcodec": "63.24.100",
+      "avfilter": "12.8.100",
+      "avformat": "63.16.100",
+      "avutil": "61.19.100",
+      "encoderFailures": {
+        "h264_nvenc": "libcuda.so.1 is not installed",
+        "hevc_nvenc": "libcuda.so.1 is not installed"
+      },
+      "encoders": {
+        "aac": true,
+        "gif": true,
+        "h264_nvenc": true,
+        "h264_vaapi": true,
+        "hevc_nvenc": true,
+        "hevc_vaapi": true,
+        "libopenh264": false,
+        "libopus": true,
+        "libvorbis": false,
+        "libvpx-vp9": true,
+        "libwebp_anim": true,
+        "libx264": true,
+        "libx265": true,
+        "vp9_vaapi": false
+      },
+      "filters": {
+        "asetpts": true,
+        "atrim": true,
+        "avgblur": true,
+        "crop": true,
+        "drawbox": true,
+        "format": true,
+        "fps": true,
+        "palettegen": true,
+        "paletteuse": true,
+        "scale": true,
+        "setpts": true,
+        "trim": true
+      },
+      "h264Decoder": {
+        "failure": null,
+        "name": "h264",
+        "usable": true
+      },
+      "muxers": {
+        "gif": true,
+        "matroska": true,
+        "mp4": true,
+        "webm": true,
+        "webp": true
+      }
+    },
+    "formats": [
+      "mp4",
+      "webm",
+      "gif",
+      "webp"
+    ],
+    "gstreamer": {
+      "audioSources": [
+        "pulsesrc",
+        "pipewiresrc"
+      ],
+      "available": true,
+      "elements": {
+        "aacparse": "1.24.2",
+        "appsink": "1.24.2",
+        "appsrc": "1.24.2",
+        "audioconvert": "1.24.2",
+        "audiomixer": "1.24.2",
+        "audioresample": "1.24.2",
+        "avenc_aac": null,
+        "compositor": null,
+        "fdkaacenc": null,
+        "h264parse": "1.24.2",
+        "identity": "1.24.2",
+        "matroskamux": "1.24.2",
+        "mp4mux": null,
+        "openh264enc": null,
+        "pipewiresrc": "1.0.5",
+        "pulsesrc": "1.24.2",
+        "vaapih264enc": "1.24.2",
+        "vah264enc": "1.24.2",
+        "vah264lpenc": null,
+        "videoconvert": "1.24.2",
+        "videocrop": "1.24.2",
+        "videorate": "1.24.2",
+        "videoscale": "1.24.2",
+        "voaacenc": "1.24.2",
+        "vp9enc": null,
+        "webmmux": "1.24.2",
+        "webpenc": null,
+        "x264enc": "1.24.1",
+        "x265enc": null,
+        "ximagesrc": "1.24.2"
+      },
+      "encoderFailures": {},
+      "liveAacEncoders": [
+        "voaacenc"
+      ],
+      "liveH264Encoders": [
+        "vah264enc",
+        "vaapih264enc",
+        "x264enc"
+      ],
+      "liveSources": [
+        "ximagesrc",
+        "pipewiresrc"
+      ],
+      "pluginDirectories": [
+        "/tmp/.mount_candidPKMgKc/usr/lib/gstreamer-1.0"
+      ],
+      "usableH264Encoders": [
+        "vah264enc",
+        "vaapih264enc",
+        "x264enc"
+      ],
+      "version": "GStreamer 1.24.2",
+      "webpAnimated": false
+    },
+    "kdeScreencast": {
+      "available": true,
+      "hidesRequester": true,
+      "kwinVersion": "6.8.2",
+      "outputs": [
+        {
+          "logical": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "name": "DP-2"
+        }
+      ],
+      "version": 5
+    },
+    "limits": {
+      "animationMaxEdge": 1280,
+      "animationMaxUs": 60000000,
+      "maxCuts": 64,
+      "maxFileBytes": 1099511627776,
+      "maxMasks": 64
+    },
+    "liveCapture": {
+      "audio": true,
+      "encoder": true,
+      "source": true
+    },
+    "maskKinds": [
+      "blur",
+      "solid"
+    ],
+    "overlayExclusion": {},
+    "pipewire": {
+      "socket": "/run/user/1000/pipewire-0"
+    },
+    "portal": {
+      "available": true,
+      "cursorModes": 7,
+      "portalVersion": 6,
+      "sourceTypes": 7
+    },
+    "schemaVersion": 1,
+    "session": "wayland",
+    "states": [
+      "preparing",
+      "ready",
+      "starting",
+      "recording",
+      "paused",
+      "stopping",
+      "reviewing",
+      "exporting",
+      "submitted",
+      "cancelled",
+      "failed"
+    ],
+    "targets": [
+      "monitor",
+      "desktop",
+      "region",
+      "window"
+    ],
+    "timeUnit": "microseconds",
+    "windowAcquisition": "kde-screencast",
+    "windowList": true
+  },
+  "build": {
+    "baseVersion": "26.1125.7048",
+    "commitCount": 7048,
+    "dirty": false,
+    "gitCommit": "847ff4cf4cbba30b9fde260a82a93375fe8ccbd6",
+    "gitTree": "07d9da15d2e97dfbdb9d9ec3ca6f011b3582e416",
+    "packageVersion": "26.1125.7048~dev+g847ff4cf4cbb",
+    "schemaVersion": 1,
+    "sourceProvenance": "git",
+    "version": "26.1125.7048-dev+g847ff4cf4cbb"
+  },
+  "microphone": {
+    "name": "putgd_lab_2675426",
+    "modules": {
+      "sink": 536870916,
+      "holdSink": 536870919,
+      "source": 536870918,
+      "hold": 536870917,
+      "system": 536870920
+    },
+    "defaultSource": "alsa_input.pci-0000_04_00.6.analog-stereo",
+    "defaultSink": "alsa_output.pci-0000_04_00.6.analog-stereo",
+    "sink": "putgd_lab_2675426_sink",
+    "source": "putgd_lab_2675426_mic",
+    "plugged": true,
+    "attempts": 1,
+    "heardPeak": 6561,
+    "systemSink": "putgd_lab_2675426_system"
+  },
+  "staticCover": {
+    "placed": {
+      "monitorIndex": 0,
+      "ok": true,
+      "output": [
+        "DP-2"
+      ],
+      "rect": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "state": "covered"
+    },
+    "precheck": {
+      "check": "precheck",
+      "fraction": 1.0,
+      "framebuffer": [
+        1920,
+        1080
+      ],
+      "minFraction": 0.98,
+      "ok": true,
+      "output": [
+        "DP-2"
+      ],
+      "rect": [
+        0,
+        0,
+        1920,
+        1080
+      ]
+    },
+    "video": "marker"
+  },
+  "staticId": "511a6019-9d51-4de3-9bf2-acffaa8f9070",
+  "staticReady": {
+    "canvas": [
+      1920,
+      1080
+    ],
+    "config": {
+      "adaptiveFps": true,
+      "audio": {
+        "microphone": false,
+        "system": false
+      },
+      "budgetBytes": 67560267776,
+      "clickHighlights": false,
+      "codec": "h264",
+      "format": "mp4",
+      "fps": 30,
+      "mime": "video/mp4"
+    },
+    "durationUs": 0,
+    "edit": {
+      "canRedo": false,
+      "canUndo": false,
+      "cuts": [],
+      "masks": [],
+      "revision": 1,
+      "trimEnd": null,
+      "trimStart": 0
+    },
+    "error": {
+      "code": "",
+      "details": {},
+      "message": ""
+    },
+    "exports": 0,
+    "lastExport": null,
+    "operationId": "511a6019-9d51-4de3-9bf2-acffaa8f9070",
+    "outputSize": [
+      1920,
+      1080
+    ],
+    "overlayExcluded": true,
+    "overlayPlacement": "hidden",
+    "pending": null,
+    "progress": {
+      "recordingAudio": {
+        "effective": false,
+        "requested": false
+      },
+      "recordingMicrophone": {
+        "available": true,
+        "device": "putgd_lab_2675426-microphone",
+        "effective": false,
+        "requested": false
+      }
+    },
+    "recordingId": "511a6019-9d51-4de3-9bf2-acffaa8f9070",
+    "retainedUs": 0,
+    "selecting": false,
+    "state": "ready",
+    "target": {
+      "kind": "monitor"
+    }
+  },
+  "staticProgress": {
+    "canvas": [
+      1920,
+      1080
+    ],
+    "config": {
+      "adaptiveFps": true,
+      "audio": {
+        "microphone": false,
+        "system": false
+      },
+      "budgetBytes": 67560267776,
+      "clickHighlights": false,
+      "codec": "h264",
+      "format": "mp4",
+      "fps": 30,
+      "mime": "video/mp4"
+    },
+    "durationUs": 2433333,
+    "edit": {
+      "canRedo": false,
+      "canUndo": false,
+      "cuts": [],
+      "masks": [],
+      "revision": 1,
+      "trimEnd": null,
+      "trimStart": 0
+    },
+    "error": {
+      "code": "",
+      "details": {},
+      "message": ""
+    },
+    "exports": 0,
+    "lastExport": null,
+    "operationId": "511a6019-9d51-4de3-9bf2-acffaa8f9070",
+    "outputSize": [
+      1920,
+      1080
+    ],
+    "overlayExcluded": true,
+    "overlayPlacement": "hidden",
+    "pending": null,
+    "progress": {
+      "audioEncoder": "",
+      "audioSources": {
+        "microphone": false,
+        "system": false
+      },
+      "bytes": 1089627,
+      "durationUs": 2433333,
+      "encoder": "vah264enc",
+      "frameRate": 30,
+      "framesCaptured": 53,
+      "framesDelivered": 88,
+      "framesDropped": 0,
+      "framesEncoded": 73,
+      "paused": false,
+      "recordingAudio": {
+        "effective": false,
+        "requested": false
+      },
+      "recordingMicrophone": {
+        "available": true,
+        "device": "putgd_lab_2675426-microphone",
+        "effective": false,
+        "requested": false
+      }
+    },
+    "recordingId": "511a6019-9d51-4de3-9bf2-acffaa8f9070",
+    "retainedUs": 0,
+    "selecting": false,
+    "state": "recording",
+    "target": {
+      "kind": "monitor"
+    }
+  },
+  "staticStopped": {
+    "canvas": [
+      1920,
+      1080
+    ],
+    "config": {
+      "adaptiveFps": true,
+      "audio": {
+        "microphone": false,
+        "system": false
+      },
+      "budgetBytes": 67560267776,
+      "clickHighlights": false,
+      "codec": "h264",
+      "format": "mp4",
+      "fps": 30,
+      "mime": "video/mp4"
+    },
+    "durationUs": 4599999,
+    "edit": {
+      "canRedo": false,
+      "canUndo": false,
+      "cuts": [],
+      "masks": [],
+      "revision": 1,
+      "trimEnd": null,
+      "trimStart": 0
+    },
+    "error": {
+      "code": "",
+      "details": {},
+      "message": ""
+    },
+    "exports": 0,
+    "lastExport": null,
+    "operationId": "511a6019-9d51-4de3-9bf2-acffaa8f9070",
+    "outputSize": [
+      1920,
+      1080
+    ],
+    "overlayExcluded": true,
+    "overlayPlacement": "hidden",
+    "pending": null,
+    "progress": {
+      "audioEncoder": "",
+      "audioSources": {
+        "microphone": false,
+        "system": false
+      },
+      "bytes": 2800965,
+      "canvas": [
+        1920,
+        1080
+      ],
+      "durationUs": 4599999,
+      "encoder": "vah264enc",
+      "frameRate": 30,
+      "framesCaptured": 94,
+      "framesDelivered": 146,
+      "framesDropped": 0,
+      "framesEncoded": 131,
+      "paused": false,
+      "recordingAudio": {
+        "effective": false,
+        "requested": false
+      },
+      "recordingMicrophone": {
+        "available": true,
+        "device": "putgd_lab_2675426-microphone",
+        "effective": false,
+        "requested": false
+      }
+    },
+    "recordingId": "511a6019-9d51-4de3-9bf2-acffaa8f9070",
+    "retainedUs": 4599999,
+    "selecting": false,
+    "state": "reviewing",
+    "stopReason": "user",
+    "target": {
+      "kind": "monitor"
+    }
+  },
+  "reviewActions": [
+    {
+      "action": "format",
+      "params": {
+        "format": "mp4",
+        "codec": "h264"
+      },
+      "reply": {
+        "adviceDialog": {
+          "open": false,
+          "text": null
+        },
+        "armed": null,
+        "audio": "MP4 \u00b7 no audio recorded",
+        "audioEffective": false,
+        "audioRequested": false,
+        "blurGuidance": {
+          "text": "Blurred text can sometimes be recovered. Use Redact for secrets.",
+          "visible": false
+        },
+        "canRedo": false,
+        "canUndo": false,
+        "cuts": [],
+        "destination": "local",
+        "discardConfirmation": {
+          "open": false,
+          "text": null
+        },
+        "edit": {
+          "canRedo": false,
+          "canUndo": false,
+          "cuts": [],
+          "masks": [],
+          "revision": 1,
+          "trimEnd": null,
+          "trimStart": 0
+        },
+        "edits": [],
+        "errorDetails": {
+          "drive": {
+            "action": "showAdvice"
+          },
+          "visible": false
+        },
+        "exporting": false,
+        "fileDialog": {
+          "backend": null,
+          "fallbackReason": null,
+          "last": null,
+          "mode": null,
+          "open": false,
+          "parentWindow": null,
+          "title": null
+        },
+        "folded": false,
+        "format": {
+          "codec": "h264",
+          "format": "mp4"
+        },
+        "frameFocus": false,
+        "header": {
+          "customFrame": true,
+          "rect": [
+            0,
+            0,
+            1440,
+            32
+          ],
+          "visible": true
+        },
+        "lastRefusal": null,
+        "masks": [],
+        "minimumSize": [
+          707,
+          530
+        ],
+        "notice": null,
+        "outputDurationUs": 4599999,
+        "outputPlayheadUs": 0,
+        "outsideKeptPart": false,
+        "panel": {
+          "buttons": [],
+          "folded": false,
+          "mode": "empty",
+          "overlayOpen": false,
+          "rows": [],
+          "title": "No edits yet"
+        },
+        "placement": null,
+        "playbackQueuedEnd": false,
+        "playhead": {
+          "outputUs": 0,
+          "sourceUs": 0
+        },
+        "playheadUs": 0,
+        "playing": false,
+        "preview": {
+          "edgeHeld": false,
+          "edgePreviewUs": null,
+          "error": null,
+          "frameSize": [
+            0,
+            0
+          ],
+          "frameTimeUs": null,
+          "shownUs": null,
+          "skimSize": [
+            0,
+            0
+          ],
+          "stale": false
+        },
+        "previewMuted": true,
+        "revision": 1,
+        "savedCopy": {
+          "current": false,
+          "path": "",
+          "revision": 0,
+          "showInFolder": {}
+        },
+        "scheme": "dark",
+        "selectedEdit": null,
+        "selectedMaskId": null,
+        "selectedMaskName": null,
+        "selection": null,
+        "sharing": "Local only",
+        "sharingMode": "local",
+        "size": [
+          1440,
+          900
+        ],
+        "speed": 1,
+        "state": "reviewing",
+        "status": "",
+        "statusFacts": [],
+        "statusRow": [],
+        "timeline": {
+          "hiddenCovers": 0,
+          "hover": null,
+          "lanes": 0,
+          "pending": null,
+          "rect": [
+            0,
+            676,
+            1160,
+            168
+          ],
+          "ruler": [
+            20,
+            678,
+            1120,
+            22
+          ],
+          "selectedEdit": {
+            "id": "",
+            "kind": ""
+          },
+          "selection": null,
+          "skim": null,
+          "skimming": true,
+          "snapping": true,
+          "strip": [
+            20,
+            704,
+            1120,
+            72
+          ],
+          "tiles": {
+            "placeholders": 7,
+            "shown": 5
+          },
+          "visible": {
+            "end": 4599999,
+            "start": 0
+          },
+          "zoom": 1,
+          "zoomLevels": [
+            1
+          ]
+        },
+        "toolNote": null,
+        "tools": {
+          "cut": false,
+          "editsToggle": false,
+          "pictureZoom": "Fit \u00b7 50%",
+          "redo": false,
+          "undo": false
+        },
+        "trim": {
+          "end": 4599999,
+          "start": 0
+        },
+        "undo": {
+          "canRedo": false,
+          "canUndo": false
+        },
+        "uploadDeadlineMs": -1,
+        "uploadSummary": "Save to the local archive",
+        "uploadWaiting": false,
+        "video": {
+          "rect": [
+            98,
+            88,
+            963,
+            542
+          ],
+          "share": 0.40273611111111113
+        },
+        "viewer": {
+          "arrowsClaimed": false,
+          "live": null,
+          "pan": {
+            "x": 0,
+            "y": 0
+          },
+          "percent": 50,
+          "placeWaiting": false,
+          "selectedCover": null,
+          "zoom": "fit"
+        },
+        "visible": true,
+        "warning": null
+      }
+    }
+  ],
+  "micCleanup": {
+    "removed": true,
+    "left": [],
+    "defaultSource": "alsa_input.pci-0000_04_00.6.analog-stereo",
+    "defaultSink": "alsa_output.pci-0000_04_00.6.analog-stereo"
+  }
+}
