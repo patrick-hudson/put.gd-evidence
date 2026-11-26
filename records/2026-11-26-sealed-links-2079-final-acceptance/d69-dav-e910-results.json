@@ -1,0 +1,171 @@
+[
+  {
+    "row": "socket",
+    "bytes": 65,
+    "desktop": "KDE",
+    "session": "wayland"
+  },
+  {
+    "row": "prefix-initial",
+    "folder": "seal2079-e877d73d4aeb4fde8a0fd16e6bbd3cf0",
+    "created": true
+  },
+  {
+    "row": "build",
+    "build": {
+      "baseVersion": "26.1126.7192",
+      "commitCount": 7192,
+      "dirty": false,
+      "gitCommit": "f977a6911c14de8c89045eced29db392deefd105",
+      "gitTree": "58f251154db252458bb8d6ff804de1ed5bf19a23",
+      "packageVersion": "26.1126.7192~dev+gf977a6911c14",
+      "schemaVersion": 1,
+      "sourceProvenance": "git",
+      "version": "26.1126.7192-dev+gf977a6911c14"
+    }
+  },
+  {
+    "row": "storeCredentials",
+    "profile": "seal-dav",
+    "state": "completed",
+    "error": "",
+    "seal": null
+  },
+  {
+    "row": "testDestination",
+    "profile": "seal-dav",
+    "state": "completed",
+    "error": "",
+    "seal": {
+      "cleanup": "removed",
+      "reason": null,
+      "state": "passed"
+    }
+  },
+  {
+    "row": "ui-before",
+    "result": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "cc6f96eabaa0489e980d47f52c188d90",
+      "result": {
+        "available": true,
+        "check": "passed",
+        "mode": "off",
+        "modeEnabled": true,
+        "passphraseLoaded": false,
+        "passphraseTyped": false,
+        "profileId": "seal-dav",
+        "reason": "Test upload and link showed this destination opens sealed pages.",
+        "unlockOffered": false
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "row": "visual-ready",
+    "label": "settings"
+  },
+  {
+    "row": "ui-on",
+    "result": {
+      "error": {
+        "code": "",
+        "details": {},
+        "message": ""
+      },
+      "ok": true,
+      "requestId": "0937f8e2c963431da3302c6abd597521",
+      "result": {
+        "available": true,
+        "check": "passed",
+        "mode": "on",
+        "modeEnabled": true,
+        "passphraseLoaded": false,
+        "passphraseTyped": false,
+        "profileId": "seal-dav",
+        "reason": "Test upload and link showed this destination opens sealed pages.",
+        "unlockOffered": false
+      },
+      "schemaVersion": 1
+    }
+  },
+  {
+    "row": "upload",
+    "file": "moving-1gb.mp4",
+    "id": "275c3490-c463-4a88-9fe0-3a8423d4d942",
+    "operationId": "8f00b280-2557-44cd-8ded-d7b6a175d807",
+    "state": "completed",
+    "copyStatus": "copied",
+    "error": "",
+    "form": "split",
+    "fragmentPattern": true
+  },
+  {
+    "row": "split-origin",
+    "count": 2,
+    "sameStem": true,
+    "randomName": true
+  },
+  {
+    "row": "cli-open",
+    "file": "moving-1gb.mp4",
+    "ok": true,
+    "error": "",
+    "shaMatches": true
+  },
+  {
+    "row": "delete-prepare",
+    "effects": [
+      {
+        "effect": "Deletes the uploaded file only while the server reports it unchanged since the upload (If-Match on its ETag). Links to it stop working. The sealed link's data file beside it stays at the destination, because put.gd can't delete it safely there. The server reported no ETag for this upload, so put.gd can't delete it without risking another file. It holds only encrypted data. Someone who saved the page and has the full link can still open it until you delete the file there yourself."
+      }
+    ]
+  },
+  {
+    "row": "delete-dialog",
+    "ok": false,
+    "open": null
+  },
+  {
+    "row": "delete",
+    "historyId": "275c3490-c463-4a88-9fe0-3a8423d4d942",
+    "deleteId": "156de98d-2a94-481c-99d4-8217d8cd9a99",
+    "remoteStatus": "removed",
+    "progress": "done",
+    "journal": [
+      {
+        "sealDataStatus": "kept"
+      }
+    ]
+  },
+  {
+    "row": "split-origin-after-delete",
+    "count": 1,
+    "onlyBin": true
+  },
+  {
+    "row": "retained-sha",
+    "matches": true,
+    "folder": "seal2079-e877d73d4aeb4fde8a0fd16e6bbd3cf0",
+    "name": "rRCLVAOlhIhF.bin"
+  },
+  {
+    "row": "manual-bin-delete",
+    "status": 204,
+    "absent": true
+  },
+  {
+    "row": "cleanup-before",
+    "count": 0
+  },
+  {
+    "row": "cleanup-final",
+    "removed": true,
+    "absent": true
+  }
+]
