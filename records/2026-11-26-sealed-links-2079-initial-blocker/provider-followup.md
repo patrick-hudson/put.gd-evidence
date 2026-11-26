@@ -1,0 +1,14 @@
+# More native destination checks on the initial CI packages
+
+Build 26.1126.7184-dev+g088b612dfe44, commit 088b612dfe44cfef2395f870f5dfc262f6b912f9, exact source tree f3552a236750367d09c2ad27fefe29eab9cb8852, CI 45778610390. Debian 13 native KDE Wayland DEB and Aurora native KDE Wayland AppImage.
+
+- **S3 presigned, R2 public:** ordinary Test completed, seal check failed with the same storage schema refusal as S3 public. Each fresh prefix was independently listed empty before and after.
+- **B2 public:** bucket-scoped key for the explicitly documented allPublic bucket, fresh prefix. Test seal passed and probe removed. CLI `upload --seal` small PNG and text completed and copied; both History fragment patterns correct; `putgd-cli open -` restored SHA-256-identical originals. Both History deletions reached removed/done; independent B2 file-version listing returned zero versions. B2 authorized/private bucket row is blocked: the documented scoped test key identifies only an allPublic bucket; no policy or existing bucket may be changed.
+- **SFTP HTTPS:** actual lab SFTP host key compared with pinned lab public key and trusted, normal Test completed. Seal check failed with **This request keeps no journal**. UI reported failed/unavailable. Isolated folder removed by pinned SFTP rmdir and absence checked. Read-only source inspection identifies SftpProvider.cpp's checkpoint_failed path when an upload request has no journal. Reported to implementation lead.
+- **Nextcloud:** ordinary Test complete; seal state unsupported with the stated HTML-download explanation. Isolated synthetic folder listed empty, deleted with HTTP 204, and verified absent.
+- **Proton Drive:** lab account-folder check completed and seal state unsupported with end-to-end encryption explanation. UI unavailable accordingly. A separate unlock attempt returned credential_store_unavailable; the seal check still completed. No upload or new folder was made. Both desktop and Proton lock released.
+- **Editor failure comparison:** candidate and published nightly 26.1125.7045-nightly both opened and canceled the editor in a fresh resident with no passed seal test. Implementation lead found that the earlier failure requires the Seal control frame, which nightly does not have; fixed in later candidate bd5be3b0. The initial failure remains valid and the corrected build must be retested.
+- **Debian settings:** native visual crop displays Seal links On with passed status after the WebDAV check. See [d69-seal-card.png](d69-seal-card.png).
+- **Firefox lab origin:** actual History-opened link took the desktop portal route, but Firefox rejected the lab CA; no certificate bypass was attempted. See [d69-webdav-firefox-untrusted-ca.png](d69-webdav-firefox-untrusted-ca.png). This does not prove viewer playback or a product failure.
+
+Rows and operation IDs are in the sanitized JSON files. No disclosed link keys, auth tokens, or passphrases.
