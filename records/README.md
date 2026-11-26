@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-26-sealed-links-2079-final-acceptance](2026-11-26-sealed-links-2079-final-acceptance/README.md) | — | Sealed links acceptance: native desktops and inline destinations |
 | [2026-11-26-sealed-links-2079-initial-blocker](2026-11-26-sealed-links-2079-initial-blocker/README.md) | #2079 | Sealed links #2079 — initial native candidate blocker |
 | [2026-11-25-gui-fuzz-2066](2026-11-25-gui-fuzz-2066/README.md) | #2066 | Issue 2066 published-nightly GUI fuzz campaign |
 | [2026-11-26-ui-add-destination-order-2088](2026-11-26-ui-add-destination-order-2088/README.md) | #2088, #2092 | Add destination and Storage service menu order (#2088): before and after pictures for PR #2092 |
