@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "desktop": "Kubuntu 26.04 Plasma Wayland",
+  "seeds": [1, 22],
+  "crashes": [
+    {
+      "pid": 1499,
+      "signal": "SIGSEGV",
+      "coreTimestampLocal": "2026-11-25T16:33:56-06:00",
+      "matchesKnownTrap": true,
+      "matchingFrame": "QtWaylandClient::QWaylandXdgSurface::applyConfigure",
+      "actionContext": [
+        "putgd-ui main window, Edit image window, and a putgd-region layer-shell surface were live",
+        "the preceding rapid actions invoked desktop and edit captures and opened an editor from the clipboard",
+        "the final output action changed Virtual-1 to scale 2 and removed Virtual-2 from the active layout"
+      ],
+      "classification": "desktop process crash during output and scale churn; held for comparison with the targeted controls"
+    },
+    {
+      "pid": 10993,
+      "signal": "SIGSEGV",
+      "coreTimestampLocal": "2026-11-25T16:44:47-06:00",
+      "matchesKnownTrap": true,
+      "matchingFrame": "QtWaylandClient::QWaylandXdgSurface::applyConfigure",
+      "actionContext": [
+        "an edit/window capture sequence opened two put.gd selector overlays",
+        "the walk dragged across the overlays while Virtual-1 was at scale 2 and Virtual-2 was at scale 1",
+        "putgd-ui and the portal's Edit an image file window were also live when plasmashell restarted"
+      ],
+      "classification": "desktop process crash with selector surfaces live; held for comparison with the targeted controls"
+    },
+    {
+      "pid": 16077,
+      "signal": "SIGSEGV",
+      "coreTimestampLocal": "2026-11-25T18:36:21-06:00",
+      "matchesKnownTrap": true,
+      "matchingFrame": "QtWaylandClient::QWaylandXdgSurface::applyConfigure",
+      "actionContext": [
+        "the end of seed 21 changed Virtual-1 to scale 2, enabled Virtual-2, changed Virtual-2 between scales 1.5 and 1, disabled it, and enabled it again",
+        "seed 22 then opened put.gd's recording selector and reported selector overlays while the putgd-ui main window remained open",
+        "plasmashell crashed about 12 seconds after the last recorded output enable/scale command and while the selector was being exercised"
+      ],
+      "classification": "desktop process crash with selector surfaces live after output and scale churn; held for comparison with the targeted controls"
+    }
+  ]
+}

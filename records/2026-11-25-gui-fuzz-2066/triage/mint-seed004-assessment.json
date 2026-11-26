@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "desktop": "cinnamon",
+  "seed": 4,
+  "archiveSha256": "107d622db8a25c3b5254a2342cd98545ba48c8a98c0d699d6600cd109481360e",
+  "issueFiled": false,
+  "assessments": [
+    {
+      "finding": "stuck_grab|region overlay still up after Escape",
+      "classification": "fuzzer false positive",
+      "reason": "The requested Escape at step 54 was denied by the Cinnamon fence and was never emitted. At the checkpoint no old selector was present; the witness then invoked a new edit action, whose expected acquiring overlays were what the later snapshot recorded."
+    },
+    {
+      "finding": "focus_left_putgd|focus is on navigator for 6 s while put.gd shows 1 windows",
+      "classification": "foreign-window focus, not a put.gd defect",
+      "reason": "Mozilla Firefox (WM_CLASS navigator) was active on the published nightly's GitHub release page. put.gd remained alive with its main window present; there was no put.gd crash, hang, data loss, or privacy behavior."
+    }
+  ]
+}

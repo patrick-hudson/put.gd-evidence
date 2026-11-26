@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "desktop": "cinnamon",
+  "seed": 18,
+  "archiveSha256": "32412e33c09fad39dfdf4ddae3e028ef800b5f6a56657525c2aab24a2f621f82",
+  "issueFiled": false,
+  "finding": "focus_left_putgd and focus_unrecoverable",
+  "classification": "harness-owned foreign window; not a put.gd defect",
+  "reason": "Mozilla Firefox (WM_CLASS navigator) remained focused on the prepared published-nightly release page from seed 17. The fence denied all input for this seed, so it completed with zero walk steps while put.gd stayed alive and responsive (119 pings, maximum 45 ms). The exact reviewed Firefox PID 34325 was terminated before the next seed."
+}

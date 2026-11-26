@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "desktop": "cinnamon",
+  "seed": 19,
+  "archiveSha256": "9be0891befe44aa7fb01d84bfdb2091e0232005162b1e123f4e2634b7ec3dec4",
+  "issueFiled": false,
+  "assessments": [
+    {
+      "finding": "focus_left_putgd and focus_unrecoverable",
+      "classification": "harness-owned foreign window; not a put.gd defect",
+      "reason": "The same prepared published-nightly Firefox window retained focus at the start of the seed. It was closed by its exact X11 window ID after review; put.gd remained alive and responsive."
+    },
+    {
+      "finding": "stuck_grab|region overlay still up after Escape",
+      "classification": "selector progressed; not a stuck-grab defect",
+      "reason": "The requested Escape at step 39 was denied because Cinnamon reported no active put.gd window. The checkpoint then invoked a new edit action; its expected selector overlays appeared about 11 seconds later while operation.recent showed edit:acquiring. Subsequent overlay actions removed the overlays and the walk continued through 205 steps."
+    }
+  ]
+}

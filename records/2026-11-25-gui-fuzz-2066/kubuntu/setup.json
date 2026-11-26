@@ -1,0 +1,366 @@
+{
+  "createdUtc": "2026-11-25T22:27:33.735406+00:00",
+  "dependencies": {
+    "modules": {
+      "dbus": true,
+      "gi": true
+    },
+    "python": "/usr/bin/python3",
+    "uinput": true
+  },
+  "desktop": "kde",
+  "eligible": true,
+  "fence": {
+    "fresh": true,
+    "ok": true,
+    "outputs": [
+      "Virtual-1",
+      "Virtual-2"
+    ],
+    "serial": 2,
+    "windows": 3
+  },
+  "golden": "/home/patrick/work/put.gd/work/lab-images/nightly-kde-49fcacff969b/image.qcow2",
+  "goldenSha256": "49fcacff969b81ac38e36fefdf21407d20c82187e1725c58f128a3b76065a81c",
+  "heads": [
+    {
+      "display": "127.0.0.1:5952",
+      "head": 0,
+      "port": 5952
+    },
+    {
+      "display": "127.0.0.1:5953",
+      "head": 1,
+      "port": 5953
+    }
+  ],
+  "host": "k72",
+  "nightlyAsset": "putgd-26.1125.7045-nightly-ubuntu26.04-x86_64.deb",
+  "nightlySha256": "33a44c8eb74198daf9ef33b87c7a72a443ce24a317694c1d1b1fb56564b78cd7",
+  "nightlyTag": "v26.1125.7045-nightly",
+  "preflight": {
+    "afterVisualInvocation": {
+      "exitCode": 0,
+      "stderr": ""
+    },
+    "afterVisuals": {
+      "configurationHome": "/home/lab/.config",
+      "desktop": "KDE",
+      "inhibitor": {
+        "mode": "block",
+        "pid": 1824,
+        "uid": 1000,
+        "what": "sleep:idle",
+        "who": "putgd-lab-guest"
+      },
+      "ok": true,
+      "policy": [
+        {
+          "file": "kscreenlockerrc",
+          "groups": [
+            "Daemon"
+          ],
+          "key": "Autolock",
+          "value": "false"
+        },
+        {
+          "file": "kscreenlockerrc",
+          "groups": [
+            "Daemon"
+          ],
+          "key": "LockOnResume",
+          "value": "false"
+        },
+        {
+          "file": "powerdevilrc",
+          "groups": [
+            "AC",
+            "Display"
+          ],
+          "key": "DimDisplayWhenIdle",
+          "value": "false"
+        },
+        {
+          "file": "powerdevilrc",
+          "groups": [
+            "AC",
+            "Display"
+          ],
+          "key": "TurnOffDisplayWhenIdle",
+          "value": "false"
+        },
+        {
+          "file": "powerdevilrc",
+          "groups": [
+            "AC",
+            "SuspendAndShutdown"
+          ],
+          "key": "AutoSuspendAction",
+          "value": "0"
+        },
+        {
+          "file": "powerdevilrc",
+          "groups": [
+            "Battery",
+            "Display"
+          ],
+          "key": "DimDisplayWhenIdle",
+          "value": "false"
+        },
+        {
+          "file": "powerdevilrc",
+          "groups": [
+            "Battery",
+            "Display"
+          ],
+          "key": "TurnOffDisplayWhenIdle",
+          "value": "false"
+        },
+        {
+          "file": "powerdevilrc",
+          "groups": [
+            "Battery",
+            "SuspendAndShutdown"
+          ],
+          "key": "AutoSuspendAction",
+          "value": "0"
+        },
+        {
+          "file": "powerdevilrc",
+          "groups": [
+            "LowBattery",
+            "Display"
+          ],
+          "key": "DimDisplayWhenIdle",
+          "value": "false"
+        },
+        {
+          "file": "powerdevilrc",
+          "groups": [
+            "LowBattery",
+            "Display"
+          ],
+          "key": "TurnOffDisplayWhenIdle",
+          "value": "false"
+        },
+        {
+          "file": "powerdevilrc",
+          "groups": [
+            "LowBattery",
+            "SuspendAndShutdown"
+          ],
+          "key": "AutoSuspendAction",
+          "value": "0"
+        }
+      ],
+      "session": {
+        "Active": "yes",
+        "LockedHint": "no",
+        "Seat": "seat0",
+        "State": "active",
+        "Type": "wayland",
+        "User": "1000",
+        "id": "3"
+      },
+      "x11": null
+    },
+    "apply": false,
+    "helperSha256": "0d05ae5d31b7f2206b2dd056e28bd90f34e198d64a578f73f6ed7fe789115d08",
+    "ok": true,
+    "outputs": {
+      "errors": [],
+      "ok": true,
+      "outputs": [
+        {
+          "enabled": true,
+          "height": 800,
+          "name": "Virtual-1",
+          "primary": true,
+          "width": 1280,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "enabled": true,
+          "height": 800,
+          "name": "Virtual-2",
+          "primary": false,
+          "width": 1280,
+          "x": 1280,
+          "y": 0
+        }
+      ]
+    },
+    "policy": {
+      "configurationHome": "/home/lab/.config",
+      "desktop": "KDE",
+      "inhibitor": {
+        "mode": "block",
+        "pid": 1824,
+        "uid": 1000,
+        "what": "sleep:idle",
+        "who": "putgd-lab-guest"
+      },
+      "ok": true,
+      "policy": [
+        {
+          "file": "kscreenlockerrc",
+          "groups": [
+            "Daemon"
+          ],
+          "key": "Autolock",
+          "value": "false"
+        },
+        {
+          "file": "kscreenlockerrc",
+          "groups": [
+            "Daemon"
+          ],
+          "key": "LockOnResume",
+          "value": "false"
+        },
+        {
+          "file": "powerdevilrc",
+          "groups": [
+            "AC",
+            "Display"
+          ],
+          "key": "DimDisplayWhenIdle",
+          "value": "false"
+        },
+        {
+          "file": "powerdevilrc",
+          "groups": [
+            "AC",
+            "Display"
+          ],
+          "key": "TurnOffDisplayWhenIdle",
+          "value": "false"
+        },
+        {
+          "file": "powerdevilrc",
+          "groups": [
+            "AC",
+            "SuspendAndShutdown"
+          ],
+          "key": "AutoSuspendAction",
+          "value": "0"
+        },
+        {
+          "file": "powerdevilrc",
+          "groups": [
+            "Battery",
+            "Display"
+          ],
+          "key": "DimDisplayWhenIdle",
+          "value": "false"
+        },
+        {
+          "file": "powerdevilrc",
+          "groups": [
+            "Battery",
+            "Display"
+          ],
+          "key": "TurnOffDisplayWhenIdle",
+          "value": "false"
+        },
+        {
+          "file": "powerdevilrc",
+          "groups": [
+            "Battery",
+            "SuspendAndShutdown"
+          ],
+          "key": "AutoSuspendAction",
+          "value": "0"
+        },
+        {
+          "file": "powerdevilrc",
+          "groups": [
+            "LowBattery",
+            "Display"
+          ],
+          "key": "DimDisplayWhenIdle",
+          "value": "false"
+        },
+        {
+          "file": "powerdevilrc",
+          "groups": [
+            "LowBattery",
+            "Display"
+          ],
+          "key": "TurnOffDisplayWhenIdle",
+          "value": "false"
+        },
+        {
+          "file": "powerdevilrc",
+          "groups": [
+            "LowBattery",
+            "SuspendAndShutdown"
+          ],
+          "key": "AutoSuspendAction",
+          "value": "0"
+        }
+      ],
+      "session": {
+        "Active": "yes",
+        "LockedHint": "no",
+        "Seat": "seat0",
+        "State": "active",
+        "Type": "wayland",
+        "User": "1000",
+        "id": "3"
+      },
+      "x11": null
+    },
+    "policyInvocation": {
+      "exitCode": 0,
+      "stderr": ""
+    },
+    "runId": "b5eb2567-c52b-4cc0-af2c-cc8792e5c2c5",
+    "schemaVersion": 1,
+    "stage": "gui-fuzz-ready",
+    "timestampUtc": "2026-11-25T22:27:32.191400+00:00",
+    "visualAttempts": [
+      {
+        "head": 0,
+        "height": 800,
+        "path": "/home/patrick/work/tmp/gfz2066k/work/lab-runs/k72k/guest-preflight-e42d04a021174ecbad8f1b4a71aa1239-attempt0-head0.ppm",
+        "sha256": "bd588ec2ca7a8169cf23fe3b41692f8e482a8f0c21d502837c8ab41ed80fac83",
+        "visible": true,
+        "width": 1280
+      },
+      {
+        "head": 1,
+        "height": 800,
+        "path": "/home/patrick/work/tmp/gfz2066k/work/lab-runs/k72k/guest-preflight-e42d04a021174ecbad8f1b4a71aa1239-attempt0-head1.ppm",
+        "sha256": "83b6b3a370210f7d97fd4859ee525d9a6f4e5655d802bb5ec9a7191ec5a9a0d9",
+        "visible": true,
+        "width": 1280
+      }
+    ],
+    "visuals": [
+      {
+        "head": 0,
+        "height": 800,
+        "path": "/home/patrick/work/tmp/gfz2066k/work/lab-runs/k72k/guest-preflight-e42d04a021174ecbad8f1b4a71aa1239-attempt0-head0.ppm",
+        "sha256": "bd588ec2ca7a8169cf23fe3b41692f8e482a8f0c21d502837c8ab41ed80fac83",
+        "width": 1280
+      },
+      {
+        "head": 1,
+        "height": 800,
+        "path": "/home/patrick/work/tmp/gfz2066k/work/lab-runs/k72k/guest-preflight-e42d04a021174ecbad8f1b4a71aa1239-attempt0-head1.ppm",
+        "sha256": "83b6b3a370210f7d97fd4859ee525d9a6f4e5655d802bb5ec9a7191ec5a9a0d9",
+        "width": 1280
+      }
+    ]
+  },
+  "profile": "kde-wayland",
+  "run": "/home/patrick/work/tmp/gfz2066k/work/lab-runs/k72k",
+  "runId": "b5eb2567-c52b-4cc0-af2c-cc8792e5c2c5",
+  "schemaVersion": 1,
+  "screenshot": {
+    "path": "/home/patrick/work/tmp/gfz2066k/work/lab-runs/k72k/gui-fuzz-ready-head0.ppm",
+    "sha256": "bd588ec2ca7a8169cf23fe3b41692f8e482a8f0c21d502837c8ab41ed80fac83"
+  }
+}

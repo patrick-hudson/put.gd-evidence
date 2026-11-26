@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "desktop": "cinnamon",
+  "seed": 17,
+  "archiveSha256": "2da17a478fab6ae373d8c7dfe1ad0b7dcee0b4090fca0b587441e5b9b7f8d1f3",
+  "issueFiled": false,
+  "assessments": [
+    {
+      "finding": "focus_left_putgd and focus_unrecoverable",
+      "classification": "harness-owned foreign window; not a put.gd defect",
+      "reason": "Mozilla Firefox (WM_CLASS navigator) was active on the published nightly's GitHub release page. The fence denied input outside put.gd, so the recovery attempts could not take focus from that prepared foreign window. put.gd remained alive and later regained focus."
+    },
+    {
+      "finding": "stuck_grab|region overlay still up after Escape",
+      "classification": "selector progressed; not a stuck-grab defect",
+      "reason": "The snapshot showed edit:acquiring with two selector overlays. The next overlay_drag completed and removed both overlays; later operation states were completed or failed, not left acquiring."
+    }
+  ]
+}

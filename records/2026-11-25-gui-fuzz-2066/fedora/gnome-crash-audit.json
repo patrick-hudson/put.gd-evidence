@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "auditedUtc": "2026-11-25T22:35:00Z",
+  "classification": "inconclusive; a third instrumented Fedora GNOME guest is required",
+  "runs": [
+    {
+      "run": "f44g",
+      "seed": 2,
+      "shellPid": 1338,
+      "fullCoredumpBacktracePresent": false,
+      "embeddedBacktrace": "trailing 3500 bytes only",
+      "embeddedFrames": [
+        "st_viewport_paint",
+        "clutter_actor_paint",
+        "clutter_actor_continue_paint",
+        "clutter_paint_node_paint",
+        "meta_stage_paint"
+      ],
+      "preCrashJournalPresent": false,
+      "journalContents": "post-crash GNOME session teardown only",
+      "extensionLogLinesPresent": false,
+      "recentActions": [
+        "action.invoke edit",
+        "dragged two selector overlays",
+        "monitor hotkey",
+        "editor.open source=region",
+        "tray action Capture scrolling region",
+        "gdctl Virtual-1 scale 2 and Virtual-2 scale 1"
+      ]
+    },
+    {
+      "run": "f44g2",
+      "seed": 31,
+      "shellPid": 1316,
+      "fullCoredumpBacktracePresent": false,
+      "embeddedBacktrace": "trailing 3500 bytes only",
+      "embeddedFrames": [
+        "Mutter input thread",
+        "GDBus worker thread",
+        "Mesa worker thread",
+        "MozJS helper thread"
+      ],
+      "preCrashJournalPresent": false,
+      "journalContents": "post-crash GNOME session teardown only",
+      "extensionLogLinesPresent": false,
+      "recentActions": [
+        "region hotkey",
+        "dragged one of two selector overlays",
+        "tray action 5 seconds",
+        "gdctl changed to one Virtual-1 output at scale 1"
+      ]
+    }
+  ]
+}

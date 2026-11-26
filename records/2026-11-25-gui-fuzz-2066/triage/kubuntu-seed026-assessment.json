@@ -1,0 +1,10 @@
+{
+  "seed": 26,
+  "findings": [
+    "focus_left_putgd|focus is on firefox_firefox for N s while put.gd shows N windows",
+    "focus_unrecoverable|focus would not return to put.gd after N tries"
+  ],
+  "classification": "not a put.gd defect",
+  "reason": "The active foreign window is Firefox showing the published nightly release page. putgd-ui remains present and responsive, selector actions continue to complete, and the marks report no put.gd crash, hang, state loss, or leaked grab. This is foreign-window focus interference in the prepared guest.",
+  "evidence": "work/gfz2066/live-audit/k72d/seed026-unpacked/seed026"
+}

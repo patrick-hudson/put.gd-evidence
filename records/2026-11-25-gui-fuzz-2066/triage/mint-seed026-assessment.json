@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "desktop": "cinnamon",
+  "seed": 26,
+  "archiveSha256": "cd291b6ba9166f6849c4bd0a5f508caddbaf3d014298823eb7d9343876bea056",
+  "issueFiled": false,
+  "finding": "focus_left_putgd",
+  "classification": "foreign Firefox window handled by watchdog; not a put.gd defect",
+  "reason": "A Firefox navigator window briefly took focus near the start of the seed. The watchdog closed that exact window (foreign_windows_closed.navigator = 1), and the walk completed 349 steps with put.gd alive and responsive."
+}

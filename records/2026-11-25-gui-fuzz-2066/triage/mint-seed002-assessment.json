@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "desktop": "cinnamon",
+  "seed": 2,
+  "finding": "stuck_grab|region overlay still up after Escape",
+  "archiveSha256": "6a237e00882dc77c2c6f21f5a5c0235c402b58af3da48f2d0c914802f843583b",
+  "classification": "fuzzer false positive",
+  "issueFiled": false,
+  "reason": "Escape at step 327 removed the scrolling selector: overlay count changed from 2 at step 327 to 0 at step 328. The walk subsequently invoked a new region selector at step 333 and Copy Text at step 335. The checkpoint saw those new X11 overlays while operation.recent reported text:acquiring; it did not see the selector that Escape had cancelled."
+}

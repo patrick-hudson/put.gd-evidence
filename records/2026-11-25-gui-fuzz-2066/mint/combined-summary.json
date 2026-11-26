@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "issue": 2066,
+  "desktop": "Cinnamon",
+  "guest": "Linux Mint 22.3",
+  "profile": "cinnamon-x11",
+  "nightlyTag": "v26.1125.7045-nightly",
+  "nightlyAsset": "putgd-26.1125.7045-nightly-ubuntu24.04-x86_64.deb",
+  "nightlySha256": "c30b68a1ec8a01715d54ed0112e361e02ebb09f1cbd570b9642ce6700ab2806a",
+  "run": "/home/patrick/work/tmp/gfz2066m/work/lab-runs/m74c",
+  "runId": "f4c603df-e055-412f-abf8-276beb43cd27",
+  "sessions": 2,
+  "seedsCompleted": [1, 2, 3, 4, 5],
+  "walkSeconds": 1756,
+  "actions": 1722,
+  "putgdFindings": 0,
+  "desktopProcessCrashes": 1,
+  "outcome": "failed",
+  "reason": "The Cinnamon desktop process crashed with SIGSEGV during seed 5, ending the desktop session.",
+  "crashContext": {
+    "process": "/usr/bin/cinnamon",
+    "pid": 1334,
+    "signal": "SIGSEGV",
+    "timestamp": "2026-11-25T17:56:14-06:00",
+    "precedingWalk": "A put.gd region overlay had been open earlier; immediately before the crash the walk rapidly disabled and re-enabled Virtual-2 and changed Virtual-1 to 800x600. No put.gd overlay was present at the crash checkpoint.",
+    "disposition": "Desktop-process crash recorded in the run summary; no put.gd issue filed."
+  },
+  "triage": {
+    "stuckGrabMarks": "False positives caused by later selector invocations or fence-denied Escape actions; the selectors subsequently cleared or progressed.",
+    "foreignFocus": "Firefox on the published nightly release page was a harness-owned foreign window and was closed; no put.gd focus defect."
+  },
+  "seedArchives": {
+    "seed001.tar.gz": "4fda929b6ea6f598e37bea5c946d5fdb44201033ca55aac0cc75b6caf70317b7",
+    "seed002.tar.gz": "6a237e00882dc77c2c6f21f5a5c0235c402b58af3da48f2d0c914802f843583b",
+    "seed003.tar.gz": "1a2ea2eec37d833e5da64b82e4a1357b722376af0e110885c9ae98c9c5d49398",
+    "seed004.tar.gz": "107d622db8a25c3b5254a2342cd98545ba48c8a98c0d699d6600cd109481360e",
+    "seed005.tar.gz": "addd55ab8dec153683d87269d783ee1d62c6026a0d895620bd8f5f5d0ada9078"
+  }
+}

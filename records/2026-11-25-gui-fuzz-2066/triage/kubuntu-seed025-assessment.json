@@ -1,0 +1,7 @@
+{
+  "seed": 25,
+  "finding": "stuck_grab|region overlay still up after Escape",
+  "classification": "not a put.gd defect",
+  "reason": "The checkpoint launched action.invoke(edit) while a region operation was still acquiring. Its Escape chords arrived before the late per-monitor selector surfaces appeared. The next selector drag completed the active acquisition and the walk continued normally. This was a transient in-progress selector, not an idle leaked grab, hang, crash, wrong state, or data loss.",
+  "evidence": "work/gfz2066/live-audit/k72d/seed025-unpacked/seed025"
+}

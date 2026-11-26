@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "desktop": "Aurora Plasma 6.8.2 Wayland",
+  "seeds": [1, 3, 7, 13, 21, 25, 28],
+  "knownTrap": "QtWaylandClient::QWaylandXdgSurface::applyConfigure during output/scale churn",
+  "crashes": [
+    {
+      "pid": 2404,
+      "signal": "SIGSEGV",
+      "coreTimestampLocal": "2026-11-25T16:09:05-06:00",
+      "matchesKnownTrap": true,
+      "matchingFrame": "QtWaylandClient::QWaylandXdgSurface::applyConfigure",
+      "actionContext": [
+        "step 35 invoked put.gd's monitor-capture hotkey while the put.gd main window was open",
+        "step 36 changed Virtual-1 scale to 1.5",
+        "step 37 enabled Virtual-2 and changed its scale to 1",
+        "step 39 disabled Virtual-2 before the watchdog observed the restarted plasmashell"
+      ],
+      "putgdWindowOrSelector": "putgd-ui main window open; monitor-capture hotkey had just been invoked",
+      "classification": "desktop process crash during output and scale churn; not a put.gd finding"
+    },
+    {
+      "pid": 7541,
+      "signal": "SIGSEGV",
+      "coreTimestampLocal": "2026-11-25T16:11:53-06:00",
+      "matchesKnownTrap": true,
+      "matchingFrame": "QtWaylandClient::QWaylandXdgSurface::applyConfigure",
+      "actionContext": [
+        "step 176 invoked put.gd's region hotkey",
+        "step 177 observed two selector overlays and invoked the clipboard hotkey",
+        "step 178 disabled Virtual-2 while two selector overlays were present",
+        "step 179 immediately enabled Virtual-2 and changed its scale to 1 during rapid output churn"
+      ],
+      "putgdWindowOrSelector": "putgd-ui main window open; two region-selector overlays were present when output churn began",
+      "classification": "desktop process crash during output and scale churn; not a put.gd finding"
+    },
+    {
+      "pid": 8987,
+      "signal": "SIGSEGV",
+      "coreTimestampLocal": "2026-11-25T16:24:53-06:00",
+      "matchesKnownTrap": true,
+      "matchingFrame": "QtWaylandClient::QWaylandXdgSurface::applyConfigure",
+      "actionContext": [
+        "steps 155 and 156 invoked put.gd desktop and clipboard actions while the putgd-ui main window was open",
+        "step 157 disabled Virtual-2",
+        "step 158 disabled Virtual-2 again immediately before the crash",
+        "the same rapid-output step then changed Virtual-1 to scale 2 and re-enabled Virtual-2 at scale 1"
+      ],
+      "putgdWindowOrSelector": "putgd-ui main window open; no selector overlay was reported",
+      "classification": "desktop process crash during output and scale churn; not a put.gd finding"
+    },
+    {
+      "pid": 15257,
+      "signal": "SIGSEGV",
+      "coreTimestampLocal": "2026-11-25T16:49:59-06:00",
+      "matchesKnownTrap": true,
+      "matchingFrame": "QtWaylandClient::QWaylandXdgSurface::applyConfigure",
+      "actionContext": [
+        "putgd-ui and an Edit an image file portal window were live",
+        "the walk repeatedly enabled and disabled Virtual-2, changed Virtual-1 to scale 1.5, re-enabled Virtual-2, and changed its scale",
+        "the final action disabled Virtual-2 again"
+      ],
+      "putgdWindowOrSelector": "putgd-ui and portal window open; no selector overlay reported",
+      "classification": "desktop process crash during output and scale churn; held for comparison with the targeted controls"
+    },
+    {
+      "pid": 26887,
+      "signal": "SIGSEGV",
+      "coreTimestampLocal": "2026-11-25T17:41:50-06:00",
+      "matchesKnownTrap": true,
+      "matchingFrame": "QtWaylandClient::QWaylandXdgSurface::applyConfigure",
+      "actionContext": [
+        "step 2 disabled Virtual-2",
+        "step 3 repeatedly enabled and disabled Virtual-2, set Virtual-2 scale to 1.5, and changed Virtual-1 through scales 2 and 1.5",
+        "putgd-ui and an Edit image window were open while output churn ran"
+      ],
+      "putgdWindowOrSelector": "putgd-ui main and Edit image windows open; no selector overlay was reported at the crash checkpoint",
+      "classification": "desktop process crash during output and scale churn; held for comparison with the targeted controls"
+    },
+    {
+      "pid": 43249,
+      "signal": "SIGSEGV",
+      "coreTimestampLocal": "2026-11-25T18:32:09-06:00",
+      "matchesKnownTrap": true,
+      "matchingFrame": "QtWaylandClient::QWaylandXdgSurface::applyConfigure",
+      "actionContext": [
+        "step 72 opened put.gd's region selector and step 74 completed a selector drag; no overlay remained at the crash checkpoint",
+        "step 78 selected Settings while two put.gd windows were open",
+        "steps 80 and 81 enabled, disabled, and rescaled Virtual-2",
+        "step 84 disabled Virtual-2 immediately before plasmashell crashed"
+      ],
+      "putgdWindowOrSelector": "two put.gd windows were open; the selector had closed about 17 seconds before the crash",
+      "classification": "desktop process crash during output and scale churn; held for comparison with the targeted controls"
+    },
+    {
+      "pid": 65111,
+      "signal": "SIGSEGV",
+      "coreTimestampLocal": "2026-11-25T18:56:24-06:00",
+      "matchesKnownTrap": true,
+      "matchingFrame": "QtWaylandClient::QWaylandXdgSurface::applyConfigure",
+      "actionContext": [
+        "the walk changed Virtual-2 to scale 1.5, opened and completed a region selector, disabled Virtual-2, and changed Virtual-1 to scale 1",
+        "the checkpoint restored Virtual-2 and positioned it at 1280,0",
+        "put.gd's scrolling-region selector was opened and dragged immediately before the crash"
+      ],
+      "putgdWindowOrSelector": "putgd-ui main window open; a scrolling-region selector had just completed and cleared",
+      "classification": "desktop process crash with a selector surface just closed during output and scale churn; held for comparison with the targeted controls"
+    },
+    {
+      "pid": 76599,
+      "signal": "SIGSEGV",
+      "coreTimestampLocal": "2026-11-25T19:12:35-06:00",
+      "matchesKnownTrap": true,
+      "matchingFrame": "QtWaylandClient::QWaylandXdgSurface::applyConfigure",
+      "actionContext": [
+        "seed 27 step 264 enabled Virtual-2 and changed its scale to 1.5",
+        "seed 27 step 265 disabled and re-enabled Virtual-2, changed Virtual-1 to scale 2, positioned Virtual-2 at 640,0, and set Virtual-2 scale to 1.5",
+        "seed 27 step 266 again enabled Virtual-2 at scale 1.5",
+        "seed 27 step 275 disabled Virtual-2 immediately before the crash; seed 28 observed the restarted shell"
+      ],
+      "putgdWindowOrSelector": "putgd-ui main window open; no selector overlay was reported during the final output churn",
+      "classification": "desktop process crash during output and scale churn; matches the known QtWayland trap and is not a put.gd finding"
+    }
+  ],
+  "symbols": {
+    "gdb": "17.2-6.fc45",
+    "functionSymbolsResolved": true,
+    "fullDebuginfoInstalled": false,
+    "note": "The guest did not have plasma-workspace, Qt Wayland, or Qt Base debuginfo packages installed. GDB resolved the exported QtWaylandClient frames."
+  }
+}

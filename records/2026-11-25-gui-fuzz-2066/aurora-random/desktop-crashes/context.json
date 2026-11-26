@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "desktop": "Aurora Plasma 6.8.2 Wayland",
+  "seed": 1,
+  "knownTrap": "QtWaylandClient::QWaylandXdgSurface::applyConfigure during output/scale churn",
+  "crashes": [
+    {
+      "pid": 2404,
+      "signal": "SIGSEGV",
+      "coreTimestampLocal": "2026-11-25T16:09:05-06:00",
+      "matchesKnownTrap": true,
+      "matchingFrame": "QtWaylandClient::QWaylandXdgSurface::applyConfigure",
+      "actionContext": [
+        "step 35 invoked put.gd's monitor-capture hotkey while the put.gd main window was open",
+        "step 36 changed Virtual-1 scale to 1.5",
+        "step 37 enabled Virtual-2 and changed its scale to 1",
+        "step 39 disabled Virtual-2 before the watchdog observed the restarted plasmashell"
+      ],
+      "putgdWindowOrSelector": "putgd-ui main window open; monitor-capture hotkey had just been invoked",
+      "classification": "desktop process crash during output and scale churn; not a put.gd finding"
+    },
+    {
+      "pid": 7541,
+      "signal": "SIGSEGV",
+      "coreTimestampLocal": "2026-11-25T16:11:53-06:00",
+      "matchesKnownTrap": true,
+      "matchingFrame": "QtWaylandClient::QWaylandXdgSurface::applyConfigure",
+      "actionContext": [
+        "step 176 invoked put.gd's region hotkey",
+        "step 177 observed two selector overlays and invoked the clipboard hotkey",
+        "step 178 disabled Virtual-2 while two selector overlays were present",
+        "step 179 immediately enabled Virtual-2 and changed its scale to 1 during rapid output churn"
+      ],
+      "putgdWindowOrSelector": "putgd-ui main window open; two region-selector overlays were present when output churn began",
+      "classification": "desktop process crash during output and scale churn; not a put.gd finding"
+    },
+    {
+      "pid": 8987,
+      "signal": "SIGSEGV",
+      "coreTimestampLocal": "2026-11-25T16:24:53-06:00",
+      "matchesKnownTrap": true,
+      "matchingFrame": "QtWaylandClient::QWaylandXdgSurface::applyConfigure",
+      "actionContext": [
+        "steps 155 and 156 invoked put.gd desktop and clipboard actions while the putgd-ui main window was open",
+        "step 157 disabled Virtual-2",
+        "step 158 disabled Virtual-2 again immediately before the crash",
+        "the same rapid-output step then changed Virtual-1 to scale 2 and re-enabled Virtual-2 at scale 1"
+      ],
+      "putgdWindowOrSelector": "putgd-ui main window open; no selector overlay was reported",
+      "classification": "desktop process crash during output and scale churn; not a put.gd finding"
+    },
+    {
+      "pid": 15257,
+      "signal": "SIGSEGV",
+      "coreTimestampLocal": "2026-11-25T16:49:59-06:00",
+      "matchesKnownTrap": true,
+      "matchingFrame": "QtWaylandClient::QWaylandXdgSurface::applyConfigure",
+      "actionContext": [
+        "putgd-ui and an Edit an image file portal window were live",
+        "the walk repeatedly enabled and disabled Virtual-2, changed Virtual-1 to scale 1.5, re-enabled Virtual-2, and changed its scale",
+        "the final action disabled Virtual-2 again"
+      ],
+      "putgdWindowOrSelector": "putgd-ui and portal window open; no selector overlay reported",
+      "classification": "desktop process crash during output and scale churn; held for comparison with the targeted controls"
+    }
+  ],
+  "symbols": {
+    "gdb": "17.2-6.fc45",
+    "functionSymbolsResolved": true,
+    "fullDebuginfoInstalled": false,
+    "note": "The guest did not have plasma-workspace, Qt Wayland, or Qt Base debuginfo packages installed. GDB resolved the exported QtWaylandClient frames."
+  }
+}

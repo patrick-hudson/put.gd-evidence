@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "desktop": "Kubuntu 26.04 Plasma Wayland",
+  "seed": 1,
+  "crashes": [
+    {
+      "pid": 1499,
+      "signal": "SIGSEGV",
+      "coreTimestampLocal": "2026-11-25T16:33:56-06:00",
+      "matchesKnownTrap": true,
+      "matchingFrame": "QtWaylandClient::QWaylandXdgSurface::applyConfigure",
+      "actionContext": [
+        "putgd-ui main window, Edit image window, and a putgd-region layer-shell surface were live",
+        "the preceding rapid actions invoked desktop and edit captures and opened an editor from the clipboard",
+        "the final output action changed Virtual-1 to scale 2 and removed Virtual-2 from the active layout"
+      ],
+      "classification": "desktop process crash during output and scale churn; held for comparison with the targeted controls"
+    },
+    {
+      "pid": 10993,
+      "signal": "SIGSEGV",
+      "coreTimestampLocal": "2026-11-25T16:44:47-06:00",
+      "matchesKnownTrap": true,
+      "matchingFrame": "QtWaylandClient::QWaylandXdgSurface::applyConfigure",
+      "actionContext": [
+        "an edit/window capture sequence opened two put.gd selector overlays",
+        "the walk dragged across the overlays while Virtual-1 was at scale 2 and Virtual-2 was at scale 1",
+        "putgd-ui and the portal's Edit an image file window were also live when plasmashell restarted"
+      ],
+      "classification": "desktop process crash with selector surfaces live; held for comparison with the targeted controls"
+    }
+  ]
+}

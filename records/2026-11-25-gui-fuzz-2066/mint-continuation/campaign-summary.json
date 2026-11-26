@@ -1,0 +1,1501 @@
+{
+  "completedUtc": "2026-11-26T03:17:53.461964+00:00",
+  "desktop": "cinnamon",
+  "findings": {
+    "desktop_core_dump_nemo_desktop|Wed 2026-11-25 19:20:09 CST 1518 1000 1000 SIGSEGV present /usr/bin/nemo-desktop 4.4M": 1,
+    "desktop_core_dump_nemo_desktop|Wed 2026-11-25 20:11:29 CST 21075 1000 1000 SIGABRT present /usr/bin/nemo-desktop 4.4M": 1,
+    "focus_left_putgd|focus is on navigator for N s while put.gd shows N windows": 1786,
+    "focus_unrecoverable|focus would not return to put.gd after N tries": 24,
+    "stuck_grab|region overlay still up after Escape": 8
+  },
+  "nightlyTag": "v26.1125.7045-nightly",
+  "preflightAfter": {
+    "afterVisualInvocation": {
+      "exitCode": 0,
+      "stderr": ""
+    },
+    "afterVisuals": {
+      "configurationHome": "/home/lab/.config",
+      "desktop": "Cinnamon",
+      "inhibitor": {
+        "mode": "block",
+        "pid": 1546,
+        "uid": 1000,
+        "what": "sleep:idle",
+        "who": "putgd-lab-guest"
+      },
+      "ok": true,
+      "policy": [
+        {
+          "key": "idle-delay",
+          "schema": "org.cinnamon.desktop.session",
+          "value": "uint32 0"
+        },
+        {
+          "key": "lock-enabled",
+          "schema": "org.cinnamon.desktop.screensaver",
+          "value": "false"
+        },
+        {
+          "key": "idle-activation-enabled",
+          "schema": "org.cinnamon.desktop.screensaver",
+          "value": "false"
+        },
+        {
+          "key": "sleep-inactive-ac-timeout",
+          "schema": "org.cinnamon.settings-daemon.plugins.power",
+          "value": "0"
+        },
+        {
+          "key": "sleep-inactive-ac-type",
+          "schema": "org.cinnamon.settings-daemon.plugins.power",
+          "value": "'nothing'"
+        },
+        {
+          "key": "sleep-inactive-battery-timeout",
+          "schema": "org.cinnamon.settings-daemon.plugins.power",
+          "value": "0"
+        },
+        {
+          "key": "sleep-inactive-battery-type",
+          "schema": "org.cinnamon.settings-daemon.plugins.power",
+          "value": "'nothing'"
+        },
+        {
+          "key": "idle-dim-ac",
+          "schema": "org.cinnamon.settings-daemon.plugins.power",
+          "value": "false"
+        },
+        {
+          "key": "sleep-display-ac",
+          "schema": "org.cinnamon.settings-daemon.plugins.power",
+          "value": "0"
+        },
+        {
+          "key": "idle-dim-battery",
+          "schema": "org.cinnamon.settings-daemon.plugins.power",
+          "value": "false"
+        },
+        {
+          "key": "sleep-display-battery",
+          "schema": "org.cinnamon.settings-daemon.plugins.power",
+          "value": "0"
+        },
+        {
+          "key": "lock-on-suspend",
+          "schema": "org.cinnamon.settings-daemon.plugins.power",
+          "value": "false"
+        }
+      ],
+      "session": {
+        "Active": "yes",
+        "LockedHint": "no",
+        "Seat": "seat0",
+        "State": "active",
+        "Type": "x11",
+        "User": "1000",
+        "id": "c1"
+      },
+      "x11": "Keyboard Control:\n  auto repeat:  on    key click percent:  0    LED mask:  00000000\n  XKB indicators:\n    00: Caps Lock:   off    01: Num Lock:    off    02: Scroll Lock: off\n    03: Compose:     off    04: Kana:        off    05: Sleep:       off\n    06: Suspend:     off    07: Mute:        off    08: Misc:        off\n    09: Mail:        off    10: Charging:    off    11: Shift Lock:  off\n    12: Group 2:     off    13: Mouse Keys:  off\n  auto repeat delay:  660    repeat rate:  25\n  auto repeating keys:  00ffffffdffffbbf\n                        fadfffefffedffff\n                        9fffffffffffffff\n                        fff7ffffffffffff\n  bell percent:  50    bell pitch:  400    bell duration:  100\nPointer Control:\n  acceleration:  2/1    threshold:  4\nScreen Saver:\n  prefer blanking:  no    allow exposures:  yes\n  timeout:  0    cycle:  0\nColors:\n  default colormap:  0x20    BlackPixel:  0x0    WhitePixel:  0xffffff\nFont Path:\n  /usr/share/fonts/X11/misc,/usr/share/fonts/X11/Type1,built-ins\nDPMS (Display Power Management Signaling):\n  Standby: 0    Suspend: 0    Off: 0\n  DPMS is Disabled"
+    },
+    "apply": false,
+    "helperSha256": "0d05ae5d31b7f2206b2dd056e28bd90f34e198d64a578f73f6ed7fe789115d08",
+    "ok": true,
+    "outputs": {
+      "errors": [],
+      "ok": true,
+      "outputs": [
+        {
+          "enabled": true,
+          "height": 800,
+          "name": "Virtual-1",
+          "primary": true,
+          "width": 1280,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "enabled": true,
+          "height": 800,
+          "name": "Virtual-2",
+          "primary": false,
+          "width": 1280,
+          "x": 1280,
+          "y": 0
+        }
+      ]
+    },
+    "policy": {
+      "configurationHome": "/home/lab/.config",
+      "desktop": "Cinnamon",
+      "inhibitor": {
+        "mode": "block",
+        "pid": 1546,
+        "uid": 1000,
+        "what": "sleep:idle",
+        "who": "putgd-lab-guest"
+      },
+      "ok": true,
+      "policy": [
+        {
+          "key": "idle-delay",
+          "schema": "org.cinnamon.desktop.session",
+          "value": "uint32 0"
+        },
+        {
+          "key": "lock-enabled",
+          "schema": "org.cinnamon.desktop.screensaver",
+          "value": "false"
+        },
+        {
+          "key": "idle-activation-enabled",
+          "schema": "org.cinnamon.desktop.screensaver",
+          "value": "false"
+        },
+        {
+          "key": "sleep-inactive-ac-timeout",
+          "schema": "org.cinnamon.settings-daemon.plugins.power",
+          "value": "0"
+        },
+        {
+          "key": "sleep-inactive-ac-type",
+          "schema": "org.cinnamon.settings-daemon.plugins.power",
+          "value": "'nothing'"
+        },
+        {
+          "key": "sleep-inactive-battery-timeout",
+          "schema": "org.cinnamon.settings-daemon.plugins.power",
+          "value": "0"
+        },
+        {
+          "key": "sleep-inactive-battery-type",
+          "schema": "org.cinnamon.settings-daemon.plugins.power",
+          "value": "'nothing'"
+        },
+        {
+          "key": "idle-dim-ac",
+          "schema": "org.cinnamon.settings-daemon.plugins.power",
+          "value": "false"
+        },
+        {
+          "key": "sleep-display-ac",
+          "schema": "org.cinnamon.settings-daemon.plugins.power",
+          "value": "0"
+        },
+        {
+          "key": "idle-dim-battery",
+          "schema": "org.cinnamon.settings-daemon.plugins.power",
+          "value": "false"
+        },
+        {
+          "key": "sleep-display-battery",
+          "schema": "org.cinnamon.settings-daemon.plugins.power",
+          "value": "0"
+        },
+        {
+          "key": "lock-on-suspend",
+          "schema": "org.cinnamon.settings-daemon.plugins.power",
+          "value": "false"
+        }
+      ],
+      "session": {
+        "Active": "yes",
+        "LockedHint": "no",
+        "Seat": "seat0",
+        "State": "active",
+        "Type": "x11",
+        "User": "1000",
+        "id": "c1"
+      },
+      "x11": "Keyboard Control:\n  auto repeat:  on    key click percent:  0    LED mask:  00000000\n  XKB indicators:\n    00: Caps Lock:   off    01: Num Lock:    off    02: Scroll Lock: off\n    03: Compose:     off    04: Kana:        off    05: Sleep:       off\n    06: Suspend:     off    07: Mute:        off    08: Misc:        off\n    09: Mail:        off    10: Charging:    off    11: Shift Lock:  off\n    12: Group 2:     off    13: Mouse Keys:  off\n  auto repeat delay:  660    repeat rate:  25\n  auto repeating keys:  00ffffffdffffbbf\n                        fadfffefffedffff\n                        9fffffffffffffff\n                        fff7ffffffffffff\n  bell percent:  50    bell pitch:  400    bell duration:  100\nPointer Control:\n  acceleration:  2/1    threshold:  4\nScreen Saver:\n  prefer blanking:  no    allow exposures:  yes\n  timeout:  0    cycle:  0\nColors:\n  default colormap:  0x20    BlackPixel:  0x0    WhitePixel:  0xffffff\nFont Path:\n  /usr/share/fonts/X11/misc,/usr/share/fonts/X11/Type1,built-ins\nDPMS (Display Power Management Signaling):\n  Standby: 0    Suspend: 0    Off: 0\n  DPMS is Disabled"
+    },
+    "policyInvocation": {
+      "exitCode": 0,
+      "stderr": ""
+    },
+    "runId": "b1f4ccac-cd17-41c2-98cf-8650fef675ee",
+    "schemaVersion": 1,
+    "stage": "gui-fuzz-after",
+    "timestampUtc": "2026-11-26T03:17:51.660455+00:00",
+    "visualAttempts": [
+      {
+        "head": 0,
+        "height": 800,
+        "path": "/home/patrick/work/tmp/gfz2066m/work/lab-runs/m74d/guest-preflight-c4128ae979cf46c68b251362520b486f-attempt0-head0.ppm",
+        "sha256": "a17eac2806bc9f21dfaee96c45267b44dfa607b71f16812a31d9f5d4d175ac22",
+        "visible": true,
+        "width": 1280
+      },
+      {
+        "head": 1,
+        "height": 800,
+        "path": "/home/patrick/work/tmp/gfz2066m/work/lab-runs/m74d/guest-preflight-c4128ae979cf46c68b251362520b486f-attempt0-head1.ppm",
+        "sha256": "6635dee6ae8c381c252ac38ae9804f63d3db3b28bcb9150de109538083691a71",
+        "visible": true,
+        "width": 1280
+      }
+    ],
+    "visuals": [
+      {
+        "head": 0,
+        "height": 800,
+        "path": "/home/patrick/work/tmp/gfz2066m/work/lab-runs/m74d/guest-preflight-c4128ae979cf46c68b251362520b486f-attempt0-head0.ppm",
+        "sha256": "a17eac2806bc9f21dfaee96c45267b44dfa607b71f16812a31d9f5d4d175ac22",
+        "width": 1280
+      },
+      {
+        "head": 1,
+        "height": 800,
+        "path": "/home/patrick/work/tmp/gfz2066m/work/lab-runs/m74d/guest-preflight-c4128ae979cf46c68b251362520b486f-attempt0-head1.ppm",
+        "sha256": "6635dee6ae8c381c252ac38ae9804f63d3db3b28bcb9150de109538083691a71",
+        "width": 1280
+      }
+    ]
+  },
+  "profile": "cinnamon-x11",
+  "schemaVersion": 1,
+  "seeds": [
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066m/evidence/m74d/seeds/seed011.tar.gz",
+      "exit": 0,
+      "marks": [
+        "1795656010.135 desktop_core_dump_nemo_desktop Wed 2026-11-25 19:20:09 CST 1518 1000 1000 SIGSEGV present /usr/bin/nemo-desktop 4.4M",
+        "1795656147.780 focus_left_putgd focus is on navigator for 6 s while put.gd shows 1 windows"
+      ],
+      "seed": 11,
+      "sha256": "542e8a15a8c6cd573545a4ee8e73eb4c0bf97f27edb97fc98971c02c8802a70d",
+      "summary": {
+        "actions": {
+          "chord": 12,
+          "cli_action": 10,
+          "click": 23,
+          "clipboard": 8,
+          "denied": 17,
+          "drag": 12,
+          "escape": 6,
+          "hold": 4,
+          "hotkey": 33,
+          "outputs": 33,
+          "overlay_drag": 4,
+          "overlay_misc": 6,
+          "rapid": 49,
+          "spam": 16,
+          "tab_walk": 6,
+          "tray": 7,
+          "typing": 12,
+          "wheel": 4,
+          "window_geometry": 2
+        },
+        "denied": 16,
+        "desktop": "cinnamon",
+        "findings": {
+          "desktop_core_dump_nemo_desktop|Wed 2026-11-25 19:20:09 CST 1518 1000 1000 SIGSEGV present /usr/bin/nemo-desktop 4.4M": 1,
+          "focus_left_putgd|focus is on navigator for N s while put.gd shows N windows": 4
+        },
+        "foreign_windows_closed": {},
+        "harness_errors": 0,
+        "log_warnings": {
+          "Action rejected: busy_selecting": 19,
+          "Action rejected: editor_active": 7,
+          "Action rejected: recording_active": 3,
+          "Action rejected: recording_state": 1,
+          "Action rejected: scroll_active": 8,
+          "Action rejected: scroll_state": 1,
+          "Action rejected: text_busy": 2,
+          "Capture failed": 5,
+          "Operation finished": 16,
+          "Recording failed": 3,
+          "[AVHWDeviceContext @ N] Failed to initialise VAAPI connection: N (resource allocation failed).": 12,
+          "[AVHWDeviceContext @ N] libva: /usr/lib/xN_N-linux-gnu/dri/virtio_gpu_drv_video.so init failed": 12,
+          "[OpenHN] this = NxNaN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNdNfN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNeNbNaaN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "putgd.filedialog: file dialog cancelled via portal": 1,
+          "putgd.filedialog: portal OpenFile parent xN:NaN": 1,
+          "putgd.filedialog: portal response N after N ms since accepted (closed by the person, or the backend failed late)": 1,
+          "xN [warning]: Source height < Np; disabling lookahead-slices": 3
+        },
+        "pings": {
+          "max_ms": 273,
+          "n": 121,
+          "slow": 0
+        },
+        "seconds": 367,
+        "seed": 11,
+        "shell_warnings": {},
+        "steps": 264
+      }
+    },
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066m/evidence/m74d/seeds/seed012.tar.gz",
+      "exit": 0,
+      "marks": [
+        "1795656353.309 stuck_grab region overlay still up after Escape"
+      ],
+      "seed": 12,
+      "sha256": "13f06523ca94f6f4e4c26d5e5cfa46533784e4a19a22df45058fc2f82b8fbb2a",
+      "summary": {
+        "actions": {
+          "chord": 33,
+          "cli_action": 29,
+          "click": 35,
+          "clipboard": 12,
+          "denied": 44,
+          "drag": 20,
+          "escape": 21,
+          "hold": 9,
+          "hotkey": 58,
+          "outputs": 11,
+          "overlay_drag": 16,
+          "overlay_misc": 9,
+          "rapid": 13,
+          "spam": 3,
+          "tab_walk": 8,
+          "tray": 25,
+          "typing": 14,
+          "wheel": 13,
+          "window_geometry": 4
+        },
+        "denied": 48,
+        "desktop": "cinnamon",
+        "findings": {
+          "stuck_grab|region overlay still up after Escape": 1
+        },
+        "foreign_windows_closed": {},
+        "harness_errors": 0,
+        "log_warnings": {
+          "Action rejected: busy_selecting": 15,
+          "Action rejected: editor_active": 13,
+          "Action rejected: recording_active": 3,
+          "Action rejected: scroll_active": 1,
+          "Capture failed": 2,
+          "Operation finished": 19,
+          "QAbstractItemView::closeEditor called with an editor that does not belong to this view": 1,
+          "[AVHWDeviceContext @ N] Failed to initialise VAAPI connection: N (resource allocation failed).": 20,
+          "[AVHWDeviceContext @ N] libva: /usr/lib/xN_N-linux-gnu/dri/virtio_gpu_drv_video.so init failed": 20,
+          "[OpenHN] this = NxNaNcNaaN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNbNdNcN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNdNffN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNdbNaaN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNdcN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "xN [warning]: Source height < Np; disabling lookahead-slices": 5
+        },
+        "pings": {
+          "max_ms": 217,
+          "n": 120,
+          "slow": 0
+        },
+        "seconds": 363,
+        "seed": 12,
+        "shell_warnings": {},
+        "steps": 377
+      }
+    },
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066m/evidence/m74d/seeds/seed013.tar.gz",
+      "exit": 0,
+      "marks": [],
+      "seed": 13,
+      "sha256": "1e231adb066a08087ec504241c5441081bf9fc6581d693428d6069dfe603aa76",
+      "summary": {
+        "actions": {
+          "chord": 17,
+          "cli_action": 17,
+          "click": 23,
+          "clipboard": 9,
+          "denied": 42,
+          "drag": 5,
+          "escape": 15,
+          "hold": 6,
+          "hotkey": 39,
+          "outputs": 38,
+          "overlay_drag": 5,
+          "overlay_misc": 3,
+          "rapid": 39,
+          "spam": 25,
+          "tab_walk": 9,
+          "tray": 15,
+          "typing": 5,
+          "wheel": 5,
+          "window_geometry": 5
+        },
+        "denied": 41,
+        "desktop": "cinnamon",
+        "findings": {},
+        "foreign_windows_closed": {},
+        "harness_errors": 0,
+        "log_warnings": {
+          "Action rejected: busy_selecting": 30,
+          "Action rejected: editor_active": 9,
+          "Action rejected: text_busy": 1,
+          "Capture failed": 7,
+          "Configuration rejected": 4,
+          "Operation finished": 14,
+          "Recording failed": 1,
+          "[AVHWDeviceContext @ N] Failed to initialise VAAPI connection: N (resource allocation failed).": 12,
+          "[AVHWDeviceContext @ N] libva: /usr/lib/xN_N-linux-gnu/dri/virtio_gpu_drv_video.so init failed": 12,
+          "[OpenHN] this = NxNbNdN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNcNcNfdN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNcNdNcN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "putgd.filedialog: file dialog cancelled via portal": 2,
+          "putgd.filedialog: portal OpenFile parent xN:NaN": 2,
+          "putgd.filedialog: portal response N after N ms since accepted ": 1,
+          "putgd.filedialog: portal response N after N ms since accepted (closed by the person, or the backend failed late)": 1,
+          "xN [warning]: Source height < Np; disabling lookahead-slices": 3
+        },
+        "pings": {
+          "max_ms": 745,
+          "n": 119,
+          "slow": 0
+        },
+        "seconds": 362,
+        "seed": 13,
+        "shell_warnings": {},
+        "steps": 322
+      }
+    },
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066m/evidence/m74d/seeds/seed014.tar.gz",
+      "exit": 0,
+      "marks": [
+        "1795656946.993 focus_left_putgd focus is on navigator for 6 s while put.gd shows 2 windows"
+      ],
+      "seed": 14,
+      "sha256": "5431a35601e5a9d48d844d5b63cf526939d56e3160e58710c915e182d74d4072",
+      "summary": {
+        "actions": {
+          "chord": 32,
+          "cli_action": 18,
+          "click": 23,
+          "clipboard": 12,
+          "denied": 88,
+          "drag": 8,
+          "escape": 21,
+          "hold": 14,
+          "hotkey": 59,
+          "outputs": 10,
+          "overlay_drag": 18,
+          "overlay_misc": 10,
+          "rapid": 12,
+          "spam": 4,
+          "tab_walk": 8,
+          "tray": 18,
+          "typing": 19,
+          "wheel": 6,
+          "window_geometry": 5
+        },
+        "denied": 90,
+        "desktop": "cinnamon",
+        "findings": {
+          "focus_left_putgd|focus is on navigator for N s while put.gd shows N windows": 19
+        },
+        "foreign_windows_closed": {},
+        "harness_errors": 0,
+        "log_warnings": {
+          "Action rejected: busy_selecting": 16,
+          "Action rejected: editor_active": 8,
+          "Action rejected: recording_active": 1,
+          "Action rejected: recording_state": 1,
+          "Action rejected: scroll_active": 2,
+          "Capture failed": 1,
+          "Operation finished": 16,
+          "[AVHWDeviceContext @ N] Failed to initialise VAAPI connection: N (resource allocation failed).": 20,
+          "[AVHWDeviceContext @ N] libva: /usr/lib/xN_N-linux-gnu/dri/virtio_gpu_drv_video.so init failed": 20,
+          "[OpenHN] this = NxNbN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNcNccN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNcffN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNdbcNdN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNffNbcNdNdcN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "putgd.filedialog: file dialog cancelled via portal": 1,
+          "putgd.filedialog: portal OpenFile parent xN:NaN": 1,
+          "putgd.filedialog: portal response N after N ms since accepted (closed by the person, or the backend failed late)": 1,
+          "xN [warning]: Source height < Np; disabling lookahead-slices": 5
+        },
+        "pings": {
+          "max_ms": 98,
+          "n": 119,
+          "slow": 0
+        },
+        "seconds": 361,
+        "seed": 14,
+        "shell_warnings": {},
+        "steps": 385
+      }
+    },
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066m/evidence/m74d/seeds/seed015.tar.gz",
+      "exit": 0,
+      "marks": [],
+      "seed": 15,
+      "sha256": "423612d36e4533fe4df7d391ed03b48d61ef8a4ec54ede5bcf9a5cc2ba549ead",
+      "summary": {
+        "actions": {
+          "chord": 11,
+          "cli_action": 7,
+          "click": 13,
+          "clipboard": 4,
+          "denied": 42,
+          "drag": 8,
+          "escape": 3,
+          "hold": 3,
+          "hotkey": 26,
+          "outputs": 40,
+          "overlay_drag": 6,
+          "overlay_misc": 3,
+          "rapid": 44,
+          "spam": 10,
+          "tab_walk": 6,
+          "tray": 13,
+          "typing": 13,
+          "wheel": 4
+        },
+        "denied": 43,
+        "desktop": "cinnamon",
+        "findings": {},
+        "foreign_windows_closed": {},
+        "harness_errors": 0,
+        "log_warnings": {
+          "Action rejected: busy_selecting": 30,
+          "Action rejected: editor_active": 4,
+          "Action rejected: text_busy": 2,
+          "Capture failed": 6,
+          "Operation finished": 13,
+          "Recording failed": 1,
+          "[AVHWDeviceContext @ N] Failed to initialise VAAPI connection: N (resource allocation failed).": 8,
+          "[AVHWDeviceContext @ N] libva: /usr/lib/xN_N-linux-gnu/dri/virtio_gpu_drv_video.so init failed": 8,
+          "[OpenHN] this = NxNaNeNcN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNcN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "putgd.filedialog: file dialog cancelled via portal": 2,
+          "putgd.filedialog: portal OpenFile parent xN:N": 1,
+          "putgd.filedialog: portal SaveFile parent xN:NaN": 1,
+          "putgd.filedialog: portal response N after N ms since accepted ": 1,
+          "putgd.filedialog: portal response N after N ms since accepted (closed by the person, or the backend failed late)": 1,
+          "xN [warning]: Source height < Np; disabling lookahead-slices": 2
+        },
+        "pings": {
+          "max_ms": 90,
+          "n": 122,
+          "slow": 0
+        },
+        "seconds": 369,
+        "seed": 15,
+        "shell_warnings": {},
+        "steps": 256
+      }
+    },
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066m/evidence/m74d/seeds/seed016.tar.gz",
+      "exit": 0,
+      "marks": [],
+      "seed": 16,
+      "sha256": "37c642596352f3154b1548d115dbfc77842940f5af8e3865ae60f98ae81522e7",
+      "summary": {
+        "actions": {
+          "chord": 32,
+          "cli_action": 23,
+          "click": 47,
+          "clipboard": 6,
+          "denied": 40,
+          "drag": 29,
+          "escape": 21,
+          "hold": 6,
+          "hotkey": 57,
+          "outputs": 13,
+          "overlay_drag": 11,
+          "overlay_misc": 4,
+          "rapid": 10,
+          "spam": 7,
+          "tab_walk": 13,
+          "tray": 27,
+          "typing": 25,
+          "wheel": 25,
+          "window_geometry": 4
+        },
+        "denied": 37,
+        "desktop": "cinnamon",
+        "findings": {},
+        "foreign_windows_closed": {},
+        "harness_errors": 0,
+        "log_warnings": {
+          "Action rejected: busy_selecting": 33,
+          "Action rejected: editor_active": 2,
+          "Action rejected: scroll_active": 1,
+          "Capture failed": 2,
+          "Operation finished": 18,
+          "[AVHWDeviceContext @ N] Failed to initialise VAAPI connection: N (resource allocation failed).": 12,
+          "[AVHWDeviceContext @ N] libva: /usr/lib/xN_N-linux-gnu/dri/virtio_gpu_drv_video.so init failed": 12,
+          "[OpenHN] this = NxNbNafN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNeNbN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNeNfN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "xN [warning]: Source height < Np; disabling lookahead-slices": 3
+        },
+        "pings": {
+          "max_ms": 116,
+          "n": 119,
+          "slow": 0
+        },
+        "seconds": 361,
+        "seed": 16,
+        "shell_warnings": {},
+        "steps": 400
+      }
+    },
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066m/evidence/m74d/seeds/seed017.tar.gz",
+      "exit": 0,
+      "marks": [
+        "1795658069.547 focus_left_putgd focus is on navigator for 6 s while put.gd shows 1 windows",
+        "1795658097.506 focus_unrecoverable focus would not return to put.gd after 7 tries",
+        "1795658285.437 stuck_grab region overlay still up after Escape"
+      ],
+      "seed": 17,
+      "sha256": "2da17a478fab6ae373d8c7dfe1ad0b7dcee0b4090fca0b587441e5b9b7f8d1f3",
+      "summary": {
+        "actions": {
+          "chord": 6,
+          "cli_action": 9,
+          "click": 17,
+          "clipboard": 4,
+          "denied": 40,
+          "drag": 5,
+          "escape": 6,
+          "hold": 9,
+          "hotkey": 25,
+          "outputs": 37,
+          "overlay_drag": 5,
+          "overlay_misc": 3,
+          "rapid": 34,
+          "spam": 12,
+          "tab_walk": 2,
+          "tray": 7,
+          "typing": 7,
+          "wheel": 7
+        },
+        "denied": 46,
+        "desktop": "cinnamon",
+        "findings": {
+          "focus_left_putgd|focus is on navigator for N s while put.gd shows N windows": 51,
+          "focus_unrecoverable|focus would not return to put.gd after N tries": 1,
+          "stuck_grab|region overlay still up after Escape": 1
+        },
+        "foreign_windows_closed": {},
+        "harness_errors": 0,
+        "log_warnings": {
+          "Action rejected: busy_selecting": 20,
+          "Action rejected: editor_active": 3,
+          "Action rejected: recording_active": 1,
+          "Action rejected: scroll_active": 2,
+          "Capture failed": 2,
+          "Operation finished": 10,
+          "[AVHWDeviceContext @ N] Failed to initialise VAAPI connection: N (resource allocation failed).": 4,
+          "[AVHWDeviceContext @ N] libva: /usr/lib/xN_N-linux-gnu/dri/virtio_gpu_drv_video.so init failed": 4,
+          "[OpenHN] this = NxNfNfcNbN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "xN [warning]: Source height < Np; disabling lookahead-slices": 1
+        },
+        "pings": {
+          "max_ms": 127,
+          "n": 119,
+          "slow": 0
+        },
+        "seconds": 360,
+        "seed": 17,
+        "shell_warnings": {},
+        "steps": 235
+      }
+    },
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066m/evidence/m74d/seeds/seed018.tar.gz",
+      "exit": 0,
+      "marks": [
+        "1795658355.998 focus_left_putgd focus is on navigator for 6 s while put.gd shows 1 windows",
+        "1795658384.949 focus_unrecoverable focus would not return to put.gd after 7 tries"
+      ],
+      "seed": 18,
+      "sha256": "32412e33c09fad39dfdf4ddae3e028ef800b5f6a56657525c2aab24a2f621f82",
+      "summary": {
+        "actions": {},
+        "denied": 61,
+        "desktop": "cinnamon",
+        "findings": {
+          "focus_left_putgd|focus is on navigator for N s while put.gd shows N windows": 699,
+          "focus_unrecoverable|focus would not return to put.gd after N tries": 10
+        },
+        "foreign_windows_closed": {},
+        "harness_errors": 0,
+        "log_warnings": {},
+        "pings": {
+          "max_ms": 45,
+          "n": 119,
+          "slow": 0
+        },
+        "seconds": 360,
+        "seed": 18,
+        "shell_warnings": {},
+        "steps": 0
+      }
+    },
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066m/evidence/m74d/seeds/seed019.tar.gz",
+      "exit": 0,
+      "marks": [
+        "1795658718.219 focus_left_putgd focus is on navigator for 6 s while put.gd shows 1 windows",
+        "1795658747.116 focus_unrecoverable focus would not return to put.gd after 7 tries",
+        "1795658858.367 stuck_grab region overlay still up after Escape"
+      ],
+      "seed": 19,
+      "sha256": "9be0891befe44aa7fb01d84bfdb2091e0232005162b1e123f4e2634b7ec3dec4",
+      "summary": {
+        "actions": {
+          "chord": 4,
+          "cli_action": 19,
+          "click": 8,
+          "clipboard": 4,
+          "denied": 43,
+          "drag": 6,
+          "escape": 6,
+          "hold": 1,
+          "hotkey": 29,
+          "outputs": 23,
+          "overlay_drag": 6,
+          "overlay_misc": 6,
+          "rapid": 28,
+          "spam": 5,
+          "tab_walk": 3,
+          "tray": 10,
+          "typing": 1,
+          "wheel": 3
+        },
+        "denied": 75,
+        "desktop": "cinnamon",
+        "findings": {
+          "focus_left_putgd|focus is on navigator for N s while put.gd shows N windows": 189,
+          "focus_unrecoverable|focus would not return to put.gd after N tries": 2,
+          "stuck_grab|region overlay still up after Escape": 3
+        },
+        "foreign_windows_closed": {},
+        "harness_errors": 0,
+        "log_warnings": {
+          "Action rejected: busy_selecting": 49,
+          "Action rejected: editor_active": 5,
+          "Action rejected: scroll_active": 1,
+          "Capture failed": 5,
+          "Operation finished": 10,
+          "[AVHWDeviceContext @ N] Failed to initialise VAAPI connection: N (resource allocation failed).": 12,
+          "[AVHWDeviceContext @ N] libva: /usr/lib/xN_N-linux-gnu/dri/virtio_gpu_drv_video.so init failed": 12,
+          "[OpenHN] this = NxNebfcNdNdcN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNfNcNbN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNfNdN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "xN [warning]: Source height < Np; disabling lookahead-slices": 3
+        },
+        "pings": {
+          "max_ms": 507,
+          "n": 118,
+          "slow": 0
+        },
+        "seconds": 360,
+        "seed": 19,
+        "shell_warnings": {},
+        "steps": 205
+      }
+    },
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066m/evidence/m74d/seeds/seed020.tar.gz",
+      "exit": 0,
+      "marks": [
+        "1795659089.850 desktop_core_dump_nemo_desktop Wed 2026-11-25 20:11:29 CST 21075 1000 1000 SIGABRT present /usr/bin/nemo-desktop 4.4M",
+        "1795659236.282 stuck_grab region overlay still up after Escape"
+      ],
+      "seed": 20,
+      "sha256": "6b24a39e23b22f6a15ea4dbfd5d5db6fd1146d39f6f7105f3a7953f93db07918",
+      "summary": {
+        "actions": {
+          "chord": 23,
+          "cli_action": 21,
+          "click": 42,
+          "clipboard": 9,
+          "denied": 32,
+          "drag": 20,
+          "escape": 18,
+          "hold": 7,
+          "hotkey": 66,
+          "outputs": 16,
+          "overlay_drag": 16,
+          "overlay_misc": 14,
+          "rapid": 16,
+          "spam": 7,
+          "tab_walk": 8,
+          "tray": 21,
+          "typing": 19,
+          "wheel": 11,
+          "window_geometry": 7
+        },
+        "denied": 37,
+        "desktop": "cinnamon",
+        "findings": {
+          "desktop_core_dump_nemo_desktop|Wed 2026-11-25 20:11:29 CST 21075 1000 1000 SIGABRT present /usr/bin/nemo-desktop 4.4M": 1,
+          "stuck_grab|region overlay still up after Escape": 1
+        },
+        "foreign_windows_closed": {},
+        "harness_errors": 0,
+        "log_warnings": {
+          "Action rejected: busy_selecting": 17,
+          "Action rejected: editor_active": 8,
+          "Action rejected: recording_active": 1,
+          "Action rejected: recording_state": 1,
+          "Action rejected: scroll_active": 7,
+          "Capture failed": 6,
+          "Operation finished": 18,
+          "[AVHWDeviceContext @ N] Failed to initialise VAAPI connection: N (resource allocation failed).": 24,
+          "[AVHWDeviceContext @ N] libva: /usr/lib/xN_N-linux-gnu/dri/virtio_gpu_drv_video.so init failed": 24,
+          "[OpenHN] this = NxNaNdN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNabeNdbN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNacNbN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNbN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNdNbN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNdcNbN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "putgd.filedialog: file dialog cancelled via portal": 2,
+          "putgd.filedialog: portal OpenFile parent xN:N": 1,
+          "putgd.filedialog: portal SaveFile parent xN:NaN": 1,
+          "putgd.filedialog: portal response N after N ms since accepted ": 1,
+          "putgd.filedialog: portal response N after N ms since accepted (closed by the person, or the backend failed late)": 1,
+          "xN [warning]: Source height < Np; disabling lookahead-slices": 6
+        },
+        "pings": {
+          "max_ms": 183,
+          "n": 119,
+          "slow": 0
+        },
+        "seconds": 361,
+        "seed": 20,
+        "shell_warnings": {},
+        "steps": 373
+      }
+    },
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066m/evidence/m74d/seeds/seed021.tar.gz",
+      "exit": 0,
+      "marks": [
+        "1795659609.180 stuck_grab region overlay still up after Escape"
+      ],
+      "seed": 21,
+      "sha256": "a9dd70c2452ccb148e51170e6c14f7e95c579ae27f2991c0b83c1375b795d5dc",
+      "summary": {
+        "actions": {
+          "chord": 13,
+          "cli_action": 14,
+          "click": 23,
+          "clipboard": 10,
+          "denied": 35,
+          "drag": 12,
+          "escape": 10,
+          "hold": 4,
+          "hotkey": 34,
+          "outputs": 45,
+          "overlay_drag": 10,
+          "overlay_misc": 5,
+          "rapid": 42,
+          "spam": 18,
+          "tab_walk": 4,
+          "tray": 15,
+          "typing": 14,
+          "wheel": 2,
+          "window_geometry": 3
+        },
+        "denied": 44,
+        "desktop": "cinnamon",
+        "findings": {
+          "stuck_grab|region overlay still up after Escape": 2
+        },
+        "foreign_windows_closed": {},
+        "harness_errors": 0,
+        "log_warnings": {
+          "Action rejected: busy_selecting": 33,
+          "Action rejected: editor_active": 3,
+          "Action rejected: scroll_active": 10,
+          "Capture failed": 7,
+          "Operation finished": 14,
+          "[AVHWDeviceContext @ N] Failed to initialise VAAPI connection: N (resource allocation failed).": 4,
+          "[AVHWDeviceContext @ N] libva: /usr/lib/xN_N-linux-gnu/dri/virtio_gpu_drv_video.so init failed": 4,
+          "[OpenHN] this = NxNeN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "putgd.filedialog: file dialog cancelled via portal": 2,
+          "putgd.filedialog: portal OpenFile parent xN:N": 2,
+          "putgd.filedialog: portal response N after N ms since accepted (closed by the person, or the backend failed late)": 2,
+          "xN [warning]: Source height < Np; disabling lookahead-slices": 1
+        },
+        "pings": {
+          "max_ms": 95,
+          "n": 119,
+          "slow": 0
+        },
+        "seconds": 361,
+        "seed": 21,
+        "shell_warnings": {},
+        "steps": 313
+      }
+    },
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066m/evidence/m74d/seeds/seed022.tar.gz",
+      "exit": 0,
+      "marks": [
+        "1795659808.706 focus_left_putgd focus is on navigator for 6 s while put.gd shows 1 windows",
+        "1795659837.506 focus_unrecoverable focus would not return to put.gd after 7 tries"
+      ],
+      "seed": 22,
+      "sha256": "497d8336a1ca8365c44fcc93fcaca6d78a178b749d276bd68dbc4ce51d82fcdc",
+      "summary": {
+        "actions": {},
+        "denied": 61,
+        "desktop": "cinnamon",
+        "findings": {
+          "focus_left_putgd|focus is on navigator for N s while put.gd shows N windows": 699,
+          "focus_unrecoverable|focus would not return to put.gd after N tries": 10
+        },
+        "foreign_windows_closed": {},
+        "harness_errors": 0,
+        "log_warnings": {},
+        "pings": {
+          "max_ms": 134,
+          "n": 119,
+          "slow": 0
+        },
+        "seconds": 360,
+        "seed": 22,
+        "shell_warnings": {},
+        "steps": 0
+      }
+    },
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066m/evidence/m74d/seeds/seed023.tar.gz",
+      "exit": 0,
+      "marks": [
+        "1795660170.778 focus_left_putgd focus is on navigator for 6 s while put.gd shows 1 windows",
+        "1795660199.674 focus_unrecoverable focus would not return to put.gd after 7 tries"
+      ],
+      "seed": 23,
+      "sha256": "d002a4d32aa14f55d85d2b6a8cacbb89b884cf6810a7bea2b448fc78c06a4097",
+      "summary": {
+        "actions": {
+          "chord": 13,
+          "cli_action": 13,
+          "click": 15,
+          "clipboard": 7,
+          "denied": 39,
+          "drag": 3,
+          "escape": 5,
+          "hold": 2,
+          "hotkey": 31,
+          "outputs": 35,
+          "overlay_drag": 4,
+          "overlay_misc": 1,
+          "rapid": 33,
+          "spam": 9,
+          "tab_walk": 1,
+          "tray": 14,
+          "typing": 6,
+          "wheel": 2,
+          "window_geometry": 1
+        },
+        "denied": 42,
+        "desktop": "cinnamon",
+        "findings": {
+          "focus_left_putgd|focus is on navigator for N s while put.gd shows N windows": 122,
+          "focus_unrecoverable|focus would not return to put.gd after N tries": 1
+        },
+        "foreign_windows_closed": {},
+        "harness_errors": 0,
+        "log_warnings": {
+          "Action rejected: busy_selecting": 24,
+          "Action rejected: editor_active": 8,
+          "Action rejected: scroll_active": 6,
+          "Action rejected: scroll_state": 2,
+          "Action rejected: text_busy": 1,
+          "Capture failed": 5,
+          "Operation finished": 13,
+          "Recording failed": 1,
+          "[AVHWDeviceContext @ N] Failed to initialise VAAPI connection: N (resource allocation failed).": 16,
+          "[AVHWDeviceContext @ N] libva: /usr/lib/xN_N-linux-gnu/dri/virtio_gpu_drv_video.so init failed": 16,
+          "[OpenHN] this = NxNcNdNdcN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNdNbcN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNeNdN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNeedNcN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "putgd.filedialog: file dialog cancelled via portal": 1,
+          "putgd.filedialog: portal OpenFile parent xN:N": 1,
+          "putgd.filedialog: portal response N after N ms since accepted (closed by the person, or the backend failed late)": 1,
+          "xN [warning]: Source height < Np; disabling lookahead-slices": 4
+        },
+        "pings": {
+          "max_ms": 193,
+          "n": 120,
+          "slow": 0
+        },
+        "seconds": 363,
+        "seed": 23,
+        "shell_warnings": {},
+        "steps": 234
+      }
+    },
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066m/evidence/m74d/seeds/seed024.tar.gz",
+      "exit": 0,
+      "marks": [
+        "1795660553.892 focus_left_putgd focus is on navigator for 6 s while put.gd shows 2 windows"
+      ],
+      "seed": 24,
+      "sha256": "4a1a5fa2733a7385c5fbad5696a382f3de0f028b7e464919d4b9c194cbe240dc",
+      "summary": {
+        "actions": {
+          "chord": 34,
+          "cli_action": 19,
+          "click": 47,
+          "clipboard": 3,
+          "denied": 33,
+          "drag": 14,
+          "escape": 15,
+          "hold": 4,
+          "hotkey": 49,
+          "outputs": 14,
+          "overlay_drag": 8,
+          "overlay_misc": 15,
+          "rapid": 20,
+          "spam": 5,
+          "tab_walk": 12,
+          "tray": 17,
+          "typing": 23,
+          "wheel": 6,
+          "window_geometry": 6
+        },
+        "denied": 31,
+        "desktop": "cinnamon",
+        "findings": {
+          "focus_left_putgd|focus is on navigator for N s while put.gd shows N windows": 1
+        },
+        "foreign_windows_closed": {
+          "navigator": 1
+        },
+        "harness_errors": 0,
+        "log_warnings": {
+          "Action rejected: busy_selecting": 14,
+          "Action rejected: editor_active": 9,
+          "Action rejected: recording_active": 3,
+          "Action rejected: recording_state": 2,
+          "Action rejected: scroll_active": 3,
+          "Capture failed": 1,
+          "Helper stopped by put.gd": 1,
+          "Operation finished": 15,
+          "Recording failed": 1,
+          "[AVHWDeviceContext @ N] Failed to initialise VAAPI connection: N (resource allocation failed).": 36,
+          "[AVHWDeviceContext @ N] libva: /usr/lib/xN_N-linux-gnu/dri/virtio_gpu_drv_video.so init failed": 36,
+          "[OpenHN] this = NxNaNcN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNbNbNdNffN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNbNdNcN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNbefNdN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNcceNbaN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNcfNbN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNdN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNdNdN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNeeNbN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "xN [warning]: Source height < Np; disabling lookahead-slices": 9
+        },
+        "pings": {
+          "max_ms": 299,
+          "n": 119,
+          "slow": 0
+        },
+        "seconds": 360,
+        "seed": 24,
+        "shell_warnings": {},
+        "steps": 344
+      }
+    },
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066m/evidence/m74d/seeds/seed025.tar.gz",
+      "exit": 0,
+      "marks": [
+        "1795661250.425 focus_left_putgd focus is on navigator for 6 s while put.gd shows 1 windows"
+      ],
+      "seed": 25,
+      "sha256": "85e59436f302f222c50b8c3f9325b8862928957863f3e8df90e62cb23a681139",
+      "summary": {
+        "actions": {
+          "chord": 17,
+          "cli_action": 12,
+          "click": 24,
+          "clipboard": 11,
+          "denied": 40,
+          "drag": 5,
+          "escape": 3,
+          "hold": 1,
+          "hotkey": 40,
+          "outputs": 44,
+          "overlay_drag": 7,
+          "overlay_misc": 3,
+          "rapid": 32,
+          "spam": 17,
+          "tab_walk": 3,
+          "tray": 16,
+          "typing": 3,
+          "wheel": 7
+        },
+        "denied": 46,
+        "desktop": "cinnamon",
+        "findings": {
+          "focus_left_putgd|focus is on navigator for N s while put.gd shows N windows": 1
+        },
+        "foreign_windows_closed": {
+          "navigator": 1
+        },
+        "harness_errors": 0,
+        "log_warnings": {
+          "Action rejected: busy_selecting": 47,
+          "Action rejected: editor_active": 7,
+          "Action rejected: recording_active": 3,
+          "Action rejected: scroll_active": 1,
+          "Capture failed": 10,
+          "Operation finished": 15,
+          "[AVHWDeviceContext @ N] Failed to initialise VAAPI connection: N (resource allocation failed).": 8,
+          "[AVHWDeviceContext @ N] libva: /usr/lib/xN_N-linux-gnu/dri/virtio_gpu_drv_video.so init failed": 8,
+          "[OpenHN] this = NxNaNaNdNdcN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNdN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "putgd.filedialog: file dialog cancelled via portal": 2,
+          "putgd.filedialog: portal OpenFile parent xN:N": 2,
+          "putgd.filedialog: portal response N after N ms since accepted (closed by the person, or the backend failed late)": 2,
+          "xN [warning]: Source height < Np; disabling lookahead-slices": 2
+        },
+        "pings": {
+          "max_ms": 777,
+          "n": 119,
+          "slow": 0
+        },
+        "seconds": 360,
+        "seed": 25,
+        "shell_warnings": {},
+        "steps": 285
+      }
+    },
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066m/evidence/m74d/seeds/seed026.tar.gz",
+      "exit": 0,
+      "marks": [
+        "1795661264.842 focus_left_putgd focus is on navigator for 6 s while put.gd shows 1 windows"
+      ],
+      "seed": 26,
+      "sha256": "cd291b6ba9166f6849c4bd0a5f508caddbaf3d014298823eb7d9343876bea056",
+      "summary": {
+        "actions": {
+          "chord": 21,
+          "cli_action": 26,
+          "click": 34,
+          "clipboard": 8,
+          "denied": 49,
+          "drag": 18,
+          "escape": 17,
+          "hold": 9,
+          "hotkey": 49,
+          "outputs": 12,
+          "overlay_drag": 14,
+          "overlay_misc": 8,
+          "rapid": 16,
+          "spam": 7,
+          "tab_walk": 11,
+          "tray": 24,
+          "typing": 14,
+          "wheel": 7,
+          "window_geometry": 5
+        },
+        "denied": 48,
+        "desktop": "cinnamon",
+        "findings": {
+          "focus_left_putgd|focus is on navigator for N s while put.gd shows N windows": 1
+        },
+        "foreign_windows_closed": {
+          "navigator": 1
+        },
+        "harness_errors": 0,
+        "log_warnings": {
+          "Action rejected: busy_selecting": 34,
+          "Action rejected: editor_active": 12,
+          "Action rejected: recording_active": 3,
+          "Action rejected: scroll_active": 6,
+          "Action rejected: scroll_state": 1,
+          "Capture failed": 2,
+          "Operation finished": 5,
+          "[AVHWDeviceContext @ N] Failed to initialise VAAPI connection: N (resource allocation failed).": 24,
+          "[AVHWDeviceContext @ N] libva: /usr/lib/xN_N-linux-gnu/dri/virtio_gpu_drv_video.so init failed": 24,
+          "[OpenHN] this = NxNcN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNcNbNbN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNcNdNbN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNdNcN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNdNcNdNcN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNfN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "putgd.filedialog: file dialog cancelled via portal": 1,
+          "putgd.filedialog: portal SaveFile parent xN:N": 1,
+          "xN [warning]: Source height < Np; disabling lookahead-slices": 6
+        },
+        "pings": {
+          "max_ms": 430,
+          "n": 119,
+          "slow": 0
+        },
+        "seconds": 361,
+        "seed": 26,
+        "shell_warnings": {},
+        "steps": 349
+      }
+    },
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066m/evidence/m74d/seeds/seed027.tar.gz",
+      "exit": 0,
+      "marks": [],
+      "seed": 27,
+      "sha256": "19602d3d61036dcf124657884cfe9326632343c8abbffda4cfb38082cef6284f",
+      "summary": {
+        "actions": {
+          "chord": 20,
+          "cli_action": 13,
+          "click": 21,
+          "clipboard": 6,
+          "denied": 26,
+          "drag": 13,
+          "escape": 9,
+          "hold": 7,
+          "hotkey": 37,
+          "outputs": 51,
+          "overlay_drag": 6,
+          "overlay_misc": 10,
+          "rapid": 39,
+          "spam": 20,
+          "tab_walk": 5,
+          "tray": 8,
+          "typing": 6,
+          "wheel": 7,
+          "window_geometry": 3
+        },
+        "denied": 22,
+        "desktop": "cinnamon",
+        "findings": {},
+        "foreign_windows_closed": {},
+        "harness_errors": 0,
+        "log_warnings": {
+          "Action rejected: busy_selecting": 31,
+          "Action rejected: editor_active": 5,
+          "Action rejected: recording_active": 4,
+          "Action rejected: recording_state": 1,
+          "Action rejected: scroll_active": 15,
+          "Action rejected: scroll_state": 1,
+          "Action rejected: text_busy": 4,
+          "Capture failed": 6,
+          "Operation finished": 17,
+          "[AVHWDeviceContext @ N] Failed to initialise VAAPI connection: N (resource allocation failed).": 8,
+          "[AVHWDeviceContext @ N] libva: /usr/lib/xN_N-linux-gnu/dri/virtio_gpu_drv_video.so init failed": 8,
+          "[OpenHN] this = NxNaNaNdN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNbNbcN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "putgd.filedialog: file dialog cancelled via portal": 1,
+          "putgd.filedialog: portal OpenFile parent xN:NaN": 1,
+          "putgd.filedialog: portal response N after N ms since accepted (closed by the person, or the backend failed late)": 1,
+          "xN [warning]: Source height < Np; disabling lookahead-slices": 2
+        },
+        "pings": {
+          "max_ms": 81,
+          "n": 121,
+          "slow": 0
+        },
+        "seconds": 365,
+        "seed": 27,
+        "shell_warnings": {},
+        "steps": 307
+      }
+    },
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066m/evidence/m74d/seeds/seed028.tar.gz",
+      "exit": 0,
+      "marks": [],
+      "seed": 28,
+      "sha256": "f0825d9c6b109742d207bec15f683cc390f30ba57f0620c4bdf2377ce39bdb25",
+      "summary": {
+        "actions": {
+          "chord": 28,
+          "cli_action": 19,
+          "click": 67,
+          "clipboard": 17,
+          "denied": 24,
+          "drag": 27,
+          "escape": 26,
+          "hold": 8,
+          "hotkey": 63,
+          "outputs": 6,
+          "overlay_drag": 8,
+          "overlay_misc": 9,
+          "rapid": 11,
+          "spam": 7,
+          "tab_walk": 8,
+          "tray": 23,
+          "typing": 19,
+          "wheel": 13,
+          "window_geometry": 6
+        },
+        "denied": 20,
+        "desktop": "cinnamon",
+        "findings": {},
+        "foreign_windows_closed": {},
+        "harness_errors": 0,
+        "log_warnings": {
+          "Action rejected: busy_selecting": 29,
+          "Action rejected: editor_active": 4,
+          "Capture failed": 3,
+          "Operation finished": 18,
+          "[AVHWDeviceContext @ N] Failed to initialise VAAPI connection: N (resource allocation failed).": 20,
+          "[AVHWDeviceContext @ N] libva: /usr/lib/xN_N-linux-gnu/dri/virtio_gpu_drv_video.so init failed": 20,
+          "[OpenHN] this = NxNbN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNbNbcN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNcNdNdN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNdNcNbN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNfeN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "putgd.filedialog: fallback dialog, reason portal_failed": 1,
+          "putgd.filedialog: file dialog cancelled via fallback": 1,
+          "putgd.filedialog: file dialog cancelled via portal": 2,
+          "putgd.filedialog: portal OpenFile parent xN:NaN": 3,
+          "putgd.filedialog: portal response N after N ms since accepted (backend failed early)": 1,
+          "putgd.filedialog: portal response N after N ms since accepted (closed by the person, or the backend failed late)": 2,
+          "xN [warning]: Source height < Np; disabling lookahead-slices": 5
+        },
+        "pings": {
+          "max_ms": 83,
+          "n": 119,
+          "slow": 0
+        },
+        "seconds": 361,
+        "seed": 28,
+        "shell_warnings": {},
+        "steps": 389
+      }
+    },
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066m/evidence/m74d/seeds/seed029.tar.gz",
+      "exit": 0,
+      "marks": [],
+      "seed": 29,
+      "sha256": "217fb5656861f735ae1308d8e0e6432250611274adb9007a5c34099cae857db2",
+      "summary": {
+        "actions": {
+          "chord": 18,
+          "cli_action": 14,
+          "click": 25,
+          "clipboard": 9,
+          "denied": 35,
+          "drag": 13,
+          "escape": 6,
+          "hold": 3,
+          "hotkey": 44,
+          "outputs": 40,
+          "overlay_drag": 6,
+          "overlay_misc": 11,
+          "rapid": 47,
+          "spam": 22,
+          "tab_walk": 4,
+          "tray": 10,
+          "typing": 10,
+          "wheel": 7,
+          "window_geometry": 3
+        },
+        "denied": 38,
+        "desktop": "cinnamon",
+        "findings": {},
+        "foreign_windows_closed": {},
+        "harness_errors": 0,
+        "log_warnings": {
+          "Action rejected: busy_selecting": 48,
+          "Action rejected: editor_active": 6,
+          "Action rejected: recording_state": 1,
+          "Action rejected: scroll_active": 6,
+          "Capture failed": 8,
+          "Operation finished": 17,
+          "[AVHWDeviceContext @ N] Failed to initialise VAAPI connection: N (resource allocation failed).": 12,
+          "[AVHWDeviceContext @ N] libva: /usr/lib/xN_N-linux-gnu/dri/virtio_gpu_drv_video.so init failed": 12,
+          "[OpenHN] this = NxNaaNbN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNdbN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNeNefcNbN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "putgd.filedialog: file dialog cancelled via portal": 1,
+          "putgd.filedialog: portal OpenFile parent xN:NaN": 1,
+          "putgd.filedialog: portal response N after N ms since accepted (closed by the person, or the backend failed late)": 1,
+          "xN [warning]: Source height < Np; disabling lookahead-slices": 3
+        },
+        "pings": {
+          "max_ms": 120,
+          "n": 119,
+          "slow": 0
+        },
+        "seconds": 360,
+        "seed": 29,
+        "shell_warnings": {},
+        "steps": 327
+      }
+    },
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066m/evidence/m74d/seeds/seed030.tar.gz",
+      "exit": 0,
+      "marks": [],
+      "seed": 30,
+      "sha256": "f78e6da527ed33d635361e0a0211010a3f52f1af21afa28962c9142482e030b5",
+      "summary": {
+        "actions": {
+          "chord": 31,
+          "cli_action": 23,
+          "click": 40,
+          "clipboard": 10,
+          "denied": 95,
+          "drag": 14,
+          "escape": 16,
+          "hold": 11,
+          "hotkey": 55,
+          "outputs": 10,
+          "overlay_drag": 13,
+          "overlay_misc": 4,
+          "rapid": 13,
+          "spam": 8,
+          "tab_walk": 9,
+          "tray": 24,
+          "typing": 14,
+          "wheel": 11,
+          "window_geometry": 2
+        },
+        "denied": 93,
+        "desktop": "cinnamon",
+        "findings": {},
+        "foreign_windows_closed": {},
+        "harness_errors": 0,
+        "log_warnings": {
+          "Action rejected: busy_selecting": 27,
+          "Action rejected: editor_active": 6,
+          "Action rejected: recording_active": 4,
+          "Action rejected: scroll_active": 4,
+          "Action rejected: text_busy": 1,
+          "Capture failed": 1,
+          "Operation finished": 6,
+          "Recording failed": 1,
+          "[AVHWDeviceContext @ N] Failed to initialise VAAPI connection: N (resource allocation failed).": 12,
+          "[AVHWDeviceContext @ N] libva: /usr/lib/xN_N-linux-gnu/dri/virtio_gpu_drv_video.so init failed": 12,
+          "[OpenHN] this = NxNbN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNbbNdN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "[OpenHN] this = NxNeNdcN, Error:CWelsHNSVCEncoder::EncodeFrame(), cmInitParaError.": 1,
+          "putgd.filedialog: file dialog cancelled via portal": 3,
+          "putgd.filedialog: portal OpenFile parent xN:NaN": 3,
+          "putgd.filedialog: portal response N after N ms since accepted (closed by the person, or the backend failed late)": 3,
+          "xN [warning]: Source height < Np; disabling lookahead-slices": 3
+        },
+        "pings": {
+          "max_ms": 114,
+          "n": 119,
+          "slow": 0
+        },
+        "seconds": 360,
+        "seed": 30,
+        "shell_warnings": {},
+        "steps": 403
+      }
+    }
+  ],
+  "sessions": 20,
+  "steps": 5768,
+  "walkSeconds": 7235,
+  "wallSeconds": 7284
+}

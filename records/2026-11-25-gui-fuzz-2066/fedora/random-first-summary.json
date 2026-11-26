@@ -1,0 +1,142 @@
+{
+  "completedUtc": "2026-11-25T22:15:30.450743+00:00",
+  "desktop": "gnome",
+  "findings": {
+    "desktop_core_dump_gnome_shell|Wed 2026-11-25 16:14:37 CST 1338  1000 1000 SIGSEGV present      /usr/bin/gnome-shell               63.3M": 1,
+    "session_died|gnome-shell (pid N) is gone": 4,
+    "shell_unresponsive|Mutter has not reported for N.N s (N errors, last: org.freedesktop.DBus.Error.Di": 1,
+    "vt_changed|ttyN active ttyN -> ttyN": 4
+  },
+  "nightlyTag": "v26.1125.7045-nightly",
+  "preflightAfter": {
+    "error": "LabError: Guest preflight failed; retained guest-preflight-caec43dfe95149c7982da11aa1217518.json: Guest idle/session preflight refused: Actual desktop shell is not ready",
+    "ok": false
+  },
+  "profile": "fedora-gnome-wayland",
+  "schemaVersion": 1,
+  "seeds": [
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066f/evidence/f44g/seeds/seed001.tar.gz",
+      "exit": 0,
+      "marks": [],
+      "seed": 1,
+      "sha256": "d907f5bd133a6243141390ffab2c7dee589ed29d517718b5fda7bccc4dc2fc29",
+      "summary": {
+        "actions": {
+          "chord": 18,
+          "cli_action": 10,
+          "click": 36,
+          "clipboard": 5,
+          "denied": 14,
+          "drag": 16,
+          "escape": 8,
+          "hold": 6,
+          "hotkey": 24,
+          "outputs": 44,
+          "overlay_drag": 4,
+          "overlay_misc": 7,
+          "rapid": 43,
+          "spam": 16,
+          "tab_walk": 4,
+          "tray": 17,
+          "typing": 16,
+          "wheel": 11,
+          "window_geometry": 1
+        },
+        "denied": 14,
+        "desktop": "gnome",
+        "findings": {},
+        "foreign_windows_closed": {},
+        "harness_errors": 0,
+        "log_warnings": {
+          "Action rejected: busy_selecting": 6,
+          "Action rejected: recording_active": 1,
+          "Operation finished": 22,
+          "Recording failed": 2,
+          "[VAAPI @ N] libva: /usr/libN/dri/virtio_gpu_drv_video.so init failed": 4,
+          "[libopenhN @ N] [OpenHN] this = NxNdNbNabNfaN, Warning:bEnableFrameSkip = N,bitrate can't be controlled for RC_QUALITY_MODE,RC_BITRATE_MODE and RC_TIMESTAMP_MODE without enabling skip frame.": 1,
+          "[libopenhN @ N] [OpenHN] this = NxNdNbNabNfaN, Warning:layerId(N) doesn't support profile(N), change to UNSPECIFIC profile": 1,
+          "putgd.filedialog: portal OpenFile parent none": 1
+        },
+        "pings": {
+          "max_ms": 159,
+          "n": 120,
+          "slow": 0
+        },
+        "seconds": 361,
+        "seed": 1,
+        "shell_warnings": {
+          "gnome-shell[N]: Failed to initialize glamor, falling back to sw": 1,
+          "gnome-shell[N]: Failed to post KMS update: drmModeAtomicCommit: Invalid argument": 10
+        },
+        "steps": 300
+      }
+    },
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066f/evidence/f44g/seeds/seed002.tar.gz",
+      "exit": 3,
+      "marks": [
+        "1795644878.736 session_died gnome-shell (pid 1338) is gone",
+        "1795644878.804 vt_changed tty0 active tty2 -> tty1",
+        "1795644880.578 shell_unresponsive Mutter has not reported for 6.7 s (42 errors, last: org.freedesktop.DBus.Error.Disconnected: Connection is closed)",
+        "1795644881.411 desktop_core_dump_gnome_shell Wed 2026-11-25 16:14:37 CST 1338  1000 1000 SIGSEGV present      /usr/bin/gnome-shell               63.3M"
+      ],
+      "seed": 2,
+      "sha256": "91e6e72d95eda9da737216898b8961ecc2e72090978ab1c71d65d3a6528762ed",
+      "summary": {
+        "actions": {
+          "chord": 5,
+          "cli_action": 3,
+          "click": 2,
+          "clipboard": 1,
+          "denied": 6,
+          "drag": 1,
+          "hold": 2,
+          "hotkey": 4,
+          "outputs": 2,
+          "overlay_drag": 2,
+          "overlay_misc": 1,
+          "spam": 2,
+          "tab_walk": 1,
+          "tray": 1,
+          "typing": 1,
+          "wheel": 1
+        },
+        "denied": 4,
+        "desktop": "gnome",
+        "findings": {
+          "desktop_core_dump_gnome_shell|Wed 2026-11-25 16:14:37 CST 1338  1000 1000 SIGSEGV present      /usr/bin/gnome-shell               63.3M": 1,
+          "session_died|gnome-shell (pid N) is gone": 4,
+          "shell_unresponsive|Mutter has not reported for N.N s (N errors, last: org.freedesktop.DBus.Error.Di": 1,
+          "vt_changed|ttyN active ttyN -> ttyN": 4
+        },
+        "foreign_windows_closed": {},
+        "harness_errors": 0,
+        "log_warnings": {
+          "Action rejected: busy_selecting": 1,
+          "Action rejected: editor_active": 1,
+          "Gdk-Message: N:N:N.N: Error reading events from display: Broken pipe": 1,
+          "Helper exited": 1,
+          "Operation finished": 2
+        },
+        "pings": {
+          "max_ms": 243,
+          "n": 12,
+          "slow": 0
+        },
+        "seconds": 36,
+        "seed": 2,
+        "shell_warnings": {
+          "gnome-shell[N]: Failed to post KMS update: drmModeAtomicCommit: Invalid argument": 1,
+          "gnome-shell[N]: Failed to take screenshot: Failed to create N texture": 1,
+          "gnome-shell[N]: cogl_texture_Nd_new_with_size: assertion 'width >= N' failed": 1
+        },
+        "steps": 35
+      }
+    }
+  ],
+  "sessions": 2,
+  "steps": 335,
+  "walkSeconds": 397,
+  "wallSeconds": 453
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "desktop": "cinnamon",
+  "seed": 20,
+  "archiveSha256": "6b24a39e23b22f6a15ea4dbfd5d5db6fd1146d39f6f7105f3a7953f93db07918",
+  "issueFiled": false,
+  "assessments": [
+    {
+      "finding": "desktop_core_dump_nemo_desktop",
+      "classification": "desktop-process crash; run-summary event only",
+      "reason": "nemo-desktop aborted during RandR output churn. This is the documented Mint desktop-icons trap and is not a put.gd process crash."
+    },
+    {
+      "finding": "stuck_grab|region overlay still up after Escape",
+      "classification": "selector progressed; not a stuck-grab defect",
+      "reason": "After cancelling a recording, the checkpoint invoked a new edit action. Its selector was still edit:acquiring when the snapshot recorded two overlays; the walk then continued, opened later selectors, completed an overlay drag, and finished 373 steps without a leaked operation."
+    }
+  ]
+}

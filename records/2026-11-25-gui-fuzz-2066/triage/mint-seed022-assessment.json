@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "desktop": "cinnamon",
+  "seed": 22,
+  "archiveSha256": "497d8336a1ca8365c44fcc93fcaca6d78a178b749d276bd68dbc4ce51d82fcdc",
+  "issueFiled": false,
+  "finding": "focus_left_putgd and focus_unrecoverable",
+  "classification": "foreign release-page window; not a put.gd defect",
+  "reason": "Firefox was focused on the published nightly's GitHub release page before the walk could emit a step. The fence correctly denied input for the seed; put.gd remained alive and responsive (119 pings, maximum 134 ms). The reviewed Firefox window was closed by its exact X11 window ID before the following seed."
+}

@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "desktop": "cinnamon",
+  "seed": 21,
+  "archiveSha256": "a9dd70c2452ccb148e51170e6c14f7e95c579ae27f2991c0b83c1375b795d5dc",
+  "issueFiled": false,
+  "finding": "stuck_grab|region overlay still up after Escape",
+  "classification": "selector progressed; not a stuck-grab defect",
+  "reason": "Rapid hotkeys left a region selector in region:acquiring. The checkpoint then invoked a new edit action and observed the two live overlays. The immediately following overlay_drag removed both overlays, and later selectors were cancelled or completed while the walk continued through 313 steps."
+}

@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "desktop": "cinnamon",
+  "seed": 24,
+  "archiveSha256": "4a1a5fa2733a7385c5fbad5696a382f3de0f028b7e464919d4b9c194cbe240dc",
+  "issueFiled": false,
+  "finding": "focus_left_putgd",
+  "classification": "foreign release-page window handled by watchdog; not a put.gd defect",
+  "reason": "Firefox opened the published-nightly release page and briefly took focus. The watchdog closed that exact navigator window (foreign_windows_closed.navigator = 1), after which the walk completed 344 steps with put.gd responsive."
+}

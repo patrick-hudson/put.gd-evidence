@@ -1,0 +1,79 @@
+{
+  "completedUtc": "2026-11-25T22:25:58.635650+00:00",
+  "desktop": "gnome",
+  "findings": {
+    "desktop_core_dump_gnome_shell|Wed 2026-11-25 16:25:25 CST 1316  1000 1000 SIGSEGV present      /usr/bin/gnome-shell               37.4M": 1,
+    "session_died|gnome-shell (pid N) is gone": 3,
+    "vt_changed|ttyN active ttyN -> ttyN": 3
+  },
+  "nightlyTag": "v26.1125.7045-nightly",
+  "preflightAfter": {
+    "error": "LabError: Guest preflight failed; retained guest-preflight-01c6ff3116dd43a6af98fcce82180e3c.json: Guest idle/session preflight refused: Actual desktop shell is not ready",
+    "ok": false
+  },
+  "profile": "fedora-gnome-wayland",
+  "schemaVersion": 1,
+  "seeds": [
+    {
+      "archive": "/home/patrick/work/tmp/gfz2066f/evidence/f44g2/seeds/seed031.tar.gz",
+      "exit": 3,
+      "marks": [
+        "1795645526.076 desktop_core_dump_gnome_shell Wed 2026-11-25 16:25:25 CST 1316  1000 1000 SIGSEGV present      /usr/bin/gnome-shell               37.4M",
+        "1795645526.718 session_died gnome-shell (pid 1316) is gone",
+        "1795645526.770 vt_changed tty0 active tty2 -> tty1"
+      ],
+      "seed": 31,
+      "sha256": "fa37237a86138237f92ccdb59962929758e097342e886f7d043b7446628adea3",
+      "summary": {
+        "actions": {
+          "chord": 1,
+          "cli_action": 1,
+          "click": 3,
+          "clipboard": 3,
+          "denied": 12,
+          "drag": 1,
+          "escape": 2,
+          "hold": 1,
+          "hotkey": 4,
+          "outputs": 4,
+          "overlay_drag": 1,
+          "rapid": 7,
+          "spam": 2,
+          "tab_walk": 1,
+          "tray": 3,
+          "window_geometry": 1
+        },
+        "denied": 9,
+        "desktop": "gnome",
+        "findings": {
+          "desktop_core_dump_gnome_shell|Wed 2026-11-25 16:25:25 CST 1316  1000 1000 SIGSEGV present      /usr/bin/gnome-shell               37.4M": 1,
+          "session_died|gnome-shell (pid N) is gone": 3,
+          "vt_changed|ttyN active ttyN -> ttyN": 3
+        },
+        "foreign_windows_closed": {},
+        "harness_errors": 0,
+        "log_warnings": {
+          "Action rejected: editor_active": 1,
+          "Operation finished": 2
+        },
+        "pings": {
+          "max_ms": 261,
+          "n": 16,
+          "slow": 0
+        },
+        "seconds": 48,
+        "seed": 31,
+        "shell_warnings": {
+          "gnome-shell[N]: Failed to post KMS update: drmModeAtomicCommit: Invalid argument": 1,
+          "gnome-shell[N]: Failed to take screenshot: Failed to create N texture": 1,
+          "gnome-shell[N]: cogl_texture_Nd_new_with_size: assertion 'width >= N' failed": 1
+        },
+        "steps": 47
+      }
+    }
+  ],
+  "sessions": 1,
+  "steps": 47,
+  "walkSeconds": 48,
+  "wallSeconds": 81
+}

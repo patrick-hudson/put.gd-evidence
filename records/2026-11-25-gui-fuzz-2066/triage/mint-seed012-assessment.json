@@ -1,0 +1,7 @@
+{
+  "seed": 12,
+  "finding": "stuck_grab|region overlay still up after Escape",
+  "classification": "not a put.gd defect",
+  "reason": "At the checkpoint action.invoke(edit) was rejected by an already-active editor and that editor operation was cancelled. Two late putgd-capture X11 overlays were observed roughly ten seconds later while Firefox had focus. The very next overlay drag completed and removed both overlays, after which the walk continued normally. The selector was still acquiring rather than leaked after an operation ended.",
+  "evidence": "work/gfz2066/live-audit/m74d/seed012-unpacked/seed012"
+}
