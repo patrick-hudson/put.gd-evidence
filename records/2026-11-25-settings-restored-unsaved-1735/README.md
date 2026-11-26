@@ -48,8 +48,44 @@ the scripts, the unannotated crops and the run logs.
 **Limit:** the daily-check control exists only in tagged package builds. An untagged build shows "This build wasn't
 made by a put.gd package" instead, so the fix build couldn't run step 3 on the desktop. The offscreen test
 `gui_settings_destinations` → `restoredRenameThenUpdatesToggleEndsSaved` covers that step: it fails without the fix at
-"daily check back on" and passes with it. Pictures of step 3 with the fix will be added to this record from the first
-nightly that contains it.
+"daily check back on" and passes with it. The follow-up below adds step 3 on the desktop from the first nightly that
+contains the fix.
 
 The "Action failed: The window could not be opened" banner in the uncropped frames comes from killing `putgd-ui` in
 step 1. It is outside the crops.
+
+## Follow-up: nightly 26.1126.7171 with the daily-check toggle (2026-11-26)
+
+- **Build:** the published `putgd` 26.1126.7171~nightly DEB for Ubuntu 24.04 (commit
+  `a544d193f3e227d2ce9a2b0e32f4726952731c53`, tree `681cba5868fa1a6d68923ce9e7813a2af448fc86`, `dirty: false`), which
+  contains the fix. It was installed on m74 from pkg.put.gd with `apt-get install --only-upgrade putgd=26.1126.7171~nightly`
+  (only `putgd` was upgraded). The downloaded DEB's SHA-256, `366c86bf4a06767021704011800398814c7e178c5bf568d77ce4443b91379894`,
+  matches the release's `SHA256SUMS`. It is a tagged package build, so Settings → General shows the daily-check control.
+- **Host and lock:** m74, Linux Mint 22.3, Cinnamon on X11, the physical desktop, under the desktop lock (owner `i1735`,
+  session `i1735-pics`), released with the cleanup check at the end.
+- **Run:** the same `tools/capture1735.py` and `tools/lib1735.py` (unchanged), run as
+  `capture1735.py --build /usr/bin --run ~/work/r1735/run/after-7171 --label after`. This time it ran all four steps,
+  including step 3 (daily check off, then on). Log: `nightly-7171-capture.log`; facts: `nightly-7171-facts.json`.
+- **Annotation:** put.gd's own editor in a private headless resident of the same installed nightly
+  (`tools/annotate-run-7171.sh`, `tools/annotate1735.py`, `tools/spec-7171.json`). The unannotated crops are in
+  `crops-unannotated/`.
+
+| # | Build | Picture |
+| --- | --- | --- |
+| 5 | Nightly 26.1126.7171 | ![](5-renamed-nightly-7171.png) |
+| 6 | Nightly 26.1126.7171 | ![](6-daily-check-off-on-nightly-7171.png) |
+| 7 | Nightly 26.1126.7171 | ![](7-upload-clipboard-nightly-7171.png) |
+
+5. The checkpoint taken mid-rename is restored ("Team photo", same configuration revision), and the finished rename is
+   saved as "Team photos".
+6. Daily update checks turned off, then on again: the saved configuration goes from no Updates object to
+   `{'check': False}`, then `{'check': True}` (`updates after click` in the log). The status line still says "Settings
+   save automatically".
+7. Upload clipboard runs with no refusal. The text is kept as a local copy and a History record is written
+   (`history` in the facts: `uploadStatus: local_only`, `local.status: saved`).
+
+**Result:** with the fix in the published nightly, Settings ends saved after the issue's whole sequence and Upload
+clipboard runs. On 26.1125.7045 the same sequence left `"updates": {}` and refused Upload clipboard (pictures 1 and 2).
+
+The "Action failed: The window could not be opened" banner was already in the top-right corner of the first frame of
+this run, before step 1. It was left over from the 2026-11-25 runs and is outside the crops.
