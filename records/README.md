@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-26-tray-menu-in-capture-2081](2026-11-26-tray-menu-in-capture-2081/README.md) | #2081, #2086 | Tray menu kept out of captures started from it (#2081, PR #2086) |
 | [2026-11-25-x11-scroll-60fps-2064](2026-11-25-x11-scroll-60fps-2064/README.md) | #2064, #2071 | X11 scrolling capture at 60 frames a second (#2064, PR #2071) |
 | [2026-11-25-you-scroll-cinnamon-1558](2026-11-25-you-scroll-cinnamon-1558/README.md) | #1558 | Issue #1558 — Cinnamon X11 You-Scroll Verification (2026-11-25) |
 | [2026-11-25-scroll-chrome-redraw-1764](2026-11-25-scroll-chrome-redraw-1764/README.md) | #1764 | Scrolling capture across Chrome mid-scroll greyscale-to-LCD text redraw (#1764) |
