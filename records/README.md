@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-25-gui-fuzz-2066](2026-11-25-gui-fuzz-2066/README.md) | #2066 | Issue 2066 published-nightly GUI fuzz campaign |
 | [2026-11-26-ui-add-destination-order-2088](2026-11-26-ui-add-destination-order-2088/README.md) | #2088, #2092 | Add destination and Storage service menu order (#2088): before and after pictures for PR #2092 |
 | [2026-11-26-tray-menu-in-capture-2081](2026-11-26-tray-menu-in-capture-2081/README.md) | #2081, #2086 | Tray menu kept out of captures started from it (#2081, PR #2086) |
 | [2026-11-25-x11-scroll-60fps-2064](2026-11-25-x11-scroll-60fps-2064/README.md) | #2064, #2071 | X11 scrolling capture at 60 frames a second (#2064, PR #2071) |
