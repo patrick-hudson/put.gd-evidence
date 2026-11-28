@@ -1,0 +1,156 @@
+--- ev/sess.py	2026-11-27 19:36:37.963869546 -0600
++++ h2077/sess.py	2026-11-27 20:08:44.431485796 -0600
+@@ -37,13 +37,20 @@
+     'wiki': 'https://en.wikipedia.org/wiki/Linux',
+     'creep': 'file:///home/patrick/work/i2000/creep.html',
+     'mdn': 'https://developer.mozilla.org/en-US/docs/Web/CSS/position',
+-    'github': 'https://github.com/vinta/awesome-python/blob/4c3cb15dc695e95ae64add86b9994add8277f323/README.md',
+-    'python': 'https://docs.python.org/3/library/stdtypes.html',
++    # The page the m74 and aurora harnesses use: GitHub served its error page
++    # ("Unicorn!") for the pinned awesome-python blob to the lab browser (#2077).
++    'github': 'https://github.com/patrick-hudson/put.gd-desktop/pull/1398',
++    # Python 3.15's documentation moved the page from library/ (#2077).
++    'python': 'https://docs.python.org/3/builtins/stdtypes.html',
+     'hn': 'https://news.ycombinator.com/',
+     'hnthread': 'https://news.ycombinator.com/item?id=50489641',
+     'stackoverflow': 'https://stackoverflow.com/questions/11227809',
+     'news': 'https://www.aljazeera.com/news/2026/11/14/un-says-25-seafarers-killed-in-around-hormuz-since-february',
+ }
++# The element that holds each page's text; Wikipedia's for the others.
++ARTICLE = {'github': '.markdown-body', 'python': 'div.body[role="main"]'}
++# The desktop's VNC port: the wall's own on f44 (5901), as live7.screen_png reads it (#2077).
++VNC = int(os.environ.get('SF7_VNC', '5900'))
+ POS = 'return [Math.round(scrollY), innerHeight, document.documentElement.scrollHeight];'
+ 
+ 
+@@ -125,7 +132,7 @@
+ 
+ 
+ def desk(path):
+-    v = rfb.RFB(5900)
++    v = rfb.RFB(VNC)
+     v.screenshot(path)
+     v.close()
+ 
+@@ -138,7 +145,7 @@
+     time.sleep(1.5)
+     desk(out / 'handback.png')
+     note['handbackState'] = [e for e in d.events() if e.get('event') == 'progress'][-1]
+-    v = rfb.RFB(5900)
++    v = rfb.RFB(VNC)
+     v.pointer(rect[0] + rect[2] // 2, rect[1] + rect[3] // 2)
+     v.close()
+     time.sleep(0.5)
+@@ -163,7 +170,7 @@
+             at = (x + w // 2, y + h // 2)
+     note['button'] = at
+     if at:
+-        v = rfb.RFB(5900)
++        v = rfb.RFB(VNC)
+         v.click(*at)
+         v.close()
+         note['pressedAt'] = time.time()
+@@ -182,6 +189,14 @@
+         out.rename(out.with_name(name + '-incomplete-%d' % int(time.time())))
+     out.mkdir(parents=True)
+     b, _ = L.connect()
++    try:
++        run_connected(b, kind, site, mode, wheel, name, out)
++    finally:
++        # Firefox keeps one Marionette session: the next run connects anew (#2077).
++        b.close()
++
++
++def run_connected(b, kind, site, mode, wheel, name, out):
+     view = json.loads((LAB / 'viewport.json').read_text())
+     url = os.environ.get('LAB_URL') or (PAGES[site][kind] if isinstance(PAGES[site], dict) else PAGES[site])
+     if os.environ.get('LAB_NAV_JS') == '1':
+@@ -202,7 +217,7 @@
+     if ((actual.hostname, actual.path) != (expected.hostname, expected.path) or
+         not before['signedOut'] or before['docHeight'] < 3 * before['h'] or before['dpr'] != 1):
+         raise RuntimeError(f"unexpected page state: {before}")
+-    article = '.markdown-body' if site == 'github' else '#mw-content-text'
++    article = ARTICLE.get(site, '#mw-content-text')
+     if not b.js('return !!document.querySelector(%s);' % json.dumps(article)):
+         raise RuntimeError(f"page is missing its article: {site}")
+     if view['solid'] < .97:
+@@ -254,7 +269,7 @@
+         if X11:
+             subprocess.run(['xdotool', 'mousemove', str(rect[0] + rect[2] // 2), str(rect[1] + rect[3] // 2)], env=env, check=True)
+         else:
+-            v = rfb.RFB(5900)
++            v = rfb.RFB(VNC)
+             v.pointer(rect[0] + rect[2] // 2, rect[1] + rect[3] // 2)
+             v.close()
+         time.sleep(0.6)
+--- ev/live7.py	2026-11-27 19:36:37.549871016 -0600
++++ h2077/live7.py	2026-11-27 19:47:58.766579673 -0600
+@@ -60,6 +60,15 @@
+         self.recv()
+         self.cmd('WebDriver:NewSession', {})
+ 
++    def close(self):
++        """Ends the session and the connection: Firefox refuses a second
++        connection while a session is active (#2077)."""
++        try:
++            self.cmd('WebDriver:DeleteSession')
++        except Exception:
++            pass
++        self.s.close()
++
+     def recv(self):
+         b = b''
+         while not b.endswith(b':'):
+@@ -147,6 +156,9 @@
+             raise RuntimeError('devtools refused the websocket: %r' % head[:200])
+         self.i = 0
+ 
++    def close(self):
++        self.s.close()
++
+     def _read(self, n):
+         b = b''
+         while len(b) < n:
+@@ -232,9 +244,22 @@
+ 
+ 
+ 
+-def connect():
++def connect(seconds=10):
++    """The browser's remote control. Firefox ends a closed connection's
++    session a moment after the close and refuses a new one until then
++    ("an active session has been found", #2077): connect again until it
++    takes it."""
+     kind = (P / 'browser.kind').read_text().strip()
+-    return (Marionette() if kind == 'firefox' else DevTools()), kind
++    if kind != 'firefox':
++        return DevTools(), kind
++    end = time.time() + seconds
++    while True:
++        try:
++            return Marionette(), kind
++        except (OSError, RuntimeError):
++            if time.time() >= end:
++                raise
++            time.sleep(0.5)
+ 
+ 
+ def screen_png(path):
+@@ -273,7 +298,7 @@
+     for _ in range(60):
+         time.sleep(1)
+         try:
+-            b, _ = connect()
++            b, _ = connect(0)
+             break
+         except Exception:
+             continue
+@@ -305,6 +330,8 @@
+     solid = float(m[rect[1]:rect[1] + rect[3], rect[0]:rect[0] + rect[2]].mean())
+     (P / 'viewport.json').write_text(json.dumps({'rect': rect, 'solid': solid, 'info': info, 'screen': [int(a.shape[1]), int(a.shape[0])], 'desktop': desktop, 'kind': kind,
+                                                  'version': subprocess.run([binary, '--version'], capture_output=True, text=True, env=env).stdout.strip()}, indent=1))
++    # Each run connects on its own: this session ends here (#2077).
++    b.close()
+     print(json.dumps({'rect': rect, 'solid': solid, 'inner': [info['w'], info['h']], 'dpr': info['dpr']}))
+ 
+ 
