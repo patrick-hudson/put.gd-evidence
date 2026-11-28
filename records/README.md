@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-28-hide-encrypted-entry-2136](2026-11-28-hide-encrypted-entry-2136/README.md) | #2136, #2139 | Upload encrypted with put.gd hides where the destination can't encrypt (#2136, PR #2139) |
 | [2026-11-28-false-alarm-report-2134](2026-11-28-false-alarm-report-2134/README.md) | #2134, #2140 | Not sensitive saves a false-alarm report: live check on Plasma and GNOME (#2134, PR #2140) |
 | [2026-11-28-package-moves-appimage-menu-copies-2132](2026-11-28-package-moves-appimage-menu-copies-2132/README.md) | #2132, #2137 | The package moves an AppImage's file manager menu copies aside (#2132, PR #2137) on d69 and k72 |
 | [2026-11-28-file-manager-encrypted-upload-2119](2026-11-28-file-manager-encrypted-upload-2119/README.md) | #2119, #2122 | File manager "Upload encrypted with put.gd" (#2119, PR #2122) on six desktops |
