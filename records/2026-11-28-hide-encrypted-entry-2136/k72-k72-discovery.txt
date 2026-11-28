@@ -1,0 +1,30 @@
+using lab2136-s3
+{"encryptedEntry": {"profileId": "lab2136-s3", "provider": "s3", "shown": true}, "marker": "/home/patrick/.local/share/putgd/file-manager/encrypted-entry-hidden", "markerExists": false, "markerText": null}
+--- installed service menu
+# "Upload with put.gd" and "Upload encrypted with put.gd" (#2119) in Dolphin and
+# Konqueror (#1105). A KIO service menu for
+# files and folders (all/all) on every protocol, so remote folders show it too
+# (KIOFuse or kioexec supplies the path), at the top level of the menu.
+# Here the putgd KFileItemAction plugin offers Upload encrypted with put.gd (#2136).
+[Desktop Entry]
+Type=Service
+MimeType=all/all;
+Actions=putgdUpload;
+X-KDE-Priority=TopLevel
+
+[Desktop Action putgdUpload]
+Name=Upload with put.gd
+Icon=putgd
+Exec=/usr/bin/putgd-launcher --upload -- %F
+--- plugin
+-rw-r--r-- 1 root root 36560 Nov 28 00:25 /usr/lib/x86_64-linux-gnu/qt6/plugins/kf6/kfileitemaction/putgd.so
+putgd: /usr/lib/x86_64-linux-gnu/qt6/plugins/kf6/kfileitemaction/putgd.so
+--- per-user service menus
+total 8
+drwxrwxr-x 2 patrick patrick 4096 Nov 27 23:55 .
+drwxrwxr-x 3 patrick patrick 4096 Nov  1 23:31 ..
+--- kservicemenurc [Show]
+(no putgd key: default on)
+--- dolphin
+dolphin	4:25.12.3-0ubuntu1
+libkf6kiowidgets6:amd64	6.24.0-0ubuntu1
