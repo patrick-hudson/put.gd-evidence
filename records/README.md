@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-28-f44-scroll-harness-2077](2026-11-28-f44-scroll-harness-2077/README.md) | #2077 | f44 scrolling-capture harness: GitHub and Python docs rows run again (#2077) |
 | [2026-11-28-closed-control-wheel-2117](2026-11-28-closed-control-wheel-2117/README.md) | #2117, #2120 | Closed controls leave the wheel to the page (#2117, PR #2120) |
 | [2026-11-26-sealed-links-2079-final-acceptance](2026-11-26-sealed-links-2079-final-acceptance/README.md) | — | Sealed links acceptance: native desktops and inline destinations |
 | [2026-11-26-sealed-links-2079-initial-blocker](2026-11-26-sealed-links-2079-initial-blocker/README.md) | #2079 | Sealed links #2079 — initial native candidate blocker |
