@@ -1,0 +1,37 @@
+d69 (Debian 13 Plasma Wayland), real stale files from an AppImage run on 2026-11-01. sha256, then `stat -c '%a %s %y'`.
+
+== 1. Before anything (05:43:34Z), ~/.local/share
+d5591653acedcebc3518f07241790cdb72029c7c620792342066a5794c33d782  kio/servicemenus/putgd-upload.desktop            755 538  2026-11-01 23:31:22.557011440 -0600
+078ef5a7adf2ce4c1281582ac4f1d8ea148659eada5deaab993961b4d7cbd557  nemo/actions/putgd-upload.nemo_action            644 431  2026-11-01 23:31:22.561011431 -0600
+18897e6e2d752391ba3803de08fa76dbc361de2ddebaff62da83c7cba491bdad  Thunar/sendto/putgd-upload.desktop               644 550  2026-11-01 23:31:22.565011421 -0600
+e98130a294a99b0cc4c95b44541642945594ec94fdb80f7bf3f7247d7c2f5911  file-manager/actions/putgd-upload.desktop        644 470  2026-11-01 23:31:22.569011411 -0600
+43e7ecebc0e17668f133ae06303bf61ba0fdff07cd0ef9111ac5e1287af1a60d  contractor/putgd-upload.contract                 644 461  2026-11-01 23:31:22.577011390 -0600
+37d45980bb37f3b17c360689ad5a01ff601ae4abffecd96028abeb9ec695555e  nautilus/scripts/Upload with put.gd              755 2902 2026-11-01 23:31:22.577011390 -0600
+(sizes 538, 431, 550, 470, 461, 2902 and mtime 2026-11-01 23:31:22 -0600 match the brief; KIO at 755)
+
+== 2. After appending "Quote=single" to the Nemo action
+7e0e97afa8950f5a36ae99b4ad319e30f026ab6589d36d6f415b68305041b260  nemo/actions/putgd-upload.nemo_action            644 444  2026-11-27 23:44:46.385295814 -0600
+
+== 3-4. DEB installed (05:44:46Z), put.gd started in the Plasma session (05:45:13Z), ~12 s later
+Not in ~/.local/share any more: KIO, Thunar, FileManager-Actions, Contractor, and the Nautilus script (see finding F1).
+Nemo action untouched: 7e0e97af... 644 444 2026-11-27 23:44:46.385295814 -0600.
+Moved to ~/.local/state/putgd/file-manager-replaced/20261128T054513Z/data/<path>, same sha256, mode and mtime:
+37d45980...555e  nautilus/scripts/Upload with put.gd              755 2902 2026-11-01 23:31:22.577011390 -0600
+18897e6e...bdad  Thunar/sendto/putgd-upload.desktop               644 550  2026-11-01 23:31:22.565011421 -0600
+e98130a2...5911  file-manager/actions/putgd-upload.desktop        644 470  2026-11-01 23:31:22.569011411 -0600
+d5591653...d782  kio/servicemenus/putgd-upload.desktop            755 538  2026-11-01 23:31:22.557011440 -0600
+43e7ecebc0e17668f133ae06303bf61ba0fdff07cd0ef9111ac5e1287af1a60d  contractor/putgd-upload.contract                 644 461  2026-11-01 23:31:22.577011390 -0600
+Resident log: 5 "Moved aside an AppImage file manager entry that the installed package replaces" lines (logs/d69-resident-log.jsonl).
+
+== 6. Restorable: the KIO backup moved back
+d5591653acedcebc3518f07241790cdb72029c7c620792342066a5794c33d782  kio/servicemenus/putgd-upload.desktop  755 538 2026-11-01 23:31:22.557011440 -0600   (cmp equal to the original copy)
+
+== 6. d69 restored (all six, compared with cp -p copies of the originals taken before the run: sha256 + mode + size + mtime identical)
+d5591653acedcebc3518f07241790cdb72029c7c620792342066a5794c33d782  kio/servicemenus/putgd-upload.desktop            755 538  2026-11-01 23:31:22.557011440 -0600
+078ef5a7adf2ce4c1281582ac4f1d8ea148659eada5deaab993961b4d7cbd557  nemo/actions/putgd-upload.nemo_action            644 431  2026-11-01 23:31:22.561011431 -0600  (edited copy replaced by the original, cp -p)
+18897e6e2d752391ba3803de08fa76dbc361de2ddebaff62da83c7cba491bdad  Thunar/sendto/putgd-upload.desktop               644 550  2026-11-01 23:31:22.565011421 -0600
+e98130a294a99b0cc4c95b44541642945594ec94fdb80f7bf3f7247d7c2f5911  file-manager/actions/putgd-upload.desktop        644 470  2026-11-01 23:31:22.569011411 -0600
+43e7ecebc0e17668f133ae06303bf61ba0fdff07cd0ef9111ac5e1287af1a60d  contractor/putgd-upload.contract                 644 461  2026-11-01 23:31:22.577011390 -0600
+37d45980bb37f3b17c360689ad5a01ff601ae4abffecd96028abeb9ec695555e  nautilus/scripts/Upload with put.gd              755 2902 2026-11-01 23:31:22.577011390 -0600
+
+Packages: the DEB pulled in 9 tesseract-ocr-* language packs (ara chi-sim ell heb hin jpn kor rus tha); all 10 removed (putgd back to "rc").
