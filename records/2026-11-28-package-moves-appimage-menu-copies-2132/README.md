@@ -30,7 +30,7 @@ Wayland sessions of the builders, shown on the display wall (frames and input ov
 | 3 | DEB installed, put.gd started in the session, ~12 s | pass | pass |
 | 4a | KIO, Thunar, FileManager-Actions, Contractor (and on k72 the Caja script) gone from the user folder, present under `file-manager-replaced/<stamp>/...` with the same sha256, mode and mtime | pass (4 files) | pass (5 files: `data/` x4 + `config/caja/scripts`) |
 | 4b | Edited Nemo file untouched | pass (7e0e97af..., 644, 444, same mtime) | pass |
-| 4c | Nautilus script | **moved** (brief expected it to stay): see F1 | moved (same, by design) |
+| 4c | Nautilus script `~/.local/share/nautilus/scripts/Upload with put.gd` | pass: moved to `data/nautilus/scripts/` with the same sha256 (37d45980...), mode 755 and mtime; the DEB ships the Files plugin (F1) | pass: moved the same way |
 | 4d | One "Moved aside..." log line per moved file | pass: 5 lines for 5 files | pass: 6 lines for 6 files |
 | 4e | Launcher `putgd/file-manager/putgd-upload` upgraded, mode unchanged | n/a (d69 had no AppImage launcher) | pass: log "Updated the AppImage's file manager launcher so its removal keeps edited entries"; now contains `remove_exact` (2), 13187 bytes, mode 755 as before |
 | 4f | `appimage.owned` lists no moved file; `hash ` lines for exact entries that remain | n/a | partly: no moved file listed (only the launcher, the icon and the edited Nemo file remain). No `hash ` line, because no exact entry remains (the one left is the edited Nemo copy, correctly without a hash). Not provable on this host: the package has a copy of every entry |
@@ -54,7 +54,12 @@ The AppImage on k72 wrote the same bytes as the Nov 1 run on d69 (the same sha25
 
 ## Findings
 
-- **F1 (brief vs behavior, not a bug in the code).** The Nautilus script `~/.local/share/nautilus/scripts/Upload with put.gd` was moved on d69, though the brief expected it to stay because d69 has no Files plugin. The code (`moveAsideAppImageCopies`, src/app/FileManagerIntegration.cpp) adds the script when the package's Nautilus plugin file `libputgd-nautilus.so` exists (`systemPlugin(c,"nautilus/extensions-4")`); the DEB ships that file even where Nautilus (Files) is not installed. So it is moved on every host with the DEB, installed Files or not.
+- **F1 (Nautilus script moved, as the implementer's correction expects).** The debian13 and ubuntu26.04 DEBs both contain
+  `./usr/lib/x86_64-linux-gnu/nautilus/extensions-4/libputgd-nautilus.so` (16552 bytes; checked in the DEB's data.tar.gz). The code
+  (`moveAsideAppImageCopies` in src/app/FileManagerIntegration.cpp) moves the AppImage's Nautilus script when that plugin file exists, so
+  d69 moved it although it has no Nautilus installed. The moved script was byte-identical to what it was (sha256 37d45980...555e, 755, 2902 bytes).
+  Not done: I did not `ls` the installed plugin file on d69 while the DEB was installed (`dpkg -L` listed it); the DEB is removed now. The
+  move itself shows the check passed. My first status said the brief's "stays" was a wrong expectation; the correction supersedes that.
 - **Note (hash lines).** Nothing on k72 could show "`hash ` lines for exact entries that remain": every entry the AppImage wrote has a package copy and was moved, and the one left was edited. A host where the package lacks a copy of a format would be needed.
 - **Note (lab).** The apt repo pkg.put.gd/apt/ubuntu26.04 no longer holds nightly 26.1125.7045 (only 26.1126.7171). k72 was restored from the GitHub release asset `putgd-26.1125.7045-nightly-ubuntu26.04-x86_64.deb` (v26.1125.7045-nightly, sha256 33a44c8eb74198daf9ef33b87c7a72a443ce24a317694c1d1b1fb56564b78cd7) with `apt-get install --no-install-recommends --allow-downgrades`; `apt-cache policy putgd` now shows 26.1126.7171 as the candidate.
 - **Note (lab).** The DEB install pulls in nine tesseract-ocr-* language packs (Recommends) on both hosts; they were removed again with the DEB.
