@@ -9,6 +9,7 @@ for local bulk artifacts and [verification](https://github.com/patrick-hudson/pu
 
 | Record | Issue / PR | Summary |
 | --- | --- | --- |
+| [2026-11-28-package-moves-appimage-menu-copies-2132](2026-11-28-package-moves-appimage-menu-copies-2132/README.md) | #2132, #2137 | The package moves an AppImage's file manager menu copies aside (#2132, PR #2137) on d69 and k72 |
 | [2026-11-28-file-manager-encrypted-upload-2119](2026-11-28-file-manager-encrypted-upload-2119/README.md) | #2119, #2122 | File manager "Upload encrypted with put.gd" (#2119, PR #2122) on six desktops |
 | [2026-11-28-encrypted-links-check-callout](2026-11-28-encrypted-links-check-callout/README.md) | #2118 | Encrypted links says it needs one passed Test upload and link (#2118) |
 | [2026-11-28-f44-scroll-harness-2077](2026-11-28-f44-scroll-harness-2077/README.md) | #2077 | f44 scrolling-capture harness: GitHub and Python docs rows run again (#2077) |
